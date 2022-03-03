@@ -1,8 +1,12 @@
 type: reference-docs
 definitionId: reseller
 settings:
+  pagination: section
+  showConsole: true
   generateCodeSamples:
     languages:
       - lang: curl
       - lang: JavaScript
       - lang: Node.js
+      - lang: Python
+  hideDownloadButton: true

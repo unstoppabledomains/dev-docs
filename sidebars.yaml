@@ -41,7 +41,7 @@ training:
   - group: Reseller API Reference
     expanded: false
     pages:
-      - page: openapi/reference.page.yaml/*
+      - page: openapi/reference.page.yaml
 
   - group: Admin
     expanded: true
