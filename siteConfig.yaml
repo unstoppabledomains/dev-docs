@@ -1,8 +1,8 @@
 meta:
-  title: Redocly Training
-  description: The best API documentation generator ever.
+  title: Unstoppable Domains Developer Portal
+  description: The developer docs portal for Unstoppable Domains.
   siteUrl: https://developer-portal-starter.redoc.ly
-  keywords: redocly developer portal, api portal starter, api reference docs
+  keywords: unstoppable domains developer portal, api reference docs
   lang: en-US
 linkChecker:
   severity: warning
@@ -10,11 +10,11 @@ linkChecker:
     CheckExternal: false
 logo:
   image: ./images/logo.png
-  altText: Redocly Training
+  altText: UD Developer Portal
 toc:
   enable: true
 oasDefinitions:
-  petstore: ./openapi/petstore.yaml
+  reseller: https://popular-starfish-10.redoc.ly/
   # add links to definitions in our API registry by using a fully qualified URL.
 stylesheets:
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
