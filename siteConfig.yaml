@@ -4,10 +4,6 @@ meta:
   siteUrl: https://unstoppable-test-docs.redoc.ly/
   keywords: unstoppable domains developer portal, api reference docs
   lang: en-US
-linkChecker:
-  severity: warning
-  options:
-    CheckExternal: false
 logo:
   image: images/logo.png
   altText: UD Developer Docs Logo
