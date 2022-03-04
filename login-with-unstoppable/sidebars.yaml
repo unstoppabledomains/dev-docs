@@ -1,5 +1,4 @@
 pages:
-  - page: login-with-unstoppable/index.md
   - group: Protocols and Frameworks for Login
     expanded: false
     pages:

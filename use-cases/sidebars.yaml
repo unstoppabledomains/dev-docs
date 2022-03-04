@@ -1,5 +1,4 @@
 pages:
-  - page: use-cases/index.md
   - page: use-cases/promote-ud-integration.md
     label: Promoting Your UD Integration
   - page: use-cases/unstoppable-nft-domains.md

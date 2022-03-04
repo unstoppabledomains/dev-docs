@@ -1,5 +1,4 @@
 pages:
-  - page: d-websites/index.md
   - page: d-websites/ipfs-dweb-overview.md
     label: Overview of IPFS and D-Websites
   - group: Build Your D-Website

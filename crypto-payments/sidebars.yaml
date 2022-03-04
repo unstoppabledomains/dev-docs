@@ -1,5 +1,4 @@
 pages:
-  - page: crypto-payments/index.md
   - page: crypto-payments/crypto-payments-using-libraries.md
     label: Send and Receive Crypto Payments Using Libraries
   - page: crypto-payments/crypto-payments-error-handling.md

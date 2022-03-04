@@ -1,4 +1,0 @@
-pages:
-  - page: openapi/index.md
-  - page: openapi/reseller.page.yaml
-    label: Reseller API Reference

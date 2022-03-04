@@ -1,5 +1,4 @@
 pages:
-  - page: reseller/index.md
   - page: reseller/register-as-reseller.md
     label: Register as Reseller
   - page: reseller/setup-payment-methods.md

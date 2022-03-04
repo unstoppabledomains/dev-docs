@@ -1,5 +1,4 @@
 pages:
-  - page: developer-toolkit/index.md
   - group: Smart Contracts
     expanded: false
     pages:
