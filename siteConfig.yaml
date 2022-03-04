@@ -1,7 +1,7 @@
 meta:
   title: Unstoppable Domains Developer Portal
   description: The developer docs portal for Unstoppable Domains.
-  siteUrl: https://developer-portal-starter.redoc.ly
+  siteUrl: https://unstoppable-test-docs.redoc.ly
   keywords: unstoppable domains developer portal, api reference docs
   lang: en-US
 linkChecker:
@@ -10,7 +10,7 @@ linkChecker:
     CheckExternal: false
 logo:
   image: ./images/logo.png
-  altText: UD Developer Portal
+  altText: UD Developer Docs Logo
 toc:
   enable: true
 oasDefinitions:
@@ -27,29 +27,37 @@ stylesheets:
 #  - ./static/intercom.js
 nav:
 
-  - label: Training exercises
-    page: developer-portal/index.md
+  - label: Use Cases
+    page: use-cases/index.md
 
-  - label: External docs
-    icon: ./images/redocly-icon-white.png
-    href: https://redoc.ly/docs/developer-portal/introduction/
+  - label: Guides
+    page: getting-started/integration-guides-homepage.md
+
+  - label: API Reference
+    page: openapi/index.md
+    icon: https://www.flaticon.com/free-icons/settings
+
+  - label: Tookit
+    page: developer-toolkit/index.md
+
+  - label: Discord
+    href: https://discord.com/invite/b6ZVxSZ9Hn
 
   - search: true
 
 footer:
-  copyrightText: Copyright © Redocly 2019-2021. All right reserved.
+  copyrightText: Copyright © 2022 Unstoppable Domains Inc. All rights reserved.
   columns:
     - group: Legal
       items:
         - label: Terms of Use
-          href: 'https://redoc.ly/subscription-agreement/'
+          href: 'https://unstoppabledomains.com/terms'
         - label: Privacy Notice
-          href: 'https://redoc.ly/privacy-notice/'
-        - label: Cookie Notice
-          href: 'https://redoc.ly/cookie-notice/'
+          href: 'https://unstoppabledomains.com/privacy-policy'
+
     - group: Support
       items:
         - label: FAQ
-          page: faq.md
-        - label: Contact us
-          page: contact.mdx
+          page: support/faq.md
+        - label: Contact Us
+          page: support/contact.mdx

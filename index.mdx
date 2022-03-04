@@ -1,5 +1,5 @@
 ---
-title: Demo API Portal
+title: UD Developer Docs Portal
 ---
 
 import {
@@ -18,24 +18,22 @@ import {
   NavBar,
 } from '@redocly/developer-portal/ui';
 
-import icon1 from './images/icon1.png';
-import launchFastIcon from './images/launch-fast.svg';
-import icon3 from './images/icon3.png';
-import bookManagementIcon from './images/book-management.svg';
-import foundOrPrivate from './images/found-or-private.svg';
+import icon1 from './images/api-ref.png';
+import icon2 from './images/toolkit.png';
+import icon3 from './images/use-case.png';
 
 export default LandingLayout;
 
 <Jumbotron>
   <NavBar location={props.location} standalone={false} />
-  <H1>Redocly training</H1>
-  <H2>A starter developer portal with training exercises</H2>
+  <H1>Documentation</H1>
+  <H2>Everything you need to build awesome applications and custom integrations with Unsstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
     {/* <Button size="xlarge" to="https://app.redoc.ly">
       Redocly app
     </Button> */}
-     <Button variant="outlined" size="xlarge" to="developer-portal/index.md">
-      Get started
+     <Button variant="outlined" size="xlarge" to="getting-started/index.md">
+      Get Started
     </Button>
     {/* <Button variant="outlined" size="xlarge" to="https://redoc.ly/docs">
       Docs
@@ -44,26 +42,20 @@ export default LandingLayout;
 </Jumbotron>
 <Box my={25}>
   <SectionHeader>
-    Create your <Emphasis> developer portal </Emphasis> today!
+    Create your <Emphasis> custom application </Emphasis> today!
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <ThinTile to="developer-portal/index.md" icon={icon1} header="Rock">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo
-        invenire aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril
-        labitur an usu.Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea
-        justo invenire aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing.
+    <ThinTile to="use-cases/index.md" icon={icon3} header="Use Cases">
+        Review real life use cases along with potential solutions and
+        direct links to Unstoppable Domains integration guides, when applicable.
     </ThinTile>
-    <ThinTile to="developer-portal/index.md" icon={launchFastIcon} header="Paper">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <ThinTile to="openapi/index.md" icon={icon1} header="API Reference">
+        Consult the documentation and live testing features of Unstoppable Domains APIs,
+        including the Resolution API and Reseller API.
     </ThinTile>
-    <ThinTile to="contact.mdx" icon={icon3} header="Scissors">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <ThinTile to="developer-toolkit/index.md" icon={icon2} header="Developer Toolkit">
+        Explore our collection of developer integration tools such as Unstoppable Domains
+        resolution libraries, resolution CLI, and smart contracts.
     </ThinTile>
   </FlexSection>
   {/* <Jumbotron parallaxEffect bgImage={icon1}>
@@ -71,30 +63,25 @@ export default LandingLayout;
     <H2>Get setup faster...</H2>
   </Jumbotron> */}
   <SectionHeader>
-    <Emphasis>Need help? </Emphasis>
-    Try our training exercises.
+    <Emphasis>Ready to start? </Emphasis>
+    Try our developer guides.
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <WideTile to="developer-portal/index.md" header="Rock">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <WideTile to="login-with-unstoppable/index.md" header="Login with Unstoppable">
+        Build a universal Web3 login that authenticates your users and creates new
+        communication channels with them.
     </WideTile>
-    <WideTile to="developer-portal/index.md" header="Paper">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <WideTile to="crypto-payments/index.md" header="Crypto Payments">
+        Simplify the process of sending and receiving crypto payments by replacing long
+         hexadecimal addresses with human readable domain names.
     </WideTile>
-    <WideTile to="developer-portal/index.md" header="Scissors">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <WideTile to="reseller/index.md" header="Become a Reseller">
+        Generate extra revenue by registering to become an authorized reseller with
+        Unstoppable Domains.
     </WideTile>
-    <WideTile to="developer-portal/index.md" header="Go">
-        Lorem ipsum dolor sit amet, pri putent oportere quaerendum in, ea mea justo invenire
-        aliquando. Usu modo suavitate ea. Et sed labitur epicurei adipiscing. Nibh zril labitur
-        an usu.
+    <WideTile to="d-websites/index.md" header="IPFS Websites">
+        Design a custom decentralized website, modify a community generated template,
+        or share your own IPFS template with the community.
     </WideTile>
   </FlexSection>
 </Box>
-

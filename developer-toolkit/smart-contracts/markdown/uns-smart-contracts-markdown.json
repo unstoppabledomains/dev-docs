@@ -1,0 +1,19 @@
+{
+    "build": "src/domain-registry-essentials/uns-smart-contracts.md",
+    "files": [
+        "templates/contracts/uns/FreeMinter.md",
+        "templates/contracts/uns/TwitterValidationOperator.md",
+        "templates/contracts/uns/ProxyReader.md",
+        "templates/contracts/uns/Resolver.md",
+        "templates/contracts/uns/DomainZoneController.md",
+        "templates/contracts/uns/URIPrefixController.md",
+        "templates/contracts/uns/WhitelistedMinter.md",
+        "templates/contracts/uns/MintingController.md",
+        "templates/contracts/uns/SignatureController.md",
+        "templates/contracts/uns/ProxyAdmin.md",
+        "templates/contracts/uns/MintingManager.md",
+        "templates/contracts/uns/CNSRegistry.md",
+        "templates/contracts/uns/UNSRegistry.md",
+        "templates/uns-smart-contracts-template.md"
+    ]
+}

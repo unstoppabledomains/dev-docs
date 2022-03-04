@@ -1,71 +1,44 @@
-training:
-  - page: developer-portal/index.md
-  - group: Training exercises
-    expanded: true
+start:
+  - page: getting-started/index.md
+  - group: Get a Test Domain
+    expanded: false
     pages:
-      - label: Setup
-        page: developer-portal/setup.md
-      - label: Markdown
-        page: developer-portal/markdown.md
-      - label: Folder structure
-        page: developer-portal/awesome/folders.md
-      - label: Mermaid diagrams
-        page: developer-portal/mermaid.md
-      - label: Page table of contents
-        page: developer-portal/page-table-of-contents.md
-      - separator: This is a separator
-      - label: Sidebar navigation
-        page: developer-portal/sidebar-nav.md
-      - label: Search
-        page: developer-portal/search.md
-      - label: Top nav and footers
-        page: developer-portal/nav-footer.md
-      - label: Logo and favicon
-        page: developer-portal/logo.md
-      - label: Metadata
-        page: developer-portal/metadata.md
-      - label: Colors
-        page: developer-portal/colors.md
-      - label: Typography
-        page: developer-portal/typography.md
-      - label: Analytics
-        page: developer-portal/analytics.md
-      - label: Home page
-        page: developer-portal/home-page.md
-      - label: Adding API reference docs
-        page: developer-portal/oas-definitions.md
-      - label: Adding an API response to an MDX page
-        page: developer-portal/mdx.mdx
-      - label: Creating React components
-        page: developer-portal/custom-component.mdx
+      - label: Etherscan
+        page: getting-started/test-domains/etherscan.md
+      - label: Polygonscan
+        page: getting-started/test-domains/polygonscan.md
+    separatorLine: true
+  - group: Change Logs
+    expanded: false
+    pages:
+      - label: Resolution Library
+        page: getting-started/change-logs/resolution-changelog.md
+      - label: Resolution Java Library
+        page: getting-started/change-logs/resolution-java-changelog.md
+    separatorLine: true
+  - group: Domain Registry Essentials
+    expanded: false
+    pages:
+      - label: CNS Architecture Overview
+        page: getting-started/domain-registry-essentials/cns-architecture-overview.md
+      - label: UNS Architecture Overview
+        page: getting-started/domain-registry-essentials/uns-architecture-overview.md
+      - label: Polygon High Level Overview
+        page: getting-started/domain-registry-essentials/polygon-high-level-overview.md
+      - label: Polygon Developer Integration
+        page: getting-started/domain-registry-essentials/polygon-developer-integration.md
+    separatorLine: true
+  - group: Domain Records
+    expanded: false
+    pages:
+      - label: Resolving Domain Records
+        page: getting-started/domain-registry-essentials/resolving-domain-records.md
+      - label: Namehashing
+        page: getting-started/domain-registry-essentials/namehashing.md
+      - label: Records Reference
+        page: getting-started/domain-registry-essentials/records-reference.md
+    separatorLine: true
   - group: Reseller API Reference
     expanded: false
     pages:
       - page: openapi/reference.page.yaml
-
-  - group: Admin
-    expanded: true
-    pages:
-      - group: Routine
-        expanded: true
-        pages:
-          - group: Rock
-            expanded: true
-            pages:
-              - group: Paper
-                expanded: true
-                pages:
-                  - group: Scissors
-                    expanded: true
-                    pages:
-                      - group: 1-2-3
-                        expanded: true
-                        pages:
-                          - group: Go
-                            expanded: true
-                            pages:
-                              - label: Upgrading
-                                # page: developer-portal/upgrade.md
-alternative:
-  - page: developer-portal/sidebar-alternative.md
-    label: Alternative sidebar example
