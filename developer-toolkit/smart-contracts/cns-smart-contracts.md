@@ -19,7 +19,20 @@ This section lists all the smart contracts that users can directly interact with
 
 `Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](architecture-overview.md#registry).
 
-#include "templates/contracts/cns/Registry.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe">0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0xAad76bea7CFEc82927239415BB18D2e93518ecBB">0xAad76bea7CFEc82927239415BB18D2e93518ecBB</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/Registry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol)
 
@@ -27,7 +40,33 @@ This section lists all the smart contracts that users can directly interact with
 
 `Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](architecture-overview.md#resolver).
 
-#include "templates/contracts/cns/Resolver.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842">0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x95AE1515367aa64C462c71e87157771165B1287A">0x95AE1515367aa64C462c71e87157771165B1287A</a></td>
+    </tr>
+</table>
+<br>
+<table>
+    <th>Network</th>
+    <th>Legacy addresses</th>
+    <tr>
+        <td>Mainnet</td>
+           <td><a
+                    href="https://etherscan.io/address/0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d">0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d</a>
+               <a
+                    href="https://etherscan.io/address/0x878bc2f3f717766ab69c0a5f9a6144931e61aed3">0x878bc2f3f717766ab69c0a5f9a6144931e61aed3</a>
+            </td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
@@ -35,7 +74,31 @@ This section lists all the smart contracts that users can directly interact with
 
 `ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
-#include "templates/contracts/cns/ProxyReader.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a></td>
+    </tr>
+</table>
+<br>
+<table>
+    <th>Network</th>
+    <th>Legacy addresses</th>
+    <tr>
+        <td>Mainnet</td>
+           <td><a
+                    href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
+            </td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/ProxyReader.sol)
 
@@ -43,7 +106,20 @@ This section lists all the smart contracts that users can directly interact with
 
 `SignatureController` allows any account to submit management transactions on behalf of a token owner if an owner provides a signature for that call.
 
-#include "templates/contracts/cns/SignatureController.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0x82EF94294C95aD0930055f31e53A34509227c5f7">0x82EF94294C95aD0930055f31e53A34509227c5f7</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x66a5e3e2C27B4ce4F46BBd975270BE154748D164">0x66a5e3e2C27B4ce4F46BBd975270BE154748D164</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/controllers/SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol)
 
@@ -51,7 +127,20 @@ This section lists all the smart contracts that users can directly interact with
 
 `DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](architecture-overview.md#alternative-ownership-models).
 
-#include "templates/contracts/cns/DomainZoneController.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7">0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x6f8F96A566663C1d4fEe70edD37E9b62Fe39dE5D">0x6f8F96A566663C1d4fEe70edD37E9b62Fe39dE5D</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
@@ -59,7 +148,20 @@ This section lists all the smart contracts that users can directly interact with
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
 
-#include "templates/contracts/cns/TwitterValidationOperator.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855">0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x1CB337b3b208dc29a6AcE8d11Bb591b66c5Dd83d">0x1CB337b3b208dc29a6AcE8d11Bb591b66c5Dd83d</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/operators/TwitterValidationOperator.sol)
 
@@ -71,7 +173,20 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 The deployed version of the `Registry` smart contract only allows `MintingController` to mint second-level domains.
 
-#include "templates/contracts/cns/MintingController.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0xb0EE56339C3253361730F50c08d3d7817ecD60Ca">0xb0EE56339C3253361730F50c08d3d7817ecD60Ca</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x51765307AeB3Df2E647014a2C501d5324212467c">0x51765307AeB3Df2E647014a2C501d5324212467c</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/controllers/MintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/MintingController.sol)
 
@@ -79,7 +194,20 @@ The deployed version of the `Registry` smart contract only allows `MintingContro
 
 `URIPrefixController` enables the Unstoppable Domains team to edit the token URI prefix.
 
-#include "templates/contracts/cns/URIPrefixController.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+<table>
+    <th>Network</th>
+    <th>Contract address</th>
+    <tr>
+        <td>Mainnet</td>
+        <td><a href="https://etherscan.io/address/0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91">0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91</a></td>
+    </tr>
+    <tr>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0xe1d2e4B9f0518CA5c803073C3dFa886470627237">0xe1d2e4B9f0518CA5c803073C3dFa886470627237</a></td>
+    </tr>
+</table>
+
 
 **Source code:** [contracts/controllers/URIPrefixController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/URIPrefixController.sol)
 

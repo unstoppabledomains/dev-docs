@@ -3,9 +3,9 @@ pages:
     expanded: false
     pages:
       - label: UNS Smart Contracts
-        page: developer-toolkit/smart-contracts/uns-smart-contracts-template.md
+        page: developer-toolkit/smart-contracts/uns-smart-contracts.md
       - label: CNS Smart Contracts
-        page: developer-toolkit/smart-contracts/cns-smart-contracts-template.md
+        page: developer-toolkit/smart-contracts/cns-smart-contracts.md
     separatorLine: true
   - group: Resolution Libraries
     expanded: false
