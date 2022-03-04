@@ -1,7 +1,7 @@
 meta:
   title: Unstoppable Domains Developer Portal
   description: The developer docs portal for Unstoppable Domains.
-  siteUrl: https://developer-portal-starter.redoc.ly
+  siteUrl: https://unstoppable-test-docs.redoc.ly/
   keywords: unstoppable domains developer portal, api reference docs
   lang: en-US
 linkChecker:
