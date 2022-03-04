@@ -38,7 +38,3 @@ start:
       - label: Records Reference
         page: getting-started/domain-registry-essentials/records-reference.md
     separatorLine: true
-  - group: Reseller API Reference
-    expanded: false
-    pages:
-      - page: openapi/reference.page.yaml

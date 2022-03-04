@@ -18,9 +18,9 @@ import {
   NavBar,
 } from '@redocly/developer-portal/ui';
 
-import icon1 from './images/api-ref.png';
-import icon2 from './images/toolkit.png';
-import icon3 from './images/use-case.png';
+import api-ref from './images/api-ref.png';
+import toolkit from './images/toolkit.png';
+import use-case from './images/use-case.png';
 
 export default LandingLayout;
 
@@ -45,15 +45,15 @@ export default LandingLayout;
     Create your <Emphasis> custom application </Emphasis> today!
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <ThinTile to="use-cases/index.md" icon={icon3} header="Use Cases">
+    <ThinTile to="use-cases/index.md" icon={use-case} header="Use Cases">
         Review real life use cases along with potential solutions and
         direct links to Unstoppable Domains integration guides, when applicable.
     </ThinTile>
-    <ThinTile to="openapi/index.md" icon={icon1} header="API Reference">
+    <ThinTile to="openapi/index.md" icon={api-ref} header="API Reference">
         Consult the documentation and live testing features of Unstoppable Domains APIs,
         including the Resolution API and Reseller API.
     </ThinTile>
-    <ThinTile to="developer-toolkit/index.md" icon={icon2} header="Developer Toolkit">
+    <ThinTile to="developer-toolkit/index.md" icon={toolkit} header="Developer Toolkit">
         Explore our collection of developer integration tools such as Unstoppable Domains
         resolution libraries, resolution CLI, and smart contracts.
     </ThinTile>

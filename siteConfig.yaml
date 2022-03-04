@@ -9,7 +9,7 @@ linkChecker:
   options:
     CheckExternal: false
 logo:
-  image: ./images/logo.png
+  image: images/logo.png
   altText: UD Developer Docs Logo
 toc:
   enable: true
@@ -35,7 +35,6 @@ nav:
 
   - label: API Reference
     page: openapi/index.md
-    icon: https://www.flaticon.com/free-icons/settings
 
   - label: Tookit
     page: developer-toolkit/index.md
