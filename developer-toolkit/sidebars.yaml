@@ -33,6 +33,4 @@ pages:
         page: developer-toolkit/resolving-domains-in-web-applications.md
       - label: Resolution Service API
         page: developer-toolkit/resolution-service-api.md
-      - label: Polygon Developer Integration
-        page: domain-registry-essentials/polygon-developer-integration.md
     separatorLine: true

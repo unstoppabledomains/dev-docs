@@ -22,5 +22,5 @@ pages:
     expanded: false
     pages:
      - label: Browser Resolution for D-Websites
-       page: d-websites/resolving-dwebsite-in-a-browser.md
+       page: d-websites/resolving-dwebsites-in-a-browser.md
     separatorLine: true

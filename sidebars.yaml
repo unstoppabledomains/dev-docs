@@ -1,4 +1,4 @@
-start:
+pages:
   - page: getting-started/index.md
   - group: Get a Test Domain
     expanded: false
