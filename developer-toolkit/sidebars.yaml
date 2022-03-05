@@ -3,33 +3,33 @@ pages:
     expanded: false
     pages:
       - label: UNS Smart Contracts
-        page: developer-toolkit/smart-contracts/uns-smart-contracts.md
+        page: smart-contracts/uns-smart-contracts.md
       - label: CNS Smart Contracts
-        page: developer-toolkit/smart-contracts/cns-smart-contracts.md
+        page: smart-contracts/cns-smart-contracts.md
     separatorLine: true
   - group: Resolution Libraries
     expanded: false
     pages:
       - label: Resolution Libraries Overview
-        page: developer-toolkit/resolution-libraries/ud-libraries.md
+        page: resolution-libraries/ud-libraries.md
       - label: Library Configuration
-        page: developer-toolkit/resolution-libraries/library-configuration.md
+        page: resolution-libraries/library-configuration.md
     separatorLine: true
   - group: Resolving with Direct Blockchain Calls
     expanded: false
     pages:
       - label: Resolving UD Domains Without Libraries
-        page: developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names.md
+        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
       - label: Resolving .zil Domains Without Libraries
-        page: developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names.md
+        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
     separatorLine: true
   - group: Other Resolution Options
     expanded: false
     pages:
       - label: Resolution CLI
-        page: developer-toolkit/resolution-cli.md
+        page: resolution-cli.md
       - label: Resolving Domains in Web Applications
-        page: developer-toolkit/resolving-domains-in-web-applications.md
+        page: resolving-domains-in-web-applications.md
       - label: Resolution Service API
-        page: developer-toolkit/resolution-service-api.md
+        page: resolution-service-api.md
     separatorLine: true

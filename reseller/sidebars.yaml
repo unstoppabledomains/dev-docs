@@ -1,11 +1,11 @@
 pages:
-  - page: reseller/register-as-reseller.md
+  - page: register-as-reseller.md
     label: Register as Reseller
-  - page: reseller/setup-payment-methods.md
+  - page: setup-payment-methods.md
     label: Configure or Setup Payment Methods
-  - page: reseller/receive-your-payouts.md
+  - page: receive-your-payouts.md
     label: Receive Your Payouts
-  - page: reseller/reseller-api-endpoints.md
+  - page: reseller-api-endpoints.md
     label: Reseller API Endpoints
-  - page: reseller/error-codes-for-troubleshooting.md
+  - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Reseller Integration

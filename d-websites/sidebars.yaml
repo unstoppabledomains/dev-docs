@@ -1,25 +1,25 @@
 pages:
-  - page: d-websites/ipfs-dweb-overview.md
+  - page: ipfs-dweb-overview.md
     label: Overview of IPFS and D-Websites
   - group: Build Your D-Website
     expanded: false
     pages:
       - label: Using a Template
-        page: d-websites/connecting-your-d-website-to-your-domain/using-a-template.md
+        page: connecting-your-dwebsite/using-a-template.md
       - label: Build a Custom D-Website
-        page: d-websites/connecting-your-d-website-to-your-domain/building-a-custom-dwebsite.md
+        page: connecting-your-dwebsite/building-a-custom-dwebsite.md
       - label: DWebsite Examples
-        page: d-websites/examples-of-dwebsites.md
+        page: examples-of-dwebsites.md
     separatorLine: true
   - group: Connect Your D-Website to Your Domain
     expanded: false
     pages:
       - label: Domain Connection Options
-        page: d-websites/connecting-your-d-website-to-your-domain/connection-options.md
+        page: connecting-your-dwebsite/connection-options.md
     separatorLine: true
   - group: Resolve Your D-Website
     expanded: false
     pages:
      - label: Browser Resolution for D-Websites
-       page: d-websites/resolving-dwebsites-in-a-browser.md
+       page: resolving-dwebsites-in-a-browser.md
     separatorLine: true
