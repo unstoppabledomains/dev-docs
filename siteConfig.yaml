@@ -9,6 +9,10 @@ logo:
   altText: UD Developer Docs Logo
 toc:
   enable: true
+linkChecker:
+  severity: warning
+  options:
+    CheckExternal: false
 oasDefinitions:
   reseller: https://api.redoc.ly/registry/bundle/unstoppable-domains/Reseller%20API/v2/openapi.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
@@ -23,20 +27,20 @@ stylesheets:
 #  - ./static/intercom.js
 nav:
 
+  - label: Get Started
+    page: getting-started/index.md
+    
   - label: Use Cases
     page: use-cases/index.md
 
   - label: Guides
-    page: getting-started/developer-guides-homepage.md
+    page: guides/index.md
 
   - label: API Reference
     page: openapi/reference.page.yaml
 
-  - label: Tookit
+  - label: Toolkit
     page: developer-toolkit/index.md
-
-  - label: Discord
-    href: https://discord.com/invite/b6ZVxSZ9Hn
 
   - search: true
 
@@ -54,5 +58,5 @@ footer:
       items:
         - label: FAQ
           page: support/faq.md
-        - label: Contact Us
+        - label: Discord
           page: support/contact.mdx

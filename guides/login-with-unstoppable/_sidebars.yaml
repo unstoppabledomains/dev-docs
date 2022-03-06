@@ -1,0 +1,40 @@
+- group: Login with Unstoppable
+  page: index.md
+  expanded: true
+  pages:
+    - group: Protocols and Frameworks for Login
+      expanded: false
+      pages:
+        - label: Authorization Server
+          page: protocols-and-frameworks/server-overview.md
+        - label: Authentication Protocol
+          page: protocols-and-frameworks/authentication-protocol.md
+        - label: Scopes for Login
+          page: protocols-and-frameworks/scopes-for-login.md
+      separatorLine: true
+    - group: Login Integration Guides
+      expanded: false
+      pages:
+        - label: Select Your Integration Option
+          page: login-integration-guides/integration-pathways-home.md
+        - label: Login With Pop-up
+          page: login-integration-guides/login-with-popup.md
+        - label: Login Without Pop-up
+          page: login-integration-guides/login-without-popup.md
+        - label: Web3 Modal
+          page: login-integration-guides/web3-modal-guide.md
+        - label: Web3 React
+          page: login-integration-guides/web3-react-guide.md
+        - label: BNC Onboard
+          page: login-integration-guides/bnc-onboard-guide.md
+        - label: Node.js Server
+          page: login-integration-guides/node-js-server-guide.md
+      separatorLine: true
+    - group: Additional Login Guides
+      expanded: false
+      pages:
+        - label: Establish Login Credentials
+          page: getting-login-credentials.md
+        - label: Login UI Requirements
+          page: login-ui-requirements.md
+      separatorLine: true

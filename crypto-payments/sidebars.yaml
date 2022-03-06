@@ -1,7 +1,0 @@
-pages:
-  - page: crypto-payments-using-libraries.md
-    label: Send and Receive Crypto Payments Using Libraries
-  - page: crypto-payments-error-handling.md
-    label: Error Handling for Crypto Payment Integrations
-  - page: crypto-payments-best-practices.md
-    label: Best Practices for Crypto Payment Integrations

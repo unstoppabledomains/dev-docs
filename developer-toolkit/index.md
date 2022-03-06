@@ -7,11 +7,11 @@ You've reached the developer toolkit. Here's how to get started...
 
 ## Resolution Libraries
 
-Give general info
+Give general info on [libraries](./resolution-libraries/ud-libraries.md)
 
 ## Resolve via Direct Block Chain Calls
 
-give info
+give info [overview](./direct-blockchain-calls/overview-blockchain-calls.md)
 
 ## Resolution CLI
 

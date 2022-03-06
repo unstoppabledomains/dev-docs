@@ -1,0 +1,10 @@
+- group: Crypto Payments
+  page: index.md
+  expanded: true
+  pages:
+    - page: integrate-using-libraries.md
+      label: Send and Receive Crypto Payments Using Libraries
+    - page: error-handling.md
+      label: Error Handling for Crypto Payment Integrations
+    - page: best-practices.md
+      label: Best Practices for Crypto Payment Integrations

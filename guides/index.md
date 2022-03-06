@@ -11,19 +11,19 @@ Give general info
 
 ## Login with Unstoppable
 
-give info
+give info [overview](./login-with-unstoppable/index.md)
 
 ## Become a Reseller
 
-when to use this over other options
+when to use this over other options [register as reseller](./reseller/register-as-reseller.md)
 
 ## Crypto Payments
 
-when to use, which products support this etc.
+when to use, [start here](./crypto-payments/index.md)
 
 ## IPFS Websites
 
-info here
+info here [overview](./d-websites/index.md)
 
 ## Asking for help
 

@@ -1,8 +1,7 @@
 ---
+title: Library Configuration
 description: This page details how to configure the libraries for domain resolution.
 ---
-
-# Library Configuration
 
 Resolution libraries require a connection to the Ethereum network to resolve .crypto and .eth domains. To initialize the library, you need to specify an Ethereum node service provider. Once the instance is created you can begin resolving domains. Below are examples of how to initialize the library with different providers.
 

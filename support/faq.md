@@ -2,14 +2,14 @@
 title: F.A.Q.
 ---
 
-# Frequently asked questions
+## Frequently asked questions
 
-## How much does it cost?
+### How much are domains?
 
-https://preview.redoc.ly/redocly/new-site/pricing
+text here.
 
 
-## Can I do ______?
+### Can I do ______?
 
 Please contact us.
 

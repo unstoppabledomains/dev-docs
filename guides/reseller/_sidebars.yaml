@@ -1,0 +1,14 @@
+- group: Become a Reseller
+  page: index.md
+  expanded: true
+  pages:
+    - page: register-as-reseller.md
+      label: Register as Reseller
+    - page: setup-payment-methods.md
+      label: Configure or Setup Payment Methods
+    - page: receive-your-payouts.md
+      label: Receive Your Payouts
+    - page: reseller-api-endpoints.md
+      label: Reseller API Endpoints
+    - page: error-codes-for-troubleshooting.md
+      label: Error Codes to Troubleshoot Reseller Integration
