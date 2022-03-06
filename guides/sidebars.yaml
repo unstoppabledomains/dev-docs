@@ -1,6 +1,6 @@
 - group: Developer Guides
   page: index.md
-  expanded: true
+  MenuStyle: drilldown
   pages:
     - group: Login with Unstoppable
       page: login-with-unstoppable/index.md
