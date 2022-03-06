@@ -20,6 +20,9 @@ export const theme = {
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
     },
+    secondary: {
+      main: '#ffffff',
+    },
     // success: {
     //   main: '#00aa13',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
@@ -82,17 +85,20 @@ export const theme = {
       head: '#c167e4',
     },
    navbar: {
-      main: ({ colors }) => colors.primary.main,
-    //   gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.navbar.main),
-    //   contrastText: 'white'
+      main: ({ colors }) => colors.secondary.main,
+     //  gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.navbar.main),
+       contrastText: 'black'
      },
      footer: {
        main: ({ colors }) => colors.primary.main,
        gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.footer.main),
       // contrastText: 'white'
      },
+     button: {
+      main: ({ colors }) => colors.primary.main,
+      contrastText: 'black'
+     },
   },
-
   sidebar: {
     backgroundColor: '#fafafa',
     width: '260px',
