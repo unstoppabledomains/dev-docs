@@ -1,10 +1,11 @@
 - group: Developer Guides
   page: index.md
-  MenuStyle: drilldown
+  menuStyle: drilldown
+  expanded: true
   pages:
     - group: Login with Unstoppable
       page: login-with-unstoppable/index.md
-      expanded: false
+      menuStyle: drilldown
       pages:
         - group: Protocols and Frameworks for Login
           expanded: false
@@ -39,10 +40,13 @@
               page: login-with-unstoppable/getting-login-credentials.md
             - label: Login UI Requirements
               page: login-with-unstoppable/login-ui-requirements.md
-      separatorLine: true  
+      separatorLine: true
+- group: Developer Guides
+  expanded: false
+  page: index.md     
     - group: Decentralized Websites
       page: d-websites/index.md
-      expanded: false
+      menuStyle: drilldown
       pages:
         - group: Build Your D-Website
           expanded: false
@@ -63,10 +67,13 @@
           pages:
           - label: Browser Resolution for D-Websites
             page: d-websites/resolving-dwebsites-in-a-browser.md
-      separatorLine: true  
+     separatorLine: true  
+- group: Developer Guides
+expanded: false
+page: index.md    
     - group: Crypto Payments
       page: crypto-payments/index.md
-      expanded: false
+      menuStyle: drilldown
       pages:
         - page: crypto-payments/integrate-using-libraries.md
           label: Send and Receive Crypto Payments Using Libraries
@@ -77,7 +84,7 @@
       separatorLine: true
     - group: Become a Reseller
       page: reseller/index.md
-      expanded: false
+      menuStyle: drilldown
       pages:
         - page: reseller/register-as-reseller.md
           label: Register as Reseller
@@ -89,4 +96,4 @@
           label: Reseller API Endpoints
         - page: reseller/error-codes-for-troubleshooting.md
           label: Error Codes to Troubleshoot Reseller Integration
-      separatorLine: true    
+     separatorLine: true    

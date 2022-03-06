@@ -13,10 +13,10 @@ export const theme = {
   //   large: '1200px',
   // },
   colors: {
-    // tonalOffset: 0.2,
+    tonalOffset: 0.3,
     primary: {
-      main: '#F9FAFF',
-      // light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
+      main: '#4d4b99',
+      light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
     },
@@ -46,7 +46,7 @@ export const theme = {
     // },
     text: {
       primary: '#424242',
-      secondary: '#4C47F7',
+      secondary: '#4d4b99',
     },
     // border: {
     //   dark: 'rgba(0,0,0, 0.15)',
@@ -112,14 +112,14 @@ export const theme = {
       fontFamily: '"Source Sans Pro", sans-serif',
       fontWeight: '600',
     },
-    // heading1: {
+    heading1: {
     //   fontSize: '1.85714em',
     //   fontWeight: '600',
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
-    //   color: ({ colors }) => colors.text.secondary,
-    //   capitalize: true,
-    // },
+       color: ({ colors }) => colors.text.secondary,
+       capitalize: true,
+     },
     heading2: {
     //   fontSize: '1.57143em',
     //   fontWeight: '600',
@@ -168,8 +168,8 @@ export const theme = {
     nestedBackground: '#fafafa',
     // linesColor: theme => lighten( theme.colors.tonalOffset, desaturate(theme.colors.tonalOffset, theme.colors.primary.main) ),
     // defaultDetailsWidth: '75%',
-    // typeNameColor: theme => theme.colors.text.secondary,
-    // typeTitleColor: theme => theme.schema.typeNameColor,
+     typeNameColor: theme => theme.colors.text.secondary,
+     typeTitleColor: theme => theme.schema.typeNameColor,
     // requireLabelColor: theme => theme.colors.error.main,
     // labelsTextSize: '0.9em',
     // nestingSpacing: '1em',
