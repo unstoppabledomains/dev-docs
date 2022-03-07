@@ -1,0 +1,35 @@
+---
+title: Developer Guides
+---
+
+import {
+  Box,
+  FlexSection,
+  WideTile,
+  H2,
+  NavBar,
+} from '@redocly/developer-portal/ui';
+
+<H2>Developer Guides</H2>
+<Box my={25}>
+  <FlexSection justifyContent="space-around" flexWrap="wrap">
+    <WideTile to="login-with-unstoppable/index.md" header="Login with Unstoppable">
+        Build a universal Web3 login that authenticates your users.
+    </WideTile>
+    <WideTile to="crypto-payments/index.md" header="Crypto Payments">
+        Simplify the process of sending and receiving crypto payments.
+    </WideTile>
+    <WideTile to="reseller/index.md" header="Become a Reseller">
+        Register to become an authorized reseller with Unstoppable Domains.
+    </WideTile>
+    <WideTile to="d-websites/index.md" header="IPFS Websites">
+        Design a custom decentralized website or NFT gallery using IPFS.
+    </WideTile>
+    <WideTile to="../getting-started/test-domains/polygonscan.md" header="Get a Test Domain">
+        Get a free test Polygon test domain to use with Login feature and Reseller account.
+    </WideTile>
+    <WideTile to="../getting-started/domain-registry-essentials/polygon-developer-integration.md" header="Migrate to Polygon">
+        Migrate to our Polygon Layer2 solution for lower gas fees and additional functionality.
+    </WideTile>
+  </FlexSection>
+</Box>

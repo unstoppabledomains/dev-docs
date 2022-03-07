@@ -34,7 +34,7 @@ nav:
     page: use-cases/index.md
 
   - label: Guides
-    page: guides/index.md
+    page: guides/index.mdx
 
   - label: API Reference
     page: openapi/reference.page.yaml
