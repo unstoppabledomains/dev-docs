@@ -2,3 +2,4 @@
   expanded: true
   pages:
     - page: reference.page.yaml
+      separatorLine: true

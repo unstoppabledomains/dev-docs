@@ -1,42 +1,41 @@
-- group: Getting Started
-  page: index.md
-  expanded: true
-  pages:
-    - group: Get a Test Domain
-      expanded: false
-      pages:
-        - label: Etherscan
-          page: test-domains/etherscan.md
-        - label: Polygonscan
-          page: test-domains/polygonscan.md
-      separatorLine: true
-    - group: Change Logs
-      expanded: false
-      pages:
-        - label: Resolution Library
-          page: change-logs/resolution-changelog.md
-        - label: Resolution Java Library
-          page: change-logs/resolution-java-changelog.md
-      separatorLine: true
-    - group: Domain Registry Essentials
-      expanded: false
-      pages:
-        - label: CNS Architecture Overview
-          page: domain-registry-essentials/cns-architecture-overview.md
-        - label: UNS Architecture Overview
-          page: domain-registry-essentials/uns-architecture-overview.md
-        - label: Polygon High Level Overview
-          page: domain-registry-essentials/polygon-high-level-overview.md
-        - label: Polygon Developer Integration
-          page: domain-registry-essentials/polygon-developer-integration.md
-      separatorLine: true
-    - group: Domain Records
-      expanded: false
-      pages:
-        - label: Resolving Domain Records
-          page: domain-registry-essentials/resolving-domain-records.md
-        - label: Namehashing
-          page: domain-registry-essentials/namehashing.md
-        - label: Records Reference
-          page: domain-registry-essentials/records-reference.md
-      separatorLine: true
+pages:
+  - page: index.md
+    separatorLine: true
+  - group: Get a Test Domain
+    expanded: false
+    pages:
+      - label: Etherscan
+        page: test-domains/etherscan.md
+      - label: Polygonscan
+        page: test-domains/polygonscan.md
+    separatorLine: true
+  - group: Change Logs
+    expanded: false
+    pages:
+      - label: Resolution Library
+        page: change-logs/resolution-changelog.md
+      - label: Resolution Java Library
+        page: change-logs/resolution-java-changelog.md
+    separatorLine: true
+  - group: Domain Registry Essentials
+    expanded: false
+    pages:
+      - label: CNS Architecture Overview
+        page: domain-registry-essentials/cns-architecture-overview.md
+      - label: UNS Architecture Overview
+        page: domain-registry-essentials/uns-architecture-overview.md
+      - label: Polygon High Level Overview
+        page: domain-registry-essentials/polygon-high-level-overview.md
+      - label: Polygon Developer Integration
+        page: domain-registry-essentials/polygon-developer-integration.md
+    separatorLine: true
+  - group: Domain Records
+    expanded: false
+    pages:
+      - label: Resolving Domain Records
+        page: domain-registry-essentials/resolving-domain-records.md
+      - label: Namehashing
+        page: domain-registry-essentials/namehashing.md
+      - label: Records Reference
+        page: domain-registry-essentials/records-reference.md
+    separatorLine: true

@@ -1,8 +1,9 @@
-- group: Use Cases
-  page: index.md
-  expanded: true
-  pages:
-    - page: promote-ud-integration.md
-      label: Promoting Your UD Integration
-    - page: unstoppable-nft-domains.md
-      label: Learn About Unstoppable Domains and NFTs
+pages:
+  - page: index.md
+    separatorLine: true
+  - page: promote-ud-integration.md
+    label: Promoting Your UD Integration
+    separatorLine: true
+  - page: unstoppable-nft-domains.md
+    label: Learn About Unstoppable Domains and NFTs
+    separatorLine: true
