@@ -49,7 +49,7 @@ export const theme = {
     // },
     text: {
       primary: '#424242',
-      secondary: '#4d4b99',
+      secondary: '#4C47F7',
     },
     // border: {
     //   dark: 'rgba(0,0,0, 0.15)',
@@ -95,7 +95,7 @@ export const theme = {
       // contrastText: 'white'
      },
      button: {
-      main: ({ colors }) => colors.primary.main,
+      color: ({ colors }) => colors.primary.main,
       contrastText: 'black'
      },
   },
@@ -123,13 +123,13 @@ export const theme = {
     //   fontWeight: '600',
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
-       color: ({ colors }) => colors.text.secondary,
+       color: ({ colors }) => colors.text.primary,
        capitalize: true,
      },
     heading2: {
     //   fontSize: '1.57143em',
     //   fontWeight: '600',
-       color: ({ colors }) => colors.text.secondary,
+       color: ({ colors }) => colors.text.primary,
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
     //   capitalize: false,
@@ -137,7 +137,7 @@ export const theme = {
     heading3: {
     //   fontSize: '1.27em',
     //   fontWeight: '600',
-      color: ({ colors }) => lighten(0.2, colors.text.secondary),
+      color: ({ colors }) => lighten(0.2, colors.text.primary),
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
     //   capitalize: false,
@@ -160,9 +160,9 @@ export const theme = {
       wrap: false,
     },
     links: {
-      color: ({ colors }) => colors.primary.dark,
+      color: ({ colors }) => colors.text.secondary,
       visited: ({ typography }) => typography.links.color,
-      hover: ({ typography }) => darken(0.2, typography.links.color),
+      hover: ({ typography }) => darken(0.4, typography.links.color),
     },
   },
   rightPanel: {
