@@ -94,10 +94,10 @@ export const theme = {
        gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.footer.main),
       // contrastText: 'white'
      },
-     button: {
-      color: ({ colors }) => colors.primary.main,
-      contrastText: 'black'
-     },
+ //    buttonColor: {
+ //     main: '#E4E7EB',
+ //     contrastText: 'black'
+//     }, custom button color for portal homepage, not being used
   },
   sidebar: {
     backgroundColor: '#fafafa',
