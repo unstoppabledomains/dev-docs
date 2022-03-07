@@ -1,0 +1,7 @@
+- group: Reference API
+  expanded: true
+  pages:
+    - page: reseller-api-endpoints.md
+      label: Reseller API Endpoints
+    - page: reference.page.yaml
+      label: Reseller API

@@ -92,8 +92,6 @@ page: index.md
           label: Configure or Setup Payment Methods
         - page: reseller/receive-your-payouts.md
           label: Receive Your Payouts
-        - page: reseller/reseller-api-endpoints.md
-          label: Reseller API Endpoints
         - page: reseller/error-codes-for-troubleshooting.md
           label: Error Codes to Troubleshoot Reseller Integration
      separatorLine: true    
