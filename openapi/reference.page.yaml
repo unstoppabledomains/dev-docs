@@ -1,7 +1,7 @@
 type: reference-docs
 definitionId: reseller
 settings:
-  pagination: none
+  pagination: section
   showConsole: true
   generateCodeSamples:
     languages:
