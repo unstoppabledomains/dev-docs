@@ -1,14 +1,19 @@
 pages:
   - page: index.md
     separatorLine: true
-  - page: register-as-reseller.md
-    label: Register as Reseller
-    separatorLine: true
-  - page: setup-payment-methods.md
-    label: Configure or Setup Payment Methods
-    separatorLine: true
-  - page: receive-your-payouts.md
-    label: Receive Your Payouts
+  - group: Reseller Integration Guides
+    expanded: false
+    pages:
+      - label: Choose Your Integration Pathway
+        page: reseller-integration-guides/reseller-pathways.md
+      - page: reseller-integration-guides/claim-free-domains.md
+        label: Claim Free Domains Guide
+      - label: Stripe Payments Guide
+        page: reseller-integration-guides/stripe-payments.md
+      - page: reseller-integration-guides/coinbase-payments.md
+        label: Coinbase Payments Guide  
+      - page: reseller-integration-guides/redirect-url-payments.md 
+        label: Redirect URL Payments Guide  
     separatorLine: true
   - page: reseller-api-endpoints.md
     label: Reseller API Endpoints

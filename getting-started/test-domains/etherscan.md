@@ -3,19 +3,13 @@ title: Get a Free Ethereum Test Domain
 description: This guide covers the process of obtaining a free test domain, through direct smart contract calling on Etherscan.
 ---
 
+# Get a Free Ethereum Test Domain
+
 **[[insert overview, reusable content]]**
 
 {% hint style="info" %}
 [Rinkeby faucet](https://faucet.rinkeby.io) offers free money in the form of Ether tokens for domains minted on Rinkeby Testnet.
 {% endhint %}
-
-## Test Domain Options
-
-Free test domains are available via three different methods:&#x20;
-
-* [Unstoppable Website Faucet](get-test-domain.md#get-a-domain-using-unstoppable-website-faucet)
-* [Etherscan test domain](get-test-domain.md#get-a-domain-using-etherscan), through direct smart contract calling
-* [Polygonscan test domain](get-test-domain.md#get-a-domain-using-polygonscan), through direct smart contract calling
 
 ## Step 1: Check Wallet Compatibility for Etherscan
 
@@ -33,7 +27,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Copy/paste the URL of the post to Rinkeby faucet to verify your identity.
 * Click the **Give Me Ether** button.
 
-![Retrieve free Ether through the faucet to cover gas fees for domains on Rinkeby testnet (Layer 1)](.gitbook/assets/rinkeby-faucet-free-ether.png)
+![Retrieve free Ether through the faucet to cover gas fees for domains on Rinkeby testnet (Layer 1)](images/rinkeby-faucet-free-ether.png)
 
 ## Step 3: Open the Etherscan Smart Contract Request
 
@@ -41,20 +35,20 @@ To calculate the transaction fee you'd like to target you can use services like 
 * To get a test domain on testnet, find the Smart Contract address in [reference table](domain-registry-essentials/cns-smart-contracts.md#freeminter).
 * Connect your wallet.
 
-![How to locate the smart contract address in the reference table and connect your wallet](.gitbook/assets/etherscan-steps-test-domain.png)
+![How to locate the smart contract address in the reference table and connect your wallet](images/etherscan-steps-test-domain.png)
 
 ## Step 4: Write the Etherscan Smart Contract Request
 
 * Enter the **suffix** for the domain in the claim -> label (string) field.
 * &#x20;Press the **Write** button to start the transaction.
 
-![Select the suffix for the domain and click "Write" button to start the transaction](../.gitbook/assets/step-3.png)
+![Select the suffix for the domain and click "Write" button to start the transaction](../images/step-3.png)
 
 * Sign the transaction.
 
-![Etherscan wallet signature page](.gitbook/assets/step-4-etherscan-claim-domain-small.png)
+![Etherscan wallet signature page](images/step-4-etherscan-claim-domain-small.png)
 
-![Etherscan error for insufficient funds](.gitbook/assets/step-4-1-etherscan-claim-domain-small.png)
+![Etherscan error for insufficient funds](images/step-4-1-etherscan-claim-domain-small.png)
 
 {% hint style="danger" %}
 If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.&#x20;

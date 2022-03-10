@@ -21,13 +21,13 @@ For more information about the structural differences between CNS and UNS, see t
 
 UNS has one single smart contract, the `Registry`. The same `Registry` contract is used for managing domain ownership and storing domain records. `Records Storage` is responsible for storing domain records.
 
-![Registry and RecordStorage interaction](../../../.gitbook/assets/uns-architecture.png)
+![Registry and RecordStorage interaction](../../../images/uns-architecture.png)
 
 Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](../namehashing.md).
 
 &#x20;For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
 
-![Big picture overview of UNS Smart Contract Architecture](../../../.gitbook/assets/uns-smart-contract-architecture.png)
+![Big picture overview of UNS Smart Contract Architecture](../../../images/uns-smart-contract-architecture.png)
 
 ### Registry
 

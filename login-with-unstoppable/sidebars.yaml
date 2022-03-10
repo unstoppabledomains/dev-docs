@@ -1,21 +1,23 @@
 pages:
   - page: index.md
     separatorLine: true
-  - group: Protocols and Frameworks for Login
+  - group: Getting Started with Login
     expanded: false
     pages:
-      - label: Authorization Server
-        page: protocols-and-frameworks/server-overview.md
-      - label: Authentication Protocol
-        page: protocols-and-frameworks/authentication-protocol.md
+      - label: Humanity Check for Login
+        page: get-started-login/humanity-check-for-login.md
+      - label: Register Your Application
+        page: get-started-login/register-your-application.md
+      - label: Login Client Configuration
+        page: get-started-login/login-client-configuration.md
       - label: Scopes for Login
-        page: protocols-and-frameworks/scopes-for-login.md
+        page: get-started-login/login-protocols/scopes-for-login.md
     separatorLine: true
   - group: Login Integration Guides
     expanded: false
     pages:
-      - label: Select Your Integration Option
-        page: login-integration-guides/integration-pathways-home.md
+      - label: Select Your Integration Pathway
+        page: login-integration-guides/integration-pathways.md
       - label: Login With Pop-up
         page: login-integration-guides/login-with-popup.md
       - label: Login Without Pop-up
@@ -28,12 +30,21 @@ pages:
         page: login-integration-guides/bnc-onboard-guide.md
       - label: Node.js Server
         page: login-integration-guides/node-js-server-guide.md
+      - label: Login UI Configuration
+        page: login-integration-guides/login-ui-configuration.md  
     separatorLine: true
-  - group: Additional Login Guides
+  - group: Troubleshoot Your Login Integration
+    expanded: false
+    pages: 
+      - label: Login Error Codes
+      - page: troubleshoot/login-error-codes.md
+      - label: Login Troubleshooting Guide
+      - page: troubleshoot/troubleshooting-guide.md
+  - group: Login Protocols
     expanded: false
     pages:
-      - label: Establish Login Credentials
-        page: getting-login-credentials.md
-      - label: Login UI Requirements
-        page: login-ui-requirements.md
-    separatorLine: true
+      - label: Authorization Server
+        page: login-protocols/authorization-server.md
+      - label: Authentication Protocol
+        page: login-protocols/authentication-protocol.md
+    separatorLine: true  

@@ -1,5 +1,5 @@
 ---
-title: Developer Tool Kit
+title: Developer Toolkit
 description: This is the landing page for the developer toolkit.
 ---
 

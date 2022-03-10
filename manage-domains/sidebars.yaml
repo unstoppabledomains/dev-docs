@@ -1,0 +1,15 @@
+pages:
+  - page: index.md
+    separatorLine: true
+  - page: managing-domain-records.md
+    label: Managing Domain Records
+    separatorLine: true
+  - page: domains-configuration.md
+    label: Domain Configuration GUI
+    separatorLine: true
+  - page: delegating-transactions.md
+    label: Delegating Transactions
+    separatorLine: true
+  - page: delegating-domain-ownership.md
+    label: Delegating Domain Ownership (Custom Smart Contract)
+    separatorLine: true

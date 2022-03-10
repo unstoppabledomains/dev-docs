@@ -1,0 +1,9 @@
+pages:
+  - page: index.md
+    separatorLine: true
+  - page: ethereum-polygon-comparison.md
+    label: Ethereum vs. Polygon Comparison
+    separatorLine: true
+  - page: polygon-developer-integration.md
+    label: Polygon Developer Integration Guide
+    separatorLine: true

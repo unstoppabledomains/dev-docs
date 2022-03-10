@@ -1,6 +1,12 @@
 pages:
   - page: index.md
     separatorLine: true
+  - label: Resolution Service API
+    page: resolution-service-api.md
+    separatorLine: true
+  - label: Resolution CLI
+    page: resolution-cli.md
+    separatorLine: true
   - group: Smart Contracts
     expanded: false
     pages:
@@ -17,21 +23,26 @@ pages:
       - label: Library Configuration
         page: resolution-libraries/library-configuration.md
     separatorLine: true
-  - group: Resolving with Direct Blockchain Calls
+  - group: Resolve with Direct Blockchain Calls
     expanded: false
     pages:
-      - label: Resolving UD Domains Without Libraries
+      - label: Resolve UD Domains Without Libraries
         page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
-      - label: Resolving .zil Domains Without Libraries
-        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
+      - label: Resolve .zil Domains Without Libraries
+        page: direct-blockchain-calls/resolve-zil-without-libraries.md
+      - label: Resolve Domains with Ethereum Smart Contracts
+        page: direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
-  - group: Other Resolution Options
+  - label: Resolve Domains in Web Applications
+    page: resolve-domains-in-web-applications.md
+    separatorLine: true
+  - group: Resolve Domains in a Browser (HTTP & IPFS)
     expanded: false
     pages:
-      - label: Resolution CLI
-        page: resolution-cli.md
-      - label: Resolving Domains in Web Applications
-        page: resolving-domains-in-web-applications.md
-      - label: Resolution Service API
-        page: resolution-service-api.md
+      - label: Browser Resolution Overview
+        page: resolve-domains-browser/browser-resolution-overview.md
+      - label: Browser Resolution Algorithm
+        page: resolve-domains-browser/browser-resolution-algorithm.md
+      - label: Browser Resolution Test Domains
+        page: resolve-domains-browser/test-domains.md
     separatorLine: true

@@ -16,7 +16,7 @@ This integration guide shows you how to add Login to Unstoppable to your applica
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the Client ID and Client Secret from your [credentials](../getting-login-credentials.md).
+* Add the Client ID and Client Secret from your [credentials](../login-client-configuration.md).
 * Add all the [scopes](../scopes-for-login.md) you will be requesting from the user.
 * Add the [​​](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23)redirect URI that the auth server will redirect back to after every authorization attempt.
 
@@ -35,7 +35,7 @@ const uauth = new UAuth({
 ```
 
 {% hint style="danger" %}
-The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../getting-login-credentials.md) Guide for details).
+The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../login-client-configuration.md) Guide for details).
 {% endhint %}
 
 ## Step 2: Create a Login Button
@@ -168,11 +168,9 @@ const Profile: React.FC<RouteProps> = () => {
 }
 ```
 
-## Step 5: Add Login UI Requirements
+## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements for the UD buttons, user modals, and authenticated user icons. For example, once a user has successfully authenticated, the application's UI should display the user’s domain name (instead of address) to confirm the authorization was successful.&#x20;
-
-Please follow the instructions in the [**Login UI Requirements Guide**](../login-ui-requirements.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
 
 {% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.

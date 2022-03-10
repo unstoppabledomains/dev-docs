@@ -10,7 +10,7 @@ description: This page reviews best practices for crypto payments integrations.
 * Always try to resolve a domain with the provided currency code.
 * Always handle resolution errors according to error type.
 
-![Best practices](../../.gitbook/assets/best-practices.png)
+![Best practices](../../images/best-practices.png)
 
 ## Resources
 

@@ -1,26 +1,32 @@
 ---
-title: Become A Reseller
-description: This is the landing page for the reseller feature.
+title: Register As a Reseller
+description: This page describes the process for creating an account and applying to become an authorized reseller for Unstoppable Domains. Payment settings can then be configured in the UD Reseller Dashboard.
 ---
 
-You've reached the reseller section. Here's how to get started...
+# Register As Reseller
 
-## Overview
+{% hint style="warning" %}
+The Reseller API feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon-l2-network/polygon-developer-integration.md) to get started.
+{% endhint %}
 
-Give general info
+## Create an Account
 
-## Become a Reseller
+You must create an account in the [Unstoppable Domains Reseller Dashboard](https://unstoppabledomains.com/resellers) to get started.
 
-give info
+![Sign-up page for creating a new reseller account](../../images/0.png)
 
-## Payment Methods
+You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
 
-when to use this over other options
+![Login or sign-up options for new resellers](../../images/1.png)
 
-## Best Practices
+## Submit a Reseller Application
 
-when to use, which products support this etc.
+After logging in, you will have the option to submit a reseller application. Please complete the required information and submit the application. The review process takes up to five business days but is usually sooner.
 
-## Asking for help
+![Reseller application form](../../images/3.png)
 
-Don't be shy... we're here to help. For assistance with integrating your app, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+After your application is approved, you will be given full access to the reseller dashboard to view your ResellerID and update payment information.
+
+{% hint style="info" %}
+To avoid missing the email about your reseller application status, please update your email settings to approve messages from [notifications@unstoppabledomains.com](mailto:notifications@unstoppabledomains.com), so it doesn’t end up in your spam folder.
+{% endhint %}

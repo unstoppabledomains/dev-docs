@@ -106,11 +106,9 @@ const provider = await web3modal.connect()
 ```
 {% endcode %}
 
-## Step 4: Add Login UI Requirements
+## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements for the UD buttons, user modals, and authenticated user icons. For example, once a user has successfully authenticated, the application's UI should display the user’s domain name (instead of address) to confirm the authorization was successful.&#x20;
-
-Please follow the instructions in the [**Login UI Requirements Guide**](../login-ui-requirements.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
 
 {% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
