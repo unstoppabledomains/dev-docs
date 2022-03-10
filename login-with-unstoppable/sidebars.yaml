@@ -11,7 +11,7 @@ pages:
       - label: Login Client Configuration
         page: get-started-login/login-client-configuration.md
       - label: Scopes for Login
-        page: get-started-login/login-protocols/scopes-for-login.md
+        page: get-started-login/scopes-for-login.md
     separatorLine: true
   - group: Login Integration Guides
     expanded: false
