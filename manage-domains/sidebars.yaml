@@ -10,6 +10,6 @@ pages:
   - page: delegating-transactions.md
     label: Delegating Transactions
     separatorLine: true
-  - page: delegating-domain-ownership.md
-    label: Delegating Domain Ownership (Custom Smart Contract)
+  - page: delegating-domain-management.md
+    label: Delegating Domain Management
     separatorLine: true
