@@ -3,24 +3,30 @@ title: Library Configuration
 description: This page details how to configure the libraries for domain resolution.
 ---
 
+# Library Configuration
+
 Resolution libraries require a connection to the Ethereum network to resolve .crypto and .eth domains. To initialize the library, you need to specify an Ethereum node service provider. Once the instance is created you can begin resolving domains. Below are examples of how to initialize the library with different providers.
 
 Each of the resolution libraries supports an Ethereum provider url for configuration. You can obtain a provider url from a service like Alchemy where obtaining an API key is free and only requires creating an account.
 
 To choose an alternative Ethereum provider see [Nodes as a Service guide.](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
-{% hint style="info" %}
-Unstoppable libraries use Infura provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered as production-ready.
-{% endhint %}
+:::attention info
 
-{% hint style="warning" %}
-Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply “https://\*.[infura.io](http://infura.io)” (if using the default configuration) as a connect-src in your Content Security Policy to allow these requests through.
-{% endhint %}
+Unstoppable libraries use Infura provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered as production-ready.
+
+:::
+
+:::warning
+
+Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply "https:/\/*.[infura.io](http://infura.io)" (if using the default configuration) as a connect-src in your Content Security Policy to allow these requests through.
+
+:::
 
 * [JavaScript Resolution library](library-configuration.md#javascript-resolution-library)&#x20;
 * [Java Resolution library](library-configuration.md#java-resolution-library)
 * [Swift Resolution library](library-configuration.md#swift-resolution-library)
-* [Golang Resolution library](https://github.com/unstoppabledomains/resolution-go)
+* [Golang Resolution library](library-configuration.md#golang-resolution-library)
 
 ## JavaScript Resolution library
 
@@ -42,12 +48,12 @@ const resolution = new Resolution({
         locations: {
           Layer1: {url: infuraProviderUrl, network: 'mainnet'},
           Layer2: {
-            url: poligonProviderUrl,
+            url: polygonProviderUrl,
             network: 'polygon-mainnet',
           },
         },
       },
-      ens: {url: infuraProviderUrl, network: 'mainnet')
+      ens: {url: infuraProviderUrl, network: 'mainnet'}
     },
   });
 
