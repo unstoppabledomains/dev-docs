@@ -47,4 +47,4 @@ pages:
         page: login-protocols/authorization-server.md
       - label: Authentication Protocol
         page: login-protocols/authentication-protocol.md
-    separatorLine: true  
+    separatorLine: true
