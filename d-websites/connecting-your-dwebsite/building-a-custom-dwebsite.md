@@ -70,12 +70,12 @@ The following guide explains how to upload files to IPFS via Pinata website inte
 * Go to [Pinata.cloud](https://pinata.cloud) and sign-up / sign-in.
 * Ensure the **Pin Manager** tab is selected and click **Upload**.
 
-![Locate the Pin Manager tab for uploading files to Pinata.cloud](../../../.gitbook/assets/pin-manager-pinata.png)
+![Locate the Pin Manager tab for uploading files to Pinata.cloud](../../../images/pin-manager-pinata.png)
 
 * Then, click **Folder** and select the folder containing the website files you wish to upload.
 * When the upload is complete, the IPFS CID (or **IPFS hash**) will appear under the Pin Manager tab.
 
-![Locate the IPFS Hash for your d-website in Pinata.cloud](../../../.gitbook/assets/ipfs-hash-pinata-web-interface.png)
+![Locate the IPFS Hash for your d-website in Pinata.cloud](../../../images/ipfs-hash-pinata-web-interface.png)
 
 * Click the IPFS hash to copy it to the clipboard. Then, [connect the IPFS hash to your domain](./#option-3-build-a-customized-website-yourself-and-attach-your-ipfs-hash-to-your-domain).
 

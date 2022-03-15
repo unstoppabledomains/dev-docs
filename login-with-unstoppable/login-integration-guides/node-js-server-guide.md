@@ -152,7 +152,11 @@ There is no good documentation of this package yet, so developers should [see ho
 
 The package takes an injection with a submit method attached that is called when a user interacts with the modal. The submit function should call the [login function/route](node-js-server-guide.md#step-3a-a-login-method) on your own service.
 
-## Step 5: Run the Server!
+## Step 5: Configure the Login UI
+
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. For Node.js integrations, you can download official UD buttons to use in your UI in [**Step 3**](../login-ui-configuration.md#step-3-download-ud-buttons-node-js-only). Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+
+## Step 6: Run the Server!
 
 The server can now listen and serve requests.
 

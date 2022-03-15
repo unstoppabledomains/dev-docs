@@ -72,15 +72,15 @@ In order to set up a redirection to a traditional domain, you will need to do a 
 * Replace YOUR WEBSITE HERE with your URL and YOUR WEBSITE DESCRIPTION HERE with a short description of your website and save the file as **index.html** (do not use any other name).
 * Open index.html from your hard drive to see if everything is working before proceeding. Right-click the file and select "**Open with**" followed by your browser of choice.&#x20;
 
-![Right click to 'Open With' a specific or preferred browser](../../.gitbook/assets/open-with-specific-browser.png)
+![Right click to 'Open With' a specific or preferred browser](../../images/open-with-specific-browser.png)
 
 * Go to the **My Domains** section of our website, click **Manage** over the domain you wish to redirect, and click the **Website** tab.
 
-![Locate the Website tab under My Domains -> Manage](../../.gitbook/assets/website-tab-manage-domains-version2.png)
+![Locate the Website tab under My Domains -> Manage](../../images/website-tab-manage-domains-version2.png)
 
 * Scroll down to **Upload Files to IPFS** and click **Upload**.
 
-![Locate the IPFS File Uploader tool in Manage -> Website](../../.gitbook/assets/ipfs-file-uploader.png)
+![Locate the IPFS File Uploader tool in Manage -> Website](../../images/ipfs-file-uploader.png)
 
 * **Browse** for the index.html file located on your computer and Click confirm.
 * Scroll down further and click **Confirm Changes**.

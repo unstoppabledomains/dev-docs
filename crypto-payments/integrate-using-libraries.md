@@ -7,7 +7,7 @@ The easiest way to integrate domain resolution for crypto payments is by using t
 
 This process converts a human-readable name like `brad.crypto` to the cryptocurrency addresses that name stores. As long as the addresses are set, a user can send any of our 80+ supported cryptocurrencies to an Unstoppable Domain and it will end up in the right place. A user can send `BTC` to `brad.crypto` and it will go to Brad's `BTC` address. A user can send `ETH` to `brad.crypto` and will go to Brad's `ETH` address.
 
-![A successful domain resolution and payment](../../.gitbook/assets/success-payment-example.gif)
+![A successful domain resolution and payment](../../images/success-payment-example.gif)
 
 ## Step 1: Retrieve Domain Records
 
@@ -19,7 +19,7 @@ In the example above, we're sending 1 `ETH` to `ryan.crypto`. The application se
 A domain can store many records and key formats. To learn about our supported record types, see [Records reference guide](../domain-registry-essentials/records-reference.md).
 {% endhint %}
 
-![Data movement for a successful payment](<../.gitbook/assets/Crypto payments success flow (1).png>)
+![Data movement for a successful payment](<../images/Crypto payments success flow (1).png>)
 
 
 ## Step 2: Resolve Crypto Records

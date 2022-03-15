@@ -27,7 +27,7 @@ To prevent abuse, we ask that developers cover the cost of minting and transferr
   * **Currency Symbol:** MATIC
   * **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)
 
-![Configure network settings in MetaMask to use Polygonscan domains (Layer 2)](.gitbook/assets/configure-metamask-polygonscan.png)
+![Configure network settings in MetaMask to use Polygonscan domains (Layer 2)](images/configure-metamask-polygonscan.png)
 
 ## Step 2. Get free MATIC tokens from Polygon Faucet
 
@@ -36,7 +36,7 @@ To prevent abuse, we ask that developers cover the cost of minting and transferr
 * Enter your wallet address.
 * Click **Submit** button.
 
-![Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)](.gitbook/assets/polygon-free-matic-tokens.png)
+![Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)](images/polygon-free-matic-tokens.png)
 
 ## Step 3: Locate the TLD namehash for Polygon
 
@@ -89,7 +89,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 * Connect your wallet (Rinkeby).
 * Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
 
-![Enter data for 'claim to records' for Polygonscan domain (Layer2)](.gitbook/assets/polygonscan-claim-to-records.png)
+![Enter data for 'claim to records' for Polygonscan domain (Layer2)](images/polygonscan-claim-to-records.png)
 
 * Click the **Write** button to start the transaction.&#x20;
 

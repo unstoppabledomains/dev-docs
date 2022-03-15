@@ -3,23 +3,7 @@ title: Send and Receive Crypto Payments
 description: This is the landing page for the crypto payments feature.
 ---
 
-You've reached the cryptopayments section. Here's how to get started...
-
-## Overview
-
-Give general info
-
-## Resolve Using Libraries
-
-give info
-
-## Other Ways to Resolve
-
-when to use this over other options
-
-## Best Practices
-
-when to use, which products support this etc.
+Include the overview stuff here and the diagram from the guides
 
 ## Asking for help
 

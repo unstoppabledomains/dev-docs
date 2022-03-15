@@ -21,7 +21,7 @@ For more information about the structural differences between CNS and UNS, see t
 
 The two central components of CNS are its `Registry` and `Resolver` smart contracts. `Registry` is a _map_ (or _dictionary_) from domain names to an owner address and a `Resolver` address. And `Resolver` is a _map_ from domain names to the records associated with that domain (cryptocurrency addresses, etc.).
 
-![A simplified illustration of the relation between Registry and Resolver smart contracts](<../../../.gitbook/assets/registry\_resolver\_relation (2) (2) (2) (3) (1).svg>)
+![A simplified illustration of the relation between Registry and Resolver smart contracts](<../../../images/registry\_resolver\_relation (2) (2) (2) (3) (1).svg>)
 
 There is only one `Registry` smart contract deployed in the Ethereum Mainnet, but there are many versions of `Resolver` smart contracts. In theory, every domain could use a different `Resolver` contract but in practice the majority of domains are managed by the same `Resolver` smart contract instance (like Resolver 1 in the example above).
 
@@ -37,7 +37,7 @@ For instance, `example.crypto`'s namehash: `0xd584c5509c6788ad9d9491be8ba8b4422d
 
 This flow describes how the CNS `Registry` and `Resolvers` interact.
 
-![Visualization of interaction between CNS Registry ad Resolvers](<../../../.gitbook/assets/Smart-Contract-Architecture-Administration (4) (4) (2) (3) (3).svg>)
+![Visualization of interaction between CNS Registry ad Resolvers](<../../../images/Smart-Contract-Architecture-Administration (4) (4) (2) (3) (3).svg>)
 
 ### Registry
 

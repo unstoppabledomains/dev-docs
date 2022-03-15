@@ -8,6 +8,8 @@ pages:
         page: test-domains/etherscan.md
       - label: Polygonscan
         page: test-domains/polygonscan.md
+      - label: UD Website Facuet  
+        page: test-domains/faucet.md
     separatorLine: true
   - group: Change Logs
     expanded: false
@@ -24,16 +26,8 @@ pages:
         page: domain-registry-essentials/cns-architecture-overview.md
       - label: UNS Architecture Overview
         page: domain-registry-essentials/uns-architecture-overview.md
-      - label: Polygon High Level Overview
-        page: domain-registry-essentials/polygon-high-level-overview.md
-      - label: Polygon Developer Integration
-        page: domain-registry-essentials/polygon-developer-integration.md
-    separatorLine: true
-  - group: Domain Records
-    expanded: false
-    pages:
-      - label: Resolving Domain Records
-        page: domain-registry-essentials/resolving-domain-records.md
+      - label: CNS vs UNS Comparison
+        page: domain-registry-essentials/cns-uns-comparison.md
       - label: Namehashing
         page: domain-registry-essentials/namehashing.md
       - label: Records Reference
