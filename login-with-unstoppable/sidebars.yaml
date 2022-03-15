@@ -40,6 +40,7 @@ pages:
       - page: troubleshoot/login-error-codes.md
       - label: Login Troubleshooting Guide
       - page: troubleshoot/troubleshooting-guide.md
+    separatorLine: true  
   - group: Login Protocols
     expanded: false
     pages:
