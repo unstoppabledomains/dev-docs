@@ -1537,16 +1537,16 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@1.1.0-beta.81":
-  version "1.1.0-beta.81"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.81.tgz#8864c6f583d1fbe8ee9fe0f1134563acb560a05d"
-  integrity sha512-leRfnklYcOpHmMRnXx+eJ4W/xE9zEeET9Joe3zaEHklkpjdfV/fxvLV96HEvZBvCDTfmGeVV3i6kPfBnM0F3Mw==
+"@redocly/developer-portal@1.1.0-beta.84":
+  version "1.1.0-beta.84"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.84.tgz#785e4ccadac16456364ce30fb8ce1fd11e0e76d8"
+  integrity sha512-AGCm2XlrhLgpbH75Ou2JsgA/nqTQGkrElFkI0Wu5L6Db2kKeQUazxmW9/+wllhIZ28VozgSXc+cG7TM/3MtkmQ==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
     "@redocly/gatsby-remark-images" "4.2.0"
-    "@redocly/openapi-core" "1.0.0-beta.67"
-    "@redocly/reference-docs" "2.11.6"
+    "@redocly/openapi-core" "1.0.0-beta.87"
+    "@redocly/reference-docs" "2.12.3"
     babel-plugin-react-html-attrs "^3.0.5"
     babel-plugin-styled-components "^1.12.0"
     buffer "^6.0.3"
@@ -1575,7 +1575,6 @@
     gatsby-plugin-segment-js "3.6.0"
     gatsby-plugin-styled-components "4.2.0"
     gatsby-react-router-scroll "^4.13.0"
-    gatsby-remark-copy-linked-files "3.2.0"
     gatsby-remark-image-attributes "1.0.0-4"
     gatsby-remark-prismjs "4.2.0"
     gatsby-source-filesystem "3.2.0"
@@ -1595,6 +1594,7 @@
     minimatch "^3.0.4"
     mobx "^6.1.0"
     mobx-react "^7.2.0"
+    nanoid "3.3.1"
     net "^1.0.2"
     node-fetch "^2.6.1"
     p-map "^4.0.0"
@@ -1602,6 +1602,7 @@
     polished "^4.1.2"
     postcss "^8.2.12"
     prismjs "^1.23.0"
+    probe-image-size "^6.0.0"
     process "^0.11.10"
     qs "^6.10.1"
     raw-loader "^4.0.2"
@@ -1617,7 +1618,6 @@
     remark "^10.0.1"
     remark-admonitions "^1.2.1"
     scroll-lock "^2.1.5"
-    shortid "^2.2.16"
     simple-git "^1.110.0"
     sitemap "^7.0.0"
     slugify "^1.5.1"
@@ -1676,23 +1676,7 @@
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-"@redocly/openapi-core@1.0.0-beta.67":
-  version "1.0.0-beta.67"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.67.tgz#d2687319e28754b8908048f9dead5033c6473f64"
-  integrity sha512-xH9Dl4D2VbXh7qMv1x7oQPfE9FpQsSjjJCe8QzRBF6aiTQFcxCB9LG4msa3Ym5KQuGkCDMyQXuA5oPTtzDooRQ==
-  dependencies:
-    "@redocly/ajv" "^8.6.4"
-    "@types/node" "^14.11.8"
-    colorette "^1.2.0"
-    js-levenshtein "^1.1.6"
-    js-yaml "^4.1.0"
-    lodash.isequal "^4.5.0"
-    minimatch "^3.0.4"
-    node-fetch "^2.6.1"
-    pluralize "^8.0.0"
-    yaml-ast-parser "0.0.43"
-
-"@redocly/openapi-core@^1.0.0-beta.80":
+"@redocly/openapi-core@1.0.0-beta.87", "@redocly/openapi-core@^1.0.0-beta.82":
   version "1.0.0-beta.87"
   resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.87.tgz#f2732cf321340aa8dc2ff89c1695c62d4806c0ac"
   integrity sha512-bGvINYT8jpcYEbibhd4AO0M5WPE1IQLNLS4LCNZbD7jkoSQB1EHWBZJDhfPd1kxKPPcQ7UJNUCJwtIIrRs5gTQ==
@@ -1708,18 +1692,12 @@
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/react-dropdown-aria@2.0.12":
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/@redocly/react-dropdown-aria/-/react-dropdown-aria-2.0.12.tgz#2e3af2b1b8e9123487109400d6117f0d4a8445a6"
-  integrity sha512-feQEZlyBvQsbT/fvpJ4jJ5OLGaUPpnskHYDsY8DGpPymN+HUeDQrqkBEbbKRwMKidFTI2cxk2kJNNTnvdS9jyw==
-
-"@redocly/reference-docs@2.11.6":
-  version "2.11.6"
-  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.11.6.tgz#b0688e596aafdfd066009bb804ba94762abb9e4a"
-  integrity sha512-r2lbbOJoOHwcKWSOLGys9HPS21sv3Va/vHBmK4eTEQOzm22Y4hmjsihxqKmeuIbKWw9jkCHu+F8zpHPvcpJDSA==
+"@redocly/reference-docs@2.12.3":
+  version "2.12.3"
+  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.12.3.tgz#ba29e2d480c856c9aef28fd05c083d2c437059f2"
+  integrity sha512-/35IX9Pf2uX5vIr04N+14H07v6w+U3VBkbUaB/dcxfOBb8GRTsIFYLH1lYg+146F3muq3vJiUBp6pFkGgPZohQ==
   dependencies:
-    "@redocly/openapi-core" "^1.0.0-beta.80"
-    "@redocly/react-dropdown-aria" "2.0.12"
+    "@redocly/openapi-core" "^1.0.0-beta.82"
     "@redocly/vscode-json-languageservice" "3.4.9"
     "@wojtekmaj/enzyme-adapter-react-17" "^0.6.2"
     classnames "^2.2.6"
@@ -1732,7 +1710,7 @@
     handlebars "^4.7.6"
     hotkeys-js "^3.7.6"
     informed "3.33.0"
-    json-pointer "^0.6.1"
+    json-pointer "^0.6.2"
     kleur "^3.0.3"
     lunr "^2.3.8"
     mark.js "^8.11.1"
@@ -1740,7 +1718,7 @@
     mkdirp "^0.5.1"
     mobx-react "^7.2.0"
     node-libs-browser "^2.2.0"
-    openapi-sampler "^1.0.1"
+    openapi-sampler "^1.2.1"
     path-browserify "^1.0.1"
     perfect-scrollbar "^1.4.0"
     polished "^3.6.5"
@@ -6820,20 +6798,6 @@ gatsby-recipes@^0.25.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-remark-copy-linked-files@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-3.2.0.tgz#aedfb7c05c0833fcb9e807127a08be101654503b"
-  integrity sha512-pNKYR9Q3QuIZ3u5msW9dtqszOgKzRqDRtg3kXnqagCC8JbT2IVYI4IG3tP2tTG3CwEOjBtBI0YhUM2KGgzdJ5g==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    cheerio "^1.0.0-rc.3"
-    fs-extra "^8.1.0"
-    is-relative-url "^3.0.0"
-    lodash "^4.17.21"
-    path-is-inside "^1.0.2"
-    probe-image-size "^6.0.0"
-    unist-util-visit "^1.4.1"
-
 gatsby-remark-image-attributes@1.0.0-4:
   version "1.0.0-4"
   resolved "https://registry.yarnpkg.com/gatsby-remark-image-attributes/-/gatsby-remark-image-attributes-1.0.0-4.tgz#46c3c9a4db8472f561410ea75b15d0000f6dd84e"
@@ -8883,7 +8847,7 @@ json-parse-even-better-errors@^2.3.0:
   resolved "https://registry.yarnpkg.com/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz#7c47805a94319928e05777405dc12e1f7a4ee02d"
   integrity sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==
 
-json-pointer@0.6.2, json-pointer@^0.6.1:
+json-pointer@0.6.2, json-pointer@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/json-pointer/-/json-pointer-0.6.2.tgz#f97bd7550be5e9ea901f8c9264c9d436a22a93cd"
   integrity sha512-vLWcKbOaXlO+jvRy4qNd+TI1QUPZzfJj1tpJ3vAXDych5XJf93ftpUKe5pKCrzyIIwgBJcOcCVRUfqQP25afBw==
@@ -10218,12 +10182,7 @@ nano-time@1.0.0:
   dependencies:
     big-integer "^1.6.16"
 
-nanoid@^2.1.0:
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.11.tgz#ec24b8a758d591561531b4176a01e3ab4f0f0280"
-  integrity sha512-s/snB+WGm6uwi0WjsZdaVcuf3KJXlfGl2LcxgwkEwJF0D/BWzVWAZW/XY4bFaiR7s0Jk3FPvlnepg1H1b1UwlA==
-
-nanoid@^3.3.1:
+nanoid@3.3.1, nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
@@ -10723,7 +10682,7 @@ open@^7.0.2, open@^7.0.3:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-openapi-sampler@^1.0.1:
+openapi-sampler@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/openapi-sampler/-/openapi-sampler-1.2.1.tgz#2ca9eea527f8f2ddb32c3ae1dda31afd8bf0833f"
   integrity sha512-mHrYmyvcLD0qrfqPkPRBAL2z16hGT2rW0d0B7nklfoTcc3pmkJLkSZlKSeFgerUM41E5c7jlxf0Y19xrM7mWQQ==
@@ -13035,13 +12994,6 @@ shell-quote@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
-
-shortid@^2.2.16:
-  version "2.2.16"
-  resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.16.tgz#b742b8f0cb96406fd391c76bfc18a67a57fe5608"
-  integrity sha512-Ugt+GIZqvGXCIItnsL+lvFJOiN7RYqlGy7QE41O3YC1xbNSeDGIRO7xg2JJXIAj1cAGnOeC1r7/T9pgrtQbv4g==
-  dependencies:
-    nanoid "^2.1.0"
 
 should-equal@^2.0.0:
   version "2.0.0"
