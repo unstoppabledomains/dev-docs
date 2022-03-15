@@ -70,3 +70,11 @@ The solution is to modify the redirect URIs in the Login Client to ensure a matc
 The problem happens the second, or subsequent time, that you attempt to login to the application. You get a default popup login modal (this is the bug) and are unable to proceed through the login flow. This happens because the session expires every hour, which means that you are trying to access user information when there isn't any because the session has already ended (i.e. user data has been removed/wiped).
 
 The solution for BNC Onboard integrations is to check that you are still logged in by calling `user function` and catching the result.
+
+### Error: Login Modal Doesn't Close
+
+If the login modal does not close after the signing request has been accepted, the website URL in the application credentials isn’t at the same origin as the site hosting the pop-up flow. For example, if the login pop-up is hosted at `https://staging-bsc.example.io`, while the **Redirect URI** is at `https://staging.example.io`.
+
+![Login modal should close after signature request is confirmed](<../../images/login-modal-doesn't-close.png>)
+
+The solution is to go to your [app dashboard](https://unstoppabledomains.com/app-dashboard) and change the **Website Link** for your application to the same origin as the **Redirect URI** (e.g. `https://staging.example.io`) and click **Save**.
