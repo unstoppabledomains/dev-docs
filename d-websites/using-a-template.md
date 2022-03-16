@@ -3,6 +3,8 @@ title: Using a Template for Your D-Website
 description: This page reviews the template options for building your d-website. UD provided templates, community templates, and instructions for adding your own template to the IPFS community is discussed.
 ---
 
+# Using a Template for Your D-Website
+
 ## Unstoppable Domains Templates
 
 * [Ambitious](https://github.com/unstoppabledomains/decentralized-websites/blob/master/templates/unstoppable-domains/ambitious)
@@ -43,4 +45,4 @@ We'd love to make your templates available on Unstoppable Domains' website build
 
 ## Report a Bug or Improvement for Templates
 
-To report a bug in a template or suggest an improvement to the [UD D-Web repository](https://github.com/unstoppabledomains/decentralized-websites),  simply go to issues and fill out the proper template.
+To report a bug in a template or suggest an improvement to the [UD D-Web repository](https://github.com/unstoppabledomains/decentralized-websites),  simply go to issues and fill out the proper form.
