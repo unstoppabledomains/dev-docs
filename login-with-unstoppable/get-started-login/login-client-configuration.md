@@ -3,7 +3,15 @@ title: Client Configuration Guide for Login with Unstoppable
 description: This guide covers the process for configuring the Login with Unstoppable client.
 ---
 
-# Login Client Configuration Guide
+# Login Client Configuration
+
+The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
+
+
+
+{% hint style="danger" %}
+Developers must store the client secret before saving changes, refreshing the page, or exiting the page. The client secret cannot be retrieved by Unstoppable Domains.
+{% endhint %}
 
 ## Step 1: Add a New Client to Your Account
 
@@ -14,31 +22,15 @@ description: This guide covers the process for configuring the Login with Unstop
   * Click the trash can ![](../../images/trashcan_icon_my_clients.png) to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
-![My Clients UI screen for adding, removing, and configuring applications](../images/new_my_clients_screen_markup.png)
+![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png)
 
-## Step 2: Configure the Client
-
-The default configuration works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. For custom configurations, the Login Client Configuration page has three sections that can be modified:
-
-* [Client Metadata](login-client-configuration.md#step-2a-client-metadata-and-redirect-uris)
-* [Cosmetic Configuration](login-client-configuration.md#step-2b-cosmetic-configuration)
-* [Advanced Configuration](login-client-configuration.md#step-2c-advanced-configuration)
-
-{% hint style="danger" %}
-Developers must store the client secret before saving changes, refreshing the page, or exiting the page. The client secret cannot be retrieved by Unstoppable Domains.
-{% endhint %}
-
-### Step 2A: Client Metadata
+## Step 2: Client Metadata Configuration
 
 The **Client Metadata** section includes the unique client ID, client secret, and redirect URIs. Developers can also download metadata for the existing client configuration and rotate the client secret from within this sub-section.
 
-{% hint style="info" %}
-The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**.
-{% endhint %}
-
 ![Client Configuration Metadata UI](../../images/client_config_screen_metadata.png)
 
-#### Rules for Redirect URIs
+### Rules for Redirect URIs
 
 The Redirect URIs follow three rules:
 
@@ -50,7 +42,7 @@ The Redirect URIs follow three rules:
 Local host is okay for test development, but 127.0.0.1 should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 {% endhint %}
 
-### **Step 2B: Cosmetic Configuration**
+## **Step 3: Cosmetic Configuration (Optional)**
 
 The **Cosmetic Configuration** allows developers to customize the UI to improve the user experience. This includes updating or modifying the client name presented to the user, client URI, logo URI, policy URI, and terms of service URI.
 
@@ -70,7 +62,7 @@ The following table describes the fields for the cosmetic configuration UI secti
 | Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
 | Terms of Service URI  | ToS URI will display at the bottom of the UI.                                                                               |
 
-### Step 2C: Advanced Configuration
+## Step 4: Advanced Configuration (Optional)
 
 The **Advanced Configuration** includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.
 
@@ -82,7 +74,7 @@ The advanced configuration settings are unnecessary for many configurations and 
 
 The following section describes the fields for the advanced configuration UI section.
 
-#### Allowed CORS Origins
+### Allowed CORS Origins
 
 CORS is a browser protocol for accessing info from another domain. If a URI is entered, CORS is enabled for all requests from that client. Developers can enter the origin URI and specify the port. The Token, UserInfo, and Revocation endpoints all respect this option.
 
@@ -90,7 +82,7 @@ CORS is a browser protocol for accessing info from another domain. If a URI is e
 The initial authorization endpoint that users are redirected to cannot use CORS; it will not work.
 {% endhint %}
 
-#### Audience URIs
+### Audience URIs
 
 {% hint style="info" %}
 This only needs to be configured if using an API that requires an audience URI.
@@ -101,14 +93,14 @@ These URIs represent the audience that is inside the access token JWTs. You get 
 * For the ID token, the audience are the clientIDs.
 * For the access token, the audience is the resource servers; those resource server URLs are the audience for the access token.
 
-#### Grant Types
+### Grant Types
 
 There are two ways to request an access token: authorization code and refresh token.
 
 * **auth code:** short lived, used to initially get the session with the user, corresponds to _authorization\_code grant type_
 * **refresh token:** lives longer, used to maintain a session, receive an extra token to re-authenticate users later for a certain period of time, corresponds to the _offline grant type_
 
-#### Response Types
+### Response Types
 
 There are three response types: authorization code, access token, ID token.
 
@@ -120,17 +112,17 @@ There are three response types: authorization code, access token, ID token.
 All authorization code requests or flows must use the PKCE extension. This only refers to the authorization code response type.
 {% endhint %}
 
-#### Scopes
+### Scopes
 
 All [scopes](scopes-for-login.md) are turned on by default. To limit the scopes that the application can request, simply uncheck or disable those scopes.
 
 * **wallet** maps to the [wallet scope](login-client-configuration.md#wallet-scope)
 * **email** maps to the [email scope](login-client-configuration.md#email-scope)
 * **email:optional** maps to the [email:optional scope](login-client-configuration.md#email-optional-scope)
-* **humanity\_check** maps to the [humanity\_check scope](login-client-configuration.md#kyc-persona-scope)
-* **humanity\_check:optional** maps to the [humanity\_check:optional scope](login-client-configuration.md#kyc-persona\_optional-scope)
+* **humanity\_check** maps to the [humanity\_check scope](scopes-for-login.md#humanity\_check-scope-beta)
+* **humanity\_check:optional** maps to the [humanity\_check:optional scope](scopes-for-login.md#humanity\_check-optional-scope-beta)
 
-#### Token Endpoint Authentication Method
+### Token Endpoint Authentication Method
 
 {% hint style="info" %}
 This setting cannot use for front-end integrations. It can only be enabled for applications, such as servers, that can store secrets.
@@ -145,12 +137,12 @@ This setting configures how to send the client secret to the authorization serve
 **WARNING: Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
 {% endhint %}
 
-## Step 3: Save Changes
+## Step 5: Save Changes
 
 You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application requires a wallet connection and signature.
 
 {% hint style="info" %}
-**Reminder:** Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2a-client-metadata-and-redirect-uris) section.
+**Reminder:** Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section.
 {% endhint %}
 
 {% hint style="success" %}
