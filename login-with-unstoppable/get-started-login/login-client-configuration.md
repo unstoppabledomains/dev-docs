@@ -10,8 +10,8 @@ description: This guide covers the process for configuring the Login with Unstop
 * Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page after your application has been submitted to view all of the clients associated with your wallet address.
 * Take any of the following actions on this page:
   * Click **Change Wallet** button to signin with a different wallet and see clients associated with a different wallet address.
-  * Click the gear ![test](../images/gear_icon_my_clients.png) to modify an existing client configuration.
-  * Click the trash can ![](../images/trashcan_icon_my_clients.png) to delete or remove a client from your account.
+  * Click the gear ![test](../../images/gear_icon_my_clients.png) to modify an existing client configuration.
+  * Click the trash can ![](../../images/trashcan_icon_my_clients.png) to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
 ![My Clients UI screen for adding, removing, and configuring applications](../images/new_my_clients_screen_markup.png)
@@ -36,7 +36,7 @@ The **Client Metadata** section includes the unique client ID, client secret, an
 The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**.
 {% endhint %}
 
-![Client Configuration Metadata UI](../images/client_config_screen_metadata.png)
+![Client Configuration Metadata UI](../../images/client_config_screen_metadata.png)
 
 #### Rules for Redirect URIs
 
@@ -58,7 +58,7 @@ The **Cosmetic Configuration** allows developers to customize the UI to improve 
 All URIs must use the same origin name (e.g., unstoppabledomains.com) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
 {% endhint %}
 
-![Client Configuration UI, Cosmetic Config section](../images/client_config_screen_cosmetic.png)
+![Client Configuration UI, Cosmetic Config section](../../images/client_config_screen_cosmetic.png)
 
 The following table describes the fields for the cosmetic configuration UI section.
 
@@ -78,7 +78,7 @@ The **Advanced Configuration** includes options for CORS, audience URIs, grant t
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
 {% endhint %}
 
-![Client Configuration UI, Advanced Config section](../images/client_config_screen_advanced.png)
+![Client Configuration UI, Advanced Config section](../../images/client_config_screen_advanced.png)
 
 The following section describes the fields for the advanced configuration UI section.
 
