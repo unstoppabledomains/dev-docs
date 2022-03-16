@@ -40,4 +40,4 @@ Here's how to contact us XXXXX.
 
 ## Asking for help
 
-Don't be shy... we're here to help. For assistance with integrating your app, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

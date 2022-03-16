@@ -21,9 +21,7 @@ Domain resolution is the process of converting a human-readable domain name like
 
 ## How is a Domain Resolved?
 
-In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application sends both parameters (currency and domain) to the [Resolver contract](https://docs.unstoppabledomains.com/domain-registry-essentials/cns-smart-contracts#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain. The resolved address is used to complete the ETH transfer to Ryan’s wallet.
-
-![crypto payments success flow](../../images/crypto-payments-success-flow.png)
+In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application sends both parameters (currency and domain) to the Resolver contract on the Ethereum blockchain, which returns the Ethereum address record attached to that domain. The resolved address is used to complete the ETH transfer to Ryan’s wallet.
 
 :::attention A domain can store many records and key formats
 To learn about our supported record types, see our records reference guide.
@@ -31,4 +29,4 @@ To learn about our supported record types, see our records reference guide.
 
 ## Asking for help
 
-Don't be shy... we're here to help. For assistance with integrating your app, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
