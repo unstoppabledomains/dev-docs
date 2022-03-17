@@ -9,6 +9,15 @@ The resolution libraries are the easiest way to integrate domain resolution into
 
 Resolution libraries interact with blockchain domain names and are used to retrieve [payment addresses](index.md), IPFS hashes for [decentralized websites](../d-websites/), DNS records, and other records types. Each Resolution Library is built and maintained by Unstoppable Domains, so they are always up-to-date.
 
+## Supported Domains
+
+The resolution libraries support decentralized domains across two main zones:
+
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+
 ## List of UD Resolution Libraries
 
 The following table lists the Unstoppable Domains resolution libraries and links to each GitHub repository.
