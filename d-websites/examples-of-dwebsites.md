@@ -7,17 +7,17 @@ description: This page provides examples of decentralized websites and options f
 
 We have over 35,000 live decentralized websites. You can view all live d-websites on [ViewBlock.io](https://viewblock.io/unstoppable). Some examples you can check out include:
 
-* dtube.crypto
-* kyber.crypto
-* pomp.crypto
-* ipfs-fps.crypto
-* jezstarr.crypto
-* vault74.crypto
-* brave.crypto
+* [dtube.crypto](http://dtube.crypto)
+* [kyber.crypto](http://kyber.crypto)
+* [pomp.crypto](http://pomp.crypto)
+* [ipfs-fps.crypto](http://ipfs-fps.crypto)
+* [jezstarr.crypto](http://jezstarr.crypto)
+* [vault74.crypto](http://vault74.crypto)
+* [brave.crypto](http://brave.crypto)
 
 ## Find Additional Examples
 
-You can also search for something specific on one of these crypto/web3 search engines: [bitsear.ch](https://bitsear.ch/) or [blockscan.com](http://blockscan.com/).
+You can also search for something specific on one of these crypto/web3search engines: [bitsear.ch](https://bitsear.ch/) or [blockscan.com](http://blockscan.com/).
 
 ## Resources
 
