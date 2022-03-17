@@ -1,8 +1,13 @@
 pages:
   - page: index.md
     separatorLine: true
-  - page: integrate-using-libraries.md
-    label: Send and Receive Crypto Payments Using Libraries
+  - group: Send and Receive Crypto Payments Using Libraries
+    expanded: false
+    pages:
+      - label: UD Resolution Libraries
+        page: resolution-libraries.md
+      - label: Using the Resolution Libraries
+        page: resolution-library-usage.md
     separatorLine: true
   - page: error-handling.md
     label: Error Handling for Crypto Payment Integrations
