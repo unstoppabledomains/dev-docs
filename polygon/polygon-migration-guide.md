@@ -9,7 +9,7 @@ There will be minimal changes to Unstoppable Domains’ resolution libraries and
 
 ## Polygon Updates
 
-Polygon apps will resolve domains by reading [UNS Smart Contracts](../domain-registry-essentials/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
+Polygon apps will resolve domains by reading [UNS Smart Contracts](../developer-toolkit/smart-contracts/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
 
 To further assist with L2, the Polygon team will be adding Unstoppable Domains resolution to their API and Matic.js library. This will make it easier, for example, for Polygon apps to use domains for payments in wallets and login with dapps.
 
@@ -57,9 +57,7 @@ Overall changes for **/status route**
 * Return [Network ID](https://chainlist.org) instead of _network_&#x20;
 * Move all fields under “blockchain” namespace
 
-{% tabs %}
-{% tab title="NEW Response" %}
-```javascript
+```javascript NEW Response
 {
    "blockchain":{
       "ETH":{
@@ -75,10 +73,8 @@ Overall changes for **/status route**
    }
 }
 ```
-{% endtab %}
 
-{% tab title="OLD response" %}
-```javascript
+```javascript OLD response
 {
    "ETH":{
       "latestNetworkBlock":13230550,
@@ -92,8 +88,6 @@ Overall changes for **/status route**
    }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### /domains and /domains/\<domain name> routes
 
@@ -102,9 +96,7 @@ Overall changes for **/domain and /domains\<domain name> routes**
 * Return [Network ID](https://chainlist.org) instead of location field
 * Add blockchain field to store data about Layer 1 and Layer 2
 
-{% tabs %}
-{% tab title="NEW response" %}
-```javascript
+```javascript NEW response
 {
   "records": {
     "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
@@ -120,10 +112,8 @@ Overall changes for **/domain and /domains\<domain name> routes**
   }
 }
 ```
-{% endtab %}
 
-{% tab title="OLD Response" %}
-```javascript
+```javascript OLD Response
 {
   "records": {
     "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
@@ -138,10 +128,6 @@ Overall changes for **/domain and /domains\<domain name> routes**
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
-
-
 
 ## Domain Transfer Options
 
@@ -153,6 +139,6 @@ You have several methods for transferring and depositing your Unstoppable Domain
 | CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide]() |
 | UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide]()                             |
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just migrated to Polygon Layer2 Network.
-{% endhint %}
+:::

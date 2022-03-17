@@ -99,5 +99,5 @@ It is recommended that you double-check the transaction status by verifying doma
 * Verify the **wallet address** returned by the ```OwnerOf``` query to ensure it is an exact match to your wallet address. If your wallet address is showing, then it means that your domain transferred successfully from CNS Layer 1 over to UNS Layer 1.
 
 :::success
-Congratulations! You just migrated your domain from CNS L1 to UNS L1!
+**Congratulations!** You just migrated your domain from CNS L1 to UNS L1!
 :::

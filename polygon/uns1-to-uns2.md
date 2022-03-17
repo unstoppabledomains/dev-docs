@@ -90,5 +90,5 @@ When tokens are transferred to UNS L2, they will appear as owned by a custody co
 * Verify the **wallet address** returned by the OwnerOf query to ensure it matches your wallet address. If your wallet address is showing, then it means that your domain was successfully deposited on UNS Layer 2.
 
 :::success
-Congratulations! You just deposited your domain from UNS L1 to UNS L2!
+**Congratulations!** You just deposited your domain from UNS L1 to UNS L2!
 :::
