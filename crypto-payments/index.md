@@ -21,7 +21,7 @@ Domain resolution is the process of converting a human-readable domain name like
 
 ## How Does it Work?
 
-In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application sends both parameters (currency and domain) to the Resolver contract on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain. The resolved address is used to complete the ETH transfer to Ryan’s wallet.
+In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application sends both parameters (currency and domain) to the [Resolver contract](../developer-toolkit/smart-contracts/cns-smart-contracts/#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain. The resolved address is used to complete the ETH transfer to Ryan’s wallet.
 
 ![the crypto payments success flow diagram](../images/crypto-payments-success-flow.png)
 
