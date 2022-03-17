@@ -143,3 +143,7 @@ The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `Ad
 :::attention info
 See the managing domain records guide for information about supported crypto payment tickers and USDT versions.
 :::
+
+## Asking for help
+
+Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
