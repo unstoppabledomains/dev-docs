@@ -77,7 +77,7 @@ In addition to base browser hypermedia protocols like `http`, blockchain domains
   * FTP
 * Distributed
   * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary\_File\_System) - `ipfs://`
-  * [Swarm](https://swarm-guide.readthedocs.io/en/stable/architecture.html#the-bzz-protocol) - `bzz://`
+  * [Swarm](https://docs.ethswarm.org/docs/) - `bzz://`
 
 A browser may support any subset of traditional or distributed protocols that still make crypto domain websites displayable.
 

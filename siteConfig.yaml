@@ -54,9 +54,24 @@ footer:
         - label: Privacy Notice
           href: 'https://unstoppabledomains.com/privacy-policy'
 
-    - group: Support
+    - group: Community
       items:
-        - label: FAQ
-          page: support/faq.md
         - label: Discord
-          page: support/contact.mdx
+          href: 'https://discord.com/invite/JWrEAAbp6R'
+        - label: Telegram
+          href: 'https://t.me/unstoppabledomains'  
+        - label: Twitter
+          href: 'https://twitter.com/unstoppableweb'
+        - label: Facebook
+          href: 'https://www.facebook.com/unstoppableweb/'
+
+    - group: Resources
+      items: 
+        - label: Medium
+          href: 'https://medium.com/unstoppabledomains'
+        - label: Podcast
+          href: 'https://the-unstoppable-podcast.simplecast.com/'
+        - label: Youtube
+          href: 'https://www.youtube.com/c/unstoppabledomains'
+        - label: Github
+          href: 'https://github.com/unstoppabledomains'

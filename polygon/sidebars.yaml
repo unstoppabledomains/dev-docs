@@ -4,7 +4,9 @@ pages:
   - page: polygon-migration-guide.md
     label: Polygon Migration Guide
     separatorLine: true
+    
   - separator: Domain Transfer Guides  
+    separatorLine: true
   - page: cns1-to-uns1.md
     label: CNS L1 to UNS L1--Domain Transfer Guide
     separatorLine: true
