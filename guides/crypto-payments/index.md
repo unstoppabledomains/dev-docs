@@ -9,7 +9,9 @@ Unstoppable Domains allows you to make payments with over [281 cryptocurrencies]
 
 Still confused about how it works? If you own the `ryan.crypto` domain and a user sends BTC to that domain, you will receive it at your BTC address. If another user sends ETH to that domain, you will receive it at your ETH address.
 
-> Unstoppable Domains achieves this with a process called domain resolution.
+:::info
+Unstoppable Domains achieves this with a process called domain resolution.
+:::
 
 ![a successful domain resolution and payment](../../images/success-payment-example.gif)
 
@@ -25,7 +27,7 @@ In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application 
 
 ![the crypto payments success flow diagram](../../images/crypto-payments-success-flow.png)
 
-:::attention A domain can store many records and key formats
+:::info A domain can store many records and key formats
 To learn about our supported record types, see our records reference guide.
 :::
 
