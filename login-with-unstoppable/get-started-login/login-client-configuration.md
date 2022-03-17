@@ -7,7 +7,7 @@ description: This guide covers the process for configuring the Login with Unstop
 
 The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
 
-
+![Login client configuration complete example](../../images/login-client-config.gif)
 
 {% hint style="danger" %}
 Developers must store the client secret before saving changes, refreshing the page, or exiting the page. The client secret cannot be retrieved by Unstoppable Domains.
