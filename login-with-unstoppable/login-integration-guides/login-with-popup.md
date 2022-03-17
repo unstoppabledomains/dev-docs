@@ -90,13 +90,13 @@ window.login = async () => {
 
 ## Step 5: Login with Unstoppable&#x20;
 
-{% hint style="info" %}
+:::info
 You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../get-test-domain.md#get-a-domain-using-unstoppable-website-faucet) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 The following command will run the app. Keep in mind that the credentials will only work if you are on the correct port.
 

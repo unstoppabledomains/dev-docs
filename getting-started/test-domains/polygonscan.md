@@ -86,7 +86,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 * Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
 * Choose **Write as Proxy** tab.
-* Connect your wallet (Rinkeby).
+* Connect your wallet (Goerli).
 * Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](images/polygonscan-claim-to-records.png)

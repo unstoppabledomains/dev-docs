@@ -42,7 +42,7 @@ This table displays the network IDs used by Unstoppable Domains in the UNS confi
 | Network ID | Description     |
 | ---------- | --------------- |
 | 1          | mainnet         |
-| 4          | Rinkeby testnet |
+| 5          | Goerli testnet |
 | 137        | Polygon mainnet |
 | 80001      | Polygon testnet |
 

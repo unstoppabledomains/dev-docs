@@ -8,9 +8,9 @@ description: >-
 
 This is the basic installation guide for the **web3-react** framework and is best used for React based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
-{% hint style="info" %}
+:::info
 For a completed example of a Web3 React application, you can [download the files](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/README.md) directly.
-{% endhint %}
+:::
 
 ## Step 1: Install the Required Libraries
 
@@ -80,17 +80,17 @@ const uauth = new UAuthConnector({
 ```
 {% endcode %}
 
-{% hint style="info" %}
+:::info
 Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to initialize the `UAuthConnector` with this setting: [`shouldLoginWithRedirect: true.`](web3-react-guide.md#shouldloginwithredirect)``
-{% endhint %}
+:::
 
 ## Step 3: Test the Usage
 
 Once configured, web3-react can be used like normal.
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 {% code title="login-page.ts" %}
 ```javascript

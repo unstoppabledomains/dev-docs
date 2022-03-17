@@ -5,9 +5,9 @@ description: This page reviews the process for resolving .zil domain names with 
 
 In this tutorial, we’ll build a simple app to resolve .zil domains — to read the information the domain holds.&#x20;
 
-{% hint style="info" %}
+:::info
 This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-unstoppable-domain-names.md).
-{% endhint %}
+:::
 
 Here’s the finished product:
 
@@ -145,9 +145,9 @@ The following table shows sample Namehash outputs:
 
 Here is a list of expected results with some sample inputs:
 
-{% hint style="info" %}
+:::info
 It is essential to know the difference between Zilliqa namehashing and [EIP-137](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md#namehash-algorithm). Zilliqa uses **sha256 from SHA-2** instead of **keccak256,** which is more commonly used in Ethereum.
-{% endhint %}
+:::
 
 Let’s use this function to take a namehash of our userInput in index.js:
 
@@ -284,9 +284,9 @@ const recordResponse = await fetchZilliqa([
 console.log(recordResponse.result.records);
 ```
 
-{% hint style="info" %}
+:::info
 You must remove the leading 0x from the contract address. This is a requirement of the Zilliqa Blockchain API
-{% endhint %}
+:::
 
 We should get an object printed on our console with all the keys registered under that domain. Let’s test it out with domain `brad.zil`. For your result, you should get something similar to the following in the console.
 

@@ -8,13 +8,13 @@ description: >-
 
 This installation guide is for custom `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
-{% hint style="info" %}
+:::info
 For a completed example of a server integration using `@uauth/node` library, you can [download the files](https://github.com/unstoppabledomains/uauth/tree/main/examples/server) directly.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 ## Step 1: Install the @uauth/node Library
 

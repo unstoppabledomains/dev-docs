@@ -8,9 +8,9 @@ description: >-
 
 Login with Unstoppable is a versatile feature with several integration pathways available for developers. This page reviews the integration guides, overall features, and related libraries for each installation option.
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable Integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable Integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 ## Step 1: Register Your Application
 

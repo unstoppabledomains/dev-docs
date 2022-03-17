@@ -8,9 +8,9 @@ description: >-
 
 This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.&#x20;
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 ## Step 1: Configure the UAuth Class
 
