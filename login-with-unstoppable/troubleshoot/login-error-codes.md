@@ -1,7 +1,6 @@
 ---
-description: >-
-  This page provides error codes and explanations to use when troubleshooting
-  the Login with Unstoppable feature.
+title: Error Codes for Login with Unstoppable
+description: This page provides error codes and explanations to use when troubleshooting the Login with Unstoppable feature.
 ---
 
 # Login Error Codes

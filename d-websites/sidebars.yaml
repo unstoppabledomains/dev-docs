@@ -1,21 +1,15 @@
 pages:
   - page: index.md
     separatorLine: true
+  - page: connecting-your-dwebsite.md
+    separatorLine: true
   - group: Build Your D-Website
     expanded: false
     pages:
       - label: Using a Template
-        page: connecting-your-dwebsite/using-a-template.md
-      - label: Build a Custom D-Website
-        page: connecting-your-dwebsite/building-a-custom-dwebsite.md
-      - label: DWebsite Examples
-        page: examples-of-dwebsites.md
-    separatorLine: true
-  - group: Connect Your D-Website to Your Domain
-    expanded: false
-    pages:
-      - label: Domain Connection Options
-        page: connecting-your-dwebsite/connection-options.md
+        page: using-a-template.md
+      - label: D-Website Examples
+        page: examples-of-dwebsites.md 
     separatorLine: true
   - group: Resolve Your D-Website
     expanded: false

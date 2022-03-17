@@ -13,6 +13,14 @@ pages:
       - label: Scopes for Login
         page: get-started-login/scopes-for-login.md
     separatorLine: true
+  - group: Login Protocols
+    expanded: false
+    pages:
+      - label: Authorization Server
+        page: login-protocols/authorization-server.md
+      - label: Authentication Protocol
+        page: login-protocols/authentication-protocol.md
+    separatorLine: true  
   - group: Login Integration Guides
     expanded: false
     pages:
@@ -36,16 +44,6 @@ pages:
   - group: Troubleshoot Your Login Integration
     expanded: false
     pages: 
-      - label: Login Error Codes
       - page: troubleshoot/login-error-codes.md
-      - label: Login Troubleshooting Guide
       - page: troubleshoot/troubleshooting-guide.md
     separatorLine: true  
-  - group: Login Protocols
-    expanded: false
-    pages:
-      - label: Authorization Server
-        page: login-protocols/authorization-server.md
-      - label: Authentication Protocol
-        page: login-protocols/authentication-protocol.md
-    separatorLine: true
