@@ -135,9 +135,9 @@ You have several methods for transferring and depositing your Unstoppable Domain
 
 | Transfer Option                          | Description                                                                                                                   | Transfer Guide Guide                                                   |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| CNS L1 to UNS L1    | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum)                                                | [CNS L1 to UNS L1: Domain Transfer Guide]()       |
-| CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide]() |
-| UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide]()                             |
+| CNS L1 to UNS L1    | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum)                                                | [CNS L1 to UNS L1: Domain Transfer Guide](cns1-to-uns1.md)       |
+| CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide](cns1-to-uns2.md) |
+| UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide](uns1-to-uns2.md)                             |
 
 :::success
 **Congratulations!** You just migrated to Polygon Layer2 Network.
