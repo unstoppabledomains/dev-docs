@@ -2,18 +2,16 @@ pages:
   - page: index.md
     separatorLine: true
   - page: connecting-your-dwebsite.md
+    label: Connecting a D-Website
     separatorLine: true
-  - group: Build Your D-Website
+  - group: Building Your D-Website
     expanded: false
     pages:
       - label: Using a Template
         page: using-a-template.md
-      - label: D-Website Examples
+      - label: Example D-Websites
         page: examples-of-dwebsites.md 
     separatorLine: true
-  - group: Resolve Your D-Website
-    expanded: false
-    pages:
-    - label: Browser Resolution for D-Websites
-      page: resolving-dwebsites-in-a-browser.md
+  - page: resolving-dwebsites-in-a-browser.md
+    label: Resolving D-Websites in a Browser
     separatorLine: true

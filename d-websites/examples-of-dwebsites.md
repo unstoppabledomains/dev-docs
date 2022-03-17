@@ -5,7 +5,7 @@ description: This page provides examples of decentralized websites and options f
 
 # D-Website Examples
 
-We have over 35,000 live decentralized websites. You can view all live d-websites on [https://viewblock.io/unstoppable](https://viewblock.io/unstoppable). Some examples you can check out include:
+We have over 35,000 live decentralized websites. You can view all live d-websites on [ViewBlock.io](https://viewblock.io/unstoppable). Some examples you can check out include:
 
 * dtube.crypto
 * kyber.crypto
@@ -17,7 +17,7 @@ We have over 35,000 live decentralized websites. You can view all live d-website
 
 ## Find Additional Examples
 
-You can also search for something specific on one of these search engines: [https://bitsear.ch/](https://bitsear.ch/) or [http://blockscan.com/](http://blockscan.com/).
+You can also search for something specific on one of these crypto/web3 search engines: [bitsear.ch](https://bitsear.ch/) or [blockscan.com](http://blockscan.com/).
 
 ## Resources
 
