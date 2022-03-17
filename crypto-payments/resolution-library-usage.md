@@ -68,7 +68,7 @@ func main() {
 We resolved the `ryan.crypto` domain into its Ethereum address in the example above. The library searches for the `crypto.ETH.address` record attached to the domain.
 
 :::attention info
-Our libraries use Alchemy to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [library configuration guide.](library-configuration.md)
+Our libraries use Alchemy to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [library configuration guide.](../developer-toolkit/resolution-libraries/library-configuration.md)
 :::
 
 ### Records Involved
