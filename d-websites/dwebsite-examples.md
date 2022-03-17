@@ -1,9 +1,13 @@
 ---
-title: D-Website Examples
+title: D-Website Examples and Resources
 description: This page provides examples of decentralized websites and options for locating other d-websites through specialized IPFS search engines.
 ---
 
-# D-Website Examples
+# D-Website Examples and Resources
+
+Before browsing the decentralized web, make sure that you can [Resolve Unstoppable D-Websites](resolving-dwebsites-in-a-browser.md) in your preferred web browser.
+
+## Example D-Websites
 
 We have over 35,000 live decentralized websites. You can view all live d-websites on [ViewBlock.io](https://viewblock.io/unstoppable). Some examples you can check out include:
 
@@ -15,7 +19,7 @@ We have over 35,000 live decentralized websites. You can view all live d-website
 * [vault74.crypto](http://vault74.crypto)
 * [brave.crypto](http://brave.crypto)
 
-## Find Additional Examples
+## Explore More D-Websites
 
 You can also search for something specific on one of these crypto/web3search engines: [bitsear.ch](https://bitsear.ch/) or [blockscan.com](http://blockscan.com/).
 
