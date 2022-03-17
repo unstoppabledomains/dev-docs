@@ -18,7 +18,7 @@ The resolution libraries support decentralized domains across two main zones:
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
-## List of UD Resolution Libraries
+## List of UD's Resolution Libraries
 
 The following table lists the Unstoppable Domains resolution libraries and links to each GitHub repository.
 
