@@ -67,7 +67,7 @@ The Login with Unstoppable **humanity_check** scope must be added to the library
 
 After the user authenticates and proves their identity with the Persona authorization system, the application will receive a humanity_id, which is a unique identifier for each user to serve as that user's "[humanity check](humanity-check-for-login.md#persona)."
 
-![UI for Humanity Check, can be used for any identity provider, including Persona](../../images/humanity-check-optional.png '#display=inline-block;padding=0px;width=30%;') ![Getting Started UI screen for Persona](../../images/persona_getting_started.png '#display=inline-block;padding=0px;width=30%;') ![Upload Drivers License UI screen for Persona](../../images/persona_front_drivers_license.png '#display=inline-block;padding=0px;width=30%;')
+![UI for Humanity Check, can be used for any identity provider, including Persona](../../images/humanity-check-optional.png '#display=inline-block;padding=0px;width=33%;') ![Getting Started UI screen for Persona](../../images/persona_getting_started.png '#display=inline-block;padding=0px;width=33%;') ![Upload Drivers License UI screen for Persona](../../images/persona_front_drivers_license.png '#display=inline-block;padding=0px;width=33%;')
 
 See the [Humanity Check for Login](humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
 
