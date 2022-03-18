@@ -1,10 +1,9 @@
 ---
-description: >-
-  This page reviews the integration guides for Login with Unstoppable. This
-  feature works for Polygon and Ethereum domains.
+title: Login Integration Pathways
+description: This page reviews the integration guides for Login with Unstoppable. This feature works for Polygon and Ethereum domains.
 ---
 
-# Login Integration Guides
+# Login Integration Pathways
 
 Login with Unstoppable is a versatile feature with several integration pathways available for developers. This page reviews the integration guides, overall features, and related libraries for each installation option.
 
@@ -14,11 +13,11 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 ## Step 1: Register Your Application
 
-Before beginning the integration process for Login with Unstoppable, you must register your application with Unstoppable Domains and obtain your client credentials. Please see the [**Register Your Application Guide**](../register-your-application.md) **** for more details.
+Before beginning the integration process for Login with Unstoppable, you must register your application with Unstoppable Domains and obtain your client credentials. Please see the [**Register Your Application Guide**](../get-started-login/register-your-application.md) **** for more details.
 
 ## Step 2: Configure the Login Client
 
-Next, you will configure your application using the My Clients and Client Configuration pages. Please see the [**Login Client Configuration Guide**](../login-client-configuration.md) **** for more details.
+Next, you will configure your application using the My Clients and Client Configuration pages. Please see the [**Login Client Configuration Guide**](../get-started-login/login-client-configuration.md) **** for more details.
 
 ## Step 3: Choose Your Integration Path
 
@@ -39,7 +38,7 @@ The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available f
 
 ## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
 ## Resources
 

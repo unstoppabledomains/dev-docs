@@ -22,7 +22,7 @@ Developers must store the client secret before saving changes, refreshing the pa
   * Click the trash can ![trashcan](../../images/trashcan_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
-![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#width=200px;height=300px;')
+![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#width=400px;height=600px;')
 
 ## Step 2: Client Metadata Configuration
 
@@ -145,6 +145,6 @@ You must save any changes made to the configuration options before they will tak
 **Reminder:** Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section.
 :::
 
-:::success
-**Congratulations!** You finished configuring your Login with Unstoppable client.
+:::success Congratulations!
+You finished configuring your Login with Unstoppable client.
 :::

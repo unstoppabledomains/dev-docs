@@ -1,11 +1,9 @@
 ---
-description: >-
-  This guide covers the process for configuring the Login UI to obtain user
-  information and display the authenticated user's domain name instead of
-  address.
+title: Login UI Configuration Guide
+description: This guide covers the process for configuring the Login UI to obtain user information and display the authenticated user's domain name instead of address.
 ---
 
-# Login UI Configuration
+# Login UI Configuration Guide
 
 ## Step 1: Access User Information
 
@@ -17,12 +15,10 @@ Authorizations are stored inside `localStorage`, so any identically configured U
 You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.&#x20;
 
 :::info
-The @uauth.js code snippet below can be used for [Login with Popup](login-integration-guides/login-with-popup.md) and [Login without Popup](login-integration-guides/login-without-popup.md) integrations.
+The @uauth.js code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
 :::
 
-{% tabs %}
-{% tab title="@uauth.js" %}
-```javascript
+```javascript @uauth.js
 import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
@@ -38,10 +34,8 @@ uauth.user()
     // user does not exist
   })
 ```
-{% endtab %}
 
-{% tab title="BNC Onboard" %}
-```javascript
+```javascript BNC Onboard
 // Gets the local UAuth instance.
 public get uauth(): UAuth
 
@@ -49,20 +43,16 @@ const uauthBNCOnboard = new UAuthBNCOnboard()
 
 uauthBNCOnboard.uauth.user().then().catch()
 ```
-{% endtab %}
 
-{% tab title="Web3 React" %}
-```javascript
+```javascript Web3 React
 public get uauth(): UAuth
 
 const uauthConnector = new UAuthConnector()
 
 uauthConnector.uauth.user().then().catch()
 ```
-{% endtab %}
 
-{% tab title="Web3 Modal" %}
-```javascript
+```javascript Web3 Modal
 const uauthOptions = {
   clientID: "",
   clientSecret: "",
@@ -78,22 +68,20 @@ const web3Modal = new Web3Modal(web3ModalOptions)
 
 new UAuth(uauthOptions).user().then().catch()
 ```
-{% endtab %}
-{% endtabs %}
 
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
-![UI Example for displaying authenticated user](<../images/second-UI-example-login-domains (1).png>)
+![UI Example for displaying authenticated user](../../images/second-UI-example-login-domains%20(1).png)
 
 ## Step 2: Verify the Login Flow and Scopes
 
-Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](scopes-for-login.md#openid-scope), [wallet](scopes-for-login.md#wallet-scope), and [email](scopes-for-login.md#email-scope).&#x20;
+Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](../get-started-login/scopes-for-login.md#openid-scope), [wallet](../get-started-login/scopes-for-login.md#wallet-scope), and [email](../get-started-login/scopes-for-login.md#email-scope).&#x20;
 
 :::info
-You must adjust the configuration in the [Login Client](login-client-configuration.md#scopes) to add or remove scopes, such as [humanity\_check](scopes-for-login.md#humanity\_check-scope).
+You must adjust the configuration in the [Login Client](../get-started-login/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark).
 :::
 
-![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png) ![2) User Enters Unstoppable Domain Address to Login to dApp](../images/login-domains-modal2-v2.png) ![3) User Consent screen details the scopes being requested by dApp](../images/consent-screen-marked-v2.png)
+![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png) ![2) User Enters Unstoppable Domain Address to Login to dApp](../../images/login-domains-modal2-v2.png) ![3) User Consent screen details the scopes being requested by dApp](../../images/consent-screen-marked-v2.png)
 
 The modals are further described below:
 
@@ -111,6 +99,6 @@ For Node.js integrations, the UI or modals being built will require official UD 
 | Hover   | ![](../../images/hover-icon.png)   | ![](../../images/hover-button.png)   |
 | Pressed | ![](../../images/pressed-icon.png) | ![](../../images/pressed-button.png) |
 
-:::success
-**Congratulations!** You just configured the Login with Unstoppable UI.
+:::success Congratulations!
+You just configured the Login with Unstoppable UI.
 :::
