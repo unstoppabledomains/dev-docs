@@ -28,7 +28,7 @@ Login with Unstoppable will partner with additional Humanity Check providers in 
 
 Persona asks users to take a photo of their government-issued ID and a few selfies. Persona uses these images to verify that a person is who they claim to be. Every time Persona verifies a new person, it gives that person a new randomly generated ID number.
 
-![Persona UI for uploading government ID](../../images/persona_upload_photo_id.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![Persona UI for uploading live photos or selfies](../../images/persona_live_photo_capture.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![Persona UI after identity verification is complete](../../images/persona_congratuations.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;')
+![Persona UI for uploading government ID](../../images/persona_upload_photo_id.png '#display=inline;margin-left=auto;margin-right=auto;width=20%;') ![Persona UI for uploading live photos or selfies](../../images/persona_live_photo_capture.png '#display=inline;margin-left=auto;margin-right=auto;width=20%;') ![Persona UI after identity verification is complete](../../images/persona_congratuations.png '#display=inline;margin-left=auto;margin-right=auto;width=20%;')
 
 ## Humanity Check Configuration
 
