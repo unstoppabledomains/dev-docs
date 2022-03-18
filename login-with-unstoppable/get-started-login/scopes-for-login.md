@@ -19,7 +19,7 @@ An example scope configuration:
 
 The scopes requested by an application varies depending on the type of user data needed by the application. The scopes requested by the application will be presented to the user in a list.
 
-![Example scope list presented to UD users](../../images/consent-screen-marked-v2.png)
+![Example scope list presented to UD users](../../images/consent-screen-marked-v2.png '#display=block;margin-left=auto;margin-right=auto;width=40%;')
 
 Login with Unstoppable supports the following scopes which are detailed below:&#x20;
 
@@ -59,7 +59,7 @@ The Login with Unstoppable **email** scope can be used to retrieve metadata abou
 
 The Login with Unstoppable **email:optional** scope is used to retrieve metadata about the user's preference for sharing their email address. Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their email, the same claims associated with the **email** scope will be returned.&#x20;
 
-![UI for email:optional scope](../../images/email_optional_scope-small.jpg)
+![UI for email:optional scope](../../images/email_optional_scope-small.jpg '#display=block;margin-left=auto;margin-right=auto;width=30%;')
 
 ## humanity_check Scope <mark style="color:red;">`BETA`</mark>
 
@@ -67,7 +67,7 @@ The Login with Unstoppable **humanity_check** scope must be added to the library
 
 After the user authenticates and proves their identity with the Persona authorization system, the application will receive a humanity_id, which is a unique identifier for each user to serve as that user's "[humanity check](humanity-check-for-login.md#persona)."
 
-![UI for Humanity Check, can be used for any identity provider, including Persona](../../images/humanity-check-optional.png) ![Getting Started UI screen for Persona](../../images/persona_getting_started.png) ![Upload Drivers License UI screen for Persona](../../images/persona_front_drivers_license.png)
+![UI for Humanity Check, can be used for any identity provider, including Persona](../../images/humanity-check-optional.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![Getting Started UI screen for Persona](../../images/persona_getting_started.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![Upload Drivers License UI screen for Persona](../../images/persona_front_drivers_license.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;')
 
 See the [Humanity Check for Login](humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
 
