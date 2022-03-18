@@ -8,9 +8,9 @@ description: >-
 
 UD's Reseller API is a versatile feature with several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option.
 
-{% hint style="warning" %}
+:::warning
 **Important:** Reseller API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) to get started.
-{% endhint %}
+:::
 
 ## Step 1: Register As a Reseller
 
@@ -26,9 +26,9 @@ To integrate free domain claiming or paid domain claiming (via Stripe, Coinbase,
 
 There are several ways to integrate with Unstoppable's Reseller feature, which is detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
 
-{% hint style="warning" %}
+:::warning
 Stripe and Coinbase payment methods are currently unavailable. Resellers will be notified directly when these features have resumed.
-{% endhint %}
+:::
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |

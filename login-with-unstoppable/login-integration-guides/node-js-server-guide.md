@@ -166,9 +166,9 @@ app.listen(process.env.PORT, () => {
 })
 ```
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::
 
 ## Reference
 

@@ -218,9 +218,9 @@ async function fetchContractData(contract, keys, tokenId) {
 
 By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the **namehash** function from above.
 
-{% hint style="info" %}
+:::info
 Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../../domain-registry-essentials/records-reference.md) across many applications.
-{% endhint %}
+:::
 
 ### Record Keys Lookup
 
@@ -293,9 +293,9 @@ If we try to resolve the **brad.crypto** domain with the above keys, we should s
 }
 ```
 
-{% hint style="info" %}
+:::info
 data\[2] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
-{% endhint %}
+:::
 
 ## Display the Records <a href="#a0c8" id="a0c8"></a>
 

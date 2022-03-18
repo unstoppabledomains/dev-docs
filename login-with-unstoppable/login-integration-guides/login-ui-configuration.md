@@ -16,9 +16,9 @@ Authorizations are stored inside `localStorage`, so any identically configured U
 
 You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.&#x20;
 
-{% hint style="info" %}
+:::info
 The @uauth.js code snippet below can be used for [Login with Popup](login-integration-guides/login-with-popup.md) and [Login without Popup](login-integration-guides/login-without-popup.md) integrations.
-{% endhint %}
+:::
 
 {% tabs %}
 {% tab title="@uauth.js" %}
@@ -89,9 +89,9 @@ Once a user has successfully authenticated, the application should display the u
 
 Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](scopes-for-login.md#openid-scope), [wallet](scopes-for-login.md#wallet-scope), and [email](scopes-for-login.md#email-scope).&#x20;
 
-{% hint style="info" %}
+:::info
 You must adjust the configuration in the [Login Client](login-client-configuration.md#scopes) to add or remove scopes, such as [humanity\_check](scopes-for-login.md#humanity\_check-scope).
-{% endhint %}
+:::
 
 ![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png) ![2) User Enters Unstoppable Domain Address to Login to dApp](../images/login-domains-modal2-v2.png) ![3) User Consent screen details the scopes being requested by dApp](../images/consent-screen-marked-v2.png)
 
@@ -111,6 +111,6 @@ For Node.js integrations, the UI or modals being built will require official UD 
 | Hover   | ![](../../images/hover-icon.png)   | ![](../../images/hover-button.png)   |
 | Pressed | ![](../../images/pressed-icon.png) | ![](../../images/pressed-button.png) |
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just configured the Login with Unstoppable UI.
-{% endhint %}
+:::

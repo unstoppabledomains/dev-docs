@@ -7,9 +7,9 @@ description: This page describes the process for requesting a free test domain a
 
 **[[insert overview, reusable content]]**
 
-{% hint style="info" %}
+:::info
 Note: The Reseller feature only support Polygon.
-{% endhint %}
+:::
 
 ## Step 1: Gather Requirements for the Website Faucet
 
@@ -18,9 +18,9 @@ Note: The Reseller feature only support Polygon.
 * Get[ free Ether from Goerli faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for Goerli and Mumbai Testnet)
 * Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 
-{% hint style="info" %}
+:::info
 Domains on Polygon Mainnet can be purchased for free through Unstoppable Website Faucet, but users will need to cover their own gas fees to mint the domain.
-{% endhint %}
+:::
 
 ## Step 2: Configure the Test Domain
 
@@ -33,21 +33,21 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **cryptocurrency records**: add optional cryptocurrency addresses, such as bitcoin or litecoin
   * **custom records**: add optional key and value pairs
 
-{% hint style="warning" %}
+:::warning
 **Important:** For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
-{% endhint %}
+:::
 
 ![Configure options on Unstoppable website faucet](../../images/website-faucet-options.png)
 
-{% hint style="info" %}
+:::info
 If you don't know the recipient address, this information will be retrieved and populated for you after connecting your wallet to the transaction. Just click on **Mint Domain** to continue.
-{% endhint %}
+:::
 
 ## Step 3: Mint the Domain & Sign the Transaction
 
 * Click the **Mint Domain** button when finished configuring options.
 * Sign the transaction with your wallet.
 
-{% hint style="success" %}
+:::success
 Congratulations! You're the new proud owner of a test domain on your preferred network. Happy hacking!
-{% endhint %}
+:::

@@ -5,9 +5,9 @@ description: This page describes the process for creating an account and applyin
 
 # Register As Reseller
 
-{% hint style="warning" %}
+:::warning
 The Reseller API feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon-l2-network/polygon-developer-integration.md) to get started.
-{% endhint %}
+:::
 
 ## Create an Account
 
@@ -27,6 +27,6 @@ After logging in, you will have the option to submit a reseller application. Ple
 
 After your application is approved, you will be given full access to the reseller dashboard to view your ResellerID and update payment information.
 
-{% hint style="info" %}
+:::info
 To avoid missing the email about your reseller application status, please update your email settings to approve messages from [notifications@unstoppabledomains.com](mailto:notifications@unstoppabledomains.com), so it doesn’t end up in your spam folder.
-{% endhint %}
+:::

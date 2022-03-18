@@ -7,18 +7,18 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 **[[insert overview, reusable content]]**
 
-{% hint style="info" %}
+:::info
 [Goerli faucet](https://goerli-faucet.slock.it/) offers free money in the form of Ether tokens for domains minted on Goerli Testnet.
-{% endhint %}
+:::
 
 ## Step 1: Check Wallet Compatibility for Etherscan
 
 * Check that you have a wallet compatible with [WalletConnect](https://walletconnect.org/wallets) (e.g. [Trust Wallet](https://trustwallet.com), [MetaMask](https://metamask.io)).
 * Ensure you have enough Ether on your Ethereum wallet to pay transaction fees, if you are not planning to use Goerli Testnet.
 
-{% hint style="info" %}
+:::info
 To calculate the transaction fee you'd like to target you can use services like [ETH Gas Station](https://ethgasstation.info/calculatorTxV.php). The average transaction gas usage to mint and transfer a new domains is around 180,000 gas.
-{% endhint %}
+:::
 
 ## Step 2. Get free Ether from Goerli Faucet
 
@@ -50,10 +50,10 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 ![Etherscan error for insufficient funds](images/step-4-1-etherscan-claim-domain-small.png)
 
-{% hint style="danger" %}
+:::danger
 If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.&#x20;
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::success
 Congratulations! You're the new proud owner of a test domain on Etherscan. Happy hacking!
-{% endhint %}
+:::

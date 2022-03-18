@@ -11,9 +11,9 @@ Login with Unstoppable uses a modified version of the OpenID Connect (OIDC) prot
 
 A key distinguisher between traditional and decentralized authorization protocols is that there is no centralized resource access. Decentralized authorization requires that the Authorization Server won’t have pre-existing knowledge of the resources it’s authorizing clients to use. OAuth, OIDC, and SAML only govern the parts of the interaction between clients & authorization Servers. Decentralized authentication is between two parties because resources must provide an interface for Authorization Servers to read from.
 
-{% hint style="info" %}
+:::info
 With decentralized authorization, basic authentication information is likely stored directly on the Authorization Server, so Standard Claims will need to be separated out from Client-to-Resource authorization.
-{% endhint %}
+:::
 
 ## Major Actors
 
@@ -47,9 +47,9 @@ The table below describes the primary ways that clients ask for tokens. The firs
 
 Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Login with Unstoppable uses the personal\_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
 
-{% hint style="info" %}
+:::info
 Clients and Resource Servers don’t need to know or care what Authentication method the Authorization Server uses.
-{% endhint %}
+:::
 
 The table below lists the primary ways Authorization Servers authenticate users.
 

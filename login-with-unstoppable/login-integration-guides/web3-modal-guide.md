@@ -8,9 +8,9 @@ description: >-
 
 This is the basic installation guide for the `web3modal` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3modal).
 
-{% hint style="info" %}
+:::info
 For a completed example of a Web3 Modal application, you can [download the files](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/README.md) directly.
-{% endhint %}
+:::
 
 ## Step 1: Install the Libraries
 
@@ -110,9 +110,9 @@ const provider = await web3modal.connect()
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::
 
 ## Reference
 

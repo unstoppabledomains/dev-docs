@@ -28,9 +28,9 @@ The table below shows how the pricing tiers are structured at UD. Most free doma
 
 ![Pricing tiers for UD domains](../../images/domain-pricing-tiers.png)
 
-{% hint style="info" %}
+:::info
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.
-{% endhint %}
+:::
 
 ## Step 3: Use the Free Domain Claiming endpoint
 
@@ -38,9 +38,9 @@ The free domain claiming endpoint allows the partner (Reseller ID) to mint free 
 
 The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint](../reseller-api-endpoints.md).&#x20;
 
-{% hint style="info" %}
+:::info
 No additional configuration is necessary from the Reseller to begin using this endpoint once the free domains criteria has been established with UD administrators and added to the Reseller account.
-{% endhint %}
+:::
 
 ## Considerations
 
@@ -50,6 +50,6 @@ The following considerations apply to the free domain claiming:
 * If the Reseller ID doesn't have allowance to provide free domains, then users will not be permitted to claim free domains.
 * If the wallet or email already has a free domain, then a second free domain is not permitted.
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just configured your Reseller account to claim free domains.
-{% endhint %}
+:::

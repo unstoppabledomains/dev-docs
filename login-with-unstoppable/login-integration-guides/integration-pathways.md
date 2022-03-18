@@ -33,9 +33,9 @@ There are several ways to integrate with Login with Unstoppable, which is detail
 | Ethereum Provider with BNC Onboard Library | custom @uauth/js integration, with ethereum provider, bnc-onboard library                                                             | [BNC Onboard Guide](bnc-onboard-guide.md)                            |
 | Custom uAuth Node without Frontend UI      | custom @uauth/node integration for server-side applications, without frontend UI, DOM UI package recommended to help with frontend UI | [Node.js Server Guide](node-js-server-guide.md)                      |
 
-{% hint style="info" %}
+:::info
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.&#x20;
-{% endhint %}
+:::
 
 ## Step 4: Configure the Login UI
 

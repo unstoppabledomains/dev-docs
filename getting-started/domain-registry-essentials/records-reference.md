@@ -12,9 +12,9 @@ This reference page is divided into sections, grouping records by their namespac
 
 Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](uns-vs-cns-comparison/architecture-overview.md), [UNS Architecture](uns-vs-cns-comparison/uns-architecture-overview.md), and [Managing Domain Records](../allow-my-users-to-manage-existing-domains/managing-domain-records.md).
 
-{% hint style="info" %}
+:::info
 A list of keys supported by Unstoppable Domains can be found in [reference json file](https://github.com/unstoppabledomains/dot-crypto/blob/master/src/supported-keys/supported-keys.json)
-{% endhint %}
+:::
 
 ## Cryptocurrency payments
 

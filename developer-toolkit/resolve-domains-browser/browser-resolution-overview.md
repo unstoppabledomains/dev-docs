@@ -6,9 +6,9 @@ description: >-
 
 # How Browser Resolution Works
 
-{% hint style="info" %}
+:::info
 For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md).
-{% endhint %}
+:::
 
 ## General Domain Resolution Information
 

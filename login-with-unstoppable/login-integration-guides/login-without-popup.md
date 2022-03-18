@@ -34,9 +34,9 @@ const uauth = new UAuth({
 })
 ```
 
-{% hint style="danger" %}
+:::danger
 The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../login-client-configuration.md) Guide for details).
-{% endhint %}
+:::
 
 ## Step 2: Create a Login Button
 
@@ -172,6 +172,6 @@ const Profile: React.FC<RouteProps> = () => {
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::

@@ -86,9 +86,9 @@ For domains owned by multisig wallets, owner-based authentication isn’t suffic
 
 The below fields are used to specify a public key that can be used for authentication.&#x20;
 
-{% hint style="info" %}
+:::info
 It’s recommended that dApps support the web3 and oob methods at a minimum.
-{% endhint %}
+:::
 
 | Field            | Description                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -110,9 +110,9 @@ For context, _addr\_type\_hint_ can have the following values:
 | portis        | Signing done via Portis Wallet                                                                                                                                             |
 | oob           | Signing done via Out of Band signing. Authorization server should have a message to sign displayed and have a form for the user to paste the signature for authentication. |
 
-{% hint style="info" %}
+:::info
 If the Ethereum account is stored using a hardware wallet, the AMR Value SHOULD be _uns-hwk_. For all other address types, the Authentication server should use the AMR Value of _uns-swk_.
-{% endhint %}
+:::
 
 ## **JWKS by Value**
 

@@ -49,11 +49,11 @@ setOwner(address to, uint256 tokenId)
 
 For CNS, if one of these methods is invoked, then both the approved operator and the `Resolver` address in the `Registry` smart contract will be set to `0x0`.
 
-{% hint style="info" %}
+:::info
 For CNS, the current implementation of transferring will not modify any values in the `Resolver` smart contract. In other words, the records stored on a domain won't automatically reset when an ownership transfer occurs. A transferred domain could still point to a previous owner's addresses.
 
 After receiving a domain, along with setting a `Resolver` address, the [`reconfigure`](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol) method should be called, which resets all previous records.
-{% endhint %}
+:::
 
 For CNS, `setOwner` keeps a `Resolver` address and resets an approved operator. This method makes it possible to preconfigure a domain with certain records and transfer it to another owner, keeping all resolution settings.
 
@@ -61,9 +61,9 @@ For CNS, `setOwner` keeps a `Resolver` address and resets an approved operator. 
 
 For UNS, the approved operator in the `Registry`smart contract will be set to `0x0`. There is no resolver address for UNS.
 
-{% hint style="info" %}
+:::info
 For UNS, transferring will reset approved operator and domain records. All domain records will be cleared and set to `0x0`.
-{% endhint %}
+:::
 
 For UNS, `setOwner` keeps domain records and resets an approved operator. All records and content will also be transferred.
 

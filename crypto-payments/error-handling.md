@@ -35,9 +35,9 @@ resolution
     });
 ```
 
-{% hint style="info" %}
+:::info
 To see all supported error codes please check [resolution library api docs](https://unstoppabledomains.github.io/resolution/v1.17.0/enums/resolutionerrorcode.html)
-{% endhint %}
+:::
 {% endtab %}
 
 {% tab title="resolution-java" %}
@@ -66,9 +66,9 @@ try {
 }
 ```
 
-{% hint style="info" %}
+:::info
 To see all supported error codes please check [resolution-java readme](https://github.com/unstoppabledomains/resolution-java#errors)
-{% endhint %}
+:::
 {% endtab %}
 
 {% tab title="resolution-swift" %}
@@ -106,9 +106,9 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 }
 ```
 
-{% hint style="info" %}
+:::info
 To see all supported error codes please check [resolution-swift readme](https://github.com/unstoppabledomains/resolution-swift#possible-errors)
-{% endhint %}
+:::
 {% endtab %}
 
 {% tab title="resolution-go" %}
@@ -162,9 +162,9 @@ func main() {
 {% endtab %}
 {% endtabs %}
 
-{% hint style="danger" %}
+:::danger
 Always check address validity after receiving a result from the library. The user has full control over the domain and is able to set any value - even values which are invalid.
-{% endhint %}
+:::
 
 
 ## Resources

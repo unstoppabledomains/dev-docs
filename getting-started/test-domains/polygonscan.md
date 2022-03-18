@@ -12,9 +12,9 @@ To distinguish these test domains from paid domains, all test domains are prefix
 
 To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
-{% hint style="info" %}
+:::info
 [Polygon faucet](https://faucet.polygon.technology) offers free money in the form of matic tokens for domains minted on Polygon Testnet.
-{% endhint %}
+:::
 
 ## Step 1. Configure your Metamask wallet for Polygon
 
@@ -93,6 +93,6 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 * Click the **Write** button to start the transaction.&#x20;
 
-{% hint style="success" %}
+:::success
 Congratulations! You're the new proud owner of a test domain on Polygon Mumbai testnet. Happy hacking!
-{% endhint %}
+:::

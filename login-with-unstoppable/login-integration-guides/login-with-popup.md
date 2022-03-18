@@ -8,9 +8,9 @@ description: >-
 
 In this integration guide, we will show how to add Login with Unstoppable with the popup feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a javascript developer with a few minutes of time.
 
-{% hint style="info" %}
+:::info
 If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.&#x20;
-{% endhint %}
+:::
 
 ## Step 1: Project Setup&#x20;
 
@@ -32,9 +32,9 @@ npm install --save-dev parcel
 npm install --save @uauth/js
 ```
 
-{% hint style="info" %}
+:::info
 **@uauth/js** is the library used for implementing Login with Unstoppable on the frontend.
-{% endhint %}
+:::
 
 ## Step 2: Create an HTML File
 
@@ -108,6 +108,6 @@ yarn parcel --open --port 5000 index.html
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::
