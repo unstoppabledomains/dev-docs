@@ -17,7 +17,7 @@ Unstoppable Domains achieves this with a process called domain resolution.
 
 Domain resolution is the process of converting a human-readable domain name like `ryan.crypto` to the cryptocurrency addresses attached to them. It involves retrieving a domain’s records through smart contracts deployed on the blockchain.
 
-![a successful domain resolving example](../images/best-practices.png)
+![a successful domain resolving example](../images/best-practices.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## How Does it Work?
 
