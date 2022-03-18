@@ -71,7 +71,7 @@ new UAuth(uauthOptions).user().then().catch()
 
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
-![UI Example for displaying authenticated user](../../images/second-UI-example-login-domains%20(1).png)
+![UI Example for displaying authenticated user](../../images/third-UI-example-login-domains.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## Step 2: Verify the Login Flow and Scopes
 

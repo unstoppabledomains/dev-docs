@@ -7,7 +7,7 @@ description: This guide covers the process for configuring the Login with Unstop
 
 The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
 
-![Login client configuration complete example](../../images/login-client-config.gif)
+![Login client configuration complete example](../../images/login-client-config.gif '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 :::danger
 Developers must store the client secret before saving changes, refreshing the page, or exiting the page. The client secret cannot be retrieved by Unstoppable Domains.
@@ -22,13 +22,13 @@ Developers must store the client secret before saving changes, refreshing the pa
   * Click the trash can ![trashcan](../../images/trashcan_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
-![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#display=block;margin-left:auto;margin-right:auto;width:50%;')
+![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## Step 2: Client Metadata Configuration
 
 The **Client Metadata** section includes the unique client ID, client secret, and redirect URIs. Developers can also download metadata for the existing client configuration and rotate the client secret from within this sub-section.
 
-![Client Configuration Metadata UI](../../images/client_config_screen_metadata.png)
+![Client Configuration Metadata UI](../../images/client_config_screen_metadata.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ### Rules for Redirect URIs
 
@@ -50,7 +50,7 @@ The **Cosmetic Configuration** allows developers to customize the UI to improve 
 All URIs must use the same origin name (e.g., unstoppabledomains.com) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
 :::
 
-![Client Configuration UI, Cosmetic Config section](../../images/client_config_screen_cosmetic.png)
+![Client Configuration UI, Cosmetic Config section](../../images/client_config_screen_cosmetic.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 The following table describes the fields for the cosmetic configuration UI section.
 
@@ -70,7 +70,7 @@ The **Advanced Configuration** includes options for CORS, audience URIs, grant t
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
 :::
 
-![Client Configuration UI, Advanced Config section](../../images/client_config_screen_advanced.png)
+![Client Configuration UI, Advanced Config section](../../images/client_config_screen_advanced.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 The following section describes the fields for the advanced configuration UI section.
 

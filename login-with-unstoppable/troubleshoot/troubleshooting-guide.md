@@ -74,6 +74,6 @@ The solution for BNC Onboard integrations is to check that you are still logged 
 
 If the login modal does not close after the signing request has been accepted, the website URL in the application credentials isn’t at the same origin as the site hosting the pop-up flow. For example, if the login pop-up is hosted at `https://staging-bsc.example.io`, while the **Redirect URI** is at `https://staging.example.io`.
 
-![Login modal should close after signature request is confirmed](<../../images/login-modal-doesn't-close.png>)
+![Login modal should close after signature request is confirmed](../../images/login-modal-doesnt-close.png '#display=block;margin-left=auto;margin-right=auto;')
 
 The solution is to go to your [app dashboard](https://unstoppabledomains.com/app-dashboard) and change the **Website Link** for your application to the same origin as the **Redirect URI** (e.g. `https://staging.example.io`) and click **Save**.
