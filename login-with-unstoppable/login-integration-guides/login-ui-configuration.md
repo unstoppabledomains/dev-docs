@@ -81,7 +81,7 @@ Before launching your application, you should verify the login flow that users w
 You must adjust the configuration in the [Login Client](../get-started-login/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark).
 :::
 
-![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![2) User Enters Unstoppable Domain Address to Login to dApp](../../images/login-domains-modal2-v2.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;') ![3) User Consent screen details the scopes being requested by dApp](../../images/consent-screen-marked-v2.png '#display=inline;margin-left=auto;margin-right=auto;width=33%;')
+![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png '#display=inline-block;padding=5px;width=40%;') ![2) User Enters Unstoppable Domain Address to Login to dApp](../../images/login-domains-modal2-v2.png '#display=inline-block;padding=5px;width=40%;') ![3) User Consent screen details the scopes being requested by dApp](../../images/consent-screen-marked-v2.png '#display=inline-block;padding=5px;width=40%;')
 
 The modals are further described below:
 
