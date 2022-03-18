@@ -22,7 +22,7 @@ Developers must store the client secret before saving changes, refreshing the pa
   * Click the trash can ![trashcan](../../images/trashcan_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
-![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#width=400px;height=600px;')
+![My Clients UI screen for adding, removing, and configuring applications](../../images/new_my_clients_screen_markup.png '#display=block;margin-left:auto;margin-right:auto;width:50%;')
 
 ## Step 2: Client Metadata Configuration
 

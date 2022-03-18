@@ -1,7 +1,6 @@
 ---
-description: >-
-  This integration guide is intended for a custom @uauth/js integration, with
-  ethereum provider, using web3 react library.
+title: Web3 React Guide for Login with Unstoppable
+description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
 ---
 
 # Web3 React Guide: Login with Unstoppable
@@ -24,7 +23,6 @@ yarn add @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3
 
 Next, configure the web3-react connectors:
 
-{% code title="connectors.ts" %}
 ```typescript
 import {UAuthConnector} from '@uauth/web3-react'
 import {InjectedConnector} from '@web3-react/injected-connector'
@@ -59,11 +57,9 @@ const connectors: Record<string, AbstractConnector> = {
 
 export default connectors
 ```
-{% endcode %}
 
 You can also construct a UAuth instance before hand and use that to create the connector.
 
-{% code title="connectors.ts" %}
 ```javascript
 import UAuth from '@uauth/js'
 
@@ -78,7 +74,6 @@ const uauth = new UAuthConnector({
   connectors: {injected, walletconnect},
 })
 ```
-{% endcode %}
 
 :::info
 Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to initialize the `UAuthConnector` with this setting: [`shouldLoginWithRedirect: true.`](web3-react-guide.md#shouldloginwithredirect)``
@@ -92,7 +87,6 @@ Once configured, web3-react can be used like normal.
 **Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
 :::
 
-{% code title="login-page.ts" %}
 ```javascript
 import {useWeb3React} from '@web3-react/core'
 import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
@@ -107,14 +101,13 @@ async function handleUAuthConnect() {
   await activate(uauth)
 }
 ```
-{% endcode %}
 
 ## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-:::success
-**Congratulations!** You just implemented Login with Unstoppable.
+:::success Congratulations!
+You just implemented Login with Unstoppable.
 :::
 
 ## Reference
@@ -123,7 +116,6 @@ Login with Unstoppable has UI requirements that must be configured to properly d
 
 If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
-{% code title="callback-page.ts" %}
 ```javascript
 import {uauth} from './connectors'
 
@@ -142,7 +134,6 @@ useEffect(() => {
     })
 }, [])
 ```
-{% endcode %}
 
 ### **UAuthConnector Class**
 

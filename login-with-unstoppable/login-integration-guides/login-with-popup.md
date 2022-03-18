@@ -1,7 +1,6 @@
 ---
-description: >-
-  This integration guide is intended for a generic @uauth/js, no Ethereum
-  provider, with callback, and with the popup feature.
+title: 5 Minute Guide for Login with Unstoppable with Popup
+description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and with the popup feature.
 ---
 
 # 5 Minute Guide: Login with Unstoppable with Popup
@@ -40,7 +39,6 @@ npm install --save @uauth/js
 
 Build out the index.html file as follows:
 
-{% code title="index.html" %}
 ```html
 <html>
   <head>
@@ -52,13 +50,11 @@ Build out the index.html file as follows:
   </body>
 </html>
 ```
-{% endcode %}
 
 ## Step 3: Instantiate the Library&#x20;
 
 Now, configure the app.js as follows:
 
-{% code title="app.js" %}
 ```javascript
 import UAuth from '@uauth/js'
 
@@ -68,13 +64,11 @@ const uauth = new UAuth({
   redirectUri: 'http://localhost:5000/callback',
 })
 ```
-{% endcode %}
 
 ## Step 4: Implement the Login Handler
 
 Add more code to the app.js file as follows:
 
-{% code title="app.js" %}
 ```javascript
 window.login = async () => {
   try {
@@ -86,12 +80,11 @@ window.login = async () => {
   }
 }
 ```
-{% endcode %}
 
 ## Step 5: Login with Unstoppable&#x20;
 
 :::info
-You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../get-test-domain.md#get-a-domain-using-unstoppable-website-faucet) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.
+You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../getting-started/test-domains/faucet.md) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.
 :::
 
 :::warning
@@ -106,8 +99,8 @@ yarn parcel --open --port 5000 index.html
 
 ## Step 6: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-:::success
-**Congratulations!** You just implemented Login with Unstoppable.
+:::success Congratulations!
+You just implemented Login with Unstoppable.
 :::

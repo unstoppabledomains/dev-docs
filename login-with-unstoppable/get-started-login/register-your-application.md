@@ -42,6 +42,6 @@ You can begin App development right away while waiting on application approval. 
 * **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been submitted.&#x20;
 * **Refresh** the Application Dashboard, or check your email, to see the status of the application.
 
-:::success
-**Congratulations!** You just registered your application with Unstoppable Domains.
+:::success Congratulations!
+You just registered your application with Unstoppable Domains.
 :::

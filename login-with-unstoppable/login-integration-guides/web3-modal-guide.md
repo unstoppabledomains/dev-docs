@@ -1,7 +1,6 @@
 ---
-description: >-
-  This integration guide is intended for a custom @uauth/js integration, with
-  ethereum provider, using web3 modal library.
+title: Web3 Modal Guide for Login with Unstoppable
+description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
 ---
 
 # Web3 Modal Guide: Login with Unstoppable
@@ -24,7 +23,6 @@ yarn add web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 
 Next, configure the `web3modal` library:
 
-{% code title="web3modal.ts" %}
 ```javascript
 import * as UAuthWeb3Modal from '@uauth/web3modal'
 import UAuthSPA from '@uauth/js'
@@ -79,7 +77,6 @@ UAuthWeb3Modal.registerWeb3Modal(web3modal)
 
 export default web3modal
 ```
-{% endcode %}
 
 :::info
 Because popups are a more integration friendly approach, the `@uauth/web3modal` library now uses them by default. If you want the "old" redirect functionality, you need to initialize the Wallet Module with this option:`shouldLoginWithRedirect: true`.
@@ -93,7 +90,6 @@ Once configured, the `web3modal` library can be used normally.
 **Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
 :::
 
-{% code title="login-page.ts" %}
 ```javascript
 import web3modal from './web3modal'
 import Web3 from 'web3'
@@ -104,21 +100,19 @@ const provider = await web3modal.connect()
 
 // Save provider in state
 ```
-{% endcode %}
 
 ## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-:::success
-**Congratulations!** You just implemented Login with Unstoppable.
+:::success Congratulations!
+You just implemented Login with Unstoppable.
 :::
 
 ## Reference
 
 **shouldLoginWithRedirect is true**: If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
-{% code title="callback-page.ts" %}
 ```javascript
 import UAuthSPA from '@uauth/js'
 import * as UAuthWeb3Modal from '@uauth/web3modal'
@@ -137,7 +131,6 @@ UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions)
     // Redirect to failure page
   })
 ```
-{% endcode %}
 
 **connector**: The `connector` is used to create a provider for the `web3modal` library.
 
