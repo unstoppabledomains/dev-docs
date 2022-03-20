@@ -12,11 +12,11 @@ pages:
   - group: Troubleshoot Your Crypto Payment Integrations
     expanded: false
     pages:
-      - label: Error Codes for Resolution Libraries
+      - label: Resolution Libraries Error Codes
         page: resolution-library-error-codes.md
-      - label: Error Codes for Resolution Service API
+      - label: Resolution Service API Error Codes
         page: resolution-service-error-codes.md
-      - label: Error Codes for Resolution CLI
+      - label: Resolution CLI Error Codes
         page: resolution-cli-error-codes.md
     separatorLine: true
   - page: best-practices.md

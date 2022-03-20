@@ -1,9 +1,9 @@
 ---
 title: Send and Receive Crypto Payments
-description: This page gives an overview of the crypto payments feature.
+description: This page gives an overview of the Unstoppable Domains crypto payments feature.
 ---
 
-## Overview
+## Crypto Payments Overview
 
 Unstoppable Domains allows you to make payments with over [281 cryptocurrencies](https://support.unstoppabledomains.com/support/solutions/articles/48001185621-what-cryptocurrencies-are-currently-supported-) using a single domain name. As long as you have configured your addresses to the domain, users can send crypto to your domain, and it will end up in your wallet.
 
