@@ -12,9 +12,9 @@ To distinguish these test domains from paid domains, all test domains are prefix
 
 To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
-{% hint style="info" %}
+:::info
 [Polygon faucet](https://faucet.polygon.technology) offers free money in the form of matic tokens for domains minted on Polygon Testnet.
-{% endhint %}
+:::
 
 ## Step 1. Configure your Metamask wallet for Polygon
 
@@ -86,13 +86,13 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 * Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
 * Choose **Write as Proxy** tab.
-* Connect your wallet (Rinkeby).
+* Connect your wallet (Goerli).
 * Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](images/polygonscan-claim-to-records.png)
 
 * Click the **Write** button to start the transaction.&#x20;
 
-{% hint style="success" %}
+:::success
 Congratulations! You're the new proud owner of a test domain on Polygon Mumbai testnet. Happy hacking!
-{% endhint %}
+:::

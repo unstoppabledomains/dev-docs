@@ -5,9 +5,9 @@ description: >-
 
 # Delegating Transactions
 
-{% hint style="info" %}
+:::info
 `Resolver` is an entity that is related to CNS only. There is no resolver address for UNS.
-{% endhint %}
+:::
 
 Most `Registry` and `Resolver` methods have meta-transaction support, which allows you to delegate transactions to another party. Generally, meta-transactions allow users to sign messages to control their domains that are then submitted to the registry by a different party. This enables Unstoppable to submit transactions on behalf of users so that the user can still manage their domains in a self-custodial capacity without any gas.
 
@@ -17,9 +17,9 @@ Meta-transactions work by having users sign function calls along with a nonce. T
 
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
-{% hint style="info" %}
+:::info
 For UNS and CNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [RegistryFowarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/RegistryForwarder.sol).
-{% endhint %}
+:::
 
 ## Token nonce
 

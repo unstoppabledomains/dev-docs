@@ -1,20 +1,19 @@
 ---
-description: >-
-  This integration guide is intended for a custom @uauth/node integration for
-  server-side applications and does not come with a default front-end UI.
+title: Node.js Server Guide for Login with Unstoppable
+description: This integration guide is intended for a custom @uauth/node integration for server-side applications and does not come with a default front-end UI.
 ---
 
 # Node.js Server Guide: Login with Unstoppable
 
 This installation guide is for custom `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
-{% hint style="info" %}
+:::info
 For a completed example of a server integration using `@uauth/node` library, you can [download the files](https://github.com/unstoppabledomains/uauth/tree/main/examples/server) directly.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 ## Step 1: Install the @uauth/node Library
 
@@ -130,7 +129,7 @@ There are two UI options for when you create a server-side integration.
 
 ### Option 1: Create a Custom UI
 
-1. The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-a-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
+The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-a-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
 
 ```javascript
 app.get('/', (_, res) => {
@@ -148,13 +147,15 @@ app.get('/', (_, res) => {
 
 The [DOM UI package](https://github.com/unstoppabledomains/uauth/tree/main/packages/dom-ui) can be used to help with the front-end UI development. The DOM UI package creates a simple UI modal on the website that is used by `@uauth/js` library internally to facilitate sign-in, so the user has a consistent UI on the front-end.&#x20;
 
-There is no good documentation of this package yet, so developers should [see how it is used inside @uauth/js library](https://github.com/unstoppabledomains/uauth/blob/main/packages/js/src/Client.ts#L232).
+We are still working on documentation of this package, so developers should [see how it is used inside @uauth/js library](https://github.com/unstoppabledomains/uauth/blob/main/packages/js/src/Client.ts#L232).
 
 The package takes an injection with a submit method attached that is called when a user interacts with the modal. The submit function should call the [login function/route](node-js-server-guide.md#step-3a-a-login-method) on your own service.
 
 ## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. For Node.js integrations, you can download official UD buttons to use in your UI in [**Step 3**](../login-ui-configuration.md#step-3-download-ud-buttons-node-js-only). Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
+
+For Node.js integrations, you can download official UD buttons to use in your UI in [**Step 3**](login-ui-configuration.md#step-3-download-ud-buttons-node-js-only). 
 
 ## Step 6: Run the Server!
 
@@ -166,9 +167,9 @@ app.listen(process.env.PORT, () => {
 })
 ```
 
-{% hint style="success" %}
-**Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::success Congratulations!
+You just implemented Login with Unstoppable.
+:::
 
 ## Reference
 

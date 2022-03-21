@@ -5,8 +5,9 @@ settings:
   showConsole: true
   generateCodeSamples:
     languages:
-      - lang: curl
       - lang: JavaScript
       - lang: Node.js
       - lang: Python
+      - lang: Java
+      - lang: Go
   hideDownloadButton: true

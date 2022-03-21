@@ -1,23 +1,22 @@
 ---
-description: >-
-  This integration guide is intended for a generic @uauth/js, no Ethereum
-  provider, with callback, and without popup.
+title: 10 Minute Guide for Login with Unstoppable without Popup
+description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
 ---
 
 # 10 Minute Guide: Login with Unstoppable without Popup
 
 This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.&#x20;
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
 ## Step 1: Configure the UAuth Class
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the Client ID and Client Secret from your [credentials](../login-client-configuration.md).
-* Add all the [scopes](../scopes-for-login.md) you will be requesting from the user.
+* Add the Client ID and Client Secret from your [credentials](../get-started-login/login-client-configuration.md).
+* Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
 * Add the [​​](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23)redirect URI that the auth server will redirect back to after every authorization attempt.
 
 ```javascript
@@ -34,9 +33,9 @@ const uauth = new UAuth({
 })
 ```
 
-{% hint style="danger" %}
+:::danger
 The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../login-client-configuration.md) Guide for details).
-{% endhint %}
+:::
 
 ## Step 2: Create a Login Button
 
@@ -170,8 +169,8 @@ const Profile: React.FC<RouteProps> = () => {
 
 ## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-{% hint style="success" %}
-**Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::success Congratulations!
+You just implemented Login with Unstoppable.
+:::

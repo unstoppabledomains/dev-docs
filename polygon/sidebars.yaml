@@ -1,9 +1,16 @@
 pages:
   - page: index.md
     separatorLine: true
-  - page: ethereum-polygon-comparison.md
-    label: Ethereum vs. Polygon Comparison
+  - page: polygon-migration-guide.md
+    label: Polygon Migration Guide
     separatorLine: true
-  - page: polygon-developer-integration.md
-    label: Polygon Developer Integration Guide
-    separatorLine: true
+  - group: Domain Transfer Guides  
+    expanded: false
+    pages: 
+      - page: cns1-to-uns1.md
+        label: CNS L1 to UNS L1--Domain Transfer Guide
+      - page: cns1-to-uns2.md
+        label: CNS L1 to UNS L2--Domain Deposit Guide
+      - page: uns1-to-uns2.md
+        label: UNS L1 to UNS L2--Domain Deposit Guide
+    separatorLine: true        

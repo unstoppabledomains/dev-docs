@@ -3,9 +3,9 @@ title: Resolve Unstoppable Domains with Direct Blockchain Calls
 description: This page reviews the process for resolving Unstoppable domains with direct blockchain calls. It has been updated to reflect changes on L2 Polygon network.
 ---
 
-{% hint style="info" %}
+:::info
 The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).&#x20;
-{% endhint %}
+:::
 
 In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
 
@@ -44,9 +44,9 @@ Let’s open the index.html file and build out the layout for our app. To create
 
 Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
 
-{% hint style="info" %}
+:::info
 We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../domain-registry-essentials/namehashing.md).
-{% endhint %}
+:::
 
 ```html
 <!DOCTYPE html>
@@ -100,9 +100,9 @@ async function resolve() {
 }
 ```
 
-{% hint style="info" %}
+:::info
 We can open `index.html` in a browser to make sure everything is connected and launches.
-{% endhint %}
+:::
 
 ## Tokenize Your Domain by Namehashing <a href="#9004" id="9004"></a>
 
@@ -194,12 +194,12 @@ var abi = [
   }
 ];
 var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/demo");
-var provider = new ethers.providers.JsonRpcProvider("https://eth-rinkeby.alchemyapi.io/v2/demo");
+var provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemyapi.io/v2/demo");
 ```
 
-{% hint style="info" %}
-The network and contract addresses are from rinkeby and polygon mumbai test networks respectively. For mainnet, use the following contract addresses: [0xfEe4D4F0aDFF8D84c12170306507554bC7045878](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **rinkeby**.
-{% endhint %}
+:::info
+The network and contract addresses are from goerli and polygon mumbai test networks respectively. For mainnet, use the following contract addresses: [0xfEe4D4F0aDFF8D84c12170306507554bC7045878](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **goerli**.
+:::
 
 For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../../domain-registry-essentials/cns-smart-contracts.md#proxyreader).
 
@@ -218,9 +218,9 @@ async function fetchContractData(contract, keys, tokenId) {
 
 By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the **namehash** function from above.
 
-{% hint style="info" %}
+:::info
 Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../../domain-registry-essentials/records-reference.md) across many applications.
-{% endhint %}
+:::
 
 ### Record Keys Lookup
 
@@ -293,9 +293,9 @@ If we try to resolve the **brad.crypto** domain with the above keys, we should s
 }
 ```
 
-{% hint style="info" %}
+:::info
 data\[2] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
-{% endhint %}
+:::
 
 ## Display the Records <a href="#a0c8" id="a0c8"></a>
 

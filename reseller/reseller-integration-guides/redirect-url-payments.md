@@ -41,13 +41,13 @@ The request URL is likely to change. In addition to the message parameters, the 
 curl -X GET https://unstoppabledomains.com/search?ref=ffsdd4234&searchTerm=buyadomain.crypto&timestamp=1638960015&resellerName=blockchaincom&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=8ab46b082c1b256c2e92347c8d90c11c923bf7b0e802d13b53bcecb28d6b6269 
 ```
 
-{% hint style="info" %}
+:::info
 The searchTerm and ref parameters are NOT included in the signature.
-{% endhint %}
+:::
 
-{% hint style="danger" %}
+:::danger
 The records parameter should contain URL encoded and minified JSON with domains records according to the standard outlined in the [Records Reference](../../domain-registry-essentials/records-reference.md).
-{% endhint %}
+:::
 
 ## **Step 2: Create HMAC Authorization**
 
@@ -106,9 +106,9 @@ const signature = signMessage(message); // happens on the reseller backend
 const verified = verify(message, signature); // happens on Unstoppable backend
 ```
 
-{% hint style="info" %}
+:::info
 In JavaScript, hmac signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.&#x20;
-{% endhint %}
+:::
 
 ### Example Request
 
@@ -124,6 +124,6 @@ JSON records example (URL encoded):
 %7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D
 ```
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just configured your Reseller account to process payments using a Redirect URL.
-{% endhint %}
+:::

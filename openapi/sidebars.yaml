@@ -1,3 +1,5 @@
 pages:
   - page: reference.page.yaml
     separatorLine: true
+  - page: loginref.page.yaml
+    separatorLine: true

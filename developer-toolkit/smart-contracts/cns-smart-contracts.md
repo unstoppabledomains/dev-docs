@@ -27,8 +27,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe">0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0xAad76bea7CFEc82927239415BB18D2e93518ecBB">0xAad76bea7CFEc82927239415BB18D2e93518ecBB</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589">0x801452cFAC27e79a11c6b185986fdE09e8637589</a></td>
     </tr>
 </table>
 
@@ -48,8 +48,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842">0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x95AE1515367aa64C462c71e87157771165B1287A">0x95AE1515367aa64C462c71e87157771165B1287A</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437">0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437</a></td>
     </tr>
 </table>
 <br>
@@ -82,8 +82,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982">0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982</a></td>
     </tr>
 </table>
 <br>
@@ -94,6 +94,12 @@ This section lists all the smart contracts that users can directly interact with
         <td>Mainnet</td>
            <td><a
                     href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
+            </td>
+    </tr>
+    <tr>
+        <td>Goerli</td>
+           <td><a
+                    href="https://goerli.etherscan.io/address/0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68">0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68</a>
             </td>
     </tr>
 </table>
@@ -114,8 +120,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0x82EF94294C95aD0930055f31e53A34509227c5f7">0x82EF94294C95aD0930055f31e53A34509227c5f7</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x66a5e3e2C27B4ce4F46BBd975270BE154748D164">0x66a5e3e2C27B4ce4F46BBd975270BE154748D164</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x5199dAE4B24B987ba18FcE1b64664D1B798d372B">0x5199dAE4B24B987ba18FcE1b64664D1B798d372B</a></td>
     </tr>
 </table>
 
@@ -135,8 +141,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7">0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x6f8F96A566663C1d4fEe70edD37E9b62Fe39dE5D">0x6f8F96A566663C1d4fEe70edD37E9b62Fe39dE5D</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
 </table>
 
@@ -156,8 +162,8 @@ This section lists all the smart contracts that users can directly interact with
         <td><a href="https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855">0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x1CB337b3b208dc29a6AcE8d11Bb591b66c5Dd83d">0x1CB337b3b208dc29a6AcE8d11Bb591b66c5Dd83d</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
 </table>
 
@@ -181,8 +187,8 @@ The deployed version of the `Registry` smart contract only allows `MintingContro
         <td><a href="https://etherscan.io/address/0xb0EE56339C3253361730F50c08d3d7817ecD60Ca">0xb0EE56339C3253361730F50c08d3d7817ecD60Ca</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x51765307AeB3Df2E647014a2C501d5324212467c">0x51765307AeB3Df2E647014a2C501d5324212467c</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0xCEC41677be322049cC885c0DAe2fE0D52CA195ca">0xCEC41677be322049cC885c0DAe2fE0D52CA195ca</a></td>
     </tr>
 </table>
 
@@ -202,8 +208,8 @@ The deployed version of the `Registry` smart contract only allows `MintingContro
         <td><a href="https://etherscan.io/address/0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91">0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0xe1d2e4B9f0518CA5c803073C3dFa886470627237">0xe1d2e4B9f0518CA5c803073C3dFa886470627237</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x29465e3d2daA588E62375977bCe9b3f51406a794">0x29465e3d2daA588E62375977bCe9b3f51406a794</a></td>
     </tr>
 </table>
 

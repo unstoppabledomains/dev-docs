@@ -1,16 +1,15 @@
 ---
-description: >-
-  This integration guide is intended for a custom @uauth/js integration, with
-  ethereum provider, using BNC Onboard library.
+title: BNC Onboard Guide for Login with Unstoppable
+description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using BNC Onboard library.
 ---
 
 # BNC Onboard Guide: Login with Unstoppable
 
 This is the basic installation guide for the `bnc-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/bnc-onboard).
 
-{% hint style="info" %}
+:::info
 For a completed example of a BNC Onboard application, you can [download the files](https://github.com/unstoppabledomains/uauth/blob/main/examples/bnc-onboard/README.md) directly.
-{% endhint %}
+:::
 
 ## Step 1: Install the Libraries
 
@@ -20,15 +19,14 @@ Install with yarn.
 yarn add bnc-onboard @uauth/bnc-onboard @uauth/js @walletconnect/web3-provider
 ```
 
-{% hint style="info" %}
+:::info
 Because popups are a more integration friendly approach, the `@uauth/bnc-onboard` library now uses them by default. If you want the "old" redirect functionality, you need to initialize the Module with this option:`shouldLoginWithRedirect: true`.
-{% endhint %}
+:::
 
 ## Step 2: Configure the @uauth/bnc-onboard Library
 
 Next, configure the `@uauth/bnc-onboard` library:
 
-{% code title="uauthOnboard.ts" %}
 ```typescript
 import UAuthBncOnboard from '@uauth/bnc-onboard'
 
@@ -41,11 +39,9 @@ const uauthOnboard = new UAuthBncOnboard({
   scope: 'openid wallet',
 })
 ```
-{% endcode %}
 
 You can also construct a UAuth instance before hand and use that to create the library.
 
-{% code title="uauthOnboard.ts" %}
 ```javascript
 import UAuth from '@uauth/js'
 
@@ -59,13 +55,11 @@ const uauthOnboard = new UAuthBncOnboard({
   }),
 })
 ```
-{% endcode %}
 
 ## Step 3: Configure the bnc-onboard Library
 
 Next, the `bnc-onboard` library needs to be configured.
 
-{% code title="onboard.ts" %}
 ```javascript
 import initOnboard from 'bnc-onboard'
 
@@ -99,17 +93,15 @@ const onboard = initOnboard({
   },
 })
 ```
-{% endcode %}
 
 ## Step 4: Test the Usage
 
 Once configured, the `bnc-onboard` library can be used normally.
 
-{% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
-{% endhint %}
+:::warning
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+:::
 
-{% code title="login-page.ts" %}
 ```javascript
 import onboard from './onboard'
 
@@ -119,21 +111,19 @@ await onboard.walletSelect()
 
 await onboard.walletCheck()
 ```
-{% endcode %}
 
 ## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-{% hint style="success" %}
-**Congratulations!** You just implemented Login with Unstoppable.
-{% endhint %}
+:::success Congratulations!
+You just implemented Login with Unstoppable.
+:::
 
 ## Reference
 
 **shouldLoginWithRedirect is true**: If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
-{% code title="callback-page.ts" %}
 ```javascript
 import onboard from './onboard'
 import uauthOnboard from './uauthOnboard'
@@ -149,7 +139,6 @@ uauthOnboard
     // Redirect to failure page
   })
 ```
-{% endcode %}
 
 **caching wallets:** Blocknative has [documentation](https://docs.blocknative.com/onboard#caching-wallet-selection) about caching wallets. The code inside the documentation won't quite work out of the box because the `bnc-onboard` library doesn't know if the token from the last login session is still valid. To fix this, you need to check before selecting the Unstoppable wallet.
 

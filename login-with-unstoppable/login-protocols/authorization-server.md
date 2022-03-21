@@ -1,4 +1,5 @@
 ---
+title: Login Authorization Server
 description: >-
   This page outlines the authorization server for the Login with Unstoppable
   feature.
@@ -6,9 +7,9 @@ description: >-
 
 # Authorization Server
 
-In order for an OpenID Connect Relying Party to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1\_0.html).&#x20;
+In order for an OpenID Connect Relying Party to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).&#x20;
 
-Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1\_0.html#IssuerDiscovery). With Login with Unstoppable, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
+Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery). With Login with Unstoppable, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
 
 ## Unstoppable WebFinger & Issuer Discovery
 
@@ -86,9 +87,9 @@ For domains owned by multisig wallets, owner-based authentication isn’t suffic
 
 The below fields are used to specify a public key that can be used for authentication.&#x20;
 
-{% hint style="info" %}
+:::info
 It’s recommended that dApps support the web3 and oob methods at a minimum.
-{% endhint %}
+:::
 
 | Field            | Description                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -110,9 +111,9 @@ For context, _addr\_type\_hint_ can have the following values:
 | portis        | Signing done via Portis Wallet                                                                                                                                             |
 | oob           | Signing done via Out of Band signing. Authorization server should have a message to sign displayed and have a form for the user to paste the signature for authentication. |
 
-{% hint style="info" %}
+:::info
 If the Ethereum account is stored using a hardware wallet, the AMR Value SHOULD be _uns-hwk_. For all other address types, the Authentication server should use the AMR Value of _uns-swk_.
-{% endhint %}
+:::
 
 ## **JWKS by Value**
 
@@ -165,15 +166,15 @@ This scheme is very similar to the Basic Authentication scheme, but for compatib
 The Authorization server supports several standards beyond Authentication and Authorization explained in these docs.
 
 * [JWT Token Introspection/Userinfo](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html) \*\*
-* [JRAM Responses](https://openid.net/specs/openid-financial-api-jarm.html)  \*\*
-* [Client Registration & Management](https://openid.net/specs/openid-connect-registration-1\_0.html)
-* [Request Objects](https://openid.net/specs/openid-connect-core-1\_0.html#JWTRequests)
+* [JRAM Responses](https://openid.net/specs/openid-financial-api-jarm.html)+
+* [Client Registration & Management](https://openid.net/specs/openid-connect-registration-1_0.html)
+* [Request Objects](https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests)
 * [Resource Indicators](https://datatracker.ietf.org/doc/html/rfc8707)
 * [Token Revocation](https://datatracker.ietf.org/doc/html/rfc7009)
-* [private\_key\_jwt Client Authentication](https://openid.net/specs/openid-connect-core-1\_0-15.html#ClientAuthentication)
+* [private\_key\_jwt Client Authentication](https://openid.net/specs/openid-connect-core-1_0-15.html#ClientAuthentication)
 * [PKCE](https://datatracker.ietf.org/doc/html/rfc7636)
 * [Rotating Refresh Tokens](https://auth0.com/docs/security/tokens/refresh-tokens/refresh-token-rotation)
 * [Encrypted JWT Responses](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html#rfc.section.3)
-* [Backchannel Logout](https://openid.net/specs/openid-connect-backchannel-1\_0.html) \*\*
+* [Backchannel Logout](https://openid.net/specs/openid-connect-backchannel-1_0.html)+
 
-\*\*The OIDC Consortium hasn’t formally audited these features offered by the server.
++The OIDC Consortium hasn’t formally audited these features offered by the server.

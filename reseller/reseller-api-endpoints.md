@@ -22,8 +22,8 @@ This new API endpoint will be added in the next update:
 
 * `POST` **Reserve Free Domain**: reserves a free and available domain for 7 days; the domain is unlocked automatically if it is not claimed within 7 days
 
-{% hint style="info" %}
+:::info
 **NOTE:** To reserve or lock a free domain the reseller must provide a unique user identifier (this could be an email, or some other internal user identifier). The same identifier must be provided when claiming the domain (using the POST Orders endpoint).
-{% endhint %}
+:::
 
 For assistance with this API Specification, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.

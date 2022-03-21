@@ -7,9 +7,9 @@ description: >-
 
 # Stripe Payments Guide
 
-{% hint style="warning" %}
+:::warning
 The Stripe feature has been temporarily disabled. Resellers will be notified when  support for this feature has resumed.
-{% endhint %}
+:::
 
 Unstoppable Domains supports [Stripe](http://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and **secure** payment method for resellers that mostly use client side applications.
 
@@ -52,9 +52,9 @@ Stripe payouts occur daily directly from Stripe and can be tracked within the re
 
 ![Button selection for tracking Stripe payouts](../../../images/screen-shot-2021-07-12-at-2.53.26-pm.png)
 
-{% hint style="info" %}
+:::info
 The **View Live Dashboard** and **View Test Dashboard** buttons will only appear after the Stripe Live or Stripe Test options are successfully connected, linking your Stripe and UD Reseller Accounts.
-{% endhint %}
+:::
 
 ### Stripe Payouts Tab
 
@@ -70,6 +70,6 @@ Click the ‘Account’ tab to view Stripe account information or to update your
 
 
 
-{% hint style="success" %}
+:::success
 **Congratulations!** You just setup your Reseller account to accept Stripe payments.
-{% endhint %}
+:::

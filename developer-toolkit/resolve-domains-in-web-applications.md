@@ -12,9 +12,9 @@ Resolution is built and maintained by Unstoppable Domains and supports decentral
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
-{% hint style="info" %}
+:::info
 For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
-{% endhint %}
+:::
 
 ## Installing Resolution
 
