@@ -1,5 +1,5 @@
 ---
-title: Error Codes for the Resolution CLI
+title: Resolution CLI Error Codes
 description: This page provides error codes when troubleshooting the Resolution CLI.
 ---
 
@@ -25,7 +25,7 @@ This error is thrown when the CLI is trying to use a method not supported by the
 
 ## Domain was returned from metadata provider
 
-This error is thrown when you resolve an invalid domain.
+This error is thrown when you resolve an invalid domain address.
 
 ## Invalid UNS configuration value
 

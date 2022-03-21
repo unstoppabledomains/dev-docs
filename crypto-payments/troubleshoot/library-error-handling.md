@@ -1,9 +1,9 @@
 ---
-title: Resolution Libraries Error Handling
+title: Resolution Library Error Handling
 description: This page provides a guide on handling errors with the Resolution Libraries.
 ---
 
-# Resolution Libraries Error Handling
+# Resolution Library Error Handling
 
 This page provides a guide on handling errors with the Resolution Libraries. The code snippet below shows how to handle the common error cases you may encounter during integration, including:
 
@@ -140,6 +140,14 @@ func main() {
     }
 }
 ```
+
+:::info
+To see all supported error codes for each Resolution Library, please check the following pages:
+- [Resolution Error Codes](./error-codes/resolution.md)
+- [Resolution-Java Error Codes](./error-codes/resolution-java.md)
+- [Resolution-Swift Error Codes](./error-codes/resolution-swift.md)
+- [Resolution-Go Error Codes](./error-codes/resolution-go.md)
+:::
 
 :::warning
 Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.

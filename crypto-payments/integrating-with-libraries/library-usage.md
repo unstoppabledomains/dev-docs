@@ -1,7 +1,9 @@
 ---
-title: Using the Resolution Libraries
+title: Using the Resolution Library
 description: This page covers the process for sending and receiving crypto payments using resolution libraries.
 ---
+
+# Using the Resolution Library
 
 ## Resolving a Crypto Address From a Domain
 
