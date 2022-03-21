@@ -5,7 +5,7 @@ description: This page provides error codes when troubleshooting the Resolution 
 
 # Resolution Libraries Error Codes
 
-This is a list of all the error codes you might encounter when troubleshooting your integration with the Resolution Libraries.
+This is a list of all the error codes you might encounter when integrating crypto payments with the Resolution Libraries.
 
 :::info
 This page contains the error codes of all the Resolution Libraries irrespective of their language, so whenever you see **OR** in an error code name, it represents its implementation in another language.
