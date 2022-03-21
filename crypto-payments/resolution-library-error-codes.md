@@ -15,11 +15,15 @@ This error is thrown when you attempt to resolve a domain not owned by any addre
 
 This error is thrown when you attempt to resolve a domain with a TLD not supported by the current Resolution instance.
 
+## Invalid Domain Error
+
+This error is thrown when you attempt to resolve an invalid domain.
+
 ## UnspecifiedCurrency Error
 
 This error is thrown when the domain you're attempting to resolve doesn't have any address of the specified currency.
 
-## UnsupportedCurrency Error
+## UnsupportedCurrency or UnknownCurrency Error
 
 This error is thrown when you attempt to resolve a domain with a currency not supported by the current Resolution instance.
 
@@ -27,17 +31,29 @@ This error is thrown when you attempt to resolve a domain with a currency not su
 
 This error is thrown when you attempt to resolve an undefined record of a domain. For example, resolving the Twitter handle of a domain that doesn't have one.
 
+## BlockchainIsDown Error
+
+This error is thrown when you attempt to resolve a domain and its naming service blockchain network is down.
+
+## UnknownError Error
+
+This error is thrown when an unknown error occurs while resolving a domain with the current Resolution instance.
+
+## IncorrectContractAddress Error
+
+This error is thrown when using an incorrect contract address with the current Resolution instance.
+
 ## UnspecifiedResolver Error
 
 This error is thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver.
 
 ## UnsupportedService Error
 
-This error is thrown when you attempt to use an unsupported naming service with the Resolution Library.
+This error is thrown when you attempt to use an unsupported naming service with the current Resolution instance.
 
-## UnsupportedMethod Error
+## UnsupportedMethod or NotImplemented Error
 
-This error is thrown when you attempt to use a Resolution Library method not supported by the naming service you're using to resolve. For example, using the `tokenURI()`, `tokenURIMetadata()`, and `unhash()` methods for the Zilliqa Name Service (ZNS).
+This error is thrown when you attempt to use a method of the current Resolution instance not supported by the naming service you're resolving from. For example, using the `tokenURI()`, `tokenURIMetadata()`, and `getDns()` methods for the Zilliqa Name Service (ZNS).
 
 ## IncorrectResolverInterface Error
 
@@ -49,7 +65,7 @@ This error is thrown when you attempt to resolve a domain with an undefined meta
 
 ## ServiceProviderError Error
 
-This error is thrown when you make an invalid request with the Resolution Library configured provider.
+This error is thrown when you make an invalid request with the current Resolution instance configured provider.
 
 ## InvalidTwitterVerification Error
 
@@ -57,4 +73,4 @@ This error is thrown when you attempt to resolve the Twitter handle of a domain 
 
 ## InconsistentDomainArray Error
 
-This error is thrown when you attempt to retrieve the address of multiple domain registry contracts that have different naming services.
+This error is thrown when you attempt to retrieve the locations of multiple domains with different naming services. The location of a domain contains the `blockchain`, `networkId`, and valuable metadata like `owner`, `resolver`, `registry addresses`, and `provider URL` of that domain.
