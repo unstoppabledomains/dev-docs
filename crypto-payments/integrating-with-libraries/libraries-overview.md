@@ -1,6 +1,6 @@
 ---
 title: Resolution Libraries Overview
-description: This page reviews the different resolution library options you can use to resolve a domain. The libraries are fully supported and maintained by UD.
+description: This page covers the different resolution library options you can use to resolve a domain. The libraries are fully supported and maintained by UD.
 ---
 
 ## Resolution Libraries Overview
