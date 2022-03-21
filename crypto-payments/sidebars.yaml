@@ -4,13 +4,20 @@ pages:
   - group: Send and Receive Crypto Payments Using Libraries
     expanded: false
     pages:
-      - label: UD Resolution Libraries
+      - label: Resolution Libraries Overview
         page: resolution-libraries.md
       - label: Using the Resolution Libraries
         page: resolution-library-usage.md
     separatorLine: true
-  - page: error-handling.md
-    label: Error Handling for Crypto Payment Integrations
+  - group: Troubleshoot Your Crypto Payment Integrations
+    expanded: false
+    pages:
+      - label: Resolution Libraries Error Codes
+        page: resolution-library-error-codes.md
+      - label: Resolution Service API Error Codes
+        page: resolution-service-error-codes.md
+      - label: Resolution CLI Error Codes
+        page: resolution-cli-error-codes.md
     separatorLine: true
   - page: best-practices.md
     label: Best Practices for Crypto Payment Integrations

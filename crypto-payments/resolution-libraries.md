@@ -1,13 +1,13 @@
 ---
-title: UD Resolution Libraries
-description: This page reviews the different resolution library options that can be used for resolving a domain. The libraries are fully supported and maintained by UD.
+title: Resolution Libraries Overview
+description: This page reviews the different resolution library options you can use to resolve a domain. The libraries are fully supported and maintained by UD.
 ---
 
-## Overview
+## Resolution Libraries Overview
 
 The resolution libraries are the easiest way to integrate domain resolution into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to.
 
-Resolution libraries interact with blockchain domain names and are used to retrieve [payment addresses](index.md), IPFS hashes for [decentralized websites](/d-websites/), DNS records, and other records types. Each Resolution Library is built and maintained by Unstoppable Domains, so they are always up-to-date.
+Resolution libraries interact with blockchain domain names and are used to retrieve [payment addresses](index.md), IPFS hashes for [decentralized websites](/d-websites/), DNS records, and other [records types](../getting-started/domain-registry-essentials/records-reference/). Each Resolution Library is built and maintained by Unstoppable Domains, so they are always up-to-date.
 
 ## Supported Domains
 
