@@ -3,8 +3,6 @@ title: Using the Resolution Library
 description: This page covers the process for sending and receiving crypto payments using resolution libraries.
 ---
 
-# Using the Resolution Library
-
 ## Resolving a Crypto Address From a Domain
 
 To resolve a domain into an address, you must call the appropriate method from the resolution library in the language you choose and pass the required parameters (currency and domain).
@@ -143,7 +141,7 @@ func main() {
 The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `AddrVersion()` methods create a key from the provided `USDT` ticker and `ERC20` version. The key format is `crypto.USDT.version.<VERSION>.address`. In the example above with the `ERC-20` version of `USDT`, the created key would be `crypto.USDT.version.ERC20.address`.
 
 :::attention info
-See the managing domain records guide for information about supported crypto payment tickers and USDT versions.
+See the [managing domain records](../../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
 :::
 
 ## Asking for help

@@ -142,7 +142,7 @@ func main() {
 ```
 
 :::info
-To see all supported error codes for each Resolution Library, please check the following pages:
+To see all the supported error codes for each Resolution Library, please check the following pages:
 - [Resolution Error Codes](./error-codes/resolution.md)
 - [Resolution-Java Error Codes](./error-codes/resolution-java.md)
 - [Resolution-Swift Error Codes](./error-codes/resolution-swift.md)
