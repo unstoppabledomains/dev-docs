@@ -7,15 +7,15 @@ description: This page provides error codes when troubleshooting the Resolution 
 
 Learn about the Resolution Libraries error codes you might encounter when troubleshooting your integration.
 
-## UnregisteredDomain
+## UnregisteredDomain or DomainNotRegisteredError
 
 This error is thrown when you resolve a domain not owned by any address.
 
-## UnsupportedDomain
+## UnsupportedDomain or DomainNotSupportedError
 
 This error is thrown when you resolve a domain with a TLD not supported by the current resolution instance.
 
-## InvalidDomain or InvalidDomainName
+## InvalidDomain or InvalidDomainName or InvalidDomainNameReturnedError
 
 This error is thrown when you resolve an invalid domain.
 
@@ -55,7 +55,7 @@ This error is thrown when the proxy reader of the current resolution instance ha
 
 This error is thrown when using an incorrect contract address with the current resolution instance.
 
-## UnspecifiedResolver
+## UnspecifiedResolver or DomainNotConfiguredError
 
 This error is thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver.
 
@@ -63,13 +63,17 @@ This error is thrown when the domain resolver contract address is not found. For
 
 This error is thrown when using an unsupported naming service with the current resolution instance.
 
-## UnsupportedMethod or NotImplemented or MethodNotSupported
+## UnsupportedMethod or NotImplemented or MethodNotSupported or MethodIsNotSupportedError
 
 This error is thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `tokenURI()`, `tokenURIMetadata()`, and `getDns()` methods for the Zilliqa Name Service (ZNS).
 
 ## IncorrectResolverInterface
 
 This error is thrown when the domain resolver of the current resolution instance is misconfigured.
+
+## UnsConfigurationError
+
+This error is thrown when the UNS resolution service is misconfigured.
 
 ## MetadataEndpointError
 
