@@ -5,7 +5,7 @@ description: This page provides error codes when troubleshooting the Resolution 
 
 # Resolution Libraries Error Codes
 
-This is a list of all the error codes you might encounter when troubleshooting your integration with the Resolution Libraries.
+This is a list of all the error codes you might encounter when integrating crypto payments with the Resolution Libraries.
 
 :::info
 This page contains the error codes of all the Resolution Libraries irrespective of their language, so whenever you see **OR** in an error code name, it represents its implementation in another language.
@@ -94,3 +94,7 @@ This error is thrown when you use a method of the current resolution instance no
 ## UnsupportedService or UnsupportedServiceName
 
 This error is thrown when using an unsupported naming service with the current resolution instance.
+
+## Asking for help
+
+Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

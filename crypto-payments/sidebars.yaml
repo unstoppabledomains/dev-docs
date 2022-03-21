@@ -5,19 +5,19 @@ pages:
     expanded: false
     pages:
       - label: Resolution Libraries Overview
-        page: resolution-libraries.md
+        page: integrating-with-libraries/overview.md
       - label: Using the Resolution Libraries
-        page: resolution-library-usage.md
+        page: integrating-with-libraries/usage.md
     separatorLine: true
   - group: Troubleshoot Your Crypto Payment Integrations
     expanded: false
     pages:
       - label: Resolution Libraries Error Codes
-        page: resolution-library-error-codes.md
+        page: troubleshooting/library-error-codes.md
       - label: Resolution Service API Error Codes
-        page: resolution-service-error-codes.md
+        page: troubleshooting/resolution-service-error-codes.md
       - label: Resolution CLI Error Codes
-        page: resolution-cli-error-codes.md
+        page: troubleshooting/cli-error-codes.md
     separatorLine: true
   - page: best-practices.md
     label: Best Practices for Crypto Payment Integrations
