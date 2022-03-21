@@ -1,9 +1,9 @@
 ---
-title: Resolution Libraries Overview
-description: This page reviews the different resolution library options you can use to resolve a domain. The libraries are fully supported and maintained by UD.
+title: Resolution Library Overview
+description: This page covers the different resolution library options you can use to resolve a domain. The libraries are fully supported and maintained by UD.
 ---
 
-## Resolution Libraries Overview
+## Resolution Library Overview
 
 The resolution libraries are the easiest way to integrate domain resolution into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to.
 
