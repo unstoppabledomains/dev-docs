@@ -17,11 +17,18 @@ pages:
     separatorLine: true
   - group: Resolution Libraries
     expanded: false
+    selectFirstItemOnExpand: true
     pages:
-      - label: Resolution Libraries Overview
-        page: resolution-libraries/ud-libraries.md
-      - label: Library Configuration
-        page: resolution-libraries/library-configuration.md
+      - label: Overview
+        page: resolution-libraries/libraries-overview.md
+      - label: JavaScript Resolution Library
+        page: resolution-libraries/resolution-javascript.md
+      - label: Java Resolution Library
+        page: resolution-libraries/resolution-java.md
+      - label: Swift Resolution Library
+        page: resolution-libraries/resolution-swift.md
+      - label: Golang Resolution Library
+        page: resolution-libraries/resolution-go.md
     separatorLine: true
   - group: Resolve with Direct Blockchain Calls
     expanded: false
