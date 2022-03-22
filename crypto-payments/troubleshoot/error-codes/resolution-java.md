@@ -3,7 +3,7 @@ title: Error Codes for Resolution-Java
 description: This page provides all the error codes existing in the Java Resolution Library.
 ---
 
-## Error Codes for Resolution-Java
+# Error Codes for Resolution-Java
 
 This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution-java](https://github.com/unstoppabledomains/resolution-java) library.
 
@@ -22,6 +22,6 @@ This is a list of all the error codes you might encounter when integrating crypt
 | UnsupportedCurrency | Thrown when you resolve a domain with a currency not supported by the current resolution instance. |
 | UnsupportedDomain | Thrown when you resolve a domain with a TLD not supported by the current resolution instance. |
 
-## Asking for help
+# Asking for help
 
 Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

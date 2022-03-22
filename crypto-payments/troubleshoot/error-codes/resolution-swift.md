@@ -3,7 +3,7 @@ title: Error Codes for Resolution-Swift
 description: This page provides all the error codes existing in the Swift Resolution Library.
 ---
 
-## Error Codes for Resolution-Swift
+# Error Codes for Resolution-Swift
 
 This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution-swift](https://github.com/unstoppabledomains/resolution-swift) library.
 
@@ -23,6 +23,6 @@ This is a list of all the error codes you might encounter when integrating crypt
 | unsupportedDomain | Thrown when you resolve a domain with a TLD not supported by the current resolution instance. |
 | unsupportedServiceName | Thrown when using an unsupported naming service with the current resolution instance. |
 
-## Asking for help
+# Asking for help
 
 Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

@@ -3,7 +3,7 @@ title: Error Codes for Resolution
 description: This page provides all the error codes existing in the JavaScript Resolution Library.
 ---
 
-## Error Codes for Resolution
+# Error Codes for Resolution
 
 This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution](https://github.com/unstoppabledomains/resolution) library.
 
@@ -24,6 +24,6 @@ This is a list of all the error codes you might encounter when integrating crypt
 | UnsupportedService | This error is thrown when using an unsupported naming service with the current resolution instance. |
 | UnsupportedMethod | This error is thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `twitter()`, `reverse()`, `getDomainFromTokenId()`, `locations()`, and `getTokenuri()` methods for the Zilliqa Name Service (ZNS). |
 
-## Asking for help
+# Asking for help
 
 Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

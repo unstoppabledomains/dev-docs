@@ -12,6 +12,10 @@ This page provides a guide on handling errors with the Resolution Libraries. The
 - Resolving a misconfigured domain
 - Resolving a domain with an unsupported TLD
 
+:::warning Important
+Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
+:::
+
 ```JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
