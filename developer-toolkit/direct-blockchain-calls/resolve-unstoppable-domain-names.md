@@ -3,8 +3,10 @@ title: Resolve Unstoppable Domains with Direct Blockchain Calls
 description: This page reviews the process for resolving Unstoppable domains with direct blockchain calls. It has been updated to reflect changes on L2 Polygon network.
 ---
 
+# Resolve Unstoppable Domains with Direct Blockchain Calls
+
 :::info
-The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).&#x20;
+The `.zil` namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).
 :::
 
 In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
@@ -17,7 +19,7 @@ To resolve an unstoppable domain, we will need to
 * Configure Ethers.js library
 * Make a call and fetch the data
 
-Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `javascript`.
+Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `JavaScript`.
 
 ## Initialize the project folder <a href="#e120" id="e120"></a>
 
@@ -45,7 +47,7 @@ Let’s open the index.html file and build out the layout for our app. To create
 Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
 
 :::info
-We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../domain-registry-essentials/namehashing.md).
+We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../getting-started/domain-registry-essentials/namehashing.md).
 :::
 
 ```html
@@ -89,7 +91,7 @@ We will need the keccak\_256 hash function to calculate ERC-721 token ID for the
 
 ### Add some JavaScript: Index.js <a href="#c4de" id="c4de"></a>
 
-Now that we have our index.html file set up, let’s add some javascript. We can start by inputting some basic code into our index.js file to capture the text from the input field and print it onto our console.&#x20;
+Now that we have our `index.html` file set up, let’s add some JavaScript. We can start by inputting some basic code into our `index.js` file to capture the text from the input field and print it onto our console.
 
 The code snippet below shows the resolve function:
 
@@ -106,11 +108,11 @@ We can open `index.html` in a browser to make sure everything is connected and l
 
 ## Tokenize Your Domain by Namehashing <a href="#9004" id="9004"></a>
 
-Namehashing is an algorithm that tokenizes your domain name in a way that the .crypto smart contract can understand.
+Namehashing is an algorithm that tokenizes your domain name in a way that the `.crypto` smart contract can understand.
 
 To tokenize our domain, we’ll need to split the domain name by the “.” character into separate labels, reverse the array, and reduce it to a single hash. We can do this by implementing a recursive hash function.
 
-We’ll also want to implement an `arrayToHex` function to get the result as a string, as well as a wrapper function namehash.
+We’ll also want to implement an `arrayToHex()` function to get the result as a string, as well as a wrapper function `namehash()`.
 
 ```javascript
 function namehash(name) {
@@ -149,7 +151,7 @@ To talk with any blockchain contract using `ethers.js`, we need to know the foll
 * Ethereum provider
 * Polygon provider
 
-Let’s add the following information to our **ethers.js** file:
+Let’s add the following information to our `ethers.js` file:
 
 ```javascript
 var ethAddress = '0x299974AeD8911bcbd2C61262605b89F591a53E83';
@@ -201,7 +203,7 @@ var provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemya
 The network and contract addresses are from goerli and polygon mumbai test networks respectively. For mainnet, use the following contract addresses: [0xfEe4D4F0aDFF8D84c12170306507554bC7045878](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **goerli**.
 :::
 
-For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../../domain-registry-essentials/cns-smart-contracts.md#proxyreader).
+For the scope of this project, we will only need to use the `getData()` function from the [CNS Smart Contract](../smart-contracts/cns-smart-contracts.md#proxyreader).
 
 ### Create a Contract Instance
 
@@ -216,10 +218,10 @@ async function fetchContractData(contract, keys, tokenId) {
 }
 ```
 
-By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the **namehash** function from above.
+By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the `namehash()` function from above.
 
 :::info
-Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../../domain-registry-essentials/records-reference.md) across many applications.
+Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../../getting-started/domain-registry-essentials/records-reference.md) across many applications.
 :::
 
 ### Record Keys Lookup
@@ -233,9 +235,9 @@ The following table shows record keys and a description for each:
 
 ## Make the call to the contract <a href="#2047" id="2047"></a>
 
-Let’s update our resolve function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect it further.
+Let’s update our `resolve()` function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect it further.
 
-First, we will query the polygon network and check the ownership. If there is no owner for a domain on polygon network, we need to query the ethereum network.
+First, we will query the polygon network and check the ownership. If there is no owner for a domain on Polygon network, we need to query the Ethereum network.
 
 ```javascript
 async function resolveEthNetwork(tokenId, interestedKeys) {
@@ -280,7 +282,7 @@ async function resolve() {
 }
 ```
 
-If we try to resolve the **brad.crypto** domain with the above keys, we should see the following parsed result from `fetchContractData` function:
+If we try to resolve the **brad.crypto** domain with the above keys, we should see the following parsed result from `fetchContractData()` function:
 
 ```javascript
 {
@@ -299,7 +301,7 @@ data\[2] is an array containing all resolved records in the same order in which 
 
 ## Display the Records <a href="#a0c8" id="a0c8"></a>
 
-Since this is a simple example, we won’t get too fancy. We’ll just create a span element for each record containing its key and value, its owner address, and its resolver address. We’ll also want to set the font to red if the record is not found.
+Since this is a simple example, we won’t get too fancy. We’ll just create a `<span>` element for each record containing its key and value, its owner address, and its resolver address. We’ll also want to set the font to <span style="color: red">red</span> if the record is not found.
 
 ```javascript
 function cleanDOM(parent) {
@@ -374,13 +376,13 @@ async function resolveBothChains(tokenId, interestedKeys) {
 
 If we are successful, we should see the following on our page:
 
-![Example of a successful resolution](../../../images/example-successful-resolution.png)
+![Example of a successful resolution](../../images/example-successful-resolution.png)
 
 ## Set-up Error Notifications <a href="#d38b" id="d38b"></a>
 
-Now that we have made a successful call, let’s deal with all possible errors that might come up during the resolution.
+Now that we've made a successful call, let’s deal with all possible errors that might come up during the resolution.
 
-To do this, we’ll want to create a function to place an error in our records div. We’ll also want to add a boolean argument `cleanDom` to remove everything from the records div before we place an error for display.
+To do this, we’ll want to create a function to print an error in our records `<div>`. We’ll also want to add a boolean argument `cleanDom` to remove everything from the records `<div>` before we place an error for display.
 
 ```javascript
 function displayError(message, cleanDom) {
@@ -396,7 +398,7 @@ function displayError(message, cleanDom) {
 }
 ```
 
-We can easily identify the possible errors by playing around with the app in its current state. The following table displays possible errors and descriptions for each.
+We can easily identify the possible errors by playing around with the app in its current state. The following table lists the possible errors and their descriptions.
 
 | Errors                   | Description                                                                                                      |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
@@ -404,7 +406,7 @@ We can easily identify the possible errors by playing around with the app in its
 | Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000`     |
 | Record is not found      | Records are queried for an address (e.g. crypto.BTC.address) but the domain owner hasn't set  up the records yet |
 
-Once we’ve identified the errors, we will need to update the callback to the `fetchContractData` function to show the errors to the user:
+Once we’ve identified the errors, we will need to update the callback to the `fetchContractData()` function to show the errors to the user:
 
 ```javascript
 function isEmpty(msg) {
@@ -455,15 +457,15 @@ async function resolveBothChains(tokenId, interestedKeys) {
 }
 ```
 
-Now you can resolve any .crypto domain and display the appropriate error message to your users. Just open the index.html file in your browser and play around with the results to get a better sense of the types of errors that may come up and the types of error messages you might want to include.
+Now you can resolve any `.crypto` domain and display the appropriate error message to your users. Just open the `index.html` file in your browser and play around with the results to get a better sense of the errors that may come up and the error messages you might want to include.
 
 For example, you can try to resolve the following domains:
 
 | Domain                           | Result                      |
 | -------------------------------- | --------------------------- |
-| udtestdev-creek.crypto           | Domain has no BTC record    |
-| udtestdev-test-btc-record.coin   | Resolves without any issues |
-| udtestdev-johnny-dev-domain.coin | Domain has no BTC record    |
+| `udtestdev-creek.crypto`           | Domain has no BTC record    |
+| `udtestdev-test-btc-record.coin`   | Resolves without any issues |
+| `udtestdev-johnny-dev-domain.coin` | Domain has no BTC record    |
 
 ## Resources <a href="#3cd9" id="3cd9"></a>
 

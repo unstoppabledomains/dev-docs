@@ -3,6 +3,8 @@ title: Resolution Service API
 description: This page covers the resolution service API feature for Unstoppable domains hosted by Alchemy.
 ---
 
+# Resolution Service API
+
 Resolution service provides an API for getting domain data and metadata regardless of that domain's location, whether it is stored on Ethereum, Zilliqa, Polygon, or any other blockchain. The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
 
 :::warning Important

@@ -1,13 +1,15 @@
 ---
-title: Resolve using Ethereum Smart Contracts
+title: Resolve Using Ethereum Smart Contracts
 description: This page explains the process for resolving domain records by making calls to Ethereum smart contracts using Ethereum JSON RPC.
 ---
 
-Resolving a domain is a process of retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the `Registry` side. Anyone with access to a mainnet Ethereum Node can resolve a domain.
+# Resolve Using Ethereum Smart Contracts
 
-This section describes resolving domain records by making calls to Ethereum smart contracts using the Ethereum JSON RPC. For developers who would prefer a more straightforward solution, it might be more convenient to use the [resolution libraries](https://github.com/unstoppabledomains?q=resolution) maintained by Unstoppable Domains.
+Resolving a domain is a process of retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the Registry side. Anyone with access to a mainnet Ethereum Node can resolve a domain.
 
-To resolve a domain, your software must have access to the Ethereum network. For more information, see [Configuring an ethereum network connection](resolving-domain-records.md#configuring-an-ethereum-network-connection).
+This section describes resolving domain records by making calls to Ethereum smart contracts using the Ethereum JSON RPC. For developers who would prefer a more straightforward solution, it might be more convenient to use the [resolution libraries](../resolution-libraries/libraries-overview.md) maintained by Unstoppable Domains.
+
+To resolve a domain, your software must have access to the Ethereum network. For more information, see [Configuring an ethereum network connection](#configuring-an-ethereum-network-connection).
 
 The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-only call to `ProxyReader` smart contract. `ProxyReader` provides an API that allows users to resolve domains making just one call by passing only keys of records and a domain namehash. Without `ProxyReader` it would require executing at least two calls: one to obtain a domain resolver address and another one to get the records themselves. With `ProxyReader` it all happens under the hood.
 
@@ -101,11 +103,11 @@ console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
 */
 ```
 
-Reference:`namehash` - namehashing algorithm implementation. See [Namehashing](namehashing.md).
+Reference:`namehash()` - namehashing algorithm implementation. See [Namehashing](../../getting-started/domain-registry-essentials/namehashing.md).
 
 ![Resolving domain records via proxyreader for CNS and UNS Registries](../../images/domain-records-via-proxy-reader-smart-contract.png)
 
-See [Records reference](records-reference.md) for more information about the standardized records.
+See [Records reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information about the standardized records.
 
 ## Record value validation
 
@@ -118,7 +120,7 @@ This is for two reasons:
 
 Any domain management application should perform record format validation before submitting a transaction. However, there is no guarantee that all management applications will do it correctly. For this reason, records should be validated when the domain is resolved too.
 
-See [Records Reference](records-reference.md) for more information for the validator of each record.
+See [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information for the validator of each record.
 
 ## Configuring an Ethereum network connection
 

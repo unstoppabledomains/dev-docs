@@ -1,11 +1,11 @@
 ---
-title: JavaScript Resolution Library
-description: This page details basic configuration and usage of the JavaScript resolution library.
+title: Resolution
+description: This page details basic configuration and usage of the resolution library.
 ---
 
-# JavaScript Resolution library
+# Resolution
 
-This page details basic configuration and usage of the [JavaScript resolution library](https://github.com/unstoppabledomains/resolution).
+This page details basic configuration and usage of the JavaScript [resolution library](https://github.com/unstoppabledomains/resolution).
 
 ## Configuration
 

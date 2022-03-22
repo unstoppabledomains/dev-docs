@@ -3,6 +3,8 @@ title: Records Reference
 description: This page contains an overview of all standardized domain records. It covers crypto payments and browser resolution for DWeb and DNS.
 ---
 
+# Records Reference
+
 This reference page is divided into sections, grouping records by their namespaces and use-cases:
 
 * [Crypto payments](records-reference.md#cryptocurrency-payments)

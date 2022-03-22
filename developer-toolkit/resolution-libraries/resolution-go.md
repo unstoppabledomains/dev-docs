@@ -1,11 +1,11 @@
 ---
-title: Golang Resolution Library
-description: This page details basic configuration and usage of the Golang resolution library.
+title: Resolution-Go
+description: This page details basic configuration and usage of the resolution-go library.
 ---
 
-# Golang Resolution Library
+# Resolution-Go
 
-This page details basic configuration and usage of the [Golang resolution library](https://github.com/unstoppabledomains/resolution-go).
+This page details basic configuration and usage of the [resolution-go library](https://github.com/unstoppabledomains/resolution-go).
 
 ## Configuration
 

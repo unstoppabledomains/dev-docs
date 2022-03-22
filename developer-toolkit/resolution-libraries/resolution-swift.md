@@ -1,11 +1,11 @@
 ---
-title: Swift Resolution Library
-description: This page details basic configuration and usage of the Swift resolution library.
+title: Resolution-Swift
+description: This page details basic configuration and usage of the resolution-swift library.
 ---
 
-# Swift Resolution Library
+# Resolution-Swift
 
-This page details basic configuration and usage of the [Swift resolution library](https://github.com/unstoppabledomains/resolution-swift).
+This page details basic configuration and usage of the [resolution-swift library](https://github.com/unstoppabledomains/resolution-swift).
 
 ## Configuration
 

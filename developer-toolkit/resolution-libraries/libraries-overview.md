@@ -26,7 +26,7 @@ The following table lists the UD Resolution Libraries along with links to each r
 
 | Resolution Library | GitHub Repository                                                                                                |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| [JavaScript](./resolution-javascript.md)   | [https://github.com/unstoppabledomains/resolution](https://github.com/unstoppabledomains/resolution)             |
+| [JavaScript](./resolution.md)   | [https://github.com/unstoppabledomains/resolution](https://github.com/unstoppabledomains/resolution)             |
 | [Java](./resolution-java.md)               | [https://github.com/unstoppabledomains/resolution-java](https://github.com/unstoppabledomains/resolution-java)   |
 | [Swift](./resolution-swift.md)             | [https://github.com/unstoppabledomains/resolution-swift](https://github.com/unstoppabledomains/resolution-swift) |
 | [Golang](./resolution-go.md)               | [https://github.com/unstoppabledomains/resolution-go](https://github.com/unstoppabledomains/resolution-go)       |

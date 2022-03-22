@@ -1,11 +1,11 @@
 ---
-title: Java Resolution Library
-description: This page details basic configuration and usage of the Java resolution library.
+title: Resolution-Java
+description: This page details basic configuration and usage of the resolution-java library.
 ---
 
-# Java Resolution Library
+# Resolution-Java
 
-This page details basic configuration and usage of the [Java resolution library](https://github.com/unstoppabledomains/resolution-java).
+This page details basic configuration and usage of the [resolution-java library](https://github.com/unstoppabledomains/resolution-java).
 
 ## Configuration
 
