@@ -24,7 +24,7 @@ description: >-
 
 ## Getting test records
 
-Check records with [resolution-js](https://github.com/unstoppabledomains/resolution) library:
+Check records with the [Resolution](../resolution-libraries/resolution.md) library:
 
 ```typescript
 import Resolution from '@unstoppabledomains/resolution/build/Resolution';
@@ -48,7 +48,7 @@ resolution.allRecords('udtestdev-dns-ipfs.crypto').then((records) => {
 });
 ```
 
-Check records with [resolution-js CLI](https://github.com/unstoppabledomains/resolution#command-line-interface):
+Check records with [Resolution-CLI](../resolution-cli.md):
 
 ```bash
 $ resolution -d udtestdev-dns-ipfs.crypto -a
