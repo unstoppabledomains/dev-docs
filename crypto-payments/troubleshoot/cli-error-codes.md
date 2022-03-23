@@ -1,6 +1,6 @@
 ---
 title: Resolution CLI Error Codes
-description: This page provides error codes when troubleshooting the Resolution CLI.
+description: This page provides all the error codes existing in the Resolution CLI.
 ---
 
 # Resolution CLI Error Codes

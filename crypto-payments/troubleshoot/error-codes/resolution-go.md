@@ -1,11 +1,11 @@
 ---
 title: Error Codes for Resolution-Go
-description: This page provides all the error codes existing in the Go Resolution Library.
+description: This page provides all the error codes existing in the Golang Resolution Library.
 ---
 
 ## Error Codes for Resolution-Go
 
-This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution-go](https://github.com/unstoppabledomains/resolution-go) library.
+This is a list of all the error codes you might encounter when using the [resolution-go](https://github.com/unstoppabledomains/resolution-go) library.
 
 | Error Code | Description |
 |---|---|
