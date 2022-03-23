@@ -15,7 +15,7 @@ Unstoppable Domains supports [Coinbase](https://developers.coinbase.com) payment
 
 The following diagram shows the general process that occurs between Coinbase and Unstoppable Domains, after a customer buys a domain.
 
-![Payment flow for pre-paid domain purchases, such as Coinbase](<../../images/Paid domains claiming - Prepayment.png>)
+![Payment flow for pre-paid domain purchases, such as Coinbase](</images/Paid domains claiming - Prepayment.png>)
 
 ## Step 1: Configure Coinbase for Unstoppable Domains
 
@@ -51,7 +51,7 @@ Coinbase payouts are manually processed by Unstoppable Domains within 5 business
 The “Request Payout” button is grayed out and automatically appears after the Reseller account has earned a minimum of $600 in Coinbase sales.
 :::
 
-![Button location for requesting a manual payout of Coinbase sales](../../../images/screen-shot-2021-07-12-at-3.12.14-pm.png)
+![Button location for requesting a manual payout of Coinbase sales](/images/screen-shot-2021-07-12-at-3.12.14-pm.png)
 
 Resellers can receive Coinbase payouts via Stripe or Ethereum. This information is discussed and setup with the UD Finance Team before processing the initial CoinBase payout.
 

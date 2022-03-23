@@ -27,13 +27,13 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 * contract address should be: ```0x801452cFAC27e79a11c6b185986fdE09e8637589```
 * tracker should read: ```.crypto (UD)```
 
-![CNS Layer 1 contract address and tracker info](../images/cns-contract-verify.png)
+![CNS Layer 1 contract address and tracker info](/images/cns-contract-verify.png)
 
 ## For UNS Layer 1
 * contract address should be: ```0x070e83FCed225184E67c86302493ffFCDB953f71```
 * tracker info should read: ```Unstoppable Domains (UD)```
 
-![UNS Layer 1 contract address and tracker info](../images/uns-contract-verify.png)
+![UNS Layer 1 contract address and tracker info](/images/uns-contract-verify.png)
 
 ## Step 2: Verify Domain Ownership on CNS L1
 * Retrieve the token ID of the domain you want to transfer.
@@ -46,7 +46,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 You will receive the owner’s wallet address in response to the ```ownerOfquery``` if the domain is located on the CNS registry. Otherwise, you will receive the ER721 error: "owner query for nonexistent token.”
 :::
 
-![Animation showing how to use the ownerOf function](../images/cnsL1-to-unsL1_small.gif)
+![Animation showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.gif)
 
 ## Step 3: Select a safeTransferFrom Option
 Before writing the contract, you must select a ```safeTransferFrom``` Option. Both of the safeTransferFrom options operate the same way on the backend, so it doesn’t matter which option is selected as long as all parameters are correctly entered.
@@ -57,7 +57,7 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
     * to (address): Enter the UNS Layer 1 contract address
     * tokenId: Enter the tokenId of the domain you want to rewrite to the UNS registry (i.e., the same tokenID that you verified in Step 2 above)
 
-![safeTransferFrom Option 1 with 3 fields to complete](../images/cns-safe-transfer-option1.png)
+![safeTransferFrom Option 1 with 3 fields to complete](/images/cns-safe-transfer-option1.png)
 
 ### OPTION 2: safeTransferFrom function with four fields
 * Complete the four ```safeTransferFrom``` fields: from, to, tokenId, _data.
@@ -66,13 +66,13 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
     * tokenId: Enter the tokenId of the domain you want to rewrite to the UNS registry (i.e., the same tokenID that you verified in Step 2 above)
     * _data: enter the false boolean parameter required for this function, ```0x0000000000000000000000000000000000000000000000000000000000000000```
 
-![safeTransferFrom Option 2 with 4 fields to complete](../images/cns-safe-transfer-option2.png)
+![safeTransferFrom Option 2 with 4 fields to complete](/images/cns-safe-transfer-option2.png)
 
 ## Step 4: Rewrite the Domain to UNS L1 Registry
 * At the top of the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
 * Then, select **Contract -> Write Contract** -> and scroll down to complete one of the ```safeTransferFrom``` options selected from [Step 3](#step-3-select-a-safetransferfrom-option).
 
-![Steps for writing the contract to CNS L1](../images/cns-write-contract-steps.png)
+![Steps for writing the contract to CNS L1](/images/cns-write-contract-steps.png)
 
 * Select the **Write** button to rewrite or transfer the domain to the UNS Layer 1 registry.
 
@@ -83,7 +83,7 @@ If the ‘write’ button is grayed out, then scroll to the top of the page and 
 * **Sign the transaction** with your wallet address.
 * Click the **View your transaction** button to verify the transaction, such as status, from, to, and tokens transferred fields.
 
-![CNS L1 transaction details UI](../images/cns-transaction-details.png)
+![CNS L1 transaction details UI](/images/cns-transaction-details.png)
 
 ## Step 5: Verify Domain Transfer to UNS L1
 :::info
@@ -92,7 +92,7 @@ It is recommended that you double-check the transaction status by verifying doma
 
 * On the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page, select **Contract -> Read as Proxy** -> and scroll down to complete the **OwnerOf** function.
 
-![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](../images/uns-L1-check-owner.png)
+![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](/images/uns-L1-check-owner.png)
 
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.

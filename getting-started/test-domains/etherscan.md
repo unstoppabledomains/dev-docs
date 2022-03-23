@@ -27,7 +27,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Copy/paste the URL of the post to Goerli faucet to verify your identity.
 * Click the **Give Me Ether** button.
 
-![Retrieve free Ether through the Goerli testnet faucet (Layer 1)](../../images/goerli-faucet-free-ether.png)
+![Retrieve free Ether through the Goerli testnet faucet (Layer 1)](/images/goerli-faucet-free-ether.png)
 
 ## Step 3: Open the Etherscan Smart Contract Request
 
@@ -42,7 +42,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Enter the **suffix** for the domain in the claim -> label (string) field.
 * &#x20;Press the **Write** button to start the transaction.
 
-![Select the suffix for the domain and click "Write" button to start the transaction](../images/step-3.png)
+![Select the suffix for the domain and click "Write" button to start the transaction](/images/step-3.png)
 
 * Sign the transaction.
 

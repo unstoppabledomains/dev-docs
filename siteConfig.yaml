@@ -5,7 +5,7 @@ meta:
   keywords: unstoppable domains developer portal, api reference docs
   lang: en-US
 logo:
-  image: images/logo.png
+  image: ./static/images/logo.png
   altText: UD Developer Docs Logo
 toc:
   enable: true

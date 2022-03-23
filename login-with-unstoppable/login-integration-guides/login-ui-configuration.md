@@ -71,7 +71,7 @@ new UAuth(uauthOptions).user().then().catch()
 
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
-![UI Example for displaying authenticated user](../../images/third-UI-example-login-domains.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![UI Example for displaying authenticated user](/images/third-UI-example-login-domains.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## Step 2: Verify the Login Flow and Scopes
 
@@ -81,7 +81,7 @@ Before launching your application, you should verify the login flow that users w
 You must adjust the configuration in the [Login Client](../get-started-login/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark).
 :::
 
-![1) User Clicks Login with Unstoppable button to get started](../../images/login-domains-modal1.png '#display=inline-block;padding=0px;width=33%;') ![2) User Enters Unstoppable Domain Address to Login to dApp](../../images/login-domains-modal2-v2.png '#display=inline-block;padding=0px;width=33%;') ![3) User Consent screen details the scopes being requested by dApp](../../images/consent-screen-marked-v2.png '#display=inline-block;padding=0px;width=33%;')
+![1) User Clicks Login with Unstoppable button to get started](/images/login-domains-modal1.png '#display=inline-block;padding=0px;width=33%;') ![2) User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png '#display=inline-block;padding=0px;width=33%;') ![3) User Consent screen details the scopes being requested by dApp](/images/consent-screen-marked-v2.png '#display=inline-block;padding=0px;width=33%;')
 
 The modals are further described below:
 
@@ -95,9 +95,9 @@ For Node.js integrations, the UI or modals being built will require official UD 
 
 | Status  | Small                                       | Large                                         |
 | ------- | ------------------------------------------- | --------------------------------------------- |
-| Default | ![](../../images/default-icon.png) | ![](../../images/default-button.png) |
-| Hover   | ![](../../images/hover-icon.png)   | ![](../../images/hover-button.png)   |
-| Pressed | ![](../../images/pressed-icon.png) | ![](../../images/pressed-button.png) |
+| Default | ![](/images/default-icon.png) | ![](/images/default-button.png) |
+| Hover   | ![](/images/hover-icon.png)   | ![](/images/hover-button.png)   |
+| Pressed | ![](/images/pressed-icon.png) | ![](/images/pressed-button.png) |
 
 :::success Congratulations!
 You just configured the Login with Unstoppable UI.

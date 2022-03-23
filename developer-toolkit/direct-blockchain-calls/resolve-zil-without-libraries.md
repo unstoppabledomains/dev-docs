@@ -13,7 +13,7 @@ This guide only applies to `.zil` domains. For information on resolving .crypto 
 
 Here’s the finished product:
 
-![Dynamic GIF showing the steps to resolve a .zil domain](../../images/zil-resolve-dynamic-image.gif)
+![Dynamic GIF showing the steps to resolve a .zil domain](/images/zil-resolve-dynamic-image.gif)
 
 First, create a project folder with two files inside: `index.html` and `index.js`
 
@@ -358,7 +358,7 @@ displayResolution({
 
 We should see something like the following on successful resolution:
 
-![Example of a successful domain resolution](../../images/zil-successful-domain-resolution.png)
+![Example of a successful domain resolution](/images/zil-successful-domain-resolution.png)
 
 ## Set up Error Notifications <a href="#4e70" id="4e70"></a>
 

@@ -37,7 +37,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
 **Important:** For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
 :::
 
-![Configure options on Unstoppable website faucet](../../images/website-faucet-options.png)
+![Configure options on Unstoppable website faucet](/images/website-faucet-options.png)
 
 :::info
 If you don't know the recipient address, this information will be retrieved and populated for you after connecting your wallet to the transaction. Just click on **Mint Domain** to continue.

@@ -44,7 +44,7 @@ Given a blockchain domain has a DNS record configured. When the user enters the 
 
 Given a blockchain domain has a d-web content identifier record configured (e.g. an IPFS hash). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
-[![Diagram showing how to read D-Web from Ethereum](<../../images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](../../images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png)
+[![Diagram showing how to read D-Web from Ethereum](</images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png)
 
 ### Domain-Level Redirect
 
@@ -65,7 +65,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 * If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
 * If the Registry Address is not specified, it can use a default for the specified network
 
-[![Diagram showing how to configure DNS Gateway](<../../images/configure\_dns\_gateway.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](../../images/configure\_dns\_gateway.png)
+[![Diagram showing how to configure DNS Gateway](</images/configure\_dns\_gateway.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/configure\_dns\_gateway.png)
 
 ## Hypermedia Protocol
 
@@ -92,7 +92,7 @@ There are 2 possible gateways for each problem:
 
 See a description of how they work below
 
-[![Visual flow of resolving DWeb via DNS and DWeb gateway](<../../images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](../../images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png)
+[![Visual flow of resolving DWeb via DNS and DWeb gateway](</images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png)
 
 ### Distributed Content Gateway
 
@@ -116,4 +116,4 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
      * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
 4. Send resolution to client
 
-[![Visualization of how to resolve DWeb via DNS and DWeb gateways](<../../images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](../../images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png)
+[![Visualization of how to resolve DWeb via DNS and DWeb gateways](</images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png)
