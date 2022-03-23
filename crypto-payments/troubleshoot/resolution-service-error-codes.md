@@ -21,6 +21,8 @@ This is a list of all the error codes you might encounter when using the Resolut
 }
 ```
 
+The resolution service will not return an error in the case of an invalid domain or unsupported TLD to simplify communication.
+
 ## 400 Error: Bad Request
 
 | Error Message | Description |
