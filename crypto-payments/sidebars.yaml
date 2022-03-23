@@ -18,7 +18,7 @@ pages:
   - group: Moving to Toolkit
     expanded: false
     pages:
-      - label: Resolution Library Error Handling
+      - label: Resolution Library Error Handling Guide
         page: troubleshoot/library-error-handling.md
       - group: Resolution Library Error Codes
         expanded: false

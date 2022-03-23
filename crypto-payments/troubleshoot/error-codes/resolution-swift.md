@@ -5,7 +5,7 @@ description: This page provides all the error codes existing in the Swift Resolu
 
 # Error Codes for Resolution-Swift
 
-This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution-swift](https://github.com/unstoppabledomains/resolution-swift) library.
+This is a list of all the error codes you might encounter when using the [resolution-swift](https://github.com/unstoppabledomains/resolution-swift) library.
 
 | Error Code | Description |
 |---|---|

@@ -5,7 +5,7 @@ description: This page provides all the error codes existing in the Java Resolut
 
 # Error Codes for Resolution-Java
 
-This is a list of all the error codes you might encounter when integrating crypto payments with the [resolution-java](https://github.com/unstoppabledomains/resolution-java) library.
+This is a list of all the error codes you might encounter when using the [resolution-java](https://github.com/unstoppabledomains/resolution-java) library.
 
 | Error Code | Description |
 |---|---|

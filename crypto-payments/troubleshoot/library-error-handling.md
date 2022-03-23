@@ -3,9 +3,11 @@ title: Resolution Library Error Handling
 description: This page provides a guide on handling errors with the Resolution Libraries.
 ---
 
-# Resolution Library Error Handling
+# Resolution Library Error Handling Guide
 
-This page provides a guide on handling errors with the Resolution Libraries. The code snippet below shows how to handle the common error cases you may encounter during integration, including:
+Unstoppable Domains follows the error handling best practices specific to each library's language. Each error data structure contains an error code, a human-readable message, and extra details that may help you debug the error.
+
+This page provides a guide on handling errors with the Resolution Libraries, and the code snippet below shows how to handle the common error cases you may encounter during integration, including:
 
 - Resolving an unregistered domain
 - Resolving an undefined record of a domain
@@ -40,11 +42,10 @@ resolution
 ```
 
 ```Java
-import com.unstoppabledomains.resolution.Resolution
-import com.unstoppabledomains.exceptions.ns.NamingServiceException
-import com.unstoppabledomains.exceptions.ns.NSExceptionCode
+import com.unstoppabledomains.resolution.Resolution;
+import com.unstoppabledomains.exceptions.ns.NamingServiceException;
+import com.unstoppabledomains.exceptions.ns.NSExceptionCode;
 
-...
 DomainResolution resolution = new Resolution();
 try {
     String receiverETHAddress = resolution.getAddress("domain-with-error.crypto", "ETH");
@@ -145,6 +146,8 @@ func main() {
 }
 ```
 
+In the code snippet above, we handled the errors thrown by the Resolution Library by switching on the `error code` and displaying custom messages to the user. You can then perform other actions to handle the error or show the `error message` value from the error data structure to the user.
+
 :::info
 To see all the supported error codes for each Resolution Library, please check the following pages:
 - [Resolution Error Codes](./error-codes/resolution.md)
@@ -156,3 +159,7 @@ To see all the supported error codes for each Resolution Library, please check t
 :::warning
 Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.
 :::
+
+## Asking for help
+
+Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
