@@ -24,9 +24,9 @@ description: >-
 
 ## Getting test records
 
-Check records with the [Resolution](../resolution-libraries/resolution.md) library:
+Check records with the [Resolution Libraries](../resolution-libraries/libraries-overview.md) and [Resolution CLI](../resolution-cli.md):
 
-```typescript
+```typescript JavaScript
 import Resolution from '@unstoppabledomains/resolution/build/Resolution';
 
 const resolution = new Resolution();
@@ -48,9 +48,7 @@ resolution.allRecords('udtestdev-dns-ipfs.crypto').then((records) => {
 });
 ```
 
-Check records with [Resolution-CLI](../resolution-cli.md):
-
-```bash
+```bash Resolution CLI
 $ resolution -d udtestdev-dns-ipfs.crypto -a
 {
     "records": {
@@ -63,3 +61,93 @@ $ resolution -d udtestdev-dns-ipfs.crypto -a
 }
 ```
 
+```swift Swift
+import UnstoppableDomainsResolution
+
+guard let resolution = try? Resolution() else {
+  print ("Init of Resolution instance with default parameters failed...")
+  return
+}
+
+resolution.allRecords(domain: "udtestdev-dns-ipfs.crypto") { result in
+  switch result {
+  case .success(let returnValue):
+    dump(returnValue);
+     /*
+        Output:
+        'dns.A': '["10.0.0.1","10.0.0.2"]'
+        'dns.A.ttl': '1800'
+        'dns.ttl': '1000'
+        'dns.CNAME': ''
+        'dns.CNAME.ttl': ''
+        'dweb.ipfs.hash': 'QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv'
+        'browser.preferred_protocols': '["ipfs","https","http"]'
+        'browser.redirect_url': ''
+        'ipfs.html.value': '',
+        'ipfs.redirect_domain.value': ''
+      */
+  case .failure(let error):
+    XCTFail("Expected all records from uns domain, but got \(error)");
+  }
+}
+```
+
+```java Java
+import com.unstoppabledomains.resolution.Resolution;
+import java.util.Map;
+​
+public class Main {
+  public static void main(String[] args) {
+    try {
+      Resolution res = new Resolution();
+      Map<String, String> records = res.getAllRecords("udtestdev-dns-ipfs.crypto");
+      for (Map.Entry<String, String> entry : records.entrySet()) {
+        System.out.println(String.format("'%s': '%s'", entry.getKey(), entry.getValue());
+      }
+     /*
+      * Output:
+      * 'dns.A': '["10.0.0.1","10.0.0.2"]'
+      * 'dns.A.ttl': '1800'
+      * 'dns.ttl': '1000'
+      * 'dns.CNAME': ''
+      * 'dns.CNAME.ttl': ''
+      * 'dweb.ipfs.hash': 'QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv'
+      * 'browser.preferred_protocols': '["ipfs","https","http"]'
+      * 'browser.redirect_url': ''
+      * 'ipfs.html.value': '',
+      * 'ipfs.redirect_domain.value': ''
+      */
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+```go Golang
+package main
+​
+import (
+  "fmt"
+  "github.com/unstoppabledomains/resolution-go"
+)
+​
+func main() {
+  uns, _ := resolution.NewUnsBuilder().Build()
+  allUnsRecords, _ := uns.AllRecords("udtestdev-dns-ipfs.crypto")
+  fmt.Println("Records for udtestdev-dns-ipfs.crypto", allUnsRecords)
+  // Output
+  // {
+  //   'dns.A': '["10.0.0.1","10.0.0.2"]',
+  //   'dns.A.ttl': '1800',
+  //   'dns.ttl': '1000',
+  //   'dns.CNAME': '',
+  //   'dns.CNAME.ttl': '',
+  //   'dweb.ipfs.hash': 'QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv',
+  //   'browser.preferred_protocols': '["ipfs","https","http"]',
+  //   'browser.redirect_url': '',
+  //   'ipfs.html.value': '',
+  //   'ipfs.redirect_domain.value': ''
+  // }
+}
+```

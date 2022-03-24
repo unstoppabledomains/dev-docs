@@ -18,7 +18,7 @@ This page provides a guide on handling errors with the Resolution Libraries, and
 Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
 :::
 
-```JavaScript
+```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 resolution
@@ -41,7 +41,7 @@ resolution
     });
 ```
 
-```Java
+```java Java
 import com.unstoppabledomains.resolution.Resolution;
 import com.unstoppabledomains.exceptions.ns.NamingServiceException;
 import com.unstoppabledomains.exceptions.ns.NSExceptionCode;
@@ -65,7 +65,7 @@ try {
 }
 ```
 
-```Swift
+```swift Swift
 import UnstoppableDomainsResolution
 
 guard let resolution = try? Resolution() else {
@@ -99,7 +99,7 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 }
 ```
 
-```Go
+```go Golang
 package main
 
 import (
@@ -150,13 +150,13 @@ In the code snippet above, we handled the errors thrown by the Resolution Librar
 
 :::info
 To see all the supported error codes for each Resolution Library, please check the following pages:
-- [Resolution Error Codes](./error-codes/resolution.md)
-- [Resolution-Java Error Codes](./error-codes/resolution-java.md)
-- [Resolution-Swift Error Codes](./error-codes/resolution-swift.md)
-- [Resolution-Go Error Codes](./error-codes/resolution-go.md)
+- [Resolution Error Codes](./library-error-codes/resolution.md)
+- [Resolution-Java Error Codes](./library-error-codes/resolution-java.md)
+- [Resolution-Swift Error Codes](./library-error-codes/resolution-swift.md)
+- [Resolution-Go Error Codes](./library-error-codes/resolution-go.md)
 :::
 
-:::warning
+:::warning Important
 Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.
 :::
 

@@ -1,13 +1,11 @@
 pages:
   - page: index.md
     separatorLine: true
-  - group: Send and Receive Crypto Payments Using Libraries
-    expanded: false
-    pages:
-      - label: Resolution Library Overview
-        page: integrating-with-libraries/library-overview.md
-      - label: Using the Resolution Library
-        page: integrating-with-libraries/library-usage.md
+  - label: Integrating Crypto Payments Using Libraries
+    page: integrating-crypto-payments-with-libraries.md
+    separatorLine: true
+  - label: Other Ways to Integrate Crypto Payments
+    page: other-crypto-payments-integrations.md
     separatorLine: true
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
@@ -24,13 +22,13 @@ pages:
         expanded: false
         pages:
           - label: Resolution
-            page: troubleshoot/error-codes/resolution.md
+            page: troubleshoot/library-error-codes/resolution.md
           - label: Resolution-Java
-            page: troubleshoot/error-codes/resolution-java.md
+            page: troubleshoot/library-error-codes/resolution-java.md
           - label: Resolution-Swift
-            page: troubleshoot/error-codes/resolution-swift.md
+            page: troubleshoot/library-error-codes/resolution-swift.md
           - label: Resolution-Go
-            page: troubleshoot/error-codes/resolution-go.md
+            page: troubleshoot/library-error-codes/resolution-go.md
       - label: Resolution Service API Error Codes
         page: troubleshoot/resolution-service-error-codes.md
       - label: Resolution CLI Error Codes
