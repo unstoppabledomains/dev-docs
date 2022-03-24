@@ -1,6 +1,6 @@
 ---
-title: Other Ways to Send and Receive Crypto Payments
-description: This page covers the other ways you can integrate crypto payments into your applications.
+title: Other Ways to Integrate Crypto Payments
+description: This page covers integrating crypto payments into your applications aside from the Resolution Libraries.
 ---
 
 # Other Ways to Integrate Crypto Payments

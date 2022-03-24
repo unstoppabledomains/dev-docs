@@ -1,13 +1,15 @@
 ---
-title: Using the Resolution Library
-description: This page covers the process for sending and receiving crypto payments using resolution libraries.
+title: Integrating Crypto Payments Using Libraries
+description: This page covers integrating crypto payments into your applications using Unstoppable Domains Resolution Libraries.
 ---
 
-# Resolving a Crypto Address From a Domain
+# Integrating Crypto Payments Using Libraries
+
+Unstoppable Domains provides a set of Resolution Libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview/) for a detailed description and configuration.
+
+## Resolving a Crypto Address From a Domain
 
 To resolve a domain into an address, you must call the appropriate method from the resolution library in the language you choose and pass the required parameters (currency and domain).
-
-The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
 
 ```JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -23,7 +25,7 @@ resolution
 
 ```Java
 import com.unstoppabledomains.resolution.Resolution;
-...
+
 DomainResolution resolution = new Resolution();
 String receiverETHAddress = resolution.getAddress("ryan.crypto", "ETH");
 // receiverETHAddress consists receiver ethereum address
@@ -65,21 +67,15 @@ func main() {
 }
 ```
 
-We resolved the `ryan.crypto` domain into its Ethereum address in the example above. The library searches for the `crypto.ETH.address` record attached to the domain.
+We resolved the `ryan.crypto` domain into its records and retrieved the Ethereum address using the Resolution Library in the code snippet above.
 
-:::attention info
-Our libraries use Alchemy to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [library configuration guide.](../developer-toolkit/resolution-libraries/library-configuration.md)
-:::
-
-## Records Involved
+### Records Involved
 
 In the code above, the `addr()` and `getAddress()` methods convert the provided 3-letter ticker into the format `crypto.<TICKER>.address` and queries the blockchain for the attached record. Some applications also set custom records for a domain to use within themselves.
 
-# Resolving Addresses Existing On Multiple Blockchains
+## Resolving Addresses Existing On Multiple Blockchains
 
-The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains).
-
-See how to handle this using UD's resolution libraries for the `udtestdev-usdt.crypto` domain:
+The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to handle this for the `udtestdev-usdt.crypto` domain:
 
 ```JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -94,8 +90,8 @@ resolution
 ```
 
 ```Java
-import com.unstoppabledomains.resolution.Resolution
-...
+import com.unstoppabledomains.resolution.Resolution;
+
 DomainResolution resolution = new Resolution();
 String receiverUSDTAddress = resolution.getMultiChainAddress("udtestdev-usdt.crypto", "USDT", "ERC20");
 // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
@@ -136,7 +132,7 @@ func main() {
 }
 ```
 
-## Records Involved
+### Records Involved
 
 The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `AddrVersion()` methods create a key from the provided `USDT` ticker and `ERC20` version. The key format is `crypto.USDT.version.<VERSION>.address`. In the example above with the `ERC-20` version of `USDT`, the created key would be `crypto.USDT.version.ERC20.address`.
 
@@ -144,6 +140,6 @@ The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `Ad
 See the [managing domain records](../../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
 :::
 
-# Asking for help
+## Asking for help
 
 Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.

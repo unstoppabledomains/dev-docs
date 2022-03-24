@@ -150,10 +150,10 @@ In the code snippet above, we handled the errors thrown by the Resolution Librar
 
 :::info
 To see all the supported error codes for each Resolution Library, please check the following pages:
-- [Resolution Error Codes](./error-codes/resolution.md)
-- [Resolution-Java Error Codes](./error-codes/resolution-java.md)
-- [Resolution-Swift Error Codes](./error-codes/resolution-swift.md)
-- [Resolution-Go Error Codes](./error-codes/resolution-go.md)
+- [Resolution Error Codes](./library-error-codes/resolution.md)
+- [Resolution-Java Error Codes](./library-error-codes/resolution-java.md)
+- [Resolution-Swift Error Codes](./library-error-codes/resolution-swift.md)
+- [Resolution-Go Error Codes](./library-error-codes/resolution-go.md)
 :::
 
 :::warning Important
