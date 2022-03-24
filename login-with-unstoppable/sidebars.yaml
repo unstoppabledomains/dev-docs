@@ -4,12 +4,16 @@ pages:
   - group: Getting Started with Login
     expanded: false
     pages:
-      - label: Humanity Check for Login
-        page: get-started-login/humanity-check-for-login.md
       - label: Register Your Application
         page: get-started-login/register-your-application.md
-      - label: Login Client Configuration
-        page: get-started-login/login-client-configuration.md
+      - group: Humanity Check for Login
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Humanity Check Overview
+            page: get-started-login/humanity-check-for-login.md
+          - label: Login Client Configuration for Humanity Check
+            page: get-started-login/login-client-configuration.md
       - label: Scopes for Login
         page: get-started-login/scopes-for-login.md
     separatorLine: true

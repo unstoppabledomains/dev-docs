@@ -1,9 +1,9 @@
 ---
-title: Humanity Check for Login
+title: Humanity Check Overvew
 description: This page provides a high-level overview of the Humanity Check feature for Login with Unstoppable.
 ---
 
-# Humanity Check for Login
+# Humanity Check Overview
 
 The Login with Unstoppable Humanity Check feature provides a way for applications to verify personal information for their users and attach that information to UD domains. This process allows users to safely prove their ‘uniqueness’ without revealing their identity or personal information. We’re calling this privacy-protected but robust authentication method Humanity Check.
 
