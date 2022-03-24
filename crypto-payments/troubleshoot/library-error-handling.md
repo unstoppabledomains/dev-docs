@@ -156,7 +156,7 @@ To see all the supported error codes for each Resolution Library, please check t
 - [Resolution-Go Error Codes](./error-codes/resolution-go.md)
 :::
 
-:::warning
+:::warning Important
 Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.
 :::
 

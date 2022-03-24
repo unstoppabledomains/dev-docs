@@ -9,6 +9,9 @@ pages:
       - label: Using the Resolution Library
         page: integrating-with-libraries/library-usage.md
     separatorLine: true
+  - label: Other Ways to Send and Receive Crypto Payments
+    page: crypto-payments-integration.md
+    separatorLine: true
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
     separatorLine: true

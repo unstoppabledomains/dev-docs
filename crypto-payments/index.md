@@ -3,7 +3,7 @@ title: Send and Receive Crypto Payments
 description: This page gives an overview of the Unstoppable Domains crypto payments feature.
 ---
 
-## Crypto Payments Overview
+# Send and Receive Crypto Payments
 
 Unstoppable Domains allows you to make payments with over [281 cryptocurrencies](https://support.unstoppabledomains.com/support/solutions/articles/48001185621-what-cryptocurrencies-are-currently-supported-) using a single domain name. As long as you have configured your addresses to the domain, users can send crypto to your domain, and it will end up in your wallet.
 
@@ -15,7 +15,7 @@ Domain resolution is the process of converting a human-readable domain name like
 
 ![a successful domain resolving example](../images/best-practices.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
-## How Does it Work?
+## How Domain Resolution Works
 
 In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application sends both parameters (currency and domain) to the [Resolver contract](../developer-toolkit/smart-contracts/cns-smart-contracts/#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain. The resolved address is used to complete the ETH transfer to Ryan’s wallet.
 
