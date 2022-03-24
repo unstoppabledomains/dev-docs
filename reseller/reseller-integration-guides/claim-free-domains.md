@@ -10,13 +10,13 @@ Unstoppable Domains offers free domain claiming to Resellers. The free domain cl
 
 The following diagram shows the general process that takes place between the Reseller and Unstoppable Domains during the free domain claiming process.
 
-![Success flow for claiming free domains with UD](<../../images/Free domain claiming - Success flow.png>)
+![Success flow for claiming free domains with UD](</images/Free domain claiming - Success flow.png>)
 
 ## Step 1: Retrieve the Secret Key for Authentication
 
 A secret key is required when a domain is purchased using the **Payback** or **Free** payment type. The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email [bd@unstoppabledomains.com](mailto:bd@unstoppabledomains.com) to request the secret key.
 
-![Location of Reseller API Token when enabled in the Reseller Dashboard](../../images/reseller-api-secret.png)
+![Location of Reseller API Token when enabled in the Reseller Dashboard](/images/reseller-api-secret.png)
 
 ## Step 2: Setup Criteria for Free Domains
 
@@ -26,7 +26,7 @@ A secret key is required when a domain is purchased using the **Payback** or **F
 
 The table below shows how the pricing tiers are structured at UD. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
 
-![Pricing tiers for UD domains](../../images/domain-pricing-tiers.png)
+![Pricing tiers for UD domains](/images/domain-pricing-tiers.png)
 
 :::info
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.

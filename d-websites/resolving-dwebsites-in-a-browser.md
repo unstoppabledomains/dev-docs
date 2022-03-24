@@ -75,6 +75,6 @@ In order to set up a redirection to a traditional domain, you will need to do a 
 
 3. Open `index.html` from your hard drive to see if everything is working before proceeding. Right-click the file and select "**Open with**" followed by your browser of choice.
 
-    ![Right click to 'Open With' a specific or preferred browser](../images/open-with-specific-browser.png)
+    ![Right click to 'Open With' a specific or preferred browser](/images/open-with-specific-browser.png)
 
 3. Follow the instructions in [Connecting a D-Website to Your Domain](connecting-a-dwebsite.md#step-2a-upload-your-website-with-our-ipfs-uploader) to upload your redirect `index.html` to IPFS and attach it to your domain.

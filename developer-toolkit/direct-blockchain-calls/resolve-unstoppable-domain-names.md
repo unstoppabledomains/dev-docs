@@ -11,7 +11,7 @@ The `.zil` namespace is located on a separate chain and requires a [different pr
 
 In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
 
-![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](../../images/crypto-article.gif)
+![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
 
 To resolve an unstoppable domain, we will need to
 
@@ -376,7 +376,7 @@ async function resolveBothChains(tokenId, interestedKeys) {
 
 If we are successful, we should see the following on our page:
 
-![Example of a successful resolution](../../images/example-successful-resolution.png)
+![Example of a successful resolution](/images/example-successful-resolution.png)
 
 ## Set-up Error Notifications <a href="#d38b" id="d38b"></a>
 
