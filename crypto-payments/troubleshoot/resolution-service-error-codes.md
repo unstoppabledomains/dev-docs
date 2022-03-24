@@ -7,15 +7,15 @@ description: This page provides all the error codes existing in the Resolution S
 
 This is a list of all the error codes you might encounter when using the Resolution Service API. The errors are in JSON format.
 
-```
+```typescript
 {
-    code: string,             // one of our custom error names
-    message: string,          // human-readable error summary
-    errors: [                 // list of errors that occurred
+    code: string, // one of our custom error names
+    message: string, // human-readable error summary
+    errors: [
         {
             httpCode: number, // error status code
-            name: string,     // one of our custom error names
-            message: string   // human-readable error summary
+            name: string, // one of our custom error names
+            message: string // human-readable error summary
         }
     ]
 }
