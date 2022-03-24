@@ -11,7 +11,7 @@ Unstoppable Domains provides a set of Resolution Libraries for ease of integrati
 
 To resolve a domain into an address, you must call the appropriate method from the resolution library in the language you choose and pass the required parameters (currency and domain).
 
-```JavaScript
+```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 resolution
@@ -23,7 +23,7 @@ resolution
   .catch(console.error);
 ```
 
-```Java
+```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
 DomainResolution resolution = new Resolution();
@@ -32,7 +32,7 @@ String receiverETHAddress = resolution.getAddress("ryan.crypto", "ETH");
 // use this address as recipient of the payment
 ```
 
-```Swift
+```swift Swift
 import UnstoppableDomainsResolution
 
 guard let resolution = try? Resolution() else {
@@ -52,7 +52,7 @@ resolution.addr(domain: "ryan.crypto", ticker: "ETH") { result in
 }
 ```
 
-```Go
+```go Golang
 package main
 
 import (
@@ -77,7 +77,7 @@ In the code above, the `addr()` and `getAddress()` methods convert the provided 
 
 The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to handle this for the `udtestdev-usdt.crypto` domain:
 
-```JavaScript
+```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 resolution
@@ -89,7 +89,7 @@ resolution
     .catch(console.error);
 ```
 
-```Java
+```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
 DomainResolution resolution = new Resolution();
@@ -98,7 +98,7 @@ String receiverUSDTAddress = resolution.getMultiChainAddress("udtestdev-usdt.cry
 // use this address as recipient of the payment
 ```
 
-```Swift
+```swift Swift
 import UnstoppableDomainsResolution
 
 guard let resolution = try? Resolution() else {
@@ -117,7 +117,7 @@ resolution.multiChainAddress(domain: "udtestdev-usdt.crypto", ticker: "USDT", ch
   }
 ```
 
-```Go
+```go Golang
 package main
 
 import (
