@@ -26,6 +26,10 @@ stylesheets:
   #  trackingId: UA-45997213-1
 #scripts:
 #  - ./static/intercom.js
+editPage:
+  baseURL: https://github.com/unstoppabledomains/staging-docs/blob/master/src/
+  text: Contribute to this page
+  icon: /images/github-mark-32px.png
 nav:
 
   - label: Get Started
