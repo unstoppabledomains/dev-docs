@@ -5,4 +5,4 @@ description: This page covers frequently encountered problems when integrating t
 
 # Crypto Payments Troubleshooting Guide
 
-Here are some of the problems you may frequently encounter when integrating Crypto Payments with Unstoppable Domains and how to fix them.
+Here are some of the problems you may frequently encounter when integrating crypto payments with Unstoppable Domains and how to fix them.

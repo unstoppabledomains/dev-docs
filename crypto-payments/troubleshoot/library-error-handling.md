@@ -5,7 +5,7 @@ description: This page provides a guide on handling errors with the Resolution L
 
 # Resolution Library Error Handling Guide
 
-Unstoppable Domains follows the error handling best practices specific to each library's language. Each error data structure contains an error code, a human-readable message, and extra details that may help you debug the error, like so:
+Unstoppable Domains follows the error handling best practices specific to each library's language. Each error data structure contains an error code, a human-readable message, and extra details that may help you debug the error.
 
 ```typescript
 {
@@ -30,10 +30,6 @@ This page provides a guide on handling errors with the Resolution Libraries, and
 - Resolving an undefined record of a domain
 - Resolving a misconfigured domain
 - Resolving a domain with an unsupported TLD
-
-:::warning Important
-Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
-:::
 
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -174,7 +170,7 @@ To see all the supported error codes for each Resolution Library, please check t
 :::
 
 :::warning Important
-Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.
+Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
 :::
 
 ## Asking for help

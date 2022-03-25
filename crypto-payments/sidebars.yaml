@@ -2,10 +2,10 @@ pages:
   - page: index.md
     separatorLine: true
   - label: Integrating Crypto Payments Using Libraries
-    page: integrating-crypto-payments-with-libraries.md
+    page: library-integration.md
     separatorLine: true
   - label: Other Ways to Integrate Crypto Payments
-    page: other-crypto-payments-integrations.md
+    page: other-integrations.md
     separatorLine: true
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
