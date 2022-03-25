@@ -13,17 +13,17 @@ The Reseller API feature only support domains and wallets on the Polygon L2 netw
 
 * You must create an account in the [Unstoppable Domains Reseller Dashboard](https://unstoppabledomains.com/resellers) to get started.
 
-![Sign-up page for creating a new reseller account](/images/0.png)
+![Sign-up page for creating a new reseller account](/images/0.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 * You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
 
-![Login or sign-up options for new resellers](/images/1.png)
+![Login or sign-up options for new resellers](/images/1.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## Step 2: Submit a Reseller Application
 
 * After logging in, you will have the option to submit a reseller application. Please complete the required information and submit the application. The review process takes up to five business days but is usually sooner.
 
-![Reseller application form](/images/3.png)
+![Reseller application form](/images/3.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 * After your application is approved, you will be given full access to the reseller dashboard to view your ResellerID and update payment information.
 

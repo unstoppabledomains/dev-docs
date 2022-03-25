@@ -21,7 +21,7 @@ Before beginning the integration process for Unstoppable's Reseller feature, you
 
 To integrate free domain claiming or paid domain claiming (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your resellerID. This information can be found in your [UD Reseller Dashboard](https://unstoppabledomains.com/resellers).
 
-![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png)
+![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 ## Step 3: Choose Your Integration Path
 
