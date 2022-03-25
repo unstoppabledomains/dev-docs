@@ -13,7 +13,7 @@ Unstoppable Domains supports [Stripe](http://stripe.com) payments. Stripe is a p
 
 The following diagram shows the general process that takes place between Stripe and Unstoppable Domains, after a customer buys a domain.
 
-![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 ## Step 1: Create a Stripe Account
 
@@ -28,11 +28,11 @@ There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppa
 
 The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The **Stripe Test Connect Button** does not involve real money and uses test credentials to integrate.
 
-![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 After clicking the Stripe Live or Stripe Test **Connect Button**, you will be walked through the Stripe Integrations form.
 
-![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe Dashboard.
 
@@ -46,7 +46,7 @@ Stripe generates a token ID for each transaction, which is later used by UD to p
 
 Stripe payouts occur daily directly from Stripe and can be tracked within the reseller dashboard by clicking on the “View Test Dashboard” or “View Live Dashboard” button depending on which payouts are being tracked.
 
-![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 :::info
 The **View Live Dashboard** and **View Test Dashboard** buttons will only appear after the Stripe Live or Stripe Test options are successfully connected, linking your Stripe and UD Reseller Accounts.
@@ -56,13 +56,13 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 
 Clicking either of the “View Dashboard” buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
 
-![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 ### Stripe Accounts Tab
 
 Click the ‘Account’ tab to view Stripe account information or to update your Stripe banking information.
 
-![View of Stripe Account information (i.e., account tab)](/images/25.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![View of Stripe Account information (i.e., account tab)](/images/25.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 :::success Congratulations!
 You just setup your Reseller account to accept Stripe payments.
