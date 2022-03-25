@@ -1,7 +1,6 @@
 ---
-description: >-
-  This page provides error codes and explanations to use when troubleshooting
-  the reseller API endpoints.
+title: Error Codes for Troubleshooting Reseller Integrations
+description: This page provides error codes and explanations to use when troubleshooting the reseller API endpoints.
 ---
 
 # Error Codes for Troubleshooting

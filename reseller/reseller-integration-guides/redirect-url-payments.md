@@ -1,7 +1,6 @@
 ---
-description: >-
-  This guide covers the process for configuring the Reseller account to claim
-  paid domains using the redirect URL payment processing flow.
+title: Redirect URL Payments Guide
+description: This guide covers the process for configuring the Reseller account to claim paid domains using the redirect URL payment processing flow.
 ---
 
 # Redirect URL Payments Guide
@@ -33,7 +32,7 @@ type AdditionalParameters = {
 }
 ```
 
-### **Request URL**
+### Request URL
 
 The request URL is likely to change. In addition to the message parameters, the URL should contain signature=\<HMAC signature string> parameter.
 
@@ -46,10 +45,10 @@ The searchTerm and ref parameters are NOT included in the signature.
 :::
 
 :::danger
-The records parameter should contain URL encoded and minified JSON with domains records according to the standard outlined in the [Records Reference](../../domain-registry-essentials/records-reference.md).
+The records parameter should contain URL encoded and minified JSON with domains records according to the standard outlined in the [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md).
 :::
 
-## **Step 2: Create HMAC Authorization**
+## Step 2: Create HMAC Authorization
 
 The authorization is necessary to help prevent attacks that may substitute insecure URL parameters.
 
@@ -124,6 +123,6 @@ JSON records example (URL encoded):
 %7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D
 ```
 
-:::success
-**Congratulations!** You just configured your Reseller account to process payments using a Redirect URL.
+:::success Congratulations!
+You just configured your Reseller account to process payments using a Redirect URL.
 :::

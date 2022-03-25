@@ -1,8 +1,6 @@
 ---
-description: >-
-  This guide covers the process for configuring the Reseller account to accept
-  Coinbase payments. Payout information can be tracked in the UD Reseller
-  Dashboard.
+title: Coinbase Payments Guide
+description: This guide covers the process for configuring the Reseller account to accept Coinbase payments. Payout information can be tracked in the UD Reseller Dashboard.
 ---
 
 # Coinbase Payments Guide
@@ -55,6 +53,6 @@ The “Request Payout” button is grayed out and automatically appears after th
 
 Resellers can receive Coinbase payouts via Stripe or Ethereum. This information is discussed and setup with the UD Finance Team before processing the initial CoinBase payout.
 
-:::success
-**Congratulations!** You just setup your Reseller account to accept Coinbase payments.
+:::success Congratulations!
+You just setup your Reseller account to accept Coinbase payments.
 :::

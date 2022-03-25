@@ -1,8 +1,6 @@
 ---
-description: >-
-  This guide covers the process for configuring the Reseller account to accept
-  Stripe payments. Payout information can be tracked in the UD Reseller
-  Dashboard.
+title: Stripe Payments Guide
+description: This guide covers the process for configuring the Reseller account to accept Stripe payments. Payout information can be tracked in the UD Reseller Dashboard.
 ---
 
 # Stripe Payments Guide
@@ -15,7 +13,7 @@ Unstoppable Domains supports [Stripe](http://stripe.com) payments. Stripe is a p
 
 The following diagram shows the general process that takes place between Stripe and Unstoppable Domains, after a customer buys a domain.
 
-![Payment flow for pre-paid domain purchases, such as Stripe](</images/Paid domains claiming - Prepayment.png>)
+![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png)
 
 ## Step 1: Create a Stripe Account
 
@@ -70,6 +68,6 @@ Click the ‘Account’ tab to view Stripe account information or to update your
 
 
 
-:::success
-**Congratulations!** You just setup your Reseller account to accept Stripe payments.
+:::success Congratulations!
+You just setup your Reseller account to accept Stripe payments.
 :::
