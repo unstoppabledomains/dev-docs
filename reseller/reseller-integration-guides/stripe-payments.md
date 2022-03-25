@@ -17,24 +17,26 @@ The following diagram shows the general process that takes place between Stripe 
 
 ## Step 1: Create a Stripe Account
 
-You must [Create a Stripe Account](https://dashboard.stripe.com/register?redirect=%2Fsettings%2Faccount%2F) in advance before you connect it to your Unstoppable Domains reseller account.
+* You must [Create a Stripe Account](https://dashboard.stripe.com/register?redirect=%2Fsettings%2Faccount%2F) in advance before you connect it to your Unstoppable Domains reseller account.
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppabledomains.com/resellers) for live and test connections. At UD, we use a different stripe API key for live and test orders. These Stripe API keys are public keys and they are safe to reveal.
+* There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppabledomains.com/resellers) for live and test connections. At UD, we use a different stripe API key for live and test orders. 
+* These Stripe API keys are public keys and they are safe to reveal.
+    * pk\_test\_\* (reseller-test-\* namespace)
+    * pk\_live\_\* (all other domains)
 
-* pk\_test\_\* (reseller-test-\* namespace)
-* pk\_live\_\* (all other domains)
-
+:::info
 The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The **Stripe Test Connect Button** does not involve real money and uses test credentials to integrate.
+:::
 
 ![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
-After clicking the Stripe Live or Stripe Test **Connect Button**, you will be walked through the Stripe Integrations form.
+* After clicking the Stripe Live or Stripe Test **Connect Button**, you will be walked through the Stripe Integrations form.
 
 ![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
-Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe Dashboard.
+* Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe Dashboard.
 
 ### Other Stripe Considerations
 
@@ -44,7 +46,7 @@ Stripe generates a token ID for each transaction, which is later used by UD to p
 
 ## Step 3: Receive Stripe Payouts
 
-Stripe payouts occur daily directly from Stripe and can be tracked within the reseller dashboard by clicking on the “View Test Dashboard” or “View Live Dashboard” button depending on which payouts are being tracked.
+* Stripe payouts occur daily directly from Stripe and can be tracked within the reseller dashboard by clicking on the “View Test Dashboard” or “View Live Dashboard” button depending on which payouts are being tracked.
 
 ![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
@@ -54,13 +56,13 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 
 ### Stripe Payouts Tab
 
-Clicking either of the “View Dashboard” buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
+* Clicking either of the “View Dashboard” buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
 
 ![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 ### Stripe Accounts Tab
 
-Click the ‘Account’ tab to view Stripe account information or to update your Stripe banking information.
+* Click the ‘Account’ tab to view Stripe account information or to update your Stripe banking information.
 
 ![View of Stripe Account information (i.e., account tab)](/images/25.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 

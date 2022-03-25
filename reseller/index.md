@@ -6,7 +6,7 @@ description: This page describes the process for creating an account and applyin
 # Register As Reseller
 
 :::warning
-The Reseller API feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon-l2-network/polygon-developer-integration.md) to get started.
+The Reseller API feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon/polygon-migration-guide.md) to get started.
 :::
 
 ## Step 1: Create an Account

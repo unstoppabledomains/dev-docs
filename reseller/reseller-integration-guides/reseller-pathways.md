@@ -15,7 +15,7 @@ Reseller API Integrations will only work on **Polygon L2 network**. See the [Pol
 
 ## Step 1: Register As a Reseller
 
-Before beginning the integration process for Unstoppable's Reseller feature, you must register as a reseller and obtain reseller credentials. Please see the [**Register as a Reseller Guide**](../register-as-reseller.md) for more details.
+Before beginning the integration process for Unstoppable's Reseller feature, you must register as a reseller and obtain reseller credentials. Please see the [**Register as a Reseller Guide**](../index.md) for more details.
 
 ## Step 2: Locate Your Reseller ID
 
@@ -33,10 +33,10 @@ Stripe and Coinbase payment methods are currently unavailable. Resellers will be
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Free domains               | claim free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Claim Free Domains Guide](claim-free-domains-guide.md)       |
-| Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](stripe-payments-guide.md)             |
-| Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments-guide.md)         |
-| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments-guide.md) |
+| Free domains               | claim free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Claim Free Domains Guide](claim-free-domains.md)       |
+| Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](stripe-payments.md)             |
+| Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments.md)         |
+| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments.md) |
 
 ## Resources
 
