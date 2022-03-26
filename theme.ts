@@ -28,7 +28,7 @@ export const theme = {
        light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
        dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
        contrastText: ({ colors }) => readableColor(colors.success.main),
-       border: '#03AD13'
+       backgroundColor: '#F5F7F9',
      },
     // error: {
     //   main: '#e53935',
