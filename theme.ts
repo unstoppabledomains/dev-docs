@@ -24,7 +24,7 @@ export const theme = {
       main: '#ffffff',
     },
     success: {
-       main: '#86A689',
+       backgroundColor: '#86A689',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
     //   dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
     //   contrastText: ({ colors }) => readableColor(colors.success.main),
