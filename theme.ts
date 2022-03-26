@@ -43,7 +43,7 @@ export const theme = {
     //   contrastText: ({ colors }) => readableColor(colors.warning.main),
     // },
     info: {
-       main: '#EBEDF0',
+       main: '#3455DB',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.info.main),
     //   dark: ({ colors }) => darken(colors.tonalOffset, colors.info.main),
     //   contrastText: ({ colors }) => readableColor(colors.info.main),
