@@ -5,7 +5,7 @@ description: This page provides a high-level overview of the Login with Unstoppa
 
 # Login with Unstoppable Overview
 
-![Login with Unstoppable Promo Video](/images/login-promo-video.mp4 '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+![Login with Unstoppable Promo](/images/login-promo.png '#display=block;margin-left=auto;margin-right=auto;')
 
 Login with Unstoppable allows an Unstoppable Domain owner to log in and share information with applications, which works for Polygon and Ethereum domains. This allows application developers to learn information about their users (email, for example) without needing to host or maintain their own CRM database. With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users.&#x20;
 
