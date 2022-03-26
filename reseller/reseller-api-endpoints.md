@@ -25,5 +25,5 @@ This new API endpoint will be added in the next update:
 To reserve or lock a free domain the reseller must provide a unique user identifier (this could be an email, or some other internal user identifier). The same identifier must be provided when claiming the domain (using the POST Orders endpoint).
 :::
 
-## Help with this Feature
-For assistance with this API Specification, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+## Resources
+For assistance with this feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
