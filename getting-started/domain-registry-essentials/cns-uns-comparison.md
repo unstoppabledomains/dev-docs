@@ -3,6 +3,8 @@ title: UNS vs CNS Comparison
 description: This page provides a high level overview of the differences between UNS and CNS.
 ---
 
+# UNS vs CNS Comparison
+
 ## Table. High Level Differences between CNS and UNS
 
 | CNS                                                                | UNS                                                                                                             |
@@ -19,7 +21,7 @@ Overall, the main difference between CNS and UNS is that UNS has a simplified ar
 
 ### Easier Data Retrieval
 
-The next difference is that unlike CNS, UNS doesn’t have separate resolver contracts for domains.&#x20;
+The next difference is that unlike CNS, UNS doesn’t have separate resolver contracts for domains.
 
 * Resolution data is stored within the registry itself which allows retrieving data in a single smart contract call.
 * This change removes unnecessary events and functions that were used for setting custom resolvers, thus improving optimizations.

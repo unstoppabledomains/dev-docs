@@ -5,7 +5,14 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 # Get a Free Ethereum Test Domain
 
-**[[insert overview, reusable content]]**
+To make integrations easier, Unstoppable Domains provides developers with a free test domain. You can use any available domain extension for your free test domain (except .zil).&#x20;
+
+To distinguish these test domains from paid domains, all test domains are prefixed with `udtestdev-`. For example:
+
+* `udtestdev-freedomainisawesome.crypto`
+* `udtestdev-test-wallet-integration.wallet`
+
+To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
 :::info
 [Goerli faucet](https://goerli-faucet.slock.it/) offers free money in the form of Ether tokens for domains minted on Goerli Testnet.
@@ -35,25 +42,25 @@ To calculate the transaction fee you'd like to target you can use services like 
 * To get a test domain on testnet, find the Smart Contract address in [reference table](domain-registry-essentials/cns-smart-contracts.md#freeminter).
 * Connect your wallet.
 
-![How to locate the smart contract address in the reference table and connect your wallet](images/etherscan-steps-test-domain.png)
+![How to locate the smart contract address in the reference table and connect your wallet](/images/etherscan-steps-test-domain.png)
 
 ## Step 4: Write the Etherscan Smart Contract Request
 
 * Enter the **suffix** for the domain in the claim -> label (string) field.
 * &#x20;Press the **Write** button to start the transaction.
 
-![Select the suffix for the domain and click "Write" button to start the transaction](/images/step-3.png)
+![Select the domain suffix and click "Write" button to start the transaction](/images/step-3.png)
 
 * Sign the transaction.
 
-![Etherscan wallet signature page](images/step-4-etherscan-claim-domain-small.png)
+![Etherscan wallet signature page](/images/step-4-etherscan-claim-domain-small.png)
 
-![Etherscan error for insufficient funds](images/step-4-1-etherscan-claim-domain-small.png)
+![Etherscan error for insufficient funds](/images/step-4-1-etherscan-claim-domain-small.png)
 
 :::danger
-If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.&#x20;
+If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.
 :::
 
-:::success
-Congratulations! You're the new proud owner of a test domain on Etherscan. Happy hacking!
+:::success Congratulations!
+You're the new proud owner of a test domain on Etherscan. Happy hacking!
 :::

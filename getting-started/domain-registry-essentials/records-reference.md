@@ -7,12 +7,12 @@ description: This page contains an overview of all standardized domain records. 
 
 This reference page is divided into sections, grouping records by their namespaces and use-cases:
 
-* [Crypto payments](records-reference.md#cryptocurrency-payments)
-* [Browser resolution](records-reference.md#browser-resolution)
-  * [DWeb records](records-reference.md#dweb-records)
-  * [DNS records](records-reference.md#dns-records)
+* [Crypto payments](#cryptocurrency-payments)
+* [Browser resolution](d#browser-resolution)
+  * [DWeb records](#dweb-records)
+  * [DNS records](#dns-records)
 
-Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](uns-vs-cns-comparison/architecture-overview.md), [UNS Architecture](uns-vs-cns-comparison/uns-architecture-overview.md), and [Managing Domain Records](../allow-my-users-to-manage-existing-domains/managing-domain-records.md).
+Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](cns-architecture-overview.md), [UNS Architecture](uns-architecture-overview.md), and [Managing Domain Records](../../manage-domains/managing-domain-records.md).
 
 :::info
 A list of keys supported by Unstoppable Domains can be found in [reference json file](https://github.com/unstoppabledomains/dot-crypto/blob/master/src/supported-keys/supported-keys.json)
@@ -20,7 +20,7 @@ A list of keys supported by Unstoppable Domains can be found in [reference json 
 
 ## Cryptocurrency payments
 
-For information about crypto payments, see [Managing Domain Records - Cryptocurrency Payment Records](../allow-my-users-to-manage-existing-domains/managing-domain-records.md#crypto-payment-records).
+For information about crypto payments, see [Managing Domain Records - Cryptocurrency Payment Records](../../manage-domains/managing-domain-records.md#crypto-payment-records).
 
 #### `crypto.ETH.address`
 
@@ -76,7 +76,7 @@ Cryptocurrency address of ticker version
 
 ## Browser resolution
 
-Browser resolution is described in the [Browser Resolution Algorithm](../support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm.md) page.
+Browser resolution is described in the [Browser Resolution Algorithm](../../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md) page.
 
 #### `browser.preferred_protocols`
 
@@ -96,7 +96,7 @@ A fallback URL, to which a user will be redirected if no other resolution method
 
 ### DWeb records
 
-For more details, read [Browser Resolution Algorithm - DWeb Records](../support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm.md#distributed-web-records).
+For more details, read [Browser Resolution Algorithm - DWeb Records](../../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md#distributed-web-records).
 
 #### `dweb.ipfs.hash`
 
@@ -116,7 +116,7 @@ Swarm network content hash.
 
 ### DNS records
 
-For more details, see [Browser Resolution Algorithm - DNS Records](../support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm.md#dns-records).
+For more details, see [Browser Resolution Algorithm - DNS Records](../../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md#dns-records).
 
 #### `dns.ttl`
 
