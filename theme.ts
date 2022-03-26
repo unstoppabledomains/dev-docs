@@ -24,10 +24,10 @@ export const theme = {
       main: '#ffffff',
     },
     success: {
-       backgroundColor: '#86A689',
-    //   light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
-    //   dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
-    //   contrastText: ({ colors }) => readableColor(colors.success.main),
+       main: '#86A689',
+       light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
+       dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
+       contrastText: ({ colors }) => readableColor(colors.success.main),
      },
     // error: {
     //   main: '#e53935',
