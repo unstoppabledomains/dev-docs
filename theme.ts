@@ -23,12 +23,12 @@ export const theme = {
     secondary: {
       main: '#ffffff',
     },
-    // success: {
-    //   main: '#00aa13',
+    success: {
+       main: '#86A689',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
     //   dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
     //   contrastText: ({ colors }) => readableColor(colors.success.main),
-    // },
+     },
     // error: {
     //   main: '#e53935',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.error.main),
@@ -41,12 +41,12 @@ export const theme = {
     //   dark: ({ colors }) => darken(colors.tonalOffset, colors.warning.main),
     //   contrastText: ({ colors }) => readableColor(colors.warning.main),
     // },
-    // info: {
-    //   main: '#4782cb',
+    info: {
+       main: '#EBEDF0',
     //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.info.main),
     //   dark: ({ colors }) => darken(colors.tonalOffset, colors.info.main),
     //   contrastText: ({ colors }) => readableColor(colors.info.main),
-    // },
+     },
     text: {
       primary: '#424242',
       secondary: '#4d4b99',
@@ -108,7 +108,7 @@ export const theme = {
   // },
 
   typography: {
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.5em',
     fontWeightRegular: '400',
     fontWeightBold: '600',
