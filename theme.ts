@@ -189,4 +189,21 @@ export const theme = {
   //   backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
   //   tokens: {},
   // },
+  components: {
+    alert: {
+      variants: {
+        info: {
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: ({ colors }) => colors.info.main,
+          // icon: '<svg ...',
+        },
+        attention: { /* ... */ },
+        warning: { /* ... */ },
+        danger: { /* ... */ },
+        success: { /* ... */ },
+      },
+    },
+  },  
 };
