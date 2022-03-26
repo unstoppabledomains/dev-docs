@@ -41,7 +41,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **custom records**: add optional key and value pairs
 
 :::warning Important
-For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
+For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/integration-pathways.md), users must select **Polygon Mainnet** as the domain network.
 :::
 
 ![Configure options on Unstoppable website faucet](/images/website-faucet-options.png)
