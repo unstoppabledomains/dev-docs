@@ -5,6 +5,8 @@ description: This page provides a high-level overview of Polygon Layer 2 scaling
 
 # Polygon L2 High Level Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Unstoppable Domains uses Polygon as our layer 2 (L2) scaling solution. This allows us to make our NFT domains free to claim and manage on L2, and UD customers will no longer have to pay claim fees, renewal fees, or gas fees. As part of this integration, new and existing users will be able to mint and manage their unclaimed domains for free on Polygon and existing users will be able to move their claimed domains from Zilliqa and Ethereum to Polygon as well if they so choose.
 
 Polygon POS Chain is the leading platform for Ethereum scaling and infrastructure development. Its growing suite of products offers developers easy access to all major scaling and infrastructure solutions: L2 solutions (ZK Rollups and Optimistic Rollups), sidechains, commit chains, hybrid solutions, stand-alone and enterprise chains, data availability solutions, and more.&#x20;

@@ -5,6 +5,8 @@ description: This page provides a high-level overview of the Humanity Check feat
 
 # Humanity Check Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w2R2GUnzgOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The Login with Unstoppable Humanity Check feature provides a way for applications to verify personal information for their users and attach that information to UD domains. This process allows users to safely prove their ‘uniqueness’ without revealing their identity or personal information. We’re calling this privacy-protected but robust authentication method Humanity Check.
 
 The Humanity Check feature allows the UD community to start building an ecosystem of data sharing with domains as the central hub through which that information passes.
