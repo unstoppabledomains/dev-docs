@@ -53,7 +53,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 * Sign the transaction.
 
-![Etherscan wallet signature page](/images/step-4-etherscan-claim-domain-small.png '#display=inline-block;padding=0px;width=50%;') ![Etherscan error for insufficient funds](/images/step-4-1-etherscan-claim-domain-small.png '#display=inline-block;padding=0px;width=50%;')
+![Etherscan wallet signature page](/images/step-4-etherscan-claim-domain-small.png '#display=inline-block;padding=0px;width=40%;')![Etherscan error for insufficient funds](/images/step-4-1-etherscan-claim-domain-small.png '#display=inline-block;padding=0px;width=40%;')
 
 :::danger
 If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.
