@@ -174,7 +174,13 @@ export const theme = {
           iconColor: '#3455DB',
           // icon: '<svg ...',
         },
-        attention: { /* ... */ },
+        attention: { 
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#3455DB',
+          // icon: '<svg ...', 
+      },
         warning: { 
           backgroundColor: '#F5F7F9',
           textColor: ({ colors }) => colors.text.primary,
