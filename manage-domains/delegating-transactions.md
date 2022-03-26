@@ -3,7 +3,7 @@ title: Delegating (Meta) Transactions
 description: This page details the process for using meta-transaction support, which allows users to delegate transactions to another party.
 ---
 
-# Delegating Transactions
+# Delegating (Meta) Transactions
 
 :::info
 `Resolver` is an entity that is related to CNS only. There is no resolver address for UNS.

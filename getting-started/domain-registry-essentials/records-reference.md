@@ -8,7 +8,7 @@ description: This page contains an overview of all standardized domain records. 
 This reference page is divided into sections, grouping records by their namespaces and use-cases:
 
 * [Crypto payments](#cryptocurrency-payments)
-* [Browser resolution](d#browser-resolution)
+* [Browser resolution](#browser-resolution)
   * [DWeb records](#dweb-records)
   * [DNS records](#dns-records)
 

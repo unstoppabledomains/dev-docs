@@ -15,8 +15,8 @@ Also, you might explore our growing list of [Integrated Applications](https://un
 ## Before You Begin
 
 You'll need the following to get started:
-- Basic understanding of [smart contracts](../developer-toolkit/smart-contracts/cns-smart-contracts.md)
-- Some knowledge of differences between [L1 and L2 network](../polygon/index.md)
+- Basic understanding of [CNS](../developer-toolkit/smart-contracts/cns-smart-contracts.md) and [UNS](../developer-toolkit/smart-contracts/uns-smart-contracts.md) Smart Contracts
+- Knowledge of differences between [L1 and L2 network](../polygon/index.md)
 - A [free test domain](./test-domains/etherscan.md)
 - A stable test environment
 
@@ -27,7 +27,7 @@ These items are listed in order of complexity. For example, if you are just star
 - [Use Cases](../use-cases/index.md)
 - [Developer Integration Guides](../guides.mdx)
   - [Login with Unstoppable](../login-with-unstoppable/index.md)
-  - [IPFS Websites](../d-websites/ipfs-dweb-overview.md)
+  - [IPFS Websites](../d-websites/index.md)
   - [Crypto Payments](../crypto-payments/index.md)
   - [Resellers](../reseller/index.md)
   - [Polygon Layer 2](../polygon/index.md)

@@ -28,7 +28,7 @@ The next difference is that unlike CNS, UNS doesn’t have separate resolver con
 
 ### Simplified Minting Control
 
-Another major change in UNS when compared to CNS is simplified minting control. While CNS is controlled by two smart contracts, UNS has a simpler MintingManager that combines functionality of the old MintingController and WhitelistedMinter.\
+Another major change in UNS when compared to CNS is simplified minting control. While CNS is controlled by two smart contracts, UNS has a simpler MintingManager that combines functionality of the old MintingController and WhitelistedMinter.
 
 
 ### More Resources
