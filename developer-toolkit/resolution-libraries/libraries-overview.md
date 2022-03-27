@@ -31,6 +31,4 @@ The following table lists the UD Resolution Libraries along with links to each r
 | [Swift](./resolution-swift.md)             | [https://github.com/unstoppabledomains/resolution-swift](https://github.com/unstoppabledomains/resolution-swift) |
 | [Golang](./resolution-go.md)               | [https://github.com/unstoppabledomains/resolution-go](https://github.com/unstoppabledomains/resolution-go)       |
 
-## Support
-
-If you have any questions or need assistance with using UD resolution libraries, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
+<embed src="/snippets/_discord.md" />

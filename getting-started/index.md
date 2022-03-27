@@ -35,6 +35,4 @@ These items are listed in order of complexity. For example, if you are just star
 - [API Reference](../openapi/reference.page.yaml)
 - [Developer Toolkit](../developer-toolkit/index.md)
 
-## Asking for help
-
-While working on your application, you may have questions, or you may have feature requests or suggestions to share with our team. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

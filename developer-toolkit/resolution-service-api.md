@@ -64,6 +64,4 @@ The resolution service will not return an error in the case of an invalid domain
 | Not Found | Could not find the requested resource(s). |
 
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

@@ -38,6 +38,4 @@ Stripe and Coinbase payment methods are currently unavailable. Resellers will be
 | Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments.md)         |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments.md) |
 
-## Resources
-
-For assistance with Unstoppable's Reseller feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+<embed src="/snippets/_discord.md" />

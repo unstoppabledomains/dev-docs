@@ -60,6 +60,4 @@ Below is a list of all the error codes you might encounter when using the Resolu
 | Domain was returned from metadata provider | Thrown when you resolve an invalid domain address. |
 | Invalid UNS configuration value | Thrown when the UNS resolution service is misconfigured. |
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

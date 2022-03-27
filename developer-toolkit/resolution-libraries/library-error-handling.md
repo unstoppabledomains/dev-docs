@@ -177,6 +177,4 @@ To see all the supported error codes for each Resolution Library, please check t
 Always validate the addresses resolved from the Resolution Library as the user has complete control over the domain and can set invalid values.
 :::
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

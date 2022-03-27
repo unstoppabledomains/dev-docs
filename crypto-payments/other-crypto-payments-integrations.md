@@ -19,6 +19,4 @@ The Resolution CLI is a simple tool built and maintained by Unstoppable Domains 
 
 You can also resolve domain records directly from the blockchain using smart contracts without depending on libraries or resolution APIs and CLIs. Please see the [Resolving Domains with Direct Blockchain Calls](../../developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names/) guide for instructions on how to do it.
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

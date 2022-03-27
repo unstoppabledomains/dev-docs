@@ -40,6 +40,4 @@ The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available f
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-## Resources
-
-For assistance with the Login with Unstoppable feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+<embed src="/snippets/_discord.md" />
