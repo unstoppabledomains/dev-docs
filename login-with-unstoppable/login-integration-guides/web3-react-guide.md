@@ -83,9 +83,7 @@ Because popups are a more integration friendly approach, the `@uauth/web3-react`
 
 Once configured, web3-react can be used like normal.
 
-:::warning
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
-:::
+<embed src="/snippets/_login-mainnet-warning.md" />
 
 ```javascript
 import {useWeb3React} from '@web3-react/core'
