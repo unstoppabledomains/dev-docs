@@ -9,9 +9,7 @@ The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simpl
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
-:::warning Important
-Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
-:::
+<embed src="/snippets/_new-tld-warning.md" />
 
 ## Use Case: Retrieve the ETH Address
 

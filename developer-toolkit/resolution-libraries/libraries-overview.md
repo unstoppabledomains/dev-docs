@@ -7,9 +7,7 @@ description: This page reviews the different resolution libraries that can be us
 
 Resolution libraries are used for interacting with blockchain domain names. They can be used to retrieve [payment addresses](../../crypto-payments/index.md), IPFS hashes for [decentralized websites](../../d-websites/index.md), DNS records and other [records types](../../getting-started/domain-registry-essentials/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
 
-:::warning Important
-Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
-:::
+<embed src="/snippets/_new-tld-warning.md" />
 
 ## Supported Domains for Resolution Libraries
 

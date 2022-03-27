@@ -7,9 +7,7 @@ description: This page covers the resolution service API feature for Unstoppable
 
 Resolution service provides an API for getting domain data and metadata regardless of that domain's location, whether it is stored on Ethereum, Zilliqa, Polygon, or any other blockchain. The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
 
-:::warning Important
-Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
-:::
+<embed src="/snippets/_new-tld-warning.md" />
 
 ## Alchemy Hosted API
 
