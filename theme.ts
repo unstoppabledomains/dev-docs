@@ -23,30 +23,6 @@ export const theme = {
     secondary: {
       main: '#ffffff',
     },
-    // success: {
-    //   main: '#00aa13',
-    //   light: ({ colors }) => lighten(colors.tonalOffset * 3, colors.success.main),
-    //   dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
-    //   contrastText: ({ colors }) => readableColor(colors.success.main),
-    // },
-    // error: {
-    //   main: '#e53935',
-    //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.error.main),
-    //   dark: ({ colors }) => darken(colors.tonalOffset, colors.error.main),
-    //   contrastText: ({ colors }) => readableColor(colors.error.main),
-    // },
-    // warning: {
-    //   main: '#d4ad03',
-    //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.warning.main),
-    //   dark: ({ colors }) => darken(colors.tonalOffset, colors.warning.main),
-    //   contrastText: ({ colors }) => readableColor(colors.warning.main),
-    // },
-    // info: {
-    //   main: '#4782cb',
-    //   light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.info.main),
-    //   dark: ({ colors }) => darken(colors.tonalOffset, colors.info.main),
-    //   contrastText: ({ colors }) => readableColor(colors.info.main),
-    // },
     text: {
       primary: '#424242',
       secondary: '#4d4b99',
@@ -108,7 +84,7 @@ export const theme = {
   // },
 
   typography: {
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.5em',
     fontWeightRegular: '400',
     fontWeightBold: '600',
@@ -188,4 +164,45 @@ export const theme = {
   //   backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
   //   tokens: {},
   // },
+  components: {
+    alert: {
+      variants: {
+        info: {
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#3455DB',
+          // icon: '<svg ...',
+        },
+        attention: { 
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#3455DB',
+          // icon: '<svg ...', 
+      },
+        warning: { 
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#D4AD03',
+          // icon: '<svg ...',
+      },
+        danger: { 
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#E53935',
+          // icon: '<svg ...',
+      },
+        success: { 
+          backgroundColor: '#F5F7F9',
+          textColor: ({ colors }) => colors.text.primary,
+          headingColor: ({ colors }) => colors.text.primary,
+          iconColor: '#03AD13',
+          // icon: '<svg ...',
+      },
+      },
+    },
+  },  
 };

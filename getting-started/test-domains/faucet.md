@@ -5,10 +5,10 @@ description: This page describes the process for requesting a free test domain a
 
 # Get a Test Domain using Unstoppable Website Faucet
 
-**[[insert overview, reusable content]]**
+<embed src="/snippets/_test-domain-explain.md" />
 
-:::info
-Note: The Reseller feature only support Polygon.
+:::warning Important
+The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](../../login-with-unstoppable/login-integration-guides/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 ## Step 1: Gather Requirements for the Website Faucet
@@ -33,8 +33,8 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **cryptocurrency records**: add optional cryptocurrency addresses, such as bitcoin or litecoin
   * **custom records**: add optional key and value pairs
 
-:::warning
-**Important:** For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
+:::info reminder
+The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](../../login-with-unstoppable/login-integration-guides/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 ![Configure options on Unstoppable website faucet](/images/website-faucet-options.png)
@@ -48,6 +48,6 @@ If you don't know the recipient address, this information will be retrieved and 
 * Click the **Mint Domain** button when finished configuring options.
 * Sign the transaction with your wallet.
 
-:::success
-Congratulations! You're the new proud owner of a test domain on your preferred network. Happy hacking!
+:::success Congratulations!
+You're the new proud owner of a test domain on your preferred network. Happy hacking!
 :::

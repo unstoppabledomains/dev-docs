@@ -31,6 +31,8 @@ This page provides a guide on handling errors with the Resolution Libraries, and
 - Resolving a misconfigured domain
 - Resolving a domain with an unsupported TLD
 
+<embed src="/snippets/_new-tld-warning.md" />
+
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
@@ -173,6 +175,4 @@ To see all the supported error codes for each Resolution Library, please check t
 Unstoppable Domains periodically releases new TLDs, and our Resolution libraries and APIs will automatically detect and support any new TLDs. It is imperative for future proofing your resolution integration to allow all domain inputs to pass through rather than implementing a front end filter (e.g. avoid hard coding domains or placing a regex filter for just .crypto, .nft, etc.).
 :::
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

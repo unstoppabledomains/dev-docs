@@ -1,9 +1,9 @@
 ---
-title: Resolution (JavaScript) Change Log
+title: Resolution JavaScript Change Log
 description: This is the changelog page for Resolution Library, Unstoppable Domains.
 ---
 
-**<<Set up github action to pull changelog from github repo, as shared by Mike S.>>**
+# Resolution JavaScript Change Log
 
 ## 7.1.3
 - Implemented function getDomainFromTokenId in UdApi

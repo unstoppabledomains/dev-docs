@@ -7,9 +7,7 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.&#x20;
 
-:::warning
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
-:::
+<embed src="/snippets/_login-mainnet-warning.md" />
 
 ## Step 1: Configure the UAuth Class
 
@@ -169,8 +167,4 @@ const Profile: React.FC<RouteProps> = () => {
 
 ## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
-
-:::success Congratulations!
-You just implemented Login with Unstoppable.
-:::
+<embed src="/snippets/_login-ui-config.md" />

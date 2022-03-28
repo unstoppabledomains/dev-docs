@@ -3,7 +3,7 @@ title: Resolution Java Change Log
 description: This is the changelog page for Resolution Java Library, Unstoppable Domains.
 ---
 
-**<<Set up github action to pull changelog from github repo, as shared by Mike S.>>**
+# Resolution Java Change Log
 
 ## 5.0.0
 

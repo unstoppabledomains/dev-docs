@@ -1,20 +1,19 @@
 ---
-description: >-
-  This page describes the record architectures for CNS and UNS, record types,
-  and administrative patterns for managing domain records.
+title: Managing Domain Records
+description: This page describes the record architectures for CNS and UNS, record types, and administrative patterns for managing domain records.
 ---
 
 # Managing Domain Records
 
 For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. For UNS, domain records are managed via `RecordStorage`.
 
-![CNS Records Architecture shows how resolvers are used to manage domain records](/images/record-architecture.png)
+![CNS Records Architecture shows how resolvers are used to manage domain records](/images/record-architecture.png '#display=block;margin-left=auto;margin-right=auto;width=85%;')
 
-![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png)
+![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
 
 ## Domain Record Types
 
-Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a user from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../domain-registry-essentials/records-reference.md).
+Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a user from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../getting-started/domain-registry-essentials/records-reference.md).
 
 Standard record keys are split by namespaces with a `.` used as a separator.
 

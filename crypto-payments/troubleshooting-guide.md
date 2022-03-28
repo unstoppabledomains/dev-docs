@@ -23,6 +23,4 @@ This error occurs when the resolution libraries cannot find a resolver contract 
 
 This error occurs when you try to resolve a domain with a TLD not supported by Unstoppable Domains. The solution is to provide a domain with a [supported TLD](../../developer-toolkit/resolution-libraries/libraries-overview.md/#supported-domains-for-resolution-libraries) to the resolution instance or inform the user to double-check their input.
 
-## Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

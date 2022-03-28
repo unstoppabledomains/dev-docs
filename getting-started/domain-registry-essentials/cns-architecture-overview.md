@@ -1,27 +1,29 @@
 ---
-title: CNS Architecture
+title: CNS Architecture Overview
 description: This section provides a high-level overview of CNS — Crypto Name Service. Readers should have a basic understanding of Ethereum smart contracts and the ERC-721 token standard.
 ---
 
+# CNS Architecture Overview
+
 This page covers the following topics:
 
-* [Smart contract architecture](architecture-overview.md#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
-* [Domain hierarchy and ownership](architecture-overview.md#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
-* [Delegating domain management](architecture-overview.md#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
+* [Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
+* [Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
+* [Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
 
 Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
 
 Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
 :::info
-For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](./).
+For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](cns-uns-comparison.md).
 :::
 
 ## Smart contract architecture
 
 The two central components of CNS are its `Registry` and `Resolver` smart contracts. `Registry` is a _map_ (or _dictionary_) from domain names to an owner address and a `Resolver` address. And `Resolver` is a _map_ from domain names to the records associated with that domain (cryptocurrency addresses, etc.).
 
-![A simplified illustration of the relation between Registry and Resolver smart contracts](</images/registry\_resolver\_relation (2) (2) (2) (3) (1).svg>)
+![Relation between Registry and Resolver smart contracts](/images/registry_resolver_relation-22231.svg)
 
 There is only one `Registry` smart contract deployed in the Ethereum Mainnet, but there are many versions of `Resolver` smart contracts. In theory, every domain could use a different `Resolver` contract but in practice the majority of domains are managed by the same `Resolver` smart contract instance (like Resolver 1 in the example above).
 
@@ -29,7 +31,7 @@ There is only one `Registry` smart contract deployed in the Ethereum Mainnet, bu
 Updates to our `Resolver` smart contract are incremental and non-breaking. All `Resolver` smart contracts must adhere to our [IResolver interface](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol). This interface defines the basic set of functionality and guarantees compatibility between different implementations.
 :::
 
-Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](../namehashing.md).
+Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](namehashing.md).
 
 For instance, `example.crypto`'s namehash: `0xd584c5509c6788ad9d9491be8ba8b4422d05caf62674a98fbf8a9988eeadfb7e`
 
@@ -37,7 +39,7 @@ For instance, `example.crypto`'s namehash: `0xd584c5509c6788ad9d9491be8ba8b4422d
 
 This flow describes how the CNS `Registry` and `Resolvers` interact.
 
-![Visualization of interaction between CNS Registry ad Resolvers](</images/Smart-Contract-Architecture-Administration (4) (4) (2) (3) (3).svg>)
+![Interaction between CNS Registry ad Resolvers](/images/smart-contract-architecture-administration-44233.svg)
 
 ### Registry
 
@@ -67,13 +69,13 @@ Domain owners can:
 * Mint a new subdomain
 * Burn a domain
 
-Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a user's behalf. For more details, see [Managing domain ownership](../../allow-my-users-to-manage-existing-domains/managing-domain-ownership/).
+Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a user's behalf. For more details, see [Managing domain ownership](../../manage-domains/index.md).
 
 ### Resolver
 
 `Resolver` is a smart contract that is used for resolving domains and storing domain records. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](../records-reference.md).
+Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
 In practice, `Resolver`'s data structure is slightly more complicated. If you're interested in the implementation details, see [Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol).
 
@@ -88,7 +90,7 @@ In practice, `Resolver`'s data structure is slightly more complicated. If you're
 
 `ProxyReader` consolidates these operations into a single call.
 
-For more information on how the resolution process works read [Resolving domain records](../resolving-domain-records.md).
+For more information on how the resolution process works read [Resolving domain records](../../developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 
 ## Domain Hierarchy and Ownership
 
@@ -101,7 +103,7 @@ Subdomains are subject to the same set of rules as second-level domains in CNS. 
 Such an ownership model might not be suitable for every user. One may want to mint subdomains that are irrevocable and can be transferred only by a direct owner – this and other models are possible if a domain zone is owned by a smart contract. For more details on alternative ownership models, see the section below.
 
 :::info
-**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the [Minting controller](architecture-overview.md#minting-controller) section.
+**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the [Minting controller](#minting-controller) section.
 :::
 
 ### Alternative ownership models
@@ -120,7 +122,7 @@ Internal addresses can't be accessed directly by a wallet. Meaning domains owned
 
 CNS allows users to delegate transaction execution to accounts that aren't domain owners.
 
-`Registry` and `Resolver` smart contracts implement methods that use [Meta Transactions](../../allow-my-users-to-manage-existing-domains/meta-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` and `Resolver` smart contracts implement methods that use [Meta Transactions](../../manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for users to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
@@ -135,4 +137,4 @@ On behalf of our users, our transaction processor generally handles:
 
 CNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
 
-To learn more about the technical details of delegating transactions in CNS, read our [Meta Transactions](../../allow-my-users-to-manage-existing-domains/meta-transactions.md) page.
+To learn more about the technical details of delegating transactions in CNS, read our [Meta Transactions](../../manage-domains/delegating-transactions.md) page.

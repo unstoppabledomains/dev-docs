@@ -1,17 +1,31 @@
 ---
-title: Client Configuration Guide for Login with Unstoppable
+title: Login Client Configuration for Humanity Check
 description: This guide covers the process for configuring the Login with Unstoppable client.
 ---
 
-# Login Client Configuration
+# Login Client Configuration for Humanity Check
+
+:::warning
+This application process configures **BETA** credentials for applications wanting to test Humanity Check early.
+For normal production credentials please see [Register Your Application](register-your-application.md).
+:::
+
+:::info
+Clients that use this portal to register credentials don't have to supply the `clientSecret` option to the library when using the Login Integration guides. Clients must also additionally configure the `fallbackIssuer` as well when using client credentials obtained from this portal. See the example configuration below:
+:::
+
+```javascript
+const uauthConfig = {
+  clientID: "my_client_id",
+  scope: "openid",
+  redirectUri: "my_redirect_uri",
+  fallbackIssuer: "https://beta.auth.unstoppabledomains.com",
+}
+```
 
 The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
 
 ![Login client configuration complete example](/images/login-client-config.gif '#display=block;margin-left=auto;margin-right=auto;width=70%;')
-
-:::danger
-Developers must store the client secret before saving changes, refreshing the page, or exiting the page. The client secret cannot be retrieved by Unstoppable Domains.
-:::
 
 ## Step 1: Add a New Client to Your Account
 
@@ -34,12 +48,12 @@ The **Client Metadata** section includes the unique client ID, client secret, an
 
 The Redirect URIs follow three rules:
 
-1. Http URI resolves to local host (http://127.0.0.1 or http://localhost). If you specify a local host, then the system does not care about the port.
-2. If using https website, then can only have a single https redirect URI or will get an error.
-3. All URIs must use the same origin name (e.g., unstoppabledomains.com) or will get an error.
+1. `http` URI resolves to local host (`http://127.0.0.1` or `http://localhost`). If you specify a local host, then the system does not care about the port.
+2. If using `https` website, then can only have a single `https` redirect URI or will get an error.
+3. All URIs must use the same origin (e.g., `unstoppabledomains.com`) or will get an error.
 
 :::info
-Local host is okay for test development, but 127.0.0.1 should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
+`localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 :::
 
 ## **Step 3: Cosmetic Configuration (Optional)**
@@ -47,7 +61,7 @@ Local host is okay for test development, but 127.0.0.1 should be used for live e
 The **Cosmetic Configuration** allows developers to customize the UI to improve the user experience. This includes updating or modifying the client name presented to the user, client URI, logo URI, policy URI, and terms of service URI.
 
 :::warning
-All URIs must use the same origin name (e.g., unstoppabledomains.com) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
+All URIs must use the same origin name (e.g., `unstoppabledomains.com`) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
 :::
 
 ![Client Configuration UI, Cosmetic Config section](/images/client_config_screen_cosmetic.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
@@ -125,7 +139,7 @@ All [scopes](scopes-for-login.md) are turned on by default. To limit the scopes 
 ### Token Endpoint Authentication Method
 
 :::info
-This setting cannot use for front-end integrations. It can only be enabled for applications, such as servers, that can store secrets.
+This setting cannot be used for front-end integrations. It can only be enabled for applications, such as servers, that can store secrets.
 :::
 
 This setting configures how to send the client secret to the authorization server after you receive the authorization code; can be enabled for an extra layer of security but can only be used if your application can store secrets (e.g., node.js integrations). The client secret is stored on server as a hash, so authorization server doesn't actually know the client secret. See additional resource for [Client Basic and Client Secret oAuth](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3.1).
@@ -133,16 +147,16 @@ This setting configures how to send the client secret to the authorization serve
 * **client secret basic:** uses http basic authentication to send over clientid:clientsecret inside the header, which is base64 encoded.
 * **client secret post:** uses http POST authentication to send over client\_secret parameter inside the body.
 
-:::danger
-**WARNING: Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
+:::danger warning
+**Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
 :::
 
 ## Step 5: Save Changes
 
 You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application requires a wallet connection and signature.
 
-:::info
-**Reminder:** Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section.
+:::info reminder
+Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section.
 :::
 
 :::success Congratulations!

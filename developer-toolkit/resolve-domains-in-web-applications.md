@@ -226,6 +226,4 @@ Use these commands to set up a local development environment (**macOS Terminal**
 * Supported keys: `$ yarn supported-keys:pull`
 * Both configs: `$ yarn config:pull`
 
-## Support
-
-If you have any questions or need assistance with using UD Resolution CLI, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
+<embed src="/snippets/_discord.md" />

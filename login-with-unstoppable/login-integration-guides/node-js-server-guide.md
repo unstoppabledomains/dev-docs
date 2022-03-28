@@ -11,9 +11,7 @@ This installation guide is for custom `@uauth/node` library used in server-side 
 For a completed example of a server integration using `@uauth/node` library, you can [download the files](https://github.com/unstoppabledomains/uauth/tree/main/examples/server) directly.
 :::
 
-:::warning
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
-:::
+<embed src="/snippets/_login-mainnet-warning.md" />
 
 ## Step 1: Install the @uauth/node Library
 
@@ -153,9 +151,7 @@ The package takes an injection with a submit method attached that is called when
 
 ## Step 5: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
-
-For Node.js integrations, you can download official UD buttons to use in your UI in [**Step 3**](login-ui-configuration.md#step-3-download-ud-buttons-node-js-only). 
+<embed src="/snippets/_login-ui-config.md" />
 
 ## Step 6: Run the Server!
 

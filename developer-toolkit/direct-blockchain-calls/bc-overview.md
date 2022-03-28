@@ -17,6 +17,4 @@ One strategy for resolving domains is to read directly from the blockchain. This
 * [Resolve .zil with Direct Blockchain Calls](resolve-.zil-without-libraries.md)
 * [Resolve Ethereum Smart Contracts](resolve-eth-smart-contracts.md)
 
-## Support
-
-If you have any questions or need assistance with making direct blockchain calls, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
+<embed src="/snippets/_discord.md" />

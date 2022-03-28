@@ -16,6 +16,4 @@ This is a list of all the error codes you might encounter when using the [resolu
 | MethodIsNotSupportedError | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `TokenURI()`, `TokenURIMetadata()`, and `Unhash()` methods for the Zilliqa Name Service (ZNS). |
 | UnsConfigurationError | Thrown when the UNS resolution service is misconfigured. |
 
-# Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

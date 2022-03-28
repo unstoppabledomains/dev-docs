@@ -7,9 +7,7 @@ description: This page reviews the integration guides for Login with Unstoppable
 
 Login with Unstoppable is a versatile feature with several integration pathways available for developers. This page reviews the integration guides, overall features, and related libraries for each installation option.
 
-:::warning
-**Important:** For Login with Unstoppable Integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
-:::
+<embed src="/snippets/_login-mainnet-warning.md" />
 
 ## Step 1: Register Your Application
 
@@ -40,6 +38,4 @@ The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available f
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
 
-## Resources
-
-For assistance with the Login with Unstoppable feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+<embed src="/snippets/_discord.md" />

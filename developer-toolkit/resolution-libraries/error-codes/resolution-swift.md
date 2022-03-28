@@ -23,6 +23,4 @@ This is a list of all the error codes you might encounter when using the [resolu
 | unsupportedDomain | Thrown when you resolve a domain with a TLD not supported by the current resolution instance. |
 | unsupportedServiceName | Thrown when using an unsupported naming service with the current resolution instance. |
 
-# Asking for help
-
-Please don't be shy; we're here to help. Join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community if you need assistance integrating your app.
+<embed src="/snippets/_discord.md" />

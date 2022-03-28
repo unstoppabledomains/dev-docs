@@ -1,7 +1,6 @@
 ---
-description: >-
-  This page outlines the features of creating a custom smart contract for
-  flexible permission models. This technique works for CNS, ZNS, and UNS.
+title: Delegating Domain Management
+description: This page outlines the features of creating a custom smart contract for flexible permission models. This technique works for CNS, ZNS, and UNS.
 ---
 
 # Delegating Domain Management

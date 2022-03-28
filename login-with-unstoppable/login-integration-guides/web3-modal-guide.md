@@ -86,9 +86,7 @@ Because popups are a more integration friendly approach, the `@uauth/web3modal` 
 
 Once configured, the `web3modal` library can be used normally.
 
-:::warning
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
-:::
+<embed src="/snippets/_login-mainnet-warning.md" />
 
 ```javascript
 import web3modal from './web3modal'
@@ -103,11 +101,7 @@ const provider = await web3modal.connect()
 
 ## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
-
-:::success Congratulations!
-You just implemented Login with Unstoppable.
-:::
+<embed src="/snippets/_login-ui-config.md" />
 
 ## Reference
 
