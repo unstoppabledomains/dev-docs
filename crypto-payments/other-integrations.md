@@ -1,11 +1,11 @@
 ---
 title: Other Ways to Integrate Crypto Payments
-description: This page covers integrating crypto payments into your applications aside from the Resolution Libraries.
+description: This page covers integrating crypto payments into your applications aside from the resolution libraries.
 ---
 
 # Other Ways to Integrate Crypto Payments
 
-Unstoppable Domains provides various other methods to integrate crypto payments into your applications aside from the Resolution Libraries. This enables you to integrate crypto payments into applications built WITH languages that the libraries do not support.
+Unstoppable Domains provides various other methods to integrate crypto payments into your applications aside from the resolution libraries. This enables you to integrate crypto payments into applications built with languages that the resolution libraries do not support.
 
 ## Resolution Service API
 

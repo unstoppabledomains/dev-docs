@@ -31,8 +31,6 @@ This page provides a guide on handling errors with the Resolution Libraries, and
 - Resolving a misconfigured domain
 - Resolving a domain with an unsupported TLD
 
-<embed src="/snippets/_new-tld-warning.md" />
-
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();

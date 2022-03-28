@@ -1,11 +1,11 @@
 ---
 title: Integrating Crypto Payments Using Libraries
-description: This page covers integrating crypto payments into your applications using Unstoppable Domains Resolution Libraries.
+description: This page covers integrating crypto payments into your applications using Unstoppable Domains resolution libraries.
 ---
 
 # Integrating Crypto Payments Using Libraries
 
-Unstoppable Domains provides a set of Resolution Libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview/) for a detailed description and configuration.
+Unstoppable Domains provides a set of resolution libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview/) for a detailed description and configuration.
 
 ## Resolving a Crypto Address From a Domain
 
