@@ -54,3 +54,5 @@ pages:
       - label: Browser Resolution Test Domains
         page: resolve-domains-browser/test-domains.md
     separatorLine: true
+  - label: Developer Quests
+    page: unstoppable-quests.md
