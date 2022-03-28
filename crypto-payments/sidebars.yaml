@@ -4,7 +4,7 @@ pages:
   - label: Integrating Crypto Payments Using Libraries
     page: library-integration.md
     separatorLine: true
-  - label: Other Ways to Integrate Crypto Payments
+  - label: Other Ways To Integrate Crypto Payments
     page: other-integrations.md
     separatorLine: true
   - label: Crypto Payments Troubleshooting Guide

@@ -73,7 +73,7 @@ We resolved the `ryan.crypto` domain into its records and retrieved the Ethereum
 
 In the code above, the `addr()` and `getAddress()` methods convert the provided 3-letter ticker into the format `crypto.<TICKER>.address` and queries the blockchain for the attached record. Some applications also set custom records for a domain to use within themselves.
 
-## Resolving Addresses Existing On Multiple Blockchains
+## Resolving Addresses Existing on Multiple Blockchains
 
 The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to handle this for the `udtestdev-usdt.crypto` domain:
 
@@ -137,7 +137,7 @@ func main() {
 The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `AddrVersion()` methods create a key from the provided `USDT` ticker and `ERC20` version. The key format is `crypto.USDT.version.<VERSION>.address`. In the example above with the `ERC-20` version of `USDT`, the created key would be `crypto.USDT.version.ERC20.address`.
 
 :::attention info
-See the [managing domain records](../../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
+Please see the [Managing Domain Records](../../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
 :::
 
 <embed src="/snippets/_discord.md" />
