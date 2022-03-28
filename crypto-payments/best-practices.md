@@ -25,4 +25,10 @@ When you don't find a currency address record for a domain, please do not make a
 
 When you encounter errors using any resolution method (library, service API, CLI), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution Library Error Handling](../../developer-toolkit/resolution-libraries/library-error-handling/) guide for information.
 
+## 5. Validate the Addresses Resolved From Domains
+
+Always validate the addresses you resolve from domains using the resolution methods (library, service API, CLI) because the user has complete control over the domain and can set invalid values for its records.
+
+<embed src="/snippets/_new-tld-warning.md" />
+
 <embed src="/snippets/_discord.md" />
