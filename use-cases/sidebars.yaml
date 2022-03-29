@@ -1,9 +1,13 @@
 pages:
   - page: index.md
     separatorLine: true
-  - page: promote-ud-integration.md
-    label: Promoting Your UD Integration
-    separatorLine: true
   - page: unstoppable-nft-domains.md
     label: Learn About Unstoppable Domains and NFTs
     separatorLine: true
+  - page: promote-ud-integration.md
+    label: Promote Your UD Integration
+    separatorLine: true
+  - page: support-ud-browser.md
+    label: Support Unstoppable Domains in a Web Browser
+    separatorLine: true
+

@@ -11,13 +11,7 @@ It will take some time for the IPFS website transaction to resolve on the blockc
 
 ## Compatible Browsers and Extensions
 
-The following is a list of compatible browsers and extensions for Unstoppable d-websites:
-
-* [Opera](https://unstoppabledomains.com/opera) for desktop and mobile (supports .crypto)
-* [Brave](https://unstoppabledomains.com/brave\_pa) for desktop and mobile (supports .crypto)
-* [Google Chrome Extension](https://chrome.google.com/webstore/detail/unstoppable-extension/beelkklmblgdljamcmoffgfbdddfpnnl?hl=en-US\&authuser=0) (supports all Unstoppable Top Level Domains)
-* [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/unstoppable-extension/) (supports all Unstoppable Top Level Domains)
-* [Unstoppable Browser](https://unstoppabledomains.com/browser) (supports .crypto and .zil)
+<embed src="../snippets/_compatible-browsers.md" />
 
 ## Add a Custom DNS to Your Browser
 
