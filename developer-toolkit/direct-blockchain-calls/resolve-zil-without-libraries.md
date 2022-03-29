@@ -15,6 +15,8 @@ Here’s the finished product:
 
 ![Dynamic GIF showing the steps to resolve a .zil domain](/images/zil-resolve-dynamic-image.gif)
 
+## Initialize the Project Folder
+
 First, create a project folder with two files inside: `index.html` and `index.js`
 
 ```
@@ -30,6 +32,8 @@ Your folder structure should look like this:
 ├── index.html
 ├── index.js
 ```
+
+### Build the Layout: `index.html`
 
 Next, let’s open our HTML page and add some boilerplate code. We are going to use the [js-sha256](https://cdnjs.com/libraries/js-sha256) CDN for encoding the domain.
 
@@ -71,7 +75,7 @@ Next, let’s open our HTML page and add some boilerplate code. We are going to 
 
 This is a simple HTML document with a **#main** `<div>` in the body. It contains an `<input>` field for our user, a `<button>` to resolve the domain, and **#records** `<div>` where we’ll display the results.
 
-## Add JavaScript to Activate the Button and Layout <a href="#516b" id="516b"></a>
+### Attach Some JavaScript to the Button
 
 Now that we have our `index.html` file set up, let’s add some JavaScript. We can start by opening our `index.js` file and defining two constants:
 
@@ -106,9 +110,9 @@ async function resolve() {
 document.getElementById("button").addEventListener('click', () => resolve());
 ```
 
-We will revisit [error handling](resolve-.zil-without-libraries.md#4e70) later in this guide.
+We will revisit [error handling](#set-up-error-notifications) later in this guide.
 
-## Tokenize Your Domain by Namehashing <a href="#d25c" id="d25c"></a>
+## Tokenize Your Domain by Namehashing
 
 Namehashing is an algorithm that tokenizes your domain name in a way that a **Zilliqa** smart contract can understand.
 
@@ -163,7 +167,7 @@ async function resolve() {
 }
 ```
 
-## Get the Resolver Address <a href="#8eeb" id="8eeb"></a>
+## Get the Resolver Address
 
 Our next step is to fetch two very important addresses attached to every Unstoppable domain: the **owner address** and the **resolver contract address**. We can get them by querying the Unstoppable Domains [ZNS Registry Contract](https://viewblock.io/zilliqa/address/zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz).
 
@@ -269,7 +273,7 @@ ownerAddress:“0x2d418942dce1afa02d0733a2000c71b371a6ac07”,
 resolverAddress: “0xdac22230adfe4601f00631eae92df6d77f054891”
 ```
 
-## Fetch the Records <a href="#4324" id="4324"></a>
+## Fetch the Records
 
 After we verify that a domain has an owner address, we can query its resolver contract address for its records.
 
@@ -305,7 +309,7 @@ We should get an object printed on our console with all the keys registered unde
 }
 ```
 
-## Display the Resolution <a href="#d7a9" id="d7a9"></a>
+## Display the Resolution
 
 Since this is a simple example, we won’t get too fancy. We’ll just create a `<span>` element for each record containing its key and value, its owner address, and its resolver address.
 
@@ -360,7 +364,7 @@ We should see something like the following on successful resolution:
 
 ![Example of a successful domain resolution](/images/zil-successful-domain-resolution.png)
 
-## Set up Error Notifications <a href="#4e70" id="4e70"></a>
+## Set up Error Notifications
 
 Now that we have made a successful call, let’s deal with all possible errors that might come up during the resolution. We can easily distinguish some of the use cases for our errors:
 
@@ -478,7 +482,7 @@ The following table displays some domains to test for resolution:
 | `unregistered.zil` | domain is not registered    |
 | `paulalcock.zil`   | domain is not configured    |
 
-## Resources <a href="#8b90" id="8b90"></a>
+## Resources
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/zil-Integration)
 * [UD Discord Community](https://discord.gg/b6ZVxSZ9Hn)

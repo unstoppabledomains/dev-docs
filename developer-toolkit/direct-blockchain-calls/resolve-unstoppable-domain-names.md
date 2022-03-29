@@ -6,10 +6,10 @@ description: This page reviews the process for resolving Unstoppable domains wit
 # Resolve Unstoppable Domains with Direct Blockchain Calls
 
 :::info
-The `.zil` namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).
+The `.zil` namespace is located on a separate chain and requires a [different process](resolve-zil-without-libraries.md).
 :::
 
-In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
+In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, JavaScript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
 
 ![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
 
@@ -21,7 +21,7 @@ To resolve an unstoppable domain, we will need to
 
 Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `JavaScript`.
 
-## Initialize the project folder <a href="#e120" id="e120"></a>
+## Initialize the Project Folder
 
 The first thing we need to do is create a folder with three files inside: index.html, index.js, and ethers.js.
 
@@ -40,7 +40,7 @@ Your project folder should look exactly like the following:
 ├── ethers.js
 ```
 
-### Build the Layout: Index.html <a href="#f889" id="f889"></a>
+### Build the Layout: `index.html`
 
 Let’s open the index.html file and build out the layout for our app. To create a positive UI experience for the user, we’ll need to build an input bar, a button to trigger the resolution, and a `<div>` to display our records.
 
@@ -89,7 +89,7 @@ We will need the keccak\_256 hash function to calculate ERC-721 token ID for the
 </html>
 ```
 
-### Add some JavaScript: Index.js <a href="#c4de" id="c4de"></a>
+### Add Some JavaScript: `index.js`
 
 Now that we have our `index.html` file set up, let’s add some JavaScript. We can start by inputting some basic code into our `index.js` file to capture the text from the input field and print it onto our console.
 
@@ -106,7 +106,7 @@ async function resolve() {
 We can open `index.html` in a browser to make sure everything is connected and launches.
 :::
 
-## Tokenize Your Domain by Namehashing <a href="#9004" id="9004"></a>
+## Tokenize Your Domain by Namehashing
 
 Namehashing is an algorithm that tokenizes your domain name in a way that the `.crypto` smart contract can understand.
 
@@ -141,7 +141,7 @@ This table shows a list of Namehash examples with different inputs:
 | crypto      | `0x0f4a10a4f46c388cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f` |
 | brad.crypto | `0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9` |
 
-## Configure the Ethers.js library <a href="#abe0" id="abe0"></a>
+## Configure the Ethers.js Library
 
 To talk with any blockchain contract using `ethers.js`, we need to know the following:
 
@@ -233,7 +233,7 @@ The following table shows record keys and a description for each:
 | crypto.BTC.address | BTC address attached to the domain |
 | crypto.ETH.address | ETH address attached to the domain |
 
-## Make the call to the contract <a href="#2047" id="2047"></a>
+## Make the Call to the Contract
 
 Let’s update our `resolve()` function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect it further.
 
@@ -299,7 +299,7 @@ If we try to resolve the **brad.crypto** domain with the above keys, we should s
 data\[2] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
 :::
 
-## Display the Records <a href="#a0c8" id="a0c8"></a>
+## Display the Records
 
 Since this is a simple example, we won’t get too fancy. We’ll just create a `<span>` element for each record containing its key and value, its owner address, and its resolver address. We’ll also want to set the font to <span style="color: red">red</span> if the record is not found.
 
@@ -378,7 +378,7 @@ If we are successful, we should see the following on our page:
 
 ![Example of a successful resolution](/images/example-successful-resolution.png)
 
-## Set-up Error Notifications <a href="#d38b" id="d38b"></a>
+## Set-up Error Notifications
 
 Now that we've made a successful call, let’s deal with all possible errors that might come up during the resolution.
 
@@ -467,7 +467,7 @@ For example, you can try to resolve the following domains:
 | `udtestdev-test-btc-record.coin`   | Resolves without any issues |
 | `udtestdev-johnny-dev-domain.coin` | Domain has no BTC record    |
 
-## Resources <a href="#3cd9" id="3cd9"></a>
+## Resources
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
 * [Discord community for UD](https://discord.gg/b6ZVxSZ9Hn)

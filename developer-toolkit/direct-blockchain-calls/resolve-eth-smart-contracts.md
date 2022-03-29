@@ -11,9 +11,11 @@ This section describes resolving domain records by making calls to Ethereum smar
 
 To resolve a domain, your software must have access to the Ethereum network. For more information, see [Configuring an ethereum network connection](#configuring-an-ethereum-network-connection).
 
+## Retrieve Records with `ProxyReader`
+
 The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-only call to `ProxyReader` smart contract. `ProxyReader` provides an API that allows users to resolve domains making just one call by passing only keys of records and a domain namehash. Without `ProxyReader` it would require executing at least two calls: one to obtain a domain resolver address and another one to get the records themselves. With `ProxyReader` it all happens under the hood.
 
-An example in JavaScript of getting two records (using [ethers library](https://www.npmjs.com/package/ethers)):
+An example in JavaScript of getting two records (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
 const proxyReaderAddress = "0xfEe4D4F0aDFF8D84c12170306507554bC7045878";
@@ -105,11 +107,11 @@ console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
 
 Reference:`namehash()` - namehashing algorithm implementation. See [Namehashing](../../getting-started/domain-registry-essentials/namehashing.md).
 
-![Resolving domain records via proxyreader for CNS and UNS Registries](/images/domain-records-via-proxy-reader-smart-contract.png)
+[![Resolving domain records via proxyreader for CNS and UNS Registries](/images/domain-records-via-proxy-reader-smart-contract.png)](/images/domain-records-via-proxy-reader-smart-contract.png)
 
 See [Records reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information about the standardized records.
 
-## Record value validation
+## Record Value Validation
 
 For CNS, `Resolver` doesn't have built-in record value validation when it is updated. For UNS, `RecordStorage` doesn’t have built in record value validation after an update.&#x20;
 
@@ -122,7 +124,7 @@ Any domain management application should perform record format validation before
 
 See [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information for the validator of each record.
 
-## Configuring an Ethereum network connection
+## Configuring an Ethereum Network Connection
 
 Domain resolution configuration at a low level requires 3 configuration parameters:
 
