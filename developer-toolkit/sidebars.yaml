@@ -1,12 +1,6 @@
 pages:
   - page: index.md
     separatorLine: true
-  - label: Resolution Service API
-    page: resolution-service-api.md
-    separatorLine: true
-  - label: Resolution CLI
-    page: resolution-cli.md
-    separatorLine: true
   - group: Smart Contracts
     expanded: false
     pages:
@@ -14,6 +8,9 @@ pages:
         page: smart-contracts/uns-smart-contracts.md
       - label: CNS Smart Contracts
         page: smart-contracts/cns-smart-contracts.md
+    separatorLine: true
+  - label: Resolution Service API
+    page: resolution-service-api.md
     separatorLine: true
   - group: Resolution Libraries
     expanded: false
@@ -30,15 +27,8 @@ pages:
       - label: Resolution-Go
         page: resolution-libraries/resolution-go.md
     separatorLine: true
-  - group: Resolve with Direct Blockchain Calls
-    expanded: false
-    pages:
-      - label: Resolve UD Domains Without Libraries
-        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
-      - label: Resolve .zil Domains Without Libraries
-        page: direct-blockchain-calls/resolve-zil-without-libraries.md
-      - label: Resolve Domains with Ethereum Smart Contracts
-        page: direct-blockchain-calls/resolve-eth-smart-contracts.md
+  - label: Resolution CLI
+    page: resolution-cli.md
     separatorLine: true
   - label: Resolve Domains in Web Applications
     page: resolve-domains-in-web-applications.md
@@ -54,5 +44,16 @@ pages:
       - label: Browser Resolution Test Domains
         page: resolve-domains-browser/test-domains.md
     separatorLine: true
+  - group: Resolve with Direct Blockchain Calls
+    expanded: false
+    pages:
+      - label: Resolve UD Domains Without Libraries
+        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
+      - label: Resolve .zil Domains Without Libraries
+        page: direct-blockchain-calls/resolve-zil-without-libraries.md
+      - label: Resolve Domains with Ethereum Smart Contracts
+        page: direct-blockchain-calls/resolve-eth-smart-contracts.md
+    separatorLine: true
   - label: Developer Quests
     page: unstoppable-quests.md
+    separatorLine: true
