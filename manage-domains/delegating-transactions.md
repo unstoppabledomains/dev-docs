@@ -18,7 +18,7 @@ Meta-transactions work by having users sign function calls along with a nonce. T
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
 :::info
-For UNS and CNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [RegistryFowarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/RegistryForwarder.sol).
+For UNS and CNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [UNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/UNSRegistryForwarder.sol) and [CNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/CNSRegistryForwarder.sol).
 :::
 
 ## Token nonce
