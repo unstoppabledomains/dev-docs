@@ -10,11 +10,13 @@ This page outlines the use case for learning about Unstoppable NFT domains.
 
 ## What are Unstoppable Domains?
 
-Unstoppable Domains are NFTs, and they are decentralized. This makes them, in a word, unstoppable. Once a user claims a domain to a wallet, they have absolute control over that domain.
+Unstoppable Domains are NFTs, and they are decentralized. What sets an Unstoppable Domains NFT apart from traditional domain names (like .com) is that NFT domains are stored by their owners in their wallets like cryptocurrency, and no third party can change or remove them. This makes them, in a word, **unstoppable**. 
+
+Also, there are no renewal fees for Unstoppable Domains names, so once you own the domain, you own it for life.
 
 ## What makes NFT domains decentralized?
 
-NFT Domains can be transferred, updated, and linked to other services without any involvement from Unstoppable Domains. Unstoppable Domains cannot deactivate, change, or transfer a domain's records without a user's permission.
+Once a user claims a domain to a wallet, they have absolute control over that domain. NFT Domains can be transferred, updated, and linked to other services without any involvement from Unstoppable Domains. Unstoppable Domains cannot deactivate, change, or transfer a domain's records without a user's permission.
 
 ## How can I learn more?
 

@@ -36,7 +36,7 @@ nav:
     page: getting-started/index.md
     
   - label: Use Cases
-    page: use-cases/index.md
+    page: use-cases/index.mdx
 
   - label: Guides
     page: /guides.mdx

@@ -8,8 +8,6 @@ description: The UD developer portal is both an educational and a technical reso
 This developer portal is designed to help you understand how to build and integrate custom applications using Unstoppable Domains products.
 It's a great companion to our [Feature Guide Collection](https://youtube.com/playlist?list=PLkKiQerk3s0AbMvBafwmJdR8pv7qPYeL-) on Youtube.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLkKiQerk3s0AbMvBafwmJdR8pv7qPYeL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Also, you might explore our growing list of [Integrated Applications](https://unstoppabledomains.com/apps) to draw inspiration for your own project.
 
 ## Before You Begin
