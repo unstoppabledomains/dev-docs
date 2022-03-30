@@ -1541,10 +1541,10 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@1.1.0-beta.86":
-  version "1.1.0-beta.86"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.86.tgz#5357d5337511457218db98957a08080c209be281"
-  integrity sha512-s0IrR/8REensvKdx5aynCEVEeeBXbhpJ6kMJoKMzPsr/GpiAhV395XLO0F6YhAuxSG0K0/mVxNbExnJUqa5x6g==
+"@redocly/developer-portal@1.1.0-beta.87":
+  version "1.1.0-beta.87"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.87.tgz#c3e9dd5e3a675d9821da477b8a8d0883e7515dd9"
+  integrity sha512-kAm+kwp1Urm4LHReCOxDkPtvJmsKh0TaJU30ReItcdyqVMnx2nNLcN3smrx822fBWWirJwBQdkTNwVMr+Y8KJg==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
