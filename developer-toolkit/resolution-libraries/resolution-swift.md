@@ -17,11 +17,7 @@ Each of the resolution libraries supports an Ethereum provider url for configura
 
 To choose an alternative Ethereum provider see [Nodes as a Service guide.](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
-:::attention info
-
-Unstoppable libraries use as a Infura provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered production-ready.
-
-:::
+<embed src="/snippets/_res-lib-default-provider.md" />
 
 ```swift
 import UnstoppableDomainsResolution
@@ -45,15 +41,11 @@ guard let resolution = try? Resolution(
 }
 ```
 
-:::warning
-
-Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply "https:/\/*.[infura.io](http://infura.io)" (if using the default configuration) as a connect-src in your Content Security Policy to allow these requests through.
-
-:::
+<embed src="/snippets/_res-lib-connect-src-warning.md" />
 
 ## Error Handling
 
-<embed src="/snippets/_resolution-lib-error-intro.md" />
+<embed src="/snippets/_res-lib-error-intro.md" />
 
 ```swift Swift
 import UnstoppableDomainsResolution

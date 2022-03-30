@@ -17,11 +17,7 @@ Each of the resolution libraries supports an Ethereum provider url for configura
 
 To choose an alternative Ethereum provider see [Nodes as a Service guide.](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
-:::attention info
-
-Unstoppable libraries use Infura as a provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered production-ready.
-
-:::
+<embed src="/snippets/_res-lib-default-provider.md" />
 
 ```java
 import com.unstoppabledomains.resolution.Resolution
@@ -36,15 +32,11 @@ DomainResolution resolution = Resolution.builder()
                 .build();
 ```
 
-:::warning
-
-Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply "https:/\/*.[infura.io](http://infura.io)" (if using the default configuration) as a connect-src in your Content Security Policy to allow these requests through.
-
-:::
+<embed src="/snippets/_res-lib-connect-src-warning.md" />
 
 ## Error Handling
 
-<embed src="/snippets/_resolution-lib-error-intro.md" />
+<embed src="/snippets/_res-lib-error-intro.md" />
 
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
