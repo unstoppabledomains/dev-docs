@@ -29,7 +29,7 @@ stylesheets:
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
   text: Contribute to this page
-  icon: ./images/github-mark-32px.png
+  icon: static/images/github-mark-32px.png
 nav:
 
   - label: Get Started
