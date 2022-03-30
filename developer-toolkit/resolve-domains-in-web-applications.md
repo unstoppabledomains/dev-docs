@@ -5,7 +5,7 @@ description: This page describes how to use UD Resolution to resolve blockchain 
 
 # Resolving Domains in Web Applications
 
-Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../send-and-receive-crypto-payments/crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
+Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 
@@ -15,7 +15,7 @@ Resolution is built and maintained by Unstoppable Domains and supports decentral
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 :::info
-For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
+For more information on Unstoppable Domains Resolution, see [Resolve Using Ethereum Smart Contracts](./direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.
 :::
 
 ## Installing Resolution
@@ -30,7 +30,7 @@ yarn add @unstoppabledomains/resolution
 npm install @unstoppabledomains/resolution --save
 ```
 
-If you're interested in resolving domains via the command line, see the  [CLI section](resolving-domains-in-web-applications.md#command-line-interface) below.
+If you're interested in resolving domains via the command line, see the  [CLI section](#command-line-interface) below.
 
 ## Using Resolution
 
@@ -160,7 +160,7 @@ Default provider can be changed by changing constructor options `new Resolution(
 * `Resolution.fromEthersProvider()`
 * etc.
 
-To see all constructor options and factory methods check [Unstoppable API reference](https://unstoppabledomains.github.io/resolution).
+To see all constructor options and factory methods check the [Unstoppable API reference](https://unstoppabledomains.github.io/resolution).
 
 ## Autoconfiguration of Blockchain Network
 

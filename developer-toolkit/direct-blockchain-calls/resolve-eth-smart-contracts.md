@@ -109,7 +109,7 @@ Reference:`namehash()` - namehashing algorithm implementation. See [Namehashing]
 
 [![Resolving domain records via proxyreader for CNS and UNS Registries](/images/domain-records-via-proxy-reader-smart-contract.png)](/images/domain-records-via-proxy-reader-smart-contract.png)
 
-See [Records reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information about the standardized records.
+See the [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information about the standardized records.
 
 ## Record Value Validation
 
@@ -122,7 +122,7 @@ This is for two reasons:
 
 Any domain management application should perform record format validation before submitting a transaction. However, there is no guarantee that all management applications will do it correctly. For this reason, records should be validated when the domain is resolved too.
 
-See [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information for the validator of each record.
+See the [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) for more information for the validator of each record.
 
 ## Configuring an Ethereum Network Connection
 
