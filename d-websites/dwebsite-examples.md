@@ -7,17 +7,9 @@ description: This page provides examples of decentralized websites and options f
 
 Before browsing the decentralized web, make sure that you can [Resolve Unstoppable D-Websites](resolving-dwebsites-in-a-browser.md) in your preferred web browser.
 
-## Example D-Websites
+## Example Unstoppable D-Websites
 
-We have over 35,000 live decentralized websites. You can view all live d-websites on [ViewBlock.io](https://viewblock.io/unstoppable). Some examples you can check out include:
-
-* [dtube.crypto](http://dtube.crypto)
-* [kyber.crypto](http://kyber.crypto)
-* [pomp.crypto](http://pomp.crypto)
-* [ipfs-fps.crypto](http://ipfs-fps.crypto)
-* [jezstarr.crypto](http://jezstarr.crypto)
-* [vault74.crypto](http://vault74.crypto)
-* [brave.crypto](http://brave.crypto)
+<embed src="/snippets/_unstoppable-dwebsites.md" />
 
 ## Explore More D-Websites
 
