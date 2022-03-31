@@ -1,17 +1,20 @@
 pages:
   - page: index.md
     separatorLine: true
-  - page: connecting-a-dwebsite.md
-    label: Connecting a D-Website to Your Domain
+  - page: build-website.md
+    label: Build Your Static Website
     separatorLine: true
-  - group: Building Your D-Website
+  - page: upload-ipfs.md
+    label: Upload Your Website to IPFS
+    separatorLine: true
+  - page: connect-ipfs.md
+    label: Connect IPFS Site to Your Domain
+    separatorLine: true
+  - group: D-Website Resources
     expanded: false
     pages:
-      - label: Using a Template
-        page: using-a-template.md
       - label: D-Website Examples and Resources
         page: dwebsite-examples.md 
-    separatorLine: true
-  - page: resolving-dwebsites-in-a-browser.md
-    label: Resolving D-Websites in a Browser
+      - page: resolving-dwebsites-in-a-browser.md
+        label: Resolving D-Websites in a Browser
     separatorLine: true

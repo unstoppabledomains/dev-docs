@@ -36,4 +36,4 @@ We'd love to make your templates available on Unstoppable Domains' website build
 
 ## Additional Resources
 
-See our [IPFS Websites](/d-websites/) guides for information on [Connecting a D-Website to Your Domain](/d-websites/connecting-a-dwebsite.md) and [Resolving D-Websites in a Browser](/d-websites/resolving-dwebsites-in-a-browser.md).
+See our [IPFS Websites](/d-websites/) guides for information on [Building a D-Website](/d-websites/build-website.md), [Connecting an IPFS Site to Your Domain](/d-websites/connect-ipfs.md) and [Resolving D-Websites in a Browser](/d-websites/resolving-dwebsites-in-a-browser.md).
