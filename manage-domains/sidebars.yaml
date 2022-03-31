@@ -4,6 +4,9 @@ pages:
   - page: managing-domain-records.md
     label: Managing Domain Records
     separatorLine: true
+  - page: managing-domains-using-contracts.md
+    label: Managing Domains Using Contracts
+    separatorLine: true
   - page: domains-configuration.md
     label: Domain Configuration GUI
     separatorLine: true
