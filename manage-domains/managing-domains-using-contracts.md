@@ -41,11 +41,9 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The `set` method allows you to update a single record, while the `setMany` method allows you to update multiple records simultaneously.
 
-![polygonscan set method](/images/polygonscan-set-method.png)
-
 ![polygonscan setmany method](/images/polygonscan-setmany-method.png)
 
-Next, add the records you want to manage to the `key` and `value` fields as a single value for the `set` method or array of values for the `setMany` method.
+Next, add the records you want to manage to the `keys` and `values` fields as a single value for the `set` method or array of values for the `setMany` method.
 
 ![adding records with setmany](/images/adding-records-with-setmany.png)
 
@@ -107,7 +105,7 @@ Click the `Write` button to sign the transaction and execute the contract.
 
 ![metamask sign transaction](/images/metamask-sign-transaction.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
-After confirming the transaction, you can view its details on the blockchain explorer, like so:
+After signing the transaction, you can view its details on the blockchain explorer, like so:
 
 ![polygonscan transaction details](/images/polygonscan-transaction-details.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
