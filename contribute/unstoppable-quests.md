@@ -5,7 +5,7 @@ description: This page is an overview of the UD quest options for developers.
 
 # UD Developer Quests
 
-## Context 📚
+## Context
 
 > *"If you want to go fast, go alone; if you want to go far, go together."*
 
