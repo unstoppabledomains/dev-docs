@@ -1,11 +1,11 @@
 ---
-title: IPFS & Unstoppable D-Websites
-description: This page provides a high-level overview of IPFS and decentralized websites.
+title: Unstoppable D-Websites
+description: This page provides a high-level overview of IPFS and decentralized websites and how they work alongside Unstoppable domains.
 ---
 
-# IPFS & Unstoppable D-Websites
+# Unstoppable D-Websites
 
-For a **decentralized website** \(d-website\) or **decentralized application** \(DApp\), you will upload website files to IPFS network instead of to Github or other centralized file hosting service. 
+For a **decentralized website** \(d-website\) or **decentralized application** \(DApp\), you will upload website files to IPFS network instead of to Github or another centralized file hosting service. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I9vTeAtELOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
