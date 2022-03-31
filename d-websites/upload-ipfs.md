@@ -111,5 +111,5 @@ You can also upload your static site to IPFS using the Pinata website.
 * Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](./#step-3-connect-your-ipfs-site-to-your-domain).
 
 :::success Congratulations!
-You just uploaded your website to IPFS. If you selected Option 2 above, then please proceed to the final guide: [Connect Your IPFS Site To Your Domain](connect-ipfs-to-domain.md).
+You just uploaded your website to IPFS. If you selected Option 2 above, then please proceed to the next guide: [Connect Your IPFS Site To Your Domain](connect-ipfs.md).
 :::

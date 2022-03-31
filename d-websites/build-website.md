@@ -7,7 +7,7 @@ description: This guide outlines the process of building your static website and
 
 Once you have purchased your Unstoppable Domain, there are many options available for building and hosting your website, depending on the features you want. 
 
-## Step 1: Configure the Site
+## Step 1: Configure Your Site
 
 Hosting a d-website on IPFS is slightly different from hosting it on a centralized web server and you will need to ensure that your website is properly configured for the IPFS network. All IPFS websites must adhere to the following constraints:
 
@@ -34,7 +34,7 @@ Developers can [personalize current website templates](https://support.unstoppab
 
 <embed src="/snippets/_community-templates.md" />
 
-## Step 3: Upload Site to IPFS
+## Step 3: Upload Your Site to IPFS
 
 The next step after building the site is to upload the entire website --as a single directory folder-- to IPFS. There are several ways to achieve this, so please review the guide on [Uploading Your Site to IPFS](upload-ipfs.md).
 

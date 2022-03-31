@@ -1,9 +1,9 @@
 ---
-title: Connect IPFS Site to Your Domain
+title: Connect Your IPFS Site to Your Domain
 description: This guide outlines the process for connecting your IPFS website to your Unstoppable Domain.
 ---
 
-# Connect IPFS Site to Your Domain
+# Connect Your IPFS Site to Your Domain
 
 This guide outlines the process for connecting your IPFS website to your Unstoppable Domain.
 
@@ -11,7 +11,7 @@ This guide outlines the process for connecting your IPFS website to your Unstopp
 If you uploaded your website to IPFS externally, using [using an external service](upload-ipfs.md#option-2-manually-upload-your-website-to-ipfs), then you must retrieve the IPFS hash to connect it to your Unstoppable Domain.
 :::
 
-# Step 1: Navigate to the My Domains Area
+## Step 1: Navigate to the My Domains Area
 
 * **Login** to your UD account
 * Select **My Domains**
