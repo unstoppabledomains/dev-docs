@@ -28,7 +28,7 @@ pages:
   - page: users-manage-domains.md
     label: Allow Unstopapble Domain Management in Your App
     separatorLine: true
-  - page: buid-dwebsite-domain.md
+  - page: build-dwebsite-domain.md
     label: Build a D-Website for Your Unstoppable Domain
     separatorLine: true
 
