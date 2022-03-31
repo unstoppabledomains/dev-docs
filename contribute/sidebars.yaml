@@ -10,6 +10,6 @@ pages:
   - label: Chainlink Verification Quests
     page: chainlink-quests.md
     separatorLine: true
-  - label: Content Quests
+  - label: Content Generation Quests
     page: content-quests.md
     separatorLine: true

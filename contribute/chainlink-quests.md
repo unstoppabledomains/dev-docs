@@ -5,7 +5,7 @@ description: This page reviews the process for participating in chainlink verifi
 
 # Chainlink Verification 🖇️
 
-Currently, we have [immutable verification of your Twitter with an Unstoppable Domain](https://unstoppabledomains.com/blog/verifying-twitter-on-your-domain-with-chainlink).Now, we're introducing a bounty for a new Chainlink verification for your Unstoppable Domain. 
+Currently, we have [Twitter Chainlink Verification for an Unstoppable Domain](https://unstoppabledomains.com/blog/verifying-twitter-on-your-domain-with-chainlink). Now, we're introducing a bounty for a new Chainlink verification for your Unstoppable Domain. 
 
 ## Twitter Chainlink Verification
 
@@ -13,4 +13,6 @@ Currently, we have [immutable verification of your Twitter with an Unstoppable D
 
 ## New Chainlink Verification Options
 
-We are looking for developers to integrate new chaninlink verification options with Unstoppable Domains, such as GitHub, Gmail, Instagram, etc. Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn) or DM [@mvwi](https://twitter.com/mvwi) on Twitter, if you're interested
+We are looking for developers to integrate new chaninlink verification options with Unstoppable Domains, such as GitHub, Gmail, Instagram, etc. Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn) or DM [@mvwi](https://twitter.com/mvwi) on Twitter, if you're interested.
+
+<embed src="/snippets/_discord.md" />

@@ -7,7 +7,7 @@ description: This page reviews the process for participating in content generati
 
 **For non-technical community members**, we've created Quests for Content Generation! There are two types of content gen Quests: (1) tutorials, and (2) impression mining.
 
-Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn) or DM [@mvwi](https://twitter.com/mvwi) on Twitter, if you're interested
+Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn) or DM [@mvwi](https://twitter.com/mvwi) on Twitter, if you're interested.
 
 ## Instructions for Tutorials
 
