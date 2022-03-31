@@ -23,4 +23,4 @@ After purchasing a domain from UD, you can build your IPFS website using a templ
 
 ## How do I get started?
 
-If you are new to IPFS and decentralized websites (d-web), we recommend that you start with [IPFS Overview](/d-websites/index.md) and [Building a Website](/d-websites/build-website.md) pages. See the guide on [Resolving a D-Website in a Browser](/d-websites/resolving-dwebsites-in-a-browser.md) to view your d-website after connecting it to your domain.
+If you are new to IPFS and decentralized websites (d-web), we recommend that you start with the [IPFS Overview](/d-websites/index.md) and [Building a Website](/d-websites/build-website.md) pages. See the guide on [Resolving a D-Website in a Browser](/d-websites/resolving-dwebsites-in-a-browser.md) to view your d-website after connecting it to your domain.

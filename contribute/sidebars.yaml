@@ -1,4 +1,6 @@
 pages:
+  - separator: Contribute to Unstoppable
+    separatorLine: true
   - page: unstoppable-quests.md
     separatorLine: true
   - label: Integration Quests

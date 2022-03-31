@@ -1,5 +1,5 @@
 pages:
-  - page: index.mdx
+  - separator: Unstoppable Use Cases
     separatorLine: true
   - page: unstoppable-nft-domains.md
     label: Learn About Unstoppable Domains and NFTs

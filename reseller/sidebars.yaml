@@ -1,4 +1,6 @@
 pages:
+  - separator: Become a UD Reseller
+    separatorLine: true
   - page: index.md
     separatorLine: true
   - group: Reseller Integration Guides

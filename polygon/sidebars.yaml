@@ -1,4 +1,6 @@
 pages:
+  - separator: Migrate to Polygon
+    separatorLine: true
   - page: index.md
     separatorLine: true
   - page: polygon-migration-guide.md

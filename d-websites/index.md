@@ -1,9 +1,9 @@
 ---
-title: Unstoppable D-Websites
+title: IPFS and D-Web Overview
 description: This page provides a high-level overview of IPFS and decentralized websites and how they work alongside Unstoppable domains.
 ---
 
-# Unstoppable D-Websites
+# IPFS and D-Web Overview
 
 For a **decentralized website** \(d-website\) or **decentralized application** \(DApp\), you will upload website files to IPFS network instead of to Github or another centralized file hosting service. 
 
@@ -17,9 +17,9 @@ Your decentralized website will have a unique hash or **content identifier** (CI
 
 Once you have attached this IPFS hash to your domain, you can navigate to your new d-website using a human-readable address much like a centralized website resolved through DNS. 
 
-## Connect the D-Website to Your Domain
+## Build Your Unstoppable D-Website
 
-You will follow these steps to connect your d-website to your Unstoppable Domain. 
+You will follow these steps to build and connect your d-website to your Unstoppable Domain. 
 
 1. [Build your static website](build-website.md)
 2. [Upload Your Site to IPFS](upload-ipfs.md)

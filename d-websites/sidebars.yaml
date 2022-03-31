@@ -1,5 +1,8 @@
 pages:
+  - separator: Unstoppable D-Websites
+    separatorLine: true
   - page: index.md
+    label: IPFS and D-Web Overview
     separatorLine: true
   - page: build-website.md
     label: Build Your Static Website

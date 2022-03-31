@@ -1,5 +1,8 @@
 pages:
+  - separator: Get Started with UD
+    separatorLine: true
   - page: index.md
+    label: Developer Portal Overview
     separatorLine: true
   - group: Get a Test Domain
     expanded: false

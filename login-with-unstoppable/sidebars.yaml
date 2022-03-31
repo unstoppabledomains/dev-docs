@@ -1,5 +1,8 @@
 pages:
+  - separator: Login with Unstoppable
+    separatorLine: true
   - page: index.md
+    label: Login High-level Overview
     separatorLine: true
   - group: Getting Started with Login
     expanded: false

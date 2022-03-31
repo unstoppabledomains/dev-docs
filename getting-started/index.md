@@ -1,9 +1,9 @@
 ---
-title: Get Started with UD
+title: UD Dev Portal Overview
 description: The UD developer portal is both an educational and a technical resource. We hope it will be equally useful for both technical and non-technical readers.
 ---
 
-# Getting Started with UD
+# UD Dev Portal Overview
 
 This developer portal is designed to help you understand how to build and integrate custom applications using Unstoppable Domains products.
 It's a great companion to our [Feature Guide Collection](https://youtube.com/playlist?list=PLkKiQerk3s0AbMvBafwmJdR8pv7qPYeL-) on Youtube.

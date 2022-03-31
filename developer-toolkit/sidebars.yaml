@@ -1,5 +1,8 @@
 pages:
+  - separator: UD Developer Toolkit
+    separatorLine: true
   - page: index.md
+    label: Toolkit Overview
     separatorLine: true
   - group: Smart Contracts
     expanded: false
