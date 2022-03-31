@@ -13,7 +13,7 @@ You can find additional support through any of the following resources:
 * [UD Podcast Series](https://the-unstoppable-podcast.simplecast.com/)
 * [UD Github Repo](https://github.com/unstoppabledomains)
 * [UD Medium Article Collection](https://medium.com/unstoppabledomains)
-* UD Youtube Channel](https://www.youtube.com/c/unstoppabledomains)
+* [UD Youtube Channel](https://www.youtube.com/c/unstoppabledomains)
 
 ## How do I connect with other developers in the UD Community?
 

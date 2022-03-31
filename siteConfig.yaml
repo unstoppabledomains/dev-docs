@@ -28,7 +28,7 @@ stylesheets:
 #  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
-  text: Edit to this page
+  text: Edit this page
   icon: static/images/github-mark-32px.png
 nav:
 
