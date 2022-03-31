@@ -5,7 +5,7 @@ description: This page covers how to manage Unstoppable Domain records using con
 
 # Managing Domains Using Contracts
 
-This guide covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
+This page covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 
 ## Step 1: Select a UNS Registry Smart Contract
 The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
@@ -41,11 +41,11 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The `set` method allows you to update a single record, while the `setMany` method allows you to update multiple records simultaneously.
 
-![polygonscan setmany method](/images/polygonscan-setmany-method.png)
+![polygonscan setMany method](/images/polygonscan-setmany-method.png)
 
 Next, add the records you want to manage to the `keys` and `values` fields as a single value for the `set` method or array of values for the `setMany` method.
 
-![adding records with setmany](/images/adding-records-with-setmany.png)
+![adding records with setMany](/images/adding-records-with-setmany.png)
 
 :::info
 Please see the [Record Reference](../../getting-started/domain-registry-essentials/records-reference/) guide and [reference JSON](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json) file for all the resolver keys used by the Unstoppable Domains UNS Registry.
@@ -110,5 +110,5 @@ After signing the transaction, you can view its details on the blockchain explor
 ![polygonscan transaction details](/images/polygonscan-transaction-details.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 :::success
-Congratulations! You have successfully managed your Unstoppable Domain records using contracts.
+Congratulations! You have successfully managed your Unstoppable Domain records using contracts. Happy hacking!
 :::
