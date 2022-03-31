@@ -57,6 +57,3 @@ pages:
       - label: Resolve Domains with Ethereum Smart Contracts
         page: direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
-  - label: Developer Quests
-    page: unstoppable-quests.md
-    separatorLine: true

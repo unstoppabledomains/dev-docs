@@ -28,7 +28,7 @@ stylesheets:
 #  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
-  text: Contribute to this page
+  text: Edit to this page
   icon: static/images/github-mark-32px.png
 nav:
 
@@ -46,6 +46,9 @@ nav:
 
   - label: Toolkit
     page: developer-toolkit/index.md
+
+  - label: Contribute
+    page: contribute/unstoppable-quests.md
 
   - search: true
 

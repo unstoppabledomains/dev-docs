@@ -13,5 +13,5 @@ pages:
         page: dwebsite-examples.md 
     separatorLine: true
   - page: resolving-dwebsites-in-a-browser.md
-    label: Resolving Unstoppable D-Websites in a Browser
+    label: Resolving D-Websites in a Browser
     separatorLine: true

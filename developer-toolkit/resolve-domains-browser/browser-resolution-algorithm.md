@@ -1,7 +1,6 @@
 ---
-description: >-
-  This section explains how different domain record configurations should be
-  interpreted by browsers.
+title: Browser Resolution Algorithm
+description: This section explains how different domain record configurations should be interpreted by browsers.
 ---
 
 # Browser Resolution Algorithm

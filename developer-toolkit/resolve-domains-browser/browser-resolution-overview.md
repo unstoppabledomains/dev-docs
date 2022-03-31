@@ -1,7 +1,6 @@
 ---
-description: >-
-  This page provides a high level overview of how UD Resolution works when
-  resolving domains using a traditional HTTP Web Browser or a Dapp Browser.
+title: Browser Resolution Overview
+description: This page provides a high level overview of how UD Resolution works when resolving domains using a traditional HTTP Web Browser or a Dapp Browser.
 ---
 
 # How Browser Resolution Works

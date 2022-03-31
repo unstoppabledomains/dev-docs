@@ -1,11 +1,9 @@
 ---
-title: Resolving Unstoppable D-Websites in a Browser
-description: >-
-  This page reviews multiple options for resolving decentralized
-  websites in a browser.
+title: Resolving D-Websites in a Browser
+description: This page reviews multiple options for resolving decentralized websites in a browser.
 ---
 
-# Resolving Unstoppable D-Websites in a Browser
+# Resolving D-Websites in a Browser
 
 It will take some time for the IPFS website transaction to resolve on the blockchain after the transaction is signed with the user’s wallet. After the domain records are updated, the decentralized website will resolve in certain browsers and browser extensions.
 

@@ -1,0 +1,15 @@
+pages:
+  - page: unstoppable-quests.md
+    separatorLine: true
+  - label: Integration Quests
+    page: integration-quests.md
+    separatorLine: true
+  - label: Website Template Quests
+    page: template-quests.md
+    separatorLine: true
+  - label: Chainlink Verification Quests
+    page: chainlink-quests.md
+    separatorLine: true
+  - label: Content Quests
+    page: content-quests.md
+    separatorLine: true
