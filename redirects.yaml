@@ -1,0 +1,16 @@
+
+'/https://docs.unstoppabledomains.com/send-and-receive-crypto-payments/resolution-service-api/':
+  to: '/https://https://docs.unstoppabledomains.com/developer-toolkit/resolution-service-api/'
+  type: 301
+'/https://docs.unstoppabledomains.com/send-and-receive-crypto-payments/resolution-libraries/':
+  to: '/https://docs.unstoppabledomains.com/developer-toolkit/resolution-libraries/libraries-overview/'
+  type: 301
+'/https://docs.unstoppabledomains.com/send-and-receive-crypto-payments/resolution-libraries/library-configuration/':
+  to: '/https://docs.unstoppabledomains.com/developer-toolkit/resolution-libraries/libraries-overview/'
+  type: 301
+'/https://docs.unstoppabledomains.com/send-and-receive-crypto-payments/resolution-cli/':
+  to: '/https://docs.unstoppabledomains.com/developer-toolkit/resolution-cli/'
+  type: 301
+'/https://docs.unstoppabledomains.com/sell-domains-to-users-in-my-app/reseller-api-endpoints/':
+  to: '/https://docs.unstoppabledomains.com/reseller/reseller-api-endpoints/'
+  type: 301

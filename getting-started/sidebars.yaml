@@ -11,7 +11,7 @@ pages:
         page: test-domains/etherscan.md
       - label: Polygonscan
         page: test-domains/polygonscan.md
-      - label: UD Website Facuet
+      - label: UD Website Faucet
         page: test-domains/faucet.md
     separatorLine: true
   - group: Change Logs

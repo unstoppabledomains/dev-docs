@@ -24,8 +24,9 @@ import usecase from './static/images/use-case.png';
 
 export default LandingLayout;
 
+<NavBar location={props.location} standalone={false} />
+
 <Jumbotron>
-  <NavBar location={props.location} standalone={false} />
   <H1>Developer Documentation</H1>
   <H2>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
