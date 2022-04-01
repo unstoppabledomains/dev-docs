@@ -26,7 +26,12 @@ Impression mining allows anyone to become a micro-influencer for Unstoppable Dom
 
 Participants will simply snap a screenshot of their impression counts and submit to the intake form for a monthly payment in domain credits. Judging submissions is at the sole discretion of Unstoppable Domains. The reviewers reserve the right to cap a payment or deem an account ineligible for current or future rewards.
 
+<figure>
+
 ![Screenshot of impression counts](/images/quest-impression-mining.png)
+	
+<figcaption style="text-align: center">Screenshot of impression counts</figcaption>
+</figure>
 
 **Example**
 `ddwchen.crypto` brings receipts from 11 tweets about Unstoppable Domain or its products from July 2021 totaling 240k impressions; she is rewarded with $2.4k worth of domain credits.

@@ -27,7 +27,12 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Copy/paste the URL of the post to Goerli faucet to verify your identity.
 * Click the **Give Me Ether** button.
 
+<figure>
+
 ![Retrieve free Ether through the Goerli testnet faucet (Layer 1)](/images/goerli-faucet-free-ether.png)
+	
+<figcaption style="text-align: center">Retrieve free Ether through the Goerli testnet faucet (Layer 1)</figcaption>
+</figure>
 
 ## Step 3: Open the Etherscan Smart Contract Request
 
@@ -35,18 +40,33 @@ To calculate the transaction fee you'd like to target you can use services like 
 * To get a test domain on testnet, find the Smart Contract address in [reference table](domain-registry-essentials/cns-smart-contracts.md#freeminter).
 * Connect your wallet.
 
+<figure>
+
 ![How to locate the smart contract address in the reference table and connect your wallet](/images/etherscan-steps-test-domain.png)
+	
+<figcaption style="text-align: center">How to locate the smart contract address in the reference table and connect your wallet</figcaption>
+</figure>
 
 ## Step 4: Write the Etherscan Smart Contract Request
 
 * Enter the **suffix** for the domain in the claim -> label (string) field.
 * &#x20;Press the **Write** button to start the transaction.
 
+<figure>
+
 ![Select the domain suffix and click "Write" button to start the transaction](/images/step-3.png)
+	
+<figcaption style="text-align: center">Select the domain suffix and click "Write" button to start the transaction</figcaption>
+</figure>
 
 * Sign the transaction.
 
+<figure>
+
 ![Etherscan wallet signature page](/images/step-4-etherscan-claim-domain-small.png '#display=inline-block;padding=15px;width=30%;')![Etherscan error for insufficient funds](/images/step-4-1-etherscan-claim-domain-small.png '#display=inline-block;padding=15px;width=25%;')
+	
+<figcaption style="text-align: center">Etherscan wallet signature page</figcaption>
+</figure>
 
 :::danger
 If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.

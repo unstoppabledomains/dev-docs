@@ -19,11 +19,21 @@ You can upload and attach your d-website to your domain in a single step from th
 * Select **Manage** next to the domain you want to use
 * Select the **Website** tab
 
+<figure>
+
 ![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">How to locate the 'Website' tab under My Domains --> Manage</figcaption>
+</figure>
 
 * Upload your files to the **IPFS Uploader** and **Save Changes**
 
+<figure>
+
 ![Upload files using the IPFS Uploader, limited to 20MB per domain](/images/ipfs-file-uploader.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">Upload files using the IPFS Uploader, limited to 20MB per domain</figcaption>
+</figure>
 
 :::info
 For websites that exceed the 20MB file limit, we recommend using a dedicated pinning service, such as [Pinata](https://pinata.cloud) or [Temporal](https://temporal.cloud).
@@ -101,12 +111,22 @@ You can also upload your static site to IPFS using the Pinata website.
 * Go to [Pinata.cloud](https://pinata.cloud) and sign-up / sign-in.
 * Ensure the **Pin Manager** tab is selected and click **Upload**.
 
+<figure>
+
 ![Locate the Pin Manager tab for uploading files to Pinata.cloud](/images/pin-manager-pinata.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">Locate the Pin Manager tab for uploading files to Pinata.cloud</figcaption>
+</figure>
 
 * Then, click **Folder** and select the folder containing the website files you wish to upload.
 * When the upload is complete, the **IPFS CID** (or **IPFS hash**) will appear under the **Pin Manager** tab.
 
+<figure>
+
 ![Locate the IPFS Hash for your d-website in Pinata.cloud](/images/ipfs-hash-pinata-web-interface.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">Locate the IPFS Hash for your d-website in Pinata.cloud</figcaption>
+</figure>
 
 * Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](./#step-3-connect-your-ipfs-site-to-your-domain).
 

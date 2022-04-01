@@ -18,13 +18,23 @@ If you uploaded your website to IPFS externally, using [using an external servic
 * Select **Manage** next to the domain you want to use
 * Select the **Website** tab
 
+<figure>
+
 ![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">How to locate the 'Website' tab under My Domains --> Manage</figcaption>
+</figure>
 
 ## Step 2: Attach the IPFS Hash
 
 * Copy and paste the **IPFS hash** provided to you by the external IPFS Upload service
 
+<figure>
+
 ![How to update IPFS hash field for your domain](/images/add-ipfs-hash-mydomains.png '#display=block;width=60%;')
+	
+<figcaption style="text-align: center">How to update IPFS hash field for your domain</figcaption>
+</figure>
 
 ## Step 3: Save Your Changes
 

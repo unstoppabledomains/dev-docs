@@ -13,7 +13,12 @@ Most `Registry` and `Resolver` methods have meta-transaction support, which allo
 
 Meta-transactions work by having users sign function calls along with a nonce. They then send that signed function call over to a different party. That party calls the meta-transaction-enabled function on the `Registry` or `Resolver`. For most management methods, there is a method with meta-transaction support that has a `For` suffix at the end. The meta-transaction method then checks the permission for a domain against the address recovered from the signed message sent to the function, unlike the base method that checks it against the submitter of the transaction e.g. `msg.sender`.
 
+<figure>
+
 ![Example meta-transaction flow](/images/meta-transaction-2112.svg)
+	
+<figcaption style="text-align: center">Example meta-transaction flow</figcaption>
+</figure>
 
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
@@ -27,11 +32,21 @@ Meta transaction methods are bound to names via their nonce (instead of [Account
 
 The example below shows how replay attacks can be used to exploit domains:
 
+<figure>
+
 ![Replay attacks without nonces](/images/without-nonces-44233.svg)
+	
+<figcaption style="text-align: center">Replay attacks without nonces</figcaption>
+</figure>
 
 A nonce is simply a transaction counter for each token. This prevents replay attacks where a transfer of a token from `A` to `B` can be replayed by `B` over and over to continually revert the state of the name back to a previous state. This counter increments by 1 each time a state transition happens to a token. Token-based nonces can be used to prevent misordering of transactions in a more general sense as well. This prevents front running non-fungible assets and enables secure transaction batching.
 
+<figure>
+
 ![Valid and invalid transactions with nonces](/images/nonces-44233.svg)
+	
+<figcaption style="text-align: center">Valid and invalid transactions with nonces</figcaption>
+</figure>
 
 ## Meta transaction signature generation
 

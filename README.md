@@ -26,6 +26,8 @@ Clicking **Edit this page** at the upper right corner of any page on the documen
 
 3. When you're finished with your changes, enter your commit details, create a new branch, and start a pull request.
 
+---
+
 ## Redocly development environment
 
 To preview Redocly-specific features while editing, you will need to clone the respository and [install the Redocly developer portal](https://redocly.com/docs/developer-portal/installation/).

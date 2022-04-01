@@ -13,7 +13,12 @@ This guide only applies to `.zil` domains. For information on resolving .crypto 
 
 Here’s the finished product:
 
+<figure>
+
 ![Dynamic GIF showing the steps to resolve a .zil domain](/images/zil-resolve-dynamic-image.gif)
+	
+<figcaption style="text-align: center">Dynamic GIF showing the steps to resolve a .zil domain</figcaption>
+</figure>
 
 ## Initialize the Project Folder
 
@@ -362,7 +367,12 @@ displayResolution({
 
 We should see something like the following on successful resolution:
 
+<figure>
+
 ![Example of a successful domain resolution](/images/zil-successful-domain-resolution.png)
+	
+<figcaption style="text-align: center">Example of a successful domain resolution</figcaption>
+</figure>
 
 ## Set up Error Notifications
 

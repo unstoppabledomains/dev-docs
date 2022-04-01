@@ -7,9 +7,19 @@ description: This page describes the record architectures for CNS and UNS, recor
 
 For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. For UNS, domain records are managed via `RecordStorage`.
 
+<figure>
+
 ![CNS Records Architecture shows how resolvers are used to manage domain records](/images/record-architecture.png '#display=block;margin-left=auto;margin-right=auto;width=85%;')
+	
+<figcaption style="text-align: center">CNS Records Architecture shows how resolvers are used to manage domain records</figcaption>
+</figure>
+
+<figure>
 
 ![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+	
+<figcaption style="text-align: center">UNS Records Architecture shows how RecordStorage is used to manage domain records</figcaption>
+</figure>
 
 ## Domain Record Types
 

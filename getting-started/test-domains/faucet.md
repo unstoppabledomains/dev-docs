@@ -37,7 +37,12 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
 The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](../../login-with-unstoppable/login-integration-guides/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
+<figure>
+
 ![Configure options on Unstoppable website faucet](/images/website-faucet-options.png)
+	
+<figcaption style="text-align: center">Configure options on Unstoppable website faucet</figcaption>
+</figure>
 
 :::info
 If you don't know the recipient address, this information will be retrieved and populated for you after connecting your wallet to the transaction. Just click on **Mint Domain** to continue.

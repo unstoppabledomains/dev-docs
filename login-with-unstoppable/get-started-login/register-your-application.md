@@ -16,7 +16,12 @@ You can begin App development right away while waiting on application approval. 
 * **Go** to **** the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
 * **Review** the page and **Gather** all the necessary information before beginning the application process (application description, logo, website URL, etc.).
 
+<figure>
+
 ![Application Submission Page](/images/submit-your-application.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+	
+<figcaption style="text-align: center">Application Submission Page</figcaption>
+</figure>
 
 ## Step 2: Complete & Submit the Application
 
@@ -29,7 +34,12 @@ You can begin App development right away while waiting on application approval. 
   * **Blockchain:** must select **Ethereum** or **Polygon** for Login with Unstoppable integrations
   * **Website link:** the URL for your application, required
 
+<figure>
+
 ![Required fields to register application using Login with Unstoppable](/images/submit_your_application_login.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+	
+<figcaption style="text-align: center">Required fields to register application using Login with Unstoppable</figcaption>
+</figure>
 
 * **Submit** the application for review.
 
