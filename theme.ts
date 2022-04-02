@@ -15,7 +15,7 @@ export const theme = {
   colors: {
     tonalOffset: 0.3,
     primary: {
-      main: '#4d4b99',
+      main: '#0D67FE',
       light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
@@ -25,7 +25,7 @@ export const theme = {
     },
     text: {
       primary: '#424242',
-      secondary: '#4d4b99',
+      secondary: '#0D67FE',
     },
     // border: {
     //   dark: 'rgba(0,0,0, 0.15)',
@@ -62,13 +62,11 @@ export const theme = {
     },
    navbar: {
       main: ({ colors }) => colors.secondary.main,
-     //  gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.navbar.main),
-       contrastText: 'black'
+      contrastText: 'black'
      },
      footer: {
-       main: ({ colors }) => colors.primary.main,
-       gradient: ({ colors }) => darken(colors.tonalOffset / 2, colors.footer.main),
-      // contrastText: 'white'
+       main: '#E4E7EB',
+       contrastText: 'black'
      },
  //    buttonColor: {
  //     main: '#E4E7EB',
