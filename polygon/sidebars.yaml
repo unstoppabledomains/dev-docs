@@ -19,3 +19,9 @@ pages:
   - page: migration-faq.md
     label: Frequently Asked Questions
     separatorLine: true
+  - group: Configure Polygon for MetaMask
+    expanded: false
+    pages:
+      - page: add-polygon-to-metamask.md
+        label: Add Polygon Network to MetaMask Wallet
+    separatorLine: true

@@ -1,11 +1,11 @@
 ---
 title: Managing Domains Using Contracts
-description: This page covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
+description: This guide covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 ---
 
 # Managing Domains Using Contracts
 
-This page covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
+This guide covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 
 ## Step 1: Select a UNS Registry Smart Contract
 The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
@@ -20,45 +20,45 @@ The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#
 <figure>
 
 ![polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
-	
+
 <figcaption style="text-align: center">polygon testnet registry contract</figcaption>
 </figure>
 
 ## Step 2: Open the "Write as Proxy" Tab for the Registry Contract
 
-Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of the Registry contract.
+Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of the Registry contract:
 
 <figure>
 
 ![polygonscan contract tab](/images/polygonscan-contract-tab.png)
-	
+
 <figcaption style="text-align: center">polygonscan contract tab</figcaption>
 </figure>
 
-Next, navigate to the `Write as Proxy` tab under the `Contract` tab section.
+Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
 
 <figure>
 
 ![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png)
-	
+
 <figcaption style="text-align: center">polygonscan write as proxy tab</figcaption>
 </figure>
 
 ## Step 3: Connect Your Web3 Wallet
 
-Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect the wallet associated with the domain.
+Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect the wallet associated with the domain:
 
 <figure>
 
 ![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
-	
+
 <figcaption style="text-align: center">polygonscan connect wallet</figcaption>
 </figure>
 
 <figure>
 
 ![wallet provider list](/images/wallet-provider-list.png)
-	
+
 <figcaption style="text-align: center">wallet provider list</figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The 
 <figure>
 
 ![polygonscan setMany method](/images/polygonscan-setmany-method.png)
-	
+
 <figcaption style="text-align: center">polygonscan setMany method</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Next, add the records you want to manage to the `keys` and `values` fields as a 
 <figure>
 
 ![adding records with setMany](/images/adding-records-with-setmany.png)
-	
+
 <figcaption style="text-align: center">adding records with setMany</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ Please see the [Record Reference](../../getting-started/domain-registry-essentia
 
 ## Step 5: Generate the Namehash of the Domain
 
-You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of a domain using any of the resolution libraries or CLI. You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of a domain using any of the [resolution libraries](../../developer-toolkit/resolution-libraries/libraries-overview/) or [CLI](../../developer-toolkit/resolution-cli/). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -135,18 +135,18 @@ After generating the domain namehash, insert it into the `tokenId` field of the 
 <figure>
 
 ![adding domain namehash](/images/adding-domain-namehash.png)
-	
+
 <figcaption style="text-align: center">adding domain namehash</figcaption>
 </figure>
 
 ## Step 6: Execute the Contract
 
-Click the `Write` button to sign the transaction and execute the contract.
+Click the `Write` button to sign the transaction and execute the contract:
 
 <figure>
 
 ![metamask sign transaction](/images/metamask-sign-transaction.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
-	
+
 <figcaption style="text-align: center">metamask sign transaction</figcaption>
 </figure>
 
@@ -155,7 +155,7 @@ After signing the transaction, you can view its details on the blockchain explor
 <figure>
 
 ![polygonscan transaction details](/images/polygonscan-transaction-details.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
-	
+
 <figcaption style="text-align: center">polygonscan transaction details</figcaption>
 </figure>
 
