@@ -61,7 +61,7 @@ Click the `Save` button at the bottom of the screen to add the Polygon network t
 
 <figure>
 
-![successful metamask network adding](/images/successful-metamask-network-adding.png)
+![successful metamask network adding](/images/successful-metamask-network-adding.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
 
 <figcaption style="text-align: center">successful metamask network adding</figcaption>
 </figure>
