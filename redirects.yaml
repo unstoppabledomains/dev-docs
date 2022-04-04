@@ -13,3 +13,168 @@
 '/sell-domains-to-users-in-my-app/reseller-api-endpoints/':
   to: '/reseller/reseller-api-endpoints/'
   type: 301
+'/get-test-domain':
+  to: '/getting-started/test-domains/faucet/'
+  type: 301
+'/send-and-receive-crypto-payments/crypto-payments':
+  to: '/crypto-payments/'
+  type: 301
+'/send-and-receive-crypto-payments/direct-blockchain-calls':
+  to: '/developer-toolkit/direct-blockchain-calls/bc-overview/'
+  type: 301
+'/support-unstoppable-domains-in-a-web-browser/how-browser-resolution-works':
+  to: '/developer-toolkit/resolve-domains-browser/browser-resolution-overview/'
+  type: 301
+'/support-unstoppable-domains-in-a-web-browser/resolving-domains-in-web-applications':
+  to: '/developer-toolkit/resolve-domains-in-web-applications/'
+  type: 301
+'/support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm':
+  to: '/developer-toolkit/resolve-domains-browser/browser-resolution-algorithm/'
+  type: 301
+'/support-unstoppable-domains-in-a-web-browser/test-domains':
+  to: '/developer-toolkit/resolve-domains-browser/test-domains/'
+  type: 301
+'/allow-my-users-to-manage-existing-domains/managing-domain-ownership':
+  to: '/manage-domains/'
+  type: 301
+'/allow-my-users-to-manage-existing-domains/managing-domain-records':
+  to: '/manage-domains/managing-domain-records/'
+  type: 301
+'/allow-my-users-to-manage-existing-domains/meta-transactions':
+  to: '/manage-domains/delegating-transactions/'
+  type: 301
+'allow-my-users-to-manage-existing-domains/deploying-custom-resolver':
+  to: '/manage-domains/delegating-domain-management/'
+  type: 301
+'/sell-domains-to-users-in-my-app/register-as-reseller':
+  to: '/reseller/'
+  type: 301
+'/sell-domains-to-users-in-my-app/reseller-integration-guides':
+  to: '/reseller/reseller-integration-guides/reseller-pathways/'
+  type: 301
+'/sell-domains-to-users-in-my-app/error-codes-for-troubleshooting':
+  to: '/reseller/error-codes-for-troubleshooting/'
+  type: 301
+'/build-a-decentralized-website/overview-of-ipfs-and-d-web':
+  to: /d-websites/
+  type: 301
+'/build-a-decentralized-website/connecting-your-d-website-to-your-domain':
+  to: '/d-websites/connect-ipfs/'
+  type: 301
+'/build-a-decentralized-website/resolving-a-d-website-in-a-browser':
+  to: '/d-websites/resolving-dwebsites-in-a-browser/'
+  type: 301
+'/build-a-decentralized-website/examples-of-d-websites':
+  to: '/d-websites/dwebsite-examples/'
+  type: 301
+'/login-with-unstoppable/high-level-overview':
+  to: '/login-with-unstoppable/'
+  type: 301
+'/login-with-unstoppable/register-your-application':
+  to: '/login-with-unstoppable/get-started-login/register-your-application/'
+  type: 301
+'/login-with-unstoppable/login-client-configuration':
+  to: 'https://docs.unstoppabledomains.com/login-with-unstoppable/humanity-check/login-client-configuration/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides':
+  to: '/login-with-unstoppable/login-integration-guides/integration-pathways/'
+  type: 301
+'/login-with-unstoppable/login-ui-configuration':
+  to: '/login-with-unstoppable/login-integration-guides/login-ui-configuration/'
+  type: 301
+'/login-with-unstoppable/humanity-check-for-login':
+  to: '/login-with-unstoppable/humanity-check/humanity-check-for-login/'
+  type: 301
+'/login-with-unstoppable/scopes-for-login':
+  to: '/login-with-unstoppable/get-started-login/scopes-for-login/'
+  type: 301
+'/login-with-unstoppable/troubleshooting-guide':
+  to: '/login-with-unstoppable/troubleshoot/troubleshooting-guide/'
+  type: 301
+'/login-with-unstoppable/login-error-codes':
+  to: '/login-with-unstoppable/troubleshoot/login-error-codes/'
+  type: 301
+'/polygon-l2-network/polygon-high-level-overview':
+  to: '/polygon/'
+  type: 301
+'/polygon-l2-network/polygon-developer-integration':
+  to: '/polygon/polygon-migration-guide/'
+  type: 301
+'/polygon-l2-network/l1-ethereum-vs-l2-polygon-comparison':
+  to: '/polygon/'
+  type: 301
+'/domain-registry-essentials/uns-vs-cns-comparison':
+  to: '/getting-started/domain-registry-essentials/cns-uns-comparison/'
+  type: 301
+'/domain-registry-essentials/uns-smart-contracts':
+  to: '/developer-toolkit/smart-contracts/uns-smart-contracts/'
+  type: 301
+'/domain-registry-essentials/cns-smart-contracts':
+  to: '/developer-toolkit/smart-contracts/cns-smart-contracts/'
+  type: 301
+'/domain-registry-essentials/namehashing':
+  to: '/getting-started/domain-registry-essentials/namehashing/'
+  type: 301
+'domain-registry-essentials/resolving-domain-records':
+  to: '/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/'
+  type: 301
+'/domain-registry-essentials/records-reference':
+  to: '/getting-started/domain-registry-essentials/records-reference/'
+  type: 301
+'/domain-registry-essentials/uns-vs-cns-comparison/architecture-overview':
+  to: '/getting-started/domain-registry-essentials/cns-architecture-overview/'
+  type: 301
+'/domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview':
+  to: '/getting-started/domain-registry-essentials/uns-architecture-overview/'
+  type: 301
+'/sell-domains-to-users-in-my-app/reseller-integration-guides/stripe-payments-guide':
+  to: '/reseller/reseller-integration-guides/stripe-payments/'
+  type: 301
+'/sell-domains-to-users-in-my-app/reseller-integration-guides/coinbase-payments-guide':
+  to: '/reseller/reseller-integration-guides/coinbase-payments/'
+  type: 301
+'/sell-domains-to-users-in-my-app/reseller-integration-guides/claim-free-domains-guide':
+  to: '/reseller/reseller-integration-guides/claim-free-domains/'
+  type: 301
+'/sell-domains-to-users-in-my-app/reseller-integration-guides/redirect-url-payments-guide':
+  to: '/reseller/reseller-integration-guides/redirect-url-payments/'
+  type: 301
+'/build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website':
+  to: '/d-websites/build-website/#unstoppable-domains-templates'
+  type: 301
+'/build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website':
+  to: '/d-websites/build-website/'
+  type: 301
+'/login-with-unstoppable/high-level-overview/authentication-protocol':
+  to: '/login-with-unstoppable/login-protocols/authentication-protocol/'
+  type: 301
+'/send-and-receive-crypto-payments/direct-blockchain-calls/resolve-unstoppable-domain-names':
+  to: '/developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names/'
+  type: 301
+'/send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.zil-without-libraries':
+  to: '/developer-toolkit/direct-blockchain-calls/resolve-zil-without-libraries/'
+  type: 301
+'/allow-my-users-to-manage-existing-domains/managing-domain-ownership/domains-configuration':
+  to: '/manage-domains/domains-configuration/'
+  type: 301
+'/login-with-unstoppable/high-level-overview/authorization-server':
+  to: '/login-with-unstoppable/login-protocols/authorization-server/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/login-with-popup':
+  to: '/login-with-unstoppable/login-integration-guides/login-with-popup/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/login-without-popup':
+  to: '/login-with-unstoppable/login-integration-guides/login-without-popup/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/web3-react-guide':
+  to: '/login-with-unstoppable/login-integration-guides/web3-react-guide/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/web3-modal-guide':
+  to: '/login-with-unstoppable/login-integration-guides/web3-modal-guide/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/bnc-onboard-guide':
+  to: '/login-with-unstoppable/login-integration-guides/bnc-onboard-guide/'
+  type: 301
+'/login-with-unstoppable/login-integration-guides/node-js-server-guide':
+  to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
+  type: 301
