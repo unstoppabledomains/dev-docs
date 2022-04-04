@@ -11,31 +11,31 @@ This guide covers configuring the MetaMask wallet to support both Polygon mainne
 
 Navigate to the `Settings` tab in MetaMask:
 
-<figure>
+<figure align="center">
 
 ![metamask settings page](/images/metamask-settings-page.png '#width=50%')
 
-<figcaption style="text-align: center">metamask settings page</figcaption>
+<figcaption>metamask settings page</figcaption>
 </figure>
 
 Next, navigate to the `Networks` tab on the `Settings` page:
 
-<figure>
+<figure align="center">
 
 ![metamask network settings](/images/metamask-network-settings.png)
 
-<figcaption style="text-align: center">metamask network settings</figcaption>
+<figcaption>metamask network settings</figcaption>
 </figure>
 
 ## Step 2: Add the Polygon Network Details
 
 Click the `Add a network` button on the network settings page:
 
-<figure>
+<figure align="center">
 
 ![add network button](/images/add-network-button.png)
 
-<figcaption style="text-align: center">add network button</figcaption>
+<figcaption>add network button</figcaption>
 </figure>
 
 Then, fill the network configuration for the Polygon network you want to add (mainnet or testnet) into the fields displayed in MetaMask.
@@ -48,22 +48,22 @@ Then, fill the network configuration for the Polygon network you want to add (ma
 | Currency Symbol | MATIC | MATIC |
 | Block Explorer URL | https://polygonscan.com/ | https://mumbai.polygonscan.com |
 
-<figure>
+<figure align="center">
 
 ![network config fields](/images/network-config-fields.png)
 
-<figcaption style="text-align: center">network config fields</figcaption>
+<figcaption>network config fields</figcaption>
 </figure>
 
 ## Step 3: Save the Settings
 
 Click the `Save` button at the bottom of the screen to add the Polygon network to MetaMask:
 
-<figure>
+<figure align="center">
 
 ![successful metamask network adding](/images/successful-metamask-network-adding.png '#width=50%')
 
-<figcaption style="text-align: center">successful metamask network adding</figcaption>
+<figcaption>successful metamask network adding</figcaption>
 </figure>
 
 :::success

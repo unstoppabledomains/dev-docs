@@ -16,9 +16,6 @@ pages:
       - page: uns1-to-uns2.md
         label: UNS L1 to UNS L2--Domain Deposit Guide
     separatorLine: true
-  - page: migration-faq.md
-    label: Frequently Asked Questions
-    separatorLine: true
   - group: Configure Polygon for MetaMask
     expanded: false
     pages:
@@ -26,4 +23,7 @@ pages:
         label: Add Polygon Network to MetaMask Wallet
       - page: get-polygon-test-tokens.md
         label: Get Polygon Test Tokens
+    separatorLine: true
+  - page: migration-faq.md
+    label: Frequently Asked Questions
     separatorLine: true
