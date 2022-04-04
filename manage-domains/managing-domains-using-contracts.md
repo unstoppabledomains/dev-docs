@@ -30,7 +30,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![polygonscan contract tab](/images/polygonscan-contract-tab.png)
+![polygonscan contract tab](/images/polygonscan-contract-tab.png '#width=50%')
 
 <figcaption>polygonscan contract tab</figcaption>
 </figure>
@@ -39,7 +39,7 @@ Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
 
 <figure>
 
-![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png)
+![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png '#width=50%')
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
@@ -48,14 +48,14 @@ Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
 
 Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect the wallet associated with the domain:
 
-<figure>
+<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0;vertical-align:top">
 
 ![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
 
 <figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
-<figure>
+<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0">
 
 ![wallet provider list](/images/wallet-provider-list.png)
 
@@ -68,7 +68,7 @@ Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The 
 
 <figure>
 
-![polygonscan setMany method](/images/polygonscan-setmany-method.png)
+![polygonscan setMany method](/images/polygonscan-setmany-method.png '#width=50%')
 
 <figcaption>polygonscan setMany method</figcaption>
 </figure>

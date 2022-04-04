@@ -24,7 +24,7 @@ This error occurs when you try to resolve a domain record that does not exist, f
 
 <figure>
 
-![record not error](/images/record-not-found-error.png '#width=50%')
+![record not found error](/images/record-not-found-error.png '#width=50%')
 
 <figcaption>record not error</figcaption>
 </figure>
