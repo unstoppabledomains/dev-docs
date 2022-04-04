@@ -21,10 +21,12 @@ stylesheets:
   - ./static/css/main.css
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
   - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
-#analytics:
-  # ga:
-  # note that GA doesn't work in the development environment
-  #  trackingId: UA-45997213-1
+analytics:
+  ga:
+    head: false
+    trackingId: UA-120492152-2
+  gtm:
+    id: GTM-TXJK8HJ
 #scripts:
 #  - ./static/intercom.js
 editPage:
