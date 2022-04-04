@@ -1,3 +1,3 @@
-'/https://docs.unstoppabledomains.com/send-and-receive-crypto-payments/resolution-service-api/':
-  to: 'https://docs.unstoppabledomains.com/developer-toolkit/resolution-service-api/'
+'/send-and-receive-crypto-payments/resolution-service-api/':
+  to: '/developer-toolkit/resolution-service-api/'
   type: 301
