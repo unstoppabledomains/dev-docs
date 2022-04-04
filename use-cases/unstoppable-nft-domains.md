@@ -1,9 +1,9 @@
 ---
-title: Learning About Unstoppable Domains & NFTs
+title: Learn About Unstoppable Domains & NFTs
 description: This page outlines the use case for learning about Unstoppable NFT domains.
 ---
 
-# Learning About Unstoppable Domains & NFTs
+# Learn About Unstoppable Domains & NFTs
 This page outlines the use case for learning about Unstoppable NFT domains.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rs-lYFtwqds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
