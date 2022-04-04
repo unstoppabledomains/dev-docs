@@ -143,22 +143,22 @@ After generating the domain namehash, insert it into the `tokenId` field of the 
 
 Click the `Write` button to sign the transaction and execute the contract:
 
-<figure>
+<figure align="center">
 
-![metamask sign transaction](/images/metamask-sign-transaction.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![metamask sign transaction](/images/metamask-sign-transaction.png '#width=50%')
 
-<figcaption style="text-align: center">metamask sign transaction</figcaption>
+<figcaption>metamask sign transaction</figcaption>
 </figure>
 
 After signing the transaction, you can view its details on the blockchain explorer, like so:
 
-<figure>
+<figure align="center">
 
-![polygonscan transaction details](/images/polygonscan-transaction-details.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![polygonscan transaction details](/images/polygonscan-transaction-details.png '#width=50%')
 
-<figcaption style="text-align: center">polygonscan transaction details</figcaption>
+<figcaption>polygonscan transaction details</figcaption>
 </figure>
 
-:::success
-Congratulations! You have successfully managed your Unstoppable Domain records using contracts. Happy hacking!
+:::success Congratulations!
+You have successfully managed your Unstoppable Domain records using contracts. Happy hacking!
 :::

@@ -58,6 +58,6 @@ Verify the details of the faucet transaction (token, network, address) and click
 <figcaption>successful faucet request submission</figcaption>
 </figure>
 
-:::success
-Congratulations! You have successfully gotten test tokens for your wallet on the Polygon network. Happy hacking!
+:::success Congratulations!
+You have successfully gotten test tokens for your wallet on the Polygon network. Happy hacking!
 :::

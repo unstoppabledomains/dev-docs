@@ -66,6 +66,6 @@ Click the `Save` button at the bottom of the screen to add the Polygon network t
 <figcaption>successful metamask network adding</figcaption>
 </figure>
 
-:::success
-Congratulations! You have successfully configured your MetaMask wallet to support the Polygon network. Happy hacking!
+:::success Congratulations!
+You have successfully configured your MetaMask wallet to support the Polygon network. Happy hacking!
 :::
