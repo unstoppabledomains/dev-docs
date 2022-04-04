@@ -2,7 +2,7 @@ figure {
     text-align: center;
 }
 
-/* Redocly-generated img is wrapped in <p> tag, which adds start/end block margins */
+/* Redocly-generated img is wrapped in <p> tag, which adds block start/end margins */
 figure p {
     margin-block: 0;
 }
@@ -15,4 +15,12 @@ figure img {
 
 figcaption {
     color: #A0A0A0;
+}
+
+.one-third-inline-block {
+    vertical-align: top;
+    width: 33%;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
 }
