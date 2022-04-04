@@ -15,14 +15,14 @@ Head over to the [Polygon Faucet](https://faucet.polygon.technology/). It is a w
 
 Select `Mumbai` as the Polygon test network and `MATIC token` from the drop-down list of tokens you can receive from the faucet:
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0;vertical-align:top">
+<figure class="half-inline-block">
 
 ![faucet network selection](/images/faucet-network-selection.png)
 
 <figcaption>faucet network selection</figcaption>
 </figure>
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0">
+<figure class="half-inline-block">
 
 ![faucet token selection](/images/faucet-token-selection.png)
 
@@ -44,14 +44,14 @@ Enter your Polygon wallet address from MetaMask or any wallet client you use int
 
 Verify the details of the faucet transaction (token, network, address) and click on the `Confirm` button:
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0">
+<figure class="half-inline-block">
 
 ![faucet transaction confirmation](/images/faucet-transaction-confirmation.png)
 
 <figcaption>faucet transaction confirmation</figcaption>
 </figure>
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0">
+<figure class="half-inline-block">
 
 ![successful faucet request submission](/images/successful-faucet-request-submission.png)
 

@@ -24,3 +24,11 @@ figcaption {
     margin-left: 0;
     margin-right: 0;
 }
+
+.half-inline-block {
+    vertical-align: top;
+    width: 49%;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+}

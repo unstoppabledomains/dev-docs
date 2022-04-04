@@ -48,14 +48,14 @@ Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
 
 Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect the wallet associated with the domain:
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0;vertical-align:top">
+<figure class="half-inline-block">
 
 ![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
 
 <figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
-<figure style="width:49%;display:inline-block;margin-left:0;margin-right:0">
+<figure class="half-inline-block">
 
 ![wallet provider list](/images/wallet-provider-list.png)
 
