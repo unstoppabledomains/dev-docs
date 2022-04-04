@@ -31,7 +31,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 
 ![CNS Layer 1 contract address and tracker info](/images/cns-contract-verify.png)
 	
-<figcaption style="text-align: center">CNS Layer 1 contract address and tracker info</figcaption>
+<figcaption>CNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ## For UNS Layer 1
@@ -42,7 +42,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 
 ![UNS Layer 1 contract address and tracker info](/images/uns-contract-verify.png)
 	
-<figcaption style="text-align: center">UNS Layer 1 contract address and tracker info</figcaption>
+<figcaption>UNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ## Step 2: Verify Domain Ownership on CNS L1
@@ -60,7 +60,7 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 ![Animation showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.gif)
 	
-<figcaption style="text-align: center">Animation showing how to use the ownerOf function</figcaption>
+<figcaption>Animation showing how to use the ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Select a safeTransferFrom Option
@@ -76,7 +76,7 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
 
 ![safeTransferFrom Option 1 with 3 fields to complete](/images/cns-safe-transfer-option1.png)
 	
-<figcaption style="text-align: center">safeTransferFrom Option 1 with 3 fields to complete</figcaption>
+<figcaption>safeTransferFrom Option 1 with 3 fields to complete</figcaption>
 </figure>
 
 ### OPTION 2: safeTransferFrom function with four fields
@@ -90,7 +90,7 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
 
 ![safeTransferFrom Option 2 with 4 fields to complete](/images/cns-safe-transfer-option2.png)
 	
-<figcaption style="text-align: center">safeTransferFrom Option 2 with 4 fields to complete</figcaption>
+<figcaption>safeTransferFrom Option 2 with 4 fields to complete</figcaption>
 </figure>
 
 ## Step 4: Rewrite the Domain to UNS L1 Registry
@@ -101,7 +101,7 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
 
 ![Steps for writing the contract to CNS L1](/images/cns-write-contract-steps.png)
 	
-<figcaption style="text-align: center">Steps for writing the contract to CNS L1</figcaption>
+<figcaption>Steps for writing the contract to CNS L1</figcaption>
 </figure>
 
 * Select the **Write** button to rewrite or transfer the domain to the UNS Layer 1 registry.
@@ -117,7 +117,7 @@ If the ‘write’ button is grayed out, then scroll to the top of the page and 
 
 ![CNS L1 transaction details UI](/images/cns-transaction-details.png)
 	
-<figcaption style="text-align: center">CNS L1 transaction details UI</figcaption>
+<figcaption>CNS L1 transaction details UI</figcaption>
 </figure>
 
 ## Step 5: Verify Domain Transfer to UNS L1
@@ -131,7 +131,7 @@ It is recommended that you double-check the transaction status by verifying doma
 
 ![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](/images/uns-L1-check-owner.png)
 	
-<figcaption style="text-align: center">Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
+<figcaption>Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
 </figure>
 
 * Paste the **token ID** into the ‘ownerOf’ field.

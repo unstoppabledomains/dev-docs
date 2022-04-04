@@ -11,7 +11,7 @@ This guide covers configuring the MetaMask wallet to support both Polygon mainne
 
 Navigate to the `Settings` tab in MetaMask:
 
-<figure align="center">
+<figure>
 
 ![metamask settings page](/images/metamask-settings-page.png '#width=50%')
 
@@ -20,7 +20,7 @@ Navigate to the `Settings` tab in MetaMask:
 
 Next, navigate to the `Networks` tab on the `Settings` page:
 
-<figure align="center">
+<figure>
 
 ![metamask network settings](/images/metamask-network-settings.png)
 
@@ -31,7 +31,7 @@ Next, navigate to the `Networks` tab on the `Settings` page:
 
 Click the `Add a network` button on the network settings page:
 
-<figure align="center">
+<figure>
 
 ![add network button](/images/add-network-button.png)
 
@@ -48,7 +48,7 @@ Then, fill the network configuration for the Polygon network you want to add (ma
 | Currency Symbol | MATIC | MATIC |
 | Block Explorer URL | https://polygonscan.com/ | https://mumbai.polygonscan.com |
 
-<figure align="center">
+<figure>
 
 ![network config fields](/images/network-config-fields.png)
 
@@ -59,7 +59,7 @@ Then, fill the network configuration for the Polygon network you want to add (ma
 
 Click the `Save` button at the bottom of the screen to add the Polygon network to MetaMask:
 
-<figure align="center">
+<figure>
 
 ![successful metamask network adding](/images/successful-metamask-network-adding.png '#width=50%')
 

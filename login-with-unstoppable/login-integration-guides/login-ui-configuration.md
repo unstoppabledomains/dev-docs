@@ -71,7 +71,7 @@ new UAuth(uauthOptions).user().then().catch()
 
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
-<figure align="center">
+<figure>
 
 ![UI Example for displaying authenticated user](/images/third-UI-example-login-domains.png '#width=50%')
 
@@ -86,11 +86,27 @@ Before launching your application, you should verify the login flow that users w
 You must adjust the configuration in the [Login Client](../humanity-check/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanity_check-scope-mark-stylecolorredbetamark).
 :::
 
-<figure align="center">
+<figure style="width:33%;display:inline-block;margin:0;">
 
-![1) User Clicks Login with Unstoppable button to get started](/images/login-domains-modal1.png '#display=inline-block;padding=0px;width=33%;') ![2) User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png '#display=inline-block;padding=0px;width=33%;') ![3) User Consent screen details the scopes being requested by dApp](/images/consent-screen-marked-v2.png '#display=inline-block;padding=0px;width=33%;')
+![1) User Clicks Login with Unstoppable button to get started](/images/login-domains-modal1.png)
 
-<figcaption>1) User Clicks Login with Unstoppable button to get started</figcaption>
+<figcaption>Modal 1</figcaption>
+</figure>
+
+
+<figure style="width:33%;display:inline-block;margin:0;">
+
+![2)User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png) 
+
+<figcaption>Modal 2</figcaption>
+</figure>
+
+
+<figure style="width:33%;display:inline-block;margin:0;">
+
+![3) User Consent screen details the scopes being requested by dApp](/images/consent-screen-marked-v2.png)
+
+<figcaption>Modal 3</figcaption>
 </figure>
 
 The modals are further described below:

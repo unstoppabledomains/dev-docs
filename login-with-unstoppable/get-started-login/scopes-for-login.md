@@ -21,9 +21,9 @@ The scopes requested by an application varies depending on the type of user data
 
 <figure>
 
-![Example scope list presented to UD users](/images/consent-screen-marked-v2.png '#display=block;margin-left=auto;margin-right=auto;width=40%;')
+![Example scope list presented to UD users](/images/consent-screen-marked-v2.png '#width=40%;')
 	
-<figcaption style="text-align: center">Example scope list presented to UD users</figcaption>
+<figcaption>Example scope list presented to UD users</figcaption>
 </figure>
 
 Login with Unstoppable supports the following scopes which are detailed below:&#x20;
@@ -66,9 +66,9 @@ The Login with Unstoppable **email:optional** scope is used to retrieve metadata
 
 <figure>
 
-![UI for email:optional scope](/images/email_optional_scope-small.jpg '#display=block;margin-left=auto;margin-right=auto;width=30%;')
+![UI for email:optional scope](/images/email_optional_scope-small.jpg '#width=30%;')
 	
-<figcaption style="text-align: center">UI for email:optional scope</figcaption>
+<figcaption>UI for email:optional scope</figcaption>
 </figure>
 
 ## humanity_check Scope <mark style="color:red;">`BETA`</mark>
@@ -81,7 +81,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 
 ![UI for Humanity Check, can be used for any identity provider, including Persona](/images/humanity-check-optional.png '#display=inline-block;padding=0px;width=33%;') ![Getting Started UI screen for Persona](/images/persona_getting_started.png '#display=inline-block;padding=0px;width=33%;') ![Upload Drivers License UI screen for Persona](/images/persona_front_drivers_license.png '#display=inline-block;padding=0px;width=33%;')
 	
-<figcaption style="text-align: center">UI for Humanity Check, can be used for any identity provider, including Persona</figcaption>
+<figcaption>UI for Humanity Check, can be used for any identity provider, including Persona</figcaption>
 </figure>
 
 See the [Humanity Check for Login](humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.

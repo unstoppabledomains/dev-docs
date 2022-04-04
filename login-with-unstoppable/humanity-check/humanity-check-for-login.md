@@ -32,14 +32,14 @@ Persona asks users to take a photo of their government-issued ID and a few selfi
 
 <figure>
 
-![Persona UI for uploading government ID](/images/persona_upload_photo_id.png '#display=inline-block;padding=0px;width=33%;') ![Persona UI for uploading live photos or selfies](/images/persona_live_photo_capture.png '#display=inline-block;padding=0px;width=33%;') ![Persona UI after identity verification is complete](/images/persona_congratuations.png '#display=inline-block;padding=0px;width=33%;')
+![Persona UI for uploading government ID](/images/persona_upload_photo_id.png '#width=33%;') ![Persona UI for uploading live photos or selfies](/images/persona_live_photo_capture.png '#width=33%;') ![Persona UI after identity verification is complete](/images/persona_congratuations.png '#width=33%;')
 	
-<figcaption style="text-align: center">Persona UI for uploading government ID</figcaption>
+<figcaption>Persona UI for uploading government ID</figcaption>
 </figure>
 
 ## Humanity Check Configuration
 
-Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity check scope](scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark) to their Login with Unstoppable configuration.&#x20;
+Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity check scope](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark) to their Login with Unstoppable configuration.
 
 :::info
 For the moment, Login with Unstoppable only allows applications to request the Humanity Check identifier, but additional scopes will be added in future releases to allow applications to request more personal data (i.e., name, address, country, location, etc.).&#x20;

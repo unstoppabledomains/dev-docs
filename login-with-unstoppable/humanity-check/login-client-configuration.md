@@ -25,7 +25,7 @@ const uauthConfig = {
 
 The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
 
-<figure align="center">
+<figure>
 
 ![Login client configuration complete example](/images/login-client-config.gif '#width=70%')
 
@@ -41,7 +41,7 @@ The default configuration for the Login Client works right out of the box for lo
   * Click the trash can ![trashcan](/images/trashcan_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to delete or remove a client from your account.
   * Click **Create Client** button to add a new client.
 
-<figure align="center">
+<figure>
 
 ![My Clients UI screen for adding, removing, and configuring applications](/images/new_my_clients_screen_markup.png '#width=50%')
 
@@ -52,7 +52,7 @@ The default configuration for the Login Client works right out of the box for lo
 
 The **Client Metadata** section includes the unique client ID, client secret, and redirect URIs. Developers can also download metadata for the existing client configuration and rotate the client secret from within this sub-section.
 
-<figure align="center">
+<figure>
 
 ![Client Configuration Metadata UI](/images/client_config_screen_metadata.png '#width=50%')
 
@@ -79,7 +79,7 @@ The **Cosmetic Configuration** allows developers to customize the UI to improve 
 All URIs must use the same origin name (e.g., `unstoppabledomains.com`) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
 :::
 
-<figure align="center">
+<figure>
 
 ![Client Configuration UI, Cosmetic Config section](/images/client_config_screen_cosmetic.png '#width=50%')
 
@@ -104,7 +104,7 @@ The **Advanced Configuration** includes options for CORS, audience URIs, grant t
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
 :::
 
-<figure align="center">
+<figure>
 
 ![Client Configuration UI, Advanced Config section](/images/client_config_screen_advanced.png '#width=50%')
 

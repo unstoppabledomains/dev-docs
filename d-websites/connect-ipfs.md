@@ -20,9 +20,9 @@ If you uploaded your website to IPFS externally, using [using an external servic
 
 <figure>
 
-![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#display=block;width=60%;')
+![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#width=60%;')
 	
-<figcaption style="text-align: center">How to locate the 'Website' tab under My Domains --> Manage</figcaption>
+<figcaption>How to locate the 'Website' tab under My Domains --> Manage</figcaption>
 </figure>
 
 ## Step 2: Attach the IPFS Hash
@@ -31,9 +31,9 @@ If you uploaded your website to IPFS externally, using [using an external servic
 
 <figure>
 
-![How to update IPFS hash field for your domain](/images/add-ipfs-hash-mydomains.png '#display=block;width=60%;')
+![How to update IPFS hash field for your domain](/images/add-ipfs-hash-mydomains.png '#width=60%;')
 	
-<figcaption style="text-align: center">How to update IPFS hash field for your domain</figcaption>
+<figcaption>How to update IPFS hash field for your domain</figcaption>
 </figure>
 
 ## Step 3: Save Your Changes

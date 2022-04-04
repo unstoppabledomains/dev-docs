@@ -11,9 +11,9 @@ The following diagram shows the general process that takes place between the Res
 
 <figure>
 
-![Success flow for claiming free domains with UD](/images/free-domain-claiming-success-flow.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Success flow for claiming free domains with UD](/images/free-domain-claiming-success-flow.png '#width=80%;')
 	
-<figcaption style="text-align: center">Success flow for claiming free domains with UD</figcaption>
+<figcaption>Success flow for claiming free domains with UD</figcaption>
 </figure>
 
 ## Step 1: Retrieve the Secret Key for Authentication
@@ -23,9 +23,9 @@ The following diagram shows the general process that takes place between the Res
 
 <figure>
 
-![Location of Reseller API Token when enabled in the Reseller Dashboard](/images/reseller-api-secret.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Location of Reseller API Token when enabled in the Reseller Dashboard](/images/reseller-api-secret.png '#width=80%;')
 	
-<figcaption style="text-align: center">Location of Reseller API Token when enabled in the Reseller Dashboard</figcaption>
+<figcaption>Location of Reseller API Token when enabled in the Reseller Dashboard</figcaption>
 </figure>
 
 ## Step 2: Setup Criteria for Free Domains
@@ -38,9 +38,9 @@ The table below shows how the pricing tiers are structured at UD. Most free doma
 
 <figure>
 
-![Pricing tiers for UD domains](/images/domain-pricing-tiers.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Pricing tiers for UD domains](/images/domain-pricing-tiers.png '#width=80%;')
 	
-<figcaption style="text-align: center">Pricing tiers for UD domains</figcaption>
+<figcaption>Pricing tiers for UD domains</figcaption>
 </figure>
 
 :::info info

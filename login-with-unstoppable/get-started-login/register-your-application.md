@@ -18,9 +18,9 @@ You can begin App development right away while waiting on application approval. 
 
 <figure>
 
-![Application Submission Page](/images/submit-your-application.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+![Application Submission Page](/images/submit-your-application.png '#width=70%;')
 	
-<figcaption style="text-align: center">Application Submission Page</figcaption>
+<figcaption>Application Submission Page</figcaption>
 </figure>
 
 ## Step 2: Complete & Submit the Application
@@ -36,9 +36,9 @@ You can begin App development right away while waiting on application approval. 
 
 <figure>
 
-![Required fields to register application using Login with Unstoppable](/images/submit_your_application_login.png '#display=block;margin-left=auto;margin-right=auto;width=70%;')
+![Required fields to register application using Login with Unstoppable](/images/submit_your_application_login.png '#width=70%;')
 	
-<figcaption style="text-align: center">Required fields to register application using Login with Unstoppable</figcaption>
+<figcaption>Required fields to register application using Login with Unstoppable</figcaption>
 </figure>
 
 * **Submit** the application for review.

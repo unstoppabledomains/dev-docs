@@ -15,7 +15,7 @@ In this tutorial, we will look at resolving Unstoppable Domains, using nothing b
 
 ![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
 	
-<figcaption style="text-align: center">Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)</figcaption>
+<figcaption>Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)</figcaption>
 </figure>
 
 To resolve an unstoppable domain, we will need to
@@ -385,7 +385,7 @@ If we are successful, we should see the following on our page:
 
 ![Example of a successful resolution](/images/example-successful-resolution.png)
 	
-<figcaption style="text-align: center">Example of a successful resolution</figcaption>
+<figcaption>Example of a successful resolution</figcaption>
 </figure>
 
 ## Set-up Error Notifications

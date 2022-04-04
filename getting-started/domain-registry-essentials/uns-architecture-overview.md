@@ -27,7 +27,7 @@ UNS has one single smart contract, the `Registry`. The same `Registry` contract 
 
 ![Registry and RecordStorage interaction](/images/uns-architecture.png)
 	
-<figcaption style="text-align: center">Registry and RecordStorage interaction</figcaption>
+<figcaption>Registry and RecordStorage interaction</figcaption>
 </figure>
 
 Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](namehashing.md).
@@ -38,7 +38,7 @@ Each ERC-721 token can be identified by a unique number, its `tokenId`. To make 
 
 ![Big picture overview of UNS Smart Contract Architecture](/images/uns-smart-contract-architecture.png)
 	
-<figcaption style="text-align: center">Big picture overview of UNS Smart Contract Architecture</figcaption>
+<figcaption>Big picture overview of UNS Smart Contract Architecture</figcaption>
 </figure>
 
 ### Registry

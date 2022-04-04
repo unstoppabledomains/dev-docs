@@ -26,7 +26,7 @@ This guide covers the process for depositing a domain from UNS Layer 1 to UNS La
 
 ![UNS Layer 1 contract address and tracker info](/images/uns-contract-verify.png)
 	
-<figcaption style="text-align: center">UNS Layer 1 contract address and tracker info</figcaption>
+<figcaption>UNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ## For UNS Layer 2
@@ -37,7 +37,7 @@ This guide covers the process for depositing a domain from UNS Layer 1 to UNS La
 
 ![UNS Layer 2 contract address and tracker info](/images/uns-L2-contract-verify.png)
 	
-<figcaption style="text-align: center">UNS Layer 2 contract address and tracker info</figcaption>
+<figcaption>UNS Layer 2 contract address and tracker info</figcaption>
 </figure>
 
 ## Step 2: Verify Domain Ownership on UNS L1
@@ -55,7 +55,7 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 ![UNS Layer 1 ownerOf function](/images/uns_ownership.gif)
 	
-<figcaption style="text-align: center">UNS Layer 1 ownerOf function</figcaption>
+<figcaption>UNS Layer 1 ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Rewrite the Domain to UNS Registry
@@ -66,7 +66,7 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 ![depositToPolygon function on UNS Layer 1](/images/deposit-to-polygon.png)
 	
-<figcaption style="text-align: center">depositToPolygon function on UNS Layer 1</figcaption>
+<figcaption>depositToPolygon function on UNS Layer 1</figcaption>
 </figure>
 
 * Enter the **tokenID** of the domain you want to deposit to the UNS L2 registry (i.e., the same tokenID that you verified in Step 2 above).
@@ -90,7 +90,7 @@ It is recommended that you double-check the transaction status by verifying doma
 
 ![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](/images/uns-L1-check-owner.png)
 	
-<figcaption style="text-align: center">Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
+<figcaption>Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
 </figure>
 
 * Paste the **token ID** into the ‘ownerOf’ field.

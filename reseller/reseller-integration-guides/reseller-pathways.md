@@ -23,9 +23,9 @@ To integrate free domain claiming or paid domain claiming (via Stripe, Coinbase,
 
 <figure>
 
-![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png '#width=80%;')
 	
-<figcaption style="text-align: center">Location of ResellerID in UD Reseller Dashboard</figcaption>
+<figcaption>Location of ResellerID in UD Reseller Dashboard</figcaption>
 </figure>
 
 ## Step 3: Choose Your Integration Path

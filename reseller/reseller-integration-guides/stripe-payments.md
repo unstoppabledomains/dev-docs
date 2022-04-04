@@ -15,9 +15,9 @@ The following diagram shows the general process that takes place between Stripe 
 
 <figure>
 
-![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#width=80%;')
 	
-<figcaption style="text-align: center">Payment flow for pre-paid domain purchases, such as Stripe</figcaption>
+<figcaption>Payment flow for pre-paid domain purchases, such as Stripe</figcaption>
 </figure>
 
 ## Step 1: Create a Stripe Account
@@ -37,18 +37,18 @@ The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains wh
 
 <figure>
 
-![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#width=80%;')
 	
-<figcaption style="text-align: center">Strive Live and Stripe Test payment setup areas</figcaption>
+<figcaption>Strive Live and Stripe Test payment setup areas</figcaption>
 </figure>
 
 * After clicking the Stripe Live or Stripe Test **Connect Button**, you will be walked through the Stripe Integrations form.
 
 <figure>
 
-![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#width=80%;')
 	
-<figcaption style="text-align: center">Stripe integrations form to connect your Stripe and UD accounts</figcaption>
+<figcaption>Stripe integrations form to connect your Stripe and UD accounts</figcaption>
 </figure>
 
 * Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe Dashboard.
@@ -65,9 +65,9 @@ Stripe generates a token ID for each transaction, which is later used by UD to p
 
 <figure>
 
-![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#width=80%;')
 	
-<figcaption style="text-align: center">Button selection for tracking Stripe payouts</figcaption>
+<figcaption>Button selection for tracking Stripe payouts</figcaption>
 </figure>
 
 :::info
@@ -80,9 +80,9 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 
 <figure>
 
-![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#width=80%;')
 	
-<figcaption style="text-align: center">Main/default view of Stripe Payouts (i.e., payouts tab) </figcaption>
+<figcaption>Main/default view of Stripe Payouts (i.e., payouts tab) </figcaption>
 </figure>
 
 ### Stripe Accounts Tab
@@ -91,9 +91,9 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 
 <figure>
 
-![View of Stripe Account information (i.e., account tab)](/images/25.png '#display=block;margin-left=auto;margin-right=auto;width=80%;')
+![View of Stripe Account information (i.e., account tab)](/images/25.png '#width=80%;')
 	
-<figcaption style="text-align: center">View of Stripe Account information (i.e., account tab)</figcaption>
+<figcaption>View of Stripe Account information (i.e., account tab)</figcaption>
 </figure>
 
 :::success Congratulations!

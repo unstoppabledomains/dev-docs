@@ -5,7 +5,7 @@ description: This page provides a high-level overview of the Login with Unstoppa
 
 # Login with Unstoppable Overview
 
-<figure align="center">
+<figure>
 
 ![Login with Unstoppable Promo](/images/login-promo.png)
 
@@ -20,7 +20,7 @@ Login with Unstoppable gives users and applications a simple way to solve this p
 Login with Unstoppable is currently configured for users to share the email address associated with their UD account. Future updates will allow users to share other metadata such as social profiles and community memberships with their login, as well as receive direct requests from applications to share specialized information.
 :::
 
-<figure align="center">
+<figure>
 
 ![User flow for Login with Unstoppable](/images/login-with-unstoppable-flow-revised.png '#width=50%')
 

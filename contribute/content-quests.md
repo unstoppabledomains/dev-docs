@@ -30,7 +30,7 @@ Participants will simply snap a screenshot of their impression counts and submit
 
 ![Screenshot of impression counts](/images/quest-impression-mining.png)
 	
-<figcaption style="text-align: center">Screenshot of impression counts</figcaption>
+<figcaption>Screenshot of impression counts</figcaption>
 </figure>
 
 **Example**

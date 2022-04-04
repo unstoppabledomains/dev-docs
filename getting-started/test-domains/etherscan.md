@@ -31,7 +31,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 ![Retrieve free Ether through the Goerli testnet faucet (Layer 1)](/images/goerli-faucet-free-ether.png)
 	
-<figcaption style="text-align: center">Retrieve free Ether through the Goerli testnet faucet (Layer 1)</figcaption>
+<figcaption>Retrieve free Ether through the Goerli testnet faucet (Layer 1)</figcaption>
 </figure>
 
 ## Step 3: Open the Etherscan Smart Contract Request
@@ -44,7 +44,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 ![How to locate the smart contract address in the reference table and connect your wallet](/images/etherscan-steps-test-domain.png)
 	
-<figcaption style="text-align: center">How to locate the smart contract address in the reference table and connect your wallet</figcaption>
+<figcaption>How to locate the smart contract address in the reference table and connect your wallet</figcaption>
 </figure>
 
 ## Step 4: Write the Etherscan Smart Contract Request
@@ -56,7 +56,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 ![Select the domain suffix and click "Write" button to start the transaction](/images/step-3.png)
 	
-<figcaption style="text-align: center">Select the domain suffix and click "Write" button to start the transaction</figcaption>
+<figcaption>Select the domain suffix and click "Write" button to start the transaction</figcaption>
 </figure>
 
 * Sign the transaction.
@@ -65,7 +65,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 ![Etherscan wallet signature page](/images/step-4-etherscan-claim-domain-small.png '#display=inline-block;padding=15px;width=30%;')![Etherscan error for insufficient funds](/images/step-4-1-etherscan-claim-domain-small.png '#display=inline-block;padding=15px;width=25%;')
 	
-<figcaption style="text-align: center">Etherscan wallet signature page</figcaption>
+<figcaption>Etherscan wallet signature page</figcaption>
 </figure>
 
 :::danger

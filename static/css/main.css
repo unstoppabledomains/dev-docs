@@ -1,0 +1,18 @@
+figure {
+    text-align: center;
+}
+
+/* Redocly-generated img is wrapped in <p> tag, which adds start/end block margins */
+figure p {
+    margin-block: 0;
+}
+
+/*
+figure img {
+    border: 1px solid lightgrey;
+}
+*/
+
+figcaption {
+    color: #A0A0A0;
+}

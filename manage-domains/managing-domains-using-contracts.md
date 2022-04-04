@@ -21,7 +21,7 @@ The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#
 
 ![polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
 
-<figcaption style="text-align: center">polygon testnet registry contract</figcaption>
+<figcaption>polygon testnet registry contract</figcaption>
 </figure>
 
 ## Step 2: Open the "Write as Proxy" Tab for the Registry Contract
@@ -32,7 +32,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ![polygonscan contract tab](/images/polygonscan-contract-tab.png)
 
-<figcaption style="text-align: center">polygonscan contract tab</figcaption>
+<figcaption>polygonscan contract tab</figcaption>
 </figure>
 
 Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
@@ -41,7 +41,7 @@ Next, navigate to the `Write as Proxy` tab under the `Contract` tab section:
 
 ![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png)
 
-<figcaption style="text-align: center">polygonscan write as proxy tab</figcaption>
+<figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
 
 ## Step 3: Connect Your Web3 Wallet
@@ -52,14 +52,14 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 ![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
 
-<figcaption style="text-align: center">polygonscan connect wallet</figcaption>
+<figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
 <figure>
 
 ![wallet provider list](/images/wallet-provider-list.png)
 
-<figcaption style="text-align: center">wallet provider list</figcaption>
+<figcaption>wallet provider list</figcaption>
 </figure>
 
 ## Step 4: Manage the Domain Records
@@ -70,7 +70,7 @@ Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The 
 
 ![polygonscan setMany method](/images/polygonscan-setmany-method.png)
 
-<figcaption style="text-align: center">polygonscan setMany method</figcaption>
+<figcaption>polygonscan setMany method</figcaption>
 </figure>
 
 Next, add the records you want to manage to the `keys` and `values` fields as a single value for the `set` method or array of values for the `setMany` method.
@@ -79,7 +79,7 @@ Next, add the records you want to manage to the `keys` and `values` fields as a 
 
 ![adding records with setMany](/images/adding-records-with-setmany.png)
 
-<figcaption style="text-align: center">adding records with setMany</figcaption>
+<figcaption>adding records with setMany</figcaption>
 </figure>
 
 :::info
@@ -136,14 +136,14 @@ After generating the domain namehash, insert it into the `tokenId` field of the 
 
 ![adding domain namehash](/images/adding-domain-namehash.png)
 
-<figcaption style="text-align: center">adding domain namehash</figcaption>
+<figcaption>adding domain namehash</figcaption>
 </figure>
 
 ## Step 6: Execute the Contract
 
 Click the `Write` button to sign the transaction and execute the contract:
 
-<figure align="center">
+<figure>
 
 ![metamask sign transaction](/images/metamask-sign-transaction.png '#width=50%')
 
@@ -152,7 +152,7 @@ Click the `Write` button to sign the transaction and execute the contract:
 
 After signing the transaction, you can view its details on the blockchain explorer, like so:
 
-<figure align="center">
+<figure>
 
 ![polygonscan transaction details](/images/polygonscan-transaction-details.png '#width=50%')
 

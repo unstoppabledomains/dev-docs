@@ -17,7 +17,7 @@ Here’s the finished product:
 
 ![Dynamic GIF showing the steps to resolve a .zil domain](/images/zil-resolve-dynamic-image.gif)
 	
-<figcaption style="text-align: center">Dynamic GIF showing the steps to resolve a .zil domain</figcaption>
+<figcaption>Dynamic GIF showing the steps to resolve a .zil domain</figcaption>
 </figure>
 
 ## Initialize the Project Folder
@@ -371,7 +371,7 @@ We should see something like the following on successful resolution:
 
 ![Example of a successful domain resolution](/images/zil-successful-domain-resolution.png)
 	
-<figcaption style="text-align: center">Example of a successful domain resolution</figcaption>
+<figcaption>Example of a successful domain resolution</figcaption>
 </figure>
 
 ## Set up Error Notifications

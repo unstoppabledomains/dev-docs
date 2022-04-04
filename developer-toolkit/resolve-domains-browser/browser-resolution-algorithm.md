@@ -7,9 +7,9 @@ description: This section explains how different domain record configurations sh
 
 <figure>
 
-[![Diagram shows how to Resolve DWeb by direct read from Ethereum](</images/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network.png> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network.png)
+[![Diagram shows how to Resolve DWeb by direct read from Ethereum](</images/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network.png> '#width=75%')](/images/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network.png)
 	
-<figcaption style="text-align: center">Diagram shows how to Resolve DWeb by direct read from Ethereum</figcaption>
+<figcaption>Diagram shows how to Resolve DWeb by direct read from Ethereum</figcaption>
 </figure>
 
 A browser can select the supported protocol. If a domain is configured for multiple protocols, it should prioritize a protocol based on `browser.preferred_protocols` record that can be set to a list of the defined protocols. 
@@ -31,9 +31,9 @@ Generally, browsers automatically add `http://` prefix for any domain in the add
 
 <figure>
 
-[![Process diagram depicting entire browser resolution algorithm](</images/browser\_resolution\_algorithm.svg> '#display=block;margin-left=auto;margin-right=auto;width=75%')](/images/browser\_resolution\_algorithm.svg)
+[![Process diagram depicting entire browser resolution algorithm](</images/browser\_resolution\_algorithm.svg> '#width=75%')](/images/browser\_resolution\_algorithm.svg)
 	
-<figcaption style="text-align: center">Process diagram depicting entire browser resolution algorithm</figcaption>
+<figcaption>Process diagram depicting entire browser resolution algorithm</figcaption>
 </figure>
 
 ## Browser resolution records

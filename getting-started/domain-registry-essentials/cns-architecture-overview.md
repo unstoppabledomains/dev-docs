@@ -27,7 +27,7 @@ The two central components of CNS are its `Registry` and `Resolver` smart contra
 
 ![Relation between Registry and Resolver smart contracts](/images/registry_resolver_relation-22231.svg)
 	
-<figcaption style="text-align: center">Relation between Registry and Resolver smart contracts</figcaption>
+<figcaption>Relation between Registry and Resolver smart contracts</figcaption>
 </figure>
 
 There is only one `Registry` smart contract deployed in the Ethereum Mainnet, but there are many versions of `Resolver` smart contracts. In theory, every domain could use a different `Resolver` contract but in practice the majority of domains are managed by the same `Resolver` smart contract instance (like Resolver 1 in the example above).
@@ -48,7 +48,7 @@ This flow describes how the CNS `Registry` and `Resolvers` interact.
 
 ![Interaction between CNS Registry ad Resolvers](/images/smart-contract-architecture-administration-44233.svg)
 	
-<figcaption style="text-align: center">Interaction between CNS Registry ad Resolvers</figcaption>
+<figcaption>Interaction between CNS Registry ad Resolvers</figcaption>
 </figure>
 
 ### Registry

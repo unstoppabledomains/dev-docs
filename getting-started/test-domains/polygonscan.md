@@ -26,7 +26,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ![Configure network settings in MetaMask to use Polygonscan domains (Layer 2)](/images/configure-metamask-polygonscan.png)
 	
-<figcaption style="text-align: center">Configure network settings in MetaMask to use Polygonscan domains (Layer 2)</figcaption>
+<figcaption>Configure network settings in MetaMask to use Polygonscan domains (Layer 2)</figcaption>
 </figure>
 
 ## Step 2. Get free MATIC tokens from Polygon Faucet
@@ -40,7 +40,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ![Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)](/images/polygon-free-matic-tokens.png)
 	
-<figcaption style="text-align: center">Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)</figcaption>
+<figcaption>Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)</figcaption>
 </figure>
 
 ## Step 3: Locate the TLD namehash for Polygon
@@ -98,7 +98,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](/images/polygonscan-claim-to-records.png)
 	
-<figcaption style="text-align: center">Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
+<figcaption>Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
 </figure>
 
 * Click the **Write** button to start the transaction.&#x20;

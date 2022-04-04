@@ -13,7 +13,7 @@ Here are best practices to ensure the proper integration of the Unstoppable Doma
 
 Always display the resolved crypto address near the domain name for additional security. Doing this helps the user of your application to detect and avoid Man-in-the-middle (MITM) attacks aimed to replace the payment address with the attacker's own.
 
-<figure align="center">
+<figure>
 
 ![preview of resolved address near domain name](/images/successful-domain-resolving.png '#width=50%')
 

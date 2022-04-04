@@ -13,11 +13,11 @@ Still confused about how it works? If you own the `ryan.crypto` domain and a use
 
 Domain resolution is the process of converting a human-readable domain name like `ryan.crypto` to the cryptocurrency addresses attached to them. It involves retrieving a domain’s records through [smart contracts](../developer-toolkit/smart-contracts/uns-smart-contracts/) deployed on the blockchain.
 
-<figure align="center">
+<figure>
 
 ![successful domain resolving example](/images/successful-domain-resolving.png '#width=50%')
 
-<figcaption style="text-align: center">successful domain resolving example</figcaption>
+<figcaption>Successful domain resolving example</figcaption>
 </figure>
 
 ## How Domain Resolution Works
@@ -28,7 +28,7 @@ In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application 
 
 ![the crypto payments success flow diagram](/images/crypto-payments-success-flow.png)
 
-<figcaption style="text-align: center">the crypto payments success flow diagram</figcaption>
+<figcaption>Crypto payments success flow</figcaption>
 </figure>
 
 :::attention info

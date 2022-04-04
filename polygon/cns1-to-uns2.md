@@ -29,7 +29,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 
 ![CNS Layer 1 contract address and tracker info](/images/cns-contract-verify.png)
 	
-<figcaption style="text-align: center">CNS Layer 1 contract address and tracker info</figcaption>
+<figcaption>CNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ## For UNS Layer 1
@@ -40,7 +40,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 
 ![UNS Layer 1 contract address and tracker info](/images/uns-contract-verify.png)
 	
-<figcaption style="text-align: center">UNS Layer 1 contract address and tracker info</figcaption>
+<figcaption>UNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ## For UNS Layer 2
@@ -51,7 +51,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 
 ![UNS Layer 2 contract address and tracker info](/images/uns-L2-contract-verify.png)
 	
-<figcaption style="text-align: center">UNS Layer 2 contract address and tracker info</figcaption>
+<figcaption>UNS Layer 2 contract address and tracker info</figcaption>
 </figure>
 
 ## Step 2: Verify Domain Ownership on CNS L1
@@ -69,7 +69,7 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 ![Animation showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.gif)
 	
-<figcaption style="text-align: center">Animation showing how to use the ownerOf function</figcaption>
+<figcaption>Animation showing how to use the ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Rewrite the Domain to UNS Registry
@@ -80,7 +80,7 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 ![safeTransferFrom function with 4 fields to complete](/images/cns-safe-transfer-option2.png)
 	
-<figcaption style="text-align: center">safeTransferFrom function with 4 fields to complete</figcaption>
+<figcaption>safeTransferFrom function with 4 fields to complete</figcaption>
 </figure>
 
 * Complete the ```safeTransferFrom``` fields: from, to, tokenId, _data.
@@ -108,7 +108,7 @@ It is recommended that you double-check the transaction status by verifying doma
 
 ![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](/images/uns-L1-check-owner.png)
 	
-<figcaption style="text-align: center">Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
+<figcaption>Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
 </figure>
 
 * Paste the **token ID** into the ‘ownerOf’ field.

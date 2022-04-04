@@ -41,7 +41,7 @@ The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathw
 
 ![Configure options on Unstoppable website faucet](/images/website-faucet-options.png)
 	
-<figcaption style="text-align: center">Configure options on Unstoppable website faucet</figcaption>
+<figcaption>Configure options on Unstoppable website faucet</figcaption>
 </figure>
 
 :::info
