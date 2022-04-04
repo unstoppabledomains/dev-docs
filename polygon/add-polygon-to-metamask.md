@@ -13,7 +13,7 @@ Navigate to the `Settings` tab in MetaMask:
 
 <figure>
 
-![metamask settings page](/images/metamask-settings-page.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![metamask settings page](/images/metamask-settings-page.png '#width=50%')
 
 <figcaption style="text-align: center">metamask settings page</figcaption>
 </figure>
@@ -61,7 +61,7 @@ Click the `Save` button at the bottom of the screen to add the Polygon network t
 
 <figure>
 
-![successful metamask network adding](/images/successful-metamask-network-adding.png '#display=block;margin-left=auto;margin-right=auto;width=50%;')
+![successful metamask network adding](/images/successful-metamask-network-adding.png '#width=50%')
 
 <figcaption style="text-align: center">successful metamask network adding</figcaption>
 </figure>
