@@ -13,7 +13,7 @@ This integration guide shows you how to add Login to Unstoppable to your applica
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the Client ID and Client Secret from your [credentials](../get-started-login/login-client-configuration.md).
+* Add the Client ID and Client Secret from your [credentials](../humanity-check/login-client-configuration.md).
 * Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
 * Add the [​​](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23)redirect URI that the auth server will redirect back to after every authorization attempt.
 
@@ -32,12 +32,12 @@ const uauth = new UAuth({
 ```
 
 :::danger
-The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../login-client-configuration.md) Guide for details).
+The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../humanity-check/login-client-configuration.md) Guide for details).
 :::
 
 ## Step 2: Create a Login Button
 
-Next, you will call the `uauth.login()` function to initiate a UAuth login. The function should be called upon clicking the login button. Features of this method include:&#x20;
+Next, you will call the `uauth.login()` function to initiate a UAuth login. The function should be called upon clicking the login button. Features of this method include:
 
 1. Exposes modal to allow users to select domain.
 2. Queries the blockchain to find if an auth server has been configured otherwise uses fallback.

@@ -86,7 +86,7 @@ Before launching your application, you should verify the login flow that users w
 You must adjust the configuration in the [Login Client](../humanity-check/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanity_check-scope-mark-stylecolorredbetamark).
 :::
 
-<figure style="width:33%;display:inline-block;margin:0;">
+<figure style="width:33%;display:inline-block;margin-left:0;margin-right:0;">
 
 ![1) User Clicks Login with Unstoppable button to get started](/images/login-domains-modal1.png)
 
@@ -94,7 +94,7 @@ You must adjust the configuration in the [Login Client](../humanity-check/login-
 </figure>
 
 
-<figure style="width:33%;display:inline-block;margin:0;">
+<figure style="width:33%;display:inline-block;margin-left:0;margin-right:0;">
 
 ![2)User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png) 
 
@@ -102,7 +102,7 @@ You must adjust the configuration in the [Login Client](../humanity-check/login-
 </figure>
 
 
-<figure style="width:33%;display:inline-block;margin:0;">
+<figure style="width:33%;display:inline-block;margin-left:0;margin-right:0;">
 
 ![3) User Consent screen details the scopes being requested by dApp](/images/consent-screen-marked-v2.png)
 

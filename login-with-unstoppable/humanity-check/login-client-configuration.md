@@ -7,7 +7,7 @@ description: This guide covers the process for configuring the Login with Unstop
 
 :::warning
 This application process configures **BETA** credentials for applications wanting to test Humanity Check early.
-For normal production credentials please see [Register Your Application](register-your-application.md).
+For normal production credentials please see [Register Your Application](../get-started-login/register-your-application.md).
 :::
 
 :::info
@@ -23,7 +23,7 @@ const uauthConfig = {
 }
 ```
 
-The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
+The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](../get-started-login/login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
 
 <figure>
 
@@ -153,13 +153,13 @@ All authorization code requests or flows must use the PKCE extension. This only 
 
 ### Scopes
 
-All [scopes](scopes-for-login.md) are turned on by default. To limit the scopes that the application can request, simply uncheck or disable those scopes.
+All [scopes](../get-started-login/scopes-for-login.md) are turned on by default. To limit the scopes that the application can request, simply uncheck or disable those scopes.
 
-* **wallet** maps to the [wallet scope](scopes-for-login.md#wallet-scope)
-* **email** maps to the [email scope](scopes-for-login.md#email-scope)
-* **email:optional** maps to the [email:optional scope](scopes-for-login.md#emailoptional-scope)
-* **humanity_check** maps to the [humanity_check scope](scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark)
-* **humanity_check:optional** maps to the [humanity_check:optional scope](scopes-for-login.md#humanitycheckoptional-scope-mark-style"colorred"betamark)
+* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet-scope)
+* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
+* **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
+* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark)
+* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanitycheckoptional-scope-mark-style"colorred"betamark)
 
 ### Token Endpoint Authentication Method
 
@@ -181,7 +181,7 @@ This setting configures how to send the client secret to the authorization serve
 You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application requires a wallet connection and signature.
 
 :::info reminder
-Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](login-client-configuration.md#step-2-client-metadata-configuration) section.
+Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](#step-2-client-metadata-configuration) section.
 :::
 
 :::success Congratulations!

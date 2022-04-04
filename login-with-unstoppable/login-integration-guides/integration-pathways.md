@@ -11,11 +11,11 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 ## Step 1: Register Your Application
 
-Before beginning the integration process for Login with Unstoppable, you must register your application with Unstoppable Domains and obtain your client credentials. Please see the [**Register Your Application Guide**](../get-started-login/register-your-application.md) **** for more details.
+Before beginning the integration process for Login with Unstoppable, you must register your application with Unstoppable Domains and obtain your client credentials. Please see the [**Register Your Application Guide**](../get-started-login/register-your-application.md) for more details.
 
 ## Step 2: Configure the Login Client
 
-Next, you will configure your application using the My Clients and Client Configuration pages. Please see the [**Login Client Configuration Guide**](../get-started-login/login-client-configuration.md) **** for more details.
+Next, you will configure your application using the My Clients and Client Configuration pages. Please see the [**Login Client Configuration Guide**](../humanity-check/login-client-configuration.md) for more details.
 
 ## Step 3: Choose Your Integration Path
 
