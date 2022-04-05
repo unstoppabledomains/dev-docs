@@ -14,18 +14,6 @@ pages:
       - label: UD Website Faucet
         page: test-domains/faucet.md
     separatorLine: true
-  - group: Change Logs
-    expanded: false
-    pages:
-      - label: Resolution Library
-        page: change-logs/resolution-changelog.md
-      - label: Resolution Java Library
-        page: change-logs/resolution-java-changelog.md
-      - label: Resolution Swift Library
-        page: change-logs/resolution-swift-changelog.md
-      - label: Resolution Go Library
-        page: change-logs/resolution-go-changelog.md
-    separatorLine: true
   - group: Domain Registry Essentials
     expanded: false
     pages:
@@ -39,4 +27,19 @@ pages:
         page: domain-registry-essentials/namehashing.md
       - label: Records Reference
         page: domain-registry-essentials/records-reference.md
+    separatorLine: true
+  - page: glossary.md
+    label: Documentation Glossary
+    separatorLine: true
+  - group: Change Logs
+    expanded: false
+    pages:
+      - label: Resolution Library
+        page: change-logs/resolution-changelog.md
+      - label: Resolution Java Library
+        page: change-logs/resolution-java-changelog.md
+      - label: Resolution Swift Library
+        page: change-logs/resolution-swift-changelog.md
+      - label: Resolution Go Library
+        page: change-logs/resolution-go-changelog.md
     separatorLine: true
