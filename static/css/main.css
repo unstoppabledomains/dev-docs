@@ -1,4 +1,6 @@
 figure {
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
 }
 
@@ -14,6 +16,7 @@ figure img {
 */
 
 figcaption {
+    font-size: 16px;
     color: #A0A0A0;
 }
 
