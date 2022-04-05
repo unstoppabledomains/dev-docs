@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /~/
+Disallow: /cdn-cgi/
+
+Sitemap: https://docs.unstoppabledomains.com/sitemap.xml
