@@ -27,7 +27,8 @@ analytics:
     trackingId: UA-120492152-2
   gtm:
     id: GTM-TXJK8HJ
-#scripts:
+scripts:
+  - ./static/scripts/external-target-blank.js
 #  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
