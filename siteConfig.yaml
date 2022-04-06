@@ -28,7 +28,7 @@ analytics:
   gtm:
     id: GTM-TXJK8HJ
 scripts:
-  - ./static/scripts/external-target-blank.js
+  - ./static/scripts/etlb.js
 #  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
