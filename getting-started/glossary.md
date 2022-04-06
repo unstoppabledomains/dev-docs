@@ -19,10 +19,11 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 * Consensus - An algorithm that aims to make decentralized record-keeping more similar to a centralized database. It is a state of agreement among the nodes on a blockchain and is required to confirm new transactions and add new blocks to the blockchain.
 * CNS (Crypto Naming Service) - The original Unstoppable Domains naming service that handles .crypto domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
+* Custody - A service where a third party (like a brokerage) holds an asset on behalf of a client.
 
 ### D
 
-* Dapp (Decentralized Application) - An application built on open-source code that lives on the blockchain. Dapps exist independent of centralized groups or figures and often incentivize users to maintain them through rewarded tokens.
+* DApp (Decentralized Application) - An application built on open-source code that lives on the blockchain. Dapps exist independent of centralized groups or figures and often incentivize users to maintain them through rewarded tokens.
 * Decentralized - A system operated by a distributed, peer-to-peer network instead of a central authority figure.
 * DNS (Domain Naming Service) - The hierarchical and decentralized naming system used to identify computers, services, and other resources reachable through the Internet or other Internet Protocol networks.
 * Domain Endings - Also known as TLD or domain extension, is the last segment of a domain name or the part that follows immediately after the `dot` symbol, i.e., `.crypto`, `.nft`, `.x`.
@@ -37,6 +38,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### G
 
+* Gas - A fee paid by a user to conduct a transaction or execute a smart contract on the Ethereum blockchain. This fee is dependent upon the transaction’s complexity as well as the current demand on the network.
 * GUI (Graphical User Interface) -  A user interface that allows users to interact with electronic devices through graphical icons and audio indicators such as primary notation instead of text-based user interfaces, typed command labels, or text navigation.
 
 ### I
@@ -52,11 +54,13 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 * Mainnet (Main Network) - This is a main layer 1 blockchain instead of a testnet or layer 2 solutions.
 * Minting - The process of validating information, such as domain ownership, and registering that onto the blockchain.
+* Multi-signature - This is a special type of digital signature scheme where there can be multiple signers for a single digital signature. A multi-signature or multisig transaction is only valid if it is signed by a set threshold of participants, just like some legal documents require a co-signer.
 
 ### N
 
 * NFT (Non-Fungible Token) - A digital certificate of authenticity used to assign and verify ownership of a unique digital or physical asset. Unlike fungible tokens, NFTs are not interchangeable with one another.
 * NFT Domains - The domain names minted on the blockchain which allow people to govern their data, set their Web3 username, take control of their digital worlds, and harness the power of the internet.
+* Node - A node is a device that participates in a network by following the network protocol. Individual nodes can perform a variety of roles, such as caching data, validating information, or forwarding messages to other nodes.
 
 ### O
 
