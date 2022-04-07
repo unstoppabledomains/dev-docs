@@ -19,7 +19,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Consensus**: An algorithm that aims to make decentralized record-keeping more similar to a centralized database. It is a state of agreement among the nodes on a blockchain and is required to confirm new transactions and add new blocks to the blockchain.
 
-**Crypto Naming Service (CNS)**: The original Unstoppable Domains naming service that handles .crypto domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
+**Crypto Naming Service (CNS)**: The naming service that handles `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
 
 **Custody**: A service where a third party (like a brokerage) holds an asset on behalf of a client.
 
@@ -119,7 +119,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **User Interface (UI)**: This is how the user and a computer system interact, particularly the use of input devices and software.
 
-**Unstoppable Naming Service (UNS)**: This is the naming service used by Unstoppable Domains to handle the minting of NFT domains on the blockchain. It is built on the Ethereum (L1) and Polygon (L2) blockchains.
+**Unstoppable Naming Service (UNS)**: This is the naming service that handles the minting and management of NFT domains on the Ethereum (L1) and Polygon (L2) blockchains.
 
 ### W
 
