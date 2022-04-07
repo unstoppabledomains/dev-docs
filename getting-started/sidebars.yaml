@@ -41,5 +41,5 @@ pages:
         page: change-logs/resolution-go-changelog.md
     separatorLine: true
   - page: glossary.md
-    label: Documentation Glossary
+    label: Glossary
     separatorLine: true
