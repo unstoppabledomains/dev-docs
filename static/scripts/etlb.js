@@ -1,7 +1,7 @@
 function eltb_click_callback(event) {
     let link = null;
     // Handle click event targets that are children of the <a> tag we want to check
-    for (let path_element of event.path) {
+    for (let path_element of event.composedPath()) {
         if (path_element.tagName == "A") {
             link = path_element;
             break;
