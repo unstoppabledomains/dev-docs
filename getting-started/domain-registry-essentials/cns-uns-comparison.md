@@ -5,7 +5,7 @@ description: This page provides a high level overview of the differences between
 
 # UNS vs CNS Comparison
 
-## Table. High Level Differences between CNS and UNS
+## High Level Differences between CNS and UNS
 
 | CNS                                                                | UNS                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |

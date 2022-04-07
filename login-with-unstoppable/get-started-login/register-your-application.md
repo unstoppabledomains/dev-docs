@@ -13,13 +13,13 @@ You can begin App development right away while waiting on application approval. 
 
 ## Step 1: Go to the Application Submission Page
 
-* **Go** to **** the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
+* **Go** to the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
 * **Review** the page and **Gather** all the necessary information before beginning the application process (application description, logo, website URL, etc.).
 
 <figure>
 
 ![Application Submission Page](/images/submit-your-application.png '#width=70%;')
-	
+
 <figcaption>Application Submission Page</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ You can begin App development right away while waiting on application approval. 
 <figure>
 
 ![Required fields to register application using Login with Unstoppable](/images/submit_your_application_login.png '#width=70%;')
-	
+
 <figcaption>Required fields to register application using Login with Unstoppable</figcaption>
 </figure>
 

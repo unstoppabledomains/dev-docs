@@ -7,7 +7,7 @@ description: >-
 
 # Authorization Server
 
-In order for an OpenID Connect Relying Party to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).&#x20;
+In order for an OpenID Connect Relying Party (RP) to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).&#x20;
 
 Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery). With Login with Unstoppable, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
 

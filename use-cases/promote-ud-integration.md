@@ -9,7 +9,7 @@ Let's get your questions answered about UD Integrations.
 
 ## Where can I find a list of UD integrations?
 
-You can find registered apps on the Unstoppable Domains [homepage](https://unstoppabledomains.com) and [Applications](https://unstoppabledomains.com/apps) page. This free advertising puts your app in front of tens of thousands of potential customers per day.
+You can find registered apps on the Unstoppable Domains [Homepage](https://unstoppabledomains.com) and [Applications](https://unstoppabledomains.com/apps) page. This free advertising puts your app in front of tens of thousands of potential customers per day.
 
 ## How do I register my application with UD?
 

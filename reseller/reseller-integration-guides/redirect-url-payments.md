@@ -34,10 +34,10 @@ type AdditionalParameters = {
 
 ### Request URL
 
-The request URL is likely to change. In addition to the message parameters, the URL should contain signature=\<HMAC signature string> parameter.
+The request URL is likely to change. In addition to the message parameters, the URL should contain `signature=<HMAC signature string>` parameter.
 
 ```bash
-curl -X GET https://unstoppabledomains.com/search?ref=ffsdd4234&searchTerm=buyadomain.crypto&timestamp=1638960015&resellerName=blockchaincom&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=8ab46b082c1b256c2e92347c8d90c11c923bf7b0e802d13b53bcecb28d6b6269 
+curl -X GET https://unstoppabledomains.com/search?ref=ffsdd4234&searchTerm=buyadomain.crypto&timestamp=1638960015&resellerName=blockchaincom&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=8ab46b082c1b256c2e92347c8d90c11c923bf7b0e802d13b53bcecb28d6b6269
 ```
 
 :::info
@@ -82,9 +82,9 @@ type MessageToSign = {
 // backend forms the HMAC authorization
 function signMessage(message: MessageToSign): string {
 	const secret = 'pre-shared-secret'; // pre-shared secret
-  // to ensure hash consistency between parties 
+  // to ensure hash consistency between parties
   // message should be sorted in aplhabetical order
-  const sortedMessage = deepSortObject(message); 
+  const sortedMessage = deepSortObject(message);
 	const hash = hmacsha256(JSON.stringify(sortedMessage), secret);
 	const signature = hash.toString();
 	return signature;

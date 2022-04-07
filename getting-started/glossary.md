@@ -9,7 +9,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### A
 
-**API (Application Programming Interface)**: A set of protocols, procedures, and tools that allow two applications to communicate with each other.
+**Application Programming Interface (API)**: A set of protocols, procedures, and tools that allow two applications to communicate with each other.
 
 ### B
 
@@ -19,25 +19,25 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Consensus**: An algorithm that aims to make decentralized record-keeping more similar to a centralized database. It is a state of agreement among the nodes on a blockchain and is required to confirm new transactions and add new blocks to the blockchain.
 
-**CNS (Crypto Naming Service)**: The original Unstoppable Domains naming service that handles .crypto domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
+**Crypto Naming Service (CNS)**: The original Unstoppable Domains naming service that handles .crypto domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
 
 **Custody**: A service where a third party (like a brokerage) holds an asset on behalf of a client.
 
 ### D
 
-**DApp (Decentralized Application)**: An application built on open-source code that lives on the blockchain. Dapps exist independent of centralized groups or figures and often incentivize users to maintain them through rewarded tokens.
+**Decentralized Application (DApp)**: Also known as Decentralized Website (D-Website), is an application or website built on open-source code that lives on the blockchain. DApps exist independent of centralized groups or figures and often incentivize users to maintain them through rewarded tokens.
 
 **Decentralized**: A system operated by a distributed, peer-to-peer network instead of a central authority figure.
 
-**DNS (Domain Naming Service)**: The hierarchical and decentralized naming system used to identify computers, services, and other resources reachable through the Internet or other Internet Protocol networks.
+**Domain Naming Service (DNS)**: The hierarchical and decentralized naming system used to identify computers, services, and other resources reachable through the Internet or other Internet Protocol networks.
 
 **Domain Endings**: Also known as TLD or domain extension, is the last segment of a domain name or the part that follows immediately after the `dot` symbol, i.e., `.crypto`, `.nft`, `.x`.
 
 ### E
 
-**EIP (Ethereum Improvement Proposal)**: The standard format for presenting a new feature or process to the Ethereum community.
+**Ethereum Improvement Proposal (EIP)**: The standard format for presenting a new feature or process to the Ethereum community.
 
-**ERC (Ethereum Request for Comments)**: The standard smart contract outline on which Ethereum-based smart contracts are built.
+**Ethereum Request for Comments (ERC)**: The standard smart contract outline on which Ethereum-based smart contracts are built.
 
 **ERC-20**: The Ethereum token standard, providing a standardized smart contract structure for fungible tokens.
 
@@ -49,21 +49,21 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Gas**: A fee paid by a user to conduct a transaction or execute a smart contract on the Ethereum blockchain. This fee is dependent upon the transaction’s complexity as well as the current demand on the network.
 
-**GUI (Graphical User Interface)**:  A user interface that allows users to interact with electronic devices through graphical icons and audio indicators such as primary notation instead of text-based user interfaces, typed command labels, or text navigation.
+**Graphical User Interface (GUI)**:  A user interface that allows users to interact with electronic devices through graphical icons and audio indicators such as primary notation instead of text-based user interfaces, typed command labels, or text navigation.
 
 ### I
 
-**IPFS (InterPlanetary File System)**: A protocol and peer-to-peer network for storing and accessing files, websites, applications, and data in a distributed file system.
+**InterPlanetary File System (IPFS)**: A protocol and peer-to-peer network for storing and accessing files, websites, applications, and data in a distributed file system.
 
 ### L
 
-**L1 (Layer 1)**: The blockchain platform itself, also referred to as the base layer, mainchain, or mainnet, i.e., Bitcoin, Ethereum, Cardano, Litecoin, Solana, Polkadot.
+**Layer 1 (L1)**: The blockchain platform itself, also referred to as the base layer, mainchain, or mainnet, i.e., Bitcoin, Ethereum, Cardano, Litecoin, Solana, Polkadot.
 
-**L2 (Layer 2)**: Protocols, also called solutions, that are built on top of a layer 1 blockchain and are commonly used to improve scalability, privacy, and cross-chain communication. Unlike sidechains, which use their consensus mechanisms, layer 2 solutions are secured by their underlying mainchain, i.e., Lightning Network, Optimism, Arbitrum.
+**Layer 2 (L2)**: Protocols, also called solutions, that are built on top of a layer 1 blockchain and are commonly used to improve scalability, privacy, and cross-chain communication. Unlike sidechains, which use their consensus mechanisms, layer 2 solutions are secured by their underlying mainchain, i.e., Lightning Network, Optimism, Arbitrum.
 
 ### M
 
-**Mainnet (Main Network)**: This is a main layer 1 blockchain instead of a testnet or layer 2 solutions.
+**Main Network (Mainnet)**: This is a main layer 1 blockchain instead of a testnet or layer 2 solutions.
 
 **Minting**: The process of validating information, such as domain ownership, and registering that onto the blockchain.
 
@@ -71,7 +71,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### N
 
-**NFT (Non-Fungible Token)**: A digital certificate of authenticity used to assign and verify ownership of a unique digital or physical asset. Unlike fungible tokens, NFTs are not interchangeable with one another.
+**Non-Fungible Token (NFT)**: A digital certificate of authenticity used to assign and verify ownership of a unique digital or physical asset. Unlike fungible tokens, NFTs are not interchangeable with one another.
 
 **NFT Domains**: The domain names minted on the blockchain which allow people to govern their data, set their Web3 username, take control of their digital worlds, and harness the power of the internet.
 
@@ -83,11 +83,11 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### P
 
-**P2P (Peer-to-Peer)**: A distributed network of two or more computers that interact directly without a central server or entity.
+**Peer-to-Peer (P2P)**: A distributed network of two or more computers that interact directly without a central server or entity.
 
-**PoS (Proof of Stake)**: A consensus mechanism that requires nodes, called validators, to stake a set amount of cryptocurrency on the blockchain to verify transactions and mint blocks. If a validator approves fraudulent transactions, the network will slash a portion of its stake.
+**Proof of Stake (PoS)**: A consensus mechanism that requires nodes, called validators, to stake a set amount of cryptocurrency on the blockchain to verify transactions and mint blocks. If a validator approves fraudulent transactions, the network will slash a portion of its stake.
 
-**PoW (Proof of Work)**: A consensus mechanism that requires miners to complete complex mathematical puzzles in order to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
+**Proof of Work (PoW)**: A consensus mechanism that requires miners to complete complex mathematical puzzles in order to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
 
 **Private Key**: An alphanumeric passcode required to withdraw assets from a blockchain wallet and authorize digital transactions. Because these private keys are long and difficult to memorize, wallets will associate them with a seed or recovery phrase that is easier to remember.
 
@@ -109,17 +109,17 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### T
 
-**Testnet (Test Network)**: A software environment that mimics a mainnet blockchain. It is used to test network upgrades and smart contracts before deploying them to the mainnet.
+**Test Network (Testnet)**: A software environment that mimics a mainnet blockchain. It is used to test network upgrades and smart contracts before deploying them to the mainnet.
 
 **Transaction**: This is data written to a blockchain and are verified by nodes on the network and then broadcast to other nodes. Once enough nodes have verified the transaction, it is considered valid and added to a block.
 
 ### U
 
-**UD**: Unstoppable Domains.
+**UD**: Short for Unstoppable Domains.
 
-**UI (User Interface)**: This is how the user and a computer system interact, particularly the use of input devices and software.
+**User Interface (UI)**: This is how the user and a computer system interact, particularly the use of input devices and software.
 
-**UNS (Unstoppable Naming Service)**: This is the naming service used by Unstoppable Domains to handle the minting of NFT domains on the blockchain. It is built on the Ethereum (L1) and Polygon (L2) blockchains.
+**Unstoppable Naming Service (UNS)**: This is the naming service used by Unstoppable Domains to handle the minting of NFT domains on the blockchain. It is built on the Ethereum (L1) and Polygon (L2) blockchains.
 
 ### W
 
@@ -135,4 +135,4 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### Z
 
-**ZNS (Zilliqa Naming Service)**: This is the Unstoppable Domains naming service that handles `.zil` domains on the Zilliqa mainnet.
+**Zilliqa Naming Service (ZNS)**: This is the naming service that handles `.zil` domains on the Zilliqa mainnet.
