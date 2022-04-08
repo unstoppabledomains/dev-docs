@@ -79,7 +79,7 @@
 '/login-with-unstoppable/login-integration-guides':
   to: '/login-with-unstoppable/get-started-login/integration-pathways/'
   type: 301
-'/login-with-unstoppable/login-integration-guides/integration-pathways/'
+'/login-with-unstoppable/login-integration-guides/integration-pathways/':
   to: '/login-with-unstoppable/get-started-login/integration-pathways/'
   type: 301
 '/login-with-unstoppable/login-ui-configuration':
