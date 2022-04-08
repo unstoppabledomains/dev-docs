@@ -83,7 +83,7 @@ Once a user has successfully authenticated, the application should display the u
 Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](scopes-for-login.md#openid-scope), [wallet](scopes-for-login.md#wallet-scope), and [email](scopes-for-login.md#email-scope).
 
 :::info
-You must adjust the configuration in the [Login Client](login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](scopes-for-login.md#humanity_check-scope).
+You must change the configuration in the [Login Client Dashboard](login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](scopes-for-login.md#humanity_check-scope).
 :::
 
 <figure style="width:33%;display:inline-block;margin-left:0;margin-right:0;">

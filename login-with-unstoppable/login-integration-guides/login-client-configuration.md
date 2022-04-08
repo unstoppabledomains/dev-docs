@@ -29,7 +29,7 @@ The default configuration for the Login Client works right out of the box for lo
 
 ## Step 1: Add a New Client to Your Account
 
-* Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page after your application has been submitted to view all of the clients associated with your wallet address.
+* Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page to view all of the clients associated with your wallet address.
 * Take any of the following actions on this page:
   * Click **Change Wallet** button to signin with a different wallet and see clients associated with a different wallet address.
   * Click the gear ![gear](/images/gear_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to modify an existing client configuration.

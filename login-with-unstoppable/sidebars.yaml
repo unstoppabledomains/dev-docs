@@ -16,10 +16,8 @@ pages:
   - group: Getting Started with Login
     expanded: false
     pages:
-      - label: Login Client Configuration
-        page: get-started-login/login-client-configuration.md
-      - label: Login UI Configuration
-        page: get-started-login/login-ui-configuration.md
+      - label: Select Your Integration Pathway
+        page: get-started-login/integration-pathways.md
       - label: Scopes for Login
         page: get-started-login/scopes-for-login.md
       - label: Login Frequently Asked Questions
@@ -36,8 +34,8 @@ pages:
   - group: Login Integration Guides
     expanded: false
     pages:
-      - label: Select Your Integration Pathway
-        page: login-integration-guides/integration-pathways.md
+      - label: Login Client Configuration
+        page: login-integration-guides/login-client-configuration.md
       - label: Login With Pop-up
         page: login-integration-guides/login-with-popup.md
       - label: Login Without Pop-up
@@ -50,6 +48,8 @@ pages:
         page: login-integration-guides/bnc-onboard-guide.md
       - label: Node.js Server
         page: login-integration-guides/node-js-server-guide.md
+      - label: Login UI Configuration
+        page: login-integration-guides/login-ui-configuration.md
     separatorLine: true
   - group: Troubleshoot Your Login Integration
     expanded: false
