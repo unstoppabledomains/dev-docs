@@ -9,13 +9,13 @@ This integration guide shows you how to add Login to Unstoppable to your applica
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
-## Step 1: Configure the UAuth Class
+## Step 1: Configure the `UAuth` Class
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the Client ID and Client Secret from your [credentials](../humanity-check/login-client-configuration.md).
+* Add the **Client ID** from your application's [client metadata]((/login-with-unstoppable/get-started-login/login-client-configuration/#step-2-client-metadata-configuration)).
 * Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
-* Add the [​​](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23)redirect URI that the auth server will redirect back to after every authorization attempt.
+* Add the [​​redirect URI](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23) that the auth server will redirect back to after every authorization attempt.
 
 ```javascript
 const uauth = new UAuth({
@@ -32,7 +32,7 @@ const uauth = new UAuth({
 ```
 
 :::danger
-The redirect URls used in this UAuth class must be an exact match to the redirect URIs entered on the Client Configuration Screen (see the [Getting Login Credentials](../humanity-check/login-client-configuration.md) Guide for details).
+The redirect URIs used in this `UAuth` class must be an exact match to the Redirect URIs entered in your [Login Client Configuration](../get-started-login/login-client-configuration.md) guide for details).
 :::
 
 ## Step 2: Create a Login Button
@@ -73,7 +73,7 @@ const Login: React.FC<RouteProps> = props => {
 
 ## Step 3: Create the Callback Page
 
-Then, on the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
+On the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
 
 1. Parses authorization code found in current URI.
 2. Exchanges authorization code for access and id tokens.

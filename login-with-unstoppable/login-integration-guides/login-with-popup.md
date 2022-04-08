@@ -37,7 +37,7 @@ npm install --save @uauth/js
 
 ## Step 2: Create an HTML File
 
-Build out the index.html file as follows:
+Build out the `index.html` file as follows:
 
 ```html
 <html>
@@ -53,7 +53,7 @@ Build out the index.html file as follows:
 
 ## Step 3: Instantiate the Library
 
-Now, configure the app.js as follows:
+Now, configure the `app.js` as follows:
 
 ```javascript
 import UAuth from '@uauth/js'
@@ -67,7 +67,7 @@ const uauth = new UAuth({
 
 ## Step 4: Implement the Login Handler
 
-Add more code to the app.js file as follows:
+Add more code to the `app.js` file as follows:
 
 ```javascript
 window.login = async () => {

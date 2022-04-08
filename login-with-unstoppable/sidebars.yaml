@@ -2,28 +2,28 @@ pages:
   - separator: Login with Unstoppable
     separatorLine: true
   - page: index.md
-    label: Login High-level Overview
+    label: Login Overview
+    separatorLine: true
+  - group: Humanity Check for Login
+    expanded: false
+    selectFirstItemOnExpand: true
+    pages:
+    - label: Humanity Check Overview
+      page: humanity-check/humanity-check-for-login.md
+    - label: Humanity Check FAQ
+      page: humanity-check/humanity-check-faq.md
     separatorLine: true
   - group: Getting Started with Login
     expanded: false
     pages:
-      - label: Register Your Application
-        page: get-started-login/register-your-application.md
+      - label: Login Client Configuration
+        page: get-started-login/login-client-configuration.md
+      - label: Login UI Configuration
+        page: get-started-login/login-ui-configuration.md
       - label: Scopes for Login
         page: get-started-login/scopes-for-login.md
-      - label: Frequently Asked Questions
+      - label: Login Frequently Asked Questions
         page: get-started-login/login-faq.md
-    separatorLine: true
-  - group: Humanity Check
-    expanded: false
-    selectFirstItemOnExpand: true
-    pages:
-      - label: Overview
-        page: humanity-check/humanity-check-for-login.md
-      - label: Login Client Configuration
-        page: humanity-check/login-client-configuration.md
-      - label: Frequently asked Questions
-        page: humanity-check/humanity-check-faq.md
     separatorLine: true
   - group: Login Protocols
     expanded: false
@@ -50,8 +50,6 @@ pages:
         page: login-integration-guides/bnc-onboard-guide.md
       - label: Node.js Server
         page: login-integration-guides/node-js-server-guide.md
-      - label: Login UI Configuration
-        page: login-integration-guides/login-ui-configuration.md  
     separatorLine: true
   - group: Troubleshoot Your Login Integration
     expanded: false

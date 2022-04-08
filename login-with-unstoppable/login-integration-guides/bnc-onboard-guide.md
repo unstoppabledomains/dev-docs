@@ -13,7 +13,7 @@ For a completed example of a BNC Onboard application, you can [download the file
 
 ## Step 1: Install the Libraries
 
-Install with yarn.
+Install with `yarn`.
 
 ```shell
 yarn add bnc-onboard @uauth/bnc-onboard @uauth/js @walletconnect/web3-provider
@@ -40,7 +40,7 @@ const uauthOnboard = new UAuthBncOnboard({
 })
 ```
 
-You can also construct a UAuth instance before hand and use that to create the library.
+You can also construct a `UAuth` instance before hand and use that to create the library.
 
 ```javascript
 import UAuth from '@uauth/js'

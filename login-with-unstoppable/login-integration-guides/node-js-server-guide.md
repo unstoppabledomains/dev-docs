@@ -15,7 +15,7 @@ For a completed example of a server integration using `@uauth/node` library, you
 
 ## Step 1: Install the @uauth/node Library
 
-Install the yarn.
+Install with `yarn`.
 
 ```shell
 yarn add @uauth/node @unstoppabledomains/resolution

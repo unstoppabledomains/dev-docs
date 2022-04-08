@@ -9,15 +9,11 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
-## Step 1: Register Your Application
+## Step 1: Get Your Client Credentials
 
-Before beginning the integration process for Login with Unstoppable, you must register your application with Unstoppable Domains and obtain your client credentials. Please see the [**Register Your Application Guide**](../get-started-login/register-your-application.md) for more details.
+To begin the integration process for Login with Unstoppable, you will need to obtain and configure your client credentials using the **My Clients** and **Client Configuration** pages. Please see the [**Login Client Configuration**](../get-started-login/login-client-configuration.md) guide for more details.
 
-## Step 2: Configure the Login Client
-
-Next, you will configure your application using the My Clients and Client Configuration pages. Please see the [**Login Client Configuration Guide**](../humanity-check/login-client-configuration.md) for more details.
-
-## Step 3: Choose Your Integration Path
+## Step 2: Choose Your Integration Path
 
 There are several ways to integrate with Login with Unstoppable, which is detailed in the chart below.
 
@@ -34,8 +30,12 @@ There are several ways to integrate with Login with Unstoppable, which is detail
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
 :::
 
-## Step 4: Configure the Login UI
+## Step 3: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](login-ui-configuration.md) to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration Guide**](../get-started-login/login-ui-configuration.md) to complete this final step in the integration process.
+
+## Step 4: Promote Your Applicaiton
+
+Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submiting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
 
 <embed src="/snippets/_discord.md" />

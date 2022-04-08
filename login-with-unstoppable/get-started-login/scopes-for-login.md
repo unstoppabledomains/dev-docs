@@ -32,12 +32,9 @@ Login with Unstoppable supports the following scopes which are detailed below:
 * [wallet scope](#wallet-scope)
 * [email scope](#email-scope)
 * [email:optional scope](#emailoptional-scope)
-* [humanity_check scope](#humanitycheck-scope-mark-style"colorred"betamark)
+* [humanity_check scope](#humanity_check-scope-mark-style"colorred"betamark)
 * [humanity_check:optional scope](#humanitycheckoptional-scope-mark-style"colorred"betamark)
 
-:::warning
-The **humanity_check** and **humanity_check:optional** scopes are currently in <mark style="color:red;">`BETA`</mark> launch. Partners will be notified directly when these scopes are in final release.
-:::
 
 ## openid Scope
 
@@ -71,7 +68,7 @@ The Login with Unstoppable **email:optional** scope is used to retrieve metadata
 <figcaption>UI for email:optional scope</figcaption>
 </figure>
 
-## humanity_check Scope <mark style="color:red;">`BETA`</mark>
+## humanity_check Scope
 
 The Login with Unstoppable **humanity_check** scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
 
@@ -100,10 +97,10 @@ After the user authenticates and proves their identity with the Persona authoriz
 </figure>
 
 
-See the [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
 
-## humanity_check:optional Scope <mark style="color:red;">`BETA`</mark>
+## humanity_check:optional Scope
 
 The Login with Unstoppable **humanity_check:optional** scope is used to retrieve metadata about the user's preference for sharing their Humanity Check unique identifier from [Persona](https://withpersona.com). Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their Humanity Check information, the unique humanity_check_id associated with the **humanity_check:optional** scope will be returned.
 
-See the [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
