@@ -11,7 +11,7 @@ This page covers the following topics:
 * [Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
 * [Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
 
-Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
+Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, users have complete control of their domains.
 
 Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
@@ -26,7 +26,7 @@ The two central components of CNS are its `Registry` and `Resolver` smart contra
 <figure>
 
 ![Relation between Registry and Resolver smart contracts](/images/registry_resolver_relation-22231.svg)
-	
+
 <figcaption>Relation between Registry and Resolver smart contracts</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ This flow describes how the CNS `Registry` and `Resolvers` interact.
 <figure>
 
 ![Interaction between CNS Registry ad Resolvers](/images/smart-contract-architecture-administration-44233.svg)
-	
+
 <figcaption>Interaction between CNS Registry ad Resolvers</figcaption>
 </figure>
 
@@ -141,7 +141,7 @@ On behalf of our users, our transaction processor generally handles:
 * Minting domains
 * Managing domains (transferring, setting `Resolver` address, modifying records)
 
-**Minting domains** happens when a user claims a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
+**Minting domains** happens when a user mints a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
 
 **Managing domains**, in contrast, can only be performed with a domain owner's permission. Each delegated transaction that modifies the owner address, the `Resolver` address, or the domain records requires a domain owner's signature.
 

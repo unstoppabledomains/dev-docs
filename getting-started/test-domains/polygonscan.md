@@ -101,7 +101,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 <figcaption>Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
 </figure>
 
-* Click the **Write** button to start the transaction.&#x20;
+* Click the **Write** button to start the transaction.
 
 :::success Congratulations!
 You're the new proud owner of a test domain on Polygon Mumbai testnet. Happy hacking!

@@ -8,10 +8,10 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 In this integration guide, we will show how to add Login with Unstoppable with the popup feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a javascript developer with a few minutes of time.
 
 :::info
-If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.&#x20;
+If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.
 :::
 
-## Step 1: Project Setup&#x20;
+## Step 1: Project Setup
 
 Before we get started, you’ll need to install Node and Yarn or npm, and create a directory for your project. Then, install the following packages into your app using one of the following scripts:
 
@@ -51,7 +51,7 @@ Build out the index.html file as follows:
 </html>
 ```
 
-## Step 3: Instantiate the Library&#x20;
+## Step 3: Instantiate the Library
 
 Now, configure the app.js as follows:
 
@@ -81,7 +81,7 @@ window.login = async () => {
 }
 ```
 
-## Step 5: Login with Unstoppable&#x20;
+## Step 5: Login with Unstoppable
 
 :::info
 You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../getting-started/test-domains/faucet.md) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.

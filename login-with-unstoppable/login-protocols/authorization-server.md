@@ -7,7 +7,7 @@ description: >-
 
 # Authorization Server
 
-In order for an OpenID Connect Relying Party (RP) to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).&#x20;
+In order for an OpenID Connect Relying Party (RP) to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
 Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery). With Login with Unstoppable, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
 
@@ -69,7 +69,7 @@ This is a method used to construct a WebFinger request. The below fields are use
 
 ## Unstoppable Authentication
 
-Unstoppable Authentication is a group of methods for authenticating End-Users of blockchain based domain names. OpenID Connect has no standards around authentication, other than metadata encoded inside jwts, e.g. _amr_, [Authentication Method Reference Values](https://datatracker.ietf.org/doc/html/rfc8176).&#x20;
+Unstoppable Authentication is a group of methods for authenticating End-Users of blockchain based domain names. OpenID Connect has no standards around authentication, other than metadata encoded inside jwts, e.g. _amr_, [Authentication Method Reference Values](https://datatracker.ietf.org/doc/html/rfc8176).
 
 Unstoppable Authentication uses two types of authentication that authorization servers will need to support Logins with Unstoppable: owner-based authentication and record-based authentication.
 
@@ -81,11 +81,11 @@ The Authentication server should use the AMR Value of _uns-own_.
 
 ### Record-based authentication
 
-For domains owned by multisig wallets, owner-based authentication isn’t sufficient for authentication because there is no private key associated with the owner account. To solve this problem, domains can specify a private key as a record on the domain.&#x20;
+For domains owned by multisig wallets, owner-based authentication isn’t sufficient for authentication because there is no private key associated with the owner account. To solve this problem, domains can specify a private key as a record on the domain.
 
 ## Ethereum Address
 
-The below fields are used to specify a public key that can be used for authentication.&#x20;
+The below fields are used to specify a public key that can be used for authentication.
 
 :::info
 It’s recommended that dApps support the web3 and oob methods at a minimum.

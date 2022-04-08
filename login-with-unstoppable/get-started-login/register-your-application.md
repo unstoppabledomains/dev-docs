@@ -25,7 +25,7 @@ You can begin App development right away while waiting on application approval. 
 
 ## Step 2: Complete & Submit the Application
 
-* **Complete** all the required form fields, as follows:&#x20;
+* **Complete** all the required form fields, as follows:
   * **App Name:** name of the application, required
   * **Description**: must be at least 50 characters, required
   * **App Logo:** must upload a logo of at least 240 x 240px, required
@@ -49,7 +49,7 @@ You can begin App development right away while waiting on application approval. 
 
 ## Step 3: View or Modify the Pending Application
 
-* **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been submitted.&#x20;
+* **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been submitted.
 * **Refresh** the Application Dashboard, or check your email, to see the status of the application.
 
 :::success Congratulations!

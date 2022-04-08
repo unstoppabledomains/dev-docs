@@ -7,12 +7,12 @@ description: This guide covers the process for configuring the Login UI to obtai
 
 ## Step 1: Access User Information
 
-Authorizations are stored inside `localStorage`, so any identically configured UAuth instance has access to the same users.&#x20;
+Authorizations are stored inside `localStorage`, so any identically configured UAuth instance has access to the same users.
 
-* If you integrate with the [@uauth/web3-react](https://github.com/uauth/web3-react) or any other solution that uses [@uauth/js](https://github.com/uauth/js) under the hood ([@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard), [@uauth/web3modal](https://github.com/uauth/web3modal)), then you can access the user information by instantiating a separate [@uauth/js](https://github.com/uauth/js) class and calling the `user()` function.&#x20;
-* There are also methods on [@uauth/web3-react](https://github.com/uauth/web3-react), [@uauth/web3modal](https://github.com/uauth/web3modal) & [@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard) for getting a UAuth instance on the front end as well.&#x20;
+* If you integrate with the [@uauth/web3-react](https://github.com/uauth/web3-react) or any other solution that uses [@uauth/js](https://github.com/uauth/js) under the hood ([@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard), [@uauth/web3modal](https://github.com/uauth/web3modal)), then you can access the user information by instantiating a separate [@uauth/js](https://github.com/uauth/js) class and calling the `user()` function.
+* There are also methods on [@uauth/web3-react](https://github.com/uauth/web3-react), [@uauth/web3modal](https://github.com/uauth/web3modal) & [@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard) for getting a UAuth instance on the front end as well.
 
-You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.&#x20;
+You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.
 
 :::info
 The @uauth.js code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
@@ -80,7 +80,7 @@ Once a user has successfully authenticated, the application should display the u
 
 ## Step 2: Verify the Login Flow and Scopes
 
-Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](../get-started-login/scopes-for-login.md#openid-scope), [wallet](../get-started-login/scopes-for-login.md#wallet-scope), and [email](../get-started-login/scopes-for-login.md#email-scope).&#x20;
+Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](../get-started-login/scopes-for-login.md#openid-scope), [wallet](../get-started-login/scopes-for-login.md#wallet-scope), and [email](../get-started-login/scopes-for-login.md#email-scope).
 
 :::info
 You must adjust the configuration in the [Login Client](../humanity-check/login-client-configuration.md#scopes) to add or remove scopes, such as [humanity_check](../get-started-login/scopes-for-login.md#humanity_check-scope-mark-stylecolorredbetamark).

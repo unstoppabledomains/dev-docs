@@ -11,9 +11,9 @@ For more information on resolving domains using the Resolution CLI option, pleas
 
 <embed src="/snippets/_new-tld-warning.md" />
 
-## Use Case: Retrieve the ETH Address
+## Use Case: Retrieve an ETH Address
 
-This will retrieve the ETH address:
+This will retrieve the ETH address of a domain:
 
 ```shell
 resolution resolve addr ETH -d brad.crypto

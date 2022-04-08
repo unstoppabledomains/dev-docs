@@ -19,12 +19,12 @@ Before beginning the integration process for Unstoppable's Reseller feature, you
 
 ## Step 2: Locate Your Reseller ID
 
-To integrate free domain claiming or paid domain claiming (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your resellerID. This information can be found in your [UD Reseller Dashboard](https://unstoppabledomains.com/resellers).
+To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your resellerID. This information can be found in your [UD Reseller Dashboard](https://unstoppabledomains.com/resellers).
 
 <figure>
 
 ![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png '#width=80%;')
-	
+
 <figcaption>Location of ResellerID in UD Reseller Dashboard</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ Stripe and Coinbase payment methods are currently unavailable. Resellers will be
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Free domains               | claim free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Claim Free Domains Guide](claim-free-domains.md)       |
+| Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](mint-free-domains.md)       |
 | Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](stripe-payments.md)             |
 | Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments.md)         |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments.md) |

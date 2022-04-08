@@ -26,7 +26,7 @@ The scopes requested by an application varies depending on the type of user data
 <figcaption>Example scope list presented to UD users</figcaption>
 </figure>
 
-Login with Unstoppable supports the following scopes which are detailed below:&#x20;
+Login with Unstoppable supports the following scopes which are detailed below:
 
 * [openid scope](#openid-scope) (required)
 * [wallet scope](#wallet-scope)
@@ -62,7 +62,7 @@ The Login with Unstoppable **email** scope can be used to retrieve metadata abou
 
 ## email:optional Scope
 
-The Login with Unstoppable **email:optional** scope is used to retrieve metadata about the user's preference for sharing their email address. Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their email, the same claims associated with the **email** scope will be returned.&#x20;
+The Login with Unstoppable **email:optional** scope is used to retrieve metadata about the user's preference for sharing their email address. Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their email, the same claims associated with the **email** scope will be returned.
 
 <figure>
 
@@ -73,7 +73,7 @@ The Login with Unstoppable **email:optional** scope is used to retrieve metadata
 
 ## humanity_check Scope <mark style="color:red;">`BETA`</mark>
 
-The Login with Unstoppable **humanity_check** scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).&#x20;
+The Login with Unstoppable **humanity_check** scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
 
 After the user authenticates and proves their identity with the Persona authorization system, the application will receive a humanity_id, which is a unique identifier for each user to serve as that user's "[humanity check](../humanity-check/humanity-check-for-login.md#persona)."
 
@@ -104,6 +104,6 @@ See the [Humanity Check for Login](../humanity-check/humanity-check-for-login.md
 
 ## humanity_check:optional Scope <mark style="color:red;">`BETA`</mark>
 
-The Login with Unstoppable **humanity_check:optional** scope is used to retrieve metadata about the user's preference for sharing their Humanity Check unique identifier from [Persona](https://withpersona.com). Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their Humanity Check information, the unique humanity_check_id associated with the **humanity_check:optional** scope will be returned.&#x20;
+The Login with Unstoppable **humanity_check:optional** scope is used to retrieve metadata about the user's preference for sharing their Humanity Check unique identifier from [Persona](https://withpersona.com). Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their Humanity Check information, the unique humanity_check_id associated with the **humanity_check:optional** scope will be returned.
 
 See the [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.

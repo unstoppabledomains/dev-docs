@@ -5,7 +5,7 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 # 10 Minute Guide: Login with Unstoppable without Popup
 
-This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.&#x20;
+This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
@@ -73,7 +73,7 @@ const Login: React.FC<RouteProps> = props => {
 
 ## Step 3: Create the Callback Page
 
-Then, on the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:&#x20;
+Then, on the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
 
 1. Parses authorization code found in current URI.
 2. Exchanges authorization code for access and id tokens.
@@ -112,7 +112,7 @@ const Callback: React.FC<RouteProps> = props => {
 
 ## Step 4: Create the Logout Button
 
-For the last step, you will call the `uauth.logout()` function to handle logging out. The function should be called upon clicking the logout button. Features of this method include:&#x20;
+For the last step, you will call the `uauth.logout()` function to handle logging out. The function should be called upon clicking the logout button. Features of this method include:
 
 1. Clears cache of authorization.
 2. If the `postLogoutRedirectUri` is present.

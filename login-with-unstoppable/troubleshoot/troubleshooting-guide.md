@@ -5,11 +5,11 @@ description: This page reviews frequently encountered problems when integrating 
 
 # Troubleshooting Guide
 
-Here are some of the most common error messages when integrating Login with Unstoppable and how to fix them.&#x20;
+Here are some of the most common error messages when integrating Login with Unstoppable and how to fix them.
 
 ## Error: Port "5000" Could Not Be Used
 
-If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development. MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.&#x20;
+If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development. MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.
 
 ```
 lisa@Unstoppable-Lisa login % yarn parcel --port 5000 --open index.html
@@ -63,7 +63,7 @@ The solution is to upgrade the UAuth library associated with Login with Unstoppa
 
 ## Error: Invalid Redirect URI
 
-This commonly happens when a set of credentials meant to be used in a live environment are copied to the local test environment, which causes a mismatch between the configuration on the server and the configuration of the library instance. The error displays in the console and is highlighted in red when you inspect it (for Chrome).&#x20;
+This commonly happens when a set of credentials meant to be used in a live environment are copied to the local test environment, which causes a mismatch between the configuration on the server and the configuration of the library instance. The error displays in the console and is highlighted in red when you inspect it (for Chrome).
 
 The solution is to modify the redirect URIs in the Login Client to ensure a match between the server and library instance. More than one redirect URI can be added to the Login Client to support two different sets of credentials (i.e. one for the live environment and another for the local test environment).
 

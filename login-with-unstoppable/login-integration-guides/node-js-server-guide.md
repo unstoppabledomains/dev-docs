@@ -73,7 +73,7 @@ Because there are a variety of ways to store session data about a user, the pack
 
 **`middleware(): (ctx: Context) => void`**
 
-1. The authorization inside the session is attached to the context then passed to the next handler.&#x20;
+1. The authorization inside the session is attached to the context then passed to the next handler.
 2. Or if there is no session it throws an Error.
 
 ### Step 3D: Putting it all together
@@ -143,7 +143,7 @@ app.get('/', (_, res) => {
 
 ### Option 2: Use the DOM UI Package
 
-The [DOM UI package](https://github.com/unstoppabledomains/uauth/tree/main/packages/dom-ui) can be used to help with the front-end UI development. The DOM UI package creates a simple UI modal on the website that is used by `@uauth/js` library internally to facilitate sign-in, so the user has a consistent UI on the front-end.&#x20;
+The [DOM UI package](https://github.com/unstoppabledomains/uauth/tree/main/packages/dom-ui) can be used to help with the front-end UI development. The DOM UI package creates a simple UI modal on the website that is used by `@uauth/js` library internally to facilitate sign-in, so the user has a consistent UI on the front-end.
 
 We are still working on documentation of this package, so developers should [see how it is used inside @uauth/js library](https://github.com/unstoppabledomains/uauth/blob/main/packages/js/src/Client.ts#L232).
 

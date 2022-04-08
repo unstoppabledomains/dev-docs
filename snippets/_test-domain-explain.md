@@ -1,4 +1,4 @@
-To make integrations easier, Unstoppable Domains provides developers with a free test domain. You can use any available domain extension for your free test domain (except .zil).&#x20;
+To make integrations easier, Unstoppable Domains provides developers with a free test domain. You can use any available domain extension for your free test domain (except .zil).
 
 To distinguish these test domains from paid domains, all test domains are prefixed with `udtestdev-`. For example:
 

@@ -113,7 +113,7 @@ See the [Records Reference](../../getting-started/domain-registry-essentials/rec
 
 ## Record Value Validation
 
-For CNS, `Resolver` doesn't have built-in record value validation when it is updated. For UNS, `RecordStorage` doesn’t have built in record value validation after an update.&#x20;
+For CNS, `Resolver` doesn't have built-in record value validation when it is updated. For UNS, `RecordStorage` doesn’t have built in record value validation after an update.
 
 This is for two reasons:
 

@@ -13,7 +13,7 @@ This page covers the following topics:
 * ​[Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
 * ​[Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
 
-UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
+UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, users have complete control of their domains.
 
 :::info
 For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](cns-uns-comparison.md).
@@ -26,18 +26,18 @@ UNS has one single smart contract, the `Registry`. The same `Registry` contract 
 <figure>
 
 ![Registry and RecordStorage interaction](/images/uns-architecture.png)
-	
+
 <figcaption>Registry and RecordStorage interaction</figcaption>
 </figure>
 
 Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](namehashing.md).
 
-&#x20;For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
+For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
 
 <figure>
 
 ![Big picture overview of UNS Smart Contract Architecture](/images/uns-smart-contract-architecture.png)
-	
+
 <figcaption>Big picture overview of UNS Smart Contract Architecture</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ On behalf of our users, our transaction processor generally handles:
 * Minting domains
 * Managing domains (transferring, modifying records)
 
-**Minting domains** happens when a user claims a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
+**Minting domains** happens when a user mints a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
 
 **Managing domains,** in contrast, can only be performed with a domain owner's permission. Each delegated transaction that modifies the owner address or the domain records requires a domain owner's signature.
 

@@ -40,13 +40,13 @@ If you have the Unstoppable extension in your browser you will need to disable i
 
 ## Resolve Using a Gateway URL
 
-You can also resolve a decentralized website using a gateway URL, such as the ones provided by [Blockscan](http://blockscan.com) or [Pinata](https://docs.pinata.cloud/gateways/dedicated-gateways).&#x20;
+You can also resolve a decentralized website using a gateway URL, such as the ones provided by [Blockscan](http://blockscan.com) or [Pinata](https://docs.pinata.cloud/gateways/dedicated-gateways).
 
 IPFS gateways provide workarounds for applications that do not yet support IPFS natively, which allows those browsers and tools to access IPFS content. See the resource guide on [IPFS Gateways](https://docs.ipfs.io/concepts/ipfs-gateway/#overview) for more information.
 
 ## **Redirect to a Traditional DNS Record with an Unstoppable Domain**
 
-In order to set up a redirection to a traditional domain, you will need to do a redirection via index.html on your blockchain domain so users are sent to a traditional domain.&#x20;
+In order to set up a redirection to a traditional domain, you will need to do a redirection via index.html on your blockchain domain so users are sent to a traditional domain.
 
 1. On your computer, open a text editor (for example: Notepad for Windows or TextEdit for Mac) and paste the following code into an empty file.
 

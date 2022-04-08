@@ -15,7 +15,7 @@ To further assist with L2, the Polygon team will be adding Unstoppable Domains r
 
 ## Resolution Library Updates
 
-Our Layer 2 resolution libraries will require a few configuration changes to allow the libraries to read from Polygon. There are a few small changes to function/method calls and one brand new method which provides additional resolution information.&#x20;
+Our Layer 2 resolution libraries will require a few configuration changes to allow the libraries to read from Polygon. There are a few small changes to function/method calls and one brand new method which provides additional resolution information.
 
 ### Method Changes and Updates
 
@@ -24,15 +24,15 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 ### New Supported Method
 
-**Resolution#getLocations(\[domain1, domain2, domain3])** is a new method array that returns information for an unlimited number of domains; it only supports UNS and CNS due to Zilliqa technical limits.&#x20;
+**Resolution#getLocations(\[domain1, domain2, domain3])** is a new method array that returns information for an unlimited number of domains; it only supports UNS and CNS due to Zilliqa technical limits.
 
 This method returns a list of domain locations:
 
 * Blockchain Provider URL (if possible otherwise null)
-* RegistryAddress&#x20;
-* ResolverAddress&#x20;
-* [Network ID](https://chainlist.org)&#x20;
-* Blockchain ([Coin symbol](https://github.com/satoshilabs/slips/blob/master/slip-0044.md))&#x20;
+* RegistryAddress
+* ResolverAddress
+* [Network ID](https://chainlist.org)
+* Blockchain ([Coin symbol](https://github.com/satoshilabs/slips/blob/master/slip-0044.md))
 * Owner address
 
 ### List of Network IDs
@@ -54,7 +54,7 @@ Unstoppable Domains’ Polygon resolution service will have the same specificati
 
 Overall changes for **/status route**
 
-* Return [Network ID](https://chainlist.org) instead of _network_&#x20;
+* Return [Network ID](https://chainlist.org) instead of _network_
 * Move all fields under “blockchain” namespace
 
 ```javascript NEW Response

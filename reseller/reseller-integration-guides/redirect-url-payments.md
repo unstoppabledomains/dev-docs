@@ -1,6 +1,6 @@
 ---
 title: Redirect URL Payments Guide
-description: This guide covers the process for configuring the Reseller account to claim paid domains using the redirect URL payment processing flow.
+description: This guide covers the process for configuring the Reseller account to mint paid domains using the redirect URL payment processing flow.
 ---
 
 # Redirect URL Payments Guide
@@ -106,7 +106,7 @@ const verified = verify(message, signature); // happens on Unstoppable backend
 ```
 
 :::info
-In JavaScript, hmac signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.&#x20;
+In JavaScript, hmac signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.
 :::
 
 ### Example Request
