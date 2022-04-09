@@ -1,14 +1,9 @@
 ---
-title: Login Client Configuration for Humanity Check
+title: Login Client Configuration
 description: This guide covers the process for configuring the Login with Unstoppable client.
 ---
 
-# Login Client Configuration for Humanity Check
-
-:::warning
-This application process configures **BETA** credentials for applications wanting to test Humanity Check early.
-For normal production credentials please see [Register Your Application](../get-started-login/register-your-application.md).
-:::
+# Login Client Configuration
 
 :::info
 Clients that use this portal to register credentials don't have to supply the `clientSecret` option to the library when using the Login Integration guides. Clients must also additionally configure the `fallbackIssuer` as well when using client credentials obtained from this portal. See the example configuration below:
@@ -23,7 +18,7 @@ const uauthConfig = {
 }
 ```
 
-The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](../get-started-login/login-client-configuration.md#step-2-client-metadata-configuration) section (Step 2 below).
+The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](#step-2-client-metadata-configuration) section (Step 2 below).
 
 <figure>
 
@@ -34,7 +29,7 @@ The default configuration for the Login Client works right out of the box for lo
 
 ## Step 1: Add a New Client to Your Account
 
-* Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page after your application has been submitted to view all of the clients associated with your wallet address.
+* Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page to view all of the clients associated with your wallet address.
 * Take any of the following actions on this page:
   * Click **Change Wallet** button to signin with a different wallet and see clients associated with a different wallet address.
   * Click the gear ![gear](/images/gear_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to modify an existing client configuration.
@@ -64,7 +59,7 @@ The **Client Metadata** section includes the unique client ID, client secret, an
 The Redirect URIs follow three rules:
 
 1. `http` URI resolves to local host (`http://127.0.0.1` or `http://localhost`). If you specify a local host, then the system does not care about the port.
-2. If using `https` website, then can only have a single `https` redirect URI or will get an error.
+2. If using `https` website, can only have a single `https` redirect URI or will get an error.
 3. All URIs must use the same origin (e.g., `unstoppabledomains.com`) or will get an error.
 
 :::info
@@ -158,8 +153,8 @@ All [scopes](../get-started-login/scopes-for-login.md) are turned on by default.
 * **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet-scope)
 * **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
 * **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
-* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanitycheck-scope-mark-style"colorred"betamark)
-* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanitycheckoptional-scope-mark-style"colorred"betamark)
+* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope)
+* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanitycheckoptional-scope)
 
 ### Token Endpoint Authentication Method
 

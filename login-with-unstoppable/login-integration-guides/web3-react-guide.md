@@ -5,7 +5,7 @@ description: This integration guide is intended for a custom @uauth/js integrati
 
 # Web3 React Guide: Login with Unstoppable
 
-This is the basic installation guide for the **web3-react** framework and is best used for React based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
+This is the basic installation guide for the `web3-react` framework and is best used for React-based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
 :::info
 For a completed example of a Web3 React application, you can [download the files](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/README.md) directly.
@@ -13,15 +13,15 @@ For a completed example of a Web3 React application, you can [download the files
 
 ## Step 1: Install the Required Libraries
 
-Install with yarn.
+Install with `yarn`.
 
 ```shell
 yarn add @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector
 ```
 
-## Step 2: Configure the web3-react Library
+## Step 2: Configure the `web3-react` Library
 
-Next, configure the web3-react connectors:
+Next, configure the `web3-react` connectors:
 
 ```typescript
 import {UAuthConnector} from '@uauth/web3-react'
@@ -58,7 +58,7 @@ const connectors: Record<string, AbstractConnector> = {
 export default connectors
 ```
 
-You can also construct a UAuth instance before hand and use that to create the connector.
+You can also construct a `UAuth` instance before hand and use that to create the connector.
 
 ```javascript
 import UAuth from '@uauth/js'
@@ -81,7 +81,7 @@ Because popups are a more integration friendly approach, the `@uauth/web3-react`
 
 ## Step 3: Test the Usage
 
-Once configured, web3-react can be used like normal.
+Once configured, `web3-react` can be used like normal.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 

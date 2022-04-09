@@ -1,4 +1,9 @@
-# Humanity Check FAQ
+---
+title: Humanity Check FAQ
+description: Frequently asked questions for the Humanity Check feature of the Login With Unstoppable service.
+---
+
+# Humanity Check Frequently Asked Questions
 
 ### How/where is user data stored? How do they know their data is safe? 
 

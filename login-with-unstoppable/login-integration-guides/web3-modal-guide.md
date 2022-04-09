@@ -19,7 +19,7 @@ Install with yarn.
 yarn add web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 ```
 
-## Step 2: Configure the web3modal Library
+## Step 2: Configure the `web3modal` Library
 
 Next, configure the `web3modal` library:
 
