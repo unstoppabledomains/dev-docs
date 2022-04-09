@@ -13,7 +13,7 @@ Unstoppable Domains provides an HTTP-based API for getting domain data and metad
 
 ## Resolution CLI
 
-The Resolution CLI is a simple tool built and maintained by Unstoppable Domains for resolving domains and interacting with blockchain domain names. Please see the [Resolution CLI](../developer-toolkit/resolution-cli.md) guide for instructions on its usage.
+The Resolution CLI is a simple tool built and maintained by Unstoppable Domains for resolving domains and interacting with NFT domain names. Please see the [Resolution CLI](../developer-toolkit/resolution-cli.md) guide for instructions on its usage.
 
 ## Direct Blockchain Calls
 

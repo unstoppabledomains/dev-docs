@@ -1,11 +1,11 @@
 ---
 title: Resolving Domains in Web Applications
-description: This page describes how to use UD Resolution to resolve blockchain domains in web applications. It assumes the reader has a basic understanding of UD Resolution.
+description: This page describes how to use UD Resolution to resolve NFT domains in web applications. It assumes the reader has a basic understanding of UD Resolution.
 ---
 
 # Resolving Domains in Web Applications
 
-Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
+Resolution is a library for interacting with NFT domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 

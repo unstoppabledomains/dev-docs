@@ -23,7 +23,7 @@ Unstoppable Webfinger uses a variety of records stored on domains to resolve a W
 
 Traditional Issuer discovery requires only the requestor resource and host to form the request, the rel must be [http://openid.net/specs/connect/1.0/issuer](http://openid.net/specs/connect/1.0/issuer) to make an issuer request.
 
-#### Example: WebFinger Blockchain Domain Records
+#### Example: WebFinger NFT Domain Records
 
 ```
 {
@@ -124,7 +124,7 @@ The Authentication Server should use the AMR Value of _uns-swk_.
 | user  | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “Ethereum Address” flow. |
 | jwks  | A JWKS document stored in plaintext containing the signing key(s) used to prove the identity of the End-User   |
 
-### Example: Authentication Blockchain Domain Records
+### Example: Authentication NFT Domain Records
 
 Those records would correspond to the user alice@domain.tld.
 

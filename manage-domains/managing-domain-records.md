@@ -10,14 +10,14 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 <figure>
 
 ![CNS Records Architecture shows how resolvers are used to manage domain records](/images/record-architecture.png '#width=85%;')
-	
+
 <figcaption>CNS Records Architecture shows how resolvers are used to manage domain records</figcaption>
 </figure>
 
 <figure>
 
 ![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png '#width=70%;')
-	
+
 <figcaption>UNS Records Architecture shows how RecordStorage is used to manage domain records</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ The main namespaces are:
 
 ### Crypto Payment Records
 
-One essential feature of blockchain domains is the ability to specify a human-readable name instead of a destination address for your crypto payment. Cryptocurrency wallets that use this feature will resolve a domain to an underlying crypto address in the same way a browser resolves a domain to IP address.
+One essential feature of NFT domains is the ability to specify a human-readable name instead of a destination address for your crypto payment. Cryptocurrency wallets that use this feature will resolve a domain to an underlying crypto address in the same way a browser resolves a domain to IP address.
 
 All crypto addresses are stored within the `crypto.*` namespace. Each currency address is stored as a `crypto.<TICKER>.address` record.
 
