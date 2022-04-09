@@ -30,7 +30,11 @@ When you don't find a currency address record for a domain, please do not make a
 
 ## 4. Handle Errors According to Their Type
 
-When you encounter errors using any resolution method (library, service API, CLI), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution Library Error Handling](../../developer-toolkit/resolution-libraries/library-error-handling/) guide for information.
+When you encounter errors using any resolution method (library, service API, CLI), handle them according to the error type rather than generically handling them or passing them silently.
+
+:::info
+Please see the [Resolution Libraries](../developer-toolkit/resolution-libraries/libraries-overview.md) docs for language-specific error handling guides and library error codes you might encounter during integration.
+:::
 
 ## 5. Validate the Addresses Resolved From Domains
 

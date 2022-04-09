@@ -5,7 +5,7 @@ description: This page covers integrating crypto payments into your applications
 
 # Integrating Crypto Payments Using Libraries
 
-Unstoppable Domains provides a set of resolution libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview/) for a detailed description and configuration.
+Unstoppable Domains provides a set of resolution libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview.md) for a detailed description and configuration.
 
 ## Resolving a Crypto Address From a Domain
 
@@ -137,7 +137,7 @@ func main() {
 The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `AddrVersion()` methods create a key from the provided `USDT` ticker and `ERC20` version. The key format is `crypto.USDT.version.<VERSION>.address`. In the example above with the `ERC-20` version of `USDT`, the created key would be `crypto.USDT.version.ERC20.address`.
 
 :::attention info
-Please see the [Managing Domain Records](../../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
+Please see the [Managing Domain Records](../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
 :::
 
 <embed src="/snippets/_discord.md" />

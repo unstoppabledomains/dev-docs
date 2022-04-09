@@ -5,7 +5,7 @@ description: This section provides a high-level overview of UNS — Unstoppable 
 
 # UNS Architecture Overview
 
-Every UNS domain is issued as an[ ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
+Every UNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
 This page covers the following topics:
 
@@ -80,7 +80,7 @@ A domain can be owned by both an external address (one that is accessed with a p
 Such an ownership model might not be suitable for every user. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract. Twitter verification works in this way, and the best example is the [TwitterValidationOperator contract](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol).
 
 :::info
-If the owner of a `.wallet` top-level domain is set to a[ burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting subsection of [Delegating Domain Management](#delegating-domain-management).
+If the owner of a `.wallet` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting subsection of [Delegating Domain Management](#delegating-domain-management).
 :::
 
 ### Alternative Ownership Models

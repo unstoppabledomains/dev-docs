@@ -1,9 +1,9 @@
 ---
-title: Register As a Reseller
+title: Register as a Reseller
 description: This page describes the process for creating an account and applying to become an authorized reseller for Unstoppable Domains. Payment settings can then be configured in the UD Reseller Dashboard.
 ---
 
-# Register As Reseller
+# Register as a Reseller
 
 :::warning
 The Reseller API feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon/polygon-migration-guide.md) to get started.
@@ -16,7 +16,7 @@ The Reseller API feature only support domains and wallets on the Polygon L2 netw
 <figure>
 
 ![Sign-up page for creating a new reseller account](/images/0.png '#width=80%;')
-	
+
 <figcaption>Sign-up page for creating a new reseller account</figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ The Reseller API feature only support domains and wallets on the Polygon L2 netw
 <figure>
 
 ![Login or sign-up options for new resellers](/images/1.png '#width=60%;')
-	
+
 <figcaption>Login or sign-up options for new resellers</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ The Reseller API feature only support domains and wallets on the Polygon L2 netw
 <figure>
 
 ![Reseller application form](/images/3.png '#width=80%;')
-	
+
 <figcaption>Reseller application form</figcaption>
 </figure>
 
