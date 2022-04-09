@@ -17,7 +17,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Bridge**: An interoperability protocol that allows tokens and arbitrary data to be transferred from one blockchain to another.
 
-**Burn**: The process of permanently destroying and clearing all the associated metadata and records of a domain so it is no longer available for purchase or re-minting.
+**Burn**: The process of permanently destroying and clearing all the associated metadata and records of a domain, so it is no longer available for purchase or re-minting.
 
 ### C
 
@@ -29,7 +29,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Custody**: A service where a third party (like a brokerage) holds an asset on behalf of a client.
 
-**Customer Relationship Management (CRM)**: A system for managing all your company's relationships and interactions with customers and potential customers.
+**Customer Relationship Management (CRM)**: A system for managing your company's relationships and interactions with customers and potential customers.
 
 ### D
 
@@ -47,7 +47,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **ERC-20**: The Ethereum token standard, providing a standardized smart contract structure for fungible tokens.
 
-**ERC-721**: An Ethereum token standard which allows for the formation of unique tokens, otherwise known as NFTs, or non-fungible tokens. Unlike the ERC-20 standard, ERC-721 tokens have specific properties that allow each to be uniquely identified and valued independently of one another.
+**ERC-721**: An Ethereum token standard which allows for the formation of unique tokens, otherwise known as NFTs or non-fungible tokens. Unlike the ERC-20 standard, ERC-721 tokens have specific properties that allow each to be uniquely identified and valued independently of one another.
 
 **Ethereum**: A public blockchain serving as the foundation for decentralized applications. Ethereum is a turing complete language, allowing users to write and deploy complex, self-executing smart contracts that live on the blockchain.
 
@@ -57,7 +57,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### G
 
-**Gas**: A fee paid by a user to conduct a transaction or execute a smart contract on the Ethereum blockchain. This fee is dependent upon the transaction’s complexity as well as the current demand on the network.
+**Gas**: A fee paid by a user to conduct a transaction or execute a smart contract on the Ethereum blockchain. This fee depends upon the transaction’s complexity and the current demand on the network.
 
 **Graphical User Interface (GUI)**: A user interface that allows users to interact with electronic devices through graphical icons and audio indicators such as primary notation instead of text-based user interfaces, typed command labels, or text navigation.
 
@@ -77,13 +77,15 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### M
 
-**Main Network (Mainnet)**: This is a main layer 1 blockchain instead of a testnet or layer 2 solutions.
+**Main Network (Mainnet)**: This is a main layer 1 blockchain instead of a testnet or layer 2 solution.
+
+**Member**: A term used to refer to Unstoppable Domains users.
 
 **Metadata**: A collection of data that provides information about other data, but not the content of the data, i.e., social media profiles of a person.
 
 **Minting**: The process of validating information, such as domain ownership, and registering that onto the blockchain.
 
-**Multi-signature**: This is a special type of digital signature scheme where there can be multiple signers for a single digital signature. A multi-signature or multisig transaction is only valid if it is signed by a set threshold of participants, just like some legal documents require a co-signer.
+**Multi-signature**: This is a special type of digital signature scheme where there can be multiple signers for a single digital signature. A multi-signature or multisig transaction is only valid if a set threshold of participants signs it, just like some legal documents require a co-signer.
 
 ### N
 
@@ -109,7 +111,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Proof of Stake (PoS)**: A consensus mechanism that requires nodes, called validators, to stake a set amount of cryptocurrency on the blockchain to verify transactions and mint blocks. If a validator approves fraudulent transactions, the network will slash a portion of its stake.
 
-**Proof of Work (PoW)**: A consensus mechanism that requires miners to complete complex mathematical puzzles in order to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
+**Proof of Work (PoW)**: A consensus mechanism that requires miners to complete complex mathematical puzzles to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
 
 **Protocol**: The foundational software layer of a program. A protocol has become a general term used to refer to both layer 1 blockchain networks and the layer 2 applications built on top of them — Bitcoin, Ethereum, Uniswap, and Lightning Network can all be considered protocols.
 
@@ -119,7 +121,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Record**: The data associated with an NFT domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites. It is stored as a key-value dictionary by the domain on the blockchain.
 
-**Registry**: The naming service smart contract is responsible for managing domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).
+**Registry**: The naming service smart contract manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).
 
 **Remote Procedure Call (RPC)**: A programming interface that allows one program to use the services of another program on a remote machine.
 
@@ -127,7 +129,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Resolver**: The Crypto Name Service (CNS) smart contract that is responsible for storing, updating, and resolving domain records.
 
-**Rollup**: A scaling solution that aims to improve transaction throughput and decrease fees by batching multiple transactions off-chain and then submitting them to the main chain as a single transaction.
+**Rollup**: A scaling solution that aims to improve transaction throughput and decrease fees by batching multiple online transactions and then submitting them to the main chain as a single transaction.
 
 ### S
 
@@ -135,7 +137,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Smart Contract**: A self-executing code deployed on a blockchain allows transactions to be made without an intermediary figure and trust between the parties involved.
 
-**Solidity**: The native programming language of Ethereum, mainly used to write smart contracts.
+**Solidity**: The native programming language of Ethereum, is mainly used to write smart contracts.
 
 ### T
 
@@ -149,7 +151,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **User Interface (UI)**: This is how the user and a computer system interact, particularly the use of input devices and software.
 
-**Unstoppable Name Service (UNS)**: This is the name service that handles the minting and management of NFT domains on the Ethereum (L1) and Polygon (L2) blockchains.
+**Unstoppable Name Service (UNS)**: The name service that handles the minting and management of NFT domains on the Ethereum (L1) and Polygon (L2) blockchains.
 
 ### W
 
@@ -159,10 +161,10 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Web1**: the first iteration of the web, commonly referred to as the `read-only web`. Web1 was characterized by static websites that displayed information. There was little to no user interaction or user-generated content.
 
-**Web2**: starting in the 90s, the `read-write web` is characterized by user-generated content and improved user interfaces. This led to blogs, social media platforms, and sites like Wikipedia and YouTube. Web2 emphasized user experience and interoperability between different applications and websites, giving us the vast network of connected websites and resources that we are familiar with today.
+**Web2**: starting in the 90s, the `read-write web` is characterized by user-generated content and improved user interfaces. This led to blogs, social media platforms, and sites like Wikipedia and YouTube. Web2 emphasized user experience and interoperability between different applications and websites, giving us the vast network of connected websites and resources we are familiar with today.
 
 **Web3**: the next iteration of the web being ushered in as we speak, which leverages blockchain technology, open-source applications, and the decentralization of data and information. Web3 aims to remove control of the web from monopolistic tech companies and return ownership of data and content to its users. Also referred to as the `read-write-trust web`.
 
 ### Z
 
-**Zilliqa Name Service (ZNS)**: This is the name service that handles `.zil` domains on the Zilliqa mainnet.
+**Zilliqa Name Service (ZNS)**: The name service that handles `.zil` domains on the Zilliqa mainnet.

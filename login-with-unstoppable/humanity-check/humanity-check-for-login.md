@@ -9,7 +9,7 @@ description: This page provides a high-level overview of the Humanity Check feat
 
 The Login with Unstoppable Humanity Check feature provides a way for applications to verify personal information for their users and attach that information to UD domains. This process allows users to safely prove their ‘uniqueness’ without revealing their identity or personal information. We’re calling this privacy-protected but robust authentication method Humanity Check.
 
-The Humanity Check feature allows the UD community to start building an ecosystem of data sharing with domains as the central hub through which that information passes.
+The Humanity Check feature allows Unstoppable Domains to start building a community of data sharing with domains as the central hub through which that information passes.
 
 * For domain owners, Humanity Check will become the primary way that web3 users store, share, and control who has access to their personal data online.
 * For applications, Humanity Check will become the standard solution to sybil resistance, customer communication, and personal data storage.
@@ -32,14 +32,14 @@ Persona asks users to take a photo of their government-issued ID and a few selfi
 
 <figure class="one-third-inline-block">
 
-![Persona UI for uploading government ID](/images/persona_upload_photo_id.png) 
+![Persona UI for uploading government ID](/images/persona_upload_photo_id.png)
 
 <figcaption>Uploading government ID</figcaption>
 </figure>
 
 <figure class="one-third-inline-block">
 
-![Persona UI for uploading live photos or selfies](/images/persona_live_photo_capture.png) 
+![Persona UI for uploading live photos or selfies](/images/persona_live_photo_capture.png)
 
 <figcaption>Uploading live photos or selfies</figcaption>
 </figure>
@@ -47,7 +47,7 @@ Persona asks users to take a photo of their government-issued ID and a few selfi
 <figure class="one-third-inline-block">
 
 ![Persona UI after identity verification is complete](/images/persona_congratuations.png)
-	
+
 <figcaption>Persona identity verification complete</figcaption>
 </figure>
 
