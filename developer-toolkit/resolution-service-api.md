@@ -33,7 +33,7 @@ Below is a list of all the error codes you might encounter when using the Resolu
 }
 ```
 
-The resolution service will not return an error in the case of an invalid domain or unsupported TLD to simplify communication.
+The resolution service will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
 
 ### 400 Error: Bad Request
 
@@ -46,7 +46,7 @@ The resolution service will not return an error in the case of an invalid domain
 | perPage must be an integer number | The provided `perPage` parameter is not an integer value. |
 | sortDirection must be one of the following values: ASC, DESC | The provided `sortDirection` parameter value is not `ASC` or `DESC`. |
 | sortBy must be one of the following values: id, name | The provided `sortBy` parameter value is not `id` nor `name`. |
-| Invalid TLD list provided | The Resolution Service API does not support the provided list of TLDs. |
+| Invalid TLD list provided | The Resolution Service API does not support the provided list of domain endings. |
 
 ### 403 Error: Forbidden
 

@@ -117,7 +117,7 @@ resolution
 | UnspecifiedCurrency | Thrown when the domain you're resolving doesn't have any address of the specified currency. |
 | UnspecifiedResolver | Thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver. |
 | UnsupportedCurrency | Thrown when you resolve a domain with a currency not supported by the current resolution instance. |
-| UnsupportedDomain | Thrown when you resolve a domain with a TLD not supported by the current resolution instance. |
+| UnsupportedDomain | Thrown when you resolve a domain with an ending not supported by the current resolution instance. |
 | UnsupportedService | Thrown when using an unsupported naming service with the current resolution instance. |
 | UnsupportedMethod | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `twitter()`, `reverse()`, `getDomainFromTokenId()`, `locations()`, and `getTokenuri()` methods for the Zilliqa Name Service (ZNS). |
 

@@ -53,7 +53,7 @@ Below is a list of all the error codes you might encounter when using the Resolu
 |---|---|
 | Domain is not registered | Thrown when you resolve a domain not owned by any address. |
 | Domain does not have configured Resolver | Thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver. |
-| Domain is not supported by naming service | Thrown when you resolve a domain with a TLD not supported by the CLI. |
+| Domain is not supported by naming service | Thrown when you resolve a domain with an ending not supported by the CLI. |
 | Method is not supported | Thrown when the CLI is trying to use a method not supported by the naming service its resolving from. |
 | Domain was returned from metadata provider | Thrown when you resolve an invalid domain address. |
 | Invalid UNS configuration value | Thrown when the UNS resolution service is misconfigured. |

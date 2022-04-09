@@ -22,6 +22,6 @@ The code snippet below shows how to handle the common error cases you may encoun
 - Resolving an unregistered domain
 - Resolving an undefined record of a domain
 - Resolving a misconfigured domain
-- Resolving a domain with an unsupported TLD
+- Resolving a domain with an unsupported domain ending
 
 We handle the errors thrown by the resolution library by switching on the `error code` and displaying custom messages to the user. You can then perform other actions to handle the error or show the `error message` value from the error data structure to the user.

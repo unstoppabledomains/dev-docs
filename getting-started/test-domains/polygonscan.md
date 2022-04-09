@@ -25,7 +25,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 <figure>
 
 ![Configure network settings in MetaMask to use Polygonscan domains (Layer 2)](/images/configure-metamask-polygonscan.png)
-	
+
 <figcaption>Configure network settings in MetaMask to use Polygonscan domains (Layer 2)</figcaption>
 </figure>
 
@@ -39,18 +39,18 @@ description: This guide covers the process of obtaining a free test domain, thro
 <figure>
 
 ![Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)](/images/polygon-free-matic-tokens.png)
-	
+
 <figcaption>Retrieve free MATIC tokens through the faucet to cover gas fees for domains on Mumbai testnet (Layer 2)</figcaption>
 </figure>
 
-## Step 3: Locate the TLD namehash for Polygon
+## Step 3: Locate the domain ending namehash for Polygon
 
-* TLD namehash can be found by using the website API:
-  * .wallet TLD -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
-  * .888 TLD -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
-  * .dao TLD -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
+* The domain ending namehash can be found by using the website API:
+  * .wallet domain ending -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
+  * .888 domain ending -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
+  * .dao domain ending -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
 
-For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
+For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
 
 ```json
 {
@@ -73,7 +73,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 }
 ```
 
-* Or, you can locate the TLD namehash in the following list:
+* Or, you can locate the domain ending namehash in the following list:
 
 ```json
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
@@ -92,12 +92,12 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 * Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
 * Choose **Write as Proxy** tab.
 * Connect your wallet (Goerli).
-* Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
+* Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, domain ending namehash, and test domain suffix.
 
 <figure>
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](/images/polygonscan-claim-to-records.png)
-	
+
 <figcaption>Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
 </figure>
 

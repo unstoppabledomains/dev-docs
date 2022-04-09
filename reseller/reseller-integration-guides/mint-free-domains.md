@@ -32,7 +32,7 @@ The following diagram shows the general process that takes place between the Res
 
 * Resellers work with UD administration to establish the "allowed free TLDs" and "allowed free tiers" for the reseller account. **The free domain criteria will vary based on the Reseller.**
 * This list of "allowed free TLDs" and "allowed free tiers" is then assigned to the resellers account.
-* Resellers can only mint a free domain if it matches the tier and has an appropriate TLD.
+* Resellers can only mint a free domain if it matches the tier and has an appropriate domain ending.
 
 The table below shows how the pricing tiers are structured at UD. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
 
@@ -60,7 +60,7 @@ No additional configuration is necessary from the Reseller to begin using this e
 
 The following considerations apply to the free domain minting:
 
-* The Reseller ID will be allowed to provide specified TLD's for free.
+* The Reseller ID will be allowed to provide specified domain endings for free.
 * If the Reseller ID doesn't have allowance to provide free domains, then users will not be permitted to mint free domains.
 * If the wallet or email already has a free domain, then a second free domain is not permitted.
 

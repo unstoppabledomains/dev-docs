@@ -46,7 +46,7 @@ Given a blockchain domain has a d-web content identifier record configured (e.g.
 <figure>
 
 [![Diagram showing how to read D-Web from Ethereum](</images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png> '#width=75%')](/images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png)
-	
+
 <figcaption>Diagram showing how to read D-Web from Ethereum</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 <figure>
 
 [![Diagram showing how to configure DNS Gateway](</images/configure\_dns\_gateway.png> '#width=75%')](/images/configure\_dns\_gateway.png)
-	
+
 <figcaption>Diagram showing how to configure DNS Gateway</figcaption>
 </figure>
 
@@ -104,7 +104,7 @@ See a description of how they work below
 <figure>
 
 [![Visual flow of resolving DWeb via DNS and DWeb gateway](</images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png> '#width=75%')](/images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png)
-	
+
 <figcaption>Visual flow of resolving DWeb via DNS and DWeb gateway</figcaption>
 </figure>
 
@@ -122,8 +122,8 @@ A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed 
 A gateway is a DNS Server that resolves not just traditional domains but also `.crypto` domains. Basic functionality of such a gateway:
 
 1. Receive a domain resolution request
-2. Resolve a domain using classical DNS system if is in classical TLD (like `.com`)
-3. Resolve a domain using [Browser Resolution Algorithm](../resolve-domains-browser/browser-resolution-algorithm.md) if it is in crypto TLD
+2. Resolve a domain using classical DNS system if is in classical domain ending (like `.com`)
+3. Resolve a domain using [Browser Resolution Algorithm](../resolve-domains-browser/browser-resolution-algorithm.md) if it is in crypto domain ending
    * If a domain is set using DNS, transform [Crypto DNS records](../resolve-domains-browser/browser-resolution-algorithm.md#dns-records) into classical records
    * If a domain is set using distributed content
      * If the client requests `A` record, resolve to [Distributed Content Gateway](#distributed-content-gateway) IP Address
@@ -133,6 +133,6 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
 <figure>
 
 [![Visualization of how to resolve DWeb via DNS and DWeb gateways](</images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png> '#width=75%')](/images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png)
-	
+
 <figcaption>Visualization of how to resolve DWeb via DNS and DWeb gateways</figcaption>
 </figure>

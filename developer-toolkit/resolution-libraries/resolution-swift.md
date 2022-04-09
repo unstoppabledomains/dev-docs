@@ -96,7 +96,7 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 | unregisteredDomain | Thrown when you resolve a domain not owned by any address. |
 | unknownError | Thrown when an unknown error occurs while resolving a domain with the current resolution instance. |
 | unspecifiedResolver | Thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver. |
-| unsupportedDomain | Thrown when you resolve a domain with a TLD not supported by the current resolution instance. |
+| unsupportedDomain | Thrown when you resolve a domain with an ending not supported by the current resolution instance. |
 | unsupportedServiceName | Thrown when using an unsupported naming service with the current resolution instance. |
 
 ## Use Case: Retrieve a Domain Record

@@ -10,14 +10,14 @@ description: This page provides a high level overview of the differences between
 | CNS                                                                | UNS                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | Implements the ERC721 standard                                     | Implements the ERC721 standard                                                                                  |
-| Hosts a single .crypto TLD                                         | Hosts multiple TLDs                                                                                             |
+| Hosts a single .crypto domain ending                                         | Hosts multiple domain endings                                                                                             |
 | Separate resolver and registry contracts                           | Single contract contains both the registry and resolution data                                                  |
 | Requires a Resolver lookup call in order to resolve domain data    | Does not require a Resolver (RecordStorage) lookup call since all domain data stored in a single smart contract |
 | Domain minting governed by MintingController and WhitelistedMinter | Domain minting governed by MintingManager                                                                       |
 
 ### Simplified Architecture
 
-Overall, the main difference between CNS and UNS is that UNS has a simplified architecture which is optimized for higher volumes of transaction and supporting multiple TLDs.
+Overall, the main difference between CNS and UNS is that UNS has a simplified architecture which is optimized for higher volumes of transaction and supporting multiple domain endings.
 
 ### Easier Data Retrieval
 
