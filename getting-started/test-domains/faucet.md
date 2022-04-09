@@ -19,7 +19,7 @@ The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathw
 * Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 
 :::info
-Domains on Polygon Mainnet can be purchased for free through Unstoppable Website Faucet, but users will need to cover their own gas fees to mint the domain.
+Domains on Polygon Mainnet can be purchased for free through Unstoppable Website Faucet, but members will need to cover their own gas fees to mint the domain.
 :::
 
 ## Step 2: Configure the Test Domain

@@ -23,7 +23,7 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 
 ## Domain Record Types
 
-Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a user from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../getting-started/domain-registry-essentials/records-reference.md).
+Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a member from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../getting-started/domain-registry-essentials/records-reference.md).
 
 Standard record keys are split by namespaces with a `.` used as a separator.
 
@@ -66,21 +66,21 @@ Example crypto records setup:
 
 ### Ownership Styles
 
-CNS Resolver and UNS RecordStorage allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
+CNS Resolver and UNS RecordStorage allows members to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
 
 * Owner address of a domain
 * Approved address for a domain
 * Owner's operator addresses
 
-This allows users to still retain primary ownership of their domain. These smart contracts can be programmed in such a way that they only change specified records. An Oracle Integration works in this way. For example:
+This allows members to still retain primary ownership of their domain. These smart contracts can be programmed in such a way that they only change specified records. An Oracle Integration works in this way. For example:
 
-1. Users grant operator access to all of their domains to the Oracle Contract.
+1. Members grant operator access to all of their domains to the Oracle Contract.
 2. Oracle detects an event off chain.
 3. The Oracle sets a record inside the resolver contract.
 
 See ERC-721 on how those permissions can be granted and revoked. Any records change is submitted as a [Ethereum Blockchain Transaction](https://ethereum.org/en/whitepaper/#messages-and-transactions) and record management can be done via [Resolver methods](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol).
 
-This enables users to interact with applications that could store keys and other information on a domain — making the domains a metadata repository or cross application identifier.
+This enables members to interact with applications that could store keys and other information on a domain — making the domains a metadata repository or cross application identifier.
 
 ### Presets
 
@@ -88,7 +88,7 @@ The CNS Resolver and UNS RecordStorage also implement a preset mechanism. The re
 
 `Token ID -> Preset ID -> Key -> Value`
 
-This nested structure allows users to configure domains on the un-enumerable Ethereum mappings. Typically, it is expensive and unreliable to store an enumerable data structure on Ethereum. To get around this, domains store a preset that corresponds to a record set. This means that users can change the preset on the domain to get an entirely different set of records.
+This nested structure allows members to configure domains on the un-enumerable Ethereum mappings. Typically, it is expensive and unreliable to store an enumerable data structure on Ethereum. To get around this, domains store a preset that corresponds to a record set. This means that members can change the preset on the domain to get an entirely different set of records.
 
 Currently `reset` and `reconfigure` are the only methods which directly change the preset.
 

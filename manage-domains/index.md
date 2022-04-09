@@ -10,7 +10,7 @@ The smart contract is built upon [OpenZeppelin's implementation](https://docs.op
 Entities that can control domains are defined by the ERC-721 standard:
 
 * **Owner.** This is a direct owner of a domain, which has full control in managing domain ownership and records.
-* **Operator.** Operators can control all domains owned by a user. There can be multiple operators per user.
+* **Operator.** Operators can control all domains owned by a member. There can be multiple operators per member.
 * **Approved address.** A domain owner can set an approved address that can control one particular domain. ERC-721 allows only one approved address per token (i.e.: domain).
 
 There are five basic operations that affect domain ownership:

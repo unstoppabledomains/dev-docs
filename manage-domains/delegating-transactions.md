@@ -1,6 +1,6 @@
 ---
 title: Delegating (Meta) Transactions
-description: This page details the process for using meta-transaction support, which allows users to delegate transactions to another party.
+description: This page details the process for using meta-transaction support, which allows members to delegate transactions to another party.
 ---
 
 # Delegating (Meta) Transactions
@@ -9,14 +9,14 @@ description: This page details the process for using meta-transaction support, w
 `Resolver` is an entity that is related to CNS only. There is no resolver address for UNS.
 :::
 
-Most `Registry` and `Resolver` methods have meta-transaction support, which allows you to delegate transactions to another party. Generally, meta-transactions allow users to sign messages to control their domains that are then submitted to the registry by a different party. This enables Unstoppable to submit transactions on behalf of users so that the user can still manage their domains in a self-custodial capacity without any gas.
+Most `Registry` and `Resolver` methods have meta-transaction support, which allows you to delegate transactions to another party. Generally, meta-transactions allow members to sign messages to control their domains that are then submitted to the registry by a different party. This enables Unstoppable to submit transactions on behalf of members so that the member can still manage their domains in a self-custodial capacity without any gas.
 
-Meta-transactions work by having users sign function calls along with a nonce. They then send that signed function call over to a different party. That party calls the meta-transaction-enabled function on the `Registry` or `Resolver`. For most management methods, there is a method with meta-transaction support that has a `For` suffix at the end. The meta-transaction method then checks the permission for a domain against the address recovered from the signed message sent to the function, unlike the base method that checks it against the submitter of the transaction e.g. `msg.sender`.
+Meta-transactions work by having members sign function calls along with a nonce. They then send that signed function call over to a different party. That party calls the meta-transaction-enabled function on the `Registry` or `Resolver`. For most management methods, there is a method with meta-transaction support that has a `For` suffix at the end. The meta-transaction method then checks the permission for a domain against the address recovered from the signed message sent to the function, unlike the base method that checks it against the submitter of the transaction e.g. `msg.sender`.
 
 <figure>
 
 ![Example meta-transaction flow](/images/meta-transaction-2112.svg)
-	
+
 <figcaption>Example meta-transaction flow</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ The example below shows how replay attacks can be used to exploit domains:
 <figure>
 
 ![Replay attacks without nonces](/images/without-nonces-44233.svg)
-	
+
 <figcaption>Replay attacks without nonces</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ A nonce is simply a transaction counter for each token. This prevents replay att
 <figure>
 
 ![Valid and invalid transactions with nonces](/images/nonces-44233.svg)
-	
+
 <figcaption>Valid and invalid transactions with nonces</figcaption>
 </figure>
 

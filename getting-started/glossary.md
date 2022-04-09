@@ -123,7 +123,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Remote Procedure Call (RPC)**: A programming interface that allows one program to use the services of another program on a remote machine.
 
-**Reseller**: A person authorized to use the Unstoppable Domains [Reseller API](../reseller/index.md) to resell NFT domains.
+**Reseller**: A user authorized by Unstoppable Domains to [sell domains to users](../use-cases/sell-domains-users.md) in their applications.
 
 **Resolver**: The Crypto Name Service (CNS) smart contract that is responsible for storing, updating, and resolving domain records.
 

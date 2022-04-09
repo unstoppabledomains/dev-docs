@@ -7,7 +7,7 @@ description: This guide covers the process for configuring the Login UI to obtai
 
 ## Step 1: Access User Information
 
-Authorizations are stored inside `localStorage`, so any identically configured UAuth instance has access to the same users.&#x20;
+Authorizations are stored inside `localStorage`, so any identically configured UAuth instance has access to the same users.
 
 * If you integrate with the [@uauth/web3-react](https://github.com/uauth/web3-react) or any other solution that uses [@uauth/js](https://github.com/uauth/js) under the hood ([@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard), [@uauth/web3modal](https://github.com/uauth/web3modal)), then you can access the user information by instantiating a separate [@uauth/js](https://github.com/uauth/js) class and calling the `user()` function.
 * There are also methods on [@uauth/web3-react](https://github.com/uauth/web3-react), [@uauth/web3modal](https://github.com/uauth/web3modal) & [@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard) for getting a UAuth instance on the front end as well.
@@ -96,7 +96,7 @@ You must change the configuration in the [Login Client Dashboard](login-client-c
 
 <figure style="width:33%;display:inline-block;margin-left:0;margin-right:0;">
 
-![2)User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png) 
+![2)User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v2.png)
 
 <figcaption>Modal 2</figcaption>
 </figure>

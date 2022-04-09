@@ -17,13 +17,13 @@ This page is divided into sections, grouping contracts by the following categori
 
 ## User-facing contracts
 
-This section lists all the smart contracts that users can directly interact with.
+This section lists all the smart contracts that members can directly interact with.
 
 ### UNSRegistry
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides [ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
+Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
 | Network | Contract address |
 | - | - |
@@ -36,7 +36,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
 | Network                  | Contract address                                                                                                                |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
