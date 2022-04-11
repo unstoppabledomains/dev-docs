@@ -32,7 +32,7 @@ The default configuration for the Login Client works right out of the box for lo
 
 ## Step 2: Client Metadata Configuration
 
-The **Client Metadata** section includes the unique client ID, client secret, and redirect URIs. Developers can also download metadata for the existing client configuration and rotate the client secret from within this sub-section.
+The **Client Metadata** section includes the unique client ID and redirect URIs. Developers can also download metadata for the existing client configuration from within this sub-section.
 
 <figure>
 
