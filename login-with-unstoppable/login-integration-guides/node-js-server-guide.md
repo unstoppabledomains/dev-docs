@@ -41,7 +41,6 @@ global.XMLHttpRequestUpload = (
 
 const client = new Client({
   clientID: 'uauth_example_spa_id',
-  clientSecret: 'uauth_example_spa_secret',
   redirectUri: 'http://localhost:5000/callback',
   scope: 'openid email wallet'
   resolution: new Resolution(),

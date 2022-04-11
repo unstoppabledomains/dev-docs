@@ -5,19 +5,6 @@ description: This guide covers the process for configuring the Login with Unstop
 
 # Login Client Configuration
 
-:::info
-Clients that use this portal to register credentials don't have to supply the `clientSecret` option to the library when using the Login Integration guides. Clients must also additionally configure the `fallbackIssuer` as well when using client credentials obtained from this portal. See the example configuration below:
-:::
-
-```javascript
-const uauthConfig = {
-  clientID: "my_client_id",
-  scope: "openid",
-  redirectUri: "my_redirect_uri",
-  fallbackIssuer: "https://beta.auth.unstoppabledomains.com",
-}
-```
-
 The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](#step-2-client-metadata-configuration) section (Step 2 below).
 
 <figure>
@@ -58,9 +45,9 @@ The **Client Metadata** section includes the unique client ID, client secret, an
 
 The Redirect URIs follow three rules:
 
-1. `http` URI resolves to local host (`http://127.0.0.1` or `http://localhost`). If you specify a local host, then the system does not care about the port.
-2. If using `https` website, can only have a single `https` redirect URI or will get an error.
-3. All URIs must use the same origin (e.g., `unstoppabledomains.com`) or will get an error.
+1. `http` URIs must resolve to URIs hosted at `http://127.0.0.1` or `http://localhost`.
+2. URIs hosted at h`ttp://127.0.0.1` do **NOT** require the port to be specified. All other URIs (including those hosted at `http://localhost`) require the correct port to be specified.
+3. All https URIs specified must use the same origin (e.g. `https://unstoppabledomains.com/redirectUri1`, `https://unstoppabledomains.com/redirectUri2`)
 
 :::info
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
@@ -69,10 +56,6 @@ The Redirect URIs follow three rules:
 ## **Step 3: Cosmetic Configuration (Optional)**
 
 The **Cosmetic Configuration** allows developers to customize the UI to improve the user experience. This includes updating or modifying the client name presented to the user, client URI, logo URI, policy URI, and terms of service URI.
-
-:::warning
-All URIs must use the same origin name (e.g., `unstoppabledomains.com`) or will get an error. This rule applies to client URI, policy URI, and terms of service URI.
-:::
 
 <figure>
 
