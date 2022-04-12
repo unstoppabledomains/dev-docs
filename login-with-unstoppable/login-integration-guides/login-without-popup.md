@@ -13,7 +13,7 @@ This integration guide shows you how to add Login to Unstoppable to your applica
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the **Client ID** from your application's [client metadata](login-client-configuration#step-2-client-metadata-configuration).
+* Add the **Client ID** from your application's [client metadata](login-client-configuration.md#step-2-client-metadata-configuration).
 * Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
 * Add the [​​redirect URI](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23) that the auth server will redirect back to after every authorization attempt.
 

@@ -137,7 +137,7 @@ All [scopes](../get-started-login/scopes-for-login.md) are turned on by default.
 * **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
 * **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
 * **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope)
-* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanitycheckoptional-scope)
+* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanity_checkoptional-scope)
 
 ### Token Endpoint Authentication Method
 

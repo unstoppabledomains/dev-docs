@@ -291,7 +291,7 @@ The `IMintingController` interface declares a set of methods for minting, which 
 
 ### ISignatureController
 
-The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable [Meta transactions](../managing-domains/meta-transactions.md) for the `Registry` smart contract.
+The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable [Meta transactions](/manage-domains/delegating-transactions.md) for the `Registry` smart contract.
 
 **Source code:** [contracts/controllers/ISignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/ISignatureController.sol)
 
@@ -341,7 +341,7 @@ The `MultiSend` smart contract is used internally by the Unstoppable Domains tea
 
 ### SignatureUtil
 
-`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require [Meta Transactions](../managing-domains/meta-transactions.md).
+`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require [Meta Transactions](/manage-domains/delegating-transactions.md).
 
 **Source code:** [contracts/util/SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol)
 
@@ -368,7 +368,7 @@ The `LinkTokenMock` smart contract is used for testing [TwitterValidationOperato
 
 ### RelayTest
 
-`RelayTest` is used for testing relaying functionality for [Meta Transactions](../managing-domains/meta-transactions.md).
+`RelayTest` is used for testing relaying functionality for [Meta Transactions](/manage-domains/delegating-transactions.md).
 
 **Source code:** [contracts/test-helpers/RelayTest.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/test-helpers/RelayTest.sol)
 

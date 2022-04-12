@@ -32,8 +32,8 @@ Login with Unstoppable supports the following scopes which are detailed below:
 * [wallet scope](#wallet-scope)
 * [email scope](#email-scope)
 * [email:optional scope](#emailoptional-scope)
-* [humanity_check scope](#humanitycheck-scope)
-* [humanity_check:optional scope](#humanitycheckoptional-scope)
+* [humanity_check scope](#humanity_check-scope)
+* [humanity_check:optional scope](#humanity_checkoptional-scope)
 
 
 ## openid Scope
