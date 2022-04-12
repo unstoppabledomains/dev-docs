@@ -29,6 +29,7 @@ analytics:
     id: GTM-TXJK8HJ
 scripts:
   - ./static/scripts/etlb.js
+  - https://embed.typeform.com/next/embed.js
 #  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
@@ -38,7 +39,7 @@ nav:
 
   - label: Get Started
     page: getting-started/index.md
-    
+
   - label: Use Cases
     page: use-cases/index.mdx
 
@@ -71,14 +72,14 @@ footer:
         - label: Discord
           href: 'https://discord.com/invite/JWrEAAbp6R'
         - label: Telegram
-          href: 'https://t.me/unstoppabledomains'  
+          href: 'https://t.me/unstoppabledomains'
         - label: Twitter
           href: 'https://twitter.com/unstoppableweb'
         - label: Facebook
           href: 'https://www.facebook.com/unstoppableweb/'
 
     - group: Resources
-      items: 
+      items:
         - label: Medium
           href: 'https://medium.com/unstoppabledomains'
         - label: Podcast
