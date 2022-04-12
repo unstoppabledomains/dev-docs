@@ -25,4 +25,4 @@ You can find additional working integrations on UD's Applications List, filtered
 
 ## How do I get started?
 
-See the login [Login Integration Pathways](../login-with-unstoppable/login-integration-guides/integration-pathways.md) guide to get started integrating your application with the Login feature. You should also review the [Scopes for Login](../login-with-unstoppable/get-started-login/scopes-for-login.md) and [Humanity Check](../login-with-unstoppable/humanity-check/humanity-check-for-login.md) pages.
+See the login [Login Integration Pathways](/login-with-unstoppable/get-started-login/integration-pathways.md) guide to get started integrating your application with the Login feature. You should also review the [Scopes for Login](../login-with-unstoppable/get-started-login/scopes-for-login.md) and [Humanity Check](../login-with-unstoppable/humanity-check/humanity-check-for-login.md) pages.

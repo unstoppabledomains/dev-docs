@@ -22,7 +22,7 @@ You'll need the following to get started:
 
 These items are listed in order of complexity. For example, if you are just starting out with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the integration guides, API reference, or developer toolkit.
 
-- [Use Cases](../use-cases/index.md)
+- [Use Cases](../use-cases/index.mdx)
 - [Developer Integration Guides](../guides.mdx)
   - [Login with Unstoppable](../login-with-unstoppable/index.md)
   - [IPFS Websites](../d-websites/index.md)

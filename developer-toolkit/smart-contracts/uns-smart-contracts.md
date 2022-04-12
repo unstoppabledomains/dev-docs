@@ -6,7 +6,7 @@ editPage:
 ---
 # UNS Smart Contracts
 
-Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [UNS repository](https://github.com/unstoppabledomains/uns) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how UNS works, see [UNS Architecture overview](uns-architecture-overview.md).
+Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [UNS repository](https://github.com/unstoppabledomains/uns) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how UNS works, see [UNS Architecture overview](/getting-started/domain-registry-essentials/uns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
@@ -23,7 +23,7 @@ This section lists all the smart contracts that members can directly interact wi
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides [ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
+Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/getting-started/domain-registry-essentials/records-reference.md).
 
 | Network | Contract address |
 | - | - |
@@ -36,7 +36,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/uns-architecture-overview.md#proxyreader).
 
 | Network                  | Contract address                                                                                                                |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ### MintingManager
 
-`MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../allow-my-users-to-manage-existing-domains/meta-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
+`MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
 | Network                  | Contract address                                                                                                                |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |

@@ -5,7 +5,7 @@ description: This guide covers the process for configuring the Login with Unstop
 
 # Login Client Configuration
 
-The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](#step-2-client-metadata-configuration) section (Step 2 below).
+The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](../get-started-login/scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](#step-2-client-metadata-configuration) section (Step 2 below).
 
 <figure>
 

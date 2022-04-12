@@ -23,7 +23,7 @@ You will follow these steps to build and connect your d-website to your Unstoppa
 
 1. [Build your static website](build-website.md)
 2. [Upload Your Site to IPFS](upload-ipfs.md)
-3. [Connect Your IPFS Website to Your Domain](connect-ipfs-to-domain.md)
+3. [Connect Your IPFS Website to Your Domain](connect-ipfs.md)
 
 :::info Important
 If you use [**Unstoppable's IPFS uploader**](upload-ipfs.md#option-1-upload-your-website-with-our-ipfs-uploader), our systems will automatically connect the IPFS site to your Unstoppable domain without requiring you to separately retrieve the IPFS hash.

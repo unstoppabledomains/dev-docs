@@ -60,7 +60,7 @@ Example crypto records setup:
 | `crypto.USDT.version.ERC20.address` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 | `crypto.USDT.version.TRON.address`  | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk`         |
 
-`USDT` presents on multiple chains and key format is slightly different. More details can be found in the [Records Reference section](../domain-registry-essentials/records-reference.md)
+`USDT` presents on multiple chains and key format is slightly different. More details can be found in the [Records Reference section](../getting-started/domain-registry-essentials/records-reference.md)
 
 ## Domain Record Administrative Patterns
 

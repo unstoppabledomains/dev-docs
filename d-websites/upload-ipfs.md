@@ -83,7 +83,7 @@ In order to use it, you need to add one step to `main.yml`:
 
 There will be a build artifact on a runner after [steps](https://dapps-delivery-guide.readthedocs.io/en/latest/delivery/github-actions.html#step-1-create-pipeline) (usually in directory build or dist). You need to pass the directory as a path parameter.
 
-This step will have hash output — it will be needed later to [add the IPFS hash to your domain](#step-3-connect-your-ipfs-site-to-your-domain). Token **${{ steps.upload.outputs.hash }}** can be used in next steps where _upload_ is the id of current step.
+This step will have hash output — it will be needed later to [add the IPFS hash to your domain](connect-ipfs.md). Token **${{ steps.upload.outputs.hash }}** can be used in next steps where _upload_ is the id of current step.
 
 ### IPFS Upload to Pinata via GitHub Action
 
@@ -102,7 +102,7 @@ In order to use it, you need to add one step to `main.yml`:
     pinataPinName: {pin_name}
 ```
 
-As in the previous example, you will need to save the hash output to [add the IPFS hash to your domain](./#step-3-connect-your-ipfs-site-to-your-domain).
+As in the previous example, you will need to save the hash output to [add the IPFS hash to your domain](connect-ipfs.md).
 
 ### IPFS Upload to Pinata.cloud Website
 
@@ -128,7 +128,7 @@ You can also upload your static site to IPFS using the Pinata website.
 <figcaption>Locate the IPFS Hash for your d-website in Pinata.cloud</figcaption>
 </figure>
 
-* Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](./#step-3-connect-your-ipfs-site-to-your-domain).
+* Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](connect-ipfs.md).
 
 :::success Congratulations!
 You just uploaded your website to IPFS. If you selected Option 2 above, then please proceed to the next guide: [Connect Your IPFS Site To Your Domain](connect-ipfs.md).

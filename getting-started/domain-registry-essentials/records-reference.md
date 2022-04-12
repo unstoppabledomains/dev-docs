@@ -96,7 +96,7 @@ A fallback URL, to which a user will be redirected if no other resolution method
 
 ### DWeb records
 
-For more details, read [Browser Resolution Algorithm - DWeb Records](../../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md#distributed-web-records).
+For more details, read [Browser Resolution Algorithm - DWeb Records](../../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md#decentralized-web-records).
 
 **`dweb.ipfs.hash`**
 

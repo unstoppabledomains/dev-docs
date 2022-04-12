@@ -51,7 +51,7 @@ const client = new Client({
 
 Because there are a variety of ways to store session data about a user, the package comes with a way to specify in an abstract way the three methods required to authorize and maintain a user session.
 
-### Step 3A: The login Method
+### Step 3A: The Login Method
 
 **`login(ctx: Context, options: {username: string}): Promise<void>`**
 
@@ -60,7 +60,7 @@ Because there are a variety of ways to store session data about a user, the pack
 3. Redirects the user to the auth server with a OIDC compliant authorization request.
 4. After every authorization attempt the server will redirect the user to the `redirectUri` specified at instantiation.
 
-### Step 3B: The callback Method
+### Step 3B: The Callback Method
 
 **`callback(ctx: Context): Promise<Authorization>`**
 
@@ -68,7 +68,7 @@ Because there are a variety of ways to store session data about a user, the pack
 2. Exchanges authorization code for access and id tokens.
 3. Stores authorization (id and access tokens) inside session.
 
-### Step 3C: The middleware Method
+### Step 3C: The Middleware Method
 
 **`middleware(): (ctx: Context) => void`**
 
@@ -126,7 +126,7 @@ There are two UI options for when you create a server-side integration.
 
 ### Option 1: Create a Custom UI
 
-The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-a-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
+The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-the-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
 
 ```javascript
 app.get('/', (_, res) => {
@@ -146,7 +146,7 @@ The [DOM UI package](https://github.com/unstoppabledomains/uauth/tree/main/packa
 
 We are still working on documentation of this package, so developers should [see how it is used inside @uauth/js library](https://github.com/unstoppabledomains/uauth/blob/main/packages/js/src/Client.ts#L232).
 
-The package takes an injection with a submit method attached that is called when a user interacts with the modal. The submit function should call the [login function/route](node-js-server-guide.md#step-3a-a-login-method) on your own service.
+The package takes an injection with a submit method attached that is called when a user interacts with the modal. The submit function should call the [login function/route](node-js-server-guide.md#step-3a-the-login-method) on your own service.
 
 ## Step 5: Configure the Login UI
 

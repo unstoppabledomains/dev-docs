@@ -113,7 +113,7 @@ Subdomains are subject to the same set of rules as second-level domains in CNS. 
 Such an ownership model might not be suitable for every member. One may want to mint subdomains that are irrevocable and can be transferred only by a direct owner – this and other models are possible if a domain zone is owned by a smart contract. For more details on alternative ownership models, see the section below.
 
 :::info
-**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the [Minting controller](#minting-controller) section.
+**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see [Delegating Domain Management](#delegating-domain-management).
 :::
 
 ### Alternative ownership models

@@ -8,14 +8,14 @@ description: This page describes the process for requesting a free test domain a
 <embed src="/snippets/_test-domain-explain.md" />
 
 :::warning Important
-The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](../../login-with-unstoppable/login-integration-guides/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
+The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 ## Step 1: Gather Requirements for the Website Faucet
 
 * A web3 compatible wallet
-* Configure your wallet for [Goerli Testnet](get-test-domain.md#step-1-gather-requirements-for-etherscan) or [Polygon/Mumbai](get-test-domain.md#step-1.-configure-your-metamask-wallet)
-* Get[ free Ether from Goerli faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for Goerli and Mumbai Testnet)
+* Configure your wallet for [Goerli Testnet](etherscan.md#step-1-check-wallet-compatibility-for-etherscan ) or [Polygon/Mumbai](polygonscan.md#step-1-configure-your-metamask-wallet-for-polygon)
+* Get[ free Ether from Goerli faucet](etherscan.md#step-2-get-free-ether-from-goerli-faucet) or [free MATIC tokens from Polygon faucet](polygonscan.md#step-2-get-free-matic-tokens-from-polygon-faucet) to cover transaction fees (only for Goerli and Mumbai Testnet)
 * Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 
 :::info
@@ -34,7 +34,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **custom records**: add optional key and value pairs
 
 :::info reminder
-The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](../../login-with-unstoppable/login-integration-guides/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
+The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 <figure>

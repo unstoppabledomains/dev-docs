@@ -44,7 +44,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### Resolver
 
-`Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](architecture-overview.md#resolver).
+`Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](/getting-started/domain-registry-essentials/cns-architecture-overview.md#resolver).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
@@ -78,7 +78,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/cns-architecture-overview.md#proxyreader).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
@@ -137,7 +137,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### DomainZoneController
 
-`DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](architecture-overview.md#alternative-ownership-models).
+`DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](/getting-started/domain-registry-essentials/cns-architecture-overview.md#alternative-ownership-models).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>

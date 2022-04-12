@@ -20,7 +20,7 @@ resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
 
-The crypto.ETH.address can be located in the [Records Reference](../getting-started/domain-registry-essentials/records-reference.d).
+The crypto.ETH.address can be located in the [Records Reference](../getting-started/domain-registry-essentials/records-reference.md).
 
 ## Use Case: Retrieve a Domain Record
 

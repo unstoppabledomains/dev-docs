@@ -21,4 +21,4 @@ Of course! Every week we select a newly-integrated app to feature in the Unstopp
 
 ## How can I learn more?
 
-To learn more about our products, see the [Crypto Payments Guides](../crypto-payments/index.md), [Login Integration Guides](../login-with-unstoppable/login-integration-guides/integration-pathways.md), [IPFS Guides](../d-websites/index.md), or [Reseller Integration Guides](../reseller/reseller-integration-guides/reseller-pathways.md).
+To learn more about our products, see the [Crypto Payments Guides](../crypto-payments/index.md), [Login Integration Guides](/login-with-unstoppable/get-started-login/integration-pathways.md), [IPFS Guides](../d-websites/index.md), or [Reseller Integration Guides](../reseller/reseller-integration-guides/reseller-pathways.md).
