@@ -32,7 +32,6 @@ import Web3Modal from 'web3modal'
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions: IUAuthOptions = {
   clientID: 'client_id',
-  clientSecret: 'client_secret',
   redirectUri: 'http://localhost:3000',
 
   // Must include both the openid and wallet scopes.

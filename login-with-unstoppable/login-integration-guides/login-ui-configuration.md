@@ -55,7 +55,6 @@ uauthConnector.uauth.user().then().catch()
 ```javascript Web3 Modal
 const uauthOptions = {
   clientID: "",
-  clientSecret: "",
   redirectUri: ""
 }
 

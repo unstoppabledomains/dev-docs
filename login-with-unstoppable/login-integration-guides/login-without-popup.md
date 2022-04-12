@@ -5,7 +5,7 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 # 10 Minute Guide: Login with Unstoppable without Popup
 
-This integration guide shows you how to add Login to Unstoppable to your application using javascript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.
+This integration guide shows you how to add Login to Unstoppable to your application using JavaScript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
@@ -19,9 +19,8 @@ In this step, you will configure the UAuth class as follows:
 
 ```javascript
 const uauth = new UAuth({
-  // These can be copied from the bottom of your app's configuration page on unstoppabledomains.com.
+  // These can be copied from the bottom of your app's configuration page.
   clientID: process.env.REACT_APP_CLIENT_ID,
-  clientSecret: process.env.REACT_APP_CLIENT_SECRET,
 
   // These are the scopes your app is requesting from the ud server.
   scope: 'openid email wallet',

@@ -5,7 +5,7 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 # 5 Minute Guide: Login with Unstoppable with Popup
 
-In this integration guide, we will show how to add Login with Unstoppable with the popup feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a javascript developer with a few minutes of time.
+In this integration guide, we will show how to add Login with Unstoppable with the popup feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a JavaScript developer with a few minutes of time.
 
 :::info
 If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.
@@ -60,7 +60,6 @@ import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
   clientID: 'uauth_example_spa_id',
-  clientSecret: 'uauth_example_spa_secret',
   redirectUri: 'http://localhost:5000/callback',
 })
 ```

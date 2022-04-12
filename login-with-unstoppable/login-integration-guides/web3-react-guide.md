@@ -39,7 +39,6 @@ export const walletconnect = new WalletConnectConnector({
 
 export const uauth = new UAuthConnector({
   clientID: process.env.REACT_APP_CLIENT_ID!,
-  clientSecret: process.env.REACT_APP_CLIENT_SECRET!,
   redirectUri: process.env.REACT_APP_REDIRECT_URI!,
   postLogoutRedirectUri: process.env.REACT_APP_POST_LOGOUT_REDIRECT_URI!,
   // Scope must include openid and wallet
@@ -66,7 +65,6 @@ import UAuth from '@uauth/js'
 const uauth = new UAuthConnector({
   uauth: new UAuth({
     clientID: process.env.REACT_APP_CLIENT_ID!,
-    clientSecret: process.env.REACT_APP_CLIENT_SECRET!,
     redirectUri: process.env.REACT_APP_REDIRECT_URI!,
     postLogoutRedirectUri: process.env.REACT_APP_POST_LOGOUT_REDIRECT_URI!,
     scope: 'openid wallet',
