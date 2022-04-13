@@ -1,6 +1,6 @@
 ---
 title: Login Authentication Protocol
-description: This page describes the authentication protocol used in the Login with Unstoppable feature. The user's wallet signature is obtained using an extension of OIDC described below.
+description: This page describes the extension of the OpenID Connect protocol used by Login with Unstoppable to obtain a user's wallet signature.
 ---
 
 # Authentication Protocol

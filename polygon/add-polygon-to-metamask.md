@@ -1,6 +1,6 @@
 ---
 title: Add Polygon Network to MetaMask Wallet
-description: This guide covers configuring the MetaMask wallet to support both Polygon mainnet and testnet (Mumbai) networks. This process requires the use of the MetaMask browser extension.
+description: This guide shows how to configure the MetaMask wallet browser extension to support both Polygon mainnet and testnet (Mumbai) networks.
 ---
 
 # Add Polygon Network to MetaMask Wallet

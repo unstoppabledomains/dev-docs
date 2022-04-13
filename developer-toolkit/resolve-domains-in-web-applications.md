@@ -1,6 +1,6 @@
 ---
 title: Resolving Domains in Web Applications
-description: This page describes how to use UD Resolution to resolve NFT domains in web applications. It assumes the reader has a basic understanding of UD Resolution.
+description: This page describes how to use the Resolution library to resolve NFT domains in web applications. It assumes a basic understanding of UD Resolution.
 ---
 
 # Resolving Domains in Web Applications

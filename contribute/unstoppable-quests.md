@@ -1,6 +1,6 @@
 ---
 title: Developer Quests
-description: This page is an overview of the UD quest options for developers.
+description: This page is an overview of the Unstoppable Domains quest options for developers and content creators.
 ---
 
 # UD Developer Quests 📚

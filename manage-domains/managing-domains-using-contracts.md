@@ -1,6 +1,6 @@
 ---
 title: Managing Domains Using Contracts
-description: This guide covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
+description: This guide covers how to manage Unstoppable Domain records using the Etherscan and Polygonscan user interfaces to write and execute contracts.
 ---
 
 # Managing Domains Using Contracts

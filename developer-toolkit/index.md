@@ -1,6 +1,6 @@
 ---
 title: Developer Toolkit
-description: This is the landing page for the developer toolkit.
+description: An overview of the tools available for developers integrating Unstoppable NFT Domain resolution with their Web3 applications.
 ---
 
 # Developer Toolkit

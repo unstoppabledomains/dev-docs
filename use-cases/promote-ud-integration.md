@@ -1,6 +1,6 @@
 ---
 title: Promote Your Unstoppable Domains Integration
-description: This page outlines the use case for promoting your UD integration.
+description: This page outlines the use case for promoting your integration in the Unstoppable Domains application directory.
 ---
 # Promote Your Unstoppable Domains Integration
 Let's get your questions answered about UD Integrations.

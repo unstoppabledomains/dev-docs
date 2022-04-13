@@ -1,6 +1,6 @@
 ---
 title: Stripe Payments Guide
-description: This guide covers the process for configuring the Reseller account to accept Stripe payments. Payout information can be tracked in the UD Reseller Dashboard.
+description: This guide shows how to configure your Reseller account to accept Stripe payments. Payout information can be tracked in the UD Reseller Dashboard.
 ---
 
 # Stripe Payments Guide

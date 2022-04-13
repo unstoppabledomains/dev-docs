@@ -1,6 +1,6 @@
 ---
 title: Register as a Reseller
-description: This page describes the process for creating an account and applying to become an authorized reseller for Unstoppable Domains. Payment settings can then be configured in the UD Reseller Dashboard.
+description: This page describes the process for creating an account and applying to become an authorized reseller for Unstoppable Domains.
 ---
 
 # Register as a Reseller

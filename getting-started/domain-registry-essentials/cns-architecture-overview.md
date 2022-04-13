@@ -1,6 +1,6 @@
 ---
 title: CNS Architecture Overview
-description: This section provides a high-level overview of CNS — Crypto Name Service. Readers should have a basic understanding of Ethereum smart contracts and the ERC-721 token standard.
+description: This page provides an overview of the Crypto Name Service. It assumes basic knowledge of Ethereum smart contracts and the ERC-721 NFT standard.
 ---
 
 # CNS Architecture Overview

@@ -1,6 +1,6 @@
 ---
 title: UNS Architecture Overview
-description: This section provides a high-level overview of UNS — Unstoppable Name Service. Readers should have a basic understanding of Ethereum smart contracts and the ERC-721 token standard.
+description: This page provides an overview of the Unstoppable Name Service. It assumes basic knowledge of Ethereum smart contracts and the ERC-721 NFT standard.
 ---
 
 # UNS Architecture Overview

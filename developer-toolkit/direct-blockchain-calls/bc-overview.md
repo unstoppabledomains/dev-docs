@@ -1,6 +1,6 @@
 ---
 title: Resolve Domains with Direct Blockchain Calls
-description: This page reviews the process for resolving domains using direct blockchain calls. It also provides a few examples of using this technique for building applications.
+description: These guides demonstrate the process for resolving domains using direct blockchain calls and a few examples of how to use this to build applications.
 ---
 
 # Resolve Domains with Direct Blockchain Calls
