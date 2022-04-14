@@ -84,7 +84,7 @@ Should be transformed into the following DNS records:
 | AAAA   | 2a00:1450:401b:805::200e | 128 |
 | MX     | 10 aspmx.example.com.    | 128 |
 
-TTL for individual records of the same type is currently unsupported. This is due to needing to change the record value format, increased gas cost, and their deprecated status according to [RFC-2181](https://tools.ietf.org/html/rfc2181#section-5.2). Setting `dns.ttl` instead of TTL for individual records is recommended due to higher gas efficiency.
+TTL for individual records of the same type is currently unsupported. This is due to needing to change the record value format, increased gas cost, and their deprecated status according to [RFC-2181](https://datatracker.ietf.org/doc/html/rfc2181#section-5.2). Setting `dns.ttl` instead of TTL for individual records is recommended due to higher gas efficiency.
 
 #### Authority responses
 

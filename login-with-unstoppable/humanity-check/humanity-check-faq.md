@@ -1,6 +1,6 @@
 ---
 title: Humanity Check FAQ
-description: Frequently asked questions for the Humanity Check feature of the Login With Unstoppable service.
+description: Frequently asked questions about the Humanity Check feature of the Login With Unstoppable service.
 ---
 
 # Humanity Check Frequently Asked Questions

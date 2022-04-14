@@ -7,7 +7,7 @@ description: This guide explains the process for transferring a domain from CNS 
 
 This guide covers two options for transferring from CNS Layer 1 to UNS Layer 1. Both options call the safeTransferFrom function, but the second option passes the ```_data``` parameter of ```abi.encode(['bool'], [false])```. See [Step 3](#step-3-select-a-safetransferfrom-option) for details on the safeTransferFrom domain transfer options.
 
-# Prerequisites
+## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
 * ​[CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) on Etherscan
@@ -18,7 +18,7 @@ This guide covers two options for transferring from CNS Layer 1 to UNS Layer 1. 
 The ```abiCoder.encode``` pre-requisite is only needed for the second migration option, which uses the false boolean abider.encode parameter.
 :::
 
-# Step 1: Verify Contract Info for Each Registry
+## Step 1: Verify Contract Info for Each Registry
 * Open the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page 
 * Open the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page 
 * Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 

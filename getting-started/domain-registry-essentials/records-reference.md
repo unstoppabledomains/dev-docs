@@ -92,7 +92,7 @@ A fallback URL, to which a user will be redirected if no other resolution method
 
 | Format                                          | Example                        |
 | ----------------------------------------------- | ------------------------------ |
-| [RFC-1738](https://tools.ietf.org/html/rfc1738) | `http://example.com/home.html` |
+| [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
 
 ### DWeb records
 
@@ -190,4 +190,4 @@ Deprecated: use `browser.redirect_url` instead.
 
 | Format                                          | Example                        |
 | ----------------------------------------------- | ------------------------------ |
-| [RFC-1738](https://tools.ietf.org/html/rfc1738) | `http://example.com/home.html` |
+| [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |

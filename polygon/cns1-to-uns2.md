@@ -7,7 +7,7 @@ description: This guide explains the process for depositing a domain from CNS La
 
 This guide covers the process for depositing a domain from CNS Layer 1 to UNS Layer 2. This process requires use of the ```safeTransferFrom``` function using the abi.encode(['bool'], [true]) parameter.
 
-# Prerequisites
+## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
 * ​[CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) on Etherscan
@@ -15,7 +15,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 * [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) on Polygonscan
 * abiCoder.encode(['bool'], [true]) = ```0x0000000000000000000000000000000000000000000000000000000000000001```
 
-# Step 1: Verify Contract Info for Each Registry
+## Step 1: Verify Contract Info for Each Registry
 * Open the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page 
 * Open the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page 
 * Open the [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) page

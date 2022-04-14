@@ -114,15 +114,15 @@ The modals are further described below:
 * **Modal 2.** A modal is displayed which allows the user to begin the authorization process by entering their Unstoppable domain address.
 * **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes). User must sign the transaction using their wallet address in order to share their information with the dApp.
 
-## Step 3: Download UD Buttons (Node js Only)
+## Step 3: Download UD Buttons (Node JS Only)
 
 For Node.js integrations, the UI or modals being built will require official UD buttons. The table below provides Login with Unstoppable button status and states, which can be downloaded for use in custom Node.js integrations.
 
 | Status  | Small                                       | Large                                         |
 | ------- | ------------------------------------------- | --------------------------------------------- |
-| Default | ![](/images/default-icon.png) | ![](/images/default-button.png) |
-| Hover   | ![](/images/hover-icon.png)   | ![](/images/hover-button.png)   |
-| Pressed | ![](/images/pressed-icon.png) | ![](/images/pressed-button.png) |
+| Default | ![Small login button: default](/images/default-icon.png) | ![Large login button: default](/images/default-button.png) |
+| Hover   | ![Small login button: hover](/images/hover-icon.png)   | ![Large login button: hover](/images/hover-button.png)   |
+| Pressed | ![small login button: pressed](/images/pressed-icon.png) | ![Large login button: pressed](/images/pressed-button.png) |
 
 :::success Congratulations!
 You just configured the Login with Unstoppable UI.

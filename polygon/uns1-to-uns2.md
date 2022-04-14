@@ -7,13 +7,13 @@ description: This guide explains the process for depositing a domain from UNS La
 
 This guide covers the process for depositing a domain from UNS Layer 1 to UNS Layer 2. This process requires use of the ```depositToPolygon(uint256)``` function. 
 
-# Prerequisites
+## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
 * ​[UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) on Etherscan
 * [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) on Polygonscan
 
-# Step 1: Verify Contract Info for Each Registry 
+## Step 1: Verify Contract Info for Each Registry 
 * Open the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page 
 * Open the [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) page
 * Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 
