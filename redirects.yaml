@@ -71,10 +71,13 @@
   to: '/login-with-unstoppable/'
   type: 301
 '/login-with-unstoppable/register-your-application':
-  to: '/login-with-unstoppable/get-started-login/register-your-application/'
+  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
+  type: 301
+'/login-with-unstoppable/get-started-login/register-your-application/':
+  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
   type: 301
 '/login-with-unstoppable/login-client-configuration':
-  to: 'https://docs.unstoppabledomains.com/login-with-unstoppable/login-integration-guides/login-client-configuration/'
+  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
   type: 301
 '/login-with-unstoppable/login-integration-guides':
   to: '/login-with-unstoppable/get-started-login/integration-pathways/'
