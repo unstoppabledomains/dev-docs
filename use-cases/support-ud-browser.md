@@ -7,7 +7,9 @@ description: This page outlines the use case for supporting Unstoppable Domains 
 
 This page outlines the use case for supporting Unstoppable Domains in my web browser, which allows users of your browser to create and view decentralized websites. 
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_aIf4Nac6DU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## How does it work?
 
@@ -19,7 +21,9 @@ Individuals control their own content and identity with a decentralized website.
 
 ## Are there working integrations for this feature? 
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cxeik-xgtYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <embed src="/snippets/_compatible-browsers.md" />
 

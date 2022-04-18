@@ -5,7 +5,9 @@ description: This page outlines the use case for sending and receiving crypto pa
 
 # Send and Receive Crypto Payments in Your App
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2HNAaf6rIec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## How does it work?
 
@@ -15,7 +17,9 @@ The most common way to integrate with Unstoppable Domains is through simple doma
 
 ## Are there working integrations for this feature? 
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lKtkbcV5Td0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 You can find additional working integrations on UD's Applications List, filtered by the [Payment feature](https://unstoppabledomains.com/apps?filters=5).
 

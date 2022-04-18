@@ -9,7 +9,9 @@ Currently, we have [Twitter Chainlink Verification for an Unstoppable Domain](ht
 
 ## Twitter Chainlink Verification
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kfDEUJOMqqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## New Chainlink Verification Options
 

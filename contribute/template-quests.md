@@ -17,7 +17,9 @@ We'd love to make your templates available on Unstoppable Domains' website build
 4. Submit a pull request with your update. DM us on Discord or Twitter to let us know the PR has been sent. We will setup a code review and confirm that everything is working correctly. 
 5. The quest is completed when the PR is merged into the git repository! 
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YtDcmPqW_DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Website Template Requirements
 

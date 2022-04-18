@@ -7,7 +7,9 @@ description: This page outlines the use case for supporting Unstoppable Domains 
 
 This page outlines the use case for supporting Unstoppable Domains on Polygon L2 Network.
 
+<div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## How does it work?
 
