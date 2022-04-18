@@ -46,7 +46,7 @@ The **Client Metadata** section includes the unique client ID and redirect URIs.
 The Redirect URIs follow three rules:
 
 1. `http` URIs must resolve to URIs hosted at `http://127.0.0.1` or `http://localhost`.
-2. URIs hosted at h`ttp://127.0.0.1` do **NOT** require the port to be specified. All other URIs (including those hosted at `http://localhost`) require the correct port to be specified.
+2. URIs hosted at `http://127.0.0.1` do **NOT** require the port to be specified. All other URIs (including those hosted at `http://localhost`) require the correct port to be specified.
 3. All https URIs specified must use the same origin (e.g. `https://unstoppabledomains.com/redirectUri1`, `https://unstoppabledomains.com/redirectUri2`)
 
 :::info

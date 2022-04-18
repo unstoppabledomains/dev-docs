@@ -36,6 +36,6 @@ Login with Unstoppable has UI requirements that must be configured to properly d
 
 ## Step 4: Promote Your Applicaiton
 
-Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submiting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
+Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
 
 <embed src="/snippets/_discord.md" />
