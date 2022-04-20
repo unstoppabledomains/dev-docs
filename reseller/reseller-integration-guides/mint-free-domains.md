@@ -1,5 +1,5 @@
 ---
-title: Free Domain Minting Guide
+title: Free Domain Minting Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Reseller account to mint free domains.
 ---
 

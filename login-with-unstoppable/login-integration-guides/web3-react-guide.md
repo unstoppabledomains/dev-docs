@@ -1,5 +1,5 @@
 ---
-title: Web3 React Guide for Login with Unstoppable
+title: Web3 React Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
 ---
 

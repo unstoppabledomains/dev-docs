@@ -1,11 +1,11 @@
 ---
-title: Resolution Go Change Log
-description: This is the changelog page for Resolution Go Library, Unstoppable Domains.
+title: Resolution-Go Changelog | Unstoppable Domains Developer Portal
+description: This is the changelog page for the Resolution-Go Library, Unstoppable Domains.
 editPage:
   disable: true
 ---
 
-# Resolution Golang Change Log
+# Resolution Golang Changelog
 
 ## 2.0.0
 

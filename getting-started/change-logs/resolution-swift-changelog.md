@@ -1,11 +1,11 @@
 ---
-title: Resolution Swift Change Log
-description: This is the changelog page for Resolution Swift Library, Unstoppable Domains.
+title: Resolution-Swift Changelog | Unstoppable Domains Developer Portal
+description: This is the changelog page for Resolution-Swift Library, Unstoppable Domains.
 editPage:
   disable: true
 ---
 
-# Resolution Swift Change Log
+# Resolution Swift Changelog
 
 ## 4.0.0
 

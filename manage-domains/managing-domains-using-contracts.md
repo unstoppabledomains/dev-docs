@@ -1,5 +1,5 @@
 ---
-title: Managing Domains Using Contracts
+title: Managing Domains Using Contracts | UD Developer Portal
 description: This guide covers how to manage Unstoppable Domain records using the Etherscan and Polygonscan user interfaces to write and execute contracts.
 ---
 

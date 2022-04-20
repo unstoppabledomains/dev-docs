@@ -1,5 +1,5 @@
 ---
-title: Developer Documentation Glossary
+title: Documentation Glossary | Unstoppable Domains Developer Portal
 description: The glossary provides a list of definitions for terms, acronyms, and phrases used in the Unstoppable Domains developer documentation.
 ---
 

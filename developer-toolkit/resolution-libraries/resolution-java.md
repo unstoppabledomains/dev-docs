@@ -1,5 +1,5 @@
 ---
-title: Resolution-Java
+title: Resolution-Java | Unstoppable Domains Developer Portal
 description: This page details basic configuration and usage of the resolution-java library.
 ---
 

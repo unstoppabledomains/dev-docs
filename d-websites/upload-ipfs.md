@@ -1,5 +1,5 @@
 ---
-title: Upload Your Website to IPFS
+title: Upload Your Website to IPFS | Unstoppable Domains Developer Portal
 description: This guide covers several different options of uploading your website to IPFS.
 ---
 

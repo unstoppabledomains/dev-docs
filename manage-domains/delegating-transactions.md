@@ -1,5 +1,5 @@
 ---
-title: Delegating (Meta) Transactions
+title: Delegating (Meta) Transactions | Unstoppable Domains Developer Portal
 description: This page details the process for using meta-transaction support, which allows members to delegate transactions to another party.
 ---
 

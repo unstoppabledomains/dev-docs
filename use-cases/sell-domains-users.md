@@ -1,5 +1,5 @@
-/---
-title: Sell Domains to Users in Your App
+---
+title: Sell Domains to Users in Your App | UD Developer Portal
 description: This page outlines the use case for selling domains to users in your application.
 ---
 

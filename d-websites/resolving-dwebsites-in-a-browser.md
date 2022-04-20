@@ -1,5 +1,5 @@
 ---
-title: Resolving D-Websites in a Browser
+title: Resolving D-Websites in a Browser | Unstoppable Developer Portal
 description: This page reviews multiple options for resolving decentralized websites in a browser.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Login UI Configuration Guide
+title: Login UI Configuration Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Login UI to obtain user information and display the authenticated user's domain name instead of address.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Resolution Libraries
+title: Resolution Libraries | Unstoppable Domains Developer Portal
 description: This page reviews the different resolution libraries that can be used for resolving a domain. The libraries are fully supported and maintained by UD.
 ---
 

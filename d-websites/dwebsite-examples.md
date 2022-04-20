@@ -1,5 +1,5 @@
 ---
-title: D-Website Examples and Resources
+title: D-Website Examples & Resources | Unstoppable Domains Developer Portal
 description: This page provides examples of decentralized websites and options for locating other d-websites through specialized IPFS search engines.
 ---
 

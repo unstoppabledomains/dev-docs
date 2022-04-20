@@ -1,5 +1,5 @@
 ---
-title: Send and Receive Crypto Payments in Your App
+title: Send and Receive Crypto Payments in Your App | UD Developer Portal
 description: This page outlines the use case for sending and receiving crypto payments in your application.
 ---
 

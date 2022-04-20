@@ -1,5 +1,5 @@
 ---
-title: CNS Architecture Overview
+title: CNS Architecture Overview | Unstoppable Domains Developer Portal
 description: This page provides an overview of the Crypto Name Service. It assumes basic knowledge of Ethereum smart contracts and the ERC-721 NFT standard.
 ---
 

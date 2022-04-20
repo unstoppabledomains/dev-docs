@@ -1,5 +1,5 @@
 ---
-title: Scopes for Login with Unstoppable
+title: Scopes for Login with Unstoppable | UD Developer Portal
 description: This page details the scopes currently supported by Login with Unstoppable.
 ---
 

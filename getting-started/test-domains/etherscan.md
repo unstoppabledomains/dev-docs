@@ -1,5 +1,5 @@
 ---
-title: Get a Free Ethereum Test Domain
+title: Get a Free Ethereum Test Domain | Unstoppable Domains Developer Portal
 description: This guide covers the process of obtaining a free test domain, through direct smart contract calling on Etherscan.
 ---
 

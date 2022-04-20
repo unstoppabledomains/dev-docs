@@ -1,5 +1,5 @@
 ---
-title: Managing Domain Ownership
+title: Managing Domain Ownership | Unstoppable Domains Developer Portal
 description: This page covers all the Registry methods that can be used for managing domain ownership.
 ---
 

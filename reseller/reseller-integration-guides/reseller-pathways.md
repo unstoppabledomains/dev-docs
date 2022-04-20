@@ -1,8 +1,6 @@
 ---
-title: Reseller Integration Guides
-description: >-
-  This page reviews the integration guides for UD's Reseller API feature. This
-  feature works for Polygon domains.
+title: Reseller Integration Guides | Unstoppable Domains Developer Portal
+description: This page reviews the integration guides for UD's Reseller API feature. This feature works for Polygon domains.
 ---
 
 # Reseller Integration Guides

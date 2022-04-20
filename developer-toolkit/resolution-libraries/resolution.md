@@ -1,5 +1,5 @@
 ---
-title: Resolution
+title: Resolution Library | Unstoppable Domains Developer Portal
 description: This page details basic configuration and usage of the resolution library.
 ---
 

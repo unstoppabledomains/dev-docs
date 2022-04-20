@@ -1,5 +1,5 @@
 ---
-title: Browser Resolution Test Domains
+title: Browser Resolution Test Domains | Unstoppable Domains Developer Portal
 description: This page provides a list of the browser resolution test domains and reviews the process for retrieving test records.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Delegating Domain Management
+title: Delegating Domain Management | Unstoppable Domains Developer Portal
 description: This page outlines the features of creating a custom smart contract for flexible permission models. This technique works for CNS, ZNS, and UNS.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Browser Resolution Overview
+title: Browser Resolution Overview | Unstoppable Domains Developer Portal
 description: This page provides a high level overview of how UD Resolution works when resolving domains using a traditional HTTP Web Browser or a Dapp Browser.
 ---
 

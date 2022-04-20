@@ -1,5 +1,5 @@
 ---
-title: UNS Architecture Overview
+title: UNS Architecture Overview | Unstoppable Domains Developer Portal
 description: This page provides an overview of the Unstoppable Name Service. It assumes basic knowledge of Ethereum smart contracts and the ERC-721 NFT standard.
 ---
 

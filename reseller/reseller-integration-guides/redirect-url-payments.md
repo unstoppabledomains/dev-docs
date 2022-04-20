@@ -1,5 +1,5 @@
 ---
-title: Redirect URL Payments Guide
+title: Redirect URL Payments Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Reseller account to mint paid domains using the redirect URL payment processing flow.
 ---
 

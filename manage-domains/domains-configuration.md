@@ -1,5 +1,5 @@
 ---
-title: Domains Configuration GUI
+title: Domains Configuration GUI | Unstoppable Domains Developer Portal
 description: This page provides options for configuring a domain purchased from UD.
 ---
 

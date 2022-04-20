@@ -1,5 +1,5 @@
 ---
-title: Records Reference
+title: Records Reference | Unstoppable Domains Developer Portal
 description: This page contains an overview of all standardized domain records. It covers crypto payments and browser resolution for DWeb and DNS.
 ---
 

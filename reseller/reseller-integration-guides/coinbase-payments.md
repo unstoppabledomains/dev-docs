@@ -1,5 +1,5 @@
 ---
-title: Coinbase Payments Guide
+title: Coinbase Payments Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to configure your Reseller account to accept Coinbase payments. Payout information can be tracked in the UD Reseller Dashboard.
 ---
 

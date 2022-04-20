@@ -1,5 +1,5 @@
 ---
-title: Other Ways To Integrate Crypto Payments
+title: Other Ways To Integrate Crypto Payments | UD Developer Portal
 description: This page covers integrating crypto payments into your applications aside from the resolution libraries.
 ---
 

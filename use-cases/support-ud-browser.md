@@ -1,5 +1,5 @@
 ---
-title: Support Unstoppable Domains in Your Web Browser
+title: Support Unstoppable Domains in Your Web Browser | UD Developer Portal
 description: This page outlines the use case for supporting Unstoppable Domains in your web browser.
 ---
 

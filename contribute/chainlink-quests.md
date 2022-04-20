@@ -1,5 +1,5 @@
 ---
-title: Chainlink Verification Quests
+title: Chainlink Verification Quests | Unstoppable Domains Developer Portal
 description: This page reviews the process for participating in chainlink verification quests with Unstoppable Domains for a bounty.
 ---
 

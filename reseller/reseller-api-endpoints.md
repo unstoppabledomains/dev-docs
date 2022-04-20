@@ -1,5 +1,5 @@
 ---
-title: Reseller API Endpoints
+title: Reseller API Endpoints | Unstoppable Domains Developer Portal
 description: This page details the Reseller API Endpoints and links to the external Reseller API Specification.
 ---
 

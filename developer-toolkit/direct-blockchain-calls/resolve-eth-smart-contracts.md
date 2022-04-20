@@ -1,5 +1,5 @@
 ---
-title: Resolve Using Ethereum Smart Contracts
+title: Resolve Using Ethereum Smart Contracts | UD Developer Portal
 description: This page explains the process for resolving domain records by making calls to Ethereum smart contracts using Ethereum JSON RPC.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Resolution CLI
+title: Resolution CLI | Unstoppable Domains Developer Portal
 description: This page reviews the Resolution CLI option for resolving a domain. This option is fully supported and maintained by UD.
 ---
 

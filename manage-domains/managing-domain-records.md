@@ -1,5 +1,5 @@
 ---
-title: Managing Domain Records
+title: Managing Domain Records | Unstoppable Domains Developer Portal
 description: This page describes the record architectures for CNS and UNS, record types, and administrative patterns for managing domain records.
 ---
 

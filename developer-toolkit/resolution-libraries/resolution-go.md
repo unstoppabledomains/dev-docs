@@ -1,5 +1,5 @@
 ---
-title: Resolution-Go
+title: Resolution-Go | Unstoppable Domains Developer Portal
 description: This page details basic configuration and usage of the resolution-go library.
 ---
 

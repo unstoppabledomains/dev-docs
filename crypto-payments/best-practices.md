@@ -1,5 +1,5 @@
 ---
-title: Best Practices for Crypto Payments Integration
+title: Best Practices for Crypto Payments Integration | UD Developer Portal
 description: This page covers best practices to follow while integrating crypto payments.
 ---
 

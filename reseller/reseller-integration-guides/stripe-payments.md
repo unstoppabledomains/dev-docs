@@ -1,5 +1,5 @@
 ---
-title: Stripe Payments Guide
+title: Stripe Payments Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to configure your Reseller account to accept Stripe payments. Payout information can be tracked in the UD Reseller Dashboard.
 ---
 

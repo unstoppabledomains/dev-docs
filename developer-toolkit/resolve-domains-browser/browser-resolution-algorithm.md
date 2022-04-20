@@ -1,5 +1,5 @@
 ---
-title: Browser Resolution Algorithm
+title: Browser Resolution Algorithm | Unstoppable Domains Developer Portal
 description: This section explains how different domain record configurations should be interpreted by browsers.
 ---
 

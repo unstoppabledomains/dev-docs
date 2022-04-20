@@ -1,11 +1,11 @@
 ---
-title: Resolution Java Change Log
-description: This is the changelog page for Resolution Java Library, Unstoppable Domains.
+title: Resolution-Java Changelog | Unstoppable Domains Developer Portal
+description: This is the changelog page for Resolution-Java Library, Unstoppable Domains.
 editPage:
   disable: true
 ---
 
-# Resolution Java Change Log
+# Resolution Java Changelog
 
 ## 5.0.0
 

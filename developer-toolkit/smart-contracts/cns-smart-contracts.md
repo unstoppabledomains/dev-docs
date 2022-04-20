@@ -1,5 +1,5 @@
 ---
-title: CNS Smart Contract
+title: CNS Smart Contract | Unstoppable Domains Developer Portal
 description: This page provides brief descriptions with links to source code and deployment addresses for the Crypto Name Service smart contracts.
 editPage:
   disable: true

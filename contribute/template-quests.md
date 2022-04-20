@@ -1,5 +1,5 @@
 ---
-title: Website Template Quests
+title: Website Template Quests | Unstoppable Domains Developer Portal
 description: This page reviews the process for participating in website template quests for decentralized websites.
 ---
 

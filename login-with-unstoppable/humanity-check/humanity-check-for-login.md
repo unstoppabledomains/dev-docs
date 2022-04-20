@@ -1,5 +1,5 @@
 ---
-title: Humanity Check Overvew
+title: Humanity Check Overview | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the Humanity Check feature for Login with Unstoppable.
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: UD Dev Portal Overview
+title: Overview of the Unstoppable Domains Developer Portal
 description: The UD developer portal is both an educational and a technical resource. We hope it will be equally useful for both technical and non-technical readers.
 ---
 
-# UD Dev Portal Overview
+# Unstoppable Domains Developer Portal Overview
 
 This developer portal is designed to help you understand how to build and integrate custom applications using Unstoppable Domains products.
 It's a great companion to our [Feature Guide Collection](https://youtube.com/playlist?list=PLkKiQerk3s0AbMvBafwmJdR8pv7qPYeL-) on Youtube.

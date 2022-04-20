@@ -1,5 +1,5 @@
 ---
-title: Resolve .zil With Direct Blockchain Calls
+title: Resolve .zil With Direct Blockchain Calls | UD Developer Portal
 description: This page reviews the process for resolving .zil domain names with direct blockchain calls.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Login Client Configuration
+title: Login Client Configuration | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Login with Unstoppable client.
 ---
 

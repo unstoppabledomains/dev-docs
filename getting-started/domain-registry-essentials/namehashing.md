@@ -1,5 +1,5 @@
 ---
-title: Namehashing
+title: Namehashing | Unstoppable Domains Developer Portal
 description: This page details the Namehashing algorithm and the features of the ERC-721 token standard.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Build Your Static Website
+title: Build Your Static Website | Unstoppable Domains Developer Portal
 description: This guide outlines the process of building your static website and configuring it to work with the IPFS protocol.
 ---
 

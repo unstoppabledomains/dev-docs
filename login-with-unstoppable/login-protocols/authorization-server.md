@@ -1,8 +1,6 @@
 ---
-title: Login Authorization Server
-description: >-
-  This page outlines the authorization server for the Login with Unstoppable
-  feature.
+title: Login Authorization Server | Unstoppable Domains Developer Portal
+description: This page outlines the authorization server for the Login with Unstoppable feature.
 ---
 
 # Authorization Server

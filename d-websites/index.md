@@ -1,5 +1,5 @@
 ---
-title: IPFS and D-Web Overview
+title: IPFS and D-Web Overview | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of IPFS and decentralized websites and how they work alongside Unstoppable domains.
 ---
 

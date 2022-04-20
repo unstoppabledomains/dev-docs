@@ -1,11 +1,11 @@
 ---
-title: Resolution JavaScript Change Log
+title: Resolution Changelog | Unstoppable Domains Developer Portal
 description: This is the changelog page for Resolution Library, Unstoppable Domains.
 editPage:
   disable: true
 ---
 
-# Resolution JavaScript Change Log
+# Resolution Changelog
 
 ## 7.1.3
 - Implemented function getDomainFromTokenId in UdApi

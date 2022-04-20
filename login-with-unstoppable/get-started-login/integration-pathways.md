@@ -1,5 +1,5 @@
 ---
-title: Login Integration Pathways
+title: Login Integration Pathways | Unstoppable Domains Developer Portal
 description: This page reviews the integration guides for Login with Unstoppable. This feature works for Polygon and Ethereum domains.
 ---
 

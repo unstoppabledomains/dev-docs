@@ -1,5 +1,5 @@
 ---
-title: Resolution Service API
+title: Resolution Service API | Unstoppable Domains Developer Portal
 description: This page covers the resolution service API feature for Unstoppable domains hosted by Alchemy.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Content Generation Quests
+title: Content Generation Quests | Unstoppable Domains Developer Portal
 description: This page reviews the process for participating in content generation quests with Unstoppable Domains.
 ---
 

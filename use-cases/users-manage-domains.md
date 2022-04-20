@@ -1,5 +1,5 @@
 ---
-title: Allow Unstoppable Domain Management in Your App
+title: Allow Unstoppable Domain Management in Your App | UD Developer Portal
 description: This page outlines the use case for allowing users to manage their existing UD domains in your app.
 ---
 

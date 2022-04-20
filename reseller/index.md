@@ -1,5 +1,5 @@
 ---
-title: Register as a Reseller
+title: Register as a Reseller | Unstoppable Domains Developer Portal
 description: This page describes the process for creating an account and applying to become an authorized reseller for Unstoppable Domains.
 ---
 
