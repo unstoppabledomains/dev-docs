@@ -22,7 +22,7 @@ figcaption {
 
 .one-third-inline-block {
     vertical-align: top;
-    width: 33%;
+    width: 32%;
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
@@ -34,6 +34,20 @@ figcaption {
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
+}
+
+@media only screen and (max-width: 450px) {
+    figure img {
+        min-width: 85%;
+    }
+
+    .one-third-inline-block {
+        width: 99%;
+    }
+
+    .half-inline-block {
+        width: 99%;
+    }
 }
 
 .video-container {
