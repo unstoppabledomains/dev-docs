@@ -49,3 +49,14 @@ figcaption {
     width: 100%;
     height: 100%;
 }
+
+/* Goofy hack to hide the TOC panel in most of "medium" breakpoint */
+@media only screen and (max-width: 1050px) {
+    #gatsby-focus-wrapper > div > div > div > div > section {
+        width: 90%!important;
+    }
+    
+    #gatsby-focus-wrapper > div > div > div > div > aside {
+        display: none!important;
+    }
+}
