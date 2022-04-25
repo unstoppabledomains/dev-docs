@@ -15506,10 +15506,9 @@ unquote@~1.1.1:
   resolved "https://registry.yarnpkg.com/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"
   integrity sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ=
 
-uns@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/uns/-/uns-0.0.1.tgz#5e20e386528e998cc46a0fb9b2faa86bb2943c6c"
-  integrity sha512-S1odAoXGlHtZHcaH7GMot9OWbTLd2Q46JxK5ACRamAm9e96+L/3CBzTaswm2uDvx1mjL3ZBjsAGnMuhi+ZXscQ==
+"uns@https://github.com/unstoppabledomains/uns.git":
+  version "0.4.0"
+  resolved "https://github.com/unstoppabledomains/uns.git#f422bd9ceb04bd59588ff6a5b9d997ff6d38a6fc"
 
 unset-value@^1.0.0:
   version "1.0.0"

@@ -43,6 +43,6 @@
     "markdown-include": "^0.4.3",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3",
-    "uns": "^0.0.1"
+    "uns": "https://github.com/unstoppabledomains/uns.git"
   }
 }
