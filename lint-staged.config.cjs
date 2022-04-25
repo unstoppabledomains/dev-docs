@@ -3,4 +3,5 @@ module.exports = {
     'eslint --fix',
     'prettier --ignore-unknown --write',
   ],
+  './**/*.{ts,tsx}': ['tsc --jsx react-jsx --noEmit'],
 };

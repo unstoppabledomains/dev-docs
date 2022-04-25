@@ -11,7 +11,9 @@
     "clean": "redocly-portal clean",
     "prepare": "husky install",
     "lint": "prettier -c . && eslint --ext .js,.jsx,.ts,.tsx,.ejs,.md.,.mdx,.json .",
-    "lint:fix": "prettier -c -w . && eslint --fix --ext .js,.jsx,.ts,.tsx,.ejs,.md.,.mdx,.json ."
+    "lint:fix": "prettier -c -w . && eslint --fix --ext .js,.jsx,.ts,.tsx,.ejs,.md.,.mdx,.json .",
+    "tsc": "tsc --jsx react-jsx",
+    "tsc:check": "tsc --jsx react-jsx --noEmit"
   },
   "dependencies": {
     "@redocly/developer-portal": "1.1.0-beta.87",
