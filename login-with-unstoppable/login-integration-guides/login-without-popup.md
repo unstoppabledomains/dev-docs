@@ -13,9 +13,9 @@ This integration guide shows you how to add Login to Unstoppable to your applica
 
 In this step, you will configure the UAuth class as follows:
 
-* Add the **Client ID** from your application's [client metadata](login-client-configuration.md#step-2-client-metadata-configuration).
-* Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
-* Add the [​​redirect URI](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23) that the auth server will redirect back to after every authorization attempt.
+- Add the **Client ID** from your application's [client metadata](login-client-configuration.md#step-2-client-metadata-configuration).
+- Add all the [scopes](../get-started-login/scopes-for-login.md) you will be requesting from the user.
+- Add the [​​redirect URI](https://github.com/unstoppabledomains/uauth/blob/c01776f3aedf599dfc76b20ea86750890754010e/examples/spa/src/index.tsx#L23) that the auth server will redirect back to after every authorization attempt.
 
 ```javascript
 const uauth = new UAuth({
@@ -27,7 +27,7 @@ const uauth = new UAuth({
 
   // This is the url that the auth server will redirect back to after every authorization attempt.
   redirectUri: process.env.REACT_APP_REDIRECT_URI,
-})
+});
 ```
 
 :::danger
@@ -72,7 +72,7 @@ const Login: React.FC<RouteProps> = props => {
 
 ## Step 3: Create the Callback Page
 
-On the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
+On the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
 
 1. Parses authorization code found in current URI.
 2. Exchanges authorization code for access and id tokens.
@@ -134,7 +134,7 @@ const Profile: React.FC<RouteProps> = () => {
         setRedirectTo('/login?error=' + error.message)
       })
   }, [])
-  
+
   const handleLogoutButtonClick: React.MouseEventHandler<HTMLButtonElement> =
     e => {
       console.log('logging out!')

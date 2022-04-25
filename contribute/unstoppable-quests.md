@@ -5,9 +5,9 @@ description: This page is an overview of the Unstoppable Domains quest options f
 
 # UD Developer Quests 📚
 
-## Context 
+## Context
 
-> *"If you want to go fast, go alone; if you want to go far, go together."*
+> _"If you want to go fast, go alone; if you want to go far, go together."_
 
 We're up to our ears in exciting work at Unstoppable Domains, and even then, there are millions of things that never get checked off our to-do list. We know we can't do it alone and that's why we created "Quest" for developers like yourself can complete and continue building towards our vision of the [Decentralized Web](https://unstoppabledomains.com/blog/the-growth-of-the-internet-and-the-web).
 
@@ -17,10 +17,10 @@ This is our first iteration of Quests, and we will continue improving it over ti
 
 We have several ongoing developer quests that you can participate in! Please select from the list below.
 
-* [Integrations 🔌](integration-quests.md)
-* [Website Templates 🕸️](template-quests.md)
-* [Chainlink Verification 🖇️](chainlink-quests.md)
-* [Content Generation ✍️](content-quests.md)
+- [Integrations 🔌](integration-quests.md)
+- [Website Templates 🕸️](template-quests.md)
+- [Chainlink Verification 🖇️](chainlink-quests.md)
+- [Content Generation ✍️](content-quests.md)
 
 ## Suggestions for a New Quest
 

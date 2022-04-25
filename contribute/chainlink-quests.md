@@ -5,7 +5,7 @@ description: This page reviews the process for participating in chainlink verifi
 
 # Chainlink Verification 🖇️
 
-Currently, we have [Twitter Chainlink Verification for an Unstoppable Domain](https://unstoppabledomains.com/blog/verifying-twitter-on-your-domain-with-chainlink). Now, we're introducing a bounty for a new Chainlink verification for your Unstoppable Domain. 
+Currently, we have [Twitter Chainlink Verification for an Unstoppable Domain](https://unstoppabledomains.com/blog/verifying-twitter-on-your-domain-with-chainlink). Now, we're introducing a bounty for a new Chainlink verification for your Unstoppable Domain.
 
 ## Twitter Chainlink Verification
 

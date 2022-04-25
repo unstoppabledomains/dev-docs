@@ -22,19 +22,18 @@ The scopes requested by an application varies depending on the type of user data
 <figure>
 
 ![Example scope list presented to UD users](/images/consent-screen-marked-v2.png '#width=40%;')
-	
+
 <figcaption>Example scope list presented to UD users</figcaption>
 </figure>
 
 Login with Unstoppable supports the following scopes which are detailed below:
 
-* [openid scope](#openid-scope) (required)
-* [wallet scope](#wallet-scope)
-* [email scope](#email-scope)
-* [email:optional scope](#emailoptional-scope)
-* [humanity_check scope](#humanity_check-scope)
-* [humanity_check:optional scope](#humanity_checkoptional-scope)
-
+- [openid scope](#openid-scope) (required)
+- [wallet scope](#wallet-scope)
+- [email scope](#email-scope)
+- [email:optional scope](#emailoptional-scope)
+- [humanity_check scope](#humanity_check-scope)
+- [humanity_check:optional scope](#humanity_checkoptional-scope)
 
 ## openid Scope
 
@@ -50,8 +49,8 @@ The Login with Unstoppable **wallet** scope is best used for retrieving metadata
 
 1. `wallet_address` - The address associated with the domain.
 2. `wallet_type_hint` - A string indicating the type of wallet associated with the domain with two possible values:
-   * `injected` - A web3/browser-based wallet like [MetaMask](https://docs.metamask.io/guide/)
-   * `walletconnect` - Using the [WalletConnect](https://walletconnect.org) protocol
+   - `injected` - A web3/browser-based wallet like [MetaMask](https://docs.metamask.io/guide/)
+   - `walletconnect` - Using the [WalletConnect](https://walletconnect.org) protocol
 
 ## email Scope
 
@@ -64,7 +63,7 @@ The Login with Unstoppable **email:optional** scope is used to retrieve metadata
 <figure>
 
 ![UI for email:optional scope](/images/email_optional_scope-small.jpg '#width=30%;')
-	
+
 <figcaption>UI for email:optional scope</figcaption>
 </figure>
 
@@ -74,7 +73,6 @@ The Login with Unstoppable **humanity_check** scope must be added to the library
 
 After the user authenticates and proves their identity with the Persona authorization system, the application will receive a humanity_id, which is a unique identifier for each user to serve as that user's "[humanity check](../humanity-check/humanity-check-for-login.md#persona)."
 
-
 <figure class="one-third-inline-block">
 
 ![UI for Humanity Check, can be used for any identity provider, including Persona](/images/humanity-check-optional.png)
@@ -82,10 +80,9 @@ After the user authenticates and proves their identity with the Persona authoriz
 <figcaption>Humanity Check request</figcaption>
 </figure>
 
-
 <figure class="one-third-inline-block">
 
-![Getting Started UI screen for Persona](/images/persona_getting_started.png) 
+![Getting Started UI screen for Persona](/images/persona_getting_started.png)
 
 <figcaption>Persona, getting started</figcaption>
 </figure>
@@ -93,9 +90,9 @@ After the user authenticates and proves their identity with the Persona authoriz
 <figure class="one-third-inline-block">
 
 ![Upload Drivers License UI screen for Persona](/images/persona_front_drivers_license.png)
+
 <figcaption>Upload driver license</figcaption>
 </figure>
-
 
 See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
 

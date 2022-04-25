@@ -13,8 +13,8 @@ The Login with Unstoppable Humanity Check feature provides a way for application
 
 The Humanity Check feature allows Unstoppable Domains to start building a community of data sharing with domains as the central hub through which that information passes.
 
-* For domain owners, Humanity Check will become the primary way that web3 users store, share, and control who has access to their personal data online.
-* For applications, Humanity Check will become the standard solution to sybil resistance, customer communication, and personal data storage.
+- For domain owners, Humanity Check will become the primary way that web3 users store, share, and control who has access to their personal data online.
+- For applications, Humanity Check will become the standard solution to sybil resistance, customer communication, and personal data storage.
 
 :::info
 Users will always have full control over which pieces of data they share with which applications, regardless of the information being requested by the application.
@@ -63,9 +63,9 @@ For the moment, Login with Unstoppable only allows applications to request the H
 
 These specific considerations apply to the Humanity Check feature:
 
-* **Any domain from the same wallet will return the same Humanity Check identifier.** If more than one domain exists in the same wallet, users will only need to complete the humanity check process once because identity verification is tied to the wallet address, not the domain.
-* **Humanity Check information will not transfer when a domain is sold.** The humanity check identifier is tied to the wallet address, not the domain, so the humanity check information will not be transferred with the domain when it is sold to someone else.
-* **Each user only needs to verify themselves once per wallet address.** If users verify humanity check information inside an app, this verification applies to other applications if using the same login. Even different domains within the same wallet will be pre-verified using the same humanity check information.
+- **Any domain from the same wallet will return the same Humanity Check identifier.** If more than one domain exists in the same wallet, users will only need to complete the humanity check process once because identity verification is tied to the wallet address, not the domain.
+- **Humanity Check information will not transfer when a domain is sold.** The humanity check identifier is tied to the wallet address, not the domain, so the humanity check information will not be transferred with the domain when it is sold to someone else.
+- **Each user only needs to verify themselves once per wallet address.** If users verify humanity check information inside an app, this verification applies to other applications if using the same login. Even different domains within the same wallet will be pre-verified using the same humanity check information.
 
 :::warning
 While users can maintain a humanity-check-approved identity on the blockchain, the supporting personal data resides **off-chain on a conventional server**.
@@ -75,7 +75,7 @@ While users can maintain a humanity-check-approved identity on the blockchain, t
 
 The Login with Unstoppable Humanity Check feature assumes the following:
 
-* Users must have a UD-minted domain inside their wallet either on Polygon or Ethereum.
-* Users should have a Government ID of some kind to verify their identity (i.e., drivers license, passport, visa, etc.).
-* Users need access to a webcam / camera phone to take additional verification photos.
-* Users probably need 5 minutes to complete the web-based verification process with a UD identity partner.
+- Users must have a UD-minted domain inside their wallet either on Polygon or Ethereum.
+- Users should have a Government ID of some kind to verify their identity (i.e., drivers license, passport, visa, etc.).
+- Users need access to a webcam / camera phone to take additional verification photos.
+- Users probably need 5 minutes to complete the web-based verification process with a UD identity partner.

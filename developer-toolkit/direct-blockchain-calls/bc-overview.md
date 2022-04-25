@@ -11,8 +11,8 @@ One strategy for resolving domains is to read directly from the blockchain. This
 
 ## **Use Cases**
 
-* [Resolve Unstoppable Domains with Direct Blockchain Calls](resolve-unstoppable-domain-names.md)
-* [Resolve .zil with Direct Blockchain Calls](resolve-zil-without-libraries.md)
-* [Resolve Domains with Ethereum Smart Contracts](resolve-eth-smart-contracts.md)
+- [Resolve Unstoppable Domains with Direct Blockchain Calls](resolve-unstoppable-domain-names.md)
+- [Resolve .zil with Direct Blockchain Calls](resolve-zil-without-libraries.md)
+- [Resolve Domains with Ethereum Smart Contracts](resolve-eth-smart-contracts.md)
 
 <embed src="/snippets/_discord.md" />

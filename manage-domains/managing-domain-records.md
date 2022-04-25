@@ -29,10 +29,10 @@ Standard record keys are split by namespaces with a `.` used as a separator.
 
 The main namespaces are:
 
-* `crypto.*` — Records related to crypto payments
-* `dns.*` — DNS records
-* `dweb.*` — Records related to distributed content network protocols
-* `browser.*` — Hint records for web browsers
+- `crypto.*` — Records related to crypto payments
+- `dns.*` — DNS records
+- `dweb.*` — Records related to distributed content network protocols
+- `browser.*` — Hint records for web browsers
 
 ### Crypto Payment Records
 
@@ -68,9 +68,9 @@ Example crypto records setup:
 
 CNS Resolver and UNS RecordStorage allows members to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
 
-* Owner address of a domain
-* Approved address for a domain
-* Owner's operator addresses
+- Owner address of a domain
+- Approved address for a domain
+- Owner's operator addresses
 
 This allows members to still retain primary ownership of their domain. These smart contracts can be programmed in such a way that they only change specified records. An Oracle Integration works in this way. For example:
 
@@ -92,8 +92,8 @@ This nested structure allows members to configure domains on the un-enumerable E
 
 Currently `reset` and `reconfigure` are the only methods which directly change the preset.
 
-* The `reset` method clears the domain's records by changing the preset on the domain. CNS Resolver changes it to the timestamp when the transaction was mined e.g. `blockchain.timestamp`. UNS RecordStorage changes it to the hash of the previous preset ID.
-* The `reconfigure` method first resets the domain then configures a new set of records.
+- The `reset` method clears the domain's records by changing the preset on the domain. CNS Resolver changes it to the timestamp when the transaction was mined e.g. `blockchain.timestamp`. UNS RecordStorage changes it to the hash of the previous preset ID.
+- The `reconfigure` method first resets the domain then configures a new set of records.
 
 In addition to manually calling these methods, records are `reset` automatically when a domain is transferred or burned.
 

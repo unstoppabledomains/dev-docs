@@ -36,7 +36,6 @@ editPage:
   text: Edit this page
   icon: static/images/github-mark-32px.png
 nav:
-
   - label: Get Started
     page: getting-started/index.md
 

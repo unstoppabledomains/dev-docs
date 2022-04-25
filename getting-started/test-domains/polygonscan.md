@@ -13,14 +13,14 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 1. Configure your Metamask wallet for Polygon
 
-* Go to [**Metamask**](https://metamask.io) **→ Settings → Networks.**
-* Press **Add Network** button.
-* Fill fields with the following values:
-  * **Network Name:** Mumbai
-  * **New RPC URL:** [https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78](https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78)
-  * **Chain ID:** 80001
-  * **Currency Symbol:** MATIC
-  * **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)
+- Go to [**Metamask**](https://metamask.io) **→ Settings → Networks.**
+- Press **Add Network** button.
+- Fill fields with the following values:
+  - **Network Name:** Mumbai
+  - **New RPC URL:** [https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78](https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78)
+  - **Chain ID:** 80001
+  - **Currency Symbol:** MATIC
+  - **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)
 
 <figure>
 
@@ -31,10 +31,10 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 2. Get free MATIC tokens from Polygon Faucet
 
-* Go to Faucet Page: [https://faucet.polygon.technology/](https://faucet.polygon.technology).
-* Choose MATIC token and Mumbai network.
-* Enter your wallet address.
-* Click **Submit** button.
+- Go to Faucet Page: [https://faucet.polygon.technology/](https://faucet.polygon.technology).
+- Choose MATIC token and Mumbai network.
+- Enter your wallet address.
+- Click **Submit** button.
 
 <figure>
 
@@ -45,10 +45,10 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 3: Locate the domain ending namehash for Polygon
 
-* The domain ending namehash can be found by using the website API:
-  * .wallet domain ending -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
-  * .888 domain ending -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
-  * .dao domain ending -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
+- The domain ending namehash can be found by using the website API:
+  - .wallet domain ending -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
+  - .888 domain ending -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
+  - .dao domain ending -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
 
 For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
 
@@ -73,7 +73,7 @@ For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da5
 }
 ```
 
-* Or, you can locate the domain ending namehash in the following list:
+- Or, you can locate the domain ending namehash in the following list:
 
 ```json
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
@@ -89,10 +89,10 @@ For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da5
 
 ## Step 4: Write the Polygonscan Smart Contract Request
 
-* Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
-* Choose **Write as Proxy** tab.
-* Connect your wallet (Goerli).
-* Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, domain ending namehash, and test domain suffix.
+- Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
+- Choose **Write as Proxy** tab.
+- Connect your wallet (Goerli).
+- Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, domain ending namehash, and test domain suffix.
 
 <figure>
 
@@ -101,7 +101,7 @@ For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da5
 <figcaption>Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
 </figure>
 
-* Click the **Write** button to start the transaction.
+- Click the **Write** button to start the transaction.
 
 :::success Congratulations!
 You're the new proud owner of a test domain on Polygon Mumbai testnet. Happy hacking!

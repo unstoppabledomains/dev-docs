@@ -56,12 +56,12 @@ Build out the `index.html` file as follows:
 Now, configure the `app.js` as follows:
 
 ```javascript
-import UAuth from '@uauth/js'
+import UAuth from '@uauth/js';
 
 const uauth = new UAuth({
   clientID: 'uauth_example_spa_id',
   redirectUri: 'http://localhost:5000/callback',
-})
+});
 ```
 
 ## Step 4: Implement the Login Handler
@@ -71,13 +71,13 @@ Add more code to the `app.js` file as follows:
 ```javascript
 window.login = async () => {
   try {
-    const authorization = await uauth.loginWithPopup()
- 
-    console.log(authorization)
+    const authorization = await uauth.loginWithPopup();
+
+    console.log(authorization);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 ```
 
 ## Step 5: Login with Unstoppable

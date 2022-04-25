@@ -41,5 +41,5 @@ Login with Unstoppable is currently configured for users to share the email addr
 
 ## Considerations
 
-* Does not support .zil domains
-* Pre-made components are only available initially in React. The modal is written in react, which has a larger library size.
+- Does not support .zil domains
+- Pre-made components are only available initially in React. The modal is written in react, which has a larger library size.

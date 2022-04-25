@@ -8,10 +8,10 @@ pages:
     expanded: false
     selectFirstItemOnExpand: true
     pages:
-    - label: Humanity Check Overview
-      page: humanity-check/humanity-check-for-login.md
-    - label: Humanity Check FAQ
-      page: humanity-check/humanity-check-faq.md
+      - label: Humanity Check Overview
+        page: humanity-check/humanity-check-for-login.md
+      - label: Humanity Check FAQ
+        page: humanity-check/humanity-check-faq.md
     separatorLine: true
   - group: Getting Started with Login
     expanded: false
@@ -30,7 +30,7 @@ pages:
         page: login-protocols/authorization-server.md
       - label: Authentication Protocol
         page: login-protocols/authentication-protocol.md
-    separatorLine: true  
+    separatorLine: true
   - group: Login Integration Guides
     expanded: false
     pages:
@@ -53,7 +53,7 @@ pages:
     separatorLine: true
   - group: Troubleshoot Your Login Integration
     expanded: false
-    pages: 
+    pages:
       - page: troubleshoot/login-error-codes.md
       - page: troubleshoot/troubleshooting-guide.md
-    separatorLine: true  
+    separatorLine: true

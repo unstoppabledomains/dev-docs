@@ -1,12 +1,12 @@
 figure {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
 }
 
 /* Redocly-generated img is wrapped in <p> tag, which adds block start/end margins */
 figure p {
-    margin-block: 0;
+  margin-block: 0;
 }
 
 /*
@@ -16,61 +16,63 @@ figure img {
 */
 
 figcaption {
-    font-size: 16px;
-    color: #A0A0A0;
+  font-size: 16px;
+  color: #a0a0a0;
 }
 
 .one-third-inline-block {
-    vertical-align: top;
-    width: 32%;
-    display: inline-block;
-    margin-left: 0;
-    margin-right: 0;
+  vertical-align: top;
+  width: 32%;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .half-inline-block {
-    vertical-align: top;
-    width: 49%;
-    display: inline-block;
-    margin-left: 0;
-    margin-right: 0;
+  vertical-align: top;
+  width: 49%;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media only screen and (max-width: 450px) {
-    figure img {
-        min-width: 85%;
-    }
+  figure img {
+    min-width: 85%;
+  }
 
-    .one-third-inline-block {
-        width: 99%;
-    }
+  .one-third-inline-block {
+    width: 99%;
+  }
 
-    .half-inline-block {
-        width: 99%;
-    }
+  .half-inline-block {
+    width: 99%;
+  }
 }
 
 .video-container {
-    position: relative;
-    padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); /* Default to 16:9 aspect ratio */
-    height: 0;
+  position: relative;
+  padding-bottom: calc(
+    var(--aspect-ratio, 0.5625) * 100%
+  ); /* Default to 16:9 aspect ratio */
+  height: 0;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Goofy hack to hide the TOC panel in most of "medium" breakpoint */
 @media only screen and (max-width: 1050px) {
-    #gatsby-focus-wrapper > div > div > div > div > section {
-        width: 90%!important;
-    }
-    
-    #gatsby-focus-wrapper > div > div > div > div > aside {
-        display: none!important;
-    }
+  #gatsby-focus-wrapper > div > div > div > div > section {
+    width: 90% !important;
+  }
+
+  #gatsby-focus-wrapper > div > div > div > div > aside {
+    display: none !important;
+  }
 }

@@ -13,6 +13,7 @@ Also, you might explore our growing list of [Integrated Applications](https://un
 ## Before You Begin
 
 You'll need the following to get started:
+
 - Basic understanding of [CNS](../developer-toolkit/smart-contracts/cns-smart-contracts.md) and [UNS](../developer-toolkit/smart-contracts/uns-smart-contracts.md) Smart Contracts
 - Knowledge of differences between [L1 and L2 network](../polygon/index.md)
 - A [free test domain](./test-domains/etherscan.md)
