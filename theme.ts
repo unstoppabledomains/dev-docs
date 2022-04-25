@@ -1,4 +1,5 @@
-import { lighten, darken, readableColor } from 'polished';
+import { darken, lighten, readableColor } from 'polished';
+import { Colors, Theme, Typography } from './types';
 
 export const theme = {
   // spacing: {
@@ -16,9 +17,9 @@ export const theme = {
     tonalOffset: 0.3,
     primary: {
       main: '#0D67FE',
-      light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
-      dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
-      contrastText: ({ colors }) => readableColor(colors.primary.main),
+      light: ({ colors }: {colors: Colors }) => lighten(colors.tonalOffset, colors.primary.main),
+      dark: ({ colors }: {colors: Colors })  => darken(colors.tonalOffset, colors.primary.main),
+      contrastText: ({ colors }: {colors: Colors })  => readableColor(colors.primary.main),
     },
     secondary: {
       main: '#ffffff',
@@ -33,20 +34,20 @@ export const theme = {
     // },
     // responses: {
     //   success: {
-    //     color: ({ colors }) => colors.success.main,
-    //     backgroundColor: ({ colors }) => transparentize(0.9, colors.success.main),
+    //     color: ({ colors }: {colors: Colors })  => colors.success.main,
+    //     backgroundColor: ({ colors }: {colors: Colors })  => transparentize(0.9, colors.success.main),
     //   },
     //   error: {
-    //     color: ({ colors }) => colors.error.main,
-    //     backgroundColor: ({ colors }) => transparentize(0.9, colors.error.main),
+    //     color: ({ colors }: {colors: Colors })  => colors.error.main,
+    //     backgroundColor: ({ colors }: {colors: Colors })  => transparentize(0.9, colors.error.main),
     //   },
     //   redirect: {
-    //     color: ({ colors }) => colors.warning.main,
-    //     backgroundColor: ({ colors }) => transparentize(0.9, colors.responses.redirect.color),
+    //     color: ({ colors }: {colors: Colors })  => colors.warning.main,
+    //     backgroundColor: ({ colors }: {colors: Colors })  => transparentize(0.9, colors.responses.redirect.color),
     //   },
     //   info: {
-    //     color: ({ colors }) => colors.info.main,
-    //     backgroundColor: ({ colors }) => transparentize(0.9, colors.responses.info.color),
+    //     color: ({ colors }: {colors: Colors })  => colors.info.main,
+    //     backgroundColor: ({ colors }: {colors: Colors })  => transparentize(0.9, colors.responses.info.color),
     //   },
     // },
     http: {
@@ -61,7 +62,7 @@ export const theme = {
       head: '#c167e4',
     },
    navbar: {
-      main: ({ colors }) => colors.secondary.main,
+      main: ({ colors }: {colors: Colors })  => colors.secondary.main,
       contrastText: 'black'
      },
      footer: {
@@ -97,13 +98,13 @@ export const theme = {
     //   fontWeight: '600',
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
-       color: ({ colors }) => colors.text.secondary,
+       color:({ colors }: {colors: Colors })  => colors.text.secondary,
        capitalize: true,
      },
     heading2: {
     //   fontSize: '1.57143em',
     //   fontWeight: '600',
-       color: ({ colors }) => colors.text.secondary,
+       color: ({ colors }: {colors: Colors })  => colors.text.secondary,
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
     //   capitalize: false,
@@ -111,7 +112,7 @@ export const theme = {
     heading3: {
     //   fontSize: '1.27em',
     //   fontWeight: '600',
-      color: ({ colors }) => lighten(0.2, colors.text.secondary),
+      color: ({ colors }: {colors: Colors })  => lighten(0.2, colors.text.secondary),
     //   fontFamily: ({ typography }) => typography.headings.fontFamily,
     //   lineHeight: ({ typography }) => typography.lineHeight,
     //   capitalize: false,
@@ -134,9 +135,9 @@ export const theme = {
       wrap: false,
     },
     links: {
-      color: ({ colors }) => colors.text.secondary,
-      visited: ({ typography }) => typography.links.color,
-      hover: ({ typography }) => lighten(0.3, typography.links.color),
+      color: ({ colors }: {colors: Colors })  => colors.text.secondary,
+      visited: ({ typography }: { typography: Typography }) => typography.links.color,
+      hover: ({ typography }: { typography: Typography }) => lighten(0.3, typography.links.color),
     },
   },
   rightPanel: {
@@ -148,8 +149,8 @@ export const theme = {
     nestedBackground: '#fafafa',
     // linesColor: theme => lighten( theme.colors.tonalOffset, desaturate(theme.colors.tonalOffset, theme.colors.primary.main) ),
     // defaultDetailsWidth: '75%',
-     typeNameColor: theme => theme.colors.text.secondary,
-     typeTitleColor: theme => theme.schema.typeNameColor,
+     typeNameColor: (theme: Theme) => theme.colors.text.secondary,
+     typeTitleColor: (theme: Theme) => theme.schema.typeNameColor,
     // requireLabelColor: theme => theme.colors.error.main,
     // labelsTextSize: '0.9em',
     // nestingSpacing: '1em',
@@ -167,40 +168,40 @@ export const theme = {
       variants: {
         info: {
           backgroundColor: '#F5F7F9',
-          textColor: ({ colors }) => colors.text.primary,
-          headingColor: ({ colors }) => colors.text.primary,
+          textColor: ({ colors }: {colors: Colors }) => colors.text.primary,
+          headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           iconColor: '#3455DB',
           // icon: '<svg ...',
         },
-        attention: { 
+        attention: {
           backgroundColor: '#F5F7F9',
-          textColor: ({ colors }) => colors.text.primary,
-          headingColor: ({ colors }) => colors.text.primary,
+          textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
+          headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           iconColor: '#3455DB',
-          // icon: '<svg ...', 
+          // icon: '<svg ...',
       },
-        warning: { 
+        warning: {
           backgroundColor: '#F5F7F9',
-          textColor: ({ colors }) => colors.text.primary,
-          headingColor: ({ colors }) => colors.text.primary,
+          textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
+          headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           iconColor: '#D4AD03',
           // icon: '<svg ...',
       },
-        danger: { 
+        danger: {
           backgroundColor: '#F5F7F9',
-          textColor: ({ colors }) => colors.text.primary,
-          headingColor: ({ colors }) => colors.text.primary,
+          textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
+          headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           iconColor: '#E53935',
           // icon: '<svg ...',
       },
-        success: { 
+        success: {
           backgroundColor: '#F5F7F9',
-          textColor: ({ colors }) => colors.text.primary,
-          headingColor: ({ colors }) => colors.text.primary,
+          textColor:({ colors }: {colors: Colors })  => colors.text.primary,
+          headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           iconColor: '#03AD13',
           // icon: '<svg ...',
       },
       },
     },
-  },  
+  },
 };
