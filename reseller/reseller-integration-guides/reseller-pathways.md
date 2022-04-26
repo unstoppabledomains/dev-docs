@@ -30,10 +30,6 @@ To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, et
 
 There are several ways to integrate with Unstoppable's Reseller feature, which is detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
 
-:::warning
-Stripe and Coinbase payment methods are currently unavailable. Resellers will be notified directly when these features have resumed.
-:::
-
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](mint-free-domains.md)       |

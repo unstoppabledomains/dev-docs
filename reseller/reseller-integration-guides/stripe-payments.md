@@ -5,10 +5,6 @@ description: This guide shows how to configure your Reseller account to accept S
 
 # Stripe Payments Guide
 
-:::warning
-The Stripe feature has been temporarily disabled. Resellers will be notified when  support for this feature has resumed.
-:::
-
 Unstoppable Domains supports [Stripe](http://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and **secure** payment method for resellers that mostly use client side applications.
 
 The following diagram shows the general process that takes place between Stripe and Unstoppable Domains, after a customer buys a domain.
@@ -16,7 +12,7 @@ The following diagram shows the general process that takes place between Stripe 
 <figure>
 
 ![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#width=80%;')
-	
+
 <figcaption>Payment flow for pre-paid domain purchases, such as Stripe</figcaption>
 </figure>
 
@@ -26,7 +22,7 @@ The following diagram shows the general process that takes place between Stripe 
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-* There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppabledomains.com/resellers) for live and test connections. At UD, we use a different stripe API key for live and test orders. 
+* There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppabledomains.com/resellers) for live and test connections. At UD, we use a different stripe API key for live and test orders.
 * These Stripe API keys are public keys and they are safe to reveal.
     * pk\_test\_\* (reseller-test-\* namespace)
     * pk\_live\_\* (all other domains)
@@ -38,7 +34,7 @@ The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains wh
 <figure>
 
 ![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#width=80%;')
-	
+
 <figcaption>Strive Live and Stripe Test payment setup areas</figcaption>
 </figure>
 
@@ -47,7 +43,7 @@ The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains wh
 <figure>
 
 ![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#width=80%;')
-	
+
 <figcaption>Stripe integrations form to connect your Stripe and UD accounts</figcaption>
 </figure>
 
@@ -66,7 +62,7 @@ Stripe generates a token ID for each transaction, which is later used by UD to p
 <figure>
 
 ![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#width=80%;')
-	
+
 <figcaption>Button selection for tracking Stripe payouts</figcaption>
 </figure>
 
@@ -81,7 +77,7 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 <figure>
 
 ![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#width=80%;')
-	
+
 <figcaption>Main/default view of Stripe Payouts (i.e., payouts tab) </figcaption>
 </figure>
 
@@ -92,7 +88,7 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 <figure>
 
 ![View of Stripe Account information (i.e., account tab)](/images/25.png '#width=80%;')
-	
+
 <figcaption>View of Stripe Account information (i.e., account tab)</figcaption>
 </figure>
 

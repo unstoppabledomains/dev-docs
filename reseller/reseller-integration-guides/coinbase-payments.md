@@ -5,10 +5,6 @@ description: This guide shows how to configure your Reseller account to accept C
 
 # Coinbase Payments Guide
 
-:::warning
-The Coinbase feature has been temporarily disabled. Resellers will be notified when support for this feature has resumed.
-:::
-
 Unstoppable Domains supports [Coinbase](https://developers.coinbase.com) payments. Coinbase allows you to accept other forms of payments from your customers, such as bitcoin, litecoin, and other crypto currencies.
 
 The following diagram shows the general process that occurs between Coinbase and Unstoppable Domains, after a customer buys a domain.
@@ -16,14 +12,14 @@ The following diagram shows the general process that occurs between Coinbase and
 <figure>
 
 ![Payment flow for pre-paid domain purchases, such as Coinbase](/images/paid-domains-claiming-prepayment.png '#width=80%;')
-	
+
 <figcaption>Payment flow for pre-paid domain purchases, such as Coinbase</figcaption>
 </figure>
 
 ## Step 1: Configure Coinbase for Unstoppable Domains
 
-* To begin accepting crypto payments from customers, UD resellers must ensure that Coinbase integration is configured correctly. 
-* A wallet transaction should make a ‘Buy Domain’ call with the payments field defined to **“coinbase.”** 
+* To begin accepting crypto payments from customers, UD resellers must ensure that Coinbase integration is configured correctly.
+* A wallet transaction should make a ‘Buy Domain’ call with the payments field defined to **“coinbase.”**
 * UD will respond with the coinbase chargeID which can be used with the Coinbase API.
 
 The example below shows how to properly configure the wallet information to process a coinbase transaction:
@@ -50,7 +46,7 @@ To begin accepting crypto payments from your customers, Coinbase offers several 
 
 ## Step 3: Receive CoinBase Payouts
 
-* Coinbase payouts are manually processed by Unstoppable Domains within 5 business days of receiving the payout request and only after the reseller has earned at least $600 in Coinbase sales. 
+* Coinbase payouts are manually processed by Unstoppable Domains within 5 business days of receiving the payout request and only after the reseller has earned at least $600 in Coinbase sales.
 * Resellers can request a Coinbase payout in the UD Reseller Dashboard by clicking on the “Request Payout” button.
 
 :::info
@@ -60,7 +56,7 @@ The “Request Payout” button is grayed out and automatically appears after th
 <figure>
 
 ![Button location for requesting a manual payout of Coinbase sales](/images/screen-shot-2021-07-12-at-3.12.14-pm.png '#width=80%;')
-	
+
 <figcaption>Button location for requesting a manual payout of Coinbase sales</figcaption>
 </figure>
 
