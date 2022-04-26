@@ -1,5 +1,12 @@
 {
   "include": [
+    "./.*/**/*.ts",
+    "./.*/**/*.js",
+    "./.*/**/*.ejs",
+    "./.*/**/*.tsx",
+    "./.*/**/*.jsx",
+    "./.*/**/*.mdx",
+    "./.*/**/*.json",
     "./**/*.ts",
     "./**/*.js",
     "./**/*.ejs",
@@ -10,6 +17,7 @@
   ],
   "exclude": ["./static"],
   "compilerOptions": {
+    "jsx": "react",
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Projects */
@@ -88,7 +96,7 @@
 
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
+    "noImplicitAny": false /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
     // "strictNullChecks": true,                         /* When type checking, take into account `null` and `undefined`. */
     // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
     // "strictBindCallApply": true,                      /* Check that the arguments for `bind`, `call`, and `apply` methods match the original function. */
