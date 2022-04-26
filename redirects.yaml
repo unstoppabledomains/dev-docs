@@ -79,6 +79,9 @@
 '/login-with-unstoppable/login-client-configuration':
   to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
   type: 301
+'/login-with-unstoppable/developer-integration':
+  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  type: 301
 '/login-with-unstoppable/login-integration-guides':
   to: '/login-with-unstoppable/get-started-login/integration-pathways/'
   type: 301
