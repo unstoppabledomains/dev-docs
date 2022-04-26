@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "description": "Redocly portal template repository",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "start": "redocly-portal develop -p 3000",
     "build": "redocly-portal build",
