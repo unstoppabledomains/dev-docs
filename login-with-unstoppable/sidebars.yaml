@@ -4,15 +4,6 @@ pages:
   - page: index.md
     label: Login Overview
     separatorLine: true
-  - group: Humanity Check for Login
-    expanded: false
-    selectFirstItemOnExpand: true
-    pages:
-    - label: Humanity Check Overview
-      page: humanity-check/humanity-check-for-login.md
-    - label: Humanity Check FAQ
-      page: humanity-check/humanity-check-faq.md
-    separatorLine: true
   - group: Getting Started with Login
     expanded: false
     pages:
@@ -20,17 +11,18 @@ pages:
         page: get-started-login/integration-pathways.md
       - label: Scopes for Login
         page: get-started-login/scopes-for-login.md
-      - label: Login Frequently Asked Questions
+      - label: Login FAQs
         page: get-started-login/login-faq.md
     separatorLine: true
-  - group: Login Protocols
+  - group: Humanity Check for Login
     expanded: false
+    selectFirstItemOnExpand: true
     pages:
-      - label: Authorization Server
-        page: login-protocols/authorization-server.md
-      - label: Authentication Protocol
-        page: login-protocols/authentication-protocol.md
-    separatorLine: true  
+      - label: Humanity Check Overview
+        page: humanity-check/humanity-check-for-login.md
+      - label: Humanity Check FAQs
+        page: humanity-check/humanity-check-faq.md
+    separatorLine: true 
   - group: Login Integration Guides
     expanded: false
     pages:
@@ -51,9 +43,19 @@ pages:
       - label: Login UI Configuration
         page: login-integration-guides/login-ui-configuration.md
     separatorLine: true
+  - group: Login Protocols
+    expanded: false
+    pages:
+      - label: Authorization Server
+        page: login-protocols/authorization-server.md
+      - label: Authentication Protocol
+        page: login-protocols/authentication-protocol.md
+    separatorLine: true 
   - group: Troubleshoot Your Login Integration
     expanded: false
     pages: 
-      - page: troubleshoot/login-error-codes.md
-      - page: troubleshoot/troubleshooting-guide.md
+      - label: Login Error Codes
+        page: troubleshoot/login-error-codes.md
+      - label: Login Troubleshooting Guide
+        page: troubleshoot/troubleshooting-guide.md
     separatorLine: true  
