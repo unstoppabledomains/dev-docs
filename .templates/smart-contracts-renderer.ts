@@ -1,8 +1,8 @@
-import Ejs from 'ejs';
-import fs from 'fs';
-import MarkdownInclude from 'markdown-include';
-import path from 'path';
-import { promisify } from 'util';
+const Ejs = require('ejs');
+const fs = require('fs');
+const path = require('path');
+const { promisify } = require('util');
+const MarkdownInclude = require('markdown-include');
 
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
