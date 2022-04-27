@@ -1,2 +1,4 @@
 package.json
 tsconfig.json
+static/
+.templates/contracts

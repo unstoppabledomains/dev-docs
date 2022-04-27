@@ -13,12 +13,27 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   extends: ['plugin:prettier/recommended'],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: false,
+        project: './',
+      },
+    },
+  },
   overrides: [
     {
       files: ['./**/*.ts', './**/*.js', './**/*.tsx', './**/*.jsx'],
       extends: ['airbnb'],
       rules: {
+        'prettier/prettier': 'error',
         'react/jsx-filename-extension': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'max-len': 'off',
+        'import/extensions': 'off',
       },
     },
     {
@@ -37,7 +52,10 @@ module.exports = {
     {
       files: ['./**/*.mdx'],
       extends: ['plugin:mdx/recommended'],
-      rules: { 'react/jsx-filename-extension': 'off' },
+      rules: {
+        'prettier/prettier': 'error',
+        'react/jsx-filename-extension': 'off',
+      },
     },
     {
       files: ['./**/*.yaml', './**/*.yml'],
@@ -46,5 +64,6 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'import/extensions': 'off',
   },
 };
