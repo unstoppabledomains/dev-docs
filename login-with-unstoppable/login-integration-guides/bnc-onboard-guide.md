@@ -99,13 +99,13 @@ Once configured, the `bnc-onboard` library can be used normally.
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ```javascript
-import onboard from './onboard'
+import onboard from './onboard';
 
 // On login button click...
 
-await onboard.walletSelect()
+await onboard.walletSelect();
 
-await onboard.walletCheck()
+await onboard.walletCheck();
 ```
 
 ## Step 5: Configure the Login UI
@@ -117,25 +117,25 @@ await onboard.walletCheck()
 **shouldLoginWithRedirect is true**: If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
-import onboard from './onboard'
-import uauthOnboard from './uauthOnboard'
+import onboard from './onboard';
+import uauthOnboard from './uauthOnboard';
 
 // On page load...
 
 uauthOnboard
-  .callbackAndWalletSelect({onboard})
+  .callbackAndWalletSelect({ onboard })
   .then(() => {
     // Redirect to success page
   })
-  .catch(error => {
+  .catch((error) => {
     // Redirect to failure page
-  })
+  });
 ```
 
 **caching wallets:** Blocknative has [documentation](https://docs.blocknative.com/onboard#caching-wallet-selection) about caching wallets. The code inside the documentation won't quite work out of the box because the `bnc-onboard` library doesn't know if the token from the last login session is still valid. To fix this, you need to check before selecting the Unstoppable wallet.
 
 ```javascript
-const previouslySelectedWallet = window.localStorage.getItem('selectedWallet')
+const previouslySelectedWallet = window.localStorage.getItem('selectedWallet');
 if (previouslySelectedWallet != null) {
   // We check to see if the last connected wallet was the Unstoppable one.
   if (previouslySelectedWallet === 'Unstoppable') {
@@ -143,15 +143,15 @@ if (previouslySelectedWallet != null) {
     // Otherwise we don't try to reconnect.
     await uauthOnboard
       .getUAuth()
-      .then(async uauth => {
-        await uauth.user()
-        await onboard.walletSelect('Unstoppable')
+      .then(async (uauth) => {
+        await uauth.user();
+        await onboard.walletSelect('Unstoppable');
       })
       .catch(() => {
-        window.localStorage.removeItem('selectedWallet')
-      })
+        window.localStorage.removeItem('selectedWallet');
+      });
   } else {
-    await onboard.walletSelect(previouslySelectedWallet)
+    await onboard.walletSelect(previouslySelectedWallet);
   }
 }
 ```

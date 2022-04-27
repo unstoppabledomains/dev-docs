@@ -9,17 +9,17 @@ For details about the API endpoints, see the [Reseller API Endpoint Specificatio
 
 The Reseller API endpoints are as follows:
 
-* `GET` **Domain Name**: checks availability of domain name before purchase
-* `GET` **Domains Suggestions:** provides domain suggestions based on entered information
-* `GET` **Domains Suggestions Free:** provides free domain suggestions based on entered information if Reseller is eligible to offer free domains
-* `POST` **Orders**: used to buy domains or mint free domains from Unstoppable Domains
-* `GET` **Order Number**: checks blockchain transaction status to see if domain is successfully “minted”
+- `GET` **Domain Name**: checks availability of domain name before purchase
+- `GET` **Domains Suggestions:** provides domain suggestions based on entered information
+- `GET` **Domains Suggestions Free:** provides free domain suggestions based on entered information if Reseller is eligible to offer free domains
+- `POST` **Orders**: used to buy domains or mint free domains from Unstoppable Domains
+- `GET` **Order Number**: checks blockchain transaction status to see if domain is successfully “minted”
 
 ## Upcoming Features
 
 This new API endpoint will be added in the next update:
 
-* `POST` **Reserve Free Domain**: reserves a free and available domain for 7 days; the domain is unlocked automatically if it is not minted within 7 days
+- `POST` **Reserve Free Domain**: reserves a free and available domain for 7 days; the domain is unlocked automatically if it is not minted within 7 days
 
 :::info Note
 To reserve or lock a free domain the reseller must provide a unique user identifier (this could be an email, or some other internal user identifier). The same identifier must be provided when minting the domain (using the POST Orders endpoint).

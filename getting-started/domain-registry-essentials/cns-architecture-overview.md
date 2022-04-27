@@ -7,9 +7,9 @@ description: This page provides an overview of the Crypto Name Service. It assum
 
 This page covers the following topics:
 
-* [Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
-* [Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
-* [Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
+- [Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
+- [Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
+- [Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
 
 Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, members have complete control of their domains.
 
@@ -57,10 +57,10 @@ This flow describes how the CNS `Registry` and `Resolvers` interact.
 
 `Registry` stores:
 
-* Owner address
-* Approved operator address
-* Resolver address
-* Domain name
+- Owner address
+- Approved operator address
+- Resolver address
+- Domain name
 
 :::info
 Since domains are identified by a namehash we also explicitly store the domain's name. This allows members who only know a namehash to look up a record by its name (name to namehash, namehash to record).
@@ -74,10 +74,10 @@ Accounts that are allowed to mint second-level domains (e.g.: `alice.crypto`) ar
 
 Domain owners can:
 
-* Transfer domain ownership
-* Set a new resolver
-* Mint a new subdomain
-* Burn a domain
+- Transfer domain ownership
+- Set a new resolver
+- Mint a new subdomain
+- Burn a domain
 
 Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a member's behalf. For more details, see [Managing domain ownership](../../manage-domains/index.md).
 
@@ -138,8 +138,8 @@ Unstoppable Domains uses this delegation feature to operate an internal transact
 
 On behalf of our members, our transaction processor generally handles:
 
-* Minting domains
-* Managing domains (transferring, setting `Resolver` address, modifying records)
+- Minting domains
+- Managing domains (transferring, setting `Resolver` address, modifying records)
 
 **Minting domains** happens when a member mints a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
 

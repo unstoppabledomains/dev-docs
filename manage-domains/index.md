@@ -9,17 +9,17 @@ The smart contract is built upon [OpenZeppelin's implementation](https://docs.op
 
 Entities that can control domains are defined by the ERC-721 standard:
 
-* **Owner.** This is a direct owner of a domain, which has full control in managing domain ownership and records.
-* **Operator.** Operators can control all domains owned by a member. There can be multiple operators per member.
-* **Approved address.** A domain owner can set an approved address that can control one particular domain. ERC-721 allows only one approved address per token (i.e.: domain).
+- **Owner.** This is a direct owner of a domain, which has full control in managing domain ownership and records.
+- **Operator.** Operators can control all domains owned by a member. There can be multiple operators per member.
+- **Approved address.** A domain owner can set an approved address that can control one particular domain. ERC-721 allows only one approved address per token (i.e.: domain).
 
 There are five basic operations that affect domain ownership:
 
-* **Minting.** When a domain is first created, an initial domain owner is assigned.
-* **Transferring.** There are two possible ways to transfer a domain: one that keeps resolution settings, and one that resets them.
-* **Setting an operator.** Operators are other Ethereum addresses, which can control all domains owned by a caller.
-* **Setting an approved address.** This allows setting one approved address per domain, which has equal privileges with a domain owner.
-* **Burning.** Burns a domain, clearing all associated metadata and domain records.
+- **Minting.** When a domain is first created, an initial domain owner is assigned.
+- **Transferring.** There are two possible ways to transfer a domain: one that keeps resolution settings, and one that resets them.
+- **Setting an operator.** Operators are other Ethereum addresses, which can control all domains owned by a caller.
+- **Setting an approved address.** This allows setting one approved address per domain, which has equal privileges with a domain owner.
+- **Burning.** Burns a domain, clearing all associated metadata and domain records.
 
 ## Minting
 

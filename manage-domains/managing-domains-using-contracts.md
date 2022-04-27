@@ -8,14 +8,15 @@ description: This guide covers how to manage Unstoppable Domain records using th
 This guide covers how to manage Unstoppable Domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 
 ## Step 1: Select a UNS Registry Smart Contract
+
 The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
 
-| Network | Contract address |
-| - | - |
-| Ethereum mainnet | [0x049aba7510f45BA5b64ea9E658E342F904DB358D](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) |
-| Ethereum testnet (Goerli) | [0x070e83FCed225184E67c86302493ffFCDB953f71](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) |
-| Polygon mainnet | [0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) |
-| Polygon testnet (Mumbai) | [0x2a93C52E7B6E7054870758e15A1446E769EdfB93](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) |
+| Network                   | Contract address                                                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Ethereum mainnet          | [0x049aba7510f45BA5b64ea9E658E342F904DB358D](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D)           |
+| Ethereum testnet (Goerli) | [0x070e83FCed225184E67c86302493ffFCDB953f71](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71)    |
+| Polygon mainnet           | [0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f)        |
+| Polygon testnet (Mumbai)  | [0x2a93C52E7B6E7054870758e15A1446E769EdfB93](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) |
 
 <figure>
 
@@ -91,16 +92,18 @@ Please see the [Record Reference](../../getting-started/domain-registry-essentia
 You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of a domain using any of the [resolution libraries](../../developer-toolkit/resolution-libraries/libraries-overview/) or [CLI](../../developer-toolkit/resolution-cli/). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
+const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
-let namehash = resolution.namehash("brad.crypto")
+let namehash = resolution.namehash('brad.crypto');
 ```
+
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
 DomainResolution resolution = new Resolution();
 String namehash = resolution.getNamehash("brad.crypto");
 ```
+
 ```swift Swift
 import UnstoppableDomainsResolution
 
@@ -111,6 +114,7 @@ guard let resolution = try? Resolution() else {
 
 let namehash = try resolution.namehash(domain: "brad.crypto")
 ```
+
 ```go Golang
 package main
 
@@ -125,6 +129,7 @@ func main() {
     fmt.Println("The namehash for brad.crypto is", namehash)
 }
 ```
+
 ```bash Resolution CLI
 $ resolution namehash -d brad.crypto
 "0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9"

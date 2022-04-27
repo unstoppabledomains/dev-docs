@@ -21,7 +21,7 @@ We're offering **$100 in domain credits** for any tutorial for Unstoppable Domai
 If submitted, we'll be uploading the content to our YouTube channel (12K+ subscribers) — crediting you for the work!
 
 ## Instructions for Impression Mining
-    
+
 Impression mining allows anyone to become a micro-influencer for Unstoppable Domains! We're offering **$1 in domain credits per 10 impressions on Twitter**.
 
 Participants will simply snap a screenshot of their impression counts and submit to the intake form for a monthly payment in domain credits. Judging submissions is at the sole discretion of Unstoppable Domains. The reviewers reserve the right to cap a payment or deem an account ineligible for current or future rewards.
@@ -29,7 +29,7 @@ Participants will simply snap a screenshot of their impression counts and submit
 <figure>
 
 ![Screenshot of impression counts](/images/quest-impression-mining.png)
-	
+
 <figcaption>Screenshot of impression counts</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ Participants will simply snap a screenshot of their impression counts and submit
 
 ### Limitations
 
-**The program will *not* tolerate/reward:**
+**The program will _not_ tolerate/reward:**
 
 - Spamming followers
 - Paid impressions
@@ -51,8 +51,8 @@ Participants will simply snap a screenshot of their impression counts and submit
 
 - Unless you have built up an audience beforehand, consistent success with this program will not generally come swiftly
 - In general, content should aim to be:
-    - Shareable
-    - Aesthetically pleasing
-    - Distribution-minded
-    - Uniquely Insightful (Use-Case, how-to, history, stat/metric, story, testimonial, infographic, video)
-    - NOT about speculation, price, nor the selling of domains
+  - Shareable
+  - Aesthetically pleasing
+  - Distribution-minded
+  - Uniquely Insightful (Use-Case, how-to, history, stat/metric, story, testimonial, infographic, video)
+  - NOT about speculation, price, nor the selling of domains

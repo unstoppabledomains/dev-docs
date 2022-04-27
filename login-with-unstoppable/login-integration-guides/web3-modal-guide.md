@@ -24,10 +24,10 @@ yarn add web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 Next, configure the `web3modal` library:
 
 ```javascript
-import * as UAuthWeb3Modal from '@uauth/web3modal'
-import UAuthSPA from '@uauth/js'
-import WalletConnectProvider from '@walletconnect/web3-provider'
-import Web3Modal from 'web3modal'
+import * as UAuthWeb3Modal from '@uauth/web3modal';
+import UAuthSPA from '@uauth/js';
+import WalletConnectProvider from '@walletconnect/web3-provider';
+import Web3Modal from 'web3modal';
 
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions: IUAuthOptions = {
@@ -36,7 +36,7 @@ export const uauthOptions: IUAuthOptions = {
 
   // Must include both the openid and wallet scopes.
   scope: 'openid wallet',
-}
+};
 
 const providerOptions = {
   // Currently the package isn't inside the web3modal library currently. For now,
@@ -67,14 +67,14 @@ const providerOptions = {
   },
 
   // Include any other web3modal providers here too...
-}
+};
 
-const web3modal = new Web3Modal({providerOptions})
+const web3modal = new Web3Modal({ providerOptions });
 
 // Register the web3modal so the connector has access to it.
-UAuthWeb3Modal.registerWeb3Modal(web3modal)
+UAuthWeb3Modal.registerWeb3Modal(web3modal);
 
-export default web3modal
+export default web3modal;
 ```
 
 :::info
@@ -88,12 +88,12 @@ Once configured, the `web3modal` library can be used normally.
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ```javascript
-import web3modal from './web3modal'
-import Web3 from 'web3'
+import web3modal from './web3modal';
+import Web3 from 'web3';
 
 // On login button click...
 
-const provider = await web3modal.connect()
+const provider = await web3modal.connect();
 
 // Save provider in state
 ```
@@ -107,22 +107,22 @@ const provider = await web3modal.connect()
 **shouldLoginWithRedirect is true**: If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
-import UAuthSPA from '@uauth/js'
-import * as UAuthWeb3Modal from '@uauth/web3modal'
-import {uauthOptions} from './web3modal'
+import UAuthSPA from '@uauth/js';
+import * as UAuthWeb3Modal from '@uauth/web3modal';
+import { uauthOptions } from './web3modal';
 
 // On page load...
 
 UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions)
   .loginCallback()
   .then(async () => {
-    const provider = await web3modal.connectTo('custom-uauth')
+    const provider = await web3modal.connectTo('custom-uauth');
 
     // Save provider in state and redirect to success page
   })
-  .catch(error => {
+  .catch((error) => {
     // Redirect to failure page
-  })
+  });
 ```
 
 **connector**: The `connector` is used to create a provider for the `web3modal` library.
@@ -156,10 +156,9 @@ export function registerWeb3Modal(web3modal: Web3Modal) => void
 **getUAuth**: Creates a UAuth instance using the package and options.
 
 ```javascript
-import type UAuthSPA from '@uauth/js'
+import type UAuthSPA from '@uauth/js';
 
 export function getUAuth(UAuth: typeof UAuthSPA, opts: IUAuthOptions): UAuth {
-  return new UAuth(opts)
+  return new UAuth(opts);
 }
 ```
-

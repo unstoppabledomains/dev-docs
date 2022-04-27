@@ -23,5 +23,4 @@ For an Unstoppable-managed, blockchain-agnostic command-line interface for resol
 
 For developers who want more direct, low level control over domain resolution, see [Resolve with Direct Blockchain Calls](./direct-blockchain-calls/bc-overview.md). This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
 
-
 <embed src="/snippets/_discord.md" />

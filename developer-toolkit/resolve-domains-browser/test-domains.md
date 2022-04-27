@@ -5,21 +5,21 @@ description: This page provides a list of the browser resolution test domains an
 
 # Browser Resolution Test Domains
 
-| Domain name |
-| :--- |
-| udtestdev-dns-ipfs.crypto |
-| udtestdev-dns.crypto |
-| udtestdev-dns-a-record.crypto |
-| udtestdev-ipfs.crypto |
-| udtestdev-dns-global-ttl.crypto |
-| udtestdev-dns-ipfs-no-preffered-records.crypto |
-| udtestdev-dns-cname.crypto |
-| udtestdev-dns-ipfs-redirect.crypto |
-| udtestdev-redirect.crypto |
+| Domain name                                           |
+| :---------------------------------------------------- |
+| udtestdev-dns-ipfs.crypto                             |
+| udtestdev-dns.crypto                                  |
+| udtestdev-dns-a-record.crypto                         |
+| udtestdev-ipfs.crypto                                 |
+| udtestdev-dns-global-ttl.crypto                       |
+| udtestdev-dns-ipfs-no-preffered-records.crypto        |
+| udtestdev-dns-cname.crypto                            |
+| udtestdev-dns-ipfs-redirect.crypto                    |
+| udtestdev-redirect.crypto                             |
 | udtestdev-dns-ipfs-redirect-legacy-ipfs-legacy.crypto |
-| udtestdev-ipfs-legacy.crypto |
-| udtestdev-ipfs-legacy-redirect-legacy.crypto |
-| udtestdev-redirect-legacy.crypto |
+| udtestdev-ipfs-legacy.crypto                          |
+| udtestdev-ipfs-legacy-redirect-legacy.crypto          |
+| udtestdev-redirect-legacy.crypto                      |
 
 ## Getting test records
 

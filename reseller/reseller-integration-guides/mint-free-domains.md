@@ -18,8 +18,8 @@ The following diagram shows the general process that takes place between the Res
 
 ## Step 1: Retrieve the Secret Key for Authentication
 
-* A secret key is required when a domain is purchased using the **Payback** or **Free** payment type.
-* The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email [bd@unstoppabledomains.com](mailto:bd@unstoppabledomains.com) to request the secret key.
+- A secret key is required when a domain is purchased using the **Payback** or **Free** payment type.
+- The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email [bd@unstoppabledomains.com](mailto:bd@unstoppabledomains.com) to request the secret key.
 
 <figure>
 
@@ -30,9 +30,9 @@ The following diagram shows the general process that takes place between the Res
 
 ## Step 2: Setup Criteria for Free Domains
 
-* Resellers work with UD administration to establish the "allowed free TLDs" and "allowed free tiers" for the reseller account. **The free domain criteria will vary based on the Reseller.**
-* This list of "allowed free TLDs" and "allowed free tiers" is then assigned to the resellers account.
-* Resellers can only mint a free domain if it matches the tier and has an appropriate domain ending.
+- Resellers work with UD administration to establish the "allowed free TLDs" and "allowed free tiers" for the reseller account. **The free domain criteria will vary based on the Reseller.**
+- This list of "allowed free TLDs" and "allowed free tiers" is then assigned to the resellers account.
+- Resellers can only mint a free domain if it matches the tier and has an appropriate domain ending.
 
 The table below shows how the pricing tiers are structured at UD. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
 
@@ -49,8 +49,8 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 ## Step 3: Use the Free Domain Claiming Endpoint
 
-* The free domain claiming endpoint allows the partner (Reseller ID) to mint free domains for a specified wallet address, if the Reseller is eligible to offer free domains.
-* The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint](../reseller-api-endpoints.md).
+- The free domain claiming endpoint allows the partner (Reseller ID) to mint free domains for a specified wallet address, if the Reseller is eligible to offer free domains.
+- The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint](../reseller-api-endpoints.md).
 
 :::info
 No additional configuration is necessary from the Reseller to begin using this endpoint once the free domains criteria has been established with UD administrators and added to the Reseller account.
@@ -60,9 +60,9 @@ No additional configuration is necessary from the Reseller to begin using this e
 
 The following considerations apply to the free domain minting:
 
-* The Reseller ID will be allowed to provide specified domain endings for free.
-* If the Reseller ID doesn't have allowance to provide free domains, then users will not be permitted to mint free domains.
-* If the wallet or email already has a free domain, then a second free domain is not permitted.
+- The Reseller ID will be allowed to provide specified domain endings for free.
+- If the Reseller ID doesn't have allowance to provide free domains, then users will not be permitted to mint free domains.
+- If the wallet or email already has a free domain, then a second free domain is not permitted.
 
 :::success Congratulations!
 You just configured your Reseller account to mint free domains.

@@ -30,7 +30,7 @@ yarn add @unstoppabledomains/resolution
 npm install @unstoppabledomains/resolution --save
 ```
 
-If you're interested in resolving domains via the command line, see the  [CLI section](#command-line-interface) below.
+If you're interested in resolving domains via the command line, see the [CLI section](#command-line-interface) below.
 
 ## Using Resolution
 
@@ -91,8 +91,8 @@ function resolveIpfsHash(domain) {
     .ipfsHash(domain)
     .then((hash) =>
       console.log(
-        `You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/${hash}`,
-      ),
+        `You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/${hash}`
+      )
     )
     .catch(console.error);
 }
@@ -155,16 +155,16 @@ Resolution provides zero-configuration experience by using built-in production-r
 To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
 Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
-* `Resolution.infura()`
-* `Resolution.fromWeb3Version1Provider()`
-* `Resolution.fromEthersProvider()`
-* etc.
+- `Resolution.infura()`
+- `Resolution.fromWeb3Version1Provider()`
+- `Resolution.fromEthersProvider()`
+- etc.
 
 To see all constructor options and factory methods check the [Unstoppable API reference](https://unstoppabledomains.github.io/resolution).
 
 ## Autoconfiguration of Blockchain Network
 
-In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
+In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net_version" call to the provider to get the network id.
 
 This method configures CNS and UNS. ZNS is supported only on Zilliqa mainnet. You can provide a configured provider or a blockchain url as in the following example:
 
@@ -196,22 +196,26 @@ Use these commands to set up a local development environment (**macOS Terminal**
     ```
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
     ```
+
 2.  Install concrete version of `node.js`
 
     ```
     nvm install 12.12.0
     ```
+
 3.  Install `yarn`
 
     ```
     npm install -g yarn
     ```
+
 4.  Clone the repository
 
     ```
     git clone https://github.com/unstoppabledomains/resolution.git
     cd resolution
     ```
+
 5.  Install dependencies
 
     ```
@@ -222,8 +226,8 @@ Use these commands to set up a local development environment (**macOS Terminal**
 
 **To update:**
 
-* Network config: `$ yarn network-config:pull`
-* Supported keys: `$ yarn supported-keys:pull`
-* Both configs: `$ yarn config:pull`
+- Network config: `$ yarn network-config:pull`
+- Supported keys: `$ yarn supported-keys:pull`
+- Both configs: `$ yarn config:pull`
 
 <embed src="/snippets/_discord.md" />

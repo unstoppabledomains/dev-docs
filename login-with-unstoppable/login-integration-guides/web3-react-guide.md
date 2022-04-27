@@ -24,18 +24,18 @@ yarn add @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3
 Next, configure the `web3-react` connectors:
 
 ```typescript
-import {UAuthConnector} from '@uauth/web3-react'
-import {InjectedConnector} from '@web3-react/injected-connector'
-import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
-import type {AbstractConnector} from '@web3-react/abstract-connector'
+import { UAuthConnector } from '@uauth/web3-react';
+import { InjectedConnector } from '@web3-react/injected-connector';
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector';
+import type { AbstractConnector } from '@web3-react/abstract-connector';
 
 // Instanciate your other connectors.
-export const injected = new InjectedConnector({supportedChainIds: [1]})
+export const injected = new InjectedConnector({ supportedChainIds: [1] });
 
 export const walletconnect = new WalletConnectConnector({
   infuraId: process.env.REACT_APP_INFURA_ID!,
   qrcode: true,
-})
+});
 
 export const uauth = new UAuthConnector({
   clientID: process.env.REACT_APP_CLIENT_ID!,
@@ -45,16 +45,16 @@ export const uauth = new UAuthConnector({
   scope: 'openid wallet',
 
   // Injected and walletconnect connectors are required.
-  connectors: {injected, walletconnect},
-})
+  connectors: { injected, walletconnect },
+});
 
 const connectors: Record<string, AbstractConnector> = {
   injected,
   walletconnect,
   uauth,
-}
+};
 
-export default connectors
+export default connectors;
 ```
 
 You can also construct a `UAuth` instance before hand and use that to create the connector.
@@ -84,17 +84,17 @@ Once configured, `web3-react` can be used like normal.
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ```javascript
-import {useWeb3React} from '@web3-react/core'
-import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
-import React from 'react'
-import {uauth} from './connectors'
+import { useWeb3React } from '@web3-react/core';
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector';
+import React from 'react';
+import { uauth } from './connectors';
 
 // On login button click...
 
 async function handleUAuthConnect() {
-  const {activate} = useWeb3React()
+  const { activate } = useWeb3React();
 
-  await activate(uauth)
+  await activate(uauth);
 }
 ```
 
@@ -109,22 +109,22 @@ async function handleUAuthConnect() {
 If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
-import {uauth} from './connectors'
+import { uauth } from './connectors';
 
 // On page load...
 
-const {activate} = useWeb3React()
+const { activate } = useWeb3React();
 
 useEffect(() => {
   uauth
-    .callbackAndActivate({activate})
+    .callbackAndActivate({ activate })
     .then(() => {
       // Redirect to success page
     })
-    .catch(error => {
+    .catch((error) => {
       // Redirect to failure page
-    })
-}, [])
+    });
+}, []);
 ```
 
 ### **UAuthConnector Class**

@@ -17,21 +17,21 @@ To make domain resolution easier, we've written libraries for web, Android, and 
 
 ### Domain Resolution Libraries
 
-* [Resolution](../resolution-libraries/resolution.md) (JavaScript)
-* [Resolution-Java](../resolution-libraries/resolution-java.md)
-* [Resolution-Swift](../resolution-libraries/resolution-swift.md)
-* [Resolution-Go](../resolution-libraries/resolution-go.md)
+- [Resolution](../resolution-libraries/resolution.md) (JavaScript)
+- [Resolution-Java](../resolution-libraries/resolution-java.md)
+- [Resolution-Swift](../resolution-libraries/resolution-swift.md)
+- [Resolution-Go](../resolution-libraries/resolution-go.md)
 
 ### Access Domain Metadata Directly
 
 If you're familiar with blockchain development and would rather avoid an additional dependency in your application, you can also read domain metadata directly.
 
-* [Resolve .crypto With Direct Blockchain Calls](../direct-blockchain-calls/resolve-unstoppable-domain-names.md)
-* [Resolve .zil With Direct Blockchain Calls](../direct-blockchain-calls/resolve-zil-without-libraries.md)
-* [Resolve Using Ethereum Smart Contracts](../direct-blockchain-calls/resolve-eth-smart-contracts.md)
-* [CNS Smart Contracts reference](../smart-contracts/cns-smart-contracts.md)
-* [UNS Smart Contracts reference](../smart-contracts/uns-smart-contracts.md)
-* [Records reference](../../getting-started/domain-registry-essentials/records-reference.md)
+- [Resolve .crypto With Direct Blockchain Calls](../direct-blockchain-calls/resolve-unstoppable-domain-names.md)
+- [Resolve .zil With Direct Blockchain Calls](../direct-blockchain-calls/resolve-zil-without-libraries.md)
+- [Resolve Using Ethereum Smart Contracts](../direct-blockchain-calls/resolve-eth-smart-contracts.md)
+- [CNS Smart Contracts reference](../smart-contracts/cns-smart-contracts.md)
+- [UNS Smart Contracts reference](../smart-contracts/uns-smart-contracts.md)
+- [Records reference](../../getting-started/domain-registry-essentials/records-reference.md)
 
 ## End-User Features (For Resolving Domains in a Browser)
 
@@ -45,7 +45,7 @@ Given an NFT domain has a d-web content identifier record configured (e.g. an IP
 
 <figure>
 
-[![Diagram showing how to read D-Web from Ethereum](</images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png> '#width=75%')](/images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png)
+[![Diagram showing how to read D-Web from Ethereum](/images/overview_read_dweb_website_from_ethereum_and_decentralized_network.png '#width=75%')](/images/overview_read_dweb_website_from_ethereum_and_decentralized_network.png)
 
 <figcaption>Diagram showing how to read D-Web from Ethereum</figcaption>
 </figure>
@@ -58,20 +58,20 @@ Given an NFT domain has both a redirect URL and IPFS hash configured, and the us
 
 To change ETH provider services, the user goes to Browser Settings > Crypto Domains section:
 
-* User changes the Ethereum node URL from default to another.
-* User changes Registry Address for each support crypto registry.
-* User changes network for Ethereum node.
-* User changes DNS gateway
-* User changes Dweb gateway
+- User changes the Ethereum node URL from default to another.
+- User changes Registry Address for each support crypto registry.
+- User changes network for Ethereum node.
+- User changes DNS gateway
+- User changes Dweb gateway
 
 Then, the browser uses the new settings to make requests to Ethereum blockchain:
 
-* If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
-* If the Registry Address is not specified, it can use a default for the specified network
+- If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
+- If the Registry Address is not specified, it can use a default for the specified network
 
 <figure>
 
-[![Diagram showing how to configure DNS Gateway](</images/configure\_dns\_gateway.png> '#width=75%')](/images/configure\_dns\_gateway.png)
+[![Diagram showing how to configure DNS Gateway](/images/configure_dns_gateway.png '#width=75%')](/images/configure_dns_gateway.png)
 
 <figcaption>Diagram showing how to configure DNS Gateway</figcaption>
 </figure>
@@ -80,13 +80,13 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 
 In addition to base browser hypermedia protocols like `http`, NFT domains can also be configured for distributed content protocols like `ipfs`. These hypermedia protocols can be associated with an NFT domain:
 
-* Traditional
-  * HTTP
-  * HTTPS
-  * FTP
-* Distributed
-  * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary\_File\_System) - `ipfs://`
-  * [Swarm](https://docs.ethswarm.org/docs/) - `bzz://`
+- Traditional
+  - HTTP
+  - HTTPS
+  - FTP
+- Distributed
+  - [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System) - `ipfs://`
+  - [Swarm](https://docs.ethswarm.org/docs/) - `bzz://`
 
 A browser may support any subset of traditional or distributed protocols that still make NFT domain websites displayable.
 
@@ -96,14 +96,14 @@ While it is possible to resolve a domain via a call to **ETH RPC** and support d
 
 There are 2 possible gateways for each problem:
 
-* Distributed content (D-Web) gateway
-* Resolution over DNS gateway
+- Distributed content (D-Web) gateway
+- Resolution over DNS gateway
 
 See a description of how they work below
 
 <figure>
 
-[![Visual flow of resolving DWeb via DNS and DWeb gateway](</images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png> '#width=75%')](/images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png)
+[![Visual flow of resolving DWeb via DNS and DWeb gateway](/images/overview_dweb_website_via_dns_dweb_gateways.png '#width=75%')](/images/overview_dweb_website_via_dns_dweb_gateways.png)
 
 <figcaption>Visual flow of resolving DWeb via DNS and DWeb gateway</figcaption>
 </figure>
@@ -124,15 +124,15 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
 1. Receive a domain resolution request
 2. Resolve a domain using classical DNS system if is in classical domain ending (like `.com`)
 3. Resolve a domain using [Browser Resolution Algorithm](../resolve-domains-browser/browser-resolution-algorithm.md) if it is in .crypto domain ending
-   * If a domain is set using DNS, transform [Crypto DNS records](../resolve-domains-browser/browser-resolution-algorithm.md#dns-records) into classical records
-   * If a domain is set using distributed content
-     * If the client requests `A` record, resolve to [Distributed Content Gateway](#distributed-content-gateway) IP Address
-     * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
+   - If a domain is set using DNS, transform [Crypto DNS records](../resolve-domains-browser/browser-resolution-algorithm.md#dns-records) into classical records
+   - If a domain is set using distributed content
+     - If the client requests `A` record, resolve to [Distributed Content Gateway](#distributed-content-gateway) IP Address
+     - If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
 4. Send resolution to client
 
 <figure>
 
-[![Visualization of how to resolve DWeb via DNS and DWeb gateways](</images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png> '#width=75%')](/images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png)
+[![Visualization of how to resolve DWeb via DNS and DWeb gateways](/images/resolve_dweb_website_via_dns_gateway_and_dweb_gateway.png '#width=75%')](/images/resolve_dweb_website_via_dns_gateway_and_dweb_gateway.png)
 
 <figcaption>Visualization of how to resolve DWeb via DNS and DWeb gateways</figcaption>
 </figure>

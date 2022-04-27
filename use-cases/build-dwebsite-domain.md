@@ -11,7 +11,7 @@ This page outlines the use case for building a decentralized website for your un
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I9vTeAtELOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## How does it work? 
+## How does it work?
 
 After purchasing a domain from UD, you can build your IPFS website using a template or custom design. Then, you will attach the IPFS website to your Unstoppable Domain via the IPFS hash -- this makes your website decentralized and unstoppable!
 
@@ -19,7 +19,7 @@ After purchasing a domain from UD, you can build your IPFS website using a templ
 
 <embed src="/snippets/_ipfs-basics.md" />
 
-## Are there working integrations for this feature? 
+## Are there working integrations for this feature?
 
 <embed src="/snippets/_unstoppable-dwebsites.md" />
 

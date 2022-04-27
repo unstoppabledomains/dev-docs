@@ -15,23 +15,23 @@ You only need to select one upload option for your website. Select the option th
 
 You can upload and attach your d-website to your domain in a single step from the Unstoppable Domains web interface.
 
-* Go to [**My Domains**](https://unstoppabledomains.com/domains)
-* Select **Manage** next to the domain you want to use
-* Select the **Website** tab
+- Go to [**My Domains**](https://unstoppabledomains.com/domains)
+- Select **Manage** next to the domain you want to use
+- Select the **Website** tab
 
 <figure>
 
 ![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#width=60%;')
-	
+
 <figcaption>How to locate the 'Website' tab under My Domains --> Manage</figcaption>
 </figure>
 
-* Upload your files to the **IPFS Uploader** and **Save Changes**
+- Upload your files to the **IPFS Uploader** and **Save Changes**
 
 <figure>
 
 ![Upload files using the IPFS Uploader, limited to 20MB per domain](/images/ipfs-file-uploader.png '#width=60%;')
-	
+
 <figcaption>Upload files using the IPFS Uploader, limited to 20MB per domain</figcaption>
 </figure>
 
@@ -99,7 +99,7 @@ In order to use it, you need to add one step to `main.yml`:
     service: pinata
     pinataKey: ${{ secrets.PINATA_KEY }}
     pinataSecret: ${{ secrets.PINATA_SECRET }}
-    pinataPinName: {pin_name}
+    pinataPinName: { pin_name }
 ```
 
 As in the previous example, you will need to save the hash output to [add the IPFS hash to your domain](connect-ipfs.md).
@@ -108,27 +108,27 @@ As in the previous example, you will need to save the hash output to [add the IP
 
 You can also upload your static site to IPFS using the Pinata website.
 
-* Go to [Pinata.cloud](https://pinata.cloud) and sign-up / sign-in.
-* Ensure the **Pin Manager** tab is selected and click **Upload**.
+- Go to [Pinata.cloud](https://pinata.cloud) and sign-up / sign-in.
+- Ensure the **Pin Manager** tab is selected and click **Upload**.
 
 <figure>
 
 ![Locate the Pin Manager tab for uploading files to Pinata.cloud](/images/pin-manager-pinata.png '#width=60%;')
-	
+
 <figcaption>Locate the Pin Manager tab for uploading files to Pinata.cloud</figcaption>
 </figure>
 
-* Then, click **Folder** and select the folder containing the website files you wish to upload.
-* When the upload is complete, the **IPFS CID** (or **IPFS hash**) will appear under the **Pin Manager** tab.
+- Then, click **Folder** and select the folder containing the website files you wish to upload.
+- When the upload is complete, the **IPFS CID** (or **IPFS hash**) will appear under the **Pin Manager** tab.
 
 <figure>
 
 ![Locate the IPFS Hash for your d-website in Pinata.cloud](/images/ipfs-hash-pinata-web-interface.png '#width=60%;')
-	
+
 <figcaption>Locate the IPFS Hash for your d-website in Pinata.cloud</figcaption>
 </figure>
 
-* Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](connect-ipfs.md).
+- Click the IPFS hash to copy it to the clipboard. Then [add the IPFS hash to your domain](connect-ipfs.md).
 
 :::success Congratulations!
 You just uploaded your website to IPFS. If you selected Option 2 above, then please proceed to the next guide: [Connect Your IPFS Site To Your Domain](connect-ipfs.md).

@@ -12,7 +12,7 @@ Unstoppable Domains provides a set of resolution libraries for ease of integrati
 To resolve a domain into an address, you must call the appropriate method from the resolution library in the language you choose and pass the required parameters (currency and domain).
 
 ```typescript JavaScript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
+const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 resolution
   .addr('ryan.crypto', 'ETH')
@@ -78,15 +78,15 @@ In the code above, the `addr()` and `getAddress()` methods convert the provided 
 The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to handle this for the `udtestdev-usdt.crypto` domain:
 
 ```typescript JavaScript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
+const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 resolution
-    .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')
-    .then((receiverUSDTAddress) => {
-        // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
-        // use this address as recipient of the payment
-    })
-    .catch(console.error);
+  .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')
+  .then((receiverUSDTAddress) => {
+    // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
+    // use this address as recipient of the payment
+  })
+  .catch(console.error);
 ```
 
 ```java Java

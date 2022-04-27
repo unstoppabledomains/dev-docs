@@ -9,18 +9,18 @@ Unstoppable Domains Documentation is hosted by [Redocly](https://www.redocly.com
 
 ### General rules
 
-- Follow the [Google developer documentation style guide](https://developers.google.com/style). (Unstoppable docs style *coming soon*!)
+- Follow the [Google developer documentation style guide](https://developers.google.com/style). (Unstoppable docs style _coming soon_!)
 
-- Files that shouldn't be edited directly: 
-    - `developer-toolkit/smart-contracts/cns-smart-contracts.md`
-    - `developer-toolkit/smart-contracts/uns-smart-contracts.md`
-    - `getting-started/changelogs/*-changelog.md`
+- Files that shouldn't be edited directly:
+  - `developer-toolkit/smart-contracts/cns-smart-contracts.md`
+  - `developer-toolkit/smart-contracts/uns-smart-contracts.md`
+  - `getting-started/changelogs/*-changelog.md`
 
 ### Suggesting page edits
 
 Clicking **Edit this page** at the upper right corner of any page on the documentation site will take you directly to the page in this repository.
 
-1. Click **Edit this page** on the Github page to begin editing directly in your browser. 
+1. Click **Edit this page** on the Github page to begin editing directly in your browser.
 
 2. Make your changes. You can preview standard markdown and HTML in the **Preview** tab. `.mdx` pages and other redocly features will require setting up the [Redocly development environment](#redocly-development-environment).
 
@@ -45,7 +45,7 @@ To preview Redocly-specific features while editing, you will need to clone the r
 
     yarn start
 
-**Note**: *search isn't functional in the development environment.*
+**Note**: _search isn't functional in the development environment._
 
 ### Troubleshooting
 

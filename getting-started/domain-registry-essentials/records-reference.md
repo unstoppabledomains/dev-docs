@@ -7,10 +7,10 @@ description: This page contains an overview of all standardized domain records. 
 
 This reference page is divided into sections, grouping records by their namespaces and use-cases:
 
-* [Crypto payments](#cryptocurrency-payments)
-* [Browser resolution](#browser-resolution)
-  * [DWeb records](#dweb-records)
-  * [DNS records](#dns-records)
+- [Crypto payments](#cryptocurrency-payments)
+- [Browser resolution](#browser-resolution)
+  - [DWeb records](#dweb-records)
+  - [DNS records](#dns-records)
 
 Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](cns-architecture-overview.md), [UNS Architecture](uns-architecture-overview.md), and [Managing Domain Records](../../manage-domains/managing-domain-records.md).
 
@@ -34,9 +34,9 @@ Ethereum Address to receive cryptocurrency payments.
 
 Bitcoin Address to receive cryptocurrency payments.
 
-| Format                                                                                                                                       | Example                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:\~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
+| Format                                                                                                                                      | Example                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
 
 **`crypto.<TICKER>.address`**
 
@@ -66,9 +66,9 @@ Some currencies exist on multiple chains.
 
 **`crypto.USDT.version.OMNI.address`**
 
-| Format                                                                                                                                       | Example                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:\~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
+| Format                                                                                                                                      | Example                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
 
 **`crypto.<TICKER>.version.<VERSION>.address`**
 
@@ -90,8 +90,8 @@ Protocols that browser should prioritize to display content for.
 
 A fallback URL, to which a user will be redirected if no other resolution method is supported.
 
-| Format                                          | Example                        |
-| ----------------------------------------------- | ------------------------------ |
+| Format                                                    | Example                        |
+| --------------------------------------------------------- | ------------------------------ |
 | [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
 
 ### DWeb records
@@ -188,6 +188,6 @@ Deprecated: use `dweb.ipfs.hash` instead.
 
 Deprecated: use `browser.redirect_url` instead.
 
-| Format                                          | Example                        |
-| ----------------------------------------------- | ------------------------------ |
+| Format                                                    | Example                        |
+| --------------------------------------------------------- | ------------------------------ |
 | [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
