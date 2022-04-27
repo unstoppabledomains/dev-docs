@@ -19,38 +19,38 @@ Reseller API errors are in JSON format.
 
 ## GET Domain name
 
-| Error Code                  | Explanation                          |
-| --------------------------- | ------------------------------------ |
-| 400 - DOMAIN\_NAME\_INVALID | The provided domain name is invalid. |
+| Error Code                | Explanation                          |
+| ------------------------- | ------------------------------------ |
+| 400 - DOMAIN_NAME_INVALID | The provided domain name is invalid. |
 
 ## GET Domains Suggestions
 
-| Error Code                    | Explanation                              |
-| ----------------------------- | ---------------------------------------- |
-| 400 - INVALID\_DOMAIN\_SUFFIX | Provided domain endings in TLD filter are invalid. |
+| Error Code                  | Explanation                                        |
+| --------------------------- | -------------------------------------------------- |
+| 400 - INVALID_DOMAIN_SUFFIX | Provided domain endings in TLD filter are invalid. |
 
 ## GET **Domains Suggestions Free**
 
-| Error Code                    | Explanation                                                               |
-| ----------------------------- | ------------------------------------------------------------------------- |
-| 400 - INVALID\_DOMAIN\_SUFFIX | Provided domain endings in TLD filter are invalid.                                  |
-| 400 - NOT\_SUPPORTED          | The reseller does not provide free domains (for free domain suggestions). |
+| Error Code                  | Explanation                                                               |
+| --------------------------- | ------------------------------------------------------------------------- |
+| 400 - INVALID_DOMAIN_SUFFIX | Provided domain endings in TLD filter are invalid.                        |
+| 400 - NOT_SUPPORTED         | The reseller does not provide free domains (for free domain suggestions). |
 
 ## POST **Orders**
 
-| Error Code                         | Explanation                                                                                          |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| 400 - INVALID\_ORDER\_SCHEMA       | Order information is not properly formatted or is missing critical information such as payment type. |
-| 400 - UNALLOWED\_PAYMENT\_METHOD   | Payment method is not supported by UD. Must use Stripe or Coinbase.                                  |
-| 400 - UNSUPPORTED\_PAYMENT\_METHOD | Requested payment method is currently not supported.                                                 |
-| 400 - INVALID\_OWNER\_ADDRESS      | Owner address is not valid.                                                                          |
-| 400 - INVALID\_EMAIL               | Email address is not valid.                                                                          |
-| 400 - DOMAIN\_NOT\_AVAILABLE       | Domain name is unavailable for purchase.                                                             |
-| 400 - USER\_NOT\_ELIGIBLE          | The provided user is not eligible for a free domain.                                                 |
-| 400 - WALLET\_NOT\_ELIGIBLE        | The provided wallet address is not eligible for a free domain.                                       |
+| Error Code                       | Explanation                                                                                          |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 400 - INVALID_ORDER_SCHEMA       | Order information is not properly formatted or is missing critical information such as payment type. |
+| 400 - UNALLOWED_PAYMENT_METHOD   | Payment method is not supported by UD. Must use Stripe or Coinbase.                                  |
+| 400 - UNSUPPORTED_PAYMENT_METHOD | Requested payment method is currently not supported.                                                 |
+| 400 - INVALID_OWNER_ADDRESS      | Owner address is not valid.                                                                          |
+| 400 - INVALID_EMAIL              | Email address is not valid.                                                                          |
+| 400 - DOMAIN_NOT_AVAILABLE       | Domain name is unavailable for purchase.                                                             |
+| 400 - USER_NOT_ELIGIBLE          | The provided user is not eligible for a free domain.                                                 |
+| 400 - WALLET_NOT_ELIGIBLE        | The provided wallet address is not eligible for a free domain.                                       |
 
 ## GET **Order Number**
 
-| Error Code              | Explanation         |
-| ----------------------- | ------------------- |
-| 404 - ORDER\_NOT\_FOUND | Order is not found. |
+| Error Code            | Explanation         |
+| --------------------- | ------------------- |
+| 404 - ORDER_NOT_FOUND | Order is not found. |

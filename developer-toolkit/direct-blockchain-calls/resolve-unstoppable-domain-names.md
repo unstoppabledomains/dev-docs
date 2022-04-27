@@ -14,15 +14,15 @@ In this tutorial, we will look at resolving Unstoppable Domains, using nothing b
 <figure>
 
 ![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
-	
+
 <figcaption>Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)</figcaption>
 </figure>
 
 To resolve an unstoppable domain, we will need to
 
-* Tokenize the domain
-* Configure Ethers.js library
-* Make a call and fetch the data
+- Tokenize the domain
+- Configure Ethers.js library
+- Make a call and fetch the data
 
 Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `JavaScript`.
 
@@ -49,48 +49,49 @@ Your project folder should look exactly like the following:
 
 Let’s open the index.html file and build out the layout for our app. To create a positive UI experience for the user, we’ll need to build an input bar, a button to trigger the resolution, and a `<div>` to display our records.
 
-Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
+Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
 
 :::info
-We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../getting-started/domain-registry-essentials/namehashing.md).
+We will need the keccak_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../getting-started/domain-registry-essentials/namehashing.md).
 :::
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Basic .crypto integration</title>
-    </head>
-    <body>
-      <div id="main" style="
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic .crypto integration</title>
+  </head>
+  <body>
+    <div
+      id="main"
+      style="
       display: flex;
       flex-direction: column;
       height: 100vh;"
-      >
+    >
+      <input id="input" />
+      <button onclick="resolve()">Resolve</button>
+      <div id="records" style="display: flex; flex-direction: column;"></div>
+    </div>
 
-        <input id="input" />
-        <button onclick="resolve()">Resolve</button>
-        <div id="records" style="display: flex; flex-direction: column;">
+    <!-- This exposes keccak_256 hash function -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.8.0/sha3.min.js"
+      integrity="sha512-PmGDkK2UHGzTUfkFGcJ8YSrD/swUXekcca+1wWlrwALIZho9JX+3ddaaI9wmmf8PmgDIpMtx6TU8YBJAZS0mPQ=="
+      crossorigin="anonymous"
+    ></script>
 
-        </div>
-      </div>
+    <!-- This exposes the ethers.js library as a global variable: ethers -->
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+      type="application/javascript"
+    ></script>
 
-      <!-- This exposes keccak_256 hash function -->
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.8.0/sha3.min.js"
-        integrity="sha512-PmGDkK2UHGzTUfkFGcJ8YSrD/swUXekcca+1wWlrwALIZho9JX+3ddaaI9wmmf8PmgDIpMtx6TU8YBJAZS0mPQ=="
-        crossorigin="anonymous">
-      </script>
-
-      <!-- This exposes the ethers.js library as a global variable: ethers -->
-      <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
-        type="application/javascript"></script>
-
-      <!-- This are our custom files -->
-      <script src="ethers.js"></script>
-      <script src="index.js"></script>
-    </body>
+    <!-- This are our custom files -->
+    <script src="ethers.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
 ```
 
@@ -102,7 +103,7 @@ The code snippet below shows the resolve function:
 
 ```javascript
 async function resolve() {
-  const userInput = document.getElementById("input").value;
+  const userInput = document.getElementById('input').value;
   console.log({ domain: userInput });
 }
 ```
@@ -126,7 +127,7 @@ function namehash(name) {
 }
 function hash(name) {
   if (!name) {
-      return new Uint8Array(32);
+    return new Uint8Array(32);
   }
   const [label, ...remainder] = name.split('.');
   const labelHash = keccak_256.array(label);
@@ -134,7 +135,12 @@ function hash(name) {
   return keccak_256.array(new Uint8Array([...remainderHash, ...labelHash]));
 }
 function arrayToHex(arr) {
-  return '0x' + Array.prototype.map.call(arr, x => ('00' + x.toString(16)).slice(-2)).join('');
+  return (
+    '0x' +
+    Array.prototype.map
+      .call(arr, (x) => ('00' + x.toString(16)).slice(-2))
+      .join('')
+  );
 }
 ```
 
@@ -150,11 +156,11 @@ This table shows a list of Namehash examples with different inputs:
 
 To talk with any blockchain contract using `ethers.js`, we need to know the following:
 
-* Ethereum contract address
-* Polygon contract address
-* Contract ABI
-* Ethereum provider
-* Polygon provider
+- Ethereum contract address
+- Polygon contract address
+- Contract ABI
+- Ethereum provider
+- Polygon provider
 
 Let’s add the following information to our `ethers.js` file:
 
@@ -198,10 +204,14 @@ var abi = [
     payable: false,
     stateMutability: 'view',
     type: 'function',
-  }
+  },
 ];
-var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/demo");
-var provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemyapi.io/v2/demo");
+var polygonProvider = new ethers.providers.JsonRpcProvider(
+  'https://polygon-mumbai.g.alchemy.com/v2/demo'
+);
+var provider = new ethers.providers.JsonRpcProvider(
+  'https://eth-goerli.alchemyapi.io/v2/demo'
+);
 ```
 
 :::info
@@ -219,7 +229,7 @@ var ethContract = new ethers.Contract(ethAddress, abi, provider);
 var poligonContract = new ethers.Contract(polygonAddress, abi, polygonProvider);
 
 async function fetchContractData(contract, keys, tokenId) {
- return contract.getData(keys, tokenId);
+  return contract.getData(keys, tokenId);
 }
 ```
 
@@ -246,42 +256,37 @@ First, we will query the polygon network and check the ownership. If there is no
 
 ```javascript
 async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   console.log({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: data[2]
-   });
- });
+  fetchContractData(ethContract, interestedKeys, tokenId).then((data) => {
+    console.log({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: data[2],
+    });
+  });
 }
 
 async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on polygon network look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
+  // try to resolve the polygon network first
+  fetchContractData(poligonContract, interestedKeys, tokenId).then((data) => {
+    if (isEmpty(data.owner)) {
+      // if no owner for domain found on polygon network look up the eth network
+      return resolveEthNetwork(tokenId, interestedKeys);
+    }
 
-   // proceed with polygon results
-   console.log({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: data[2]
-   });
-
- });
+    // proceed with polygon results
+    console.log({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: data[2],
+    });
+  });
 }
 
-
 async function resolve() {
-  const userInput = document.getElementById("input").value;
+  const userInput = document.getElementById('input').value;
   const tokenId = namehash(userInput);
 
-  const interestedKeys = [
-    "crypto.BTC.address",
-    "crypto.ETH.address",
-  ];
+  const interestedKeys = ['crypto.BTC.address', 'crypto.ETH.address'];
 
   resolveBothChains(tokenId, interestedKeys);
 }
@@ -315,7 +320,7 @@ function cleanDOM(parent) {
   }
 }
 function displayResolution(resolution) {
-  const {ownerAddress, resolverAddress, records} = resolution;
+  const { ownerAddress, resolverAddress, records } = resolution;
   const mainContainer = document.getElementById('records');
   cleanDOM(mainContainer);
   const ownerRecord = document.createElement('span');
@@ -352,30 +357,29 @@ Now we can easily show the records on our page:
 
 ```javascript
 async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
+  fetchContractData(ethContract, interestedKeys, tokenId).then((data) => {
+    displayResolution({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: combineKeysWithRecords(interestedKeys, data[2]),
+    });
+  });
 }
 
-
 async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on poligon look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
+  // try to resolve the polygon network first
+  fetchContractData(poligonContract, interestedKeys, tokenId).then((data) => {
+    if (isEmpty(data.owner)) {
+      // if no owner for domain found on poligon look up the eth network
+      return resolveEthNetwork(tokenId, interestedKeys);
+    }
 
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
+    displayResolution({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: combineKeysWithRecords(interestedKeys, data[2]),
+    });
+  });
 }
 ```
 
@@ -384,7 +388,7 @@ If we are successful, we should see the following on our page:
 <figure>
 
 ![Example of a successful resolution](/images/example-successful-resolution.png)
-	
+
 <figcaption>Example of a successful resolution</figcaption>
 </figure>
 
@@ -401,69 +405,67 @@ function displayError(message, cleanDom) {
     cleanDOM(mainContainer);
   }
   const error = document.createElement('p');
-  error.style.color = "red";
+  error.style.color = 'red';
   error.innerHTML = message;
   mainContainer.appendChild(error);
-  return ;
+  return;
 }
 ```
 
 We can easily identify the possible errors by playing around with the app in its current state. The following table lists the possible errors and their descriptions.
 
-| Errors                   | Description                                                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| Domain is not registered | Owner address is `0x00000000000000000000000000000000`                                                            |
-| Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000`     |
-| Record is not found      | Records are queried for an address (e.g. crypto.BTC.address) but the domain owner hasn't set  up the records yet |
+| Errors                   | Description                                                                                                     |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| Domain is not registered | Owner address is `0x00000000000000000000000000000000`                                                           |
+| Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000`    |
+| Record is not found      | Records are queried for an address (e.g. crypto.BTC.address) but the domain owner hasn't set up the records yet |
 
 Once we’ve identified the errors, we will need to update the callback to the `fetchContractData()` function to show the errors to the user:
 
 ```javascript
 function isEmpty(msg) {
- return !msg || msg === '0x0000000000000000000000000000000000000000';
+  return !msg || msg === '0x0000000000000000000000000000000000000000';
 }
-
 
 async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     displayError('Domain is not registered', true);
-     return;
-   }
+  fetchContractData(ethContract, interestedKeys, tokenId).then((data) => {
+    if (isEmpty(data.owner)) {
+      displayError('Domain is not registered', true);
+      return;
+    }
 
-   if (isEmpty(data.resolver)) {
-     displayError('Domain is not configured', true);
-     return ;
-   }
+    if (isEmpty(data.resolver)) {
+      displayError('Domain is not configured', true);
+      return;
+    }
 
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
+    displayResolution({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: combineKeysWithRecords(interestedKeys, data[2]),
+    });
+  });
 }
 
-
 async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on polygon look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
+  // try to resolve the polygon network first
+  fetchContractData(poligonContract, interestedKeys, tokenId).then((data) => {
+    if (isEmpty(data.owner)) {
+      // if no owner for domain found on polygon look up the eth network
+      return resolveEthNetwork(tokenId, interestedKeys);
+    }
 
-   if (isEmpty(data.resolver)) {
-     displayError('Domain is not configured', true);
-     return ;
-   }
+    if (isEmpty(data.resolver)) {
+      displayError('Domain is not configured', true);
+      return;
+    }
 
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
+    displayResolution({
+      ownerAddress: data.owner,
+      resolverAddress: data.resolver,
+      records: combineKeysWithRecords(interestedKeys, data[2]),
+    });
+  });
 }
 ```
 
@@ -471,13 +473,13 @@ Now you can resolve any `.crypto` domain and display the appropriate error messa
 
 For example, you can try to resolve the following domains:
 
-| Domain                           | Result                      |
-| -------------------------------- | --------------------------- |
+| Domain                             | Result                      |
+| ---------------------------------- | --------------------------- |
 | `udtestdev-creek.crypto`           | Domain has no BTC record    |
 | `udtestdev-test-btc-record.coin`   | Resolves without any issues |
 | `udtestdev-johnny-dev-domain.coin` | Domain has no BTC record    |
 
 ## Resources
 
-* [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
-* [Discord community for UD](https://discord.gg/b6ZVxSZ9Hn)
+- [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
+- [Discord community for UD](https://discord.gg/b6ZVxSZ9Hn)

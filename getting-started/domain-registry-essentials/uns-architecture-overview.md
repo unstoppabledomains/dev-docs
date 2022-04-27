@@ -9,9 +9,9 @@ Every UNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-72
 
 This page covers the following topics:
 
-* ​[Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
-* ​[Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
-* ​[Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
+- ​[Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
+- ​[Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
+- ​[Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
 
 UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, members have complete control of their domains.
 
@@ -49,9 +49,9 @@ Under the surface, `Registry` is effectively a map of domain namehashes to key-v
 
 `Registry` stores:
 
-* Owner address
-* Approved operator address
-* Domain records
+- Owner address
+- Approved operator address
+- Domain records
 
 `Registry`'s smart contract includes a set of methods for minting new domains and managing ownership.
 
@@ -61,9 +61,9 @@ Accounts that are allowed to mint second-level domains (e.g.: `alice.x`) are cal
 
 Domain owners can:
 
-* Transfer domain ownership
-* Set domain records
-* Burn a domain
+- Transfer domain ownership
+- Set domain records
+- Burn a domain
 
 Domain owners can set one Approved address per domain and many Operator addresses. These roles can manage a domain on a member's behalf. For more details, see [Managing domain ownership](../../manage-domains/index.md).
 
@@ -97,8 +97,8 @@ Unstoppable Domains uses this delegation feature to operate an internal transact
 
 On behalf of our members, our transaction processor generally handles:
 
-* Minting domains
-* Managing domains (transferring, modifying records)
+- Minting domains
+- Managing domains (transferring, modifying records)
 
 **Minting domains** happens when a member mints a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
 

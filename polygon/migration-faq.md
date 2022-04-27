@@ -8,10 +8,11 @@ description: This page highlights the frequently asked questions about the Unsto
 ### What are the benefits of bridging from Ethereum to Polygon?
 
 We are able to cover all gas fees on Polygon via our website for management. This means you can manage all the following for free:
-* Crypto addresses
-* Domain profiles
-* Verified NFT avatars
-* Decentralized websites
+
+- Crypto addresses
+- Domain profiles
+- Verified NFT avatars
+- Decentralized websites
 
 ### Do I have to bridge my domain from Ethereum to Polygon?
 
@@ -32,7 +33,6 @@ Early Q2.
 ### Can I move my domain back to Ethereum after moving it over to Polygon?
 
 When the L2 to L1 bridge becomes available in early Q2.
-
 
 ### Gas is too damn high! Will UD send me credit to move to Polygon?
 

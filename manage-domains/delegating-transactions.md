@@ -23,7 +23,7 @@ Meta-transactions work by having members sign function calls along with a nonce.
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
 :::info
-For UNS and CNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [UNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/UNSRegistryForwarder.sol) and [CNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/CNSRegistryForwarder.sol).
+For UNS and CNS, the meta-transaction versions of `Registry` functions are included in the registry. The source code for signature validation can be found in [UNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/UNSRegistryForwarder.sol) and [CNSRegistryForwarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/CNSRegistryForwarder.sol).
 :::
 
 ## Token nonce
@@ -52,9 +52,9 @@ A nonce is simply a transaction counter for each token. This prevents replay att
 
 A meta transaction requires 2 signatures: one passed as a method argument and one classical. A classical signature is generated in a standard way. A meta signature requires a domain owner (or a person approved by the owner) to sign a special message formed from:
 
-* A domain based meta-transaction nonce
-* A [Function selector](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#function-selector) of the original method
-* The original method parameters (the one without signature)
+- A domain based meta-transaction nonce
+- A [Function selector](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#function-selector) of the original method
+- The original method parameters (the one without signature)
 
 ### UNS and CNS Signature Generation
 
@@ -74,18 +74,18 @@ function generateMessageToSign(
   methodName: string,
   methodParams: string[],
   tokenId: string,
-  params: any[],
+  params: any[]
 ) {
   return solidityKeccak256(
     ['bytes32', 'address', 'uint256'],
     [
       solidityKeccak256(
         ['bytes'],
-        [encodeContractInterface(contractAddress, method, methodParams, params)],
+        [encodeContractInterface(contractAddress, method, methodParams, params)]
       ),
       controllerContractAddress,
       ethCallRpc(controllerContractAddress, 'nonceOf', tokenId),
-    ],
+    ]
   );
 }
 const message = generateMessageToSign(
@@ -100,7 +100,7 @@ const message = generateMessageToSign(
 
 Functions Reference:
 
-* `namehash` — [Namehashing function](../getting-started/domain-registry-essentials/namehashing.md) algorithm implementation
-* `ethCallRpc` — Ethereum `eth_call` JSON RPC implementation
-* `encodeContractInterface` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) interface parameters encoder
-* `solidityKeccak256` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) parameters encoder
+- `namehash` — [Namehashing function](../getting-started/domain-registry-essentials/namehashing.md) algorithm implementation
+- `ethCallRpc` — Ethereum `eth_call` JSON RPC implementation
+- `encodeContractInterface` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) interface parameters encoder
+- `solidityKeccak256` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) parameters encoder

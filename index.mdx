@@ -28,12 +28,20 @@ export default LandingLayout;
 
 <Jumbotron>
   <H1>Developer Documentation</H1>
-  <H2>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
+  <H2>
+    Everything you need to build, customize, <br />
+    and integrate with Unstoppable Domains.
+  </H2>
   <Flex p={20} justifyContent="center">
     {/* <Button size="xlarge" to="https://app.redoc.ly">
       Redocly app
     </Button> */}
-     <Button variant="contained" size="xlarge" color="primary" to="getting-started/index.md">
+    <Button
+      variant="contained"
+      size="xlarge"
+      color="primary"
+      to="getting-started/index.md"
+    >
       Get Started
     </Button>
     {/* <Button variant="outlined" size="xlarge" to="https://redoc.ly/docs">
@@ -47,16 +55,24 @@ export default LandingLayout;
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
     <ThinTile to="use-cases/index.mdx" icon={usecase} header="Use Cases">
-        Review real life use cases along with potential solutions and
-        direct links to Unstoppable Domains integration guides, when applicable.
+      Review real life use cases along with potential solutions and direct links
+      to Unstoppable Domains integration guides, when applicable.
     </ThinTile>
-    <ThinTile to="openapi/reference.page.yaml" icon={apiref} header="API Reference">
-        Consult the documentation and live testing features of Unstoppable Domains APIs,
-        including the Resolution API and Reseller API.
+    <ThinTile
+      to="openapi/reference.page.yaml"
+      icon={apiref}
+      header="API Reference"
+    >
+      Consult the documentation and live testing features of Unstoppable Domains
+      APIs, including the Resolution API and Reseller API.
     </ThinTile>
-    <ThinTile to="developer-toolkit/index.md" icon={toolkit} header="Developer Toolkit">
-        Explore our collection of developer integration tools such as Unstoppable Domains
-        resolution libraries, resolution CLI, and smart contracts.
+    <ThinTile
+      to="developer-toolkit/index.md"
+      icon={toolkit}
+      header="Developer Toolkit"
+    >
+      Explore our collection of developer integration tools such as Unstoppable
+      Domains resolution libraries, resolution CLI, and smart contracts.
     </ThinTile>
   </FlexSection>
   {/* <Jumbotron parallaxEffect bgImage={icon1}>
@@ -68,21 +84,24 @@ export default LandingLayout;
     Try our developer guides.
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <WideTile to="login-with-unstoppable/index.md" header="Login with Unstoppable">
-        Build a universal Web3 login that authenticates your users and creates new
-        communication channels with them.
+    <WideTile
+      to="login-with-unstoppable/index.md"
+      header="Login with Unstoppable"
+    >
+      Build a universal Web3 login that authenticates your users and creates new
+      communication channels with them.
     </WideTile>
     <WideTile to="crypto-payments/index.md" header="Crypto Payments">
-        Simplify the process of sending and receiving crypto payments by replacing long
-         hexadecimal addresses with human readable domain names.
+      Simplify the process of sending and receiving crypto payments by replacing
+      long hexadecimal addresses with human readable domain names.
     </WideTile>
     <WideTile to="reseller/index.md" header="Become a Reseller">
-        Generate extra revenue by registering to become an authorized reseller with
-        Unstoppable Domains.
+      Generate extra revenue by registering to become an authorized reseller
+      with Unstoppable Domains.
     </WideTile>
     <WideTile to="d-websites/index.md" header="IPFS Websites">
-        Design a custom decentralized website, modify a community generated template,
-        or share your own IPFS template with the community.
+      Design a custom decentralized website, modify a community generated
+      template, or share your own IPFS template with the community.
     </WideTile>
   </FlexSection>
 </Box>

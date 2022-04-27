@@ -17,10 +17,10 @@ To begin the integration process for Login with Unstoppable, you will need to ob
 
 There are several ways to integrate with Login with Unstoppable, which is detailed in the chart below.
 
-| Short Description                          | Pathway or Features                                                                                                                   | Integration Guides                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Short Description                          | Pathway or Features                                                                                                                   | Integration Guides                                                                               |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, with popup feature                                                | [Login with Unstoppable Guide with Popup](../login-integration-guides/login-with-popup.md)       |
-| No Ethereum Provider without Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, no popup feature                                                  | [Login with Unstoppable Guide without Popup](../login-integration-guides/login-without-popup.md) |
+| No Ethereum Provider without Popup Feature | generic @uauth/js integration, no ethereum provider, with callback, no popup feature                                                  | [Login with Unstoppable Guide without Popup](../login-integration-guides/login-without-popup.md) |
 | Ethereum Provider with Web3 React Library  | custom @uauth/js integration, with ethereum provider, web3-react library                                                              | [Web3 React Guide](../login-integration-guides/web3-react-guide.md)                              |
 | Ethereum Provider with Web3 Modal Library  | custom @uauth/js integration, with ethereum provider, web3modal library                                                               | [Web3 Modal Guide](../login-integration-guides/web3-modal-guide.md)                              |
 | Ethereum Provider with BNC Onboard Library | custom @uauth/js integration, with ethereum provider, bnc-onboard library                                                             | [BNC Onboard Guide](../login-integration-guides/bnc-onboard-guide.md)                            |
@@ -36,6 +36,6 @@ Login with Unstoppable has UI requirements that must be configured to properly d
 
 ## Step 4: Promote Your Application
 
-Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
+Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps).
 
 <embed src="/snippets/_discord.md" />

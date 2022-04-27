@@ -21,15 +21,15 @@ Since the request is **GET**, the parameters should be URL-encoded and passed as
 // Query parameters that should be included in the signature
 type MessageToSign = {
   timestamp: number;
-	resellerName: string;
+  resellerName: string;
   records: Record<string, string>;
-}
+};
 
 // Query parameters that shoud NOT be included in signature
 type AdditionalParameters = {
-	ref: string;
-	searchTerm: string;
-}
+  ref: string;
+  searchTerm: string;
+};
 ```
 
 ### Request URL
@@ -54,12 +54,12 @@ The authorization is necessary to help prevent attacks that may substitute insec
 
 1. Client (wallet) or backend prepares **MessageToSign** and **AdditionalParameters** parameters
 2. Client (wallet) sends the **MessageToSign** and **AdditionalParameters** parameters to backend
-   * (Alternative) Backend prepares **MessageToSign** and **AdditionalParameters** parameters
+   - (Alternative) Backend prepares **MessageToSign** and **AdditionalParameters** parameters
 3. Backend validates correctness of **MessageToSign** parameters
-   * Check validity of records addresses
-   * Check validity of owner field
+   - Check validity of records addresses
+   - Check validity of owner field
 4. Backend sorts **MessageToSign** parameters by keys in alphabetical order recursively (including _**records**_ field).
-   * For javascript, developers may use the deep-sort-object package
+   - For javascript, developers may use the deep-sort-object package
 5. Backend produces a HMAC-SHA256 signature of **MessageToSign** request parameters
 6. Client forms a URL using **MessageToSign** and **AdditionalParameters** parameters + _**signature**_
 7. Redirect URL can be opened and processed by UD backend
@@ -114,7 +114,13 @@ In JavaScript, hmac signatures can be created using the crypto-js library. Simil
 JSON Records Example:
 
 ```json
-{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh","crypto.USDT.version.ERC20.adress":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.DAI.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.EOS.address":"playuplandme"}
+{
+  "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
+  "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+  "crypto.USDT.version.ERC20.adress": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
+  "crypto.DAI.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
+  "crypto.EOS.address": "playuplandme"
+}
 ```
 
 JSON records example (URL encoded):

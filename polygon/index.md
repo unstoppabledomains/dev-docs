@@ -15,9 +15,9 @@ Polygon POS Chain is the leading platform for Ethereum scaling and infrastructur
 
 By removing the transactional costs involved in hosting and managing NFT domains, a whole new set of capabilities becomes viable for everyday use.
 
-* Customers will be able to connect multiple wallets to their domains for payment, host, and edit decentralized websites (blogs, NFT galleries, etc) without having to worry about paying gas fees.
-* Developers will be able to design and create new templates, with increased complexity and functionality without the concern that users might not be able to afford to use them.
-* NFT domains will become a viable alternative to existing web2 single sign-on such as with our newly announced product, [Login with Unstoppable](/login-with-unstoppable/index.md).
+- Customers will be able to connect multiple wallets to their domains for payment, host, and edit decentralized websites (blogs, NFT galleries, etc) without having to worry about paying gas fees.
+- Developers will be able to design and create new templates, with increased complexity and functionality without the concern that users might not be able to afford to use them.
+- NFT domains will become a viable alternative to existing web2 single sign-on such as with our newly announced product, [Login with Unstoppable](/login-with-unstoppable/index.md).
 
 ## High Level Differences between L1 and L2
 
@@ -43,6 +43,6 @@ Domain management will be much cheaper and faster compared to L1, due to lower f
 
 ## Considerations
 
-* All new domains will be minted on L2; all L1 minting is disabled.
-* Domains minted on Polygon may not resolve in all wallets and exchanges until resolution updates have been made to integrated apps.
-* We cannot guarantee a specific timeline for each app as it's at the discretion of each individual product and engineering organization.
+- All new domains will be minted on L2; all L1 minting is disabled.
+- Domains minted on Polygon may not resolve in all wallets and exchanges until resolution updates have been made to integrated apps.
+- We cannot guarantee a specific timeline for each app as it's at the discretion of each individual product and engineering organization.

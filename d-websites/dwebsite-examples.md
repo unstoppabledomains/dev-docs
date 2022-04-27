@@ -17,6 +17,6 @@ You can also search for something specific on one of these crypto/web3search eng
 
 ## Resources
 
-* [Unstoppable Domains D-Web Repository](https://github.com/unstoppabledomains/decentralized-websites)
-* [Website Builder Guide](https://support.unstoppabledomains.com/support/solutions/articles/48001181925-build-website)
-* [Personalize Current Website Templates](https://support.unstoppabledomains.com/support/solutions/articles/48001184627-personalize-our-templates)
+- [Unstoppable Domains D-Web Repository](https://github.com/unstoppabledomains/decentralized-websites)
+- [Website Builder Guide](https://support.unstoppabledomains.com/support/solutions/articles/48001181925-build-website)
+- [Personalize Current Website Templates](https://support.unstoppabledomains.com/support/solutions/articles/48001184627-personalize-our-templates)

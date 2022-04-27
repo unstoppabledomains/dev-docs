@@ -17,7 +17,7 @@ pages:
     expanded: false
     pages:
       - label: D-Website Examples and Resources
-        page: dwebsite-examples.md 
+        page: dwebsite-examples.md
       - page: resolving-dwebsites-in-a-browser.md
         label: Resolving D-Websites in a Browser
     separatorLine: true

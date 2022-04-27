@@ -19,4 +19,4 @@ As part of this integration, new and existing members will be able to mint and m
 
 ## How do I get started?
 
-See the [Polygon High Level Overview](../polygon/index.md) for discussion of the benefits and considerations for Polygon L2. We have also outlined the  steps needed to migrate Unstoppable domains to Polygon L2 for [CNS Layer 1 to UNS Layer 2](../polygon/cns1-to-uns2.md) and [UNS Layer 1 to UNS Layer 2](../polygon/uns1-to-uns2.md).
+See the [Polygon High Level Overview](../polygon/index.md) for discussion of the benefits and considerations for Polygon L2. We have also outlined the steps needed to migrate Unstoppable domains to Polygon L2 for [CNS Layer 1 to UNS Layer 2](../polygon/cns1-to-uns2.md) and [UNS Layer 1 to UNS Layer 2](../polygon/uns1-to-uns2.md).

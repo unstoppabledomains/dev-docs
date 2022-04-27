@@ -19,8 +19,8 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 ### Method Changes and Updates
 
-* **gettokensownedby** has been deprecated and is no longer supported in L2.
-* **getallrecords** has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
+- **gettokensownedby** has been deprecated and is no longer supported in L2.
+- **getallrecords** has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
 
 ### New Supported Method
 
@@ -28,12 +28,12 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 This method returns a list of domain locations:
 
-* Blockchain Provider URL (if possible otherwise null)
-* RegistryAddress
-* ResolverAddress
-* [Network ID](https://chainlist.org)
-* Blockchain ([Coin symbol](https://github.com/satoshilabs/slips/blob/master/slip-0044.md))
-* Owner address
+- Blockchain Provider URL (if possible otherwise null)
+- RegistryAddress
+- ResolverAddress
+- [Network ID](https://chainlist.org)
+- Blockchain ([Coin symbol](https://github.com/satoshilabs/slips/blob/master/slip-0044.md))
+- Owner address
 
 ### List of Network IDs
 
@@ -42,7 +42,7 @@ This table displays the network IDs used by Unstoppable Domains in the UNS confi
 | Network ID | Description     |
 | ---------- | --------------- |
 | 1          | mainnet         |
-| 5          | Goerli testnet |
+| 5          | Goerli testnet  |
 | 137        | Polygon mainnet |
 | 80001      | Polygon testnet |
 
@@ -54,8 +54,8 @@ Unstoppable Domains’ Polygon resolution service will have the same specificati
 
 Overall changes for **/status route**
 
-* Return [Network ID](https://chainlist.org) instead of _network_
-* Move all fields under “blockchain” namespace
+- Return [Network ID](https://chainlist.org) instead of _network_
+- Move all fields under “blockchain” namespace
 
 ```javascript NEW Response
 {
@@ -93,8 +93,8 @@ Overall changes for **/status route**
 
 Overall changes for **/domain and /domains\<domain name> routes**
 
-* Return [Network ID](https://chainlist.org) instead of location field
-* Add blockchain field to store data about Layer 1 and Layer 2
+- Return [Network ID](https://chainlist.org) instead of location field
+- Add blockchain field to store data about Layer 1 and Layer 2
 
 ```javascript NEW response
 {
@@ -133,11 +133,11 @@ Overall changes for **/domain and /domains\<domain name> routes**
 
 You have several methods for transferring and depositing your Unstoppable Domains between networks.
 
-| Transfer Option                          | Description                                                                                                                   | Transfer Guide Guide                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| CNS L1 to UNS L1    | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum)                                                | [CNS L1 to UNS L1: Domain Transfer Guide](cns1-to-uns1.md)       |
-| CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide](cns1-to-uns2.md) |
-| UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide](uns1-to-uns2.md)                             |
+| Transfer Option  | Description                                                                     | Transfer Guide Guide                                       |
+| ---------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| CNS L1 to UNS L1 | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum) | [CNS L1 to UNS L1: Domain Transfer Guide](cns1-to-uns1.md) |
+| CNS L1 to UNS L2 | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature   | [CNS L1 to UNS L2: Domain Deposit Guide](cns1-to-uns2.md)  |
+| UNS L1 to UNS L2 | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)           | [UNS L1 to UNS L2: Domain Deposit Guide](uns1-to-uns2.md)  |
 
 :::success Congratulations!
 You just migrated to Polygon Layer2 Network.
