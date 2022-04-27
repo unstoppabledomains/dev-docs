@@ -1,0 +1,16 @@
+{
+    "build": "domain-registry-essentials/cns-smart-contracts.md",
+    "files": [
+        ".templates/contracts/cns/FreeMinter.md",
+        ".templates/contracts/cns/TwitterValidationOperator.md",
+        ".templates/contracts/cns/ProxyReader.md",
+        ".templates/contracts/cns/Resolver.md",
+        ".templates/contracts/cns/DomainZoneController.md",
+        ".templates/contracts/cns/URIPrefixController.md",
+        ".templates/contracts/cns/WhitelistedMinter.md",
+        ".templates/contracts/cns/MintingController.md",
+        ".templates/contracts/cns/SignatureController.md",
+        ".templates/contracts/cns/Registry.md",
+        ".templates/cns-smart-contracts-template.md"
+    ]
+}
