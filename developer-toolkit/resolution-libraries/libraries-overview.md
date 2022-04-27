@@ -11,7 +11,7 @@ Resolution libraries are used for interacting with NFT domain names. They can be
 
 ## Supported Domains for Resolution Libraries
 
-The Resolution Libraries support decentralized domains across two main zones:
+The Resolution Libraries supports decentralized domains across two main zones:
 
 | Name Service                   | Supported Domains                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------------------- |

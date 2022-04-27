@@ -15,6 +15,15 @@ We have partnered with Alchemy to offer UD developers an Alchemy-hosted Resoluti
 
 For Alchemy API documentation, endpoints, and support videos, visit Alchemy's dedicated page for [Unstoppable Domains APIs](https://docs.alchemy.com/alchemy/enhanced-apis/unstoppable-domains-apis).
 
+## Supported Domains for Resolution Libraries
+
+The Resolution Service API supports decentralized domains across two main zones:
+
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+
 ## Error Codes
 
 Below is a list of all the error codes you might encounter when using the Resolution Service API. The errors are in JSON format.
