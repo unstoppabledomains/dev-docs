@@ -9,7 +9,7 @@ interface Navbar {
 }
 
 interface Sidebar {
-  spacing: {};
+  spacing: Record<string, unknown>;
   topOffset: number;
   leftOffset: number;
 }
@@ -66,7 +66,7 @@ interface Typography {
     fontFamily: string;
     fontWeight: string;
   };
-  rightPanelHeading: {};
+  rightPanelHeading: Record<string, unknown>;
   code: {
     fontSize: string;
     fontFamily: string;

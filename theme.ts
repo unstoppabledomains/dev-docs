@@ -212,4 +212,4 @@ const udTheme = {
   },
 };
 
-export default udTheme;
+export { udTheme as theme };
