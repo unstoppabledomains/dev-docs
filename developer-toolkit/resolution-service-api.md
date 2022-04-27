@@ -15,7 +15,7 @@ We have partnered with Alchemy to offer UD developers an Alchemy-hosted Resoluti
 
 For Alchemy API documentation, endpoints, and support videos, visit Alchemy's dedicated page for [Unstoppable Domains APIs](https://docs.alchemy.com/alchemy/enhanced-apis/unstoppable-domains-apis).
 
-## Supported Domains for Resolution Libraries
+## Supported Domains for Resolution Service API
 
 The Resolution Service API supports decentralized domains across two main zones:
 
