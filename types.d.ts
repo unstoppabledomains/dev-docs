@@ -101,6 +101,6 @@ interface Theme {
   typography: Typography;
   rightPanel: RightPanel;
   schema: Schema;
-};
+}
 
 export { Theme, Colors, Typography };

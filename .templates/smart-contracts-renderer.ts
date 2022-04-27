@@ -9,8 +9,24 @@ const writeFile = promisify(fs.writeFile);
 
 (async () => {
   try {
-    const cnsNetworkConfig = JSON.parse((await readFile(path.join(process.cwd(), 'node_modules', 'dot-crypto/src/network-config/network-config.json'))).toString());
-    const unsNetworkConfig = JSON.parse((await readFile(path.join(process.cwd(), 'node_modules', 'uns/uns-config.json'))).toString());
+    const cnsNetworkConfig = JSON.parse(
+      (
+        await readFile(
+          path.join(
+            process.cwd(),
+            'node_modules',
+            'dot-crypto/src/network-config/network-config.json'
+          )
+        )
+      ).toString()
+    );
+    const unsNetworkConfig = JSON.parse(
+      (
+        await readFile(
+          path.join(process.cwd(), 'node_modules', 'uns/uns-config.json')
+        )
+      ).toString()
+    );
 
     type NamingServiceName = 'cns' | 'uns';
 
@@ -50,7 +66,7 @@ const writeFile = promisify(fs.writeFile);
       Goerli = 5,
       Kovan = 42,
       PolygonMainnet = 137,
-      PolygonTestnet = 80001
+      PolygonTestnet = 80001,
     }
 
     const Networks: Record<number, string> = {
@@ -60,7 +76,7 @@ const writeFile = promisify(fs.writeFile);
       [NetworkIds.Goerli]: 'Goerli',
       [NetworkIds.Kovan]: 'Kovan',
       [NetworkIds.PolygonMainnet]: 'Polygon mainnet',
-      [NetworkIds.PolygonTestnet]: 'Polygon testnet (Mumbai)'
+      [NetworkIds.PolygonTestnet]: 'Polygon testnet (Mumbai)',
     };
 
     const BlockchainExplorerURLs: Record<number, string> = {
@@ -70,7 +86,7 @@ const writeFile = promisify(fs.writeFile);
       [NetworkIds.Goerli]: 'https://goerli.etherscan.io',
       [NetworkIds.Kovan]: 'https://kovan.etherscan.io',
       [NetworkIds.PolygonMainnet]: 'https://polygonscan.com',
-      [NetworkIds.PolygonTestnet]: 'https://mumbai.polygonscan.com'
+      [NetworkIds.PolygonTestnet]: 'https://mumbai.polygonscan.com',
     };
 
     type Row = {
@@ -96,7 +112,9 @@ const writeFile = promisify(fs.writeFile);
       console.log('Done');
     }
 
-    function getContractsConfigForNamingService(namingService: NamingServiceName) {
+    function getContractsConfigForNamingService(
+      namingService: NamingServiceName
+    ) {
       switch (namingService) {
         case 'cns':
           return cnsNetworkConfig.networks;
@@ -140,12 +158,12 @@ const writeFile = promisify(fs.writeFile);
           network: Networks[Number(id)],
           blockchainExplorerURL: BlockchainExplorerURLs[Number(id)],
           address: contract.address,
-          legacyAddresses: contract.legacyAddresses
+          legacyAddresses: contract.legacyAddresses,
         });
       }
       let contractTable = Ejs.render(CotractTableTemplate, {
         rows,
-        hasLegacyAddresses: contractHasLegacyAddresses
+        hasLegacyAddresses: contractHasLegacyAddresses,
       }).replace(/(^[ \t]*\n)/gm, ''); // remove new lines to render .md table properly
 
       await saveContractTable(contractName, contractTable, filesToInclude);
@@ -170,10 +188,10 @@ const writeFile = promisify(fs.writeFile);
     async function saveMarkdown(files: string[]) {
       let markdown = {
         build: FileToRender,
-        files: files
+        files: files,
       };
       await writeFile(MarkdownFile, JSON.stringify(markdown, null, 4), {
-        encoding: 'utf-8'
+        encoding: 'utf-8',
       });
       console.log('Markdown file saved: ' + MarkdownFile);
     }
@@ -182,4 +200,3 @@ const writeFile = promisify(fs.writeFile);
     process.exit(1);
   }
 })();
-
