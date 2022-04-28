@@ -21,7 +21,7 @@ This section lists all the smart contracts that users can directly interact with
 
 Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
-\#include "templates/contracts/uns/UNSRegistry.md"
+\#include ".templates/contracts/uns/UNSRegistry.md"
 
 **Source code:** [contracts/UnsRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/UNSRegistry.sol)
 
@@ -29,7 +29,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 `ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
-\#include "templates/contracts/uns/ProxyReader.md"
+\#include ".templates/contracts/uns/ProxyReader.md"
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/ProxyReader.sol)
 
@@ -37,7 +37,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
 
-\#include "templates/contracts/uns/TwitterValidationOperator.md"
+\#include ".templates/contracts/uns/TwitterValidationOperator.md"
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol)
 
@@ -49,7 +49,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 `MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
-\#include "templates/contracts/uns/MintingManager.md"
+\#include ".templates/contracts/uns/MintingManager.md"
 
 **Source code:** [contracts/MintingManager.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/MintingManager.sol)
 
