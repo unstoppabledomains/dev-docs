@@ -54,8 +54,9 @@ The resolution service will not return an error in the case of an invalid domain
 | perPage must not be less than 1 | The provided `perPage` parameter is a value less than 1. |
 | perPage must be an integer number | The provided `perPage` parameter is not an integer value. |
 | sortDirection must be one of the following values: ASC, DESC | The provided `sortDirection` parameter value is not `ASC` or `DESC`. |
-| sortBy must be one of the following values: id, name | The provided `sortBy` parameter value is not `id` nor `name`. |
+| sortBy must be one of the following values: id, name, created_at | The provided `sortBy` parameter value has to be either `id`, `name` or `created_at`. |
 | Invalid TLD list provided | The Resolution Service API does not support the provided list of domain endings. |
+| Invalid resolution records provided | The provided `resolution` parameter value contains records not supported by the resolution service API. See the [Records Reference](../getting-started/domain-registry-essentials/records-reference.md) guide for supported key values. |
 
 ### 403 Error: Forbidden
 
