@@ -1560,17 +1560,17 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@1.1.0-beta.91":
-  version "1.1.0-beta.91"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.91.tgz#3a80dc5c3e1983bc463e26d3571f97fe3d719c6a"
-  integrity sha512-+JvNMOPTQSIt8Ad/eyiqtY5hBcHlwNJI4cJwXWK7NyyKDfDzAAmdJl4Ai03FR2fQVDjbuviCfxfKGMwMS+Sxcw==
+"@redocly/developer-portal@1.1.0-beta.92":
+  version "1.1.0-beta.92"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.92.tgz#68253652939e9bb2d4e0240c9ecbd11fcc764ad2"
+  integrity sha512-gXkE06QNOX8ehKBUmnKAxCEPDKJZ6JGnO5WJevkP8BW1dSXCyfJHe6iPqOBELLciKoTK13Ezw4sX1/L1lXt52A==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
     "@redocly/gatsby-plugin-manifest" "3.3.2"
     "@redocly/gatsby-remark-images" "4.2.0"
     "@redocly/openapi-core" "1.0.0-beta.94"
-    "@redocly/reference-docs" "2.13.6"
+    "@redocly/reference-docs" "2.13.7"
     babel-plugin-react-html-attrs "^3.0.5"
     babel-plugin-styled-components "^1.12.0"
     buffer "^6.0.3"
@@ -1745,10 +1745,10 @@
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/reference-docs@2.13.6":
-  version "2.13.6"
-  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.13.6.tgz#f53abf6fbc4ad3d4974d9f32c458a25abd3f231f"
-  integrity sha512-R1H4e/w881LU3Xvbaavwy3rQVyipoCm3tS8WyCjIsQ7XUSBt//DqBE1y8Fvx4JTzvL58vUm6xYq2j71LUDb87A==
+"@redocly/reference-docs@2.13.7":
+  version "2.13.7"
+  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.13.7.tgz#f10a1ee643ea92e75580adaeecc4ceed499e3679"
+  integrity sha512-TDhoaXotYPvzwZS241+Sx8lZSVZmrjylEMaW5enpwIo+f/RdbaMr/oMP7Ca9LMo1jj7HsVVD/6hlEGOEDsoGUQ==
   dependencies:
     "@redocly/openapi-core" "1.0.0-beta.88"
     "@redocly/vscode-json-languageservice" "3.4.9"
@@ -1771,7 +1771,7 @@
     mkdirp "^0.5.1"
     mobx-react "^7.2.0"
     node-libs-browser "^2.2.0"
-    openapi-sampler "^1.2.1"
+    openapi-sampler "^1.2.3"
     path-browserify "^1.0.1"
     perfect-scrollbar "^1.4.0"
     polished "^3.6.5"
@@ -10809,10 +10809,10 @@ open@^7.0.2, open@^7.0.3:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-openapi-sampler@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/openapi-sampler/-/openapi-sampler-1.2.1.tgz#2ca9eea527f8f2ddb32c3ae1dda31afd8bf0833f"
-  integrity sha512-mHrYmyvcLD0qrfqPkPRBAL2z16hGT2rW0d0B7nklfoTcc3pmkJLkSZlKSeFgerUM41E5c7jlxf0Y19xrM7mWQQ==
+openapi-sampler@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/openapi-sampler/-/openapi-sampler-1.2.3.tgz#753b69c4f45b54682469f2343399a10bc60ec993"
+  integrity sha512-dH2QYXqakorV5dxkP/f1BV3Ku4yNn21YmBsqJunnyrHLw7mnCNZZldftgrEpv/66b1m5oaUAmiJoJN+FqBEkJg==
   dependencies:
     "@types/json-schema" "^7.0.7"
     json-pointer "0.6.2"
