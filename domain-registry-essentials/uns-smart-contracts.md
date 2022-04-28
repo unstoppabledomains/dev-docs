@@ -21,7 +21,28 @@ This section lists all the smart contracts that users can directly interact with
 
 Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
-# include "templates/contracts/uns/UNSRegistry.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+    <table>
+        <th>Network</th>
+        <th>Contract address</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a href="https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D">0x049aba7510f45BA5b64ea9E658E342F904DB358D</a></td>
+        </tr>
+        <tr>
+            <td>Goerli</td>
+            <td><a href="https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71">0x070e83FCed225184E67c86302493ffFCDB953f71</a></td>
+        </tr>
+        <tr>
+            <td>Polygon mainnet</td>
+            <td><a href="https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f">0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f</a></td>
+        </tr>
+        <tr>
+            <td>Polygon testnet (Mumbai)</td>
+            <td><a href="https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93">0x2a93C52E7B6E7054870758e15A1446E769EdfB93</a></td>
+        </tr>
+    </table>
+    
 
 **Source code:** [contracts/UnsRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/UNSRegistry.sol)
 
@@ -29,7 +50,71 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 `ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
-# include "templates/contracts/uns/ProxyReader.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+    <table>
+        <th>Network</th>
+        <th>Contract address</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a href="https://etherscan.io/address/0x1BDc0fD4fbABeed3E611fd6195fCd5d41dcEF393">0x1BDc0fD4fbABeed3E611fd6195fCd5d41dcEF393</a></td>
+        </tr>
+        <tr>
+            <td>Goerli</td>
+            <td><a href="https://goerli.etherscan.io/address/0xE3b961856C417d081a02cBa0161a051268F52677">0xE3b961856C417d081a02cBa0161a051268F52677</a></td>
+        </tr>
+        <tr>
+            <td>Polygon mainnet</td>
+            <td><a href="https://polygonscan.com/address/0x3E67b8c702a1292d1CEb025494C84367fcb12b45">0x3E67b8c702a1292d1CEb025494C84367fcb12b45</a></td>
+        </tr>
+        <tr>
+            <td>Polygon testnet (Mumbai)</td>
+            <td><a href="https://mumbai.polygonscan.com/address/0x6fe7c857C1B0E54492C8762f27e0a45CA7ff264B">0x6fe7c857C1B0E54492C8762f27e0a45CA7ff264B</a></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <th>Network</th>
+        <th>Legacy addresses</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a
+                    href="https://etherscan.io/address/0x58034A288D2E56B661c9056A0C27273E5460B63c">0x58034A288D2E56B661c9056A0C27273E5460B63c</a>
+                <a
+                    href="https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E">0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E</a>
+                <a
+                    href="https://etherscan.io/address/0xfEe4D4F0aDFF8D84c12170306507554bC7045878">0xfEe4D4F0aDFF8D84c12170306507554bC7045878</a>
+                <a
+                    href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a>
+                <a
+                    href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
+            </td>
+    </tr>
+        <tr>
+            <td>Goerli</td>
+            <td><a
+                    href="https://goerli.etherscan.io/address/0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982">0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982</a>
+                <a
+                    href="https://goerli.etherscan.io/address/0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68">0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68</a>
+            </td>
+    </tr>
+        <tr>
+            <td>Polygon mainnet</td>
+            <td><a
+                    href="https://polygonscan.com/address/0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680">0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680</a>
+                <a
+                    href="https://polygonscan.com/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00">0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00</a>
+            </td>
+    </tr>
+        <tr>
+            <td>Polygon testnet (Mumbai)</td>
+            <td><a
+                    href="https://mumbai.polygonscan.com/address/0xbd9e01F6513E7C05f71Bf21d419a3bDF1EA9104b">0xbd9e01F6513E7C05f71Bf21d419a3bDF1EA9104b</a>
+                <a
+                    href="https://mumbai.polygonscan.com/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9">0x332A8191905fA8E6eeA7350B5799F225B8ed30a9</a>
+            </td>
+    </tr>
+    </table>
+    
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/ProxyReader.sol)
 
@@ -37,7 +122,39 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
 
-# include "templates/contracts/uns/TwitterValidationOperator.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+    <table>
+        <th>Network</th>
+        <th>Contract address</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a href="https://etherscan.io/address/0x2F659766E3D08561CA3408FbAba7C0749ab2c402">0x2F659766E3D08561CA3408FbAba7C0749ab2c402</a></td>
+        </tr>
+        <tr>
+            <td>Goerli</td>
+            <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        </tr>
+        <tr>
+            <td>Polygon mainnet</td>
+            <td><a href="https://polygonscan.com/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        </tr>
+        <tr>
+            <td>Polygon testnet (Mumbai)</td>
+            <td><a href="https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <th>Network</th>
+        <th>Legacy addresses</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a
+                    href="https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855">0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855</a>
+            </td>
+    </tr>
+    </table>
+    
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol)
 
@@ -49,7 +166,28 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 `MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
-# include "templates/contracts/uns/MintingManager.md"
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
+    <table>
+        <th>Network</th>
+        <th>Contract address</th>
+        <tr>
+            <td>Mainnet</td>
+            <td><a href="https://etherscan.io/address/0x2a7084870bB724175a3C96Da8FaA55128fa3E19D">0x2a7084870bB724175a3C96Da8FaA55128fa3E19D</a></td>
+        </tr>
+        <tr>
+            <td>Goerli</td>
+            <td><a href="https://goerli.etherscan.io/address/0x9ee42D3EB042e06F8Cd241890C4fA0d51e4DA345">0x9ee42D3EB042e06F8Cd241890C4fA0d51e4DA345</a></td>
+        </tr>
+        <tr>
+            <td>Polygon mainnet</td>
+            <td><a href="https://polygonscan.com/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26">0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26</a></td>
+        </tr>
+        <tr>
+            <td>Polygon testnet (Mumbai)</td>
+            <td><a href="https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f">0x428189346bb3CC52f031A1092fd47C919AC30A9f</a></td>
+        </tr>
+    </table>
+    
 
 **Source code:** [contracts/MintingManager.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/MintingManager.sol)
 
