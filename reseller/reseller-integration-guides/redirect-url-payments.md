@@ -9,119 +9,86 @@ The Redirect URL payment flow is the easiest payment process to implement for re
 
 Basically, in this case, the reseller acts like an "affiliate". Resellers redirect their users to the UD website where users can purchase domains and the reseller receives a commission (% of the sale).
 
-## Step 1: Configure `GET` Parameters with Wallet Address
+## Pre-requisites
+These following items are necessary to complete this Reseller payment integration:
+* A shared secret between Unstoppable Domains and the reseller (provided by Unstoppable Domains)
+* strictName (provided by Unstoppable Domains and may be different than `resellerName`)
 
-Implement the redirect URL with signed GET parameters filled with the user's wallet address. Redirect url should include `Resellers#strictName` and `domain name`.
+## Step 1: Auto-configure the User’s Paid Domains
 
-### Request Parameter
+A common friction for users brought in by a reseller is having to configure crypto addresses to a domain post-minting which the reseller already knows about. If a user could be given the option to auto-configure their crypto records during the minting step then that would greatly improve their overall experience.
 
-Since the request is **GET**, the parameters should be URL-encoded and passed as query parameters.
+This example shows what information to add to the URL so that a user can be given the option to prefill crypto records during the minting step. Here’s how a valid URL could end up looking:
 
-```typescript
-// Query parameters that should be included in the signature
-type MessageToSign = {
-  timestamp: number;
-	resellerName: string;
-  records: Record<string, string>;
-}
-
-// Query parameters that shoud NOT be included in signature
-type AdditionalParameters = {
-	ref: string;
-	searchTerm: string;
-}
+```shell
+https://unstoppabledomains.com/search?searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=foo&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=7038743d813122a9c13c233a24d273535085b67d9a92db5c86669f45ec14b5f2
 ```
-
-### Request URL
-
-The request URL is likely to change. In addition to the message parameters, the URL should contain `signature=<HMAC signature string>` parameter.
-
-```bash
-curl -X GET https://unstoppabledomains.com/search?ref=ffsdd4234&searchTerm=buyadomain.crypto&timestamp=1638960015&resellerName=blockchaincom&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=8ab46b082c1b256c2e92347c8d90c11c923bf7b0e802d13b53bcecb28d6b6269
-```
-
-:::info
-The searchTerm and ref parameters are NOT included in the signature.
+:::info Request URL
+In addition to the message parameters, the URL should contain `signature=<HMAC signature string>` parameter.
 :::
 
-:::danger
-The records parameter should contain URL encoded and minified JSON with domains records according to the standard outlined in the [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md).
-:::
+## Step 2: Query the Parameters
 
-## Step 2: Create HMAC Authorization
+Resellers can use as many query parameters as is necessary (e.g., specifying the search term when taking a user to the search page `/search?searchTerm=buyadomain.crypto`), but in order to prefill crypto records for a user there are a few **required** query parameters that must be used.
 
-The authorization is necessary to help prevent attacks that may substitute insecure URL parameters.
+### records (required)
 
-1. Client (wallet) or backend prepares **MessageToSign** and **AdditionalParameters** parameters
-2. Client (wallet) sends the **MessageToSign** and **AdditionalParameters** parameters to backend
-   * (Alternative) Backend prepares **MessageToSign** and **AdditionalParameters** parameters
-3. Backend validates correctness of **MessageToSign** parameters
-   * Check validity of records addresses
-   * Check validity of owner field
-4. Backend sorts **MessageToSign** parameters by keys in alphabetical order recursively (including _**records**_ field).
-   * For javascript, developers may use the deep-sort-object package
-5. Backend produces a HMAC-SHA256 signature of **MessageToSign** request parameters
-6. Client forms a URL using **MessageToSign** and **AdditionalParameters** parameters + _**signature**_
-7. Redirect URL can be opened and processed by UD backend
+The records parameter should contain URL encoded and minified JSON with domains records to prefill during the minting step according to the [Records Reference](../../getting-started/domain-registry-essentials/records-reference.md) standard.
 
-## Step 3: Verify the Message
-
-To verify the message, the server has to recreate the hmac using the same key:
-
-```typescript
-import sha256 from 'crypto-js/sha256'
-import hmacsha256 from 'crypto-js/hmac-sha256'
-import deepSortObject from 'deep-sort-object';
-
-type MessageToSign = {
-  timestamp: number;
-	resellerName: string;
-  records: Record<string, string>;
-}
-
-// backend forms the HMAC authorization
-function signMessage(message: MessageToSign): string {
-	const secret = 'pre-shared-secret'; // pre-shared secret
-  // to ensure hash consistency between parties
-  // message should be sorted in aplhabetical order
-  const sortedMessage = deepSortObject(message);
-	const hash = hmacsha256(JSON.stringify(sortedMessage), secret);
-	const signature = hash.toString();
-	return signature;
-}
-
-// verification on the reseller API side
-function verify(message: MessageToSign, expectedSignature: string): boolean {
-	const serverSecret = 'pre-shared-secret'; // the server has its own copy of the pre-shared secret
-  const sortedMessage = deepSortObject(message);
-	const serverHash = hmacsha256(JSON.stringify(sortedMessage), serverSecret);
-	const signature = serverHash.toString(); // perform the same hashing algorith
-	return expectedSignature === signature // true if hashes match, false otherwise
-}
-
-// Full verification process
-const message: MessageToSign = {...}; // some code to create the request message from user input
-const signature = signMessage(message); // happens on the reseller backend
-const verified = verify(message, signature); // happens on Unstoppable backend
-```
-
-:::info
-In JavaScript, hmac signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.
-:::
-
-### Example Request
-
-JSON Records Example:
-
+#### JSON Records Example
 ```json
 {"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh","crypto.USDT.version.ERC20.adress":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.DAI.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.EOS.address":"playuplandme"}
 ```
 
-JSON records example (URL encoded):
-
-```
+#### JSON Records Example URL Encoded
+```shell
 %7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D
 ```
+
+### strictName (required)
+
+Provided by Unstoppable Domains.
+
+### timestamp (required)
+
+A number representing the milliseconds elapsed since the UNIX epoch. There is an **8 hours** window from the time the signature was generated before UD considers the signature invalid.
+
+Example in JavaScript: `Date.now()`
+
+:::info Note
+UD is considering making this field optional in the near future. Please share your feedback on our [Discord channel](https://discord.com/invite/JWrEAAbp6R).
+:::
+
+### signature (required)
+
+The signature is generated by the reseller and is used by Unstoppable Domains to verify both the data integrity and authenticity of the message. The signature should be generated via the HMAC-SHA256 algorithm. This authorization is necessary to help prevent attacks that may substitute insecure URL parameters. 
+
+:::attention
+In JavaScript, HMAC signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.
+:::
+
+The message object to sign is:
+```typescript
+{
+	strictName,
+	timestamp,
+	records
+}
+```
+
+To ensure consistency, the message object should be **sorted recursively by its keys** before generating the HMAC hash. In Javascript, you can use a library like [deep-sort-object](https://www.npmjs.com/package/deep-sort-object).
+
+:::warning
+A shared secret between Unstoppable Domains and the reseller will be required to generate the signature. It will be provided by Unstoppable Domains.
+:::
+
+## Step 3: Test the Integration
+
+You can use Unstoppable Domains’ staging environment to test the redirect URI payments integration.
+
+1. Navigate to the staging environment with the paid domains flow query parameters appended to the URL.
+2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
+3. Proceed to mint the domain. If you are asked to verify records to prefill when minting the domain, then the redirect URI integration is working successfully.
 
 :::success Congratulations!
 You just configured your Reseller account to process payments using a Redirect URL.

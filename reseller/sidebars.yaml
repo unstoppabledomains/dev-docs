@@ -1,7 +1,8 @@
 pages:
   - separator: Become a UD Reseller
     separatorLine: true
-  - page: index.md
+  - label: Register as a Reseller
+    page: index.md
     separatorLine: true
   - group: Reseller Integration Guides
     expanded: false
