@@ -15,16 +15,18 @@ To begin the integration process for Login with Unstoppable, you will need to ob
 
 ## Step 2: Choose Your Integration Path
 
-There are several ways to integrate with Login with Unstoppable, which is detailed in the chart below.
+There are several ways to integrate with Login with Unstoppable, which are detailed in the chart below.
 
-| Short Description                          | Pathway or Features                                                                                                                   | Integration Guides                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, with popup feature                                                | [Login with Unstoppable Guide with Popup](../login-integration-guides/login-with-popup.md)       |
-| No Ethereum Provider without Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, no popup feature                                                  | [Login with Unstoppable Guide without Popup](../login-integration-guides/login-without-popup.md) |
-| Ethereum Provider with Web3 React Library  | custom @uauth/js integration, with ethereum provider, web3-react library                                                              | [Web3 React Guide](../login-integration-guides/web3-react-guide.md)                              |
-| Ethereum Provider with Web3 Modal Library  | custom @uauth/js integration, with ethereum provider, web3modal library                                                               | [Web3 Modal Guide](../login-integration-guides/web3-modal-guide.md)                              |
-| Ethereum Provider with BNC Onboard Library | custom @uauth/js integration, with ethereum provider, bnc-onboard library                                                             | [BNC Onboard Guide](../login-integration-guides/bnc-onboard-guide.md)                            |
-| Custom uAuth Node without Frontend UI      | custom @uauth/node integration for server-side applications, without frontend UI, DOM UI package recommended to help with frontend UI | [Node.js Server Guide](../login-integration-guides/node-js-server-guide.md)                      |
+| Integration Guide                                                             | Package            | Ethereum Provider | Callback | Front-end UI       |
+|-------------------------------------------------------------------------------|:------------------:|:-----------------:|:--------:|:------------------:|
+| [Login with Pop-up](../login-integration-guides/login-with-popup.md)          |`@uauth/js`          |     &#10060;     | &#10060; |  Generic, Pop-up   |
+| [Login without Pop-up](../login-integration-guides/login-without-popup.md)    |`@uauth/js`          |     &#10060;     | &#9989;  | Generic, no Pop-up |
+| [Web3 React](../login-integration-guides/web3-react-guide.md)                 |`@uauth/web3-react`  |     &#9989;      | &#10060; |     `web3-react`   |
+| [Web3 Modal](../login-integration-guides/web3-modal-guide.md)                 |`@uauth/web3-modal`  |     &#9989;      | &#10060; |     `web3-modal`   |
+| [BNC Onboard](../login-integration-guides/bnc-onboard-guide.md)               |`@uauth/bnc-onboard` |     &#9989;      | &#10060; |     `bnc-onboard`  |
+| [Node.js Server](../login-integration-guides/node-js-server-guide.md)         |`@uauth/node`        |     &#10060;     | &#9989;  |          None*     |
+
+**The `@uauth/dom-ui` package is recommended to help with front-end UI.*
 
 :::info
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
