@@ -12,7 +12,7 @@ Basically, in this case, the reseller acts like an "affiliate". Resellers redire
 ## Pre-requisites
 These following items are necessary to complete this Reseller payment integration:
 * A shared secret between Unstoppable Domains and the reseller (provided by Unstoppable Domains)
-* strictName (provided by Unstoppable Domains and may be different than `resellerName`)
+* strictName (provided by Unstoppable Domains)
 
 ## Step 1: Auto-configure the User’s Paid Domains
 
@@ -47,7 +47,7 @@ The records parameter should contain URL encoded and minified JSON with domains 
 
 ### strictName (required)
 
-Provided by Unstoppable Domains.
+The reseller `strictName` is provided by Unstoppable Domains. This parameter may be different than `resellerID` found in the reseller dashboard.
 
 ### timestamp (required)
 
