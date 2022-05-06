@@ -3,7 +3,7 @@ title: Resolve Unstoppable Domains with Direct Blockchain Calls
 description: This page reviews the process for resolving Unstoppable domains with direct blockchain calls. It has been updated to reflect changes on L2 Polygon network.
 ---
 
-# Resolve Unstoppable Domains with Direct Blockchain Calls
+# Resolve Unstoppable Domains With Direct Blockchain Calls
 
 :::info
 The `.zil` namespace is located on a separate chain and requires a [different process](resolve-zil-without-libraries.md).
@@ -14,7 +14,7 @@ In this tutorial, we will look at resolving Unstoppable Domains, using nothing b
 <figure>
 
 ![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
-	
+
 <figcaption>Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)</figcaption>
 </figure>
 
@@ -384,7 +384,7 @@ If we are successful, we should see the following on our page:
 <figure>
 
 ![Example of a successful resolution](/images/example-successful-resolution.png)
-	
+
 <figcaption>Example of a successful resolution</figcaption>
 </figure>
 

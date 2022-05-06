@@ -19,9 +19,13 @@ For language-specific, blockchain-agnostic libraries for resolving Unstoppable N
 
 For an Unstoppable-managed, blockchain-agnostic command-line interface for resolving all Unstoppable NFT domains, see [Resolution CLI](resolution-cli.md).
 
-## Resolve via Direct Blockchain Calls
+## Resolve With Direct Blockchain Calls
 
-For developers who want more direct, low level control over domain resolution, see [Resolve with Direct Blockchain Calls](./direct-blockchain-calls/bc-overview.md). This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
+For developers who want more direct, low level control over domain resolution, see [Resolve With Direct Blockchain Calls](./direct-blockchain-calls/bc-overview.md). This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
+
+## Resolve With the Matic SDK
+
+For developers interacting with the Matic network using the [Matic SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see [Resolve With the Matic SDK.](./resolve-with-maticjs.md).
 
 
 <embed src="/snippets/_discord.md" />
