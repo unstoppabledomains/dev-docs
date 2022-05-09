@@ -10,8 +10,6 @@ This guide covers two options for transferring from CNS Layer 1 to UNS Layer 1. 
 ## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
-* ​[CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) on Etherscan
-* ​[UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) on Etherscan
 * abiCoder.encode(['bool'], [false]) = ```0x0000000000000000000000000000000000000000000000000000000000000000```
 
 :::info 
@@ -19,13 +17,13 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 :::
 
 ## Step 1: Verify Contract Info for Each Registry
-* Open the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page 
-* Open the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page 
-* Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 
+* Open the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page 
+* Open the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page 
+* Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page).
 
 ## For CNS Layer 1
-* contract address should be: ```0x801452cFAC27e79a11c6b185986fdE09e8637589```
-* tracker should read: ```.crypto (UD)```
+* contract address should be: ```0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe```
+* token tracker should read: ```.crypto (UD)```
 
 <figure>
 
@@ -35,8 +33,8 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 </figure>
 
 ## For UNS Layer 1
-* contract address should be: ```0x070e83FCed225184E67c86302493ffFCDB953f71```
-* tracker info should read: ```Unstoppable Domains (UD)```
+* contract address should be: ```0x049aba7510f45BA5b64ea9E658E342F904DB358D```
+* token tracker should read: ```Unstoppable Domains (UD)```
 
 <figure>
 
@@ -47,7 +45,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 
 ## Step 2: Verify Domain Ownership on CNS L1
 * Retrieve the token ID of the domain you want to transfer.
-* On the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page, select **Contract -> Read Contract ->** and scroll down to complete the **OwnerOf** function.
+* On the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Read Contract ->** and scroll down to complete the **OwnerOf** function.
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.
 * Verify the **wallet address** returned by the OwnerOf query to ensure it is an exact match to your wallet address.
@@ -58,9 +56,9 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 <figure>
 
-![Animation showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.gif)
+![Image showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.png)
 	
-<figcaption>Animation showing how to use the ownerOf function</figcaption>
+<figcaption>Image showing how to use the ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Select a safeTransferFrom Option
@@ -94,7 +92,7 @@ Before writing the contract, you must select a ```safeTransferFrom``` Option. Bo
 </figure>
 
 ## Step 4: Rewrite the Domain to UNS L1 Registry
-* At the top of the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
+* At the top of the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
 * Then, select **Contract -> Write Contract** -> and scroll down to complete one of the ```safeTransferFrom``` options selected from [Step 3](#step-3-select-a-safetransferfrom-option).
 
 <figure>
@@ -125,7 +123,7 @@ If the ‘write’ button is grayed out, then scroll to the top of the page and 
 It is recommended that you double-check the transaction status by verifying domain ownership on the UNS Registry.
 :::
 
-* On the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page, select **Contract -> Read as Proxy** -> and scroll down to complete the **OwnerOf** function.
+* On the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page, select **Contract -> Read as Proxy** -> and scroll down to complete the **OwnerOf** function.
 
 <figure>
 

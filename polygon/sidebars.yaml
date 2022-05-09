@@ -2,6 +2,7 @@ pages:
   - separator: Migrate to Polygon
     separatorLine: true
   - page: index.md
+    label: Polygon L2 High Level Overview
     separatorLine: true
   - page: polygon-migration-guide.md
     label: Polygon Migration Guide
