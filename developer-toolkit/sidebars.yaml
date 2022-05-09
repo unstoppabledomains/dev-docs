@@ -33,6 +33,9 @@ pages:
   - label: Resolution CLI
     page: resolution-cli.md
     separatorLine: true
+  - label: Resolve Using Matic.js SDK
+    page: resolve-with-maticjs.md
+    separatorLine: true
   - label: Resolve Domains in Web Applications
     page: resolve-domains-in-web-applications.md
     separatorLine: true
@@ -59,7 +62,4 @@ pages:
         page: direct-blockchain-calls/resolve-zil-without-libraries.md
       - label: Resolve Domains with Ethereum Smart Contracts
         page: direct-blockchain-calls/resolve-eth-smart-contracts.md
-    separatorLine: true
-  - label: Resolve With the Matic SDK
-    page: resolve-with-maticjs.md
     separatorLine: true
