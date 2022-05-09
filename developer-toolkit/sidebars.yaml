@@ -47,7 +47,7 @@ pages:
       - label: Browser Resolution Test Domains
         page: resolve-domains-browser/test-domains.md
     separatorLine: true
-  - group: Resolve with Direct Blockchain Calls
+  - group: Resolve With Direct Blockchain Calls
     expanded: false
     selectFirstItemOnExpand: true
     pages:
@@ -59,4 +59,7 @@ pages:
         page: direct-blockchain-calls/resolve-zil-without-libraries.md
       - label: Resolve Domains with Ethereum Smart Contracts
         page: direct-blockchain-calls/resolve-eth-smart-contracts.md
+    separatorLine: true
+  - label: Resolve With the Matic SDK
+    page: resolve-with-maticjs.md
     separatorLine: true

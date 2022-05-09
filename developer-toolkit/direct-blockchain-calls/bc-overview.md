@@ -3,7 +3,7 @@ title: Resolve Domains with Direct Blockchain Calls | UD Developer Portal
 description: These guides demonstrate the process for resolving domains using direct blockchain calls and a few examples of how to use this to build applications.
 ---
 
-# Resolve Domains with Direct Blockchain Calls
+# Resolve Domains With Direct Blockchain Calls
 
 NFT domain names are domain names launched as smart contracts on public blockchains. What sets them apart from traditional domain names (like `.com`) is that NFT domains are stored by their owners in their wallet like cryptocurrency, and no third party can change or remove them.
 

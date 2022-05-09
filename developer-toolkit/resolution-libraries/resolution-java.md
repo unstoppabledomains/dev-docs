@@ -82,7 +82,7 @@ try {
 
 ## Use Case: Retrieve a Domain Record
 
-Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in Java.
 
 ```java
 String record = resolution.getRecord("ryan.crypto", "custom.record.value");

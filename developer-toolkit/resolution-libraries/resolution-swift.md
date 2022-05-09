@@ -101,18 +101,18 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 
 ## Use Case: Retrieve a Domain Record
 
-Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in Swift.
 
 ```swift
-// Lookup specific records
+// lookup specific records
 resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result in
   switch result {
-  case .success(let returnValue):
-    // Example custom record value
-    let recordValue = returnValue
-  case .failure(let error):
-    print("Expected record value, but got \(error)")
-}
+    case .success(let returnValue):
+      // Example custom record value
+      let recordValue = returnValue
+    case .failure(let error):
+      print("Expected record value, but got \(error)")
+    }
 }
 ```
 

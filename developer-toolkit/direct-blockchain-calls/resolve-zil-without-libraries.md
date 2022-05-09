@@ -3,7 +3,7 @@ title: Resolve .zil With Direct Blockchain Calls | UD Developer Portal
 description: This page reviews the process for resolving .zil domain names with direct blockchain calls.
 ---
 
-# Resolve .zil with Direct Blockchain Calls
+# Resolve .zil With Direct Blockchain Calls
 
 In this tutorial, we’ll build a simple app to resolve `.zil` domains — to read the information the domain holds.
 
@@ -16,7 +16,7 @@ Here’s the finished product:
 <figure>
 
 ![Dynamic GIF showing the steps to resolve a .zil domain](/images/zil-resolve-dynamic-image.gif)
-	
+
 <figcaption>Dynamic GIF showing the steps to resolve a .zil domain</figcaption>
 </figure>
 
@@ -370,7 +370,7 @@ We should see something like the following on successful resolution:
 <figure>
 
 ![Example of a successful domain resolution](/images/zil-successful-domain-resolution.png)
-	
+
 <figcaption>Example of a successful domain resolution</figcaption>
 </figure>
 

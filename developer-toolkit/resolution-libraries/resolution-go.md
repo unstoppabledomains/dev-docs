@@ -106,12 +106,12 @@ func main() {
 
 ## Use Case: Retrieve a Domain Record
 
-Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in Golang.
 
 ```go
 uns, _ := resolution.NewUnsBuilder().Build()
-  ethAddress, _ := uns.Addr("brad.crypto", "ETH")
-  fmt.Println("ETH address for brad.crypto is", ethAddress)
+ethAddress, _ := uns.Addr("brad.crypto", "ETH")
+fmt.Println("ETH address for brad.crypto is", ethAddress)
 ```
 
 <embed src="/snippets/_discord.md" />
