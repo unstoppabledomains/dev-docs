@@ -72,7 +72,7 @@ const Login: React.FC<RouteProps> = props => {
 
 ## Step 3: Create the Callback Page
 
-On the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will  the to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
+On the page registered as your `redirectUri`, you will call the `uauth.loginCallback()` function. The function should be called upon page load and will then be able to exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
 
 1. Parses authorization code found in current URI.
 2. Exchanges authorization code for access and id tokens.
