@@ -18,7 +18,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 * Open the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page
 * Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 
 
-## For CNS Layer 1
+### For CNS Layer 1
 * contract address should be: ```0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe```
 * tocken tracker should read: ```.crypto (UD)```
 
@@ -29,7 +29,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 <figcaption>CNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
-## For UNS Layer 1
+### For UNS Layer 1
 * contract address should be: ```0x049aba7510f45BA5b64ea9E658E342F904DB358D```
 * token tracker should read: ```Unstoppable Domains (UD)```
 
@@ -40,7 +40,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 <figcaption>UNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
-## For UNS Layer 2
+### For UNS Layer 2
 * contract address should be: ```0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f```
 * token tracker should read: ```Unstoppable Domains (UD)```
 
@@ -70,8 +70,8 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 </figure>
 
 ## Step 3: Rewrite the Domain to UNS Registry
-* At the top of the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Write as Proxy -> Connect to Web3** to connect your wallet.
-* Then, select **Contract -> Write as Proxy** -> and scroll down to complete the second ```safeTransferFrom``` function.
+* At the top of the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
+* Then, select **Contract -> Write Contract** -> and scroll down to complete the second ```safeTransferFrom``` function.
 
 <figure>
 
