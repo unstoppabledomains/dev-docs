@@ -8,15 +8,19 @@ description: This integration guide is intended for a custom @uauth/js integrati
 This is the basic installation guide for the `web3-react` framework and is best used for React-based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
 :::info
-For a completed example of a Web3 React application, you can [download the files](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/README.md) directly.
+For a completed example of a Web3 React application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/).
 :::
 
-## Step 1: Install the Required Libraries
+## Step 1: Install the Libraries
 
-Install with `yarn`.
+Install with `yarn` or `npm`.
 
-```shell
+```shell yarn
 yarn add @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector
+```
+
+```shell npm
+npm install --save @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector
 ```
 
 ## Step 2: Configure the `web3-react` Library
@@ -74,7 +78,7 @@ const uauth = new UAuthConnector({
 ```
 
 :::info
-Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to initialize the `UAuthConnector` with this setting: [`shouldLoginWithRedirect: true.`](web3-react-guide.md#shouldloginwithredirect)``
+Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `UAuthConnectorOptions` and [create a callback page](#shouldloginwithredirect).
 :::
 
 ## Step 3: Test the Usage
@@ -104,34 +108,11 @@ async function handleUAuthConnect() {
 
 ## Reference
 
-### **shouldLoginWithRedirect**
+### `UAuthConnector`
 
-If `shouldLoginWithRedirect` is `true`, then you must set up a callback page for the authorization server to redirect back to.
+The `UAuthConnector` class is the default export.
 
-```javascript
-import {uauth} from './connectors'
-
-// On page load...
-
-const {activate} = useWeb3React()
-
-useEffect(() => {
-  uauth
-    .callbackAndActivate({activate})
-    .then(() => {
-      // Redirect to success page
-    })
-    .catch(error => {
-      // Redirect to failure page
-    })
-}, [])
-```
-
-### **UAuthConnector Class**
-
-`UAuthConnector` is the default export.
-
-```javascript
+```typescript
 import type {
   UAuthConnectors,
   UAuthConnectorOptions,
@@ -166,4 +147,27 @@ export default class UAuthConnector extends AbstractConnector {
   // Gets the local UAuth instance.
   public get uauth(): UAuth
 }
+```
+
+### `shouldLoginWithRedirect`
+
+If `shouldLoginWithRedirect` is set to `true`, then you must set up a callback page for the authorization server to redirect back to.
+
+```javascript
+import {uauth} from './connectors'
+
+// On page load...
+
+const {activate} = useWeb3React()
+
+useEffect(() => {
+  uauth
+    .callbackAndActivate({activate})
+    .then(() => {
+      // Redirect to success page
+    })
+    .catch(error => {
+      // Redirect to failure page
+    })
+}, [])
 ```
