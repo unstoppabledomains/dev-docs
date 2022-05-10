@@ -10,20 +10,17 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 ## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
-* ​[CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) on Etherscan
-* ​[UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) on Etherscan
-* [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) on Polygonscan
 * abiCoder.encode(['bool'], [true]) = ```0x0000000000000000000000000000000000000000000000000000000000000001```
 
 ## Step 1: Verify Contract Info for Each Registry
-* Open the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page 
-* Open the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page 
-* Open the [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) page
+* Open the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page 
+* Open the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page 
+* Open the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page
 * Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 
 
 ## For CNS Layer 1
-* contract address should be: ```0x801452cFAC27e79a11c6b185986fdE09e8637589```
-* tracker should read: ```.crypto (UD)```
+* contract address should be: ```0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe```
+* tocken tracker should read: ```.crypto (UD)```
 
 <figure>
 
@@ -33,8 +30,8 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 </figure>
 
 ## For UNS Layer 1
-* contract address should be: ```0x070e83FCed225184E67c86302493ffFCDB953f71```
-* tracker info should read: ```Unstoppable Domains (UD)```
+* contract address should be: ```0x049aba7510f45BA5b64ea9E658E342F904DB358D```
+* token tracker should read: ```Unstoppable Domains (UD)```
 
 <figure>
 
@@ -44,8 +41,8 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 </figure>
 
 ## For UNS Layer 2
-* contract address should be: ```0x2a93C52E7B6E7054870758e15A1446E769EdfB93```
-* tracker info should read: ```Unstoppable Domains (UD)```
+* contract address should be: ```0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f```
+* token tracker should read: ```Unstoppable Domains (UD)```
 
 <figure>
 
@@ -56,7 +53,7 @@ This guide covers the process for depositing a domain from CNS Layer 1 to UNS La
 
 ## Step 2: Verify Domain Ownership on CNS L1
 * Retrieve the token ID of the domain you want to transfer.
-* On the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page, select **Contract -> Read Contract ->** and scroll down to complete the **OwnerOf** function.
+* On the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Read Contract ->** and scroll down to complete the **OwnerOf** function.
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.
 * Verify the **wallet address** returned by the OwnerOf query to ensure it is an exact match to your wallet address.
@@ -67,14 +64,14 @@ You will receive the owner’s wallet address in response to the ```ownerOfquery
 
 <figure>
 
-![Animation showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.gif)
+![Image showing how to use the ownerOf function](/images/cnsL1-to-unsL1_small.png)
 	
-<figcaption>Animation showing how to use the ownerOf function</figcaption>
+<figcaption>Image showing how to use the ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Rewrite the Domain to UNS Registry
-* At the top of the [CNS Layer 1 Contract](https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
-* Then, select **Contract -> Write Contract** -> and scroll down to complete the second ```safeTransferFrom``` function.
+* At the top of the [CNS Layer 1 Contract](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe) page, select **Contract -> Write as Proxy -> Connect to Web3** to connect your wallet.
+* Then, select **Contract -> Write as Proxy** -> and scroll down to complete the second ```safeTransferFrom``` function.
 
 <figure>
 
@@ -102,7 +99,7 @@ If the ‘write’ button is grayed out, then scroll to the top of the page and 
 It is recommended that you double-check the transaction status by verifying domain ownership on the UNS L1 Registry.
 :::
 
-* On the [UNS Layer 1 Contract](https://goerli.etherscan.io/address/0x070e83FCed225184E67c86302493ffFCDB953f71) page, select **Contract -> Read as Proxy** -> and scroll down to complete the **OwnerOf** function.
+* On the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page, select **Contract -> Read as Proxy** -> and scroll down to complete the **OwnerOf** function.
 
 <figure>
 
@@ -127,7 +124,7 @@ When tokens are transferred to UNS L2, they will appear as owned by a custody co
 :::
 
 ## Step 5: Verify Domain Bridging is Complete
-* On the [UNS Layer 2 Contract](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93) page, select **Contract -> Read as Proxy** -> and scroll down to complete the ```OwnerOf``` function.
+* On the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page, select **Contract -> Read as Proxy** -> and scroll down to complete the ```OwnerOf``` function.
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.
 * Verify the **wallet address** returned by the OwnerOf query to ensure it matches your wallet address. If your wallet address is showing, then it means that your domain was successfully deposited on UNS Layer 2.
