@@ -21,7 +21,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 * Open the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page 
 * Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page).
 
-## For CNS Layer 1
+### For CNS Layer 1
 * contract address should be: ```0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe```
 * token tracker should read: ```.crypto (UD)```
 
@@ -32,7 +32,7 @@ The ```abiCoder.encode``` pre-requisite is only needed for the second migration 
 <figcaption>CNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
-## For UNS Layer 1
+### For UNS Layer 1
 * contract address should be: ```0x049aba7510f45BA5b64ea9E658E342F904DB358D```
 * token tracker should read: ```Unstoppable Domains (UD)```
 
