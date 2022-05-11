@@ -21,10 +21,10 @@ The resolution plugin has the same API as the [Resolution Library](https://githu
 To run the snippet below you need to install the following packages:
 
 ```bash
-npm i @truffle/hdwallet-provider
-npm i @maticnetwork/maticjs
-npm i @maticnetwork/maticjs-web3
-npm i @unstoppabledomains/maticjs-resolution
+npm install @truffle/hdwallet-provider
+npm install @maticnetwork/maticjs
+npm install @maticnetwork/maticjs-web3
+npm install @unstoppabledomains/maticjs-resolution
 ```
 
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application.
