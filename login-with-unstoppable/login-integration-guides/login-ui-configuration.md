@@ -15,10 +15,10 @@ Authorizations are stored inside `localStorage`, so any identically configured U
 You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.
 
 :::info
-The @uauth.js code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
+The `@uauth/js` code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
 :::
 
-```javascript @uauth.js
+```javascript @uauth/js
 import UAuth from '@uauth/js'
 
 const uauth = new UAuth({

@@ -5,7 +5,7 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 # 10 Minute Guide: Login with Unstoppable without Popup
 
-This integration guide shows you how to add Login to Unstoppable to your application using JavaScript, without the popup feature. You will essentially be configuring the application to receive the authorization tokens and metadata by following the steps below.
+This integration guide shows you how to add Login to Unstoppable to your application using JavaScript, without the popup feature. You will configure the application to receive the authorization tokens and metadata by following the steps below.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
@@ -31,7 +31,7 @@ const uauth = new UAuth({
 ```
 
 :::danger
-The redirect URIs used in this `UAuth` class must be an exact match to the Redirect URIs entered in your [Login Client Configuration](login-client-configuration.md) guide for details).
+The redirect URIs used in this `UAuth` class must be an exact match to the Redirect URIs entered in your [Login Client Configuration](login-client-configuration.md).
 :::
 
 ## Step 2: Create a Login Button

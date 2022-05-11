@@ -8,17 +8,21 @@ description: This integration guide is intended for a custom @uauth/node integra
 This installation guide is for custom `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
 :::info
-For a completed example of a server integration using `@uauth/node` library, you can [download the files](https://github.com/unstoppabledomains/uauth/tree/main/examples/server) directly.
+For a completed example of a server integration using `@uauth/node` library, you can [download this example project](https://github.com/unstoppabledomains/uauth/tree/main/examples/server).
 :::
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ## Step 1: Install the @uauth/node Library
 
-Install with `yarn`.
+Install with `yarn` or `npm`.
 
-```shell
+```shell yarn
 yarn add @uauth/node @unstoppabledomains/resolution
+```
+
+```shell npm
+npm install --save @uauth/node @unstoppabledomains/resolution
 ```
 
 ## Step 2: Setup @uauth/node Library
@@ -130,11 +134,13 @@ The form must call the endpoint where the [`login` handler](node-js-server-guide
 
 ```javascript
 app.get('/', (_, res) => {
-  const indexPage = `<!DOCTYPE html><html><body>
-<form action="/login" method="POST">
-  <input name="domain" id="domain" />
-  <button type="submit">Login</button>
-</form></body></html>`
+  const indexPage = 
+  `<!DOCTYPE html><html><body>
+    <form action="/login" method="POST">
+      <input name="domain" id="domain" />
+    <button type="submit">Login</button>
+    </form>
+  </body></html>`
 
   return res.send(indexPage)
 })
@@ -168,11 +174,9 @@ You just implemented Login with Unstoppable.
 
 ## Reference
 
-### createLogin Method
+### `createLogin<Context>()`
 
-**`client.createLogin<Context>()`**
-
-This is the login factory method. Here is an example using `express-sessions`.
+This is the login factory method for the `Client` class. Here is an example using `express-sessions`.
 
 ```javascript
 interface ExpressSessionContext {
