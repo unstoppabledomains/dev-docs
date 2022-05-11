@@ -1,9 +1,13 @@
 ---
 title: BNC Onboard Guide for Login with Unstoppable | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using BNC Onboard library.
+description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the BNC Onboard library.
 ---
 
 # BNC Onboard Guide: Login with Unstoppable
+
+:::warning Web3-onboard
+This guide and the `@uauth/bnc-onboard` package uses the previous version of the Blocknative Onboard library, `bnc-onboard`. Support for v2.0.0 and later, `web3-onboard`, is coming soon.
+:::
 
 This is the basic installation guide for the `bnc-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/bnc-onboard).
 
