@@ -1,28 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
 
 export function DangerouslyFetchHTML(props) {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        if (!content) {
-            fetchContent(props.file);
-        }
+        if (!content) fetchContent(props.file);
     }, []);
 
     const fetchContent = async (resource) => {
-        let response = await fetch(resource);
-        if (!response.ok) {
-            return (
-                <div>Failed to fetch HTML file!</div>
-            )
-        }
-        let blob = await response.blob();
-        let text = await blob.text();
-        let fileHTML = new DOMParser().parseFromString(text, "text/html")
-        console.log(fileHTML);
-    
+        let text = await fetchFileText(resource);
         setContent(text);
     }
 
@@ -33,27 +22,28 @@ export function DangerouslyFetchHTML(props) {
 
 export function FetchMD(props) {
     const [content, setContent] = useState('');
+    const plugins = (props.supportHTML === 'true')? [rehypeRaw, rehypeSanitize] : [];
 
     useEffect( () => {
-        if (!content) {
-            fetchContent(props.file)
-        }
+        if (!content) fetchContent(props.file);
     }, []);
 
     const fetchContent = async (resource) => {
-        let response = await fetch(resource);
-        if (!response.ok) {
-            return (
-                <div>Failed to fetch MD file!</div>
-            )
-        }
-        let blob = await response.blob();
-        let text = await blob.text();
-
+        let text = await fetchFileText(resource);
         setContent(text);
     }
 
     return (
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={plugins}>{content}</ReactMarkdown>
     )
+}
+
+async function fetchFileText(resource) {
+    let response = await fetch(resource);
+    if (!response.ok)
+        "Failed to fetch file text";
+    let blob = await response.blob();
+    let text = await blob.text();
+
+    return text;
 }

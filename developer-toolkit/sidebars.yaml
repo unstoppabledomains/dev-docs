@@ -9,6 +9,8 @@ pages:
     pages:
       - label: UNS Smart Contracts
         page: smart-contracts/uns-smart-contracts.md
+      - label: UNS From Github
+        page: smart-contracts/uns-contracts-fetch.mdx
       - label: CNS Smart Contracts
         page: smart-contracts/cns-smart-contracts.md
     separatorLine: true

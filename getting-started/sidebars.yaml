@@ -39,6 +39,8 @@ pages:
         page: change-logs/resolution-swift-changelog.md
       - label: Resolution Go Library
         page: change-logs/resolution-go-changelog.md
+      - label: Unstoppable Naming Service
+        page: change-logs/uns-changelog.mdx
     separatorLine: true
   - page: glossary.md
     label: Glossary
