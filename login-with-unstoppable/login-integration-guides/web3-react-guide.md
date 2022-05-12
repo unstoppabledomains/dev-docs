@@ -61,7 +61,7 @@ const connectors: Record<string, AbstractConnector> = {
 export default connectors
 ```
 
-You can also construct a `UAuth` instance before hand and use that to create the connector.
+You can also construct a `UAuth` instance beforehand and use that to create the connector.
 
 ```javascript
 import UAuth from '@uauth/js'

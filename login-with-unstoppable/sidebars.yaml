@@ -38,6 +38,8 @@ pages:
         page: login-integration-guides/web3-react-guide.md
       - label: BNC Onboard
         page: login-integration-guides/bnc-onboard-guide.md
+      - label: Moralis
+        page: login-integration-guides/moralis-guide.md
       - label: Node.js Server
         page: login-integration-guides/node-js-server-guide.md
       - label: Login UI Configuration

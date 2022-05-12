@@ -7,12 +7,12 @@ description: This guide covers the process for configuring the Login UI to obtai
 
 ## Step 1: Access User Information
 
-Authorizations are stored inside `localStorage`, so any identically configured UAuth instance has access to the same users.
+Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
 
-* If you integrate with the [@uauth/web3-react](https://github.com/uauth/web3-react) or any other solution that uses [@uauth/js](https://github.com/uauth/js) under the hood ([@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard), [@uauth/web3modal](https://github.com/uauth/web3modal)), then you can access the user information by instantiating a separate [@uauth/js](https://github.com/uauth/js) class and calling the `user()` function.
-* There are also methods on [@uauth/web3-react](https://github.com/uauth/web3-react), [@uauth/web3modal](https://github.com/uauth/web3modal) & [@uauth/bnc-onboard](https://github.com/uauth/bnc-onboard) for getting a UAuth instance on the front end as well.
+* If you integrate with the `@uauth/web3-react` or any other solution that uses `@uauth/js` under the hood (`@uauth/bnc-onboard`, `@uauth/web3modal`, `@uauth/moralis`), then you can access the user information by instantiating a new `UAuth` object with the same client options and calling the `user()` method.
+* There are also methods on `@uauth/web3-react`, `@uauth/web3modal`, `@uauth/bnc-onboard`, & `@uauth/moralis` for getting a `UAuth` instance on the front-end.
 
-You can use the access methods below to obtain the user information. Retrieving this information will display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.
+You can use the access methods below to obtain the user information. This information will enable you to display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.
 
 :::info
 The `@uauth/js` code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
@@ -35,24 +35,19 @@ uauth.user()
   })
 ```
 
-```javascript BNC Onboard
-// Gets the local UAuth instance.
-public get uauth(): UAuth
-
+```javascript bnc-onboard
 const uauthBNCOnboard = new UAuthBNCOnboard()
 
 uauthBNCOnboard.uauth.user().then().catch()
 ```
 
-```javascript Web3 React
-public get uauth(): UAuth
-
+```javascript web3-react
 const uauthConnector = new UAuthConnector()
 
 uauthConnector.uauth.user().then().catch()
 ```
 
-```javascript Web3 Modal
+```javascript web3modal
 const uauthOptions = {
   clientID: "",
   redirectUri: ""
@@ -66,6 +61,13 @@ const web3ModalOptions = {
 const web3Modal = new Web3Modal(web3ModalOptions)
 
 new UAuth(uauthOptions).user().then().catch()
+```
+
+```javascript moralis
+const uauthMoralisConnector = new UAuthMoralisConnector()
+
+uauthMoralisConnector.uauth.user().then().catch()
+
 ```
 
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
