@@ -48,6 +48,8 @@ uauthConnector.uauth.user().then().catch()
 ```
 
 ```javascript web3modal
+import UAuth from '@uauth/js'
+
 const uauthOptions = {
   clientID: "",
   redirectUri: ""
