@@ -23,11 +23,8 @@ This example shows what information to add to the URL so that a user can be give
 ```shell
 https://unstoppabledomains.com/search?searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=foo&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=7038743d813122a9c13c233a24d273535085b67d9a92db5c86669f45ec14b5f2
 ```
-:::info Request URL
-In addition to the message parameters, the URL should contain `signature=<HMAC signature string>` parameter.
-:::
 
-## Step 2: Query the Parameters
+## Step 2: Setup Query Parameters
 
 Resellers can use as many query parameters as is necessary (e.g., specifying the search term when taking a user to the search page `/search?searchTerm=buyadomain.crypto`), but in order to prefill crypto records for a user there are a few **required** query parameters that must be used.
 
