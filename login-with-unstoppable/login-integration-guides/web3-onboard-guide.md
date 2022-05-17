@@ -49,7 +49,7 @@ const uauthBNCOptions = {
   },
 }
 
-const uauthModule = uauthBNCModule(uauthOptions)
+const uauthModule = uauthBNCModule(uauthBNCOptions)
 
 export const onboard = Onboard({
     wallets: [injected, uauthModule],
@@ -64,12 +64,13 @@ Because pop-ups are a more integration friendly approach, the `@uauth/web3-onboa
 
 ## Step 3: Test the Usage
 
+Once configured, the `web3-onboard` library can be used normally.
+
 ```typescript
 import onboard from './onboard'
 
 // On login button click...
 const connectedWallets = await onboard.connectWallet()
-console.log(connectedWallets);
 ```
 
 ## Step 4: Configure the Login UI

@@ -41,6 +41,17 @@ const uauthBNCOnboard = new UAuthBNCOnboard()
 uauthBNCOnboard.uauth.user().then().catch()
 ```
 
+```javascript web3-onboard
+import UAuth from '@uauth/js;
+
+const uauthOptions = {
+  clientID: "",
+  redirectUri: ""
+}
+
+new UAuth(uauthOptions).user().then().catch()
+```
+
 ```javascript web3-react
 const uauthConnector = new UAuthConnector()
 
