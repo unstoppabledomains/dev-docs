@@ -36,8 +36,6 @@ pages:
         page: login-integration-guides/web3-modal-guide.md
       - label: Web3 React
         page: login-integration-guides/web3-react-guide.md
-      - label: BNC Onboard
-        page: login-integration-guides/bnc-onboard-guide.md
       - label: Web3 Onboard
         page: login-integration-guides/web3-onboard-guide.md
       - label: Moralis

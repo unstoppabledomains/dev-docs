@@ -5,6 +5,10 @@ description: This integration guide is intended for a custom @uauth/js integrati
 
 # Web3 Onboard Guide: Login with Unstoppable
 
+:::warning BNC-onboard
+This guide and the `@uauth/web3-onboard` package uses `web3-onboard`, the latest version of the **Blocknative Onboard** library. For integrations using `bnc-onboard`, see the [BNC Onboard Guide](./bnc-onboard-guide.md).
+:::
+
 This is the basic installation guide for the `web3-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-onboard).
 
 :::info
