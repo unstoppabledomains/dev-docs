@@ -15,6 +15,10 @@ The Reseller API endpoints are as follows:
 * `POST` **Orders**: used to buy domains or mint free domains from Unstoppable Domains
 * `GET` **Order Number**: checks blockchain transaction status to see if domain is successfully “minted”
 
+:::info note
+The Reseller API is limited to 60 requests per hour. However, this is subject to change in the future.
+:::
+
 ## Upcoming Features
 
 This new API endpoint will be added in the next update:
