@@ -50,7 +50,7 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 ## Step 3: Use the Free Domain Claiming Endpoint
 
 * The free domain claiming endpoint allows the partner (Reseller ID) to mint free domains for a specified wallet address, if the Reseller is eligible to offer free domains.
-* The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint](../reseller-api-endpoints.md).
+* The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint.](../reseller-api-endpoints.md)
 
 :::info
 No additional configuration is necessary from the Reseller to begin using this endpoint once the free domains criteria has been established with UD administrators and added to the Reseller account.
@@ -61,7 +61,8 @@ No additional configuration is necessary from the Reseller to begin using this e
 The following considerations apply to the free domain minting:
 
 * The Reseller ID will be allowed to provide specified domain endings for free.
-* If the Reseller ID doesn't have allowance to provide free domains, then users will not be permitted to mint free domains.
+* The domain must be eight characters or more and contain at least a letter and number.
+* If the Reseller ID doesn't have an allowance to provide free domains, then users will not be permitted to mint free domains.
 * If the wallet or email already has a free domain, then a second free domain is not permitted.
 
 :::success Congratulations!
