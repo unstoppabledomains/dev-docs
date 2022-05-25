@@ -25,7 +25,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Consensus**: An algorithm that aims to make decentralized record-keeping more similar to a centralized database. It is a state of agreement among the nodes on a blockchain and is required to confirm new transactions and add new blocks to the blockchain.
 
-**Crypto Name Service (CNS)**: The name service that handles `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
+**Crypto Name Service (CNS)**: The name service handling `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on UNS which supports various domain endings besides `.crypto`.
 
 **Custody**: A service where a third party (like a brokerage) holds an asset on behalf of a client.
 
@@ -39,15 +39,15 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Domain Endings**: Also known as TLD or domain extension, is the last segment of a domain name or the part that follows immediately after the `dot` symbol, i.e., `.crypto`, `.nft`, `.x`.
 
-**Domain Name System (DNS)**: The hierarchical and decentralized naming system used to identify computers, services, and other resources reachable through the Internet or other Internet Protocol networks.
+**Domain Name System (DNS)**: The hierarchical and decentralized naming system used to identify computers, services, and other resources reachable through the internet or other Internet Protocol networks.
 
 **Domain Resolution**: The process of retrieving the records associated with an NFT domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
 ### E
 
-**ERC-20**: The Ethereum token standard, providing a standardized smart contract structure for fungible tokens.
+**ERC-20**: The Ethereum token standard providing a standardized smart contract structure for fungible tokens.
 
-**ERC-721**: An Ethereum token standard which allows for the formation of unique tokens, otherwise known as NFTs or non-fungible tokens. Unlike the ERC-20 standard, ERC-721 tokens have specific properties that allow each to be uniquely identified and valued independently of one another.
+**ERC-721**: An Ethereum token standard that allows for the formation of unique tokens, otherwise known as NFTs or non-fungible tokens. Unlike the ERC-20 standard, ERC-721 tokens have specific properties that allow each to be uniquely identified and valued independently of one another.
 
 **Ethereum**: A public blockchain serving as the foundation for decentralized applications. Ethereum is a turing complete language, allowing users to write and deploy complex, self-executing smart contracts that live on the blockchain.
 
@@ -105,13 +105,15 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### P
 
-**Peer-to-Peer (P2P)**: A distributed network of two or more computers that interact directly without a central server or entity.
+**Payback**: A payment method that allows resellers to mint paid domains for customers and process the payment on their application without involving Unstoppable Domains.
+
+**Peer-to-Peer (P2P)**: A distributed network of two or more computers interacting directly without a central server or entity.
 
 **Private Key**: An alphanumeric passcode required to withdraw assets from a blockchain wallet and authorize digital transactions. Because these private keys are long and difficult to memorize, wallets will associate them with a seed or recovery phrase that is easier to remember.
 
 **Proof of Stake (PoS)**: A consensus mechanism that requires nodes, called validators, to stake a set amount of cryptocurrency on the blockchain to verify transactions and mint blocks. If a validator approves fraudulent transactions, the network will slash a portion of its stake.
 
-**Proof of Work (PoW)**: A consensus mechanism that requires miners to complete complex mathematical puzzles to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
+**Proof of Work (PoW)**: A consensus mechanism requiring miners to complete complex mathematical puzzles to verify transactions and mint blocks. When a miner correctly solves a puzzle, they gain access to mint the next block and receive the corresponding block reward and transaction fees.
 
 **Protocol**: The foundational software layer of a program. A protocol has become a general term used to refer to both layer 1 blockchain networks and the layer 2 applications built on top of them — Bitcoin, Ethereum, Uniswap, and Lightning Network can all be considered protocols.
 
@@ -137,7 +139,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Smart Contract**: A self-executing code deployed on a blockchain allows transactions to be made without an intermediary figure and trust between the parties involved.
 
-**Solidity**: The native programming language of Ethereum, is mainly used to write smart contracts.
+**Solidity**: The native programming language of Ethereum, it is mainly used to write smart contracts.
 
 ### T
 
@@ -149,9 +151,9 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **UD**: Short for Unstoppable Domains.
 
-**User Interface (UI)**: This is how the user and a computer system interact, particularly the use of input devices and software.
+**User Interface (UI)**: This is how the user and a computer system interact, particularly input devices and software.
 
-**Unstoppable Name Service (UNS)**: The name service that handles the minting and management of NFT domains on the Ethereum (L1) and Polygon (L2) blockchains.
+**Unstoppable Name Service (UNS)**: The name service handling the minting and management of NFT domains on the Ethereum (L1) and Polygon (L2) blockchains.
 
 ### W
 
@@ -159,12 +161,12 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Wallet Address**: Also known as a public key, is an alphanumeric code that serves as the address for a blockchain wallet, similar to a bank account number. Other users can send digital assets to your wallet via your public key, but only you can access your wallet’s contents by using the corresponding private key.
 
-**Web1**: the first iteration of the web, commonly referred to as the `read-only web`. Web1 was characterized by static websites that displayed information. There was little to no user interaction or user-generated content.
+**Web1**: The first web iteration, commonly referred to as the `read-only web`. Web1 was characterized by static websites that displayed information. There was little to no user interaction or user-generated content.
 
-**Web2**: starting in the 90s, the `read-write web` is characterized by user-generated content and improved user interfaces. This led to blogs, social media platforms, and sites like Wikipedia and YouTube. Web2 emphasized user experience and interoperability between different applications and websites, giving us the vast network of connected websites and resources we are familiar with today.
+**Web2**: The `read-write web` is characterized by user-generated content and improved user interfaces. This led to blogs, social media platforms, and sites like Wikipedia and YouTube. Web2 emphasized user experience and interoperability between different applications and websites, giving us the vast network of connected websites and resources we are familiar with today.
 
 **Web3**: the next iteration of the web being ushered in as we speak, which leverages blockchain technology, open-source applications, and the decentralization of data and information. Web3 aims to remove control of the web from monopolistic tech companies and return ownership of data and content to its users. Also referred to as the `read-write-trust web`.
 
 ### Z
 
-**Zilliqa Name Service (ZNS)**: The name service that handles `.zil` domains on the Zilliqa mainnet.
+**Zilliqa Name Service (ZNS)**: The name service handling `.zil` domains on the Zilliqa mainnet.
