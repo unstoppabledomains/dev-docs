@@ -1025,7 +1025,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.17.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.8.tgz#3e56e4aff81befa55ac3ac6a0967349fd1c5bca2"
   integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
@@ -1560,17 +1560,17 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@1.1.0-beta.92":
-  version "1.1.0-beta.92"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.92.tgz#68253652939e9bb2d4e0240c9ecbd11fcc764ad2"
-  integrity sha512-gXkE06QNOX8ehKBUmnKAxCEPDKJZ6JGnO5WJevkP8BW1dSXCyfJHe6iPqOBELLciKoTK13Ezw4sX1/L1lXt52A==
+"@redocly/developer-portal@1.1.0-beta.96":
+  version "1.1.0-beta.96"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.96.tgz#5e2d2621aec558a67ea5c0bce6147c93660e88b4"
+  integrity sha512-BX9SjsVIGEJMtaXEf8FqyXh4V2LSq5JWCOkhK5mrFBVWMwGubAz99M7o6ad4p5B/c0laLk1Jh7RHjqEju6Cqjw==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
     "@redocly/gatsby-plugin-manifest" "3.3.2"
     "@redocly/gatsby-remark-images" "4.2.0"
-    "@redocly/openapi-core" "1.0.0-beta.94"
-    "@redocly/reference-docs" "2.13.7"
+    "@redocly/openapi-core" "1.0.0-beta.98"
+    "@redocly/reference-docs" "2.19.1"
     babel-plugin-react-html-attrs "^3.0.5"
     babel-plugin-styled-components "^1.12.0"
     buffer "^6.0.3"
@@ -1713,10 +1713,10 @@
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-"@redocly/openapi-core@1.0.0-beta.88":
-  version "1.0.0-beta.88"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.88.tgz#acce3d58451fea3964b448b169c0ef7fbe56f72a"
-  integrity sha512-E9vkLvumIkzII0ydDFGr6uYbZgI9rHMxBveefzM51OUvobvifryXb6VcnQ1T0P8VoHRiYwpgiWlmZeDsNAdZdg==
+"@redocly/openapi-core@1.0.0-beta.97":
+  version "1.0.0-beta.97"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.97.tgz#324ed46e9a9aee4c615be22ee348c53f7bb5f180"
+  integrity sha512-3WW9/6flosJuRtU3GI0Vw39OYFZqqXMDCp5TLa3EjXOb7Nm6AZTWRb3Y+I/+UdNJ/NTszVJkQczoa1t476ekiQ==
   dependencies:
     "@redocly/ajv" "^8.6.4"
     "@types/node" "^14.11.8"
@@ -1724,15 +1724,15 @@
     js-levenshtein "^1.1.6"
     js-yaml "^4.1.0"
     lodash.isequal "^4.5.0"
-    minimatch "^3.0.4"
+    minimatch "^5.0.1"
     node-fetch "^2.6.1"
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/openapi-core@1.0.0-beta.94":
-  version "1.0.0-beta.94"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.94.tgz#7fc3a34aea8b0ee12ae2de26bedf90a4cf717366"
-  integrity sha512-xTklcobv+51bQVkUOpUiNY0GztL+0u3yGsy2BtldaHpcnNGMu3lu/utsoOHkiNTpgVEGyEWVZzBtF6Sz5v/Fkg==
+"@redocly/openapi-core@1.0.0-beta.98":
+  version "1.0.0-beta.98"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.98.tgz#3dfdd9b84e16b4c2c686914dd1ec53ef9135b1bd"
+  integrity sha512-lrWCpyaxMYaw0x4F6zP2FosGJGAogrFBz3VNDD3OsaSlC3iQZYIOBI2UNBqVtdnDZSzfTLIdiQtEoXfKzlD2qw==
   dependencies:
     "@redocly/ajv" "^8.6.4"
     "@types/node" "^14.11.8"
@@ -1740,17 +1740,17 @@
     js-levenshtein "^1.1.6"
     js-yaml "^4.1.0"
     lodash.isequal "^4.5.0"
-    minimatch "^3.0.4"
+    minimatch "^5.0.1"
     node-fetch "^2.6.1"
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/reference-docs@2.13.7":
-  version "2.13.7"
-  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.13.7.tgz#f10a1ee643ea92e75580adaeecc4ceed499e3679"
-  integrity sha512-TDhoaXotYPvzwZS241+Sx8lZSVZmrjylEMaW5enpwIo+f/RdbaMr/oMP7Ca9LMo1jj7HsVVD/6hlEGOEDsoGUQ==
+"@redocly/reference-docs@2.19.1":
+  version "2.19.1"
+  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.19.1.tgz#761d49895c95ac1ef86f358be367b1da63b91350"
+  integrity sha512-MA5I2Jx6UkjNzhjqNRCmSyPkobs5S0UMMrJOu4AS44nVobWbeqjqFbRehvrvNgX4nk9qPX7mmWx8Dat3EGtz2Q==
   dependencies:
-    "@redocly/openapi-core" "1.0.0-beta.88"
+    "@redocly/openapi-core" "1.0.0-beta.97"
     "@redocly/vscode-json-languageservice" "3.4.9"
     "@wojtekmaj/enzyme-adapter-react-17" "^0.6.2"
     classnames "^2.2.6"
@@ -1773,7 +1773,7 @@
     node-libs-browser "^2.2.0"
     openapi-sampler "^1.2.3"
     path-browserify "^1.0.1"
-    perfect-scrollbar "^1.4.0"
+    perfect-scrollbar "^1.5.5"
     polished "^3.6.5"
     prismjs "^1.22.0"
     prop-types "^15.7.2"
@@ -11340,7 +11340,7 @@ pend@~1.2.0:
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha1-elfrVQpng/kRUzH89GY9XI4AelA=
 
-perfect-scrollbar@^1.4.0:
+perfect-scrollbar@^1.5.5:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.5.5.tgz#41a211a2fb52a7191eff301432134ea47052b27f"
   integrity sha512-dzalfutyP3e/FOpdlhVryN4AJ5XDVauVWxybSkLZmakFE2sS3y3pc4JnSprw8tGmHvkaG5Edr5T7LBTZ+WWU2g==
@@ -11446,14 +11446,7 @@ polished@^3.6.5:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-polished@^4.1.2:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-4.1.4.tgz#640293ba834109614961a700fdacbb6599fb12d0"
-  integrity sha512-Nq5Mbza+Auo7N3sQb1QMFaQiDO+4UexWuSGR7Cjb4Sw11SZIJcrrFtiZ+L0jT9MBsUsxDboHVASbCLbE1rnECg==
-  dependencies:
-    "@babel/runtime" "^7.16.7"
-
-polished@^4.2.2:
+polished@^4.1.2, polished@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
   integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
