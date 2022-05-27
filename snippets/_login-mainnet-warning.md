@@ -1,3 +1,3 @@
 :::warning
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
+**Important:** Login with Unstoppable integrations will only authenticate user domains that have been minted on the Polygon or Ethereum Mainnets. Domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
 :::
