@@ -23,4 +23,4 @@ You can find additional working integrations on UD's Applications List, filtered
 
 ## How do I get started?
 
-If you want to resell domains, you must first [Register as a Reseller](../reseller/index.md) with Unstoppable Domains and [configure a payment method](../reseller/reseller-integration-guides/reseller-pathways.md) for your reseller account. You can process payments natively using Stripe or Coinbase, or you can use [UD's Redirect URL payment flow](../reseller/reseller-integration-guides/redirect-url-payments.md) where we process the payments on your behalf. See the [Reseller API](/openapi/reference/) for detailed parameters.
+If you want to resell domains, you must first [Register as a Reseller](../reseller/index.md) with Unstoppable Domains and [configure a payment method](../reseller/reseller-pathways.md) for your reseller account. You can process payments natively using Stripe or Coinbase, or you can use [UD's Redirect URL payment flow](../reseller/reseller-integration-guides/redirect-url-payments.md) where we process the payments on your behalf. See the [Reseller API](/openapi/reference/) for detailed parameters.

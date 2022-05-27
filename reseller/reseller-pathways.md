@@ -3,7 +3,7 @@ title: Reseller Integration Guides | Unstoppable Domains Developer Portal
 description: This page reviews the integration guides for UD's Reseller API feature. This feature works for Polygon domains.
 ---
 
-# Reseller Integration Guides
+# Getting Started with Integrating UD
 
 UD's Reseller API is a versatile feature with several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option.
 
@@ -32,9 +32,9 @@ There are several ways to integrate with Unstoppable's Reseller feature, which i
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](mint-free-domains.md)       |
-| Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](stripe-payments.md)             |
-| Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments.md)         |
-| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments.md) |
+| Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](reseller-integration-guides/mint-free-domains.md)       |
+| Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](reseller-integration-guides/stripe-payments.md)             |
+| Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](reseller-integration-guides/coinbase-payments.md)         |
+| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](reseller-integration-guides/redirect-url-payments.md) |
 
 <embed src="/snippets/_discord.md" />

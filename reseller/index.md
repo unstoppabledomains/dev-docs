@@ -48,7 +48,7 @@ To avoid missing the email about your reseller application status, please update
 
 ## Step 3: Configure Payment Information
 
-The Reseller API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Reseller Integration Guides](reseller-integration-guides/reseller-pathways.md)** to integrate one or more payment methods for your reseller account.
+The Reseller API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Reseller Integration Guides](reseller-pathways.md)** to integrate one or more payment methods for your reseller account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Reseller.

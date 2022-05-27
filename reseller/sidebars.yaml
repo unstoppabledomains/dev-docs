@@ -4,11 +4,12 @@ pages:
   - label: Register as a Reseller
     page: index.md
     separatorLine: true
+  - label: Getting Started with Integrating UD
+    page: reseller-pathways.md
+    separatorLine: true
   - group: Reseller Integration Guides
     expanded: false
     pages:
-      - label: Choose Your Integration Pathway
-        page: reseller-integration-guides/reseller-pathways.md
       - page: reseller-integration-guides/mint-free-domains.md
         label: Free Domain Minting Guide
       - label: Stripe Payments Guide

@@ -71,6 +71,7 @@ The request body contains information about your order and must be in JSON forma
       "ownerAddress": string, // wallet address to mint the domain to
       "email": string, // UD email address to link the domain to
       "resolution": object // predefined records to mint the domain with
+      "resellerIdentityKey": string // domain reservation ID
     }
   ]
 }
