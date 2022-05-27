@@ -131,6 +131,8 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Resolver**: The Crypto Name Service (CNS) smart contract that is responsible for storing, updating, and resolving domain records.
 
+**Reverse Resolution**: Reverse resolution is a feature that enables applications that integrate with Unstoppable Domains to show domain names where they would typically only show addresses.
+
 **Rollup**: A scaling solution that aims to improve transaction throughput and decrease fees by batching multiple online transactions and then submitting them to the main chain as a single transaction.
 
 ### S
