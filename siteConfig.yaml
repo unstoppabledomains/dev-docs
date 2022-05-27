@@ -32,7 +32,7 @@ scripts:
   - https://embed.typeform.com/next/embed.js
 #  - ./static/intercom.js
 editPage:
-  baseUrl: https://github.com/unstoppabledomains/staging-docs/blob/main/
+  baseUrl: https://github.com/unstoppabledomains/dev-docs/blob/main/
   text: Edit this page
   icon: static/images/github-mark-32px.png
 nav:
