@@ -1,13 +1,13 @@
 ---
 title: Free Domain Minting Guide | Unstoppable Domains Developer Portal
-description: This guide covers the process for configuring the Reseller account to mint free domains.
+description: This guide shows how to mint free domains with your Reseller account.
 ---
 
-# Free Domain Minting Guide
+## Overview
 
-Unstoppable Domains offers free domain minting to Resellers. The free domain minting criteria will vary based on the Reseller, but when enabled, it allows Resellers to use the following [Reseller API endpoints](../reseller-api-endpoints.md): free domain suggestions, free domain claiming, and reserve free domain.
+Unstoppable Domains offers free domain minting to Resellers based on specified criteria. Authorized Resellers can use the following [API endpoints](../reseller-api-endpoints.md): `Free Domains Suggestions`, `Reserve Free Domains`, and `Free Domain Claiming`.
 
-The following diagram shows the general process that takes place between the Reseller and Unstoppable Domains during the free domain minting process.
+The following diagram shows the general process between the Reseller and Unstoppable Domains during the free domain minting process.
 
 <figure>
 
@@ -16,25 +16,24 @@ The following diagram shows the general process that takes place between the Res
 <figcaption>Success flow for minting free domains with UD</figcaption>
 </figure>
 
-## Step 1: Retrieve the Secret Key for Authentication
+## Step 1: Retrieve Your Reseller ID and Secret API Token
 
-* A secret key is required when a domain is purchased using the **Payback** or **Free** payment type.
-* The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email [bd@unstoppabledomains.com](mailto:bd@unstoppabledomains.com) to request the secret key.
+Navigate to the reseller dashboard to retrieve your `ResellerID` and `Secret API Token`. The API uses the `ResellerID` to identify reseller requests, and the `Secret API Token` is required for authentication when minting free domains.
 
 <figure>
 
-![Location of Reseller API Token when enabled in the Reseller Dashboard](/images/reseller-api-secret.png '#width=80%;')
+![Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard](/images/reseller-id-api-secret.png '#width=80%;')
 
-<figcaption>Location of Reseller API Token when enabled in the Reseller Dashboard</figcaption>
+<figcaption>Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard</figcaption>
 </figure>
 
 ## Step 2: Setup Criteria for Free Domains
 
-* Resellers work with UD administration to establish the "allowed free TLDs" and "allowed free tiers" for the reseller account. **The free domain criteria will vary based on the Reseller.**
-* This list of "allowed free TLDs" and "allowed free tiers" is then assigned to the resellers account.
-* Resellers can only mint a free domain if it matches the tier and has an appropriate domain ending.
+Resellers work with the Unstoppable Domains team to establish the "allowed free TLDs" and "allowed free tiers" criteria for their account.
 
-The table below shows how the pricing tiers are structured at UD. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
+Then, the "allowed free TLDs" and "allowed free tiers" list is assigned to the Reseller's account, and they can only mint a free domain if it matches the tier and has an appropriate domain ending.
+
+The table below shows how the pricing tiers are structured at Unstoppable Domains. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
 
 <figure>
 
@@ -43,28 +42,176 @@ The table below shows how the pricing tiers are structured at UD. Most free doma
 <figcaption>Pricing tiers for UD domains</figcaption>
 </figure>
 
-:::info info
+:::info
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.
 :::
 
-## Step 3: Use the Free Domain Claiming Endpoint
+## Step 3: Prepare Your Authorization Headers
 
-* The free domain claiming endpoint allows the partner (Reseller ID) to mint free domains for a specified wallet address, if the Reseller is eligible to offer free domains.
-* The free domain claiming endpoint is implemented as an additional payment type within the [orders API endpoint.](../reseller-api-endpoints.md)
+The Reseller API uses bearer tokens to authorize requests with the `Secret API Token` from the reseller dashboard.
+
+| Field Name | Value |
+| - | - |
+| Security Scheme Type | HTTP |
+| HTTP Authorization Scheme | bearer |
+| Bearer format | a 32 characters string |
+
+## Step 4: Prepare Your Request Body
+
+The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
+
+```javascript
+{
+  "payment": {
+    "method": "free"
+  },
+  "domains": [
+    {
+      "name": string, // domain name you are minting
+      "ownerAddress": string, // wallet address to mint the domain to
+      "email": string, // UD email address to link the domain to
+      "resolution": object // predefined records to mint the domain with
+    }
+  ]
+}
+```
+
+* `payment`: A key-value dictionary with payment information about the order:
+    * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
+* `domains`: (array) An array with information about the domains you want to purchase:
+    * `name`: The domain name you want to purchase. This parameter is required for every order.
+    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
+    * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional and requires the `ownerAddress` parameter to be provided.
+    * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain you’re minting.
 
 :::info
-No additional configuration is necessary from the Reseller to begin using this endpoint once the free domains criteria has been established with UD administrators and added to the Reseller account.
+You need to provide either the` ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
+:::
+
+## Step 5: Use the Orders Endpoint
+Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
+
+Staging Environment:
+
+```
+https://staging.unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders
+```
+
+Production Environment:
+
+```
+https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders
+```
+
+:::info
+The `ResellerID` path parameter is the same one you retrieved from your dashboard in Step 1.
+:::
+
+## Free Domain Minting Example
+
+Here is an example request to mint a free domain with the following details:
+
+| Field Name | Value |
+| - | - |
+| Domain Name | reseller-test-67687986466875.wallet |
+| Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
+| Customer Email |staging-test@unstoppabledomains.com |
+| Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
+
+### Request
+
+```bash
+curl --location --request POST 'https://staging.unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/' \
+--header 'Authorization: Bearer {Secret API Token}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "payment": {
+    "method": "free"
+  },
+  "domains": [
+    {
+      "name": "reseller-test-67687986466875.wallet",
+      "ownerAddress": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
+      "email": "staging-test@unstoppabledomains.com",
+      "resolution": {
+          "crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
+          "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+      }
+    }
+  ]
+}'
+```
+
+### Response
+
+```bash
+{
+    "orderNumber": "78023",
+    "total": 0,
+    "payment": {
+        "method": "free"
+    },
+    "items": [
+        {
+            "domain": {
+                "id": 966210,
+                "name": "reseller-test-67687986466875.wallet",
+                "ownerAddress": null,
+                "resolver": null,
+                "resolution": {},
+                "blockchain": "MATIC",
+                "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
+                "networkId": 80001,
+                "freeToClaim": true,
+                "node": "0xeb55b00b50af99d760b002c6d855532658c332d059dcd69eb167fec5ec97d0fa"
+            },
+            "mintingTransaction": {
+                "id": 44958,
+                "type": "MaticTx",
+                "operation": "MintDomain",
+                "statusGroup": "Pending",
+                "hash": null,
+                "blockchain": "MATIC",
+                "blockExplorerUrl": null
+            }
+        }
+    ]
+}
+```
+
+## Reserving a Free Domain
+
+You can reserve a free domain and mint it at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Reseller that reserved it.
+
+To reserve a domain, you need to request the Reserve Free Domains endpoint with the following details:
+
+* Your `resellerID`
+* The `domainName` to reserve
+* A unique identifier for your reservation
+
+### Domain Reservation Example
+
+```
+curl --location -g --request POST '/{resellerID}/domains/{domainName}/reserve' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "resellerIdentityKey": "{domainReservationID}"
+}'
+```
+
+:::info
+You can only reserve one domain per `resellerIdentityKey`, and the reservation time is 168 hours (7 days).
 :::
 
 ## Considerations
 
-The following considerations apply to the free domain minting:
-
+* The following considerations apply to minting free domains:
 * The Reseller ID will be allowed to provide specified domain endings for free.
+* If the Reseller ID doesn't have an allowance to provide free domains, then they will not be permitted to mint free domains.
 * The domain must be eight characters or more and contain at least a letter and number.
-* If the Reseller ID doesn't have an allowance to provide free domains, then users will not be permitted to mint free domains.
-* If the wallet or email already has a free domain, then a second free domain is not permitted.
+* If a wallet or email already has a free domain, then a second free domain is not permitted.
 
-:::success Congratulations!
-You just configured your Reseller account to mint free domains.
+:::success congratulations!
+You have successfully minted a free domain with your Reseller account.
 :::
