@@ -9,7 +9,7 @@ Reverse resolution is a feature that enables applications that integrate with Un
 
 Unlike standard domain resolution, where a domain is provided to an application and returns a wallet address, reverse resolution allows applications to take a wallet address and return the domain name linked to them. Reverse resolution is a user experience upgrade that makes your wallet addresses recognizable on the applications you use, thereby promoting the use of NFT domains for user identity.
 
-As a domain owner, you can now see your domain names instead of wallet addresses in any application which has integrated reverse resolution.
+As a domain owner, you can now see your domain names instead of wallet addresses in any integrated reverse resolution application.
 
 <figure>
 
@@ -19,3 +19,5 @@ As a domain owner, you can now see your domain names instead of wallet addresses
 </figure>
 
 This works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected.
+
+<embed src="/snippets/_discord.md" />
