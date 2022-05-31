@@ -93,10 +93,10 @@ You need to provide either the` ownerAddress` or `email` parameter in every orde
 ## Step 5: Use the Orders Endpoint
 Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
 
-Staging Environment:
+Sandbox Environment:
 
 ```
-https://staging.unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders
+https://www.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders
 ```
 
 Production Environment:
@@ -117,13 +117,13 @@ Here is an example request to mint a free domain with the following details:
 | - | - |
 | Domain Name | reseller-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
-| Customer Email |staging-test@unstoppabledomains.com |
+| Customer Email |sandbox-test@unstoppabledomains.com |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
 
 ### Request
 
 ```bash
-curl --location --request POST 'https://staging.unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/' \
+curl --location --request POST 'https://www.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/' \
 --header 'Authorization: Bearer {Secret API Token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -134,7 +134,7 @@ curl --location --request POST 'https://staging.unstoppabledomains.com/api/v2/re
     {
       "name": "reseller-test-67687986466875.wallet",
       "ownerAddress": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
-      "email": "staging-test@unstoppabledomains.com",
+      "email": "sandbox-test@unstoppabledomains.com",
       "resolution": {
           "crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
           "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
