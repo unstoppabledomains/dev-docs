@@ -3,6 +3,8 @@ title: Login UI Configuration Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Login UI to obtain user information and display the authenticated user's domain name instead of address.
 ---
 
+import ColorSample from '../../components/color-sample.jsx'
+
 # Login UI Configuration Guide
 
 ## Step 1: Access User Information
@@ -86,10 +88,8 @@ uauthMoralisConnector.uauth.user().then().catch()
 Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
 <figure>
-
-![UI Example for displaying authenticated user](/images/third-UI-example-login-domains.png '#width=50%')
-
-<figcaption>UI Example for displaying authenticated user</figcaption>
+<img src="/images/third-UI-example-login-domains.png" alt="Showing an authenticated user's domain" width="50%"/>
+<figcaption>Showing an authenticated user's domain</figcaption>
 </figure>
 
 ## Step 2: Verify the Login Flow and Scopes
@@ -129,15 +129,18 @@ The modals are further described below:
 * **Modal 2.** A modal is displayed which allows the user to begin the authorization process by entering their Unstoppable domain address.
 * **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes). User must sign the transaction using their wallet address in order to share their information with the dApp.
 
-## Step 3: Download UD Buttons (Node JS Only)
+## Step 3: Create Login Buttons
 
-For Node.js integrations, the UI or modals being built will require official UD buttons. The table below provides Login with Unstoppable button status and states, which can be downloaded for use in custom Node.js integrations.
+Your integration will need Unstoppable Domains branded login buttons. See the table below for style guidelines.
 
-| Status  | Small                                       | Large                                         |
-| ------- | ------------------------------------------- | --------------------------------------------- |
-| Default | ![Small login button: default](/images/default-icon.png) | ![Large login button: default](/images/default-button.png) |
-| Hover   | ![Small login button: hover](/images/hover-icon.png)   | ![Large login button: hover](/images/hover-button.png)   |
-| Pressed | ![small login button: pressed](/images/pressed-icon.png) | ![Large login button: pressed](/images/pressed-button.png) |
+| State   | Color                           | Button                                                                        |
+| ------- | :-----------------------------: | :---------------------------------------------------------------------------: |
+| Default | <ColorSample color='#0D67FE' /> | ![Large login button: default](/images/login-buttons/login-default-large.png) |
+| Hover   | <ColorSample color='#0546B7' /> | ![Large login button: hover](/images/login-buttons/login-hover-large.png)     |
+| Pressed | <ColorSample color='#478BFE' /> | ![Large login button: pressed](/images/login-buttons/login-pressed-large.png) |
+| Loading | <ColorSample color='#0D67FE' /> | ![Large login button: loading](/images/login-buttons/login-loading-large.png) |
+
+Or you can download the full set of default [Login With Unstoppable buttons](/images/login-buttons/ud-login-assets.zip).
 
 :::success Congratulations!
 You just configured the Login with Unstoppable UI.

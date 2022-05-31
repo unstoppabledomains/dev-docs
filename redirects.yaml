@@ -50,7 +50,7 @@
   to: '/reseller/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides':
-  to: '/reseller/reseller-integration-guides/reseller-pathways/'
+  to: '/reseller/reseller-pathways/'
   type: 301
 '/sell-domains-to-users-in-my-app/error-codes-for-troubleshooting':
   to: '/reseller/error-codes-for-troubleshooting/'
@@ -186,4 +186,7 @@
   type: 301
 '/login-with-unstoppable/login-integration-guides/node-js-server-guide':
   to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
+  type: 301
+'/reseller/reseller-integration-guides/reseller-pathways/':
+  to: '/reseller/reseller-pathways/'
   type: 301

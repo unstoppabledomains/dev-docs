@@ -8,7 +8,7 @@ description: This integration guide is intended for a custom @uauth/js integrati
 This is the basic installation guide for the `moralis` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/moralis).
 
 :::info
-For a completed example of a Web3 Modal application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis).
+For a completed example of a Moralis application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis).
 :::
 
 ## Step 1: Install the Libraries

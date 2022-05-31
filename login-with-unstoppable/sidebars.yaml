@@ -43,7 +43,7 @@ pages:
       - label: Node.js Server
         page: login-integration-guides/node-js-server-guide.md
       - label: Login UI Configuration
-        page: login-integration-guides/login-ui-configuration.md
+        page: login-integration-guides/login-ui-configuration.mdx
     separatorLine: true
   - group: Login Protocols
     expanded: false

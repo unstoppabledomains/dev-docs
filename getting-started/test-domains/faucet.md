@@ -8,7 +8,7 @@ description: This page describes the process for requesting a free test domain a
 <embed src="/snippets/_test-domain-explain.md" />
 
 :::warning Important
-The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
+The [Reseller feature](../../reseller/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 ## Step 1: Gather Requirements for the Website Faucet
@@ -34,7 +34,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **custom records**: add optional key and value pairs
 
 :::info reminder
-The [Reseller feature](../../reseller/reseller-integration-guides/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
+The [Reseller feature](../../reseller/reseller-pathways.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login/integration-pathways.md), applications must use **Polygon Mainnet** as the domain network.
 :::
 
 <figure>

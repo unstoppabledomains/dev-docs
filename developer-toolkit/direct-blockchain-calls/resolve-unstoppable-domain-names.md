@@ -216,7 +216,7 @@ Next, we’ll need to create a contract instance and create a function to query 
 
 ```javascript
 var ethContract = new ethers.Contract(ethAddress, abi, provider);
-var poligonContract = new ethers.Contract(polygonAddress, abi, polygonProvider);
+var polygonContract = new ethers.Contract(polygonAddress, abi, polygonProvider);
 
 async function fetchContractData(contract, keys, tokenId) {
  return contract.getData(keys, tokenId);
@@ -257,7 +257,7 @@ async function resolveEthNetwork(tokenId, interestedKeys) {
 
 async function resolveBothChains(tokenId, interestedKeys) {
  // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+ fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
    if (isEmpty(data.owner)) {
      // if no owner for domain found on polygon network look up the eth network
      return resolveEthNetwork(tokenId, interestedKeys);
@@ -364,9 +364,9 @@ async function resolveEthNetwork(tokenId, interestedKeys) {
 
 async function resolveBothChains(tokenId, interestedKeys) {
  // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+ fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
    if (isEmpty(data.owner)) {
-     // if no owner for domain found on poligon look up the eth network
+     // if no owner for domain found on polygon look up the eth network
      return resolveEthNetwork(tokenId, interestedKeys);
    }
 
@@ -447,7 +447,7 @@ async function resolveEthNetwork(tokenId, interestedKeys) {
 
 async function resolveBothChains(tokenId, interestedKeys) {
  // try to resolve the polygon network first
- fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+ fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
    if (isEmpty(data.owner)) {
      // if no owner for domain found on polygon look up the eth network
      return resolveEthNetwork(tokenId, interestedKeys);

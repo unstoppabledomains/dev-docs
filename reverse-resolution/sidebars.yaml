@@ -1,0 +1,12 @@
+pages:
+  - separator: Reverse Resolution
+    separatorLine: true
+  - label: Getting Started With Reverse Resolution
+    page: index.md
+    separatorLine: true
+  - label: Configure Reverse Resolution for a Domain
+    page: configure-reverse-resolution.md
+    separatorLine: true
+  - label: Frequently Asked Questions
+    page: reverse-resolution-faq.md
+    separatorLine: true
