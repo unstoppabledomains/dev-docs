@@ -35,7 +35,7 @@ The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available f
 
 ## Step 3: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](../login-integration-guides/login-ui-configuration.md) guide to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](../login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
 
 ## Step 4: Promote Your Application
 
