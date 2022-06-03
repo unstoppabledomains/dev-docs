@@ -1,5 +1,5 @@
 ---
-title: Configure Reverse Resolution for a Domain | UD Developer Portal
+title: UD Dashboard Guide | UD Developer Portal
 description: This page covers configuring a reverse record for your domains from the Unstoppable Domains dashboard.
 ---
 

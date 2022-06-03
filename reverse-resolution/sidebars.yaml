@@ -4,8 +4,11 @@ pages:
   - label: Getting Started With Reverse Resolution
     page: index.md
     separatorLine: true
-  - label: Configure Reverse Resolution for a Domain
-    page: configure-reverse-resolution.md
+  - group: Configure Reverse Resolution for a Domain
+    expanded: false
+    pages:
+      - page: config-guides/ud-dashboard.md
+        label: UD Dashboard Configuration Guide
     separatorLine: true
   - group: Reverse Resolution Integration Guides
     expanded: false

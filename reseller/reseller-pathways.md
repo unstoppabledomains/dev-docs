@@ -28,7 +28,7 @@ To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, et
 
 ## Step 3: Choose Your Integration Path
 
-There are several ways to integrate with Unstoppable's Reseller feature, which is detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
+There are several ways to integrate with Unstoppable's Reseller feature, detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
