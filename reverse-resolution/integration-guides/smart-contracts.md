@@ -1,0 +1,97 @@
+---
+title: Smart Contract Integration Guide | UD Developer Portal
+description: This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs implemented into the Unstoppable Domains UNS smart contract.
+---
+
+# Smart Contract Integration Guide
+
+This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs implemented into the Unstoppable Domains UNS smart contract.
+
+## Step 1: Select a UNS Registry Smart Contract
+
+<embed src="/snippets/_uns_smart_contracts.md" />
+
+<figure>
+
+![polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
+
+<figcaption>polygon testnet registry contract</figcaption>
+</figure>
+
+## Step 2: Open the “Read as Proxy” Tab for the Registry Contract
+
+Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of the Registry contract and click on the `Read as Proxy` tab:
+
+<figure>
+
+![polygonscan write as proxy tab](/images/read-as-proxy.png)
+
+<figcaption>polygonscan write as proxy tab</figcaption>
+</figure>
+
+## Step 3: Retrieve the Reverse Record
+
+The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the token associated with the address.
+
+<figure>
+
+![polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
+
+<figcaption>polygonscan reverseOf method</figcaption>
+</figure>
+
+Add the wallet address you want to resolve in the `addr` field of the `reverseOf()` method and click the `Query` button.
+
+<figure>
+
+![polygonscan reverseOf response](/images/reverse-of-abi-response.png)
+
+<figcaption>polygonscan reverseOf response</figcaption>
+</figure>
+
+:::info
+The `reverseOf()` method will return a value of `0` if there is no reverse record configured for the wallet address provided.
+:::
+
+## Step 4: Get the Domain Metadata
+
+Send a `GET` request to the Unstoppable Domains metadata endpoint to retrieve the metadata of the domain associated with the token returned from the `reverseOf()` method call:
+
+```
+https://resolve.unstoppabledomains.com/metadata/{tokenId}
+```
+
+## Step 5: Get the Domain Name From the Metadata
+
+The metadata endpoint returns a JSON response in the following format:
+
+```javascript
+{
+  "external_link": string,
+  "image_url": string,
+  "image_data": string,
+  "properties": object,
+  "attributes": [
+    string
+  ],
+  "background_color": string,
+  "animation_url": string,
+  "youtube_url": string,
+  "name": string,
+  "description": string,
+  "image": string,
+  "external_url": string
+}
+```
+
+The human-readable form of the domain associated with the token is stored in the `name` field of the API response.
+
+## Smart Contract Considerations
+
+Integrating Reverse Resolution with smart contracts involves using the `reverseOf()` method to retrieve the reverse record, then using the [metadata API endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to get the human-readable version of the domain.
+
+You can also integrate Reverse Resolution into your application using libraries that allow you to call smart contracts ABIs like [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3.js](https://github.com/ChainSafe/web3.js). Here’s an application that integrates Reverse Resolution: <https://github.com/Noxturnix/web3udmintfeed.nft>.
+
+:::success Congratulations
+You have successfully integrated reverse resolution using smart contracts.
+:::

@@ -7,6 +7,12 @@ pages:
   - label: Configure Reverse Resolution for a Domain
     page: configure-reverse-resolution.md
     separatorLine: true
+  - group: Reverse Resolution Integration Guides
+    expanded: false
+    pages:
+      - page: integration-guides/smart-contracts.md
+        label: Smart Contract Integration Guide
+    separatorLine: true
   - label: Frequently Asked Questions
     page: reverse-resolution-faq.md
     separatorLine: true
