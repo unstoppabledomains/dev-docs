@@ -1,13 +1,13 @@
 ---
 title: Stripe Payments Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to configure your Reseller account to accept Stripe payments. Payout information can be tracked in the UD Reseller Dashboard.
+description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in the Unstoppable Domains Reseller dashboard.
 ---
 
 # Stripe Payments Guide
 
-Unstoppable Domains supports [Stripe](http://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and **secure** payment method for resellers that mostly use client side applications.
+Unstoppable Domains supports [Stripe](https://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for resellers that mostly use client-side applications.
 
-The following diagram shows the general process that takes place between Stripe and Unstoppable Domains, after a customer buys a domain.
+The following diagram shows the general process between Stripe and Unstoppable Domains after a customer buys a domain.
 
 <figure>
 
@@ -18,18 +18,16 @@ The following diagram shows the general process that takes place between Stripe 
 
 ## Step 1: Create a Stripe Account
 
-* You must [Create a Stripe Account](https://dashboard.stripe.com/register?redirect=%2Fsettings%2Faccount%2F) in advance before you connect it to your Unstoppable Domains reseller account.
+You need to have a Stripe account before connecting it to your Unstoppable Domains Reseller account. If you have not created a Stripe account before now, create one here: <https://dashboard.stripe.com/register>.
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-* There is a stripe connect button in the [UD Reseller Dashboard](https://unstoppabledomains.com/resellers) for live and test connections. At UD, we use a different stripe API key for live and test orders.
-* These Stripe API keys are public keys and they are safe to reveal.
-    * pk\_test\_\* (reseller-test-\* namespace)
-    * pk\_live\_\* (all other domains)
+Click on the `CONNECT` button in the Stripe section of the [UD Reseller dashboard](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
 
-:::info
-The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The **Stripe Test Connect Button** does not involve real money and uses test credentials to integrate.
-:::
+Your Stripe API keys are public keys and they are safe to reveal in your application:
+
+* pk\_test\_\* (reseller-test-\* namespace)
+* pk\_live\_\* (all other domains)
 
 <figure>
 
@@ -38,7 +36,11 @@ The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains wh
 <figcaption>Strive Live and Stripe Test payment setup areas</figcaption>
 </figure>
 
-* After clicking the Stripe Live or Stripe Test **Connect Button**, you will be walked through the Stripe Integrations form.
+:::info
+The `Stripe Live Connect Button` is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The `Stripe Test Connect Button` does not involve real money and uses test credentials to integrate.
+:::
+
+After clicking the Stripe Live or Stripe Test `CONNECT` button, Stripe will walk you through the integration form:
 
 <figure>
 
@@ -47,17 +49,209 @@ The **Stripe Live Connect Button** is how you get paid by Unstoppable Domains wh
 <figcaption>Stripe integrations form to connect your Stripe and UD accounts</figcaption>
 </figure>
 
-* Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe Dashboard.
+Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe dashboard.
 
-### Other Stripe Considerations
+## Step 3: Generate a Stripe Payment Token
 
-To begin accepting payments from your customers, Stripe requires you to embed their form into your application or website. Please see the documentation for [Accepting Payments using Stripe](https://stripe.com/docs/payments/accept-a-payment?platform=web) for more information.
+Stripe generates a payment token for every transaction, which Unstoppable Domains later uses to process the payment. This keeps Unstoppable Domains from needing to store your customer’s sensitive data.
 
-Stripe generates a token ID for each transaction, which is later used by UD to process the ‘Buy Domain’ API endpoint. This keeps Unstoppable Domains from needing to store your customer’s sensitive data. Please see the documentation for [Accepting Payments using Stripe Elements](https://stripe.com/docs/payments/accept-a-payment-charges#web) for more information.
+See the [Stripe Tokens](https://stripe.com/docs/api/tokens) and [Payment Integrations](https://stripe.com/docs/payments) guides to learn how to generate a payment token using your Stripe API key. Here’s an example of the Stripe token response:
 
-## Step 3: Receive Stripe Payouts
+```json
+{
+    "id": "tok_1L6Ys1G8PQyZCUJhiFcaDUVy",
+    "object": "token",
+    "card": {
+        "id": "card_1L6Ys1G8PQyZCUJh3Jv2N8xc",
+        "object": "card",
+        "address_city": null,
+        "address_country": null,
+        "address_line1": null,
+        "address_line1_check": null,
+        "address_line2": null,
+        "address_state": null,
+        "address_zip": null,
+        "address_zip_check": null,
+        "brand": "Visa",
+        "country": "US",
+        "cvc_check": "unchecked",
+        "dynamic_last4": null,
+        "exp_month": 4,
+        "exp_year": 2023,
+        "fingerprint": "0w14LEeNDGGIdQgB",
+        "funding": "credit",
+        "last4": "4242",
+        "metadata": {},
+        "name": null,
+        "tokenization_method": null
+    },
+    "client_ip": null,
+    "created": 1654256449,
+    "livemode": false,
+    "type": "card",
+    "used": false
+}
+```
 
-* Stripe payouts occur daily directly from Stripe and can be tracked within the reseller dashboard by clicking on the “View Test Dashboard” or “View Live Dashboard” button depending on which payouts are being tracked.
+The payment token is stored in the `id` field. In the example above, the value is `tok_1L6Ys1G8PQyZCUJhiFcaDUVy`.
+
+## Step 4: Retrieve Your Reseller ID and Secret API Token
+
+Navigate to the Reseller dashboard to retrieve your `ResellerID` and `Secret API Token`. The API uses the `ResellerID` to identify reseller requests, and the `Secret API Token` is required for authentication when minting free domains.
+
+<figure>
+
+![Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard](/images/reseller-id-api-secret.png '#width=80%;')
+
+<figcaption>Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard</figcaption>
+</figure>
+
+## Step 5: Prepare Your Authorization Headers
+
+The Reseller API uses bearer tokens to authorize requests with the `Secret API Token` from the Reseller dashboard.
+
+| Field Name | Value |
+| - | - |
+| Security Scheme Type | HTTP |
+| HTTP Authorization Scheme | bearer |
+| Bearer format | a 32 characters string |
+
+## Step 6: Prepare Your Request Body
+
+The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
+
+```javascript
+{
+  "payment": {
+    "method": "stripe",
+    "properties": {
+      "tokenId": string // Stripe payment token
+    }
+  },
+  "domains": [
+    {
+      "name": string, // domain name you are minting
+      "ownerAddress": string, // wallet address to mint the domain to
+      "email": string, // UD email address to link the domain to
+      "resolution": object // predefined records to mint the domain with
+    }
+  ]
+}
+```
+
+* `payment`: A key-value dictionary with payment information about the order:
+    * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
+    * `properties`: A key-value dictionary with more information about the order payment method:
+      * `tokenId`: (string) The Stripe payment token for the order
+* `domains`: (array) An array with information about the domains you want to purchase:
+    * `name`: The domain name you want to purchase. This parameter is required for every order.
+    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
+    * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional and requires the `ownerAddress` parameter to be provided.
+
+:::info
+You need to provide either the `ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
+:::
+
+## Step 7: Use the Orders Endpoint
+
+Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
+
+Sandbox Environment:
+
+```
+https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
+```
+
+Production Environment:
+
+```
+https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/
+```
+
+:::info
+The `ResellerID` path parameter is the same one you retrieved from your dashboard in Step 4.
+:::
+
+## Stripe Payment Example
+
+Here is an example request to purchase a domain with the following details using the Stripe payment method:
+
+| Field Name | Value |
+| - | - |
+| Stripe Token | tok_1L6Ys1G8PQyZCUJhiFcaDUVy |
+| Domain Name | reseller-test-67687986466871.wallet |
+| Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
+| Customer Email | sandbox-test@unstoppabledomains.com |
+| Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
+
+### Request
+
+```bash
+curl --location --request POST 'https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders' \
+--header 'Authorization: Bearer {Secret API Token}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "payment": {
+        "method": "stripe",
+        "properties": {
+            "tokenId": "tok_1L6Ys1G8PQyZCUJhiFcaDUVy"
+        }
+    },
+    "domains": [
+        {
+            "name": "reseller-test-67687986466871.wallet",
+            "email": "sandbox-test@unstoppabledomains.com",
+            "ownerAddress": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
+            "resolution": {
+                "crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
+                "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+            }
+        }
+    ]
+}'
+```
+
+### Response
+
+```json
+{
+    "orderNumber": "78085",
+    "total": 500,
+    "payment": {
+        "method": "stripe"
+    },
+    "items": [
+        {
+            "domain": {
+                "id": 971624,
+                "name": "reseller-test-67687986466871.wallet",
+                "ownerAddress": null,
+                "resolver": null,
+                "resolution": {},
+                "blockchain": "MATIC",
+                "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
+                "networkId": 80001,
+                "freeToClaim": true,
+                "node": "0xbf153dc812a038ec41a8f332e20e2b927da06e035592857308745febac1fe855"
+            },
+            "mintingTransaction": {
+                "id": 45081,
+                "type": "MaticTx",
+                "operation": "MintDomain",
+                "statusGroup": "Pending",
+                "hash": null,
+                "blockchain": "MATIC",
+                "blockExplorerUrl": null
+            }
+        }
+    ]
+}
+```
+
+## Receive Stripe Payouts
+
+Stripe payouts occur daily directly from Stripe and can be tracked within the Reseller dashboard by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
 
 <figure>
 
@@ -67,12 +261,12 @@ Stripe generates a token ID for each transaction, which is later used by UD to p
 </figure>
 
 :::info
-The **View Live Dashboard** and **View Test Dashboard** buttons will only appear after the Stripe Live or Stripe Test options are successfully connected, linking your Stripe and UD Reseller Accounts.
+The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Reseller accounts.
 :::
 
 ### Stripe Payouts Tab
 
-* Clicking either of the “View Dashboard” buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
+Clicking either of the `View Dashboard` buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
 
 <figure>
 
@@ -83,7 +277,7 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 
 ### Stripe Accounts Tab
 
-* Click the ‘Account’ tab to view Stripe account information or to update your Stripe banking information.
+Click the `Account` tab to view Stripe account information or update your Stripe banking information.
 
 <figure>
 
@@ -92,6 +286,6 @@ The **View Live Dashboard** and **View Test Dashboard** buttons will only appear
 <figcaption>View of Stripe Account information (i.e., account tab)</figcaption>
 </figure>
 
-:::success Congratulations!
-You just setup your Reseller account to accept Stripe payments.
+:::success congratulations!
+You have successfully purchased a domain using the Stripe payment method.
 :::

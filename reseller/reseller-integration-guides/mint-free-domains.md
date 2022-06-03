@@ -70,7 +70,7 @@ The request body contains information about your order and must be in JSON forma
       "name": string, // domain name you are minting
       "ownerAddress": string, // wallet address to mint the domain to
       "email": string, // UD email address to link the domain to
-      "resolution": object // predefined records to mint the domain with
+      "resolution": object, // predefined records to mint the domain with
       "resellerIdentityKey": string // domain reservation ID
     }
   ]
@@ -87,22 +87,23 @@ The request body contains information about your order and must be in JSON forma
     * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain you’re minting.
 
 :::info
-You need to provide either the` ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
+You need to provide either the `ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
 :::
 
 ## Step 5: Use the Orders Endpoint
+
 Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 
 ```
-https://www.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders
+https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders
+https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/
 ```
 
 :::info
@@ -117,13 +118,13 @@ Here is an example request to mint a free domain with the following details:
 | - | - |
 | Domain Name | reseller-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
-| Customer Email |sandbox-test@unstoppabledomains.com |
+| Customer Email | sandbox-test@unstoppabledomains.com |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
 
 ### Request
 
 ```bash
-curl --location --request POST 'https://www.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/' \
+curl --location --request POST 'https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/' \
 --header 'Authorization: Bearer {Secret API Token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -146,7 +147,7 @@ curl --location --request POST 'https://www.ud-sandbox.com/api/v2/resellers/{Res
 
 ### Response
 
-```bash
+```json
 {
     "orderNumber": "78023",
     "total": 0,
@@ -194,7 +195,7 @@ To reserve a domain, you need to request the Reserve Free Domains endpoint with 
 ### Domain Reservation Example
 
 ```
-curl --location -g --request POST '/{resellerID}/domains/{domainName}/reserve' \
+curl --location -g --request POST '/{resellerID}/domains/{domainName}/reserve/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "resellerIdentityKey": "{domainReservationID}"
