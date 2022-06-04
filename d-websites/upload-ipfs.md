@@ -36,7 +36,7 @@ You can upload and attach your d-website to your domain in a single step from th
 </figure>
 
 :::info
-For websites that exceed the 20MB file limit, we recommend using a dedicated pinning service, such as [Pinata](https://pinata.cloud) or [Temporal](https://temporal.cloud).
+For websites that exceed the 20MB file limit, we recommend using a dedicated pinning service, such as [Pinata](https://pinata.cloud).
 :::
 
 :::success
