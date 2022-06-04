@@ -18,7 +18,7 @@ The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-on
 An example in JavaScript of getting two records (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
-const proxyReaderAddress = "0xfEe4D4F0aDFF8D84c12170306507554bC7045878";
+const proxyReaderAddress = "0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E";
 // Partial ABI, just for the getMany function.
 const proxyReaderAbi = [
   "function getMany(string[] calldata keys, uint256 tokenId) external view returns (string[] memory)",

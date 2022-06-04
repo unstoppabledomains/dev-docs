@@ -1,11 +1,11 @@
 ---
 title: Smart Contract Integration Guide | UD Developer Portal
-description: This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs implemented into the Unstoppable Domains UNS smart contract.
+description: This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 ---
 
 # Smart Contract Integration Guide
 
-This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs implemented into the Unstoppable Domains UNS smart contract.
+This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 
 ## Step 1: Select a UNS Registry Smart Contract
 
@@ -90,7 +90,33 @@ The human-readable form of the domain associated with the token is stored in the
 
 Integrating Reverse Resolution with smart contracts involves using the `reverseOf()` method to retrieve the reverse record, then using the [metadata API endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to get the human-readable version of the domain.
 
-You can also integrate Reverse Resolution into your application using libraries that allow you to call smart contracts ABIs like [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3.js](https://github.com/ChainSafe/web3.js). Here’s an application that integrates Reverse Resolution: <https://github.com/Noxturnix/web3udmintfeed.nft>.
+You can also integrate Reverse Resolution into your application using libraries that allow you to call smart contracts ABIs like [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3.js](https://github.com/ChainSafe/web3.js). Here’s an application that integrates Reverse Resolution using `ethers.js`: <https://github.com/Noxturnix/web3udmintfeed.nft>.
+
+An example in JavaScript of integrating Reverse Resolution (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
+
+```javascript
+const proxyReaderAddress = "0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E";
+
+// partial ABI, just for the reverseOf function.
+const proxyReaderAbi = [
+  "function reverseOf(address addr) external view returns (uint256)",
+];
+
+const proxyReaderContract = new ethers.Contract(
+  proxyReaderAddress,
+  proxyReaderAbi,
+  provider
+);
+
+const address = "0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19";
+
+const reverseResolutionTokenId = await proxyReaderContract.reverseOf(address);
+const domainName = await fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
+  .then(response => response.json())
+  .then(data => console.log(data.name));
+
+// lordghostx.nft
+```
 
 :::success Congratulations
 You have successfully integrated reverse resolution using smart contracts.
