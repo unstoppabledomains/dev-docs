@@ -13,7 +13,7 @@ This guide covers how to retrieve the reverse record of UD domains using smart c
 
 <figure>
 
-![polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
+![Polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
 
 <figcaption>polygon testnet registry contract</figcaption>
 </figure>
@@ -24,7 +24,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![polygonscan write as proxy tab](/images/read-as-proxy.png)
+![Polygonscan write as proxy tab](/images/read-as-proxy.png)
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
@@ -35,7 +35,7 @@ The UNS contract has a `reverseOf()` method that takes in a wallet address and r
 
 <figure>
 
-![polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
+![Polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
 
 <figcaption>polygonscan reverseOf method</figcaption>
 </figure>
@@ -44,7 +44,7 @@ Add the wallet address you want to resolve in the `addr` field of the `reverseOf
 
 <figure>
 
-![polygonscan reverseOf response](/images/reverse-of-abi-response.png)
+![Polygonscan reverseOf response](/images/reverse-of-abi-response.png)
 
 <figcaption>polygonscan reverseOf response</figcaption>
 </figure>

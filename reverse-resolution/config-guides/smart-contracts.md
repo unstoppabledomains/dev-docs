@@ -13,7 +13,7 @@ This guide covers how to set Reverse Resolution records for UD domains using sma
 
 <figure>
 
-![polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
+![Polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
 
 <figcaption>polygon testnet registry contract</figcaption>
 </figure>
@@ -24,7 +24,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png '#width=50%')
+![Polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png '#width=50%')
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
@@ -36,14 +36,14 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 <figure class="half-inline-block">
 
-![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
+![Polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
 
 <figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
 <figure class="half-inline-block">
 
-![wallet provider list](/images/wallet-provider-list.png)
+![Wallet provider list](/images/wallet-provider-list.png)
 
 <figcaption>wallet provider list</figcaption>
 </figure>
@@ -98,7 +98,7 @@ The UNS contract has a `setReverse()` ABI method that takes in the namehash of a
 
 <figure>
 
-![polygonscan setReverse method](/images/set-reverse-abi.png)
+![Polygonscan setReverse method](/images/set-reverse-abi.png)
 
 <figcaption>polygonscan setReverse method</figcaption>
 </figure>
@@ -107,7 +107,7 @@ Add the generated namehash of the domain you want to configure Reverse Resolutio
 
 <figure>
 
-![polygonscan setReverse response](/images/set-reverse-response.png)
+![Polygonscan setReverse response](/images/set-reverse-response.png)
 
 <figcaption>polygonscan setReverse response</figcaption>
 </figure>
@@ -118,7 +118,7 @@ Click the `Write` button to sign the transaction and execute the contract.
 
 <figure>
 
-![metamask sign transaction](/images/set-reverse-tx-sign.png '#width=50%')
+![Metamask sign transaction](/images/set-reverse-tx-sign.png '#width=50%')
 
 <figcaption>metamask sign transaction</figcaption>
 </figure>
@@ -127,7 +127,7 @@ After signing the transaction, you can view its details on the blockchain explor
 
 <figure>
 
-![reverse record adding transaction](/images/finished-adding-reverse-record.png)
+![Reverse record adding transaction](/images/finished-adding-reverse-record.png)
 
 <figcaption>reverse record adding transaction</figcaption>
 </figure>

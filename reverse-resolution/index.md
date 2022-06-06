@@ -25,6 +25,7 @@ There are several ways to configure a reverse record for your UD domains, detail
 | Pathway | Short Description | Configuration Guides |
 | - | - | - |
 | Unstoppable Domains Dashboard | set reverse resolution records using the Unstoppable Domains dashboard | [UD Dashboard Guide](config-guides/ud-dashboard.md) |
+| Smart Contracts | set reverse resolution records using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](config-guides/smart-contracts.md) |
 
 ## Choose an Integration Path
 
