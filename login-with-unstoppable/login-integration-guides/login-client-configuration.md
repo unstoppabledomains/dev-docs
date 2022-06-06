@@ -5,40 +5,36 @@ description: This guide covers the process for configuring the Login with Unstop
 
 # Login Client Configuration
 
-The default configuration for the Login Client works right out of the box for local development and all [Login Scopes](../get-started-login/scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client is the **client ID** and **redirect URIs**, which is established in the [Client Metadata](#step-2-client-metadata-configuration) section (Step 2 below).
+The default configuration for a new Login Client works right out of the box for local development and all [Login Scopes](../get-started-login/scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client integrated with a live application requires custom [**redirect URIs**](#step-2-configure-redirect-uris).
+
+## Step 1: Add a New Client
+
+:::info
+You will not need any ETH in your wallet to perform any action in this dashboard. You will only need to sign transactions to confirm ownership of your wallet address.
+:::
+
+* Go to the [Client Management](https://dashboard.auth.unstoppabledomains.com) page.
+* Click **Connect Wallet** and sign the transaction.
+* Click **Create Client** button to add a new client.
+
+The dashboard will generate a unique **client ID** and open the configuration page for your new client. The **Client Metadata** section is automatically populated with the `clientID` and default values for the `redirectURI` and `scope`. This will update as you change these settings and can be copied directly into your application.
 
 <figure>
 
-![Login client configuration complete example](/images/login-client-config.gif '#width=70%')
+![Connect Wallet and Create Client](/images/connect-wallet-and-create-client.gif '#width=80%')
 
-<figcaption>Login client configuration complete example</figcaption>
+<figcaption>Connect a Wallet and Create a New Client</figcaption>
 </figure>
 
-## Step 1: Add a New Client to Your Account
+## Step 2: Configure Redirect URIs
 
-* Visit the [My Clients](https://dashboard.auth.unstoppabledomains.com) page to view all of the clients associated with your wallet address.
-* Take any of the following actions on this page:
-  * Click **Change Wallet** button to signin with a different wallet and see clients associated with a different wallet address.
-  * Click the gear ![gear](/images/gear_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to modify an existing client configuration.
-  * Click the trash can ![trashcan](/images/trashcan_icon_my_clients.png '#width=32px;vertical-align=text-bottom') to delete or remove a client from your account.
-  * Click **Create Client** button to add a new client.
+Add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
 
 <figure>
 
-![My Clients UI screen for adding, removing, and configuring applications](/images/new_my_clients_screen_markup.png '#width=50%')
+![Entering Redirect URIs](/images/login-enter-redirect-uris.gif '#width=80%')
 
-<figcaption>My Clients UI screen for adding, removing, and configuring applications</figcaption>
-</figure>
-
-## Step 2: Client Metadata Configuration
-
-The **Client Metadata** section includes the unique client ID and redirect URIs. Developers can also download metadata for the existing client configuration from within this sub-section.
-
-<figure>
-
-![Client Configuration Metadata UI](/images/client_config_screen_metadata.png '#width=50%')
-
-<figcaption>Client Configuration Metadata UI</figcaption>
+<figcaption>Client Metadata</figcaption>
 </figure>
 
 ### Rules for Redirect URIs
@@ -53,9 +49,9 @@ The Redirect URIs follow three rules:
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 :::
 
-## **Step 3: Cosmetic Configuration (Optional)**
+## Step 3: Customize the Login UI
 
-The **Cosmetic Configuration** allows developers to customize the UI to improve the user experience. This includes updating or modifying the client name presented to the user, client URI, logo URI, policy URI, and terms of service URI.
+Click **Show Cosmetic Configuration** to expand the UI configuration options.
 
 <figure>
 
@@ -64,19 +60,50 @@ The **Cosmetic Configuration** allows developers to customize the UI to improve 
 <figcaption>Client Configuration UI, Cosmetic Config section</figcaption>
 </figure>
 
+The **Cosmetic Configuration** section allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
+
 The following table describes the fields for the cosmetic configuration UI section.
 
 | Cosmetic Config Field | Description                                                                                                                 |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Client Name           | The client name as presented to user; display name of the Client URI hyperlink.                                             |
-| Client URI            | By default, the value of the hyperlink is the redirect URI (from Client Metadata area) unless client URI field is complete. |
-| Logo URI              | If provided, the Logo URI will retrieve the logo image and display the logo directly above client name.                     |
+| Client Name           | The client name as presented to the user; display name of the **Client URI** hyperlink.                                     |
+| Client URI            | The default value of the hyperlink is the client redirect URI (from **Client Metadata**) unless this field is complete.     |
+| Logo URI              | If provided, the client will retrieve and display an image from this location directly above the **Client Name**.           |
 | Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
-| Terms of Service URI  | ToS URI will display at the bottom of the UI.                                                                               |
+| Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
 
-## Step 4: Advanced Configuration (Optional)
+## Step 4: Configure Login Scopes
 
-The **Advanced Configuration** includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.
+Click **Show Advanced Configuration** and scroll to the **Scopes** section.
+
+Scopes are used during authentication to authorize access to specific user data. You can use them to require or request access to additional information associated with the user's domain. 
+
+* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet-scope)
+* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
+* **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
+* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope)
+* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanity_checkoptional-scope)
+
+All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that the application can request, simply uncheck those scopes.
+
+<figure>
+
+![toggling login client scopes](/images/login-client-toggle-scopes.gif)
+
+<figcaption>Customizing Login Client Scopes</figcaption>
+</figure>
+
+## Step 5: Save Your Changes
+
+You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application will require a wallet connection and signature.
+
+:::success Congratulations!
+You now have a fully configured Login With Unstoppable Client.
+:::
+
+## Advanced Configuration
+
+The **Advanced Configuration** includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method. Scopes were covered in [Step 4](#step-4-configure-login-scopes) above.
 
 :::danger
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
@@ -129,16 +156,6 @@ There are three response types: authorization code, access token, ID token.
 All authorization code requests or flows must use the PKCE extension. This only refers to the authorization code response type.
 :::
 
-### Scopes
-
-All [scopes](../get-started-login/scopes-for-login.md) are turned on by default. To limit the scopes that the application can request, simply uncheck or disable those scopes.
-
-* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet-scope)
-* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
-* **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
-* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope)
-* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanity_checkoptional-scope)
-
 ### Token Endpoint Authentication Method
 
 :::info
@@ -152,16 +169,4 @@ This setting configures how to send the client secret to the authorization serve
 
 :::danger warning
 **Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
-:::
-
-## Step 5: Save Changes
-
-You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application requires a wallet connection and signature.
-
-:::info reminder
-Developers must store the client secret before saving changes, refreshing the page, or exiting the page. It is also recommended that developers periodically download and save the current client configuration JSON file from the [Client Metadata](#step-2-client-metadata-configuration) section.
-:::
-
-:::success Congratulations!
-You finished configuring your Login with Unstoppable client.
 :::
