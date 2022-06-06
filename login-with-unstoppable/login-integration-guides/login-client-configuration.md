@@ -97,6 +97,18 @@ All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. T
 
 You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application will require a wallet connection and signature.
 
+<figure>
+
+![Save button](/images/login-client-config-save-button.png '#width=60%; margin: auto;') 
+
+<p style="padding: 1%" >or</p>
+
+![Save icon](/images/login-client-config-save-icon.png '#width=5%; vertical-align: middle;')
+
+<figcaption>Click the save button</figcaption>
+</figure>
+
+
 :::success Congratulations!
 You now have a fully configured Login With Unstoppable Client.
 :::
@@ -111,9 +123,9 @@ The advanced configuration settings are unnecessary for many configurations and 
 
 <figure>
 
-![Client Configuration UI, Advanced Config section](/images/client_config_screen_advanced.png '#width=50%')
+![Login Client Advanced Configuration](/images/client_config_screen_advanced.png '#width=50%')
 
-<figcaption>Client Configuration UI, Advanced Config section</figcaption>
+<figcaption>Login Client Advanced Configuration</figcaption>
 </figure>
 
 The following section describes the fields for the advanced configuration UI section.
