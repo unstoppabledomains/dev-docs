@@ -9,11 +9,9 @@ figure p {
     margin-block: 0;
 }
 
-/*
 figure img {
-    border: 1px solid lightgrey;
+    box-shadow: 0 0 3px 0;
 }
-*/
 
 figcaption {
     font-size: 16px;
