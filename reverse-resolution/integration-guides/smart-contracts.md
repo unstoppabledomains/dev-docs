@@ -31,7 +31,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ## Step 3: Retrieve the Reverse Record
 
-The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the token associated with the address.
+The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured reverse resolution to that address.
 
 <figure>
 
@@ -55,7 +55,7 @@ The `reverseOf()` method will return a value of `0` if there is no reverse recor
 
 ## Step 4: Get the Domain Metadata
 
-Send a `GET` request to the Unstoppable Domains metadata endpoint to retrieve the metadata of the domain associated with the token returned from the `reverseOf()` method call:
+Send a `GET` request to the [Unstoppable Domains metadata endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to retrieve the metadata of the domain associated with the namehash returned from the `reverseOf()` method call:
 
 ```
 https://resolve.unstoppabledomains.com/metadata/{tokenId}
@@ -67,6 +67,7 @@ The metadata endpoint returns a JSON response in the following format:
 
 ```javascript
 {
+  "name": string,
   "external_link": string,
   "image_url": string,
   "image_data": string,
@@ -77,7 +78,6 @@ The metadata endpoint returns a JSON response in the following format:
   "background_color": string,
   "animation_url": string,
   "youtube_url": string,
-  "name": string,
   "description": string,
   "image": string,
   "external_url": string
@@ -88,7 +88,7 @@ The human-readable form of the domain associated with the token is stored in the
 
 ## Smart Contract Considerations
 
-Integrating Reverse Resolution with smart contracts involves using the `reverseOf()` method to retrieve the reverse record, then using the [metadata API endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to get the human-readable version of the domain.
+Integrating Reverse Resolution with smart contracts involves using the `reverseOf()` method to retrieve the namehash of the reverse record, then using the [metadata API endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to get the human-readable version of the domain.
 
 You can also integrate Reverse Resolution into your application using libraries that allow you to call smart contracts ABIs like [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3.js](https://github.com/ChainSafe/web3.js). Here’s an application that integrates Reverse Resolution using `ethers.js`: <https://github.com/Noxturnix/web3udmintfeed.nft>.
 
@@ -111,11 +111,11 @@ const proxyReaderContract = new ethers.Contract(
 const address = "0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19";
 
 const reverseResolutionTokenId = await proxyReaderContract.reverseOf(address);
-const domainName = await fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
+fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
   .then(response => response.json())
   .then(data => console.log(data.name));
 
-// lordghostx.nft
+// lordghostx.wallet
 ```
 
 :::success Congratulations

@@ -9,6 +9,8 @@ pages:
     pages:
       - page: config-guides/ud-dashboard.md
         label: UD Dashboard Configuration Guide
+      - page: config-guides/smart-contracts.md
+        label: Smart Contract Configuration Guide
     separatorLine: true
   - group: Reverse Resolution Integration Guides
     expanded: false

@@ -13,7 +13,7 @@ Select a domain you want to set as your reverse record and navigate to its `Mana
 
 ![select your primary domain](/images/choose-domain-for-reverse-record.png)
 
-<figcaption>Select your primary domain</figcaption>
+<figcaption>select your primary domain</figcaption>
 </figure>
 
 ## Step 2: Set the Reverse Record
@@ -24,7 +24,7 @@ Navigate to the `Reverse Resolution` tab on the manage page sidebar (left side o
 
 ![set the reverse record](/images/set-reverse-resolution.png)
 
-<figcaption>Set the reverse record</figcaption>
+<figcaption>set the reverse record</figcaption>
 </figure>
 
 ## Step 3: Sign the Transaction
@@ -35,7 +35,7 @@ Click the `Sign` button to sign a transaction confirming you own the address you
 
 ![sign the transaction](/images/sign-reverse-record-adding.png "#width=40%;")
 
-<figcaption>Sign the transaction</figcaption>
+<figcaption>sign the transaction</figcaption>
 </figure>
 
 After signing the transaction, you can view its details on the blockchain explorer, like so:
@@ -44,7 +44,7 @@ After signing the transaction, you can view its details on the blockchain explor
 
 ![reverse record adding transaction](/images/finished-adding-reverse-record.png)
 
-<figcaption>Reverse record adding transaction</figcaption>
+<figcaption>reverse record adding transaction</figcaption>
 </figure>
 
 :::success Congratulations!
