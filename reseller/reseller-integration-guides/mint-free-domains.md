@@ -5,7 +5,7 @@ description: This guide shows how to mint free domains with your Reseller accoun
 
 ## Overview
 
-Unstoppable Domains offers free domain minting to Resellers based on specified criteria. Authorized Resellers can use the following [API endpoints](../reseller-api-endpoints.md): `Free Domains Suggestions`, `Reserve Free Domains`, and `Free Domain Claiming`.
+Unstoppable Domains offers free domain minting to Resellers based on specified criteria. Authorized Resellers can use the following [API endpoints](../reseller-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
 
 The following diagram shows the general process between the Reseller and Unstoppable Domains during the free domain minting process.
 
