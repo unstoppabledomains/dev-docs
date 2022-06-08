@@ -37,4 +37,11 @@ There are several ways to integrate with Unstoppable's Reseller feature, detaile
 | Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](reseller-integration-guides/coinbase-payments.md)         |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](reseller-integration-guides/redirect-url-payments.md) |
 
+## Considerations
+
+The following considerations apply to purchasing domains:
+
+* The domain must contain only alphabets (`A-Z`), numbers (`0-9`), and hyphens (`-`)
+* The domain length must not exceed 253 characters
+
 <embed src="/snippets/_discord.md" />
