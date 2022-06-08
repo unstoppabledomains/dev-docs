@@ -97,24 +97,11 @@ The payment token is stored in the `id` field. In the example above, the value i
 
 ## Step 4: Retrieve Your Reseller ID and Secret API Token
 
-Navigate to the Reseller dashboard to retrieve your `ResellerID` and `Secret API Token`. The API uses the `ResellerID` to identify reseller requests, and the `Secret API Token` is required for authentication when minting free domains.
-
-<figure>
-
-![Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard](/images/reseller-id-api-secret.png '#width=80%;')
-
-<figcaption>Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard</figcaption>
-</figure>
+<embed src="/snippets/_reseller-id-location.md" />
 
 ## Step 5: Prepare Your Authorization Headers
 
-The Reseller API uses bearer tokens to authorize requests with the `Secret API Token` from the Reseller dashboard.
-
-| Field Name | Value |
-| - | - |
-| Security Scheme Type | HTTP |
-| HTTP Authorization Scheme | bearer |
-| Bearer format | a 32 characters string |
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 6: Prepare Your Request Body
 
@@ -155,23 +142,7 @@ You need to provide either the `ownerAddress` or `email` parameter in every orde
 
 ## Step 7: Use the Orders Endpoint
 
-Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
-
-Sandbox Environment:
-
-```
-https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
-```
-
-Production Environment:
-
-```
-https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/
-```
-
-:::info
-The `ResellerID` path parameter is the same one you retrieved from your dashboard in Step 4.
-:::
+<embed src="/snippets/_orders-endpoint-usage.md" />
 
 ## Stripe Payment Example
 

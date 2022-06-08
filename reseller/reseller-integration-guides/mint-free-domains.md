@@ -18,14 +18,7 @@ The following diagram shows the general process between the Reseller and Unstopp
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
-Navigate to the reseller dashboard to retrieve your `ResellerID` and `Secret API Token`. The API uses the `ResellerID` to identify reseller requests, and the `Secret API Token` is required for authentication when minting free domains.
-
-<figure>
-
-![Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard](/images/reseller-id-api-secret.png '#width=80%;')
-
-<figcaption>Location of Reseller ID and Secret API Token when enabled in the Reseller Dashboard</figcaption>
-</figure>
+<embed src="/snippets/_reseller-id-location.md" />
 
 ## Step 2: Setup Criteria for Free Domains
 
@@ -48,13 +41,7 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 ## Step 3: Prepare Your Authorization Headers
 
-The Reseller API uses bearer tokens to authorize requests with the `Secret API Token` from the reseller dashboard.
-
-| Field Name | Value |
-| - | - |
-| Security Scheme Type | HTTP |
-| HTTP Authorization Scheme | bearer |
-| Bearer format | a 32 characters string |
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 4: Prepare Your Request Body
 
@@ -92,23 +79,7 @@ You need to provide either the `ownerAddress` or `email` parameter in every orde
 
 ## Step 5: Use the Orders Endpoint
 
-Send a `POST` request with the authorization headers and request body you have prepared to the orders endpoint. Here is the URL for our API environments:
-
-Sandbox Environment:
-
-```
-https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
-```
-
-Production Environment:
-
-```
-https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/orders/
-```
-
-:::info
-The `ResellerID` path parameter is the same one you retrieved from your dashboard in Step 1.
-:::
+<embed src="/snippets/_orders-endpoint-usage.md" />
 
 ## Free Domain Minting Example
 
@@ -208,7 +179,8 @@ You can only reserve one domain per `resellerIdentityKey`, and the reservation t
 
 ## Considerations
 
-* The following considerations apply to minting free domains:
+The following considerations apply to minting free domains:
+
 * The Reseller ID will be allowed to provide specified domain endings for free.
 * If the Reseller ID doesn't have an allowance to provide free domains, then they will not be permitted to mint free domains.
 * The domain must be eight characters or more and contain at least a letter and number.
