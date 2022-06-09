@@ -42,6 +42,7 @@ There are several ways to integrate with Unstoppable's Reseller feature, detaile
 The following considerations apply to purchasing domains:
 
 * The domain must contain only alphabets (`A-Z`), numbers (`0-9`), and hyphens (`-`)
+* The domain name cannot start with a hyphen
 * The domain length must not exceed 253 characters
 
 <embed src="/snippets/_discord.md" />

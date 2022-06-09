@@ -3,7 +3,7 @@ Send a `POST` request with the authorization headers and request body you have p
 Sandbox Environment:
 
 ```
-https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
+https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/
 ```
 
 Production Environment:

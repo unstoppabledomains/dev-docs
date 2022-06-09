@@ -159,7 +159,7 @@ Here is an example request to purchase a domain with the following details using
 ### Request
 
 ```bash
-curl --location --request POST 'https://ud-sandbox.com/api/v2/resellers/{ResellerID}/orders' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders' \
 --header 'Authorization: Bearer {Secret API Token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
