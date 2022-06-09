@@ -20,7 +20,7 @@ Information sharing is 100% opt-in for users, and users maintain absolute contro
 ## Are there working integrations for this feature?
 
 <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j119MCi2NRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tKOI1nIktdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 You can find additional working integrations on UD's Applications List, filtered by the [Login feature](https://unstoppabledomains.com/apps?filters=26).
