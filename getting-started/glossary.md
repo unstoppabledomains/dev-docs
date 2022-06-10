@@ -107,8 +107,6 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 **Partner**: A user authorized by Unstoppable Domains to [sell domains to users](../use-cases/sell-domains-users.md) in their applications.
 
-**Payback**: A payment method that allows partners to mint paid domains for customers and process the payment on their application without involving Unstoppable Domains.
-
 **Peer-to-Peer (P2P)**: A distributed network of two or more computers interacting directly without a central server or entity.
 
 **Private Key**: An alphanumeric passcode required to withdraw assets from a blockchain wallet and authorize digital transactions. Because these private keys are long and difficult to memorize, wallets will associate them with a seed or recovery phrase that is easier to remember.

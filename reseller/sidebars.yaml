@@ -25,3 +25,6 @@ pages:
   - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Partner Integration
     separatorLine: true
+  - page: reseller-faq.md
+    label: Frequently Asked Questions
+    separatorLine: true

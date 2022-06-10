@@ -183,7 +183,9 @@ The following considerations apply to minting free domains:
 
 * The Reseller ID will be allowed to provide specified domain endings for free.
 * If the Reseller ID doesn't have an allowance to provide free domains, then they will not be permitted to mint free domains.
-* The domain must be eight characters or more and contain at least a letter and number.
+* The domain is available for sale (e.g., it's not restricted, protected, trademarked, claimed, etc.)
+* The domain does not have a custom price set.
+* It has 8+ characters, at least one letter, and one number.
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
 
 :::success congratulations!
