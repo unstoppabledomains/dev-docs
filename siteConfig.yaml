@@ -14,7 +14,7 @@ linkChecker:
   options:
     CheckExternal: false
 oasDefinitions:
-  reseller: https://api.redoc.ly/registry/bundle/unstoppable-domains/Reseller%20API/v2/openapi.yaml
+  partner: https://api.redoc.ly/registry/bundle/unstoppable-domains/Reseller%20API/v2/openapi.yaml
   login-unstoppable: https://api.redocly.com/registry/bundle/unstoppable-domains/Login%20API/v1/openapi.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
 stylesheets:
