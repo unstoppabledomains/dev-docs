@@ -3,7 +3,7 @@ title: Partner Feature FAQs | Unstoppable Domains Developer Portal
 description: Frequently asked questions about the Partner feature of Unstoppable Domains.
 ---
 
-# Partner FAQ
+# Partner API FAQ
 
 ### What happens when the HMAC signature becomes invalid for redirect URI payments?
 

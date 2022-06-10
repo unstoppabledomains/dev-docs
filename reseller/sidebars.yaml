@@ -20,7 +20,7 @@ pages:
         label: Redirect URL Payments Guide
     separatorLine: true
   - page: reseller-api-endpoints.md
-    label: Reseller API Endpoints
+    label: Partner API Endpoints
     separatorLine: true
   - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Partner Integration
