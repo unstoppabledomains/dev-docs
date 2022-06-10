@@ -135,3 +135,5 @@ After signing the transaction, you can view its details on the blockchain explor
 :::success Congratulations
 You have successfully configured Reverse Resolution for your domain using smart contracts.
 :::
+
+<embed src="/snippets/_discord.md" />

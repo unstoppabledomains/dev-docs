@@ -17,6 +17,8 @@ pages:
     pages:
       - page: integration-guides/smart-contracts.md
         label: Smart Contract Integration Guide
+      - page: integration-guides/resolution-libraries.md
+        label: Resolution Libraries Integration Guide
     separatorLine: true
   - label: Frequently Asked Questions
     page: reverse-resolution-faq.md

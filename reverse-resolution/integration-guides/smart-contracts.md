@@ -121,3 +121,5 @@ fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenI
 :::success Congratulations
 You have successfully integrated reverse resolution using smart contracts.
 :::
+
+<embed src="/snippets/_discord.md" />

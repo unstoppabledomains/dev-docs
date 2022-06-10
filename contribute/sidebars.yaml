@@ -1,7 +1,8 @@
 pages:
   - separator: Contribute to Unstoppable
     separatorLine: true
-  - page: unstoppable-quests.md
+  - label: UD Developer Quests
+    page: unstoppable-quests.md
     separatorLine: true
   - label: Integration Quests
     page: integration-quests.md
