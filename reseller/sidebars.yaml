@@ -25,8 +25,3 @@ pages:
   - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Reseller Integration
     separatorLine: true
-  - group: Partner API
-    pages:
-      - page: ./openapi/reference.page.yaml
-        external: true
-    separatorLine: true
