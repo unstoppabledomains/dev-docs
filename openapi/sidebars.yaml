@@ -1,6 +1,5 @@
 pages:
-  - title: Partner API
-    page: reference.page.yaml
+  - page: reference.page.yaml
     separatorLine: true
   - page: loginref.page.yaml
     separatorLine: true
