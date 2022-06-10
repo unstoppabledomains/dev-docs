@@ -1,13 +1,13 @@
 ---
 title: Free Domain Minting Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to mint free domains with your Reseller account.
+description: This guide shows how to mint free domains with your Partner account.
 ---
 
 ## Overview
 
-Unstoppable Domains offers free domain minting to Resellers based on specified criteria. Authorized Resellers can use the following [API endpoints](../reseller-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
+Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following [API endpoints](../reseller-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
 
-The following diagram shows the general process between the Reseller and Unstoppable Domains during the free domain minting process.
+The following diagram shows the general process between the Partner and Unstoppable Domains during the free domain minting process.
 
 <figure>
 
@@ -22,9 +22,9 @@ The following diagram shows the general process between the Reseller and Unstopp
 
 ## Step 2: Setup Criteria for Free Domains
 
-Resellers work with the Unstoppable Domains team to establish the "allowed free TLDs" and "allowed free tiers" criteria for their account.
+Partners work with the Unstoppable Domains team to establish the "allowed free TLDs" and "allowed free tiers" criteria for their account.
 
-Then, the "allowed free TLDs" and "allowed free tiers" list is assigned to the Reseller's account, and they can only mint a free domain if it matches the tier and has an appropriate domain ending.
+Then, the "allowed free TLDs" and "allowed free tiers" list is assigned to the Partner's account, and they can only mint a free domain if it matches the tier and has an appropriate domain ending.
 
 The table below shows how the pricing tiers are structured at Unstoppable Domains. Most free domains will be a Tier 7 or Tier 8 domain with a combination of letters and numbers.
 
@@ -87,7 +87,7 @@ Here is an example request to mint a free domain with the following details:
 
 | Field Name | Value |
 | - | - |
-| Domain Name | reseller-test-67687986466875.wallet |
+| Domain Name | partner-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
@@ -104,7 +104,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
   },
   "domains": [
     {
-      "name": "reseller-test-67687986466875.wallet",
+      "name": "partner-test-67687986466875.wallet",
       "ownerAddress": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
       "email": "sandbox-test@unstoppabledomains.com",
       "resolution": {
@@ -129,7 +129,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
         {
             "domain": {
                 "id": 966210,
-                "name": "reseller-test-67687986466875.wallet",
+                "name": "partner-test-67687986466875.wallet",
                 "ownerAddress": null,
                 "resolver": null,
                 "resolution": {},
@@ -155,7 +155,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
 
 ## Reserving a Free Domain
 
-You can reserve a free domain and mint it at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Reseller that reserved it.
+You can reserve a free domain and mint it at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Partner that reserved it.
 
 To reserve a domain, you need to request the Reserve Free Domains endpoint with the following details:
 
@@ -187,7 +187,7 @@ The following considerations apply to minting free domains:
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
 
 :::success congratulations!
-You have successfully minted a free domain with your Reseller account.
+You have successfully minted a free domain with the Partner API.
 :::
 
 <embed src="/snippets/_discord.md" />

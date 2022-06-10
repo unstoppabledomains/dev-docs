@@ -1,34 +1,34 @@
 ---
-title: Reseller Integration Guides | Unstoppable Domains Developer Portal
-description: This page reviews the integration guides for UD's Reseller API feature. This feature works for Polygon domains.
+title: Partner Integration Guides | Unstoppable Domains Developer Portal
+description: This page reviews the integration guides for UD's Partner API feature. This feature works for Polygon domains.
 ---
 
 # Getting Started with Integrating UD
 
-Unstoppable Domains Reseller API is a versatile feature with several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option.
+Unstoppable Domains Partner API is a versatile feature with several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option.
 
-:::warning Important
-Reseller API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](../../polygon/polygon-migration-guide.md) to get started.
+:::warning important
+Partner API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](../../polygon/polygon-migration-guide.md) to get started.
 :::
 
-## Step 1: Register As a Reseller
+## Step 1: Register As a Partner
 
-Before beginning the integration process for Unstoppable's Reseller feature, you must register as a reseller and obtain reseller credentials. Please see the [**Register as a Reseller Guide**](../index.md) for more details.
+Before beginning the integration process for Unstoppable's Partner API, you must register as a partner and obtain partner credentials. Please see the [**Register as a Partner Guide**](../index.md) for more details.
 
 ## Step 2: Locate Your Reseller ID
 
-To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your resellerID. This information can be found in your [UD Reseller Dashboard](https://unstoppabledomains.com/resellers).
+To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner Dashboard](https://unstoppabledomains.com/resellers).
 
 <figure>
 
-![Location of ResellerID in UD Reseller Dashboard](/images/reseller-id.png '#width=80%;')
+![Location of ResellerID in UD Partner Dashboard](/images/reseller-id.png '#width=80%;')
 
-<figcaption>Location of ResellerID in UD Reseller Dashboard</figcaption>
+<figcaption>Location of ResellerID in UD Partner Dashboard</figcaption>
 </figure>
 
 ## Step 3: Choose Your Integration Path
 
-There are several ways to integrate with Unstoppable's Reseller feature, detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
+There are several ways to integrate with Unstoppable's Partner API, detailed in the chart below. Partners are encouraged to integrate more than one pathway.
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |

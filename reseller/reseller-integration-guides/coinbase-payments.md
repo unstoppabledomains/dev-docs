@@ -1,6 +1,6 @@
 ---
 title: Coinbase Payments Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to configure your Reseller account to accept Coinbase payments. Payout information can be tracked in the UD Reseller Dashboard.
+description: This guide shows how to configure your Partner account to accept Coinbase payments. Payout information can be tracked in the UD Partner Dashboard.
 ---
 
 # Coinbase Payments Guide
@@ -18,7 +18,7 @@ The following diagram shows the general process that occurs between Coinbase and
 
 ## Step 1: Configure Coinbase for Unstoppable Domains
 
-* To begin accepting crypto payments from customers, UD resellers must ensure that Coinbase integration is configured correctly.
+* To begin accepting crypto payments from customers, UD partners must ensure that Coinbase integration is configured correctly.
 * A wallet transaction should make a ‘Buy Domain’ call with the payments field defined to **“coinbase.”**
 * UD will respond with the coinbase chargeID which can be used with the Coinbase API.
 
@@ -46,11 +46,11 @@ To begin accepting crypto payments from your customers, Coinbase offers several 
 
 ## Step 3: Receive CoinBase Payouts
 
-* Coinbase payouts are manually processed by Unstoppable Domains within 5 business days of receiving the payout request and only after the reseller has earned at least $600 in Coinbase sales.
-* Resellers can request a Coinbase payout in the UD Reseller Dashboard by clicking on the “Request Payout” button.
+* Coinbase payouts are manually processed by Unstoppable Domains within 5 business days of receiving the payout request and only after the partner has earned at least $600 in Coinbase sales.
+* Partners can request a Coinbase payout in the UD Partner Dashboard by clicking on the “Request Payout” button.
 
 :::info
-The “Request Payout” button is grayed out and automatically appears after the Reseller account has earned a minimum of $600 in Coinbase sales.
+The “Request Payout” button is grayed out and automatically appears after the Partner account has earned a minimum of $600 in Coinbase sales.
 :::
 
 <figure>
@@ -60,10 +60,10 @@ The “Request Payout” button is grayed out and automatically appears after th
 <figcaption>Button location for requesting a manual payout of Coinbase sales</figcaption>
 </figure>
 
-* Resellers can receive Coinbase payouts via Stripe or Ethereum. This information is discussed and setup with the UD Finance Team before processing the initial CoinBase payout.
+* Partners can receive Coinbase payouts via Stripe or Ethereum. This information is discussed and setup with the UD Finance Team before processing the initial CoinBase payout.
 
 :::success Congratulations!
-You just setup your Reseller account to accept Coinbase payments.
+You just setup your Partner account to accept Coinbase payments.
 :::
 
 <embed src="/snippets/_discord.md" />

@@ -1,11 +1,11 @@
 ---
-title: Error Codes for Troubleshooting Reseller Integrations
-description: This page provides error codes and explanations to use when troubleshooting the reseller API endpoints.
+title: Error Codes for Troubleshooting Partner Integrations
+description: This page provides error codes and explanations to use when troubleshooting the partner API endpoints.
 ---
 
 # Error Codes for Troubleshooting
 
-Reseller API errors are in JSON format.
+Partner API errors are in JSON format.
 
 ```
 {
@@ -34,7 +34,7 @@ Reseller API errors are in JSON format.
 | Error Code                    | Explanation                                                               |
 | ----------------------------- | ------------------------------------------------------------------------- |
 | 400 - INVALID\_DOMAIN\_SUFFIX | Provided domain endings in TLD filter are invalid.                                  |
-| 400 - NOT\_SUPPORTED          | The reseller does not provide free domains (for free domain suggestions). |
+| 400 - NOT\_SUPPORTED          | The partner does not provide free domains (for free domain suggestions). |
 
 ## POST **Orders**
 

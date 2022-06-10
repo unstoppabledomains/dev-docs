@@ -1,19 +1,19 @@
 pages:
-  - separator: Become a UD Reseller
+  - separator: Become a UD Partner
     separatorLine: true
-  - label: Register as a Reseller
+  - label: Register as a Partner
     page: index.md
     separatorLine: true
   - label: Getting Started with Integrating UD
     page: reseller-pathways.md
     separatorLine: true
-  - group: Reseller Integration Guides
+  - group: Partner Integration Guides
     expanded: false
     pages:
       - page: reseller-integration-guides/mint-free-domains.md
         label: Free Domain Minting Guide
-      - label: Stripe Payments Guide
-        page: reseller-integration-guides/stripe-payments.md
+      - page: reseller-integration-guides/stripe-payments.md
+        label: Stripe Payments Guide
       - page: reseller-integration-guides/coinbase-payments.md
         label: Coinbase Payments Guide
       - page: reseller-integration-guides/redirect-url-payments.md
@@ -23,5 +23,5 @@ pages:
     label: Reseller API Endpoints
     separatorLine: true
   - page: error-codes-for-troubleshooting.md
-    label: Error Codes to Troubleshoot Reseller Integration
+    label: Error Codes to Troubleshoot Partner Integration
     separatorLine: true

@@ -105,7 +105,9 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### P
 
-**Payback**: A payment method that allows resellers to mint paid domains for customers and process the payment on their application without involving Unstoppable Domains.
+**Partner**: A user authorized by Unstoppable Domains to [sell domains to users](../use-cases/sell-domains-users.md) in their applications.
+
+**Payback**: A payment method that allows partners to mint paid domains for customers and process the payment on their application without involving Unstoppable Domains.
 
 **Peer-to-Peer (P2P)**: A distributed network of two or more computers interacting directly without a central server or entity.
 
@@ -126,8 +128,6 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 **Registry**: The naming service smart contract manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).
 
 **Remote Procedure Call (RPC)**: A programming interface that allows one program to use the services of another program on a remote machine.
-
-**Reseller**: A user authorized by Unstoppable Domains to [sell domains to users](../use-cases/sell-domains-users.md) in their applications.
 
 **Resolver**: The Crypto Name Service (CNS) smart contract that is responsible for storing, updating, and resolving domain records.
 

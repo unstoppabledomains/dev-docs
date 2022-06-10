@@ -1,11 +1,11 @@
 ---
 title: Stripe Payments Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in the Unstoppable Domains Reseller dashboard.
+description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in the Unstoppable Domains Partner dashboard.
 ---
 
 # Stripe Payments Guide
 
-Unstoppable Domains supports [Stripe](https://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for resellers that mostly use client-side applications.
+Unstoppable Domains supports [Stripe](https://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
 The following diagram shows the general process between Stripe and Unstoppable Domains after a customer buys a domain.
 
@@ -18,11 +18,11 @@ The following diagram shows the general process between Stripe and Unstoppable D
 
 ## Step 1: Create a Stripe Account
 
-You need to have a Stripe account before connecting it to your Unstoppable Domains Reseller account. If you have not created a Stripe account before now, create one here: <https://dashboard.stripe.com/register>.
+You need to have a Stripe account before connecting it to your Unstoppable Domains Partner account. If you have not created a Stripe account before now, create one here: <https://dashboard.stripe.com/register>.
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-Click on the `CONNECT` button in the Stripe section of the [UD Reseller dashboard](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
+Click on the `CONNECT` button in the Stripe section of the [UD Partner dashboard](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
 
 Your Stripe API keys are public keys and they are safe to reveal in your application:
 
@@ -151,7 +151,7 @@ Here is an example request to purchase a domain with the following details using
 | Field Name | Value |
 | - | - |
 | Stripe Token | tok_1L6Ys1G8PQyZCUJhiFcaDUVy |
-| Domain Name | reseller-test-67687986466871.wallet |
+| Domain Name | partner-test-67687986466871.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
@@ -171,7 +171,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
     },
     "domains": [
         {
-            "name": "reseller-test-67687986466871.wallet",
+            "name": "partner-test-67687986466871.wallet",
             "email": "sandbox-test@unstoppabledomains.com",
             "ownerAddress": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589",
             "resolution": {
@@ -196,7 +196,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
         {
             "domain": {
                 "id": 971624,
-                "name": "reseller-test-67687986466871.wallet",
+                "name": "partner-test-67687986466871.wallet",
                 "ownerAddress": null,
                 "resolver": null,
                 "resolution": {},
@@ -222,7 +222,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
 
 ## Receive Stripe Payouts
 
-Stripe payouts occur daily directly from Stripe and can be tracked within the Reseller dashboard by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
+Stripe payouts occur daily directly from Stripe and can be tracked within the Partner dashboard by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
 
 <figure>
 
@@ -232,7 +232,7 @@ Stripe payouts occur daily directly from Stripe and can be tracked within the Re
 </figure>
 
 :::info
-The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Reseller accounts.
+The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Partner accounts.
 :::
 
 ### Stripe Payouts Tab

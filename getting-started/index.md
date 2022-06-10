@@ -20,16 +20,17 @@ You'll need the following to get started:
 
 ## How This Portal Is Organized
 
-These items are listed in order of complexity. For example, if you are just starting out with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the integration guides, API reference, or developer toolkit.
+These items are listed in order of complexity. For example, if you are starting with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the integration guides, API reference, or developer toolkit.
 
 - [Use Cases](../use-cases/index.mdx)
 - [Developer Integration Guides](../guides.mdx)
   - [Login with Unstoppable](../login-with-unstoppable/index.md)
-  - [IPFS Websites](../d-websites/index.md)
   - [Crypto Payments](../crypto-payments/index.md)
-  - [Resellers](../reseller/index.md)
-  - [Polygon Layer 2](../polygon/index.md)
+  - [Partners](../reseller/index.md)
+  - [IPFS Websites](../d-websites/index.md)
   - [Manage Domains](../manage-domains/index.md)
+  - [Polygon Layer 2](../polygon/index.md)
+  - [Reverse Resolution](../reverse-resolution/index.md)
 - [API Reference](../openapi/reference.page.yaml)
 - [Developer Toolkit](../developer-toolkit/index.md)
 

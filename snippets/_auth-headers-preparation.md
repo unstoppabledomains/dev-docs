@@ -1,4 +1,4 @@
-The Reseller API uses bearer tokens to authorize requests with the `Secret API Token` from the Reseller dashboard.
+The Partner API uses bearer tokens to authorize requests with the `Secret API Token` from the Partner dashboard.
 
 | Field Name | Value |
 | - | - |
