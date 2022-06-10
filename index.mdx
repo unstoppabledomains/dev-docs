@@ -31,15 +31,9 @@ export default LandingLayout;
   <H1>Developer Documentation</H1>
   <H2>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
-    {/* <Button size="xlarge" to="https://app.redoc.ly">
-      Redocly app
-    </Button> */}
      <Button variant="contained" size="xlarge" color="primary" to="getting-started/index.md">
       Get Started
     </Button>
-    {/* <Button variant="outlined" size="xlarge" to="https://redoc.ly/docs">
-      Docs
-    </Button> */}
   </Flex>
 </Jumbotron>
 <Box my={25}>
@@ -81,5 +75,12 @@ export default LandingLayout;
         Design a custom decentralized website, modify a community generated template,
         or share your own IPFS template with the community.
     </WideTile>
+  </FlexSection>
+  <SectionHeader>
+    Integrated our products?
+    <Emphasis> Help us improve</Emphasis>
+  </SectionHeader>
+  <FlexSection justifyContent="space-around" flexWrap="wrap">
+    <DeveloperSurvey/>
   </FlexSection>
 </Box>
