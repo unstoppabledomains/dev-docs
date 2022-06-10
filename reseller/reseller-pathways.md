@@ -46,3 +46,5 @@ The following considerations apply to purchasing domains:
 * The domain length must not exceed 253 characters
 
 <embed src="/snippets/_discord.md" />
+
+<embed src="/snippets/_developer-survey-embed.md" />

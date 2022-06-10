@@ -54,3 +54,5 @@ Reseller API errors are in JSON format.
 | Error Code              | Explanation         |
 | ----------------------- | ------------------- |
 | 404 - ORDER\_NOT\_FOUND | Order is not found. |
+
+<embed src="/snippets/_discord.md" />

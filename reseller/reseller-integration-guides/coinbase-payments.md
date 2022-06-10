@@ -65,3 +65,5 @@ The “Request Payout” button is grayed out and automatically appears after th
 :::success Congratulations!
 You just setup your Reseller account to accept Coinbase payments.
 :::
+
+<embed src="/snippets/_discord.md" />

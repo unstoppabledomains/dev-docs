@@ -9,7 +9,7 @@ The Redirect URL payment flow is the easiest payment process to implement for re
 
 Basically, in this case, the reseller acts like an "affiliate". Resellers redirect their users to the UD website where users can purchase domains and the reseller receives a commission (% of the sale).
 
-## Pre-requisites
+## Prerequisites
 These following items are necessary to complete this Reseller payment integration:
 * A shared secret between Unstoppable Domains and the reseller (provided by Unstoppable Domains)
 * strictName (provided by Unstoppable Domains)
@@ -90,3 +90,5 @@ You can use Unstoppable Domains sandbox environment to test the redirect URI pay
 :::success Congratulations!
 You just configured your Reseller account to process payments using a Redirect URL.
 :::
+
+<embed src="/snippets/_discord.md" />

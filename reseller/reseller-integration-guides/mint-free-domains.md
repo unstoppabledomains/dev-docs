@@ -189,3 +189,5 @@ The following considerations apply to minting free domains:
 :::success congratulations!
 You have successfully minted a free domain with your Reseller account.
 :::
+
+<embed src="/snippets/_discord.md" />

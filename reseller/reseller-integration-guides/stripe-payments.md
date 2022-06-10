@@ -260,3 +260,5 @@ Click the `Account` tab to view Stripe account information or update your Stripe
 :::success congratulations!
 You have successfully purchased a domain using the Stripe payment method.
 :::
+
+<embed src="/snippets/_discord.md" />

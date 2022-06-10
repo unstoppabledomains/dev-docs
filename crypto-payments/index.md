@@ -35,4 +35,4 @@ In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application 
 A domain can store many records and key formats. To learn about our supported record types, see our [records reference](../getting-started/domain-registry-essentials/records-reference/) guide.
 :::
 
-<embed src="/snippets/_discord.md" />
+<embed src="/snippets/_developer-survey-embed.md" />
