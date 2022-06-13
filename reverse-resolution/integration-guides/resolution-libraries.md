@@ -9,7 +9,7 @@ This guide covers how to retrieve the reverse record of UD domains using the Res
 
 ## Reverse Resolution for an Address
 
-To resolve the reverse record of a wallet address, you must call the appropriate method from the resolution library in the language you choose and pass the address parameter.
+To resolve the reverse record of a wallet address, you must call the appropriate method from the resolution library in the language you choose and provide the address parameter.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -41,5 +41,9 @@ function reverseUrl(address) {
 reverseTokenId('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
 reverseUrl('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
 ```
+
+:::success Congratulations
+You have successfully integrated reverse resolution using UD's Resolution Libraries. Happy Hacking!
+:::
 
 <embed src="/snippets/_discord.md" />

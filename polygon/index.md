@@ -5,7 +5,7 @@ description: This page provides a high-level overview of Polygon Layer 2 scaling
 
 # Polygon L2 High Level Overview
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Unstoppable Domains uses Polygon as our layer 2 (L2) scaling solution. This allows us to make our NFT domains free to mint and manage on L2, and UD customers will no longer have to pay minting fees, renewal fees, or gas fees. As part of this integration, new and existing members will be able to mint and manage their domains for free on Polygon. Existing members will be able to move their minted domains from Zilliqa and Ethereum to Polygon if they so choose.
 
