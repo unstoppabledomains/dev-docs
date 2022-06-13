@@ -174,11 +174,7 @@ All authorization code requests or flows must use the PKCE extension. This only 
 This setting cannot be used for front-end integrations. It can only be enabled for applications, such as servers, that can store secrets.
 :::
 
-This setting configures how to send the client secret to the authorization server after you receive the authorization code; can be enabled for an extra layer of security but can only be used if your application can store secrets (e.g., node.js integrations). The client secret is stored on server as a hash, so authorization server doesn't actually know the client secret. See additional resource for [Client Basic and Client Secret oAuth](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3.1).
+This setting configures how to send the client secret to the authorization server after you receive the authorization code; can be enabled for an extra layer of security but can only be used if your application can store secrets (e.g., node.js integrations). The client secret is stored on the server as a hash, so the authorization server doesn't actually know the client secret. See additional resource for [Client Basic and Client Secret oAuth](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3.1).
 
 * **client secret basic:** uses http basic authentication to send over clientid:clientsecret inside the header, which is base64 encoded.
 * **client secret post:** uses http POST authentication to send over client\_secret parameter inside the body.
-
-:::danger warning
-**Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
-:::
