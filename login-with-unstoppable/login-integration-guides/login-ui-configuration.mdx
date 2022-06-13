@@ -37,10 +37,15 @@ uauth.user()
   })
 ```
 
-```javascript bnc-onboard
-const uauthBNCOnboard = new UAuthBNCOnboard()
+```javascript web3-onboard
+import UAuth from '@uauth/js;
 
-uauthBNCOnboard.uauth.user().then().catch()
+const uauthOptions = {
+  clientID: "",
+  redirectUri: ""
+}
+
+new UAuth(uauthOptions).user().then().catch()
 ```
 
 ```javascript web3-react
