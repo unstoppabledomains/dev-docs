@@ -178,3 +178,7 @@ This setting configures how to send the client secret to the authorization serve
 
 * **client secret basic:** uses http basic authentication to send over clientid:clientsecret inside the header, which is base64 encoded.
 * **client secret post:** uses http POST authentication to send over client\_secret parameter inside the body.
+
+:::danger warning
+**Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
+:::
