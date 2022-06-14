@@ -129,7 +129,7 @@ The request body contains information about your order and must be in JSON forma
 * `payment`: A key-value dictionary with payment information about the order:
     * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
     * `properties`: A key-value dictionary with more information about the order payment method:
-      * `tokenId`: (string) The Stripe payment token for the order
+      * `tokenId`: The Stripe payment token for the order
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.

@@ -35,7 +35,7 @@ Yes, we do not allow wallets that have minted a UD domain in the past to mint a 
 
 ### Does UD have ways to prevent users from creating unlimited wallets to claim free domains?
 
-Presently, the partner must control this (e.g., one domain per account). Unstoppable Domains is also working on solutions to prevent this on our end.
+Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters.
 
 ### Can the Partner API resell the same domains offered on the UD website?
 

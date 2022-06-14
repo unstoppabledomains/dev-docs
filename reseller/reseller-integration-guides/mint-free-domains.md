@@ -43,7 +43,15 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 
-## Step 4: Prepare Your Request Body
+## Step 4: Prepare Your Order Security
+
+Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [FingerprintJS Docs](https://dev.fingerprintjs.com/docs) for integration guides and how to generate a FingerprintJS ID (`VisitorID`) for your users.
+
+:::info
+The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
+:::
+
+## Step 5: Prepare Your Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -52,6 +60,12 @@ The request body contains information about your order and must be in JSON forma
   "payment": {
     "method": "free"
   },
+  "security": [
+    {
+      "type": "fingerprintjs",
+      "identifier": string // FingerprintJS ID of the user minting the domain
+    }
+  ],
   "domains": [
     {
       "name": string, // domain name you are minting
@@ -66,6 +80,9 @@ The request body contains information about your order and must be in JSON forma
 
 * `payment`: A key-value dictionary with payment information about the order:
     * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
+* `security`: (array) An array with information about the order security:
+    * `type`: The order security method. The value should be "fingerprintjs" for FingerprintJS verification.
+    * `identifier`: The FingerprintJS ID (`VisitorID`) of the user minting the domain.
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
@@ -77,7 +94,7 @@ The request body contains information about your order and must be in JSON forma
 You need to provide either the `ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
 :::
 
-## Step 5: Use the Orders Endpoint
+## Step 6: Use the Orders Endpoint
 
 <embed src="/snippets/_orders-endpoint-usage.md" />
 
@@ -87,6 +104,8 @@ Here is an example request to mint a free domain with the following details:
 
 | Field Name | Value |
 | - | - |
+| Security Type | FingerprintJS |
+| FingerprintJS ID | qwerty12345 |
 | Domain Name | partner-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
@@ -102,6 +121,12 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
   "payment": {
     "method": "free"
   },
+  "security": [
+    {
+      "type": "fingerprintjs",
+      "identifier": "qwerty12345"
+    }
+  ],
   "domains": [
     {
       "name": "partner-test-67687986466875.wallet",
@@ -187,6 +212,7 @@ The following considerations apply to minting free domains:
 * The domain does not have a custom price set.
 * It has 8+ characters, at least one letter, and one number.
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
+* The FingerprintJS ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
 
 :::success congratulations!
 You have successfully minted a free domain with the Partner API.
