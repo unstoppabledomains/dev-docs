@@ -79,9 +79,9 @@ The request body contains information about your order and must be in JSON forma
 ```
 
 * `payment`: A key-value dictionary with payment information about the order:
-    * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
+    * `method`: (string) The payment method the API should create. The value should be `"free"` for free domains.
 * `security`: (array) An array with information about the order security:
-    * `type`: The order security method. The value should be "fingerprintjs" for FingerprintJS verification.
+    * `type`: The order security method. The value should be `"fingerprintjs"` for FingerprintJS verification.
     * `identifier`: The FingerprintJS Visitor ID of the user minting the domain.
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.

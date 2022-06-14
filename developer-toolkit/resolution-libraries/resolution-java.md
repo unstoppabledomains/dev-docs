@@ -64,6 +64,7 @@ try {
 | InvalidDomain | Thrown when you resolve an invalid domain address. |
 | NotImplemented | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `getDns()`, `batchOwners()`, `getDomainName()`, `getLocations()`, and `getTokenUri()` methods for the Zilliqa Name Service (ZNS). |
 | RecordNotFound | Thrown when you resolve an undefined record of a domain. For example, resolving the Twitter handle of a domain that doesn't have one. |
+| ReverseResolutionNotSpecified | Thrown when reverse resolution is not configured for an address. |
 | UnknownCurrency | Thrown when you resolve a domain with a currency not supported by the current resolution instance. |
 | UnknownError | Thrown when an unknown error occurs while resolving a domain with the current resolution instance. |
 | UnregisteredDomain | Thrown when you resolve a domain not owned by any address. |

@@ -127,7 +127,7 @@ The request body contains information about your order and must be in JSON forma
 ```
 
 * `payment`: A key-value dictionary with payment information about the order:
-    * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
+    * `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
     * `properties`: A key-value dictionary with more information about the order payment method:
       * `tokenId`: The Stripe payment token for the order
 * `domains`: (array) An array with information about the domains you want to purchase:
