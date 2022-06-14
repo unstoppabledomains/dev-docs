@@ -45,7 +45,7 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 ## Step 4: Prepare Your Order Security
 
-Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [FingerprintJS Docs](https://dev.fingerprintjs.com/docs) for integration guides and how to generate a FingerprintJS ID (`VisitorID`) for your users.
+Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [FingerprintJS Docs](https://dev.fingerprintjs.com/docs) for integration guides and how to generate a FingerprintJS Visitor ID for your users.
 
 :::info
 The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
@@ -63,7 +63,7 @@ The request body contains information about your order and must be in JSON forma
   "security": [
     {
       "type": "fingerprintjs",
-      "identifier": string // FingerprintJS ID of the user minting the domain
+      "identifier": string // FingerprintJS Visitor ID of the user minting the domain
     }
   ],
   "domains": [
@@ -82,7 +82,7 @@ The request body contains information about your order and must be in JSON forma
     * `method`: (string) The payment method the API should create. The value should be "free" for free domains.
 * `security`: (array) An array with information about the order security:
     * `type`: The order security method. The value should be "fingerprintjs" for FingerprintJS verification.
-    * `identifier`: The FingerprintJS ID (`VisitorID`) of the user minting the domain.
+    * `identifier`: The FingerprintJS Visitor ID of the user minting the domain.
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
@@ -105,7 +105,7 @@ Here is an example request to mint a free domain with the following details:
 | Field Name | Value |
 | - | - |
 | Security Type | FingerprintJS |
-| FingerprintJS ID | qwerty12345 |
+| FingerprintJS Visitor ID | qwerty12345 |
 | Domain Name | partner-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
@@ -190,7 +190,7 @@ To reserve a domain, you need to request the Reserve Free Domains endpoint with 
 
 ### Domain Reservation Example
 
-```
+```bash
 curl --location -g --request POST '/{resellerID}/domains/{domainName}/reserve/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -212,7 +212,7 @@ The following considerations apply to minting free domains:
 * The domain does not have a custom price set.
 * It has 8+ characters, at least one letter, and one number.
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
-* The FingerprintJS ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
+* The FingerprintJS Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
 
 :::success congratulations!
 You have successfully minted a free domain with the Partner API.
