@@ -35,7 +35,7 @@ Yes, we do not allow wallets that have minted a UD domain in the past to mint a 
 
 ### Does UD have ways to prevent users from creating unlimited wallets to claim free domains?
 
-Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters.
+Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters.
 
 ### Can the Partner API resell the same domains offered on the UD website?
 

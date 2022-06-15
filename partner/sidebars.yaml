@@ -5,26 +5,26 @@ pages:
     page: index.md
     separatorLine: true
   - label: Getting Started with Integrating UD
-    page: reseller-pathways.md
+    page: partner-pathways.md
     separatorLine: true
   - group: Partner Integration Guides
     expanded: false
     pages:
-      - page: reseller-integration-guides/mint-free-domains.md
+      - page: partner-integration-guides/mint-free-domains.md
         label: Free Domain Minting Guide
-      - page: reseller-integration-guides/stripe-payments.md
+      - page: partner-integration-guides/stripe-payments.md
         label: Stripe Payments Guide
-      - page: reseller-integration-guides/coinbase-payments.md
+      - page: partner-integration-guides/coinbase-payments.md
         label: Coinbase Payments Guide
-      - page: reseller-integration-guides/redirect-url-payments.md
+      - page: partner-integration-guides/redirect-url-payments.md
         label: Redirect URL Payments Guide
     separatorLine: true
-  - page: reseller-api-endpoints.md
+  - page: partner-api-endpoints.md
     label: Partner API Endpoints
     separatorLine: true
   - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Partner Integration
     separatorLine: true
-  - page: reseller-faq.md
+  - page: partner-faq.md
     label: Frequently Asked Questions
     separatorLine: true

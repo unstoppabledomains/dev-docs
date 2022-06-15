@@ -36,7 +36,7 @@ Example: [https://api.commerce.coinbase.com/charges/BDCL6NRV](https://api.commer
 
 ## Step 2: Track the CoinBase Transaction
 
-* To track whether the customer’s payment was processed successfully, the developer can use the [Order Number API endpoint](../reseller-api-endpoints.md).
+* To track whether the customer’s payment was processed successfully, the developer can use the [Order Number API endpoint](../partner-api-endpoints.md).
 
 ### Other CoinBase Considerations
 

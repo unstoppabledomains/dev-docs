@@ -48,7 +48,7 @@ To avoid missing the email about your partner application status, please update 
 
 ## Step 3: Configure Payment Information
 
-The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Partner Integration Guides](reseller-pathways.md)** to integrate one or more payment methods for your partner account.
+The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Partner Integration Guides](partner-pathways.md)** to integrate one or more payment methods for your partner account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.

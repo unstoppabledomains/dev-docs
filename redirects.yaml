@@ -23,7 +23,7 @@
   to: '/developer-toolkit/resolution-cli/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-api-endpoints/':
-  to: '/reseller/reseller-api-endpoints/'
+  to: '/partner/partner-api-endpoints/'
   type: 301
 '/get-test-domain':
   to: '/getting-started/test-domains/faucet/'
@@ -59,13 +59,13 @@
   to: '/manage-domains/delegating-domain-management/'
   type: 301
 '/sell-domains-to-users-in-my-app/register-as-reseller':
-  to: '/reseller/'
+  to: '/partner/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides':
-  to: '/reseller/reseller-pathways/'
+  to: '/partner/partner-pathways/'
   type: 301
 '/sell-domains-to-users-in-my-app/error-codes-for-troubleshooting':
-  to: '/reseller/error-codes-for-troubleshooting/'
+  to: '/partner/error-codes-for-troubleshooting/'
   type: 301
 '/build-a-decentralized-website/overview-of-ipfs-and-d-web':
   to: /d-websites/
@@ -149,16 +149,16 @@
   to: '/getting-started/domain-registry-essentials/uns-architecture-overview/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/stripe-payments-guide':
-  to: '/reseller/reseller-integration-guides/stripe-payments/'
+  to: '/partner/partner-integration-guides/stripe-payments/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/coinbase-payments-guide':
-  to: '/reseller/reseller-integration-guides/coinbase-payments/'
+  to: '/partner/partner-integration-guides/coinbase-payments/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/claim-free-domains-guide':
-  to: '/reseller/reseller-integration-guides/claim-free-domains/'
+  to: '/partner/partner-integration-guides/mint-free-domains/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/redirect-url-payments-guide':
-  to: '/reseller/reseller-integration-guides/redirect-url-payments/'
+  to: '/partner/partner-integration-guides/redirect-url-payments/'
   type: 301
 '/build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website':
   to: '/d-websites/build-website/#unstoppable-domains-templates'
@@ -200,5 +200,32 @@
   to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
   type: 301
 '/reseller/reseller-integration-guides/reseller-pathways/':
-  to: '/reseller/reseller-pathways/'
+  to: '/partner/partner-pathways/'
+  type: 301
+'/reseller/':
+  to: '/partner/'
+  type: 301
+'/reseller/reseller-pathways/':
+  to: '/partner/partner-pathways/'
+  type: 301
+'/reseller/reseller-integration-guides/mint-free-domains/':
+  to: '/partner/partner-integration-guides/mint-free-domains/'
+  type: 301
+'/reseller/reseller-integration-guides/stripe-payments/':
+  to: '/partner/partner-integration-guides/stripe-payments/'
+  type: 301
+'/reseller/reseller-integration-guides/coinbase-payments/':
+  to: '/partner/partner-integration-guides/coinbase-payments/'
+  type: 301
+'/reseller/reseller-integration-guides/redirect-url-payments/':
+  to: '/partner/partner-integration-guides/redirect-url-payments/'
+  type: 301
+'/reseller/reseller-api-endpoints/':
+  to: '/partner/partner-api-endpoints/'
+  type: 301
+'/reseller/error-codes-for-troubleshooting/':
+  to: '/partner/error-codes-for-troubleshooting/'
+  type: 301
+'/reseller/reseller-faq/':
+  to: '/partner/reseller-faq/'
   type: 301

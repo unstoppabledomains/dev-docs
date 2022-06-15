@@ -5,7 +5,7 @@ description: This guide shows how to mint free domains with your Partner account
 
 ## Overview
 
-Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following [API endpoints](../reseller-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
+Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following [API endpoints](../partner-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
 
 The following diagram shows the general process between the Partner and Unstoppable Domains during the free domain minting process.
 
@@ -39,11 +39,7 @@ The table below shows how the pricing tiers are structured at Unstoppable Domain
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.
 :::
 
-## Step 3: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 4: Prepare Your Order Security
+## Step 3: Prepare Your Order Security
 
 Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [Fingerprint Docs](https://dev.fingerprint.com/docs) for integration guides and how to generate a Fingerprint Visitor ID for your users.
 
@@ -104,6 +100,10 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
     .then(result => console.log(result.visitorId));
 </script>
 ```
+
+## Step 4: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 5: Prepare Your Request Body
 
