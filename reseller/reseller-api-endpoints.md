@@ -7,7 +7,7 @@ description: This page details the Partner API endpoints and links to the extern
 
 For more details about the Partner API endpoints, see the [Partner API endpoint specification](https://raw.githubusercontent.com/unstoppabledomains/website-api-docs-v2/master/openapi.yaml). These endpoints are specified in OpenAPI format, which provides an [interactive API explorer](https://docs.unstoppabledomains.com/openapi/reference/) in which you can try out sample API calls.
 
-:::info note
+:::info
 The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
 :::
 
@@ -20,7 +20,7 @@ The Partner API endpoints are as follows:
 * `GET` **Get Order Status**: provides the status of your order and tells if the domain has successfully "minted"
 * `POST` **Reserve Free Domain**: reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days
 
-:::info note
+:::info
 To reserve or lock a free domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the `Orders` endpoint).
 :::
 

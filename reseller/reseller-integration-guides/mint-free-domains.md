@@ -45,15 +45,58 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 ## Step 4: Prepare Your Order Security
 
-Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [FingerprintJS Docs](https://dev.fingerprintjs.com/docs) for integration guides and how to generate a FingerprintJS Visitor ID for your users.
+Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [Fingerprint Docs](https://dev.fingerprint.com/docs) for integration guides and how to generate a Fingerprint Visitor ID for your users.
 
-Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.com/docs/quick-start-guide#tagging-your-requests) with the `linkedId` parameter and your `ResellerID` when generating the `VisitorID` for your users. Here's a sample code snippet:
+:::info
+The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
+:::
+
+### Integrate the Fingerprint Subdomain
+
+Unstoppable Domains has a dedicated subdomain for Fingerprint verification to improve integration and user identification. You need to set the `endpoint` property in your Fingerprint initialization to our subdomain.
+
+Sandbox Environment:
+
+```
+https://fp.ud-sandbox.com
+```
+
+Production Environment:
+
+```
+https://fp.unstoppabledomains.com
+```
+
+Here's a sample code snippet:
+
+```javascript
+// Initialize the agent at application startup.
+const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
+  .then(FingerprintJS => FingerprintJS.load({
+    endpoint: 'https://fp.unstoppabledomains.com'
+  }));
+```
+
+### Tag Your Fingerprint Request
+
+Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.com/docs/quick-start-guide#tagging-your-requests) with the `linkedId` property and your `ResellerID` when generating the `VisitorID` for your users. Here's a sample code snippet:
+
+```javascript
+// Get the visitor identifier when you need it.
+fpPromise
+  .then(fp => fp.get({linkedId: '{ResellerID}'}))
+  .then(result => console.log(result.visitorId));
+```
+
+The code snippet below shows how to completely integrate Fingerprint verification into your free domain flow:
 
 ```javascript
 <script>
   // Initialize the agent at application startup.
   const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
-    .then(FingerprintJS => FingerprintJS.load());
+    .then(FingerprintJS => FingerprintJS.load({
+      endpoint: 'https://fp.unstoppabledomains.com'
+    }));
 
   // Get the visitor identifier when you need it.
   fpPromise
@@ -61,10 +104,6 @@ Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.
     .then(result => console.log(result.visitorId));
 </script>
 ```
-
-:::info
-The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
-:::
 
 ## Step 5: Prepare Your Request Body
 
@@ -78,7 +117,7 @@ The request body contains information about your order and must be in JSON forma
   "security": [
     {
       "type": "fingerprintjs",
-      "identifier": string // FingerprintJS Visitor ID of the user minting the domain
+      "identifier": string // Fingerprint Visitor ID of the user minting the domain
     }
   ],
   "domains": [
@@ -96,8 +135,8 @@ The request body contains information about your order and must be in JSON forma
 * `payment`: A key-value dictionary with payment information about the order:
     * `method`: (string) The payment method the API should create. The value should be `"free"` for free domains.
 * `security`: (array) An array with information about the order security:
-    * `type`: The order security method. The value should be `"fingerprintjs"` for FingerprintJS verification.
-    * `identifier`: The FingerprintJS Visitor ID of the user minting the domain.
+    * `type`: The order security method. The value should be `"fingerprintjs"` for Fingerprint verification.
+    * `identifier`: The Fingerprint Visitor ID of the user minting the domain.
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
@@ -119,8 +158,8 @@ Here is an example request to mint a free domain with the following details:
 
 | Field Name | Value |
 | - | - |
-| Security Type | FingerprintJS |
-| FingerprintJS Visitor ID | qwerty12345 |
+| Security Type | Fingerprint |
+| Fingerprint Visitor ID | qwerty12345 |
 | Domain Name | partner-test-67687986466875.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
@@ -227,7 +266,7 @@ The following considerations apply to minting free domains:
 * The domain does not have a custom price set.
 * It has 8+ characters, at least one letter, and one number.
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
-* The FingerprintJS Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
+* The Fingerprint Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
 
 :::success congratulations!
 You have successfully minted a free domain with the Partner API.

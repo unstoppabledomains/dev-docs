@@ -52,7 +52,7 @@ A number representing the milliseconds elapsed since the UNIX epoch. There is an
 
 Example in JavaScript: `Date.now()`
 
-:::info Note
+:::info
 UD is considering making this field optional in the near future. Please share your feedback on our [Discord channel](https://discord.com/invite/JWrEAAbp6R).
 :::
 
