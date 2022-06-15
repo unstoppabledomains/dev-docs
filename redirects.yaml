@@ -1,3 +1,15 @@
+'/getting-started/change-logs/resolution-changelog/':
+  to: '/developer-toolkit/changelogs/resolution-changelog'
+  type: 301
+ '/getting-started/change-logs/resolution-java-changelog/':
+  to: '/developer-toolkit/changelogs/resolution-java-changelog'
+  type: 301
+'/getting-started/change-logs/resolution-swift-changelog/':
+  to: '/developer-toolkit/changelogs/resolution-swift-changelog'
+  type: 301
+'/getting-started/change-logs/resolution-go-changelog/':
+  to: '/developer-toolkit/changelogs/resolution-go-changelog'
+  type: 301
 '/send-and-receive-crypto-payments/resolution-service-api/':
   to: '/developer-toolkit/resolution-service-api/'
   type: 301

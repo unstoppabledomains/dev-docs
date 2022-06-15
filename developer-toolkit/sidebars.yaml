@@ -63,3 +63,15 @@ pages:
       - label: Resolve Domains with Ethereum Smart Contracts
         page: direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
+  - group: Changelogs
+    expanded: false
+    pages:
+      - label: Resolution Library
+        page: changelogs/resolution-changelog.md
+      - label: Resolution Java Library
+        page: changelogs/resolution-java-changelog.md
+      - label: Resolution Swift Library
+        page: changelogs/resolution-swift-changelog.md
+      - label: Resolution Go Library
+        page: changelogs/resolution-go-changelog.md
+    separatorLine: true

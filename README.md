@@ -14,7 +14,7 @@ Unstoppable Domains Documentation is hosted by [Redocly](https://www.redocly.com
 - Files that shouldn't be edited directly: 
     - `developer-toolkit/smart-contracts/cns-smart-contracts.md`
     - `developer-toolkit/smart-contracts/uns-smart-contracts.md`
-    - `getting-started/changelogs/*-changelog.md`
+    - `developer-toolkit/changelogs/*-changelog.md`
 
 ### Suggesting page edits
 
