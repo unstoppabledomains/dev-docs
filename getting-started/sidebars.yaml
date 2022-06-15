@@ -28,18 +28,6 @@ pages:
       - label: Records Reference
         page: domain-registry-essentials/records-reference.md
     separatorLine: true
-  - group: Change Logs
-    expanded: false
-    pages:
-      - label: Resolution Library
-        page: change-logs/resolution-changelog.md
-      - label: Resolution Java Library
-        page: change-logs/resolution-java-changelog.md
-      - label: Resolution Swift Library
-        page: change-logs/resolution-swift-changelog.md
-      - label: Resolution Go Library
-        page: change-logs/resolution-go-changelog.md
-    separatorLine: true
   - page: glossary.md
     label: Glossary
     separatorLine: true
