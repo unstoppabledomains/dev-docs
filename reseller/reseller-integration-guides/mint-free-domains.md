@@ -47,6 +47,21 @@ Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounte
 
 Unstoppable Domains uses [FingerprintJS](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [FingerprintJS Docs](https://dev.fingerprintjs.com/docs) for integration guides and how to generate a FingerprintJS Visitor ID for your users.
 
+Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.com/docs/quick-start-guide#tagging-your-requests) with the `linkedId` parameter and your `ResellerID` when generating the `VisitorID` for your users. Here's a sample code snippet:
+
+```javascript
+<script>
+  // Initialize the agent at application startup.
+  const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
+    .then(FingerprintJS => FingerprintJS.load());
+
+  // Get the visitor identifier when you need it.
+  fpPromise
+    .then(fp => fp.get({linkedId: '{ResellerID}'}))
+    .then(result => console.log(result.visitorId));
+</script>
+```
+
 :::info
 The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
 :::
