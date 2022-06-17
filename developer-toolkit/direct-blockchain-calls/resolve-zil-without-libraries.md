@@ -495,4 +495,4 @@ The following table displays some domains to test for resolution:
 ## Resources
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/zil-Integration)
-* [UD Discord Community](https://discord.gg/b6ZVxSZ9Hn)
+* [UD Discord Community](https://discord.gg/unstoppabledomains)

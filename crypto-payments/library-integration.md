@@ -136,8 +136,8 @@ func main() {
 
 The `multiChainAddr()`, `multiChainAddress()`, `getMultiChainAddress()`, and `AddrVersion()` methods create a key from the provided `USDT` ticker and `ERC20` version. The key format is `crypto.USDT.version.<VERSION>.address`. In the example above with the `ERC-20` version of `USDT`, the created key would be `crypto.USDT.version.ERC20.address`.
 
-:::attention info
-Please see the [Managing Domain Records](../manage-domains/managing-domain-records.md) guide for information about supported crypto payment tickers and USDT versions.
+:::info
+Please see the [Records Reference](../getting-started/domain-registry-essentials/records-reference.md) guide for information about supported crypto payment tickers and chain versions.
 :::
 
 <embed src="/snippets/_discord.md" />

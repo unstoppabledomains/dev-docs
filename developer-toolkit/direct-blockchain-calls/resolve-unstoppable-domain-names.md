@@ -480,4 +480,4 @@ For example, you can try to resolve the following domains:
 ## Resources
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
-* [Discord community for UD](https://discord.gg/b6ZVxSZ9Hn)
+* [UD Discord Community](https://discord.gg/unstoppabledomains)

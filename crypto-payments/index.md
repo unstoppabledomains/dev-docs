@@ -31,7 +31,7 @@ In the demo above, we sent 1 `ETH` to the `ryan.crypto` domain. The application 
 <figcaption>Crypto payments success flow</figcaption>
 </figure>
 
-:::attention info
+:::info
 A domain can store many records and key formats. To learn about our supported record types, see our [records reference](../getting-started/domain-registry-essentials/records-reference/) guide.
 :::
 

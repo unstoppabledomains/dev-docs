@@ -5,7 +5,7 @@ description: An overview of the tools available for developers integrating Unsto
 
 # Developer Toolkit
 
-You've reached the developer toolkit. Here's how to get started...
+You've reached the developer toolkit. Here's how to get started.
 
 ## Resolution API
 

@@ -27,7 +27,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
 * Go to the [Unstoppable Website Faucet](https://unstoppabledomains.com/developers/testdomain) page for developers.
 * Select the network for the domain: **Goerli Testnet**, **Polygon Mainnet,** or **Mumbai Testnet**.
 * Configure the domain options:
-  * **domain ending**: .888, .crypto, .x, .coin, .wallet, .bitcoin, .nft, .dao
+  * **domain ending**: .888, .crypto, .x, .coin, .wallet, .bitcoin, .nft, .dao, .blockchain
   * **domain suffix**: the part of the domain the follows `udtestdev-`
   * **recipient address**: must enter ETH address (required)
   * **cryptocurrency records**: add optional cryptocurrency addresses, such as bitcoin or litecoin
