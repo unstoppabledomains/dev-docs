@@ -25,7 +25,7 @@ For developers who want more direct, low level control over domain resolution, s
 
 ## Resolve Using Matic.js SDK
 
-For developers interacting with the Matic network using the [Matic SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see [Resolve Using Matic.js SDK.](./resolve-with-maticjs.md).
+For developers interacting with the Matic network using the [Matic.js SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see [Resolve Using Matic.js SDK](./resolve-with-maticjs.md).
 
 <embed src="/snippets/_discord.md" />
 
