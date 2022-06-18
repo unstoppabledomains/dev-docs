@@ -1,9 +1,9 @@
 ---
-title: Integrating Crypto Payments Using the Resolution API | UD Developer Portal
+title: Integrate Crypto Payments Using the Resolution API | UD Developer Portal
 description: This page covers integrating crypto payments into your applications using Unstoppable Domains Resolution Service API.
 ---
 
-# Integrating Crypto Payments Using the Resolution API
+# Integrate Crypto Payments Using the Resolution API
 
 Unstoppable Domains provides an HTTP-based API for getting domain data and metadata from every supported blockchain without accessing any blockchain APIs. Please see the [Resolution Service API](../developer-toolkit/resolution-service-api.md) guide for a detailed description and configuration.
 

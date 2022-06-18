@@ -4,10 +4,10 @@ pages:
   - page: index.md
     label: Getting Started with Payments
     separatorLine: true
-  - label: Integrating Crypto Payments Using the Resolution API
+  - label: Integrate Crypto Payments Using the Resolution API
     page: api-integration.md
     separatorLine: true
-  - label: Integrating Crypto Payments Using Libraries
+  - label: Integrate Crypto Payments Using Libraries
     page: library-integration.md
     separatorLine: true
   - label: Other Ways To Integrate Crypto Payments

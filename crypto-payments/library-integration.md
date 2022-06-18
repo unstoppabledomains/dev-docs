@@ -1,13 +1,13 @@
 ---
-title: Integrating Crypto Payments Using Libraries | UD Developer Portal
+title: Integrate Crypto Payments Using Libraries | UD Developer Portal
 description: This page covers integrating crypto payments into your applications using Unstoppable Domains resolution libraries.
 ---
 
-# Integrating Crypto Payments Using Libraries
+# Integrate Crypto Payments Using Libraries
 
 Unstoppable Domains provides a set of resolution libraries for ease of integrating crypto payments into your applications. They directly communicate with the Ethereum, Polygon, and Zilliqa blockchains to retrieve domain records, so you do not have to. Please see the [Resolution Libraries Overview](../developer-toolkit/resolution-libraries/libraries-overview.md) for a detailed description and configuration.
 
-## Resolving a Crypto Address From a Domain
+## Resolve a Crypto Address From a Domain
 
 To resolve a domain into an address, you must call the appropriate method from the resolution library in the language you choose and pass the required parameters (currency and domain).
 
@@ -73,7 +73,7 @@ We resolved the `ryan.crypto` domain into its records and retrieved the Ethereum
 
 In the code above, the `addr()` and `getAddress()` methods convert the provided 3-letter ticker into the format `crypto.<TICKER>.address` and queries the blockchain for the attached record. Some applications also set custom records for a domain to use within themselves.
 
-## Resolving Addresses Existing on Multiple Blockchains
+## Resolve Addresses Existing on Multiple Blockchains
 
 The resolution library provides another method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to handle this for the `udtestdev-usdt.crypto` domain:
 
