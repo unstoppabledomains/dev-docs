@@ -4,15 +4,15 @@ pages:
   - label: Getting Started With Reverse Resolution
     page: index.md
     separatorLine: true
-  - group: Configure Reverse Resolution for a Domain
+  - group: Set Reverse Records for Domains
     expanded: false
     pages:
       - page: config-guides/ud-dashboard.md
-        label: UD Dashboard Configuration Guide
+        label: Set Reverse Records with UD Dashboard
       - page: config-guides/smart-contracts.md
-        label: Smart Contract Configuration Guide
+        label: Set Reverse Records with Smart Contracts
     separatorLine: true
-  - group: Reverse Resolution Integration Guides
+  - group: Integrate Reverse Resolution into Your Application
     expanded: false
     pages:
       - page: integration-guides/smart-contracts.md

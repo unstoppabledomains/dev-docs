@@ -20,7 +20,7 @@ This works by having domain owners set a reverse record for their domains on the
 
 ## Choose a Configuration Path
 
-There are several ways to configure a reverse record for your UD domains, detailed in the chart below.
+There are several ways to set a reverse record for your UD domains, detailed in the chart below.
 
 | Pathway | Short Description | Configuration Guides |
 | - | - | - |
