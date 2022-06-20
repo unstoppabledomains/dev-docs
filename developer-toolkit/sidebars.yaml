@@ -29,12 +29,11 @@ pages:
         page: resolution-libraries/resolution-swift.md
       - label: Resolution-Go
         page: resolution-libraries/resolution-go.md
+      - label: Matic.js SDK
+        page: resolve-with-maticjs.md
     separatorLine: true
   - label: Resolution CLI
     page: resolution-cli.md
-    separatorLine: true
-  - label: Resolve Using Matic.js SDK
-    page: resolve-with-maticjs.md
     separatorLine: true
   - label: Resolve Domains in Web Applications
     page: resolve-domains-in-web-applications.md
