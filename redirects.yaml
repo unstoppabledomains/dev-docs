@@ -229,3 +229,6 @@
 '/reseller/reseller-faq/':
   to: '/partner/reseller-faq/'
   type: 301
+'/developer-toolkit/resolution-service-api/':
+  to: '/developer-toolkit/resolution-service/overview/'
+  type: 301

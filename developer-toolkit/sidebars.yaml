@@ -12,8 +12,19 @@ pages:
       - label: CNS Smart Contracts
         page: smart-contracts/cns-smart-contracts.md
     separatorLine: true
-  - label: Resolution Service API
-    page: resolution-service-api.md
+  - group: Resolution Service API
+    expanded: false
+    pages:
+      - label: Overview
+        page: resolution-service/overview.md
+      - label: Get Records for a Domain
+        page: resolution-service/endpoints/get-records-for-a-domain.md
+      - label: Get Records for Owner Addresses
+        page: resolution-service/endpoints/get-records-for-owner-addresses.md
+      - label: Get Domain Transfer Events
+        page: resolution-service/endpoints/get-domain-transfer-events.md
+      - label: Error Codes
+        page: resolution-service/error-codes.md
     separatorLine: true
   - group: Resolution Libraries
     expanded: false
