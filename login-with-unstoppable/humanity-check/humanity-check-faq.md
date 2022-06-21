@@ -30,6 +30,8 @@ Persona will not sell, lease, trade, or, other than to provide the Verification 
 
 Persona does not use, share, rent or sell the Personal Data of our Users’ Customers for interest-based advertising. We do not sell or rent the Personal Data of our Users, their Customers or our Site visitors.
 
+See the [Persona Security and Privacy](https://withpersona.com/security) page for more information.
+
 ## What happens to user personal data? Is it stored on web2? 
 
 Persona collects a set of information (documentary, selfie, non-documentary) to identify users, and deter would-be fraudsters. This information is stored in a dashboard to track verifications and corresponding decisions (pass / fail).
