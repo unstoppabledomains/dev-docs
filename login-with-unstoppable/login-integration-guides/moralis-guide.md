@@ -50,7 +50,7 @@ UAuthMoralisConnector.setUAuthOptions({
 
 export const uauth = {connector: UAuthMoralisConnector};
 
-const connectors: Record<string, AbstractConnector> = {
+const connectors: Record<string, any> = {
   injected,
   walletconnect,
   uauth,
