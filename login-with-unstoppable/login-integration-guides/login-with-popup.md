@@ -91,7 +91,3 @@ The following command will run the app. Keep in mind that the credentials will o
 ```shell
 yarn parcel --open --port 5000 index.html
 ```
-
-## Step 6: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />

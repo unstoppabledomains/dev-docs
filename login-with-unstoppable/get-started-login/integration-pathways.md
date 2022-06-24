@@ -13,6 +13,16 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 To begin the integration process for Login with Unstoppable, you will need to obtain and configure your client credentials using the **My Clients** and **Client Configuration** pages. Please see the [**Login Client Configuration**](../login-integration-guides/login-client-configuration.md) guide for more details.
 
+When you've customized your client and saved your changes, you will need the **Client Metadata** to configure your integration. This can be copied directly from the first section of the **Client Configuration** page.
+
+```javascript
+{
+    clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    redirectUri: "http://localhost",
+    scope: "openid wallet email:optional humanity_check:optional"
+}
+```
+
 ## Step 2: Choose Your Integration Path
 
 There are several ways to integrate with Login with Unstoppable, which are detailed in the chart below.
