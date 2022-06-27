@@ -42,6 +42,25 @@ reverseTokenId('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
 reverseUrl('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
 ```
 
+```java Java
+import com.unstoppabledomains.resolution.Resolution;
+import com.unstoppabledomains.config.network.NetworkConfigLoader;
+import com.unstoppabledomains.config.network.model.Network;
+import com.unstoppabledomains.resolution.naming.service.uns.UNSLocation;
+
+resolution = Resolution.builder()
+        .unsContractAddress(UNSLocation.Layer1, NetworkConfigLoader.getContractAddress(Network.GOERLI, "ProxyReader"))
+        .unsContractAddress(UNSLocation.Layer2, NetworkConfigLoader.getContractAddress(Network.MUMBAI_TESTNET, "ProxyReader"))
+        .build();
+
+// tokenId consists the namehash of the domain with reverse resolution to that address
+String tokenId = resolution.getReverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+
+// domain consists of the domain with reverse resolution to that address
+// use this domain in your application
+String domain = resolution.getReverse("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+```
+
 :::success Congratulations
 You have successfully integrated reverse resolution using UD's Resolution Libraries. Happy Hacking!
 :::
