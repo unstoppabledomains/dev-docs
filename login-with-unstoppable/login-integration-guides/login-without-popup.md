@@ -1,9 +1,9 @@
 ---
-title: 10 Minute Guide for Login with Unstoppable without Popup
+title: Login with Unstoppable without Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
 ---
 
-# 10 Minute Guide: Login with Unstoppable without Popup
+# Login with Unstoppable without Popup
 
 This integration guide shows you how to add Login to Unstoppable to a single-page application without the popup feature, using a TypeScript and React Router example. You will configure the application to receive the authorization tokens and metadata by following the steps below.
 
@@ -11,10 +11,10 @@ This integration guide shows you how to add Login to Unstoppable to a single-pag
 
 ## Step 1: Install the Libraries
 
-You will need the UAuth library to manage login authentication. The code examples in this guide also require `typescript`, `react`, and `react-router`.
+You will need the UAuth library to manage login authentication. The code examples in this guide also require `typescript`, `react`, and `react-router-dom`.
 
 ```sh yarn
-yarn add typescript react react-router @uauth/js
+yarn add typescript react react-router-dom @uauth/js
 ```
 
 For the React Router example code, you will need the following imports:
@@ -24,7 +24,7 @@ import React, {useEffect, useState} from 'react';
 import {BrowserRouter, RouteProps, Routes, Route, Navigate, useLocation} from 'react-router-dom'
 ```
 
-## Step 1: Configure the `UAuth` Class
+## Step 2: Configure `UAuth`
 
 First, you will configure the UAuth class using the **Client Metadata** from your [login client configuration](./login-client-configuration.md).
 
@@ -46,7 +46,7 @@ const uauth = new UAuth({
 The redirect URIs used to configure this `UAuth` instance must be an **EXACT** match to the Redirect URIs entered in your [Login Client Configuration](login-client-configuration.md). See [Rules for Redirect URIS](./login-client-configuration.md/#rules-for-redirect-uris) for more details.
 :::
 
-## Step 2: Create a Login Button
+## Step 3: Create a Login Button
 
 Next, you will call `uauth.login()` to initiate a UAuth login upon clicking the login button. Features of this method include:
 
@@ -82,7 +82,7 @@ const Login: React.FC<RouteProps> = props => {
 }
 ```
 
-## Step 3: Create the Callback Page
+## Step 4: Create the Callback Page
 
 On the page registered as your `redirectUri`, you will call `uauth.loginCallback()` on page load. It will then exchange the authorization code for access and id tokens and handle any failures along the way. Features of this method include:
 
@@ -121,7 +121,7 @@ const Callback: React.FC<RouteProps> = props => {
 }
 ```
 
-## Step 4: Create the Logout Button
+## Step 5: Create a Logout Button
 
 Finally, you will call `uauth.logout()` to handle logging out upon clicking the logout button. Features of this method include:
 
@@ -176,7 +176,7 @@ const Profile: React.FC<RouteProps> = () => {
 }
 ```
 
-## Step 5: Routing to your Login Pages
+## Step 6: Routing to your Login Pages
 
 Once you have all of your page components created, you will need to define routes to your new pages. This can be returned as follows from your React app component.
 
