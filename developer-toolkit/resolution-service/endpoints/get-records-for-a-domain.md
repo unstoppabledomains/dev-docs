@@ -9,7 +9,7 @@ description: This page covers the documentation for the `Get records for a domai
 GET https://unstoppabledomains.g.alchemy.com/domains/<domain name>
 ```
 
-The `domains` endpoint is the main endpoint to resolve Unstoppable domain names into records. The endpoint will return all configured resolution records in a single response.
+This endpoint returns all the resolution records configured to a domain in a single response.
 
 ## URL Params
 
@@ -31,9 +31,9 @@ A single object with the following fields:
 
 * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](../../../getting-started/domain-registry-essentials/records-reference.md) documentation.
 * `meta`: A key-value dictionary with general information about the domain:
-    * domain: (string) domain name.
-    * blockchain: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
-    * networkId: (number) The blockchain network ID.
+    * `domain`: (string) domain name.
+    * `blockchain`: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+    * `networkId`: (number) The blockchain network ID.
         * 1 - Ethereum or Zilliqa Mainnet
         * 137 - Polygon (Matic) Mainnet
         * 80001 - Polygon (Matic) Mumbai Testnet
@@ -45,7 +45,7 @@ A single object with the following fields:
 
 ## Example
 
-Here is an example request to query for the records and metadata of the `brad.crypto` domain.
+Here is an example request to query for the records and metadata of the `brad.crypto` domain:
 
 ### Request
 

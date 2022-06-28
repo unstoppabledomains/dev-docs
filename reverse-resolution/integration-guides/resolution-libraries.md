@@ -38,8 +38,8 @@ function reverseUrl(address) {
     .catch(console.error);
 }
 
-reverseTokenId('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
-reverseUrl('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
+reverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+reverseUrl("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
 ```
 
 ```java Java

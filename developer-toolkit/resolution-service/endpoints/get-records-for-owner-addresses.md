@@ -9,7 +9,7 @@ description: This page covers the documentation for the `Get Records for Owner A
 GET https://unstoppabledomains.g.alchemy.com/domains
 ```
 
-Request domain name records and metadata when given single or multiple owner addresses or configured to a resolution record.
+This endpoint returns the domain name records and metadata owned by an address or configured to a resolution record.
 
 ## URL Params
 
