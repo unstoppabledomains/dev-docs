@@ -12,7 +12,9 @@ Unstoppable Domains provides an HTTP-based API for getting domain data and metad
 To get the records attached to a domain, you must send a `GET` request to the `domains` endpoint and provide the `domain name` parameter in your request. The endpoint will return all configured resolution records and domain metadata in a single response.
 
 
-## Request
+## Example
+
+### Request
 
 The code snippet below shows how to resolve the records and metadata for the `brad.crypto` domain:
 
@@ -22,7 +24,7 @@ curl \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
-## Response
+### Response
 
 The Resolution Service API will return the following response to the request above:
 

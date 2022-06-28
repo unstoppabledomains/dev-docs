@@ -60,6 +60,7 @@ try {
 |---|---|
 | BlockchainIsDown | Thrown when you resolve a domain and its naming service blockchain network is down. |
 | InconsistentDomainArray | Thrown when you attempt to retrieve the locations of multiple domains with different naming services. The location of a domain contains the `blockchain`, `networkId`, and valuable metadata like `owner`, `resolver`, `registry addresses`, and `provider URL` of that domain. |
+| IncorrectAddress | Thrown when you attempt to retrieve the reverse record of an incorrect wallet address. |
 | IncorrectContractAddress | Thrown when using an incorrect contract address with the current resolution instance. |
 | InvalidDomain | Thrown when you resolve an invalid domain address. |
 | NotImplemented | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `getDns()`, `batchOwners()`, `getDomainName()`, `getLocations()`, and `getTokenUri()` methods for the Zilliqa Name Service (ZNS). |

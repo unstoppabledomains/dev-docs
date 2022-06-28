@@ -85,6 +85,7 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 | recordNotFound | Thrown when you resolve an undefined record of a domain. For example, resolving the Twitter handle of a domain that doesn't have one. |
 | recordNotSupported | Thrown when you resolve an unsupported domain record. |
 | registryAddressIsNotProvided | Thrown when using an incorrect contract address with the current resolution instance. |
+| reverseResolutionNotSpecified | Thrown when reverse resolution is not configured for an address. |
 | unregisteredDomain | Thrown when you resolve a domain not owned by any address. |
 | unknownError | Thrown when an unknown error occurs while resolving a domain with the current resolution instance. |
 | unspecifiedResolver | Thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver. |
@@ -100,7 +101,7 @@ Retrieve any record of a domain. Applications sometimes set custom records for a
 resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result in
   switch result {
     case .success(let returnValue):
-      // Example custom record value
+      // example custom record value
       let recordValue = returnValue
     case .failure(let error):
       print("Expected record value, but got \(error)")

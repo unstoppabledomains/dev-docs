@@ -61,6 +61,36 @@ String tokenId = resolution.getReverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD
 String domain = resolution.getReverse("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
 ```
 
+```swift Swift
+import UnstoppableDomainsResolution
+
+guard let resolution = try? Resolution() else {
+  print ("Init of Resolution instance with default parameters failed...")
+  return
+}
+
+// tokenId consists the namehash of the domain with reverse resolution to that address
+resolution.reverseTokenId(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", location: nil) { (result) in
+    switch result {
+    case .success(let returnValue):
+        let tokenId = returnValue
+    case .failure(let error):
+        print("Expected reverse record tokenId, but got \(error)")
+    }
+}
+
+// domain consists of the domain with reverse resolution to that address
+// use this domain in your application
+resolution.reverse(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", location: nil) { (result) in
+    switch result {
+    case .success(let returnValue):
+        let domain = returnValue
+    case .failure(let error):
+        print("Expected reverse record, but got \(error)")
+    }
+}
+```
+
 :::success Congratulations
 You have successfully integrated reverse resolution using UD's Resolution Libraries. Happy Hacking!
 :::
