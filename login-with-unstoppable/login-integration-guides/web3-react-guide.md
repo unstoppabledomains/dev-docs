@@ -61,7 +61,7 @@ const connectors: Record<string, AbstractConnector> = {
 export default connectors
 ```
 
-You can also construct a `UAuth` instance beforehand and use that to create the connector.
+You can also construct a `UAuth` instance and use that to create the connector.
 
 ```javascript
 import UAuth from '@uauth/js'
@@ -93,12 +93,18 @@ import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
 import React from 'react'
 import {uauth} from './connectors'
 
-// On login button click...
-
-async function handleUAuthConnect() {
+// On login button click
+async function handleLogin() {
   const {activate} = useWeb3React()
 
   await activate(uauth)
+}
+
+// On logout button click
+async function handleLogout() {
+  const {deactivate} = useWeb3React()
+
+  deactivate()
 }
 ```
 

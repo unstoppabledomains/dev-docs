@@ -29,22 +29,18 @@ npm install --save @uauth/web3-onboard @uauth/js @web3-onboard/core
 
 ## Step 2: Configure the `web3-onboard` Library
 
-```typescript
-// onboard.ts
-
+```javascript
 import Onboard from '@web3-onboard/core'
 import injectedModule from '@web3-onboard/injected-wallets'
 import UAuth from '@uauth/js'
 import uauthBNCModule from '@uauth/web3-onboard'
 
-const uauthOptions = {
+const uauth = new UAuth({
   clientID: process.env.REACT_APP_CLIENT_ID!,
   redirectUri: process.env.REACT_APP_REDIRECT_URI!,
   fallbackIssuer: process.env.REACT_APP_FALLBACK_ISSUER!,
   scope: 'openid wallet',
-}
-
-const uauth = new UAuth(uauthOptions)
+})
 
 const uauthBNCOptions = {
   uauth: uauth,
@@ -55,7 +51,7 @@ const uauthBNCOptions = {
 
 const uauthModule = uauthBNCModule(uauthBNCOptions)
 
-export const onboard = Onboard({
+const onboard = Onboard({
     wallets: [injected, uauthModule],
     ...
   },
@@ -70,11 +66,15 @@ Because pop-ups are a more integration friendly approach, the `@uauth/web3-onboa
 
 Once configured, the `web3-onboard` library can be used normally.
 
-```typescript
-import onboard from './onboard'
+```javascript
+async function handleLogin() {
+  const connectedWallets = await onboard.connectWallet()
+}
 
-// On login button click...
-const connectedWallets = await onboard.connectWallet()
+async function handleLogout() {
+  uauth.logout()
+  onboard.disconnectWallet({label: 'Unstoppable'})
+}
 ```
 
 ## Step 4: Configure the Login UI
