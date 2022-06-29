@@ -77,7 +77,7 @@ Because there are a variety of ways to store session data about a user, the pack
 **`middleware(): (ctx: Context) => void`**
 
 1. The authorization inside the session is attached to the context then passed to the next handler.
-2. Or if there is no session it throws an Error.
+2. If there is no session, it throws an Error.
 
 ### Step 3D: Putting it all together
 
@@ -126,10 +126,6 @@ Developers can also create their own login system using a different session syst
 
 ## Step 4: Build a Front-end UI
 
-There are two UI options for when you create a server-side integration.
-
-### Option 1: Create a Custom UI
-
 The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-the-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
 
 ```javascript
@@ -145,14 +141,6 @@ app.get('/', (_, res) => {
   return res.send(indexPage)
 })
 ```
-
-### Option 2: Use the DOM UI Package
-
-The [DOM UI package](https://github.com/unstoppabledomains/uauth/tree/main/packages/dom-ui) can be used to help with the front-end UI development. The DOM UI package creates a simple UI modal on the website that is used by `@uauth/js` library internally to facilitate sign-in, so the user has a consistent UI on the front-end.
-
-We are still working on documentation of this package, so developers should [see how it is used inside @uauth/js library](https://github.com/unstoppabledomains/uauth/blob/main/packages/js/src/Client.ts#L232).
-
-The package takes an injection with a submit method attached that is called when a user interacts with the modal. The submit function should call the [login function/route](node-js-server-guide.md#step-3a-the-login-method) on your own service.
 
 ## Step 5: Configure the Login UI
 
