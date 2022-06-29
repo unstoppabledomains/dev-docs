@@ -27,7 +27,7 @@ Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto
 
 Decentralized Application (DApp), also known as Decentralized Website (D-Website), is an application or website that exist and run on a blockchain or peer-to-peer network of computers instead of a single computer, and are outside the purview and control of a single authority. They are usually powered by [smart contracts](#smart-contract).
 
-### Domain Endings
+### Domain Ending
 
 Also known as TLD or domain extension, is the last segment of a domain name or the part that follows immediately after the `dot` (.) symbol, i.e., `.crypto`, `.nft`, `.x`.
 
