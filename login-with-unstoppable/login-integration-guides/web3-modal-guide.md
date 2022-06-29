@@ -35,7 +35,7 @@ import Web3Modal from 'web3modal'
 
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions: IUAuthOptions = {
-  clientID: 'client_id',
+  clientID: 'uauth_client_id',
   redirectUri: 'http://localhost:3000',
 
   // Must include both the openid and wallet scopes.
@@ -43,7 +43,7 @@ export const uauthOptions: IUAuthOptions = {
 }
 
 const providerOptions = {
-  // Currently the package isn't inside the web3modal library currently. For now,
+  // Currently the package isn't inside the web3modal library. For now,
   // users must use this libary to create a custom web3modal provider.
 
   // All custom `web3modal` providers must be registered using the "custom-"
@@ -70,7 +70,7 @@ const providerOptions = {
     },
   },
 
-  // Include any other web3modal providers here too...
+  // Include any other web3modal providers here
 }
 
 const web3modal = new Web3Modal({providerOptions})
@@ -95,9 +95,13 @@ Once configured, the `web3modal` library can be used normally.
 import web3modal from './web3modal'
 import Web3 from 'web3'
 
-// On login button click...
+async function handleLogin() {
+  const provider = await web3modal.connect()
+}
 
-const provider = await web3modal.connect()
+function handleLogout() {
+  web3modal.disconnect(); 
+}
 
 // Save provider in state
 ```
@@ -147,7 +151,7 @@ export async function connector(
 
 ### `display`
 
-When UAuth is not yet natively integrated into the `web3modal` library, applications must supply some digital assets for the Web3 Modal UI. These are those assets.
+Since UAuth is not yet natively integrated into the `web3modal` library, applications must supply some digital assets for the Web3 Modal UI. These are those assets.
 
 ```typescript
 import type {IProviderDisplay} from 'web3modal'

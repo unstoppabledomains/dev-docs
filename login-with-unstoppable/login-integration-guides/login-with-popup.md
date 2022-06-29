@@ -44,6 +44,7 @@ Build out the `index.html` file as follows:
   </head>
   <body>
     <button onclick="login()">Login with Unstoppable</button>
+    <button onclick="logout()">Logout</button>
     <script type="module" src="app.js"></script>
   </body>
 </html>
@@ -64,7 +65,7 @@ const uauth = new UAuth({
 
 ## Step 4: Implement the Login Handler
 
-Add more code to the `app.js` file as follows:
+Add a login function to `app.js` as follows:
 
 ```javascript
 window.login = async () => {
@@ -78,7 +79,18 @@ window.login = async () => {
 }
 ```
 
-## Step 5: Login with Unstoppable
+## Step 5: Implement the Logout Handler
+Add a logout function to `app.js` as follows:
+
+```javascript
+window.logout = async () => {
+  await uauth.logout()
+  console.log('Logged out with Unstoppable')
+}
+```
+
+
+## Step 6: Login with Unstoppable
 
 :::info
 You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../getting-started/test-domains/faucet.md) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.

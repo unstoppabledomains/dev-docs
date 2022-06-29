@@ -109,11 +109,16 @@ Once configured, the `bnc-onboard` library can be used normally.
 ```javascript
 import onboard from './onboard'
 
-// On login button click...
+const handleLogin = async () => {
+  await onboard.walletSelect()
+  await onboard.walletCheck()
+}
 
-await onboard.walletSelect()
+const handeLogout = () => {
+  uauthOnboard.getUAuth().then(uauth => uauth.logout())
+  onboard.walletReset()
+}
 
-await onboard.walletCheck()
 ```
 
 ## Step 5: Configure the Login UI

@@ -25,6 +25,8 @@ pages:
         page: resolution-service/endpoints/get-domain-transfer-events.md
       - label: Get Reverse Record
         page: resolution-service/endpoints/get-reverse-record.md
+      - label: Get Supported TLDs
+        page: resolution-service/endpoints/get-supported-tlds.md
       - label: Error Codes
         page: resolution-service/error-codes.md
     separatorLine: true
