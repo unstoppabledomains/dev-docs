@@ -1,12 +1,12 @@
 ---
-title: Get Reverse Record | Unstoppable Domains Developer Portal
-description: This page covers the documentation for the `Get reverse record` endpoint.
+title: Get Reverse Record for an Address | Unstoppable Domains Developer Portal
+description: This page covers the documentation for the `Get reverse record for an address` endpoint.
 ---
 
-# Get Reverse Record
+# Get Reverse Record for an Address
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/reverse/<address>
+GET https://unstoppabledomains.g.alchemy.com/reverse/<wallet address>
 ```
 
 This endpoint will return the reverse record of the wallet address and all the domain name records and domain metadata in a single response.
@@ -15,7 +15,7 @@ This endpoint will return the reverse record of the wallet address and all the d
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| address | STRING | YES | A wallet address to query for reverse record  |
+| wallet address | STRING | YES | A wallet address to query for reverse record |
 
 ## Query Params
 

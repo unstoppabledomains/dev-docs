@@ -35,7 +35,7 @@ There are several ways to integrate Unstoppable's Reverse Resolution feature int
 | - | - | - |
 | Smart Contracts | integrate Reverse Resolution using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](integration-guides/smart-contracts.md) |
 | Resolution Libraries | integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](integration-guides/resolution-libraries.md)
-| Resolution Service API | integrate Reverse Resolution using the Resolution Service API hosted by Alchemy | [Resolution Service API Guide](../developer-toolkit/resolution-service/endpoints/get-reverse-record.md)
+| Resolution Service API | integrate Reverse Resolution using the Resolution Service API hosted by Alchemy | [Resolution Service API Guide](../developer-toolkit/resolution-service/endpoints/get-reverse-record-for-address.md)
 
 <embed src="/snippets/_discord.md" />
 
