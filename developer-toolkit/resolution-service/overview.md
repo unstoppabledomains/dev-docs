@@ -18,7 +18,9 @@ The Resolution Service API supports decentralized domains across two main zones:
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
-<embed src="/snippets/_new-tld-warning.md" />
+:::warning important
+Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front end filter into your application (e.g. hard coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](endpoints/get-supported-tlds.md).
+:::
 
 ## Getting Started With Alchemy
 
@@ -47,5 +49,6 @@ Here’s a guide on setting up your Alchemy account and querying the Unstoppable
 | Get records for a domain | returns all the records attached to a domain name. | [Get Domain Records Docs](endpoints/get-records-for-a-domain.md) |
 | Get records for owner addresses | returns all the domain names, records, and metadata owned by a wallet address or configured to a resolution record. | [Get Records for Owner Docs](endpoints/get-records-for-owner-addresses.md) |
 | Get domain transfer events | returns the transfer history of a domain name. | [Get Domain Transfers Docs](endpoints/get-domain-transfer-events.md) |
+| Get supported TLDs | returns all the domain endings supported by Unstoppable Domains. | [Get Supported TLDs Docs](endpoints/get-supported-tlds.md) |
 
 <embed src="/snippets/_discord.md" />

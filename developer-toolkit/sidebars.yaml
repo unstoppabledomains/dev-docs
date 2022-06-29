@@ -23,6 +23,8 @@ pages:
         page: resolution-service/endpoints/get-records-for-owner-addresses.md
       - label: Get Domain Transfer Events
         page: resolution-service/endpoints/get-domain-transfer-events.md
+      - label: Get Supported TLDs
+        page: resolution-service/endpoints/get-supported-tlds.md
       - label: Error Codes
         page: resolution-service/error-codes.md
     separatorLine: true
