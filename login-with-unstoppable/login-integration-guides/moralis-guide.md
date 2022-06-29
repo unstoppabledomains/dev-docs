@@ -76,11 +76,17 @@ import {useMoralis} from 'react-moralis'
 import {uauth} from './connectors'
 
 // On login button click...
-
-async function handleUAuthConnect() {
+async function handleLogin() {
   const {authenticate} = useMoralis()
 
   await authenticate(uauth)
+}
+
+// On logout button click...
+async function handleLogout() {
+  const {logout} = useMoralis();
+
+  logout();
 }
 ```
 
