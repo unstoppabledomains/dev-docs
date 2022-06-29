@@ -19,6 +19,11 @@ The Partner API endpoints are as follows:
 * `POST` **Buy a Domain** or **Claim Free Domain**: used to buy domains or mint free domains from Unstoppable Domains
 * `GET` **Get Order Status**: provides the status of your order and tells if the domain has successfully "minted"
 * `POST` **Reserve Free Domain**: reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days
+* `POST` **Get Fingerprint Public Key**: provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations.
+
+:::info
+The generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.
+:::
 
 :::info
 To reserve or lock a free domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the `Orders` endpoint).

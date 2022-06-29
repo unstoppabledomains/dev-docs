@@ -49,8 +49,8 @@ Partner API errors are in JSON format.
 | USER\_NOT\_ELIGIBLE | 400 | The provided user is not eligible for a free domain. |
 | WALLET\_NOT\_ELIGIBLE | 400 | The provided wallet address is not eligible for a free domain. |
 | FREE\_DOMAIN\_POLICY\_VIOLATION | 400 | The provided user has already claimed a free domain before. |
-| INVALID\_FINGERPRINTJS\_VISIT | 400 | The provided FingerprintJS Visitor ID is invalid or is older than 30 seconds. |
-| MISSING\_FINGERPRINTJS\_VISITOR\_ID | 400 | The request does not contain a FingerprintJS Visitor ID. |
+| INVALID\_FINGERPRINTJS\_VISIT | 400 | The provided Fingerprint Visitor ID is invalid or is older than 30 seconds. |
+| MISSING\_FINGERPRINTJS\_VISITOR\_ID | 400 | The request does not contain a Fingerprint Visitor ID. |
 | SECURITY\_PARAMS\_NOT\_PROVIDED | 400 | The request does not contain any security parameters. |
 | UNSUPPORTED\_SECURITY\_TYPE | 400 | Requested security type is currently not supported. |
 | DOMAIN\_RESERVED | 400 | Requested domain has been reserved by another partner. |

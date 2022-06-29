@@ -39,12 +39,40 @@ The table below shows how the pricing tiers are structured at Unstoppable Domain
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.
 :::
 
-## Step 3: Prepare Your Order Security
+## Step 3: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Prepare Your Order Security
 
 Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [Fingerprint Docs](https://dev.fingerprint.com/docs) for integration guides and how to generate a Fingerprint Visitor ID for your users.
 
 :::info
-The Unstoppable Domains Partner API will only accept a `VisitorID` generated within the past 30 seconds and has a confidence score of at least 90%.
+The Unstoppable Domains Partner API will only accept a `Visitor ID` generated within the past 30 seconds and has a confidence score of at least 90%.
+:::
+
+### Generate a Fingerprint Public Key
+
+Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, which is needed for generating the `Visitor ID`. Send a `POST` request with the authorization headers you have prepared to the `Get Fingerprint Public Key` endpoint. Here is the URL for our API environments:
+
+Sandbox Environment:
+
+```
+POST https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/security/fingerprintjs/keys
+```
+
+Production Environment:
+
+```
+POST https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/security/fingerprintjs/keys
+```
+
+:::info
+The `ResellerID` path parameter is the same one you retrieved from your dashboard earlier.
+:::
+
+:::info
+The endpoint returns a different key when called to avoid rate limitations. Also, the generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.
 :::
 
 ### Integrate the Fingerprint Subdomain
@@ -75,7 +103,7 @@ const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
 
 ### Tag Your Fingerprint Request
 
-Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.com/docs/quick-start-guide#tagging-your-requests) with the `linkedId` property and your `ResellerID` when generating the `VisitorID` for your users. Here's a sample code snippet:
+Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.com/docs/quick-start-guide#tagging-your-requests) with the `linkedId` property and your `ResellerID` when generating the `Visitor ID` for your users. Here's a sample code snippet:
 
 ```javascript
 // Get the visitor identifier when you need it.
@@ -101,9 +129,9 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 </script>
 ```
 
-## Step 4: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
+:::info
+The `your-public-api-key` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
+:::
 
 ## Step 5: Prepare Your Request Body
 
