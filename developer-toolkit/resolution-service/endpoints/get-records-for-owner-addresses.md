@@ -36,7 +36,7 @@ If your request must include multiple `owners` or `tlds`, you need to use a new 
 
 ## Returns
 
-An object with a `data` field contains a list of domain details and some meta about the request.
+An object with a `data` field that contains a list of domain details and some meta about the request.
 
 * `data`: (array) An array with the data and metadata of domains owned by a wallet address.
     * `id`: (string) The domain ID.

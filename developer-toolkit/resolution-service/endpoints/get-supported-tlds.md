@@ -21,7 +21,7 @@ This endpoint returns all the domain endings provided and supported by Unstoppab
 
 ## Returns
 
-An object with a `tlds` field which contains a list of domain endings supported by Unstoppable Domains.
+An object with a `tlds` field that contains a list of domain endings supported by Unstoppable Domains.
 
 ## Example
 
