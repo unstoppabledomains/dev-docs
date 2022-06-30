@@ -53,7 +53,7 @@ The Unstoppable Domains Partner API will only accept a `Visitor ID` generated wi
 
 ### Generate a Fingerprint Public Key
 
-Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, which is needed for generating the `Visitor ID`. Send a `POST` request with the authorization headers you have prepared to the `Get Fingerprint Public Key` endpoint. Here is the URL for our API environments:
+Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, which are needed for generating the `Visitor ID`. Send a `POST` request with the authorization headers you have prepared to the `Get Fingerprint Public Key` endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 
