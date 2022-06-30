@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get supported TLDs` end
 # Get Supported TLDs
 
 ```
-GET https://resolve.unstoppabledomains.com/supported_tlds
+GET https://unstoppabledomains.g.alchemy.com/supported_tlds
 ```
 
 This endpoint returns all the domain endings provided and supported by Unstoppable Domains.
+
+:::info
+This endpoint does not require any form of authentication to access.
+:::
 
 ## URL Params
 
@@ -30,7 +34,7 @@ Here is an example request to query for the domain endings supported by Unstoppa
 ### Request
 
 ```bash
-curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_tlds'
+curl --location --request GET 'https://unstoppabledomains.g.alchemy.com/supported_tlds'
 ```
 
 ### Response

@@ -33,7 +33,7 @@ An object with a `data` field that contains a list of domain transfer events.
     * `domain`: (string) The domain name.
     * `from`: (address) The wallet address that sent the domain.
     * `to`: (address) The wallet address of the receiver.
-    * `networkId`: (number) Rhe blockchain network ID
+    * `networkId`: (number) The blockchain network ID
         * 1 - Ethereum or Zilliqa Mainnet
         * 137 - Polygon (Matic) Mainnet
         * 80001 - Polygon (Matic) Mumbai Testnet
