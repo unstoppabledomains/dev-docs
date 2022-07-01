@@ -9,7 +9,7 @@ Unstoppable Domains provides an HTTP-based API for getting domain data and metad
 
 ## Get Reverse Record for an Address
 
-To get the reverse record of a wallet address, you must send a `GET` request to the `reverse` endpoint and provide the `address` parameter in your request. The endpoint will return the reverse record of the wallet address and all the configured resolution records and domain metadata in a single response.
+To get the reverse record of a wallet address, you must send a `GET` request to the `reverse` endpoint and provide the `wallet address` parameter in your request. The endpoint will return the reverse record of the wallet address and all the configured resolution records and domain metadata in a single response.
 
 ## Example
 

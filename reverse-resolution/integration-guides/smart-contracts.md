@@ -31,7 +31,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ## Step 3: Retrieve the Reverse Record
 
-The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured reverse resolution to that address.
+The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured Reverse Resolution to that address.
 
 <figure>
 
@@ -119,7 +119,7 @@ fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenI
 ```
 
 :::success Congratulations
-You have successfully integrated reverse resolution using smart contracts. Happy Hacking!
+You have successfully integrated Reverse Resolution using smart contracts. Happy Hacking!
 :::
 
 <embed src="/snippets/_discord.md" />
