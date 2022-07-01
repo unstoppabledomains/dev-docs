@@ -48,11 +48,11 @@ import com.unstoppabledomains.resolution.Resolution;
 Resolution resolution = new Resolution();
 
 // tokenId consists the namehash of the domain with reverse resolution to that address
-String tokenId = resolution.getReverseTokenId("0xd92d2a749424a5181ad7d45f786a9ffe46c10a7c");
+String tokenId = resolution.getReverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
 
 // domain consists of the domain with reverse resolution to that address
 // use this domain in your application
-String domain = resolution.getReverse("0xd92d2a749424a5181ad7d45f786a9ffe46c10a7c");
+String domain = resolution.getReverse("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
 ```
 
 ```swift Swift
