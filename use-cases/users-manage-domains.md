@@ -11,9 +11,9 @@ This page outlines the use case for allowing your users to manage their existing
 
 You can configure your application to edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](../developer-toolkit/smart-contracts/cns-smart-contracts.md) or [UNS Smart Contracts](../developer-toolkit/smart-contracts/uns-smart-contracts.md).
 
-## Are there working integrations for this feature? 
+## Are there working integrations for this feature?
 
-Popular open-source crypto wallet, [MyEtherWallet](https://www.myetherwallet.com/), has implemented domain management and can be also used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/master/src/dapps/Unstoppable).
+Popular open-source crypto wallet, [MyEtherWallet](https://www.myetherwallet.com/), has implemented domain management and can also be used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/main/src/dapps/unstoppable-domains-dapp).
 
 You can find additional working integrations on UD's Applications List, filtered by the [Domain Management feature](https://unstoppabledomains.com/apps?filters=7).
 

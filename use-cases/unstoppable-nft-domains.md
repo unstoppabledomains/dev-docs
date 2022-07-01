@@ -18,7 +18,7 @@ Also, there are no renewal fees for Unstoppable Domains names, so once you own t
 
 ## What makes NFT domains decentralized?
 
-Once a user mints a domain to a wallet, they have absolute control over that domain. NFT Domains can be transferred, updated, and linked to other services without any involvement from Unstoppable Domains. Unstoppable Domains cannot deactivate, change, or transfer a domain's records without a user's permission.
+Once users mint a domain to a wallet, they have absolute control over that domain. NFT Domains can be transferred, updated, and linked to other services without involvement from Unstoppable Domains. Unstoppable Domains cannot deactivate, change, or transfer a domain's records without a user's permission.
 
 ## How can I learn more?
 
