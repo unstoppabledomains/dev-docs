@@ -1,0 +1,6 @@
+pages:
+  - separator: Domain Messaging
+    separatorLine: true
+  - page: index.md
+    label: Overview
+    separatorLine: true
