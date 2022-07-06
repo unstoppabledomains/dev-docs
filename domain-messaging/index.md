@@ -3,7 +3,7 @@ title: Domain Messaging | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the domain messaging feature.
 ---
 
-# Unstoppable Email Overview
+# Unstoppable Email
 
 <figure>
 
@@ -12,12 +12,13 @@ description: This page provides a high-level overview of the domain messaging fe
 <figcaption>Make your email Unstoppable</figcaption>
 </figure>
 
-Every Unstoppable Domain can be optionally used to enable private email communication. Unstoppable email! Simply enable email messaging
+Every Unstoppable Domain can be used for private email communication. Unstoppable email! Simply enable email messaging
 for your domain, set up your forwarding address, and share your new email address with the world.
 
-:::info
-The Unstoppable email feature is disabled by default.
-:::
+## Disabled by default
+
+We value your privacy, so the Unstoppable email feature is disabled by default. If you want to use Unstoppable email, navigate
+to the email tab on your domain profile management page. Toggle the enable switch to turn the feature on/off at any time.
 
 ## Keep your contact information safe
 
