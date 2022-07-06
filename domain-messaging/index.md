@@ -3,7 +3,7 @@ title: Domain Messaging | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the domain messaging feature.
 ---
 
-# Domain Messaging Overview
+# Unstoppable email
 
 <figure>
 
@@ -12,11 +12,11 @@ description: This page provides a high-level overview of the domain messaging fe
 <figcaption>Make your email Unstoppable</figcaption>
 </figure>
 
-Every Unstoppable Domain can be optionally used to enable private email communication. Unstoppable email. Simply enable email messaging
+Every Unstoppable Domain can be optionally used to enable private email communication. Unstoppable email! Simply enable email messaging
 for your domain, set up your forwarding address, and share your new email address with the world.
 
 :::info
-We will never share your private email address. Messages will appear as yourdomain@ud.me when you respond to an Unstoppable email.
+Your private email address stays private. Messages will appear as yourdomain@ud.me when you respond to Unstoppable email.
 :::
 
 ## Keep your contact information safe
