@@ -78,11 +78,11 @@ Click **Show Advanced Configuration** and scroll to the **Scopes** section.
 
 Scopes are used during authentication to authorize access to specific user data. You can use them to require or request access to additional information associated with the user's domain. 
 
-* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet-scope)
-* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email-scope)
-* **email:optional** maps to the [email:optional scope](../get-started-login/scopes-for-login.md#emailoptional-scope)
-* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope)
-* **humanity_check:optional** maps to the [humanity_check:optional scope](../get-started-login/scopes-for-login.md#humanity_checkoptional-scope)
+* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet)
+* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email)
+* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check)
+* **profile** maps to the [profile scope](../get-started-login/scopes-for-login.md#profile)
+* **social** maps to the [social scope](../get-started-login/scopes-for-login.md#social)
 
 All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that the application can request, simply uncheck those scopes.
 

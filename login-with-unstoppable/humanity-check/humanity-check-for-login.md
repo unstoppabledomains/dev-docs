@@ -55,7 +55,7 @@ Persona asks users to take a photo of their government-issued ID and a few selfi
 
 ## Humanity Check Configuration
 
-Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check-scope) to their Login with Unstoppable configuration.
+Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check) to their Login with Unstoppable configuration.
 
 :::info
 For the moment, Login with Unstoppable only allows applications to request the Humanity Check identifier, but additional scopes will be added in future releases to allow applications to request more personal data (i.e., name, address, country, location, etc.).
