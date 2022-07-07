@@ -2,5 +2,5 @@ pages:
   - separator: Domain Messaging
     separatorLine: true
   - page: index.md
-    label: Unstoppable Email
+    label: Domain Messaging Overview
     separatorLine: true
