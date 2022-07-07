@@ -9,7 +9,7 @@ You've reached the developer toolkit. Here's how to get started.
 
 ## Resolution API
 
-For our Alchemy-hosted web API, see [Resolution Service API](resolution-service-api.md).
+For our Alchemy-hosted web API, see [Resolution Service API](./resolution-service/overview.md).
 
 ## Resolution Libraries
 
