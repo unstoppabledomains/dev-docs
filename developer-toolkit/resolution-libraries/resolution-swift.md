@@ -39,7 +39,7 @@ guard let resolution = try? Resolution(
 
 <embed src="/snippets/_res-lib-error-intro.md" />
 
-```swift Swift
+```swift
 import UnstoppableDomainsResolution
 
 guard let resolution = try? Resolution() else {
