@@ -9,7 +9,7 @@ This guide covers how to manage UD domain records using contracts. This process 
 
 ## Step 1: Select a UNS Registry Smart Contract
 
-<embed src="/snippets/_uns_smart_contracts.md" />
+The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
 
 <figure>
 
@@ -82,19 +82,21 @@ Please see the [Record Reference](../../getting-started/domain-registry-essentia
 
 ## Step 5: Generate the Namehash of the Domain
 
-You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of a domain using any of the [resolution libraries](../../developer-toolkit/resolution-libraries/libraries-overview/) or [CLI](../../developer-toolkit/resolution-cli/). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of a domain using any of the [Resolution Libraries](../../developer-toolkit/resolution-libraries/libraries-overview/) or [CLI](../../developer-toolkit/resolution-cli/). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 let namehash = resolution.namehash("brad.crypto")
 ```
+
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
 DomainResolution resolution = new Resolution();
 String namehash = resolution.getNamehash("brad.crypto");
 ```
+
 ```swift Swift
 import UnstoppableDomainsResolution
 
@@ -105,6 +107,7 @@ guard let resolution = try? Resolution() else {
 
 let namehash = try resolution.namehash(domain: "brad.crypto")
 ```
+
 ```go Golang
 package main
 
