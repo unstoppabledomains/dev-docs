@@ -8,7 +8,7 @@ description: This page reviews the different resolution libraries that can be us
 Resolution libraries are used for interacting with NFT domain names. They can be used to retrieve [payment addresses](../../crypto-payments/index.md), IPFS hashes for [decentralized websites](../../d-websites/index.md), DNS records and other [records types](../../getting-started/domain-registry-essentials/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
 
 :::warning important
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front end filter into your application (e.g. hard coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../resolution-service/endpoints/get-supported-tlds.md).
+Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../resolution-service/endpoints/get-supported-tlds.md).
 :::
 
 ## Supported Domains for Resolution Libraries

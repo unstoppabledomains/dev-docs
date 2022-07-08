@@ -7,9 +7,9 @@ description: This page covers best practices to follow while integrating crypto 
 
 Here are best practices to ensure the proper integration of the Unstoppable Domains crypto payments features into your applications:
 
-## Don't hardcode UD domain endings into your application
+## Don't hard-code UD domain endings into your application
 
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front end filter into your application (e.g. hard coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../developer-toolkit/resolution-service/endpoints/get-supported-tlds.md).
+Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../developer-toolkit/resolution-service/endpoints/get-supported-tlds.md).
 
 ## Display Resolved Addresses Near Domain Names
 

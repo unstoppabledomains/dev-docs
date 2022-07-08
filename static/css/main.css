@@ -33,8 +33,8 @@ figcaption {
     vertical-align: top;
     width: 32%;
     display: inline-block;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 }
 
 .half-inline-block {

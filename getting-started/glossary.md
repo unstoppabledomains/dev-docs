@@ -21,15 +21,15 @@ An interoperability protocol that allows tokens and arbitrary data to be transfe
 
 ### CNS
 
-Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on [UNS](#uns) which supports various domain endings besides `.crypto`.
+Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on [UNS](#uns), which supports various domain endings besides `.crypto`.
 
 ### DApp
 
-Decentralized Application (DApp), also known as Decentralized Website (D-Website), is an application or website that exist and run on a blockchain or peer-to-peer network of computers instead of a single computer, and are outside the purview and control of a single authority. They are usually powered by [smart contracts](#smart-contract).
+Decentralized Application (DApp), also known as Decentralized Website (D-Website), is an application or website that exist and run on a blockchain or peer-to-peer network of computers instead of a single computer and is outside the purview and control of a single authority. They are usually powered by [smart contracts](#smart-contract).
 
-### Domain Endings
+### Domain Ending
 
-Also known as TLD or domain extension, is the last segment of a domain name or the part that follows immediately after the `dot` (.) symbol, i.e., `.crypto`, `.nft`, `.x`.
+Also known as TLD or domain extension, it is the last segment of a domain name or the part that follows immediately after the `dot` (.) symbol, i.e., `.crypto`, `.nft`, `.x`.
 
 ### Domain Resolution
 
@@ -57,11 +57,11 @@ Layer 2 (L2) is a secondary framework or protocol built on top of an existing [L
 
 ### Mainnet
 
-This is a main blockchain protocol that is fully developed and deployed, meaning that cryptocurrency transactions are being broadcasted, verified, and recorded here.
+This is the main blockchain protocol that is fully developed and deployed, meaning that cryptocurrency transactions are being broadcasted, verified, and recorded here.
 
 ### Metadata
 
-A collection of data that provides information about one or more aspects of another data, but not the content of the data itself. it is used to summarize basic information about data which can make tracking and working with specific data easier i.e., social media profiles of a person.
+A collection of data provides information about one or more aspects of another data, but not the content itself. It is used to summarize basic information about data which can make tracking and working with specific data easier, i.e., social media profiles of a person.
 
 ### Minting
 
@@ -109,7 +109,7 @@ A feature that enables applications that integrate with Unstoppable Domains to s
 
 ### Smart Contract
 
-A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out its terms and conditions with total transparency and no counterparty risk, allowing transactions to be made without an intermediary figure and trust between the parties involved.
+A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out their terms and conditions with total transparency and no counterparty risk, allowing transactions to be made without an intermediary figure and trust between the parties involved.
 
 ### Testnet
 
@@ -125,11 +125,11 @@ Unstoppable Name Service (UNS) is the [name service](#name-service) handling the
 
 ### Wallet
 
-A software application or hardware device used to store the private keys to blockchain assets and accounts. Unlike a traditional wallet, a blockchain wallet does not store the coins or tokens themselves. Instead, they store the private key that proves ownership of a given digital asset, i.e, Metamask, Coinbase Wallet, Ledger, Trezor.
+A software application or hardware device used to store the private keys to blockchain assets and accounts. Unlike a traditional wallet, a blockchain wallet does not hold the coins or tokens themselves. Instead, they store the private key proving ownership of a given digital asset, i.e., Metamask, Coinbase Wallet, Ledger, Trezor.
 
 ### Wallet Address
 
-Also known as a public key, is an alphanumeric code that serves as the address for a blockchain wallet, similar to a bank account number. Other users can send digital assets to your wallet via your public key, but only you can access your wallet’s contents by using the corresponding private key.
+Also known as a public key, it is an alphanumeric code that serves as the address for a blockchain wallet, similar to a bank account number. Other users can send digital assets to your wallet via your public key, but only you can access your wallet’s contents using the corresponding private key.
 
 ### ZNS
 
