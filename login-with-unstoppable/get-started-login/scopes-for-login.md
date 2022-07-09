@@ -105,14 +105,14 @@ See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) fo
 ## profile
 `optional: true`
 
-The Login with Unstoppable `profile` scope is used to retrieve the following profile information from the user:
+The Login with Unstoppable `profile` scope is used to retrieve profile metadata the user has associated with their domain. It returns the following claims.
 
-* Display name
-* Avatar URL
-* ud.me profile URL
-* IFPS website hash
-* Web2 link to IFPS hash
-* Location
+* `name` - Display name
+* `picture` - Avatar URI
+* `profile` - ud.me profile URL (e.g. `https://ud.me/domain.crypto`)
+* `ipfs_website` - IFPS website hash
+* `website` - Web2 URI to the IPFS hash
+* `location` - The domain owner's location
 
 ## social
 `optional: true`
