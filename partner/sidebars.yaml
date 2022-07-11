@@ -22,6 +22,9 @@ pages:
   - page: partner-api-endpoints.md
     label: Partner API Endpoints
     separatorLine: true
+  - page: access-ud-sandbox.md
+    label: Accessing the UD Sandbox
+    separatorLine: true
   - page: error-codes-for-troubleshooting.md
     label: Error Codes to Troubleshoot Partner Integration
     separatorLine: true

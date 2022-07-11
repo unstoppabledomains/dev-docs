@@ -66,10 +66,10 @@ guard let resolution = try? Resolution() else {
 // tokenId consists the namehash of the domain with reverse resolution to that address
 resolution.reverseTokenId(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", location: nil) { (result) in
     switch result {
-    case .success(let returnValue):
-        let tokenId = returnValue
-    case .failure(let error):
-        print("Expected reverse record tokenId, but got \(error)")
+        case .success(let returnValue):
+            let tokenId = returnValue
+        case .failure(let error):
+            print("Expected reverse record tokenId, but got \(error)")
     }
 }
 

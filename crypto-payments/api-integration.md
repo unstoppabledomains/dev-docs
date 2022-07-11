@@ -5,7 +5,7 @@ description: This page covers integrating crypto payments into your applications
 
 # Integrate Crypto Payments Using the Resolution API
 
-Unstoppable Domains provides an HTTP-based API for getting domain data and metadata from every supported blockchain without accessing any blockchain APIs. Please see the [Resolution Service API](../developer-toolkit/resolution-service-api.md) guide for a detailed description and configuration.
+Unstoppable Domains provides an HTTP-based API for getting domain data and metadata from every supported blockchain without accessing any blockchain APIs. Please see the [Resolution Service API](../developer-toolkit/resolution-service/overview.md) guide for a detailed description and configuration.
 
 ## Get Records for a Domain
 

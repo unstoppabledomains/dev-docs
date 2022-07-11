@@ -73,7 +73,7 @@ pages:
         page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
       - label: Resolve .zil Domains Without Libraries
         page: direct-blockchain-calls/resolve-zil-without-libraries.md
-      - label: Resolve Domains with Ethereum Smart Contracts
+      - label: Resolve Domains with Smart Contracts
         page: direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
   - group: Changelogs
