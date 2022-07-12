@@ -80,7 +80,7 @@ Scopes are used during authentication to authorize access to specific user data.
 * **profile** maps to the [profile scope](../get-started-login/scopes-for-login.md#profile)
 * **social** maps to the [social scope](../get-started-login/scopes-for-login.md#social)
 
-All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that application for this client can request, simply uncheck those scopes.
+All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that this client can request, simply uncheck those scopes.
 
 <figure>
 
