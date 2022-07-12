@@ -21,20 +21,20 @@ The dashboard will generate a unique **client ID** and open the configuration pa
 
 <figure>
 
-![Connect Wallet and Create Client](/images/connect-wallet-and-create-client.gif '#width=80%')
+![Connect Wallet and Create Client](/images/connect-wallet-and-create-client.gif)
 
 <figcaption>Connect a Wallet and Create a New Client</figcaption>
 </figure>
 
 ## Step 2: Configure Redirect URIs
 
-Add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
+On the **Basic** page, add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
 
 <figure>
 
-![Entering Redirect URIs](/images/login-enter-redirect-uris.gif '#width=80%')
+![Entering Redirect URIs](/images/login-enter-redirect-uris.gif '#width=70%')
 
-<figcaption>Client Metadata</figcaption>
+<figcaption>Add New Redirect URIs</figcaption>
 </figure>
 
 ### Rules for Redirect URIs
@@ -51,16 +51,14 @@ The Redirect URIs follow three rules:
 
 ## Step 3: Customize the Login UI
 
-Click **Show Cosmetic Configuration** to expand the UI configuration options.
+The **Branding Configuration** page allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
 
 <figure>
 
-![Client Configuration UI, Cosmetic Config section](/images/client_config_screen_cosmetic.png '#width=50%')
+![Client Configuration UI, Cosmetic Config section](/images/login-client-config-branding.png '#width=50%')
 
-<figcaption>Client Configuration UI, Cosmetic Config section</figcaption>
+<figcaption>Client Branding Configuration</figcaption>
 </figure>
-
-The **Cosmetic Configuration** section allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
 
 The following table describes the fields for the cosmetic configuration UI section.
 
@@ -74,9 +72,7 @@ The following table describes the fields for the cosmetic configuration UI secti
 
 ## Step 4: Configure Login Scopes
 
-Click **Show Advanced Configuration** and scroll to the **Scopes** section.
-
-Scopes are used during authentication to authorize access to specific user data. You can use them to require or request access to additional information associated with the user's domain. 
+Scopes are used during authentication to authorize access to specific user data. You can use them to require or request access to additional information associated with the user's domain.
 
 * **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet)
 * **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email)
@@ -84,13 +80,13 @@ Scopes are used during authentication to authorize access to specific user data.
 * **profile** maps to the [profile scope](../get-started-login/scopes-for-login.md#profile)
 * **social** maps to the [social scope](../get-started-login/scopes-for-login.md#social)
 
-All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that the application can request, simply uncheck those scopes.
+All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that application for this client can request, simply uncheck those scopes.
 
 <figure>
 
 ![toggling login client scopes](/images/login-client-toggle-scopes.gif)
 
-<figcaption>Customizing Login Client Scopes</figcaption>
+<figcaption>Disabling Client Scopes</figcaption>
 </figure>
 
 ## Step 5: Save Your Changes
@@ -115,7 +111,7 @@ You now have a fully configured Login With Unstoppable Client.
 
 ## Advanced Configuration
 
-The **Advanced Configuration** includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method. Scopes were covered in [Step 4](#step-4-configure-login-scopes) above.
+The **Advanced Configuration** page includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.
 
 :::danger
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
@@ -123,9 +119,9 @@ The advanced configuration settings are unnecessary for many configurations and 
 
 <figure>
 
-![Login Client Advanced Configuration](/images/client_config_screen_advanced.png '#width=50%')
+![Login Client Advanced Configuration](/images/login-client-advanced-config.png '#width=50%')
 
-<figcaption>Login Client Advanced Configuration</figcaption>
+<figcaption>Advanced Configuration</figcaption>
 </figure>
 
 The following section describes the fields for the advanced configuration UI section.
