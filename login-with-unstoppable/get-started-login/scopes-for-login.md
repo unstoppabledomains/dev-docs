@@ -134,5 +134,5 @@ Individual social scopes may also be used separately to require specific social 
 - `social:github`
 
 :::info note
-You should only request a single social scope at a time. Attempting request any combination of `social`, `social:optional`, and the individual social scopes will cause an error.
+You should only request either `social`, `social:optional`, or a combination of individual social scopes. Requesting any combination of those three will throw an error.
 :::
