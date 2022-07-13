@@ -24,7 +24,7 @@ The scopes requested by an application vary depending on the type of user data n
 
 <figure>
 
-![Example scope list presented to UD users](/images/consent-screen-marked-v2.png '#width=40%;')
+![Example scope list presented to UD users](/images/login-scopes-example.png '#width=40%;')
 	
 <figcaption>Example scope list presented to UD users</figcaption>
 </figure>
@@ -44,7 +44,7 @@ Many login scopes have `scope:optional` variations that allow users to opt in or
 
 <figure>
 
-![UI for email:optional scope](/images/email_optional_scope-small.jpg '#width=30%;')
+![UI for email:optional scope](/images/login-scopes-email-optional.png '#width=40%;')
 	
 <figcaption>Consenting to the <code>email:optional</code> scope</figcaption>
 </figure>
@@ -72,7 +72,7 @@ The Login with Unstoppable `wallet` scope is best used for retrieving metadata a
 ## email
 `optional: true`
 
-The Login with Unstoppable `email` scope can be used to retrieve metadata about the user's preferred email address. It is based on the [OIDC Standard email scope](https://openid.net/specs/openid-connect-basic-1_0.html#Scopes).
+The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain users with a proxy email service that doesn't share their private address.
 
 ## humanity_check
 `optional: true`
