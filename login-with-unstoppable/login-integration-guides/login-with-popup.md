@@ -7,6 +7,13 @@ description: This integration guide is intended for a generic @uauth/js, no Ethe
 
 In this integration guide, we will show how to add Login with Unstoppable with the pop-up feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a JavaScript developer with a few minutes of time.
 
+<figure>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/lVF18sLS5yg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<figcaption>Tutorial: Integrating Login With Popup</figcation>
+</figure>
+
 :::info
 If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.
 :::
