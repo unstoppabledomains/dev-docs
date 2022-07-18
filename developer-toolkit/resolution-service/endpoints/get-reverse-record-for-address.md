@@ -37,7 +37,7 @@ A single object with the following fields:
         * 80001 - Polygon (Matic) Mumbai Testnet
         * 4 - Ethereum Rinkeby Testnet
         * 5 - Ethereum Goerli Testnet
-* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](../../../getting-started/domain-registry-essentials/records-reference.md) documentation.
+* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](../../records-reference.md) documentation.
 
 ## Example
 

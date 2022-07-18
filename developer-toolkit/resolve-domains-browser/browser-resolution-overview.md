@@ -31,7 +31,7 @@ If you're familiar with blockchain development and would rather avoid an additio
 * [Resolve Using Ethereum Smart Contracts](../direct-blockchain-calls/resolve-eth-smart-contracts.md)
 * [CNS Smart Contracts reference](../smart-contracts/cns-smart-contracts.md)
 * [UNS Smart Contracts reference](../smart-contracts/uns-smart-contracts.md)
-* [Records reference](../records-reference.md)
+* [Records Reference](../records-reference.md)
 
 ## End-User Features (For Resolving Domains in a Browser)
 
