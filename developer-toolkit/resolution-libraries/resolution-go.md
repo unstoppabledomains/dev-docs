@@ -13,8 +13,8 @@ This page details basic configuration and usage of the [resolution-go library](h
 
 ```golang
 import (
-    "github.com/ethereum/go-ethereum/ethclient"
-	"github.com/unstoppabledomains/resolution-go/v2"
+  "github.com/ethereum/go-ethereum/ethclient"
+	"github.com/unstoppabledomains/resolution-go"
 )
 
 var infuraApiKey = INFURA_PROJECT_ID
@@ -38,7 +38,7 @@ var znsResolution, _ = resolution.NewZnsBuilder().Build()
 
 <embed src="/snippets/_res-lib-error-intro.md" />
 
-```go Golang
+```go
 package main
 
 import (

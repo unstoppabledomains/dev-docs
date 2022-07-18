@@ -401,7 +401,7 @@ function displayError(message, cleanDom) {
 }
 ```
 
-Although any string can be stored as a key under the domain, Unstoppable domains have [standardized the keys](../../getting-started/domain-registry-essentials/records-reference.md) across many applications.
+Although any string can be stored as a key under the domain, Unstoppable domains have [standardized the keys](../records-reference.md) across many applications.
 
 For the **Record is not found** error message, we can check if the domain has a BTC address. If not, we can show the error without cleaning the entire DOM.
 

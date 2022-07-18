@@ -12,7 +12,7 @@ This page details basic configuration and usage of the [resolution-java library]
 <embed src="/snippets/_res-lib-default-provider.md" />
 
 ```java
-import com.unstoppabledomains.resolution.Resolution
+import com.unstoppabledomains.resolution.Resolution;
 
 String infuraApiKey = INFURA_PROJECT_ID;
 String ethProviderURL = "https://mainnet.infura.io/v3/" + infuraApiKey
@@ -30,7 +30,7 @@ DomainResolution resolution = Resolution.builder()
 
 <embed src="/snippets/_res-lib-error-intro.md" />
 
-```java Java
+```java
 import com.unstoppabledomains.resolution.Resolution;
 import com.unstoppabledomains.exceptions.ns.NamingServiceException;
 import com.unstoppabledomains.exceptions.ns.NSExceptionCode;

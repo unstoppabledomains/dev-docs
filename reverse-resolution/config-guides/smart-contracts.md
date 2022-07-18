@@ -9,7 +9,7 @@ This guide covers how to set Reverse Resolution records for UD domains using sma
 
 ## Step 1: Select a UNS Registry Smart Contract
 
-<embed src="/snippets/_uns_smart_contracts.md" />
+The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
 
 <figure>
 

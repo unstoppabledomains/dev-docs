@@ -232,3 +232,6 @@
 '/developer-toolkit/resolution-service-api/':
   to: '/developer-toolkit/resolution-service/overview/'
   type: 301
+'/getting-started/domain-registry-essentials/records-reference/':
+  to: '/developer-toolkit/records-reference/'
+  type: 301

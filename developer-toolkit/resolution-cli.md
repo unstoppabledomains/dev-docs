@@ -5,7 +5,7 @@ description: This page reviews the Resolution CLI option for resolving a domain.
 
 # Resolution CLI
 
-The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with NFT domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), DNS records and other [records types](../getting-started/domain-registry-essentials/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
+The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with NFT domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), DNS records and other [records types](records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
@@ -22,7 +22,7 @@ resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
 
-The crypto.ETH.address can be located in the [Records Reference](../getting-started/domain-registry-essentials/records-reference.md).
+The crypto.ETH.address can be located in the [Records Reference](records-reference.md).
 
 ## Use Case: Retrieve a Domain Record
 

@@ -20,7 +20,7 @@ This endpoint returns the domain name records and metadata owned by an address o
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | owners | ARRAY[STRING] | NO | A list of wallet addresses to query for domain information |
-| resolution | OBJECT | NO | A key-value pair of resolution records the response results should be filtered with. See the [Records Reference](../../../getting-started/domain-registry-essentials/records-reference.md) documentation for supported key values |
+| resolution | OBJECT | NO | A key-value pair of resolution records the response results should be filtered with. See the [Records Reference](../../records-reference.md) documentation for supported key values |
 | tlds | ARRAY[STRING] | NO | A list of domain endings the response should be filtered with. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 | sortBy | STRING | NO | The field to use for sorting of the response. Currently supports `id` (domain ID), `name` (domain name alphabetically), and `created_at` (domain creation date) |
 | sortDirection | STRING | NO | The order to use for sorting of the response. Currently supports `ASC` (ascending) and `DESC` (descending) |
