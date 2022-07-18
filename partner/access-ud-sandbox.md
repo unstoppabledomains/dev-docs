@@ -44,7 +44,7 @@ Open the verification email and click the link to whitelist your IP address in t
 <figcaption>Whitelist your IP address in the sandbox</figcaption>
 </figure>
 
-:::danger
+:::info
 You can use the second link to revoke your IP address from the sandbox and remove it from the whitelist.
 :::
 

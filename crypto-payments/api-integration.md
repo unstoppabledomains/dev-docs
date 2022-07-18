@@ -52,7 +52,7 @@ The Resolution Service API will return the following response to the request abo
 ```
 
 :::info
-Please see the [Records Reference](../getting-started/domain-registry-essentials/records-reference.md) guide for information about supported crypto payment tickers and chain versions.
+Please see the [Records Reference](../developer-toolkit/records-reference.md) guide for information about supported crypto payment tickers and chain versions.
 :::
 
 <embed src="/snippets/_discord.md" />

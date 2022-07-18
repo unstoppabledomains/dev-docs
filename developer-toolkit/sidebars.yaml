@@ -4,77 +4,84 @@ pages:
   - page: index.md
     label: Toolkit Overview
     separatorLine: true
-  - group: Smart Contracts
+  - group: Resolution Integration Methods
     expanded: false
     pages:
-      - label: UNS Smart Contracts
-        page: smart-contracts/uns-smart-contracts.md
-      - label: CNS Smart Contracts
-        page: smart-contracts/cns-smart-contracts.md
+      - group: Resolution Service API
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Overview
+            page: resolution-service/overview.md
+          - label: Get Records for a Domain
+            page: resolution-service/endpoints/get-records-for-a-domain.md
+          - label: Get Records for Owner Addresses
+            page: resolution-service/endpoints/get-records-for-owner-addresses.md
+          - label: Get Domain Transfer Events
+            page: resolution-service/endpoints/get-domain-transfer-events.md
+          - label: Get Supported TLDs
+            page: resolution-service/endpoints/get-supported-tlds.md
+          - label: Error Codes
+            page: resolution-service/error-codes.md
+      - group: Resolution Libraries
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Overview
+            page: resolution-libraries/libraries-overview.md
+          - label: Resolution
+            page: resolution-libraries/resolution.md
+          - label: Resolution-Java
+            page: resolution-libraries/resolution-java.md
+          - label: Resolution-Swift
+            page: resolution-libraries/resolution-swift.md
+          - label: Resolution-Go
+            page: resolution-libraries/resolution-go.md
+          - label: Matic.js SDK
+            page: resolve-with-maticjs.md
+      - label: Resolution CLI
+        page: resolution-cli.md
+      - group: Resolve With Direct Blockchain Calls
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Overview
+            page: direct-blockchain-calls/bc-overview.md
+          - label: Resolve UD Domains Without Libraries
+            page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
+          - label: Resolve .zil Domains Without Libraries
+            page: direct-blockchain-calls/resolve-zil-without-libraries.md
+          - label: Resolve Domains with Smart Contracts
+            page: direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
-  - group: Resolution Service API
+  - group: Advanced Resolution Use Cases
     expanded: false
-    selectFirstItemOnExpand: true
     pages:
-      - label: Overview
-        page: resolution-service/overview.md
-      - label: Get Records for a Domain
-        page: resolution-service/endpoints/get-records-for-a-domain.md
-      - label: Get Records for Owner Addresses
-        page: resolution-service/endpoints/get-records-for-owner-addresses.md
-      - label: Get Domain Transfer Events
-        page: resolution-service/endpoints/get-domain-transfer-events.md
-      - label: Get Supported TLDs
-        page: resolution-service/endpoints/get-supported-tlds.md
-      - label: Error Codes
-        page: resolution-service/error-codes.md
+      - label: Resolve Domains in Web Applications
+        page: resolve-domains-in-web-applications.md
+      - group: Resolve Domains in a Browser (HTTP & IPFS)
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Browser Resolution Overview
+            page: resolve-domains-browser/browser-resolution-overview.md
+          - label: Browser Resolution Algorithm
+            page: resolve-domains-browser/browser-resolution-algorithm.md
+          - label: Browser Resolution Test Domains
+            page: resolve-domains-browser/test-domains.md
     separatorLine: true
-  - group: Resolution Libraries
+  - group: Reference
     expanded: false
-    selectFirstItemOnExpand: true
     pages:
-      - label: Overview
-        page: resolution-libraries/libraries-overview.md
-      - label: Resolution
-        page: resolution-libraries/resolution.md
-      - label: Resolution-Java
-        page: resolution-libraries/resolution-java.md
-      - label: Resolution-Swift
-        page: resolution-libraries/resolution-swift.md
-      - label: Resolution-Go
-        page: resolution-libraries/resolution-go.md
-      - label: Matic.js SDK
-        page: resolve-with-maticjs.md
-    separatorLine: true
-  - label: Resolution CLI
-    page: resolution-cli.md
-    separatorLine: true
-  - label: Resolve Domains in Web Applications
-    page: resolve-domains-in-web-applications.md
-    separatorLine: true
-  - group: Resolve Domains in a Browser (HTTP & IPFS)
-    expanded: false
-    selectFirstItemOnExpand: true
-    pages:
-      - label: Browser Resolution Overview
-        page: resolve-domains-browser/browser-resolution-overview.md
-      - label: Browser Resolution Algorithm
-        page: resolve-domains-browser/browser-resolution-algorithm.md
-      - label: Browser Resolution Test Domains
-        page: resolve-domains-browser/test-domains.md
-    separatorLine: true
-  - group: Resolve With Direct Blockchain Calls
-    expanded: false
-    selectFirstItemOnExpand: true
-    pages:
-      - label: Overview
-        page: direct-blockchain-calls/bc-overview.md
-      - label: Resolve UD Domains Without Libraries
-        page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
-      - label: Resolve .zil Domains Without Libraries
-        page: direct-blockchain-calls/resolve-zil-without-libraries.md
-      - label: Resolve Domains with Smart Contracts
-        page: direct-blockchain-calls/resolve-eth-smart-contracts.md
+      - group: Smart Contracts
+        expanded: false
+        pages:
+          - label: UNS Smart Contracts
+            page: smart-contracts/uns-smart-contracts.md
+          - label: CNS Smart Contracts
+            page: smart-contracts/cns-smart-contracts.md
+      - label: Records Reference
+        page: records-reference.md
     separatorLine: true
   - group: Changelogs
     expanded: false

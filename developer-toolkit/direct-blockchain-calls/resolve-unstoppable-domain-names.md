@@ -226,7 +226,7 @@ async function fetchContractData(contract, keys, tokenId) {
 By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the `namehash()` function from above.
 
 :::info
-Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../../getting-started/domain-registry-essentials/records-reference.md) across many applications.
+Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../records-reference.md) across many applications.
 :::
 
 ### Record Keys Lookup

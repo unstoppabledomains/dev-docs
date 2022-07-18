@@ -19,7 +19,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides [ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
+Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](../records-reference.md).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
     <table>
@@ -42,7 +42,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
             <td><a href="https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93">0x2a93C52E7B6E7054870758e15A1446E769EdfB93</a></td>
         </tr>
     </table>
-    
+
 
 **Source code:** [contracts/UnsRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/UNSRegistry.sol)
 
@@ -114,7 +114,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
             </td>
     </tr>
     </table>
-    
+
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/ProxyReader.sol)
 
@@ -154,7 +154,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
             </td>
     </tr>
     </table>
-    
+
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol)
 
@@ -187,7 +187,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
             <td><a href="https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f">0x428189346bb3CC52f031A1092fd47C919AC30A9f</a></td>
         </tr>
     </table>
-    
+
 
 **Source code:** [contracts/MintingManager.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/MintingManager.sol)
 

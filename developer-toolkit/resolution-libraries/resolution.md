@@ -33,7 +33,6 @@ const resolution = new Resolution({
           },
         },
       },
-      ens: {url: infuraProviderUrl, network: 'mainnet'}
     },
   });
 
