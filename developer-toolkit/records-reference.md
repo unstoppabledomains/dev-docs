@@ -191,3 +191,9 @@ Deprecated: use `browser.redirect_url` instead.
 | Format                                          | Example                        |
 | ----------------------------------------------- | ------------------------------ |
 | [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
+
+### Rendering coin icons
+
+In order to render the coin icon, make sure that the `hasIcon` prop value is set to `true`. In this case, you should be able to access it on our CDN.
+
+Example: for Bitcoin (BTC), the link will look like this: https://storage.googleapis.com/unstoppable-client-assets/images/icons/BTC/icon.svg (you should just change the coin abbreviation to access other coin icons).
