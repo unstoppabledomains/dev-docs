@@ -15,15 +15,26 @@ To begin the integration process for Login with Unstoppable, you will need to ob
 
 When you've customized your client and saved your changes, you will need the **Client Metadata** to configure your integration. This can be copied directly from the first section of the **Client Configuration** page.
 
+<figure>
+<figcaption>Example client metadata</figcaption>
+
 ```javascript
 {
     clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     redirectUri: "http://localhost",
-    scope: "openid wallet email:optional humanity_check:optional"
+    scope: "openid . . . "
 }
 ```
 
-## Step 2: Choose Your Integration Path
+</figure>
+
+## Step 2: Configure Login Scopes
+
+The `scope` property from your client metadata will contain all available scopes by default, some of which are mutually exclusive. The minimum scope required for login is `openid`.
+
+See [Scopes for Login](./scopes-for-login.md) for more details on each of these.
+
+## Step 3: Choose Your Integration Path
 
 There are several ways to integrate with Login with Unstoppable, which are detailed in the chart below.
 
@@ -41,11 +52,11 @@ There are several ways to integrate with Login with Unstoppable, which are detai
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
 :::
 
-## Step 3: Configure the Login UI
+## Step 4: Configure the Login UI
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](../login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
 
-## Step 4: Promote Your Application
+## Step 5: Promote Your Application
 
 Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
 

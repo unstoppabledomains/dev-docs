@@ -5,7 +5,7 @@ description: This page details the scopes currently supported by Login with Unst
 
 # Scopes for Login
 
-Login with Unstoppable uses scopes to request data about a user. Instead of requesting all of a user's information at once, scopes are used to make granular requests (e.g., a wallet address, an email address). Each scope returns a set of user attributes called **claims**. If the user authorizes the access associated with a scope, the claims are returned inside the **ID Token** associated with that authorization.
+Login with Unstoppable uses scopes to request data about a user. Instead of requesting all of a user's information at once, scopes are used to make granular requests (for example, a wallet address or an email address). Each scope returns a set of user attributes called **claims**. If the user authorizes the access associated with a scope, the claims are returned inside the **ID Token** associated with that authorization.
 
 These scopes are passed to the authorization request in the `scope` parameter, which is a list of case-sensitive strings called **scope tokens** separated by spaces.
 
@@ -72,7 +72,7 @@ The Login with Unstoppable `wallet` scope is best used for retrieving metadata a
 ## email
 `optional: true`
 
-The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain users with a proxy email service that doesn't share their private address.
+The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain owners with a proxy email service that doesn't share their private address.
 
 ## humanity_check
 `optional: true`

@@ -28,7 +28,7 @@ The dashboard will generate a unique **client ID** and open the configuration pa
 
 ## Step 2: Configure Redirect URIs
 
-On the **Basic** page, add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
+In the **Basic** configuration section, add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
 
 <figure>
 
@@ -51,7 +51,7 @@ The Redirect URIs follow three rules:
 
 ## Step 3: Customize the Login UI
 
-The **Branding Configuration** page allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
+The **Branding Configuration** section allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
 
 <figure>
 
@@ -70,26 +70,7 @@ The following table describes the fields for the cosmetic configuration UI secti
 | Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
 | Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
 
-## Step 4: Configure Login Scopes
-
-Scopes are used during authentication to authorize access to specific user data. You can use them to require or request access to additional information associated with the user's domain.
-
-* **wallet** maps to the [wallet scope](../get-started-login/scopes-for-login.md#wallet)
-* **email** maps to the [email scope](../get-started-login/scopes-for-login.md#email)
-* **humanity_check** maps to the [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check)
-* **profile** maps to the [profile scope](../get-started-login/scopes-for-login.md#profile)
-* **social** maps to the [social scope](../get-started-login/scopes-for-login.md#social)
-
-All [scopes](../get-started-login/scopes-for-login.md) are enabled by default. To limit the scopes that this client can request, simply uncheck those scopes.
-
-<figure>
-
-![toggling login client scopes](/images/login-client-toggle-scopes.gif)
-
-<figcaption>Disabling Client Scopes</figcaption>
-</figure>
-
-## Step 5: Save Your Changes
+## Step 4: Save Your Changes
 
 You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application will require a wallet connection and signature.
 
