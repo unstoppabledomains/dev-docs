@@ -19,11 +19,10 @@ You will not need any ETH in your wallet to perform any action in this dashboard
 
 The dashboard will generate a unique **client ID** and open the configuration page for your new client. The **Client Metadata** section is automatically populated with the `clientID` and default values for the `redirectURI` and `scope`. This will update as you change these settings and can be copied directly into your application.
 
+
 <figure>
-
-![Connect Wallet and Create Client](/images/connect-wallet-and-create-client.gif)
-
-<figcaption>Connect a Wallet and Create a New Client</figcaption>
+<video loop autoplay muted width="100%" src="/videos/connect-wallet-and-create-client.mp4"></video>
+<figcaption>Connect a wallet and create a new client</figcaption>
 </figure>
 
 ## Step 2: Configure Redirect URIs
@@ -34,7 +33,7 @@ In the **Basic** configuration section, add new **Redirect URIs** to your client
 
 ![Entering Redirect URIs](/images/login-enter-redirect-uris.gif '#width=70%')
 
-<figcaption>Add New Redirect URIs</figcaption>
+<figcaption>Add new Redirect URIs</figcaption>
 </figure>
 
 ### Rules for Redirect URIs
