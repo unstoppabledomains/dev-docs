@@ -194,6 +194,7 @@ Deprecated: use `browser.redirect_url` instead.
 
 ### Rendering coin icons
 
-In order to render the coin icon, make sure that the `hasIcon` prop value is set to `true`. In this case, you should be able to access it on our CDN.
+`hasIcon` attribute can be used to render an icon associated with a coin. Unstoppable Domains store all such icons on CDN to ensure quick delivery.
 
-Example: for Bitcoin (BTC), the link will look like this: https://storage.googleapis.com/unstoppable-client-assets/images/icons/BTC/icon.svg (you should just change the coin abbreviation to access other coin icons).
+For coins where `hasIcon` is set to `true` you can retrieve each coin icon by changing the coin abbreviation `BTC` to the desired one:
+https://storage.googleapis.com/unstoppable-client-assets/images/icons/BTC/icon.svg
