@@ -13,6 +13,14 @@ For more information on resolving domains using the Resolution CLI option, pleas
 Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](resolution-service/endpoints/get-supported-tlds.md).
 :::
 
+## Installing Resolution CLI
+
+To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
+
+```
+go get -u github.com/unstoppabledomains/resolution-cli/resolution
+```
+
 ## Use Case: Retrieve an ETH Address
 
 This will retrieve the ETH address of a domain:

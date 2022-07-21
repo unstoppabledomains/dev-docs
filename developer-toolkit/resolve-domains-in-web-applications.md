@@ -127,25 +127,21 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 
 ### Command Line Interface
 
-To use resolution via the command line install the package globally.
+To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
 ```
-yarn global add @unstoppabledomains/resolution
+go get -u github.com/unstoppabledomains/resolution-cli/resolution
 ```
 
-```
-npm install -g @unstoppabledomains/resolution
-```
-
-By default, the CLI uses Infura as its primary gateway to the Ethereum blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-url` flag.
+By default, the CLI uses infura as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.
 
 For example:
 
 ```
-resolution --ethereum-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto -a
+resolution --ethereum-provider-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto
 ```
 
-Use the `-h` or `--help` flag to see all the available CLI options.
+Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](resolution-cli.md) documentation for more information.
 
 ## Default Ethereum Providers
 
@@ -168,7 +164,7 @@ In some scenarios, the system might not be flexible enough to easily distinguish
 
 This method configures CNS and UNS. ZNS is supported only on Zilliqa mainnet. You can provide a configured provider or a blockchain url as in the following example:
 
-```json
+```javascript
 Resolution.autoNetwork({
     uns: {
         locations: {
