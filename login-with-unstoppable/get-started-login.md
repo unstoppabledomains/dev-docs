@@ -1,11 +1,11 @@
 ---
 title: Login Integration Pathways | Unstoppable Domains Developer Portal
-description: This page reviews the integration guides for Login with Unstoppable. This feature works for Polygon and Ethereum domains.
+description: This page provides a step-by-step overview of the Login integration process. This feature works for Polygon and Ethereum domains.
 ---
 
-# Login Integration Pathways
+# Getting Started with Login
 
-Login with Unstoppable is a versatile feature with several integration pathways available for developers. This page reviews the integration guides, overall features, and related libraries for each installation option.
+Login with Unstoppable is a versatile feature with several integration pathways available for developers. This guide will step you through your first login integration with one of several supported libraries.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
