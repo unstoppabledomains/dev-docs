@@ -94,13 +94,13 @@
 '/login-with-unstoppable/developer-integration':
   to: '/login-with-unstoppable/get-started-login/'
   type: 301
-'/login-with-unstoppable/login-integration-guides':
+'/login-with-unstoppable/login-integration-guides/':
   to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-integration-guides/integration-pathways/':
   to: '/login-with-unstoppable/get-started-login/'
   type: 301
-  '/login-with-unstoppable/get-started-login/integration-pathways/':
+'/login-with-unstoppable/get-started-login/integration-pathways/':
   to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-ui-configuration':
@@ -118,10 +118,10 @@
 '/login-with-unstoppable/login-error-codes':
   to: '/login-with-unstoppable/troubleshoot/login-error-codes/'
   type: 301
-'/login-with-unstoppable/get-started-login/login-faq'
+'/login-with-unstoppable/get-started-login/login-faq':
   to: '/login-with-unstoppable/login-faq'
   type: '301'
-'/login-with-unstoppable/humanity-check/humanity-check-faq/'
+'/login-with-unstoppable/humanity-check/humanity-check-faq/':
   to: '/login-with-unstoppable/humanity-check-faq/'
   type: 301
 '/polygon-l2-network/polygon-high-level-overview':
