@@ -92,28 +92,37 @@
   to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
   type: 301
 '/login-with-unstoppable/developer-integration':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-integration-guides':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-integration-guides/integration-pathways/':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  to: '/login-with-unstoppable/get-started-login/'
+  type: 301
+  '/login-with-unstoppable/get-started-login/integration-pathways/':
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-ui-configuration':
   to: '/login-with-unstoppable/login-integration-guides/login-ui-configuration/'
   type: 301
-'/login-with-unstoppable/humanity-check-for-login':
-  to: '/login-with-unstoppable/humanity-check/humanity-check-for-login/'
+'/login-with-unstoppable/humanity-check/humanity-check-for-login/':
+  to: '/login-with-unstoppable/humanity-check/'
   type: 301
-'/login-with-unstoppable/scopes-for-login':
-  to: '/login-with-unstoppable/get-started-login/scopes-for-login/'
+'/login-with-unstoppable/get-started-login/scopes-for-login/':
+  to: '/login-with-unstoppable/scopes-for-login'
   type: 301
 '/login-with-unstoppable/troubleshooting-guide':
   to: '/login-with-unstoppable/troubleshoot/troubleshooting-guide/'
   type: 301
 '/login-with-unstoppable/login-error-codes':
   to: '/login-with-unstoppable/troubleshoot/login-error-codes/'
+  type: 301
+'/login-with-unstoppable/get-started-login/login-faq'
+  to: '/login-with-unstoppable/login-faq'
+  type: '301'
+'/login-with-unstoppable/humanity-check/humanity-check-faq/'
+  to: '/login-with-unstoppable/humanity-check-faq/'
   type: 301
 '/polygon-l2-network/polygon-high-level-overview':
   to: '/polygon/'
