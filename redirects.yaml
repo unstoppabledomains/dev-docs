@@ -55,7 +55,7 @@
 '/allow-my-users-to-manage-existing-domains/meta-transactions':
   to: '/manage-domains/delegating-transactions/'
   type: 301
-'allow-my-users-to-manage-existing-domains/deploying-custom-resolver':
+'/allow-my-users-to-manage-existing-domains/deploying-custom-resolver':
   to: '/manage-domains/delegating-domain-management/'
   type: 301
 '/sell-domains-to-users-in-my-app/register-as-reseller':
@@ -140,7 +140,7 @@
   to: '/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/'
   type: 301
 '/domain-registry-essentials/records-reference':
-  to: '/getting-started/domain-registry-essentials/records-reference/'
+  to: '/developer-toolkit/records-reference/'
   type: 301
 '/domain-registry-essentials/uns-vs-cns-comparison/architecture-overview':
   to: '/getting-started/domain-registry-essentials/cns-architecture-overview/'
