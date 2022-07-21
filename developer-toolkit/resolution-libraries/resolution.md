@@ -5,18 +5,17 @@ description: This page details basic configuration and usage of the resolution l
 
 # Resolution
 
-This page details basic configuration and usage of the JavaScript [resolution library](https://github.com/unstoppabledomains/resolution).
+This page details basic configuration and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
 
 <embed src="/snippets/_libraries-provider-config.md" />
 
 <embed src="/snippets/_res-lib-default-provider.md" />
 
 ```javascript
-import Resolution from "@unstoppabledomains/resolution";
+const {default: Resolution} = require('@unstoppabledomains/resolution');
 
-const infuraApiKey = INFURA_PROJECT_ID;
-const infuraProviderUrl = `https://mainnet.infura.io/v3/${infuraApiKey}`;
-const polygonProviderUrl = `https://polygon-mainnet.infura.io/v3/${infuraApiKey}`;
+const ethereumProviderUrl = ALCHEMY_ETHEREUM_API;
+const polygonProviderUrl = ALCHEMY_POLYGON_API;
 
 // custom provider config using the `Resolution` constructor options
 const resolution = new Resolution({
@@ -24,7 +23,7 @@ const resolution = new Resolution({
       uns: {
         locations: {
           Layer1: {
-            url: infuraProviderUrl,
+            url: ethereumProviderUrl,
             network: 'mainnet'
           },
           Layer2: {
@@ -35,9 +34,6 @@ const resolution = new Resolution({
       },
     },
   });
-
-// custom provider config using the `Resolution.infura()` method
-const resolution = Resolution.infura(infuraApiKey);
 ```
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
@@ -132,4 +128,5 @@ function resolveCustomRecord(domain, record) {
 
 resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 ```
+
 <embed src="/snippets/_discord.md" />

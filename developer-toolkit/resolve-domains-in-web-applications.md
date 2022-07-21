@@ -133,24 +133,23 @@ To use resolution via the command line, [download one of the binaries](https://g
 go get -u github.com/unstoppabledomains/resolution-cli/resolution
 ```
 
-By default, the CLI uses infura as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.
+By default, the CLI uses Alchemy as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.
 
 For example:
 
 ```
-resolution --ethereum-provider-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
 ```
 
 Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](resolution-cli.md) documentation for more information.
 
 ## Default Ethereum Providers
 
-Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default. Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
+Resolution provides zero-configuration experience by using built-in production-ready [Alchemy](http://alchemy.com/) endpoint by default. The Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
 
-\
-To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
-Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
+To resolve `ENS` domains on production it's recommended to change the Ethereum provider. Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
+* `Resolution.alchemy()`
 * `Resolution.infura()`
 * `Resolution.fromWeb3Version1Provider()`
 * `Resolution.fromEthersProvider()`
