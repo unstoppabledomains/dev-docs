@@ -21,7 +21,7 @@ An interoperability protocol that allows tokens and arbitrary data to be transfe
 
 ### CNS
 
-Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum mainnet. It is deprecated as new domains are minted on [UNS](#uns), which supports various domain endings besides `.crypto`.
+Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum mainnet. It is depreciated as new domains are minted on [UNS](#uns), which supports various domain endings besides `.crypto`.
 
 ### DApp
 

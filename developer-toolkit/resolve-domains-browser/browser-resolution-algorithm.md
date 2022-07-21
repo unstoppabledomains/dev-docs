@@ -84,7 +84,7 @@ Should be transformed into the following DNS records:
 | AAAA   | 2a00:1450:401b:805::200e | 128 |
 | MX     | 10 aspmx.example.com.    | 128 |
 
-TTL for individual records of the same type is currently unsupported. This is due to needing to change the record value format, increased gas cost, and their deprecated status according to [RFC-2181](https://datatracker.ietf.org/doc/html/rfc2181#section-5.2). Setting `dns.ttl` instead of TTL for individual records is recommended due to higher gas efficiency.
+TTL for individual records of the same type is currently unsupported. This is due to needing to change the record value format, increased gas cost, and their depreciated status according to [RFC-2181](https://datatracker.ietf.org/doc/html/rfc2181#section-5.2). Setting `dns.ttl` instead of TTL for individual records is recommended due to higher gas efficiency.
 
 #### Authority responses
 
@@ -104,7 +104,7 @@ See [Resolve Domains in Web Applications](../resolve-domains-in-web-applications
 
 As of Q3 2020, most .crypto domains are configured using legacy record names for IPFS hash and redirect domain:
 
-1. `ipfs.html.value` deprecated in favor of `dweb.ipfs.hash`
-2. `ipfs.redirect_domain.value` deprecated in favor of `browser.redirect_url`
+1. `ipfs.html.value` depreciated in favor of `dweb.ipfs.hash`
+2. `ipfs.redirect_domain.value` depreciated in favor of `browser.redirect_url`
 
 Browsers are strongly recommended to support those records as a fallback when corresponding replacement records are not set.
