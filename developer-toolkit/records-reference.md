@@ -75,6 +75,13 @@ Some currencies exist on multiple chains.
 
 Cryptocurrency address of ticker version
 
+### Rendering coin icons
+
+`hasIcon` attribute can be used to render an icon associated with a coin. Unstoppable Domains store all such icons on CDN to ensure quick delivery.
+
+For coins where `hasIcon` is set to `true` you can retrieve each coin icon by changing the coin <TICKER> to the desired one:
+`https://storage.googleapis.com/unstoppable-client-assets/images/icons/<TICKER>/icon.svg`
+
 ## Browser resolution
 
 Browser resolution is described in the [Browser Resolution Algorithm](resolve-domains-browser/browser-resolution-algorithm.md) page.
