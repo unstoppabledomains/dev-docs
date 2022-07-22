@@ -40,7 +40,9 @@ All requests made to the Resolution Service API must contain the following heade
 
 Here’s a guide on setting up your Alchemy account and querying the Unstoppable Domains Resolution Service API.
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/7cd5398275e74d8ba024323985cd90c7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div class="video-container">
+<iframe src="https://www.loom.com/embed/7cd5398275e74d8ba024323985cd90c7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 ## API Endpoints Overview
 
