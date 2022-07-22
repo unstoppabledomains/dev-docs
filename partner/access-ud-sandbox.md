@@ -13,13 +13,13 @@ Open the UD sandbox in your browser: <https://ud-sandbox.com/>, then click the `
 
 <figure>
 
-![UD sandbox whitelisting page](/images/ud-sandbox-whitelisting.png '#width=80%;')
+![UD sandbox IP adding page](/images/ud-sandbox-ip-adding.png '#width=80%;')
 
-<figcaption>UD sandbox whitelisting page</figcaption>
+<figcaption>UD sandbox IP adding page</figcaption>
 </figure>
 
 :::info
-If your IP address is whitelisted in the sandbox, you will not be redirected to the IP whitelisting page.
+If your IP address is added in the sandbox allowlist, you will not be redirected to the IP adding page.
 :::
 
 ## Step 2: Verify Your Email Address
@@ -33,24 +33,24 @@ Unstoppable Domains will send a verification email to the email address you conn
 <figcaption>UD sandbox verification</figcaption>
 </figure>
 
-## Step 3: Whitelist Your IP Address
+## Step 3: Add Your IP Address to the Sandbox
 
-Open the verification email and click the link to whitelist your IP address in the UD sandbox environment.
+Open the verification email and click the link to add your IP address to the UD sandbox environment allowlist.
 
 <figure>
 
-![Whitelist your IP address in the sandbox](/images/ud-sandbox-ip-whitelisting.png '#width=80%;')
+![Add your IP address in the sandbox](/images/ud-sandbox-ip-adding-links.png '#width=80%;')
 
-<figcaption>Whitelist your IP address in the sandbox</figcaption>
+<figcaption>Add your IP address to the sandbox</figcaption>
 </figure>
 
 :::info
-You can use the second link to revoke your IP address from the sandbox and remove it from the whitelist.
+You can use the second link to revoke your IP address from the sandbox allowlist.
 :::
 
 ## Step 4: Access the UD Sandbox
 
-After whitelisting your IP address, you will be redirected to the Unstoppable Domains sandbox environment, where you can test your integrations.
+After adding your IP address, you will be redirected to the Unstoppable Domains sandbox environment, where you can test your integrations.
 
 <figure>
 
