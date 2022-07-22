@@ -50,7 +50,7 @@ After signing the transaction, you can view its details on the blockchain explor
 Now, applications that have integrated Reverse Resolution will be able to show the reverse record for your domains instead of your wallet address.
 
 :::success Congratulations!
-You have successfully configured reverse resolution for your domain using the UD dashboard. Happy hacking!
+You have successfully configured Reverse Resolution for your domain using the UD dashboard. Happy hacking!
 :::
 
 <embed src="/snippets/_discord.md" />

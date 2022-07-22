@@ -23,7 +23,7 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 
 ## Domain Record Types
 
-Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a member from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../developer-toolkit/records-reference.md).
+Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a member from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records Reference](../developer-toolkit/records-reference.md).
 
 Standard record keys are split by namespaces with a `.` used as a separator.
 

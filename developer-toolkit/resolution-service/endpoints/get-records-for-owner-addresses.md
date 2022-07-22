@@ -9,7 +9,7 @@ description: This page covers the documentation for the `Get Records for Owner A
 GET https://unstoppabledomains.g.alchemy.com/domains
 ```
 
-Request domain name records and metadata when given single or multiple owner addresses or configured to a resolution record.
+This endpoint returns the domain name records and metadata owned by an address or configured to a resolution record.
 
 ## URL Params
 
@@ -36,7 +36,7 @@ If your request must include multiple `owners` or `tlds`, you need to use a new 
 
 ## Returns
 
-An object with a `data` field contains a list of domain details and some meta about the request.
+An object with a `data` field that contains a list of domain details and some meta about the request.
 
 * `data`: (array) An array with the data and metadata of domains owned by a wallet address.
     * `id`: (string) The domain ID.
