@@ -81,7 +81,7 @@ Unstoppable email is disabled for domains by default. If a user has not enabled 
 
 The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
 
-After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](../humanity-check/humanity-check-for-login.md#persona)."
+After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](/login-with-unstoppable/humanity-check.md#persona)."
 
 
 <figure class="one-third-inline-block">
@@ -106,7 +106,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 </figure>
 
 
-See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](/login-with-unstoppable/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
 
 ## profile
 `optional: true`

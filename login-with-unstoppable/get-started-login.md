@@ -11,7 +11,7 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 ## Step 1: Get Your Client Credentials
 
-To begin the integration process for Login with Unstoppable, you will need to obtain and configure your client credentials using the **My Clients** and **Client Configuration** pages. Please see the [**Login Client Configuration**](../login-integration-guides/login-client-configuration.md) guide for more details.
+To begin the integration process for Login with Unstoppable, you will need to obtain and configure your client credentials using the **My Clients** and **Client Configuration** pages. Please see the [**Login Client Configuration**](/login-with-unstoppable/login-integration-guides/login-client-configuration.md) guide for more details.
 
 When you've customized your client and saved your changes, you will need the **Client Metadata** to configure your integration. This can be copied directly from the first section of the **Client Configuration** page.
 
@@ -40,13 +40,13 @@ There are several ways to integrate with Login with Unstoppable, which are detai
 
 | Integration Guide                                                          | Package            | Ethereum Provider | Callback | Front-end UI       |
 |----------------------------------------------------------------------------|:------------------:|:-----------------:|:--------:|:------------------:|
-| [Login with Pop-up](../login-integration-guides/login-with-popup.md)       |`@uauth/js`          |     &#10060;     | &#10060; | JavaScript, Pop-up |
-| [Login without Pop-up](../login-integration-guides/login-without-popup.md) |`@uauth/js`          |     &#10060;     | &#9989;  |  React, no Pop-up  |
-| [Web3 React](../login-integration-guides/web3-react-guide.md)              |`@uauth/web3-react`  |     &#9989;      | &#10060; |     `web3-react`   |
-| [Web3 Modal](../login-integration-guides/web3-modal-guide.md)              |`@uauth/web3-modal`  |     &#9989;      | &#10060; |     `web3-modal`   |
-| [Web3 Onboard](../login-integration-guides/web3-onboard-guide.md)          |`@uauth/web3onboard` |     &#9989;      | &#10060; |   `web3-onboard`   |
-| [Moralis](../login-integration-guides/moralis-guide.md)                    |`@uauth/moralis`     |     &#9989;      | &#10060; |     `moralis`      |
-| [Node.js Server](../login-integration-guides/node-js-server-guide.md)      |`@uauth/node`        |     &#10060;     | &#9989;  |        None        |
+| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       |`@uauth/js`          |     &#10060;     | &#10060; | JavaScript, Pop-up |
+| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |`@uauth/js`           |     &#10060;     | &#9989;  |  React, no Pop-up  |
+| [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              |`@uauth/web3-react`  |     &#9989;      | &#10060; |     `web3-react`   |
+| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              |`@uauth/web3-modal`  |     &#9989;      | &#10060; |     `web3-modal`   |
+| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |`@uauth/web3onboard` |     &#9989;      | &#10060; |   `web3-onboard`   |
+| [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    |`@uauth/moralis`     |     &#9989;      | &#10060; |     `moralis`      |
+| [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      |`@uauth/node`        |     &#10060;     | &#9989;  |        None        |
 
 :::info
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
@@ -54,7 +54,7 @@ The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available f
 
 ## Step 4: Configure the Login UI
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](../login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
+Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](/login-with-unstoppable/login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
 
 ## Step 5: Promote Your Application
 
