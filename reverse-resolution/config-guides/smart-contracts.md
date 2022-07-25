@@ -9,7 +9,7 @@ This guide covers how to set Reverse Resolution records for UD domains using sma
 
 ## Step 1: Select a UNS Registry Smart Contract
 
-The [UNS Registry](../../developer-toolkit/smart-contracts/uns-smart-contracts/#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
+The [UNS Registry](/developer-toolkit/smart-contracts/uns-smart-contracts.md#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
 
 <figure>
 
@@ -50,7 +50,7 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 ## Step 4: Generate the Namehash of Your Domain
 
-You can generate the [namehash](../../getting-started/domain-registry-essentials/namehashing/) of your domain using any of the [resolution libraries](../../developer-toolkit/resolution-libraries/libraries-overview/) or [CLI](../../developer-toolkit/resolution-cli/). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the [namehash](/getting-started/domain-registry-essentials/namehashing.md) of your domain using any of the [resolution libraries](/developer-toolkit/resolution-libraries/libraries-overview.md) or [CLI](/developer-toolkit/resolution-cli.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');

@@ -53,7 +53,7 @@ Layer 1 (L1) is the blockchain platform itself, also referred to as the base lay
 
 ### L2
 
-Layer 2 (L2) is a secondary framework or protocol built on top of an existing [Layer 1](#layer-1) blockchain. They are commonly used to improve scalability, privacy, and cross-chain communication. Unlike sidechains, which use their consensus mechanisms, Layer 2 protocols are secured by their underlying blockchain, i.e., Lightning Network, Optimism, Arbitrum.
+Layer 2 (L2) is a secondary framework or protocol built on top of an existing [Layer 1](#l1) blockchain. They are commonly used to improve scalability, privacy, and cross-chain communication. Unlike sidechains, which use their consensus mechanisms, Layer 2 protocols are secured by their underlying blockchain, i.e., Lightning Network, Optimism, Arbitrum.
 
 ### Mainnet
 
@@ -93,7 +93,7 @@ A user authorized by Unstoppable Domains to [sell domains to users](../use-cases
 
 ### Record
 
-The data associated with an [NFT domain](#nft-domain), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
+The data associated with an [NFT domain](#nft-domains), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
 
 ### Registry
 
