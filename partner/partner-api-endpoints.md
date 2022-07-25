@@ -30,3 +30,5 @@ To reserve or lock a free domain, the partner must provide a unique user identif
 :::
 
 <embed src="/snippets/_discord.md" />
+
+<embed src="/snippets/_partner-survey-embed.md" />

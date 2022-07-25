@@ -57,17 +57,8 @@ function resolve(domain, currency) {
     .catch(console.error);
 }
 
-function resolveMultiChain(domain, currency, chain) {
-  resolution
-    .multiChainAddr(domain, currency, chain)
-    .then((address) => console.log(domain, 'resolves to', address, version))
-    .catch(console.error);
-}
-
 resolve('brad.crypto', 'ETH');
 resolve('brad.zil', 'ZIL');
-resolveMultiChain('brad.crypto', 'USDT', 'ERC20');
-resolveMultiChain('brad.crypto', 'USDT', 'OMNI');
 ```
 
 Execute the script.
@@ -159,7 +150,7 @@ To see all constructor options and factory methods check the [Unstoppable API re
 
 ## Autoconfiguration of Blockchain Network
 
-In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
+In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autoNetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
 
 This method configures CNS and UNS. ZNS is supported only on Zilliqa mainnet. You can provide a configured provider or a blockchain url as in the following example:
 
@@ -189,12 +180,12 @@ Use these commands to set up a local development environment (**macOS Terminal**
 1.  Install `nvm`
 
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     ```
 2.  Install concrete version of `node.js`
 
     ```
-    nvm install 12.12.0
+    nvm install 16.15.0
     ```
 3.  Install `yarn`
 

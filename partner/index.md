@@ -53,3 +53,5 @@ The Partner API must be configured with one or more payment options before users
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.
 :::
+
+<embed src="/snippets/_partner-survey-embed.md" />

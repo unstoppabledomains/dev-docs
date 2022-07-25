@@ -51,4 +51,4 @@ The following considerations apply to purchasing domains:
 
 <embed src="/snippets/_discord.md" />
 
-<embed src="/snippets/_developer-survey-embed.md" />
+<embed src="/snippets/_partner-survey-embed.md" />
