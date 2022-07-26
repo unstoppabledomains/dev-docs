@@ -473,7 +473,7 @@ For example, you can try to resolve the following domains:
 
 | Domain                           | Result                      |
 | -------------------------------- | --------------------------- |
-| `udtestdev-creek.crypto`           | Domain has no BTC record    |
+| `homecakes.crypto`           | Domain has no BTC record    |
 | `udtestdev-test-btc-record.coin`   | Resolves without any issues |
 | `udtestdev-johnny-dev-domain.coin` | Domain has no BTC record    |
 

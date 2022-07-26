@@ -41,7 +41,7 @@ pages:
           - label: Resolution-Go
             page: resolution-integration-methods/resolution-libraries/resolution-go.md
           - label: Matic.js SDK
-            page: resolution-integration-methods/resolve-with-maticjs.md
+            page: resolution-integration-methods/resolution-libraries/resolve-with-maticjs.md
       - label: Resolution CLI
         page: resolution-integration-methods/resolution-cli.md
       - group: Resolve With Direct Blockchain Calls
