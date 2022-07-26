@@ -14,7 +14,7 @@ These scopes are passed to the authorization request in the `scope` parameter, w
 
 ```json
 {
-  "scope": “openid wallet email:optional”
+  "scope": "openid wallet email:optional"
 }
 ```
 
@@ -25,7 +25,7 @@ The scopes requested by an application vary depending on the type of user data n
 <figure>
 
 ![Example scope list presented to UD users](/images/login-scopes-example.png '#width=40%;')
-	
+
 <figcaption>Example scope list presented to UD users</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ Login with Unstoppable supports the following scopes which are detailed below:
 * [wallet](#wallet)
 * [email](#email)
 * [humanity_check](#humanity_check)
-* [profile](#profile) 
+* [profile](#profile)
 * [social](#social)
 
 ## Optional Scopes
@@ -45,7 +45,7 @@ Many login scopes have `scope:optional` variations that allow users to opt in or
 <figure>
 
 ![UI for email:optional scope](/images/login-scopes-email-optional.png '#width=40%;')
-	
+
 <figcaption>Consenting to the <code>email:optional</code> scope</figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ Unstoppable email is disabled for domains by default. If a user has not enabled 
 
 The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
 
-After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](../humanity-check/humanity-check-for-login.md#persona)."
+After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](/login-with-unstoppable/humanity-check.md#persona)."
 
 
 <figure class="one-third-inline-block">
@@ -94,7 +94,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 
 <figure class="one-third-inline-block">
 
-![Getting Started UI screen for Persona](/images/persona_getting_started.png) 
+![Getting Started UI screen for Persona](/images/persona_getting_started.png)
 
 <figcaption>Persona, getting started</figcaption>
 </figure>
@@ -106,7 +106,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 </figure>
 
 
-See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](/login-with-unstoppable/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
 
 ## profile
 `optional: true`

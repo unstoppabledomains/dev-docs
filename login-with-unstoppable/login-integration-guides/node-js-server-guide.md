@@ -122,7 +122,7 @@ app.get('/profile', onlyAuthorized, (req, res) => {
 })
 ```
 
-Developers can also create their own login system using a different session system from `express-session` using the [`createLogin` method](node-js-server-guide.md#createlogin-method).
+Developers can also create their own login system using a different session system from `express-session` using the [login() method](#step-3a-the-login-method).
 
 ## Step 4: Build a Front-end UI
 

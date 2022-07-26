@@ -5,7 +5,7 @@ description: This guide covers the process for configuring the Login with Unstop
 
 # Login Client Configuration
 
-The default configuration for a new Login Client works right out of the box for local development and all [Login Scopes](../get-started-login/scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client integrated with a live application requires custom [**redirect URIs**](#step-2-configure-redirect-uris).
+The default configuration for a new Login Client works right out of the box for local development and all [Login Scopes](../scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client integrated with a live application requires custom [**redirect URIs**](#step-2-configure-redirect-uris).
 
 ## Step 1: Add a New Client
 
@@ -27,7 +27,7 @@ The dashboard will generate a unique **client ID** and open the configuration pa
 
 ## Step 2: Configure Redirect URIs
 
-In the **Basic** configuration section, add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right. 
+In the **Basic** configuration section, add new **Redirect URIs** to your client by entering them into the text input box at the end of the list and hitting `return`/`enter` or clicking the `+` button to the right.
 
 <figure>
 
@@ -75,7 +75,7 @@ You must save any changes made to the configuration options before they will tak
 
 <figure>
 
-![Save button](/images/login-client-config-save-button.png '#width=60%; margin: auto;') 
+![Save button](/images/login-client-config-save-button.png '#width=60%; margin: auto;')
 
 <p style="padding: 1%" >or</p>
 
