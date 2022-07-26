@@ -23,7 +23,7 @@ description: This page provides a list of the browser resolution test domains an
 
 ## Getting test records
 
-Check records with the [Resolution Libraries](../resolution-libraries/libraries-overview.md) and [Resolution CLI](../resolution-cli.md):
+Check records with the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) and [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md):
 
 ```typescript JavaScript
 import Resolution from '@unstoppabledomains/resolution/build/Resolution';

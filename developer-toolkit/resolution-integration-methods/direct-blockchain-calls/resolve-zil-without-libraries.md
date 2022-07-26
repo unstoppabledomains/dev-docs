@@ -8,7 +8,7 @@ description: This page reviews the process for resolving .zil domain names with 
 In this tutorial, we’ll build a simple app to resolve `.zil` domains — to read the information the domain holds.
 
 :::info
-This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-unstoppable-domain-names.md).
+This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolve Unstoppable Domains With Direct Blockchain Calls](resolve-unstoppable-domain-names.md).
 :::
 
 Here’s the finished product:
@@ -92,8 +92,8 @@ Now that we have our `index.html` file set up, let’s add some JavaScript. We c
 We’ll discuss the registry contract address later in this guide.
 
 ```javascript
-const ZILLIQA_API = “https://api.zilliqa.com/";
-const UD_REGISTRY_CONTRACT_ADDRESS = “9611c53BE6d1b32058b2747bdeCECed7e1216793”;
+const ZILLIQA_API = "https://api.zilliqa.com/";
+const UD_REGISTRY_CONTRACT_ADDRESS = "9611c53BE6d1b32058b2747bdeCECed7e1216793";
 ```
 
 Next, we’ll need to define and attach the function `resolve()` to our HTML button under `id="button"`.
@@ -250,7 +250,7 @@ async function resolve() {
 
 Now if we query for `brad.zil`, we should get a response as below:
 
-```javascript
+```json
 {
   "id": "1",
   "jsonrpc": "2.0",
@@ -274,8 +274,8 @@ Order is very important, as the first address in the arguments array is the owne
 If we open the `index.html` file in the browser and type `brad.zil` as our domain input, we will see the following in the console:
 
 ```
-ownerAddress:“0x2d418942dce1afa02d0733a2000c71b371a6ac07”,
-resolverAddress: “0xdac22230adfe4601f00631eae92df6d77f054891”
+ownerAddress: "0x2d418942dce1afa02d0733a2000c71b371a6ac07",
+resolverAddress: "0xdac22230adfe4601f00631eae92df6d77f054891"
 ```
 
 ## Fetch the Records
@@ -299,7 +299,7 @@ You must remove the leading `"0x"` from the contract address. This is a requirem
 
 We should get an object printed on our console with all the keys registered under that domain. Let’s test it out with domain `brad.zil`. For your result, you should get something similar to the following in the console.
 
-```
+```json
 {
   "crypto.BCH.address": "qrq4sk49ayvepqz7j7ep8x4km2qp8lauvcnzhveyu6",
   "crypto.BTC.address": "1EVt92qQnaLDcmVFtHivRJaunG2mf2C3mB",
@@ -401,7 +401,7 @@ function displayError(message, cleanDom) {
 }
 ```
 
-Although any string can be stored as a key under the domain, Unstoppable domains have [standardized the keys](../records-reference.md) across many applications.
+Although any string can be stored as a key under the domain, Unstoppable domains have [standardized the keys](/developer-toolkit/reference/records-reference.md) across many applications.
 
 For the **Record is not found** error message, we can check if the domain has a BTC address. If not, we can show the error without cleaning the entire DOM.
 

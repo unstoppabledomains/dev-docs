@@ -9,7 +9,7 @@ Here are best practices to ensure the proper integration of the Unstoppable Doma
 
 ## Don't hard-code UD domain endings into your application
 
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../developer-toolkit/resolution-service/endpoints/get-supported-tlds.md).
+<embed src="/snippets/_new_tld_warning.md" />
 
 ## Display Resolved Addresses Near Domain Names
 
@@ -35,7 +35,7 @@ When you don't find a currency address record for a domain, please do not make a
 When you encounter errors using any resolution method (library, service API, CLI), handle them according to the error type rather than generically handling them or passing them silently.
 
 :::info
-Please see the [Resolution Libraries](../developer-toolkit/resolution-libraries/libraries-overview.md) docs for language-specific error handling guides and library error codes you might encounter during integration.
+Please see the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) docs for language-specific error handling guides and library error codes you might encounter during integration.
 :::
 
 ## Validate the Addresses Resolved From Domains

@@ -19,7 +19,7 @@ The Resolution Service API supports decentralized domains across two main zones:
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 :::warning important
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](endpoints/get-supported-tlds.md).
+<embed src="/snippets/_new_tld_warning.md" />
 :::
 
 ## Getting Started With Alchemy
@@ -44,7 +44,7 @@ Here’s a guide on setting up your Alchemy account and querying the Unstoppable
 <iframe src="https://www.loom.com/embed/7cd5398275e74d8ba024323985cd90c7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-## API Endpoints Overview
+## API Endpoints Spec
 
 | Endpoint | Short Description | Documentation |
 | - | - | - |

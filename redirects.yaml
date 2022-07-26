@@ -14,13 +14,13 @@
   to: '/developer-toolkit/resolution-service-api/'
   type: 301
 '/send-and-receive-crypto-payments/resolution-libraries/':
-  to: '/developer-toolkit/resolution-libraries/libraries-overview/'
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/'
   type: 301
 '/send-and-receive-crypto-payments/resolution-libraries/library-configuration/':
-  to: '/developer-toolkit/resolution-libraries/libraries-overview/'
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/'
   type: 301
 '/send-and-receive-crypto-payments/resolution-cli/':
-  to: '/developer-toolkit/resolution-cli/'
+  to: '/developer-toolkit/resolution-integration-methods/resolution-cli/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-api-endpoints/':
   to: '/partner/partner-api-endpoints/'
@@ -32,19 +32,19 @@
   to: '/crypto-payments/'
   type: 301
 '/send-and-receive-crypto-payments/direct-blockchain-calls':
-  to: '/developer-toolkit/direct-blockchain-calls/bc-overview/'
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview/'
   type: 301
 '/support-unstoppable-domains-in-a-web-browser/how-browser-resolution-works':
-  to: '/developer-toolkit/resolve-domains-browser/browser-resolution-overview/'
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/'
   type: 301
 '/support-unstoppable-domains-in-a-web-browser/resolving-domains-in-web-applications':
-  to: '/developer-toolkit/resolve-domains-in-web-applications/'
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-in-web-applications/'
   type: 301
 '/support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm':
-  to: '/developer-toolkit/resolve-domains-browser/browser-resolution-algorithm/'
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm/'
   type: 301
 '/support-unstoppable-domains-in-a-web-browser/test-domains':
-  to: '/developer-toolkit/resolve-domains-browser/test-domains/'
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains/'
   type: 301
 '/allow-my-users-to-manage-existing-domains/managing-domain-ownership':
   to: '/manage-domains/'
@@ -62,7 +62,7 @@
   to: '/partner/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides':
-  to: '/partner/integration-paths.md/'
+  to: '/partner/integration-paths/'
   type: 301
 '/sell-domains-to-users-in-my-app/error-codes-for-troubleshooting':
   to: '/partner/reference/error-codes/'
@@ -137,19 +137,19 @@
   to: '/getting-started/domain-registry-essentials/cns-uns-comparison/'
   type: 301
 '/domain-registry-essentials/uns-smart-contracts':
-  to: '/developer-toolkit/smart-contracts/uns-smart-contracts/'
+  to: '/developer-toolkit/reference/smart-contracts/uns-smart-contracts/'
   type: 301
 '/domain-registry-essentials/cns-smart-contracts':
-  to: '/developer-toolkit/smart-contracts/cns-smart-contracts/'
+  to: '/developer-toolkit/reference/smart-contracts/cns-smart-contracts/'
   type: 301
 '/domain-registry-essentials/namehashing':
   to: '/getting-started/domain-registry-essentials/namehashing/'
   type: 301
 'domain-registry-essentials/resolving-domain-records':
-  to: '/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/'
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/'
   type: 301
 '/domain-registry-essentials/records-reference':
-  to: '/developer-toolkit/records-reference/'
+  to: '/developer-toolkit/reference/records-reference/'
   type: 301
 '/domain-registry-essentials/uns-vs-cns-comparison/architecture-overview':
   to: '/getting-started/domain-registry-essentials/cns-architecture-overview/'
@@ -179,10 +179,10 @@
   to: '/login-with-unstoppable/login-protocols/authentication-protocol/'
   type: 301
 '/send-and-receive-crypto-payments/direct-blockchain-calls/resolve-unstoppable-domain-names':
-  to: '/developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names/'
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/'
   type: 301
 '/send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.zil-without-libraries':
-  to: '/developer-toolkit/direct-blockchain-calls/resolve-zil-without-libraries/'
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries/'
   type: 301
 '/allow-my-users-to-manage-existing-domains/managing-domain-ownership/domains-configuration':
   to: '/manage-domains/domains-configuration/'
@@ -209,13 +209,13 @@
   to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
   type: 301
 '/reseller/reseller-integration-guides/reseller-pathways/':
-  to: '/partner/integration-paths.md/'
+  to: '/partner/integration-paths/'
   type: 301
 '/reseller/':
   to: '/partner/'
   type: 301
 '/reseller/reseller-pathways/':
-  to: '/partner/integration-paths.md/'
+  to: '/partner/integration-paths/'
   type: 301
 '/reseller/reseller-integration-guides/mint-free-domains/':
   to: '/partner/partner-integration-guides/mint-free-domains/'
@@ -239,10 +239,10 @@
   to: '/partner/reseller-faq/'
   type: 301
 '/developer-toolkit/resolution-service-api/':
-  to: '/developer-toolkit/resolution-service/overview/'
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/overview/'
   type: 301
 '/getting-started/domain-registry-essentials/records-reference/':
-  to: '/developer-toolkit/records-reference/'
+  to: '/developer-toolkit/reference/records-reference/'
   type: 301
 '/partner/partner-pathways/':
   to: '/partner/integration-paths/'
@@ -255,4 +255,76 @@
   type: 301
 '/partner/error-codes-for-troubleshooting/':
   to: '/partner/reference/error-codes/'
+  type: 301
+'/developer-toolkit/resolve-domains-in-web-applications/':
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-in-web-applications/'
+  type: 301
+'/developer-toolkit/resolve-domains-browser/browser-resolution-algorithm/':
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm/'
+  type: 301
+'/developer-toolkit/resolve-domains-browser/browser-resolution-overview/':
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/'
+  type: 301
+'/developer-toolkit/resolve-domains-browser/test-domains/':
+  to: '/developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains/'
+  type: 301
+'/developer-toolkit/smart-contracts/cns-smart-contracts/':
+  to: '/developer-toolkit/smart-contracts/reference/cns-smart-contracts/'
+  type: 301
+'/developer-toolkit/smart-contracts/uns-smart-contracts/':
+  to: '/developer-toolkit/smart-contracts/reference/uns-smart-contracts/'
+  type: 301
+'/developer-toolkit/records-reference/':
+  to: '/developer-toolkit/reference/records-reference/'
+  type: 301
+'/developer-toolkit/resolution-cli':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-cli/'
+  type: 301
+'/developer-toolkit/direct-blockchain-calls/bc-overview/':
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview/'
+  type: 301
+'/developer-toolkit/direct-blockchain-calls/resolve-unstoppable-domain-names/':
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/'
+  type: 301
+'/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/':
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/'
+  type: 301
+'/developer-toolkit/direct-blockchain-calls/resolve-zil-without-libraries/':
+  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries/'
+  type: 301
+'/developer-toolkit/resolution-service/overview/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/overview/'
+  type: 301
+'/developer-toolkit/resolution-service/endpoints/get-records-for-a-domain/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain/'
+  type: 301
+'/developer-toolkit/resolution-service/endpoints/get-records-for-owner-addresses/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-owner-addresses/'
+  type: 301
+'/developer-toolkit/resolution-service/endpoints/get-domain-transfer-events/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-domain-transfer-events/'
+  type: 301
+'/developer-toolkit/resolution-service/endpoints/get-supported-tlds/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-supported-tlds/'
+  type: 301
+'/developer-toolkit/resolution-service/error-codes/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/error-codes/'
+  type: 301
+'/developer-toolkit/resolution-libraries/libraries-overview/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/'
+  type: 301
+'/developer-toolkit/resolution-libraries/resolution-go/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-go/'
+  type: 301
+'/developer-toolkit/resolution-libraries/resolution-java/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-java/'
+  type: 301
+'/developer-toolkit/resolution-libraries/resolution-swift/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-swift/'
+  type: 301
+'/developer-toolkit/resolution-libraries/resolution/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution/'
+  type: 301
+'/developer-toolkit/resolve-with-maticjs/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/'
   type: 301

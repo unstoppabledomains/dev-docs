@@ -19,7 +19,7 @@ To verify an implementation of the namehash algorithm, use the following referen
 
 ## Generating namehashes
 
-You can generate the namehash of a domain using any of the [Resolution Libraries](../../developer-toolkit/resolution-libraries/libraries-overview.md) or [Resolution CLI](../../developer-toolkit/resolution-cli.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the namehash of a domain using any of the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) or [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');

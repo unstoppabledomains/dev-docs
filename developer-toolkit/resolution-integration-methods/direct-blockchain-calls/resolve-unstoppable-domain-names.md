@@ -52,7 +52,7 @@ Let’s open the index.html file and build out the layout for our app. To create
 Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
 
 :::info
-We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../getting-started/domain-registry-essentials/namehashing.md).
+We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing](/getting-started/domain-registry-essentials/namehashing.md) guide.
 :::
 
 ```html
@@ -115,7 +115,7 @@ We can open `index.html` in a browser to make sure everything is connected and l
 
 Namehashing is an algorithm that tokenizes your domain name in a way that the `.crypto` smart contract can understand.
 
-To tokenize our domain, we’ll need to split the domain name by the “.” character into separate labels, reverse the array, and reduce it to a single hash. We can do this by implementing a recursive hash function.
+To tokenize our domain, we’ll need to split the domain name by the "." character into separate labels, reverse the array, and reduce it to a single hash. We can do this by implementing a recursive hash function.
 
 We’ll also want to implement an `arrayToHex()` function to get the result as a string, as well as a wrapper function `namehash()`.
 
@@ -208,7 +208,7 @@ var provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemya
 The network and contract addresses are from goerli and polygon mumbai test networks respectively. For mainnet, use the following contract addresses: [0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E](https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **goerli**.
 :::
 
-For the scope of this project, we will only need to use the `getData()` function from the [CNS Smart Contract](../smart-contracts/cns-smart-contracts.md#proxyreader).
+For the scope of this project, we will only need to use the `getData()` function from the [CNS Smart Contract](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md#proxyreader).
 
 ### Create a Contract Instance
 
@@ -226,7 +226,7 @@ async function fetchContractData(contract, keys, tokenId) {
 By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the `namehash()` function from above.
 
 :::info
-Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](../records-reference.md) across many applications.
+Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](/developer-toolkit/reference/records-reference.md) across many applications.
 :::
 
 ### Record Keys Lookup

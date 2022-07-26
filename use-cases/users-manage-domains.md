@@ -9,9 +9,9 @@ This page outlines the use case for allowing your users to manage their existing
 
 ## How does it work?
 
-You can configure your application to edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](../developer-toolkit/smart-contracts/cns-smart-contracts.md) or [UNS Smart Contracts](../developer-toolkit/smart-contracts/uns-smart-contracts.md).
+You can configure your application to edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md) or [UNS Smart Contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md).
 
-## Are there working integrations for this feature? 
+## Are there working integrations for this feature?
 
 Popular open-source crypto wallet, [MyEtherWallet](https://www.myetherwallet.com/), has implemented domain management and can be also used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/master/src/dapps/Unstoppable).
 
@@ -19,4 +19,4 @@ You can find additional working integrations on UD's Applications List, filtered
 
 ## How do I get started?
 
-See the guides on [Managing Domain Ownership](../manage-domains/index.md), [Managing Domain Records](../manage-domains/managing-domain-records.md), [Delegating Transactions](../manage-domains/delegating-transactions.md) and [Delegating Domain Management](../manage-domains/delegating-domain-management.md) to get started with the domain management integration.
+See the guides on [Managing Domain Ownership](/manage-domains/index.md), [Managing Domain Records](/manage-domains/managing-domain-records.md), [Delegating Transactions](/manage-domains/delegating-transactions.md) and [Delegating Domain Management](/manage-domains/delegating-domain-management.md) to get started with the domain management integration.

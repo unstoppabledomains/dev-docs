@@ -30,7 +30,7 @@ Partners can use as many query parameters as is necessary (e.g., specifying the 
 
 ### records (required)
 
-The records parameter should contain URL encoded and minified JSON with domains records to prefill during the minting step according to the [Records Reference](../../developer-toolkit/records-reference.md) standard.
+The records parameter should contain URL encoded and minified JSON with domains records to prefill during the minting step according to the [Records Reference](/developer-toolkit/reference/records-reference.md) standard.
 
 #### JSON Records Example
 ```json
