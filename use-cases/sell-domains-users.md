@@ -23,4 +23,4 @@ You can find additional working integrations on UD's Applications List, filtered
 
 ## How do I get started?
 
-If you want to resell domains, you must first [Register as a Partner](../partner/index.md) with Unstoppable Domains and [configure a payment method](../partner/partner-pathways.md) for your partner account. You can process payments natively using Stripe or Coinbase, or you can use [UD's Redirect URL payment flow](../partner/partner-integration-guides/redirect-url-payments.md) where we process the payments on your behalf. See the [Partner API](/openapi/reference/) for detailed parameters.
+If you want to resell domains, you must first [Register as a Partner](../partner/index.md) with Unstoppable Domains and [configure a payment method](/partner/integration-paths.md.md) for your partner account. You can process payments natively using Stripe or Coinbase, or you can use [UD's Redirect URL payment flow](../partner/partner-integration-guides/redirect-url-payments.md) where we process the payments on your behalf. See the [Partner API](/openapi/reference/) for detailed parameters.

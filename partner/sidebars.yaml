@@ -8,9 +8,9 @@ pages:
       - label: Register as a Partner
         page: index.md
       - label: Integration Paths Introduction
-        page: partner-pathways.md
+        page: integration-paths.md.md
       - label: Setting up UD Sandbox for Testing
-        page: access-ud-sandbox.md
+        page: set-up-sandbox-for-testing.md
     separatorLine: true
   - group: Partner Integration Guides
     expanded: false
@@ -29,7 +29,7 @@ pages:
     separatorLine: true
   - group: Reference
     pages:
-      - page: error-codes-for-troubleshooting.md
+      - page: reference/error-codes.md
         label: Error Codes for Troubleshooting
-      - page: partner-faq.md
+      - page: reference/faq.md
         label: Frequently Asked Questions
