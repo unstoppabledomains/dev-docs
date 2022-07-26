@@ -5,7 +5,11 @@ description: An overview of the tools available for developers integrating Unsto
 
 # Developer Toolkit
 
-You've reached the developer toolkit. Here's how to get started.
+You've reached the developer toolkit. Here's a guide to get you up and running.
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQLQ36lWH8Y" title="Tutorial: Introduction To Unstoppable Domains Resolution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Resolution API
 
@@ -21,7 +25,7 @@ For an Unstoppable-managed, blockchain-agnostic command-line interface for resol
 
 ## Resolve With Direct Blockchain Calls
 
-For developers who want more direct, low level control over domain resolution, see [Resolve With Direct Blockchain Calls](./direct-blockchain-calls/bc-overview.md). This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
+For developers who want more direct, low-level control over domain resolution, see [Resolve With Direct Blockchain Calls](./direct-blockchain-calls/bc-overview.md). This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
 
 ## Resolve Using Matic.js SDK
 

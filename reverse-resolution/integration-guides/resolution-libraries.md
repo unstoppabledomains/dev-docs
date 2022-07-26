@@ -13,13 +13,7 @@ To resolve the reverse record of a wallet address, you must call the appropriate
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-const resolution = new Resolution({
-  sourceConfig: {
-    uns: {
-      network: 'polygon-mumbai',
-    },
-  },
-});
+const resolution = new Resolution();
 
 function reverseTokenId(address) {
   resolution

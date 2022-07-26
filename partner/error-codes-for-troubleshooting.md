@@ -19,19 +19,19 @@ Partner API errors are in JSON format.
 
 ## GET Domain name
 
-| Error Code                  | Status Code | Explanation                          |
+| Error Code                  | Status Code | Explanation               |
 | --------------------------- | - | ----------------------------------- |
 | DOMAIN\_NAME\_INVALID | 400 | The provided domain name is invalid. |
 
 ## GET Domains Suggestions
 
-| Error Code                    | Status Code | Explanation                              |
+| Error Code                    | Status Code | Explanation                   |
 | ----------------------------- | - | --------------------------------------- |
 | INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid. |
 
 ## GET **Domains Suggestions Free**
 
-| Error Code                    | Status Code | Explanation                                                               |
+| Error Code                    | Status Code | Explanation                                                    |
 | ----------------------------- | - | ------------------------------------------------------------------------ |
 | INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid.                                  |
 | NOT\_SUPPORTED          | 400 | The partner does not provide free domains (for free domain suggestions). |

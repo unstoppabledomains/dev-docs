@@ -55,7 +55,7 @@
 '/allow-my-users-to-manage-existing-domains/meta-transactions':
   to: '/manage-domains/delegating-transactions/'
   type: 301
-'allow-my-users-to-manage-existing-domains/deploying-custom-resolver':
+'/allow-my-users-to-manage-existing-domains/deploying-custom-resolver':
   to: '/manage-domains/delegating-domain-management/'
   type: 301
 '/sell-domains-to-users-in-my-app/register-as-reseller':
@@ -92,28 +92,37 @@
   to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
   type: 301
 '/login-with-unstoppable/developer-integration':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
-'/login-with-unstoppable/login-integration-guides':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+'/login-with-unstoppable/login-integration-guides/':
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-integration-guides/integration-pathways/':
-  to: '/login-with-unstoppable/get-started-login/integration-pathways/'
+  to: '/login-with-unstoppable/get-started-login/'
+  type: 301
+'/login-with-unstoppable/get-started-login/integration-pathways/':
+  to: '/login-with-unstoppable/get-started-login/'
   type: 301
 '/login-with-unstoppable/login-ui-configuration':
   to: '/login-with-unstoppable/login-integration-guides/login-ui-configuration/'
   type: 301
-'/login-with-unstoppable/humanity-check-for-login':
-  to: '/login-with-unstoppable/humanity-check/humanity-check-for-login/'
+'/login-with-unstoppable/humanity-check/humanity-check-for-login/':
+  to: '/login-with-unstoppable/humanity-check/'
   type: 301
-'/login-with-unstoppable/scopes-for-login':
-  to: '/login-with-unstoppable/get-started-login/scopes-for-login/'
+'/login-with-unstoppable/get-started-login/scopes-for-login/':
+  to: '/login-with-unstoppable/scopes-for-login'
   type: 301
 '/login-with-unstoppable/troubleshooting-guide':
   to: '/login-with-unstoppable/troubleshoot/troubleshooting-guide/'
   type: 301
 '/login-with-unstoppable/login-error-codes':
   to: '/login-with-unstoppable/troubleshoot/login-error-codes/'
+  type: 301
+'/login-with-unstoppable/get-started-login/login-faq':
+  to: '/login-with-unstoppable/login-faq'
+  type: '301'
+'/login-with-unstoppable/humanity-check/humanity-check-faq/':
+  to: '/login-with-unstoppable/humanity-check-faq/'
   type: 301
 '/polygon-l2-network/polygon-high-level-overview':
   to: '/polygon/'
@@ -140,7 +149,7 @@
   to: '/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/'
   type: 301
 '/domain-registry-essentials/records-reference':
-  to: '/getting-started/domain-registry-essentials/records-reference/'
+  to: '/developer-toolkit/records-reference/'
   type: 301
 '/domain-registry-essentials/uns-vs-cns-comparison/architecture-overview':
   to: '/getting-started/domain-registry-essentials/cns-architecture-overview/'

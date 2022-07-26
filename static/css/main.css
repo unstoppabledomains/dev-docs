@@ -15,6 +15,11 @@ figure img {
     filter: drop-shadow(0 0 1px #000);
 }
 
+figure video {
+    -webkit-filter: drop-shadow(0 0 1px #000);
+    filter: drop-shadow(0 0 1px #000);
+}
+
 figure p img {
     /* Center markdown images inside of their generated wrapping <p> tags */
     vertical-align: middle;
@@ -78,7 +83,7 @@ figcaption {
     #gatsby-focus-wrapper > div > div > div > div > section {
         width: 90%!important;
     }
-    
+
     #gatsby-focus-wrapper > div > div > div > div > aside {
         display: none!important;
     }

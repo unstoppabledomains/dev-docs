@@ -57,17 +57,8 @@ function resolve(domain, currency) {
     .catch(console.error);
 }
 
-function resolveMultiChain(domain, currency, chain) {
-  resolution
-    .multiChainAddr(domain, currency, chain)
-    .then((address) => console.log(domain, 'resolves to', address, version))
-    .catch(console.error);
-}
-
 resolve('brad.crypto', 'ETH');
 resolve('brad.zil', 'ZIL');
-resolveMultiChain('brad.crypto', 'USDT', 'ERC20');
-resolveMultiChain('brad.crypto', 'USDT', 'OMNI');
 ```
 
 Execute the script.
@@ -127,34 +118,29 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 
 ### Command Line Interface
 
-To use resolution via the command line install the package globally.
+To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
 ```
-yarn global add @unstoppabledomains/resolution
+go get -u github.com/unstoppabledomains/resolution-cli/resolution
 ```
 
-```
-npm install -g @unstoppabledomains/resolution
-```
-
-By default, the CLI uses Infura as its primary gateway to the Ethereum blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-url` flag.
+By default, the CLI uses Alchemy as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.
 
 For example:
 
 ```
-resolution --ethereum-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto -a
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
 ```
 
-Use the `-h` or `--help` flag to see all the available CLI options.
+Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](resolution-cli.md) documentation for more information.
 
 ## Default Ethereum Providers
 
-Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default. Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
+Resolution provides zero-configuration experience by using built-in production-ready [Alchemy](http://alchemy.com/) endpoint by default. The Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
 
-\
-To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
-Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
+To resolve `ENS` domains on production it's recommended to change the Ethereum provider. Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
+* `Resolution.alchemy()`
 * `Resolution.infura()`
 * `Resolution.fromWeb3Version1Provider()`
 * `Resolution.fromEthersProvider()`
@@ -164,11 +150,11 @@ To see all constructor options and factory methods check the [Unstoppable API re
 
 ## Autoconfiguration of Blockchain Network
 
-In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
+In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autoNetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
 
 This method configures CNS and UNS. ZNS is supported only on Zilliqa mainnet. You can provide a configured provider or a blockchain url as in the following example:
 
-```json
+```javascript
 Resolution.autoNetwork({
     uns: {
         locations: {
@@ -194,12 +180,12 @@ Use these commands to set up a local development environment (**macOS Terminal**
 1.  Install `nvm`
 
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     ```
 2.  Install concrete version of `node.js`
 
     ```
-    nvm install 12.12.0
+    nvm install 16.15.0
     ```
 3.  Install `yarn`
 

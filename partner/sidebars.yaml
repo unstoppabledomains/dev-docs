@@ -1,11 +1,16 @@
 pages:
   - separator: Become a UD Partner
     separatorLine: true
-  - label: Register as a Partner
-    page: index.md
-    separatorLine: true
-  - label: Getting Started with Integrating UD
-    page: partner-pathways.md
+  - group: Getting Started with Integrating UD
+    expanded: false
+    selectFirstItemOnExpand: true
+    pages:
+      - label: Register as a Partner
+        page: index.md
+      - label: Integration Paths Introduction
+        page: partner-pathways.md
+      - label: Setting up UD Sandbox for Testing
+        page: access-ud-sandbox.md
     separatorLine: true
   - group: Partner Integration Guides
     expanded: false
@@ -19,15 +24,12 @@ pages:
       - page: partner-integration-guides/redirect-url-payments.md
         label: Redirect URL Payments Guide
     separatorLine: true
-  - page: partner-api-endpoints.md
-    label: Partner API Endpoints
+  - label: Partner API Endpoints
+    page: partner-api-endpoints.md
     separatorLine: true
-  - page: access-ud-sandbox.md
-    label: Accessing the UD Sandbox
-    separatorLine: true
-  - page: error-codes-for-troubleshooting.md
-    label: Error Codes to Troubleshoot Partner Integration
-    separatorLine: true
-  - page: partner-faq.md
-    label: Frequently Asked Questions
-    separatorLine: true
+  - group: Reference
+    pages:
+      - page: error-codes-for-troubleshooting.md
+        label: Error Codes for Troubleshooting
+      - page: partner-faq.md
+        label: Frequently Asked Questions

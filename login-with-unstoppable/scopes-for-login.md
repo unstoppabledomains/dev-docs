@@ -5,7 +5,7 @@ description: This page details the scopes currently supported by Login with Unst
 
 # Scopes for Login
 
-Login with Unstoppable uses scopes to request data about a user. Instead of requesting all of a user's information at once, scopes are used to make granular requests (e.g., a wallet address, an email address). Each scope returns a set of user attributes called **claims**. If the user authorizes the access associated with a scope, the claims are returned inside the **ID Token** associated with that authorization.
+Login with Unstoppable uses scopes to request data about a user. Instead of requesting all of a user's information at once, scopes are used to make granular requests (for example, a wallet address or an email address). Each scope returns a set of user attributes called **claims**. If the user authorizes the access associated with a scope, the claims are returned inside the **ID Token** associated with that authorization.
 
 These scopes are passed to the authorization request in the `scope` parameter, which is a list of case-sensitive strings called **scope tokens** separated by spaces.
 
@@ -14,7 +14,7 @@ These scopes are passed to the authorization request in the `scope` parameter, w
 
 ```json
 {
-  "scope": “openid wallet email:optional”
+  "scope": "openid wallet email:optional"
 }
 ```
 
@@ -25,7 +25,7 @@ The scopes requested by an application vary depending on the type of user data n
 <figure>
 
 ![Example scope list presented to UD users](/images/login-scopes-example.png '#width=40%;')
-	
+
 <figcaption>Example scope list presented to UD users</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ Login with Unstoppable supports the following scopes which are detailed below:
 * [wallet](#wallet)
 * [email](#email)
 * [humanity_check](#humanity_check)
-* [profile](#profile) 
+* [profile](#profile)
 * [social](#social)
 
 ## Optional Scopes
@@ -45,7 +45,7 @@ Many login scopes have `scope:optional` variations that allow users to opt in or
 <figure>
 
 ![UI for email:optional scope](/images/login-scopes-email-optional.png '#width=40%;')
-	
+
 <figcaption>Consenting to the <code>email:optional</code> scope</figcaption>
 </figure>
 
@@ -72,14 +72,16 @@ The Login with Unstoppable `wallet` scope is best used for retrieving metadata a
 ## email
 `optional: true`
 
-The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain users with a proxy email service that doesn't share their private address.
+The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain owners with a proxy email service that doesn't share their private address.
+
+Unstoppable email is disabled for domains by default. If a user has not enabled this feature but consents to the `email` scope, a unique, dApp-specific email address is generated and authorized for their domain. This unique email address is then returned in the `email` claim.
 
 ## humanity_check
 `optional: true`
 
 The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
 
-After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](../humanity-check/humanity-check-for-login.md#persona)."
+After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](/login-with-unstoppable/humanity-check.md#persona)."
 
 
 <figure class="one-third-inline-block">
@@ -92,7 +94,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 
 <figure class="one-third-inline-block">
 
-![Getting Started UI screen for Persona](/images/persona_getting_started.png) 
+![Getting Started UI screen for Persona](/images/persona_getting_started.png)
 
 <figcaption>Persona, getting started</figcaption>
 </figure>
@@ -104,7 +106,7 @@ After the user authenticates and proves their identity with the Persona authoriz
 </figure>
 
 
-See [Humanity Check for Login](../humanity-check/humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](/login-with-unstoppable/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
 
 ## profile
 `optional: true`

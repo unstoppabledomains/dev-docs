@@ -17,9 +17,8 @@ import (
 	"github.com/unstoppabledomains/resolution-go"
 )
 
-var infuraApiKey = INFURA_PROJECT_ID
-var ethereumUrl = "https://mainnet.infura.io/v3/" + infuraApiKey
-var ethereumL2Url = "https://polygon-mumbai.infura.io/v3/" + infuraApiKey
+var ethereumUrl = ALCHEMY_ETHEREUM_API
+var ethereumL2Url = ALCHEMY_POLYGON_API
 
 var unsBuilder := resolution.NewUnsBuilder()
 var backend, _ := ethclient.Dial(ethereumUrl)

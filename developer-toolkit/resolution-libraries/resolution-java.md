@@ -14,13 +14,12 @@ This page details basic configuration and usage of the [resolution-java library]
 ```java
 import com.unstoppabledomains.resolution.Resolution;
 
-String infuraApiKey = INFURA_PROJECT_ID;
-String ethProviderURL = "https://mainnet.infura.io/v3/" + infuraApiKey
-String polygonProviderURL = "https://polygon-mainnet.infura.io/v3/" + infuraApiKey
+String ethProviderURL = ALCHEMY_ETHEREUM_API;
+String polygonProviderURL = ALCHEMY_POLYGON_API;
 
 DomainResolution resolution = Resolution.builder()
                 .unsProviderUrl(UNSLocation.Layer1, ethProviderURL)
-                .unsProviderUrl(UNSLocation.Layer1, polygonProviderURL)
+                .unsProviderUrl(UNSLocation.Layer2, polygonProviderURL)
                 .build();
 ```
 

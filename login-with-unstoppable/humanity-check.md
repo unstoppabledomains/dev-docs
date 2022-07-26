@@ -1,9 +1,9 @@
 ---
-title: Humanity Check Overview | Unstoppable Domains Developer Portal
+title: Humanity Check for Login | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the Humanity Check feature for Login with Unstoppable.
 ---
 
-# Humanity Check Overview
+# Humanity Check for Login
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w2R2GUnzgOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -55,7 +55,7 @@ Persona asks users to take a photo of their government-issued ID and a few selfi
 
 ## Humanity Check Configuration
 
-Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](../get-started-login/scopes-for-login.md#humanity_check) to their Login with Unstoppable configuration.
+Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](/login-with-unstoppable/scopes-for-login.md#humanity_check) to their Login with Unstoppable configuration.
 
 :::info
 For the moment, Login with Unstoppable only allows applications to request the Humanity Check identifier, but additional scopes will be added in future releases to allow applications to request more personal data (i.e., name, address, country, location, etc.).

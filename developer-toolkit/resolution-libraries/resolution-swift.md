@@ -14,16 +14,14 @@ This page details basic configuration and usage of the [resolution-swift library
 ```swift
 import UnstoppableDomainsResolution
 
-let infuraApiKey = INFURA_PROJECT_ID
-
 guard let resolution = try? Resolution(
     configs: Configurations(
         uns: UnsLocations(
             layer1: NamingServiceConfig(
-                        providerUrl: "https://mainnet.infura.io/v3/" + infuraApiKey,
+                        providerUrl: ALCHEMY_ETHEREUM_API,
                         network: "mainnet"),
             layer2: NamingServiceConfig(
-                        providerUrl: "https://polygon-mainnet.infura.io/v3/" + infuraApiKey,
+                        providerUrl: ALCHEMY_POLYGON_API,
                         network: "polygon-mainnet")
         )
     )
