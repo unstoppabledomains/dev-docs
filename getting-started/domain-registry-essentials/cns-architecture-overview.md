@@ -100,7 +100,7 @@ In practice, `Resolver`'s data structure is slightly more complicated. If you're
 
 `ProxyReader` consolidates these operations into a single call.
 
-For more information on how the resolution process works read [Resolving domain records](/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on how the resolution process works read [Resolving domain records](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 
 ## Domain Hierarchy and Ownership
 

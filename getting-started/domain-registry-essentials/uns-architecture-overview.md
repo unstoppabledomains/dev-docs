@@ -71,7 +71,7 @@ Domain owners can set one Approved address per domain and many Operator addresse
 
 `ProxyReader` is a smart contract that our [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) use to resolve domains. It supports CNS and UNS domains, so members won’t need to search for a specific proxy reader. Members can use the latest `ProxyReader` version to resolve all domains.
 
-For more information on how the resolution process works read [Resolving domain records](/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on how the resolution process works read [Resolving domain records](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 
 ## Domain Hierarchy and Ownership
 

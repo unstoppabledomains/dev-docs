@@ -6,7 +6,7 @@ description: This page provides a high level overview of how UD Resolution works
 # How Browser Resolution Works
 
 :::info
-For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 :::
 
 ## General Domain Resolution Information

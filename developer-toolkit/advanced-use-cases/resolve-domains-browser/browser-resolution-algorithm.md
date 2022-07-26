@@ -41,7 +41,7 @@ All records related to browser resolution are stored within these namespaces:
 * `dweb.*` — For distributed content records
 * `browser.*` — Hint records to help a browser determine a preferred hypermedia protocol
 
-To retrieve records associated with a domain, see [Resolve Using Smart Contracts](/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+To retrieve records associated with a domain, see [Resolve Using Smart Contracts](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 
 ### DNS records
 
