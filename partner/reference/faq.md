@@ -1,6 +1,6 @@
 ---
 title: Partner Feature FAQs | Unstoppable Domains Developer Portal
-description: Frequently asked questions about the Partner feature of Unstoppable Domains.
+description: Frequently asked questions about the Partner API of Unstoppable Domains.
 ---
 
 # Partner API FAQ

@@ -6,7 +6,7 @@ description: This page describes the process for creating an account and applyin
 # Register as a Partner
 
 :::warning
-The Partner feature only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon/polygon-migration-guide.md) to get started.
+The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/polygon/polygon-migration-guide.md) to get started.
 :::
 
 ## Step 1: Create an Account
@@ -48,7 +48,7 @@ To avoid missing the email about your partner application status, please update 
 
 ## Step 3: Configure Payment Information
 
-The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Partner Integration Guides](integration-paths.md.md)** to integrate one or more payment methods for your partner account.
+The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Partner Integration Guides](integration-paths.md)** to integrate one or more payment methods for your partner account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.

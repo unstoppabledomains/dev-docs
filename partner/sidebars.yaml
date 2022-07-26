@@ -8,7 +8,7 @@ pages:
       - label: Register as a Partner
         page: index.md
       - label: Integration Paths Introduction
-        page: integration-paths.md.md
+        page: integration-paths.md
       - label: Setting up UD Sandbox for Testing
         page: set-up-sandbox-for-testing.md
     separatorLine: true
