@@ -38,7 +38,7 @@ There are several ways to integrate with Unstoppable's Partner API, detailed in 
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](partner-integration-guides/redirect-url-payments.md) |
 
 :::info
-Unstoppable Domains provides a [sandbox environment](access-ud-sandbox.md) for partners to test their integrations.
+Unstoppable Domains provides a [sandbox environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
 :::
 
 ## Considerations

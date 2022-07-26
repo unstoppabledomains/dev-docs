@@ -62,10 +62,10 @@
   to: '/partner/'
   type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides':
-  to: '/partner/partner-pathways/'
+  to: '/partner/integration-paths.md/'
   type: 301
 '/sell-domains-to-users-in-my-app/error-codes-for-troubleshooting':
-  to: '/partner/error-codes-for-troubleshooting/'
+  to: '/partner/reference/error-codes/'
   type: 301
 '/build-a-decentralized-website/overview-of-ipfs-and-d-web':
   to: /d-websites/
@@ -209,13 +209,13 @@
   to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
   type: 301
 '/reseller/reseller-integration-guides/reseller-pathways/':
-  to: '/partner/partner-pathways/'
+  to: '/partner/integration-paths.md/'
   type: 301
 '/reseller/':
   to: '/partner/'
   type: 301
 '/reseller/reseller-pathways/':
-  to: '/partner/partner-pathways/'
+  to: '/partner/integration-paths.md/'
   type: 301
 '/reseller/reseller-integration-guides/mint-free-domains/':
   to: '/partner/partner-integration-guides/mint-free-domains/'
@@ -233,7 +233,7 @@
   to: '/partner/partner-api-endpoints/'
   type: 301
 '/reseller/error-codes-for-troubleshooting/':
-  to: '/partner/error-codes-for-troubleshooting/'
+  to: '/partner/reference/error-codes/'
   type: 301
 '/reseller/reseller-faq/':
   to: '/partner/reseller-faq/'
@@ -243,4 +243,16 @@
   type: 301
 '/getting-started/domain-registry-essentials/records-reference/':
   to: '/developer-toolkit/records-reference/'
+  type: 301
+'/partner/partner-pathways/':
+  to: '/partner/integration-paths/'
+  type: 301
+'/partner/access-ud-sandbox/':
+  to: '/partner/set-up-sandbox-for-testing/'
+  type: 301
+'/partner/partner-faq/':
+  to: '/partner/reference/faq/'
+  type: 301
+'/partner/error-codes-for-troubleshooting/':
+  to: '/partner/reference/error-codes/'
   type: 301
