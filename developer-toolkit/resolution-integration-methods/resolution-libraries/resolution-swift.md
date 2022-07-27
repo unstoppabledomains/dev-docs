@@ -83,7 +83,9 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 
 | Error Code | Description |
 |---|---|
+| badRequestOrResponse | Thrown by the RPC provider when the request or request is invalid. |
 | contractNotInitialized | Thrown when the proxy reader of the current resolution instance has not been initialized. |
+| executionReverted | Thrown by json RPC when the smart contract call is reverted. |
 | inconsistentDomainArray | Thrown when you attempt to retrieve the locations of multiple domains with different naming services. The location of a domain contains the `blockchain`, `networkId`, and valuable metadata like `owner`, `resolver`, `registry addresses`, and `provider URL` of that domain. |
 | invalidDomainName | Thrown when you resolve an invalid domain address. |
 | methodNotSupported | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `batchOwners()`, `getTokenUri()`, `locations()`, and `getDomainName()` methods for the Zilliqa Name Service (ZNS). |
@@ -92,10 +94,12 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 | recordNotSupported | Thrown when you resolve an unsupported domain record. |
 | registryAddressIsNotProvided | Thrown when using an incorrect contract address with the current resolution instance. |
 | reverseResolutionNotSpecified | Thrown when reverse resolution is not configured for an address. |
+| tooManyResponses | Thrown when you have exceeded the rate limit of the RPC provider configured. |
 | unregisteredDomain | Thrown when you resolve a domain not owned by any address. |
 | unknownError | Thrown when an unknown error occurs while resolving a domain with the current resolution instance. |
 | unspecifiedResolver | Thrown when the domain resolver contract address is not found. For example, the domain doesn't have a specified resolver. |
 | unsupportedDomain | Thrown when you resolve a domain with an ending not supported by the current resolution instance. |
+| unsupportedNetwork | Thrown when you resolve a domain with an unsupported blockchain network (e.g. testnets). |
 | unsupportedServiceName | Thrown when using an unsupported naming service with the current resolution instance. |
 
 ## Use Case: Retrieve a Domain Record
