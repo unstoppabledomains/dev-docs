@@ -9,7 +9,7 @@ There will be minimal changes to Unstoppable Domains’ resolution libraries and
 
 ## Polygon Updates
 
-Polygon apps will resolve domains by reading [UNS Smart Contracts](../developer-toolkit/smart-contracts/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
+Polygon apps will resolve domains by reading [UNS Smart Contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
 
 To further assist with L2, the Polygon team will be adding Unstoppable Domains resolution to their API and Matic.js library. This will make it easier, for example, for Polygon apps to use domains for payments in wallets and login with dapps.
 
@@ -19,7 +19,7 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 ### Method Changes and Updates
 
-* **gettokensownedby** has been deprecated and is no longer supported in L2.
+* **gettokensownedby** has been depreciated and is no longer supported in L2.
 * **getallrecords** has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
 
 ### New Supported Method

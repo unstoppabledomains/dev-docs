@@ -25,8 +25,9 @@ analytics:
   ga:
     head: false
     trackingId: UA-120492152-2
-  gtm:
-    id: GTM-TXJK8HJ
+  heap:
+    appId: 2639102893
+    enableonDevMode: true
 scripts:
   - ./static/scripts/etlb.js
   - https://embed.typeform.com/next/embed.js

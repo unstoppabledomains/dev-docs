@@ -5,7 +5,7 @@ description: This guide covers how to retrieve the reverse record of UD domains 
 
 # Resolution Libraries Integration Guide
 
-This guide covers how to retrieve the reverse record of UD domains using the Resolution Libraries. This process requires using the language-specific and blockchain-agnostic libraries managed by Unstoppable Domains. Please see the [Resolution Libraries Overview](../../developer-toolkit/resolution-libraries/libraries-overview.md) for a detailed description and configuration guide for the libraries.
+This guide covers how to retrieve the reverse record of UD domains using the Resolution Libraries. This process requires using the language-specific and blockchain-agnostic libraries managed by Unstoppable Domains. Please see the [Resolution Libraries Overview](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) for a detailed description and configuration guide for the libraries.
 
 ## Reverse Resolution for an Address
 
@@ -13,13 +13,7 @@ To resolve the reverse record of a wallet address, you must call the appropriate
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-const resolution = new Resolution({
-  sourceConfig: {
-    uns: {
-      network: 'polygon-mumbai',
-    },
-  },
-});
+const resolution = new Resolution();
 
 function reverseTokenId(address) {
   resolution
@@ -38,8 +32,8 @@ function reverseUrl(address) {
     .catch(console.error);
 }
 
-reverseTokenId('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
-reverseUrl('0xcb9c0e0Cd1949a42C4F876C384647aD652a95886');
+reverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+reverseUrl("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
 ```
 
 ```java Java

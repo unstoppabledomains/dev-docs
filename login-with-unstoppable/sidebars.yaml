@@ -4,25 +4,15 @@ pages:
   - page: index.md
     label: Login Overview
     separatorLine: true
-  - group: Getting Started with Login
-    expanded: false
-    pages:
-      - label: Select Your Integration Pathway
-        page: get-started-login/integration-pathways.md
-      - label: Scopes for Login
-        page: get-started-login/scopes-for-login.md
-      - label: Login FAQs
-        page: get-started-login/login-faq.md
-    separatorLine: true
-  - group: Humanity Check for Login
-    expanded: false
-    selectFirstItemOnExpand: true
-    pages:
-      - label: Humanity Check Overview
-        page: humanity-check/humanity-check-for-login.md
-      - label: Humanity Check FAQs
-        page: humanity-check/humanity-check-faq.md
+  - label: Humanity Check for Login
+    page: humanity-check.md
     separatorLine: true 
+  - label: Getting Started with Login
+    page: get-started-login.md
+    separatorLine: true
+  - label: Scopes for Login
+    page: scopes-for-login.md
+    separatorLine: true
   - group: Login Integration Guides
     expanded: false
     pages:
@@ -60,4 +50,11 @@ pages:
         page: troubleshoot/login-error-codes.md
       - label: Login Troubleshooting Guide
         page: troubleshoot/troubleshooting-guide.md
-    separatorLine: true  
+    separatorLine: true
+  - group: FAQs
+    pages:
+      - label: Login FAQs
+        page: login-faq.md
+      - label: Humanity Check FAQs
+        page: humanity-check-faq.md
+    separatorLine: true

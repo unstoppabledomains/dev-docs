@@ -17,7 +17,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 * Press **Add Network** button.
 * Fill fields with the following values:
   * **Network Name:** Mumbai
-  * **New RPC URL:** [https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78](https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78)
+  * **New RPC URL:** [https://polygon-rpc.com/](https://polygon-rpc.com/)
   * **Chain ID:** 80001
   * **Currency Symbol:** MATIC
   * **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)

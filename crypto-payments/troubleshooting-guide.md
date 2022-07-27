@@ -42,7 +42,7 @@ This error occurs when the resolution libraries cannot find a resolver contract 
 
 ## UnsupportedDomain or DomainNotSupportedError
 
-This error occurs when you try to resolve a domain with an ending not supported by Unstoppable Domains. The solution is to provide a domain with a [supported ending](../developer-toolkit/resolution-libraries/libraries-overview.md#supported-domains-for-resolution-libraries) to the resolution instance or inform the user to double-check their input.
+This error occurs when you try to resolve a domain with an ending not supported by Unstoppable Domains. The solution is to provide a domain with a [supported ending](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md#supported-domains-for-resolution-libraries) to the resolution instance or inform the user to double-check their input.
 
 <figure>
 
