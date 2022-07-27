@@ -11,7 +11,7 @@ description: This page outlines the use case for sending and receiving crypto pa
 
 ## How does it work?
 
-The Unstoppable Domain algorithm converts cryptocurrency addresses to a human-readable or user-friendly name. This makes sending and receiving crypto payments easier because you don't have to remember long wallet addresses or worry about copy/paste errors when sending payments. Unstoppable Domains supports 260+ cryptocurrencies, with more support added each year.
+The Unstoppable Domain algorithm converts cryptocurrency addresses to a human-readable or user-friendly name. This makes sending and receiving crypto payments easier because you don't have to remember long wallet addresses or worry about copy/paste errors when sending payments. Unstoppable Domains supports 275+ cryptocurrencies, with more support added each year.
 
 The most common way to integrate with Unstoppable Domains is through simple domain resolution. Domain Resolution allows developers to translate an Unstoppable Domains NFT, for example, '.crypto' and '.zil', into addresses for BTC, ETH, IPFS, and more. You can use domain Resolution anywhere your application has a "Send to: " field.
 
@@ -24,5 +24,4 @@ The most common way to integrate with Unstoppable Domains is through simple doma
 You can find additional working integrations on UD's Applications List, filtered by the [Payment feature](https://unstoppabledomains.com/apps?filters=5).
 
 ## How do I get started?
-
-To make domain resolution easier, we've written libraries for web, Android, and iOS. See the guides on [Crypto Payments](../crypto-payments/index.md), [Resolution Service API](../developer-toolkit/resolution-service/overview.md), and [Resolution Libraries](../developer-toolkit/resolution-libraries/libraries-overview.md) for more detail on integrating UD into your application for sending and receiving cryto payments.
+To make domain resolution easier, we've written libraries for web, Android, and iOS. See the guides on [Crypto Payments](/crypto-payments/index.md), [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md), and [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) for more detail on integrating UD into your application for sending and receiving crypto payments.

@@ -12,65 +12,68 @@ pages:
         selectFirstItemOnExpand: true
         pages:
           - label: Overview
-            page: resolution-service/overview.md
-          - label: Get Records for a Domain
-            page: resolution-service/endpoints/get-records-for-a-domain.md
-          - label: Get Records for Owner Addresses
-            page: resolution-service/endpoints/get-records-for-owner-addresses.md
-          - label: Get Domain Transfer Events
-            page: resolution-service/endpoints/get-domain-transfer-events.md
-          - label: Get Reverse Record for an Address
-            page: resolution-service/endpoints/get-reverse-record-for-address.md
-          - label: Get Supported TLDs
-            page: resolution-service/endpoints/get-supported-tlds.md
+            page: resolution-integration-methods/resolution-service/overview.md
+          - group: API Endpoints
+            expanded: false
+            pages:
+              - label: Get Records for a Domain
+                page: resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain.md
+              - label: Get Records for Owner Addresses
+                page: resolution-integration-methods/resolution-service/endpoints/get-records-for-owner-addresses.md
+              - label: Get Domain Transfer Events
+                page: resolution-integration-methods/resolution-service/endpoints/get-domain-transfer-events.md
+              - label: Get Reverse Record for an Address
+                page: resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md
+              - label: Get Supported TLDs
+                page: resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md
           - label: Error Codes
-            page: resolution-service/error-codes.md
+            page: resolution-integration-methods/resolution-service/error-codes.md
       - group: Resolution Libraries
         expanded: false
         selectFirstItemOnExpand: true
         pages:
           - label: Overview
-            page: resolution-libraries/libraries-overview.md
+            page: resolution-integration-methods/resolution-libraries/libraries-overview.md
           - label: Resolution
-            page: resolution-libraries/resolution.md
+            page: resolution-integration-methods/resolution-libraries/resolution.md
           - label: Resolution-Java
-            page: resolution-libraries/resolution-java.md
+            page: resolution-integration-methods/resolution-libraries/resolution-java.md
           - label: Resolution-Swift
-            page: resolution-libraries/resolution-swift.md
+            page: resolution-integration-methods/resolution-libraries/resolution-swift.md
           - label: Resolution-Go
-            page: resolution-libraries/resolution-go.md
+            page: resolution-integration-methods/resolution-libraries/resolution-go.md
           - label: Matic.js SDK
-            page: resolve-with-maticjs.md
+            page: resolution-integration-methods/resolution-libraries/resolve-with-maticjs.md
       - label: Resolution CLI
-        page: resolution-cli.md
+        page: resolution-integration-methods/resolution-cli.md
       - group: Resolve With Direct Blockchain Calls
         expanded: false
         selectFirstItemOnExpand: true
         pages:
           - label: Overview
-            page: direct-blockchain-calls/bc-overview.md
+            page: resolution-integration-methods/direct-blockchain-calls/bc-overview.md
           - label: Resolve UD Domains Without Libraries
-            page: direct-blockchain-calls/resolve-unstoppable-domain-names.md
+            page: resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md
           - label: Resolve .zil Domains Without Libraries
-            page: direct-blockchain-calls/resolve-zil-without-libraries.md
+            page: resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries.md
           - label: Resolve Domains with Smart Contracts
-            page: direct-blockchain-calls/resolve-eth-smart-contracts.md
+            page: resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
   - group: Advanced Resolution Use Cases
     expanded: false
     pages:
       - label: Resolve Domains in Web Applications
-        page: resolve-domains-in-web-applications.md
+        page: advanced-use-cases/resolve-domains-in-web-applications.md
       - group: Resolve Domains in a Browser (HTTP & IPFS)
         expanded: false
         selectFirstItemOnExpand: true
         pages:
           - label: Browser Resolution Overview
-            page: resolve-domains-browser/browser-resolution-overview.md
+            page: advanced-use-cases/resolve-domains-browser/browser-resolution-overview.md
           - label: Browser Resolution Algorithm
-            page: resolve-domains-browser/browser-resolution-algorithm.md
+            page: advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md
           - label: Browser Resolution Test Domains
-            page: resolve-domains-browser/test-domains.md
+            page: advanced-use-cases/resolve-domains-browser/test-domains.md
     separatorLine: true
   - group: Reference
     expanded: false
@@ -79,11 +82,11 @@ pages:
         expanded: false
         pages:
           - label: UNS Smart Contracts
-            page: smart-contracts/uns-smart-contracts.md
+            page: reference/smart-contracts/uns-smart-contracts.md
           - label: CNS Smart Contracts
-            page: smart-contracts/cns-smart-contracts.md
+            page: reference/smart-contracts/cns-smart-contracts.md
       - label: Records Reference
-        page: records-reference.md
+        page: reference/records-reference.md
     separatorLine: true
   - group: Changelogs
     expanded: false
@@ -97,4 +100,3 @@ pages:
       - label: Resolution Go Library
         page: changelogs/resolution-go-changelog.md
     separatorLine: true
-    

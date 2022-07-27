@@ -45,7 +45,7 @@ For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides[ ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, `Registry` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records Reference](../../developer-toolkit/records-reference.md).
+Under the surface, `Registry` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records Reference](/developer-toolkit/reference/records-reference.md).
 
 `Registry` stores:
 
@@ -69,9 +69,9 @@ Domain owners can set one Approved address per domain and many Operator addresse
 
 ### ProxyReader
 
-`ProxyReader` is a smart contract that our [Resolution Libraries](../../developer-toolkit/resolution-libraries/libraries-overview.md) use to resolve domains. It supports CNS and UNS domains, so members won’t need to search for a specific proxy reader. Members can use the latest `ProxyReader` version to resolve all domains.
+`ProxyReader` is a smart contract that our [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) use to resolve domains. It supports CNS and UNS domains, so members won’t need to search for a specific proxy reader. Members can use the latest `ProxyReader` version to resolve all domains.
 
-For more information on how the resolution process works read [Resolving domain records](../../developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on how the resolution process works read [Resolving domain records](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 
 ## Domain Hierarchy and Ownership
 

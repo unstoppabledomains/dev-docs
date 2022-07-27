@@ -13,7 +13,7 @@ This reference page is divided into sections, grouping records by their namespac
   * [DNS records](#dns-records)
 * [Social records](#social-records)
 
-Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](../getting-started/domain-registry-essentials/cns-architecture-overview.md), [UNS Architecture](../getting-started/domain-registry-essentials/uns-architecture-overview.md), and [Managing Domain Records](../manage-domains/managing-domain-records.md).
+Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](/getting-started/domain-registry-essentials/cns-architecture-overview.md), [UNS Architecture](/getting-started/domain-registry-essentials/uns-architecture-overview.md), and [Managing Domain Records](/manage-domains/managing-domain-records.md).
 
 :::info
 A list of keys supported by Unstoppable Domains can be found in [reference json file](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json)
@@ -21,7 +21,7 @@ A list of keys supported by Unstoppable Domains can be found in [reference json 
 
 ## Cryptocurrency payments
 
-For information about crypto payments, see [Managing Domain Records - Cryptocurrency Payment Records](../manage-domains/managing-domain-records.md#crypto-payment-records).
+For information about crypto payments, see [Managing Domain Records - Cryptocurrency Payment Records](/manage-domains/managing-domain-records.md#crypto-payment-records).
 
 **`crypto.ETH.address`**
 
@@ -77,7 +77,7 @@ Cryptocurrency address of ticker version
 
 ## Browser resolution
 
-Browser resolution is described in the [Browser Resolution Algorithm](resolve-domains-browser/browser-resolution-algorithm.md) page.
+Browser resolution is described in the [Browser Resolution Algorithm](/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md) page.
 
 **`browser.preferred_protocols`**
 
@@ -97,7 +97,7 @@ A fallback URL, to which a user will be redirected if no other resolution method
 
 ### DWeb records
 
-For more details, read [Browser Resolution Algorithm - DWeb Records](resolve-domains-browser/browser-resolution-algorithm.md#decentralized-web-records).
+For more details, read [Browser Resolution Algorithm - DWeb Records](/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md#decentralized-web-records).
 
 **`dweb.ipfs.hash`**
 
@@ -117,7 +117,7 @@ Swarm network content hash.
 
 ### DNS records
 
-For more details, see [Browser Resolution Algorithm - DNS Records](resolve-domains-browser/browser-resolution-algorithm.md#dns-records).
+For more details, see [Browser Resolution Algorithm - DNS Records](/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md#dns-records).
 
 **`dns.ttl`**
 

@@ -37,7 +37,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 ## Step 3: Open the Etherscan Smart Contract Request
 
 * Open the domain request Smart Contract using [Etherscan](https://etherscan.io/address/0x1fC985cAc641ED5846b631f96F35d9b48Bc3b834#writeContract).
-* To get a test domain on testnet, find the Smart Contract address in [reference table](../../developer-toolkit/smart-contracts/cns-smart-contracts.md).
+* To get a test domain on testnet, find the Smart Contract address in [reference table](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md).
 * Connect your wallet.
 
 <figure>

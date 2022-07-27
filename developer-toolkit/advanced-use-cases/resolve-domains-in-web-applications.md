@@ -5,7 +5,7 @@ description: This page describes how to use the Resolution library to resolve NF
 
 # Resolving Domains in Web Applications
 
-Resolution is a library for interacting with NFT domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
+Resolution is a library for interacting with NFT domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md), IPFS hashes for [decentralized websites](/d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 
@@ -15,7 +15,7 @@ Resolution is built and maintained by Unstoppable Domains and supports decentral
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 :::info
-For more information on Unstoppable Domains Resolution, see [Resolve Using Ethereum Smart Contracts](./direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.
+For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](../resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.
 :::
 
 ## Installing Resolution
@@ -132,7 +132,7 @@ For example:
 resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
 ```
 
-Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](resolution-cli.md) documentation for more information.
+Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md) documentation for more information.
 
 ## Default Ethereum Providers
 

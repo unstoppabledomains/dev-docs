@@ -5,12 +5,12 @@ description: This page reviews the Resolution CLI option for resolving a domain.
 
 # Resolution CLI
 
-The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with NFT domain names. It can be used to retrieve [payment addresses](../crypto-payments/index.md), IPFS hashes for [decentralized websites](../d-websites/index.md), DNS records and other [records types](records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
+The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with NFT domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md), IPFS hashes for [decentralized websites](/d-websites/index.md), DNS records and other [records types](/developer-toolkit/reference/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
 :::warning important
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](resolution-service/endpoints/get-supported-tlds.md).
+<embed src="/snippets/_new_tld_warning.md" />
 :::
 
 ## Installing Resolution CLI
@@ -30,7 +30,7 @@ resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
 
-The crypto.ETH.address can be located in the [Records Reference](records-reference.md).
+The crypto.ETH.address can be located in the [Records Reference](/developer-toolkit/reference/records-reference.md).
 
 ## Use Case: Retrieve a Domain Record
 

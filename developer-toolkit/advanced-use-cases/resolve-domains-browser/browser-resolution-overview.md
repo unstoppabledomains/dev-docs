@@ -6,7 +6,7 @@ description: This page provides a high level overview of how UD Resolution works
 # How Browser Resolution Works
 
 :::info
-For more information on Unstoppable Domains Resolution, see [Resolve Using Ethereum Smart Contracts](../direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
 :::
 
 ## General Domain Resolution Information
@@ -17,21 +17,21 @@ To make domain resolution easier, we've written libraries for web, Android, and 
 
 ### Domain Resolution Libraries
 
-* [Resolution](../resolution-libraries/resolution.md) (JavaScript)
-* [Resolution-Java](../resolution-libraries/resolution-java.md)
-* [Resolution-Swift](../resolution-libraries/resolution-swift.md)
-* [Resolution-Go](../resolution-libraries/resolution-go.md)
+* [Resolution](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution.md) (JavaScript)
+* [Resolution-Java](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-java.md)
+* [Resolution-Swift](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-swift.md)
+* [Resolution-Go](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-go.md)
 
 ### Access Domain Metadata Directly
 
 If you're familiar with blockchain development and would rather avoid an additional dependency in your application, you can also read domain metadata directly.
 
-* [Resolve .crypto With Direct Blockchain Calls](../direct-blockchain-calls/resolve-unstoppable-domain-names.md)
-* [Resolve .zil With Direct Blockchain Calls](../direct-blockchain-calls/resolve-zil-without-libraries.md)
-* [Resolve Using Ethereum Smart Contracts](../direct-blockchain-calls/resolve-eth-smart-contracts.md)
-* [CNS Smart Contracts reference](../smart-contracts/cns-smart-contracts.md)
-* [UNS Smart Contracts reference](../smart-contracts/uns-smart-contracts.md)
-* [Records Reference](../records-reference.md)
+* [Resolve Unstoppable Domains With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md)
+* [Resolve .zil With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries.md)
+* [Resolve Using Smart Contracts](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md)
+* [CNS Smart Contracts reference](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md)
+* [UNS Smart Contracts reference](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md)
+* [Records reference](/developer-toolkit/reference/records-reference.md)
 
 ## End-User Features (For Resolving Domains in a Browser)
 
@@ -45,7 +45,7 @@ Given an NFT domain has a d-web content identifier record configured (e.g. an IP
 
 <figure>
 
-[![Diagram showing how to read D-Web from Ethereum](</images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png> '#width=75%')](/images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png)
+![Diagram showing how to read D-Web from Ethereum](/images/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network.png '#width=75%')
 
 <figcaption>Diagram showing how to read D-Web from Ethereum</figcaption>
 </figure>
@@ -71,7 +71,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 
 <figure>
 
-[![Diagram showing how to configure DNS Gateway](</images/configure\_dns\_gateway.png> '#width=75%')](/images/configure\_dns\_gateway.png)
+![Diagram showing how to configure DNS Gateway](/images/configure\_dns\_gateway.png '#width=75%')
 
 <figcaption>Diagram showing how to configure DNS Gateway</figcaption>
 </figure>
@@ -103,7 +103,7 @@ See a description of how they work below
 
 <figure>
 
-[![Visual flow of resolving DWeb via DNS and DWeb gateway](</images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png> '#width=75%')](/images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png)
+![Visual flow of resolving DWeb via DNS and DWeb gateway](/images/overview\_dweb\_website\_via\_dns\_dweb\_gateways.png '#width=75%')
 
 <figcaption>Visual flow of resolving DWeb via DNS and DWeb gateway</figcaption>
 </figure>
@@ -114,7 +114,7 @@ A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed 
 
 1. Receive HTTP request to an NFT domain (like `http://example.crypto`)
 2. Resolve the domain into crypto records
-3. Get the content based on [Browser Resolution Algorithm](../resolve-domains-browser/browser-resolution-algorithm.md)
+3. Get the content based on [Browser Resolution Algorithm](browser-resolution-algorithm.md)
 4. Return the content to the client via HTTP
 
 ### Resolution Over DNS Gateway
@@ -123,8 +123,8 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
 
 1. Receive a domain resolution request
 2. Resolve a domain using classical DNS system if is in classical domain ending (like `.com`)
-3. Resolve a domain using [Browser Resolution Algorithm](../resolve-domains-browser/browser-resolution-algorithm.md) if it is in .crypto domain ending
-   * If a domain is set using DNS, transform [Crypto DNS records](../resolve-domains-browser/browser-resolution-algorithm.md#dns-records) into classical records
+3. Resolve a domain using [Browser Resolution Algorithm](browser-resolution-algorithm.md) if it is in .crypto domain ending
+   * If a domain is set using DNS, transform [Crypto DNS records](browser-resolution-algorithm.md#dns-records) into classical records
    * If a domain is set using distributed content
      * If the client requests `A` record, resolve to [Distributed Content Gateway](#distributed-content-gateway) IP Address
      * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
@@ -132,7 +132,7 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
 
 <figure>
 
-[![Visualization of how to resolve DWeb via DNS and DWeb gateways](</images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png> '#width=75%')](/images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png)
+![Visualization of how to resolve DWeb via DNS and DWeb gateways](/images/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway.png '#width=75%')
 
 <figcaption>Visualization of how to resolve DWeb via DNS and DWeb gateways</figcaption>
 </figure>

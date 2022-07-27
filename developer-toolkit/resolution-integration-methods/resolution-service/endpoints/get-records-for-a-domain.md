@@ -29,7 +29,7 @@ The Resolution Service API will not return an error in the case of an invalid do
 
 A single object with the following fields:
 
-* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](../../records-reference.md) documentation.
+* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 * `meta`: A key-value dictionary with general information about the domain:
     * `domain`: (string) domain name.
     * `blockchain`: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).

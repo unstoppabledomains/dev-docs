@@ -35,7 +35,7 @@ The resolution service will not return an error in the case of an invalid or uns
 | sortDirection must be one of the following values: ASC, DESC | The provided `sortDirection` parameter value is not `ASC` or `DESC`. |
 | sortBy must be one of the following values: id, name, created_at | The provided `sortBy` parameter value has to be either `id`, `name` or `created_at`. |
 | Invalid TLD list provided | The Resolution Service API does not support the provided list of domain endings. |
-| Invalid resolution records provided | The provided `resolution` parameter value contains records not supported by the resolution service API. See the [Records Reference](../records-reference.md) guide for supported key values. |
+| Invalid resolution records provided | The provided `resolution` parameter value contains records not supported by the resolution service API. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. |
 
 ## 403 Error: Forbidden
 

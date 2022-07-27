@@ -7,10 +7,10 @@ description: These guides demonstrate the process for resolving domains using di
 
 NFT domain names are domain names launched as smart contracts on public blockchains. What sets them apart from traditional domain names (like `.com`) is that NFT domains are stored by their owners in their wallet like cryptocurrency, and no third party can change or remove them.
 
-One strategy for resolving domains is to read directly from the blockchain. This is a secure method of resolving domains, but this method requires manual updates and modifications as it is not maintained by UD like the [Resolution Libraries](../resolution-libraries/libraries-overview.md) or [Resolution CLI](../resolution-cli.md).
+One strategy for resolving domains is to read directly from the blockchain. This is a secure method of resolving domains, but this method requires manual updates and modifications as it is not maintained by UD like the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) or [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md).
 
 :::warning important
-Unstoppable Domains periodically releases new domain endings, and our Resolution libraries and APIs will automatically detect and support them. Therefore, do not implement a front-end filter into your application (e.g., hard-coding domains or placing a regex filter for just .crypto, .nft, etc.). We also provide an [API endpoint to query for supported domain endings](../resolution-service/endpoints/get-supported-tlds.md).
+<embed src="/snippets/_new_tld_warning.md" />
 :::
 
 ## **Use Cases**

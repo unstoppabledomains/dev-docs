@@ -17,7 +17,7 @@ The website is decentralized by being created on the Ethereum blockchain, and th
 
 ## Who controls the content?
 
-Individuals control their content and identity with a decentralized website. No one can delete content (such as blogs, podcasts, artwork, or social media) or move it around other than the domain owner. 
+Individuals control their content and identity with a decentralized website. No one can delete content (such as blogs, podcasts, artwork, or social media) or move it around other than the domain owner.
 
 ## Are there working integrations for this feature?
 
@@ -29,4 +29,4 @@ Individuals control their content and identity with a decentralized website. No 
 
 ## How do I get started?
 
-See the guides on [Resolving Domains in Web Applications](../developer-toolkit/resolve-domains-in-web-applications.md) and [Browser Resolution Algorithm](../developer-toolkit/resolve-domains-browser/browser-resolution-algorithm.md). For a list of test domains, see [Browser Resolution Test Domains](../developer-toolkit/resolve-domains-browser/test-domains.md).
+See the guides on [Resolving Domains in Web Applications](/developer-toolkit/advanced-use-cases/resolve-domains-in-web-applications.md) and [Browser Resolution Algorithm](/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md). For a list of test domains, see [Browser Resolution Test Domains](/developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains.md).

@@ -14,20 +14,28 @@ This page details basic configuration and usage of the [resolution-swift library
 ```swift
 import UnstoppableDomainsResolution
 
-guard let resolution = try? Resolution(
-    configs: Configurations(
-        uns: UnsLocations(
+let resolution = try Resolution(configs: Configurations(
+        uns: UnsLocations = UnsLocations(
             layer1: NamingServiceConfig(
-                        providerUrl: ALCHEMY_ETHEREUM_API,
-                        network: "mainnet"),
+                providerUrl: "https://eth-mainnet.alchemyapi.io/v2/_BDuTLPgioYxULIE5cGq3wivWAJborcM",
+                network: "mainnet"),
             layer2: NamingServiceConfig(
-                        providerUrl: ALCHEMY_POLYGON_API,
-                        network: "polygon-mainnet")
+                providerUrl: "https://polygon-mainnet.g.alchemy.com/v2/bKmEKAC4HJUEDNlnoYITvXYuhrIshFsa",
+                network: "polygon-mainnet"),
+            zlayer: NamingServiceConfig(
+                providerUrl: "https://api.zilliqa.com",
+                network: "mainnet")
         )
-    )
-) else {
-  print ("Init of Resolution instance with custom parameters failed...")
-  return
+);
+
+resolution.addr(domain: "brad.crypto", ticker: "eth") { (result) in
+    switch result {
+    case .success(let returnValue):
+        ethAddress = returnValue
+        domainReceived.fulfill()
+    case .failure(let error):
+        XCTFail("Expected Eth Address, but got \(error)")
+    }
 }
 ```
 

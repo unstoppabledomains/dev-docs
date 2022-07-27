@@ -7,7 +7,7 @@ editPage:
 
 # CNS Smart Contract
 
-Crypto Name Service (CNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how CNS works, see [CNS Architecture overview](../../getting-started/domain-registry-essentials/cns-architecture-overview.md).
+Crypto Name Service (CNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how CNS works, see [CNS Architecture overview](/getting-started/domain-registry-essentials/cns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
@@ -23,7 +23,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### Registry
 
-`Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](../../getting-started/domain-registry-essentials/cns-architecture-overview.md#registry).
+`Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](/getting-started/domain-registry-essentials/cns-architecture-overview.md#registry).
 
 :::info
 This is an auto-generated table with CNS smart-contract addresses. See README for more info.
