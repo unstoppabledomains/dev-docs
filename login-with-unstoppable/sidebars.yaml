@@ -6,7 +6,7 @@ pages:
     separatorLine: true
   - label: Humanity Check for Login
     page: humanity-check.md
-    separatorLine: true 
+    separatorLine: true
   - label: Getting Started with Login
     page: get-started-login.md
     separatorLine: true
@@ -18,20 +18,24 @@ pages:
     pages:
       - label: Login Client Configuration
         page: login-integration-guides/login-client-configuration.md
-      - label: Login With Pop-up
-        page: login-integration-guides/login-with-popup.md
-      - label: Login Without Pop-up
-        page: login-integration-guides/login-without-popup.md
-      - label: Web3 Modal
-        page: login-integration-guides/web3-modal-guide.md
-      - label: Web3 React
-        page: login-integration-guides/web3-react-guide.md
-      - label: Web3 Onboard
-        page: login-integration-guides/web3-onboard-guide.md
-      - label: Moralis
-        page: login-integration-guides/moralis-guide.md
-      - label: Node.js Server
-        page: login-integration-guides/node-js-server-guide.md
+      - group: Integration Paths
+        expanded: false
+        pages:
+          - label: Login With Pop-up
+            page: login-integration-guides/login-with-popup.md
+          - label: Login Without Pop-up
+            page: login-integration-guides/login-without-popup.md
+          - label: Web3 Modal
+            page: login-integration-guides/web3-modal-guide.md
+          - label: Web3 React
+            page: login-integration-guides/web3-react-guide.md
+          - label: Web3 Onboard
+            page: login-integration-guides/web3-onboard-guide.md
+          - label: Moralis
+            page: login-integration-guides/moralis-guide.md
+          - label: Node.js Server
+            page: login-integration-guides/node-js-server-guide.md
+        separateorLine: true
       - label: Login UI Configuration
         page: login-integration-guides/login-ui-configuration.mdx
     separatorLine: true
