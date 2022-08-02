@@ -10,6 +10,9 @@ pages:
   - label: Getting Started with Login
     page: get-started-login.md
     separatorLine: true
+  - label: Login Client Analytics
+    page: client-analytics.md
+    separatorLine: true
   - label: Scopes for Login
     page: scopes-for-login.md
     separatorLine: true
