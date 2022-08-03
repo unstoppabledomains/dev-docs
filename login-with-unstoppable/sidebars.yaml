@@ -41,6 +41,8 @@ pages:
         separateorLine: true
       - label: Login UI Configuration
         page: login-integration-guides/login-ui-configuration.mdx
+      - label: Updating UAuth Libraries
+        page: login-integration-guides/update-uauth.md
     separatorLine: true
   - group: Login Protocols
     expanded: false
