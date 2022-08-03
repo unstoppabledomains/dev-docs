@@ -1,6 +1,6 @@
 ---
-title: Login Client Analytics
-description: This page describes the analytics features offered by the 
+title: Login Client Analytics | UD Developer Portal
+description: This page describes the analytics features offered by the Login with Unstoppable partner dashboard.
 ---
 
 # Login Client Analytics
@@ -32,7 +32,7 @@ The client details section shows you how many distinct users have logged in with
 The logged-in user chart visualizes the daily login sessions, sorted by preset or custom date ranges.
 
 In the **Chart options** menu, you can:
-- Enable **Show Humanity Check Users** to add logged in domains with Humanity Check completed to the chart in green.
+- Enable **Show Humanity Check Users** to add users with Humanity Check completed to the chart in green.
 - **Toggle Column Chart** to change from the default area chart to a column chart.
 - Enable **Currently Logged-in Users Only** to display only current login sessions.
 
@@ -45,7 +45,7 @@ In the **Chart options** menu, you can:
 
 ## Logged-in User Table
 
-In the last section of the analytics page, you can view a table of all distinct or current login sessions for this login client. These can be sorted by clicking the arrow to the right of each column name.
+In the last section of the analytics page, you can view a table of distinct users for this login client. Click the arrows to the right of each column name to sort by column values.
 
 For more advanced control of the table contents, see the controls to the upper right.
 
