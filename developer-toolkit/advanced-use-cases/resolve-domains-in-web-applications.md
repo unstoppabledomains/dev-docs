@@ -9,10 +9,7 @@ Resolution is a library for interacting with NFT domain names. It can be used to
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 
-| Name Service                   | Supported Domains                                                             |
-| ------------------------------ | ----------------------------------------------------------------------------- |
-| Zilliqa Name Service (ZNS)     | `.zil`                                                                        |
-| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.wallet,` `.888`, `.dao`, `.x` |
+<embed src="/snippets/_supported-domains.md" />
 
 :::info
 For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](../resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.

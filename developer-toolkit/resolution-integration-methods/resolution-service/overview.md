@@ -13,10 +13,7 @@ With the Resolution Service API, you can quickly build applications directly com
 
 The Resolution Service API supports decentralized domains across two main zones:
 
-| Name Service                   | Supported Domains                                                                      |
-| ------------------------------ | -------------------------------------------------------------------------------------- |
-| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
-| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.wallet,` `.888`, `.dao`, `.x` |
+<embed src="/snippets/_supported-domains.md" />
 
 :::warning important
 <embed src="/snippets/_new_tld_warning.md" />

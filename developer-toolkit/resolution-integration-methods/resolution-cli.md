@@ -9,6 +9,10 @@ The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simpl
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
+## Supported Domains for Resolution CLI
+
+<embed src="/snippets/_supported-domains.md" />
+
 :::warning important
 <embed src="/snippets/_new_tld_warning.md" />
 :::
@@ -45,15 +49,6 @@ resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
    }
 }
 ```
-
-## Supported Domains for Resolution CLI
-
-The Resolution CLI supports decentralized domains across two main zones:
-
-| Name Service                   | Supported Domains                                                                      |
-| ------------------------------ | -------------------------------------------------------------------------------------- |
-| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
-| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 ## Error Codes
 
