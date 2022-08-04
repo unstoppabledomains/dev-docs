@@ -85,6 +85,8 @@ pages:
             page: reference/smart-contracts/cns-smart-contracts.md
       - label: Records Reference
         page: reference/records-reference.md
+      - label: Ethereum Providers
+        page: reference/ethereum-providers.md
     separatorLine: true
   - group: Changelogs
     expanded: false

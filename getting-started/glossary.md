@@ -7,10 +7,6 @@ description: The glossary provides a list of definitions for terms, acronyms, an
 
 The glossary provides a list of definitions for terms, acronyms, and phrases used in the Unstoppable Domains developer documentation to help its members understand common terminology.
 
-### Blockchain
-
-A publicly-accessible digital ledger used to store and transfer information without the need for a central authority. Blockchains are the core technology on which cryptocurrency protocols like Bitcoin and Ethereum are built.
-
 ### Burn
 
 The process of permanently destroying and clearing all the associated [metadata](#metadata) and [records](#record) of a domain, so it is no longer available for purchase or re-minting.
@@ -75,10 +71,6 @@ A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsi
 
 A one-way algorithm that converts a domain name like `example.crypto` into an ERC-721 token Id so [smart contracts](#smart-contract) can understand it.
 
-### NFT
-
-Non-Fungible Token (NFT) are digital certificates of authenticity used to assign and verify ownership of a unique digital or physical asset. Unlike fungible tokens, NFTs are indivisible and not interchangeable with one another.
-
 ### NFT Domains
 
 The domain names minted on the blockchain which allow people to govern their data, set their Web3 username, take control of their digital worlds, and harness the power of the internet.
@@ -89,7 +81,7 @@ A service that supplies [smart contracts](#smart-contract) with data from the ou
 
 ### Partner
 
-A user authorized by Unstoppable Domains to [sell domains to users](../use-cases/sell-domains-users.md) in their applications.
+A user authorized by Unstoppable Domains to [sell domains to users](/use-cases/sell-domains-users.md) in their applications.
 
 ### Record
 
@@ -115,21 +107,13 @@ A smart contract is a contract whose terms are expressed as a computer program w
 
 A software environment that mimics a [mainnet](#mainnet) blockchain. It is used to test network upgrades and [smart contracts](#smart-contract) before deploying them to the [mainnet](#mainnet).
 
-###UD
+### UD
 
 Short for Unstoppable Domains.
 
 ### UNS
 
 Unstoppable Name Service (UNS) is the [name service](#name-service) handling the minting and management of [NFT domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
-
-### Wallet
-
-A software application or hardware device used to store the private keys to blockchain assets and accounts. Unlike a traditional wallet, a blockchain wallet does not hold the coins or tokens themselves. Instead, they store the private key proving ownership of a given digital asset, i.e., Metamask, Coinbase Wallet, Ledger, Trezor.
-
-### Wallet Address
-
-Also known as a public key, it is an alphanumeric code that serves as the address for a blockchain wallet, similar to a bank account number. Other users can send digital assets to your wallet via your public key, but only you can access your wallet’s contents using the corresponding private key.
 
 ### ZNS
 
