@@ -50,6 +50,16 @@ resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
 }
 ```
 
+## Custom Ethereum Provider Configuration
+
+By default, the CLI uses Alchemy as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.
+
+For example:
+
+```
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
+```
+
 ## Error Codes
 
 Below is a list of all the error codes you might encounter when using the Resolution CLI.
