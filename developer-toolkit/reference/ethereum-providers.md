@@ -27,7 +27,7 @@ They store all the data from full nodes and build an archive of historical state
 
 Node service providers run optimized and distributed node infrastructures, then expose an interface for you to access the functionalities of the node and participate in the network. They bear all the maintenance and operational responsibility of the blockchain node, so you can focus on developing your application or product instead.
 
-## Using Custom Providers
+## Using Custom Ethereum Providers
 
 Each of the Resolution Libraries supports an Ethereum provider URL for configuration. You can obtain a provider URL from a service like Alchemy, where getting an API key is free and only requires creating an account.
 
