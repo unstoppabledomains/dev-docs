@@ -11,7 +11,7 @@ For more information on resolving domains using the Resolution CLI option, pleas
 
 ## Supported Domains for Resolution CLI
 
-<embed src="/snippets/_supported-domains.md" />
+<embed src="/snippets/_supported-domain-endings.md" />
 
 :::warning important
 <embed src="/snippets/_new_tld_warning.md" />

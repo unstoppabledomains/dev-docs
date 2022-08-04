@@ -13,7 +13,7 @@ With the Resolution Service API, you can quickly build applications directly com
 
 The Resolution Service API supports decentralized domains across two main zones:
 
-<embed src="/snippets/_supported-domains.md" />
+<embed src="/snippets/_supported-domain-endings.md" />
 
 :::warning important
 <embed src="/snippets/_new_tld_warning.md" />
