@@ -75,7 +75,7 @@ For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da5
 
 * Or, you can locate the domain ending namehash in the following list:
 
-```json
+```bash
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'wallet';
 0x7674e7282552c15f203b9c4a6025aeaf28176ef7f5451b280f9bada3f8bc98e2 = 'coin';
