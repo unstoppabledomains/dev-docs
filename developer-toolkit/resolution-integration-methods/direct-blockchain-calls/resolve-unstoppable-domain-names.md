@@ -471,11 +471,11 @@ Now you can resolve any `.crypto` domain and display the appropriate error messa
 
 For example, you can try to resolve the following domains:
 
-| Domain                           | Result                      |
-| -------------------------------- | --------------------------- |
-| `homecakes.crypto`           | Domain has no BTC record    |
-| `udtestdev-test-btc-record.coin`   | Resolves without any issues |
-| `udtestdev-johnny-dev-domain.coin` | Domain has no BTC record    |
+| Domain                  | Result                      |
+| ----------------------- | --------------------------- |
+| `homecakes.crypto`      | Domain has no BTC record    |
+| `udtestdev-test.crypto` | Resolves without any issues |
+| `ryan.crypto`           | Domain has no BTC record    |
 
 ## Resources
 

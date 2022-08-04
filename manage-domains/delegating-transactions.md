@@ -59,7 +59,7 @@ A meta transaction requires 2 signatures: one passed as a method argument and on
 UNS Example for a `reset` method call for a domain:
 
 ```javascript
-const domain = 'example.coin';
+const domain = 'example.crypto';
 const methodName = 'reset';
 const methodParams = ['uint256'];
 const contractAddress = '0x049aba7510f45BA5b64ea9E658E342F904DB358D';
