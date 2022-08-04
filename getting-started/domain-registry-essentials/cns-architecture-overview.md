@@ -7,9 +7,9 @@ description: This page provides an overview of the Crypto Name Service. It assum
 
 This page covers the following topics:
 
-* [Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
-* [Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
-* [Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
+* [Smart Contract Architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
+* [Domain Hierarchy and Ownership](#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
+* [Delegating Domain Management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
 
 Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, members have complete control of their domains.
 
@@ -19,7 +19,7 @@ Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-72
 For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](cns-uns-comparison.md).
 :::
 
-## Smart contract architecture
+## Smart Contract Architecture
 
 The two central components of CNS are its `Registry` and `Resolver` smart contracts. `Registry` is a _map_ (or _dictionary_) from domain names to an owner address and a `Resolver` address. And `Resolver` is a _map_ from domain names to the records associated with that domain (cryptocurrency addresses, etc.).
 
@@ -116,7 +116,7 @@ Such an ownership model might not be suitable for every member. One may want to 
 **Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see [Delegating Domain Management](#delegating-domain-management).
 :::
 
-### Alternative ownership models
+### Alternative Ownership Models
 
 Using Solidity smart contracts allows many new ways to manage subdomains. One of these ways is to use the `DomainZoneController` smart contract, which is supported by the Unstoppable Domains team.
 
@@ -128,11 +128,11 @@ In addition to minting subdomains, `DomainZoneController` provides functionality
 Internal addresses can't be accessed directly by a wallet. Meaning domains owned by smart contracts can only be managed with rules defined by the smart contracts themselves. For example, one cannot transfer a subdomain if such functionality isn't defined by a smart contract's set of methods.
 :::
 
-## Delegating domain management
+## Delegating Domain Management
 
 CNS allows members to delegate transaction execution to accounts that aren't domain owners.
 
-`Registry` and `Resolver` smart contracts implement methods that use [Meta Transactions](../../manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` and `Resolver` smart contracts implement methods that use [Meta Transactions](/manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for members to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
@@ -147,4 +147,4 @@ On behalf of our members, our transaction processor generally handles:
 
 CNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
 
-To learn more about the technical details of delegating transactions in CNS, read our [Meta Transactions](../../manage-domains/delegating-transactions.md) page.
+To learn more about the technical details of delegating transactions in CNS, read our [Delegating Meta Transactions](/manage-domains/delegating-transactions.md) page.

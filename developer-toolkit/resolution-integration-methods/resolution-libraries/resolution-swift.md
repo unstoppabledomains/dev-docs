@@ -85,7 +85,7 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 |---|---|
 | badRequestOrResponse | Thrown by the RPC provider when the request or request is invalid. |
 | contractNotInitialized | Thrown when the proxy reader of the current resolution instance has not been initialized. |
-| executionReverted | Thrown by json RPC when the smart contract call is reverted. |
+| executionReverted | Thrown by the json RPC when the smart contract call is reverted. |
 | inconsistentDomainArray | Thrown when you attempt to retrieve the locations of multiple domains with different naming services. The location of a domain contains the `blockchain`, `networkId`, and valuable metadata like `owner`, `resolver`, `registry addresses`, and `provider URL` of that domain. |
 | invalidDomainName | Thrown when you resolve an invalid domain address. |
 | methodNotSupported | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `batchOwners()`, `getTokenUri()`, `locations()`, and `getDomainName()` methods for the Zilliqa Name Service (ZNS). |

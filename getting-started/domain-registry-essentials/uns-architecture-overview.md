@@ -9,9 +9,9 @@ Every UNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-72
 
 This page covers the following topics:
 
-* ​[Smart contract architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
-* ​[Domain hierarchy and ownership](#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
-* ​[Delegating domain management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
+* ​[Smart Contract Architecture](#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how members can interact with those domains through a blockchain.
+* ​[Domain Hierarchy and Ownership](#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
+* ​[Delegating Domain Management](#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing members to delegate transaction costs.
 
 UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, members have complete control of their domains.
 
@@ -91,7 +91,7 @@ External smart contracts exist for UNS. Domains can be owned by smart contracts,
 
 UNS allows members to delegate transaction execution to accounts that aren't domain owners by supporting [EIP-2771 - Secure Protocol for Native Meta Transactions](https://eips.ethereum.org/EIPS/eip-2771).
 
-`Registry` smart contracts implement methods that use [Meta Transactions](../../manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` smart contracts implement methods that use [Meta Transactions](/manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for members to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
@@ -106,4 +106,4 @@ On behalf of our members, our transaction processor generally handles:
 
 UNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
 
-To learn more about the technical details of delegating transactions in UNS, read our [Meta Transactions](../../manage-domains/delegating-transactions.md) page.
+To learn more about the technical details of delegating transactions in UNS, read our [Delegating Meta Transactions](/manage-domains/delegating-transactions.md) page.
