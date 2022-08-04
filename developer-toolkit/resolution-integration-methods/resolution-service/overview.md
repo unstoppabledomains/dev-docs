@@ -28,6 +28,10 @@ The Resolution Service API supports decentralized domains across two main zones:
 
 Before being able to make any requests to the API, you must create an API key via the [Alchemy dashboard](https://dashboard.alchemyapi.io/).
 
+:::info
+The API key provided by Alchemy is free and effectively unlimited (no cost to open source projects). However, storing the keys in a secret manager or environment variables for open-source projects like other third-party APIs is advisable.
+:::
+
 ### Making Requests to the API
 
 All requests made to the Resolution Service API must contain the following headers:

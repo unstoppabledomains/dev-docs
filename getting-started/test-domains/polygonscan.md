@@ -45,7 +45,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 3: Locate the domain ending namehash for Polygon
 
-* The domain ending namehash can be found by using the website API:
+* The domain ending [namehash](../domain-registry-essentials/namehashing.md) can be found by using the website API:
   * .wallet domain ending -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
   * .888 domain ending -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
   * .dao domain ending -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
