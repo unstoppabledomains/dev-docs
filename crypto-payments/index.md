@@ -9,7 +9,7 @@ Unstoppable Domains allows you to make payments with over [281 cryptocurrencies]
 
 Still confused about how it works? If you own the `ryan.crypto` domain and BTC is sent to that domain, you will receive it at your BTC address. If ETH is also sent to that domain, you will receive it at your ETH address. Unstoppable Domains achieves this with a process called domain resolution.
 
-## Domain Resolution Overview
+## Overview
 
 Domain resolution is the process of converting a human-readable domain name like `ryan.crypto` to the cryptocurrency addresses attached to them. It involves retrieving a domain’s records through [smart contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md) deployed on the blockchain.
 
