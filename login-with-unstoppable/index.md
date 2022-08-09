@@ -40,17 +40,7 @@ With current wallet-based sign-in methods it is difficult or impossible for appl
 
 Login with Unstoppable currently supports the following top-level domains (TLDs):
 
-- .blockchain
-- .bitcoin
-- .nft
-- .wallet
-- .888
-- .dao
-- .x
-
-:::warning
-.zil domains are not currently supported by Login with Unstoppable
-:::
+<embed src="/snippets/_supported-tlds.md" />
 
 ## Considerations
 
