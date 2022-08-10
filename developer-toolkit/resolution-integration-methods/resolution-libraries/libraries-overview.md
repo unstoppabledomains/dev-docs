@@ -15,7 +15,10 @@ Resolution libraries are used for interacting with NFT domain names. They can be
 
 The Resolution Libraries supports decentralized domains across two main zones:
 
-<embed src="/snippets/_supported-tlds.md" />
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
 
 ## List of UD Resolution Libraries
 
