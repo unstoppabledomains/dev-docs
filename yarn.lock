@@ -1589,17 +1589,17 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@1.1.0-beta.107":
-  version "1.1.0-beta.107"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.107.tgz#4bfcda0193f27240d1f66d6fa6f4ee46d34c769d"
-  integrity sha512-tOE6z7Wa8Kzs5FlDDKvYmaxniz/TosH3tlJlbADlzx6AoXQx1RC9rc6zUl5tYFGVflDJ4fYWANPao9Pzcwylvw==
+"@redocly/developer-portal@1.1.0-beta.110":
+  version "1.1.0-beta.110"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.110.tgz#4eaec364370ae8c04de2a21749f970c581e29139"
+  integrity sha512-jJslJM0DaDxNpNZN+nayf+1uAZlf65XWSIc+E8KoSlJSr6uPgL6e/TiztceSpQB0xKcR6x2DT+sRVLeqDzbE7A==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
     "@redocly/gatsby-plugin-manifest" "3.3.2"
     "@redocly/gatsby-remark-images" "4.2.0"
     "@redocly/openapi-core" "1.0.0-beta.105"
-    "@redocly/reference-docs" "2.27.3"
+    "@redocly/reference-docs" "2.31.0"
     babel-plugin-react-html-attrs "^3.0.5"
     babel-plugin-styled-components "^1.12.0"
     buffer "^6.0.3"
@@ -1629,7 +1629,6 @@
     gatsby-plugin-segment-js "3.6.0"
     gatsby-plugin-styled-components "4.2.0"
     gatsby-react-router-scroll "^4.13.0"
-    gatsby-remark-image-attributes "1.0.0-4"
     gatsby-remark-prismjs "4.2.0"
     gatsby-source-filesystem "3.2.0"
     gatsby-transformer-remark "3.2.0"
@@ -1775,10 +1774,10 @@
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/reference-docs@2.27.3":
-  version "2.27.3"
-  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.27.3.tgz#eda72c5f9b62fea6fddfe7e6d7a7dfae569a77c1"
-  integrity sha512-T5PuhMcQus/eu0DGXkeqmhq0igtGJytfLaxK1W9SBqVY5LuMGZOyze8SI1IGTOlNcg3Bnmjn79f9d93pd/qNrg==
+"@redocly/reference-docs@2.31.0":
+  version "2.31.0"
+  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.31.0.tgz#f19820a4da46bff4cec1373f452dedee99a6727e"
+  integrity sha512-VULSVBJzWXms+x7Uq1SgVLxg/Z/xBE9pd5jLouJRWTO1/TN8M8vp/NEQb2ldBv9QCWYXpqHiqJPc4D8LsfRtlQ==
   dependencies:
     "@redocly/openapi-core" "1.0.0-beta.97"
     "@redocly/vscode-json-languageservice" "3.4.9"
@@ -7022,13 +7021,6 @@ gatsby-recipes@^0.25.0:
     ws "^7.3.0"
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
-
-gatsby-remark-image-attributes@1.0.0-4:
-  version "1.0.0-4"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-image-attributes/-/gatsby-remark-image-attributes-1.0.0-4.tgz#46c3c9a4db8472f561410ea75b15d0000f6dd84e"
-  integrity sha512-k5xJoqabmsRxiN0yDcl6YSnjykOP6QTS+ZnnEnReutsh6fRl/0uWscjpjKGNrZSJ7kckZ5pooNZoo3bIHqPmrw==
-  dependencies:
-    unist-util-visit "^2.0.3"
 
 gatsby-remark-prismjs@4.2.0:
   version "4.2.0"
