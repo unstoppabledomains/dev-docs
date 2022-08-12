@@ -22,17 +22,17 @@ You'll need the following to get started:
 
 These items are listed in order of complexity. For example, if you are starting with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the integration guides, API reference, or developer toolkit.
 
-- [Use Cases](../use-cases/index.mdx)
-- [Developer Integration Guides](../guides.mdx)
-  - [Login with Unstoppable](../login-with-unstoppable/index.md)
-  - [Crypto Payments](../crypto-payments/index.md)
-  - [Partners](../partner/index.md)
-  - [IPFS Websites](../d-websites/index.md)
-  - [Manage Domains](../manage-domains/index.md)
-  - [Polygon Layer 2](../polygon/index.md)
-  - [Reverse Resolution](../reverse-resolution/index.md)
-- [API Reference](../openapi/reference.page.yaml)
-- [Developer Toolkit](../developer-toolkit/index.md)
+- [Use Cases](/use-cases/index.mdx)
+- [Developer Integration Guides](/guides.mdx)
+  - [Login with Unstoppable](/login-with-unstoppable/index.md)
+  - [Crypto Payments](/crypto-payments/index.md)
+  - [Become a Partner](/partner/index.md)
+  - [IPFS Websites](/d-websites/index.md)
+  - [Reverse Resolution](/reverse-resolution/index.md)
+  - [Manage Domains](/manage-domains/index.md)
+  - [Migrate to Polygon](/polygon/index.md)
+- [API Reference](/openapi/reference.page.yaml)
+- [Developer Toolkit](/developer-toolkit/index.md)
 
 <embed src="/snippets/_discord.md" />
 

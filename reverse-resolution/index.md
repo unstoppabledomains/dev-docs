@@ -11,7 +11,7 @@ Unlike standard domain resolution, where a domain is provided to an application 
 
 <figure>
 
-![reverse resolution demo](/images/reverse-resolution-etherscan-demo.png "#width=80%;")
+![reverse resolution demo](/images/reverse-resolution-illustration.jpeg "#width=80%;")
 
 <figcaption>Reverse Resolution demo</figcaption>
 </figure>
