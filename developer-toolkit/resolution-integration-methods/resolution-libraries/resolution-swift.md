@@ -5,7 +5,35 @@ description: This page details basic configuration and usage of the resolution-s
 
 # Resolution-Swift
 
-This page details basic configuration and usage of the [resolution-swift library](https://github.com/unstoppabledomains/resolution-swift).
+This page details basic installation, configuration, and usage of the [resolution-swift library](https://github.com/unstoppabledomains/resolution-swift).
+
+## Installation
+
+Resolution Swift can be installed with either `Cocoa Pods` or `Swift Package Manager` dependency managers.
+
+```bash Cocoa Pods
+pod 'UnstoppableDomainsResolution', '~> 5.0.0'
+```
+
+```swift Swift Package Manager
+package.dependencies.append(
+    .package(url: "https://github.com/unstoppabledomains/resolution-swift", from: "5.0.0")
+)
+```
+
+## Updating Resolution Swift
+
+Resolution Swift can be updated with either `Cocoa Pods` or `Swift Package Manager` dependency managers.
+
+```bash Cocoa Pods
+pod update UnstoppableDomainsResolution
+```
+
+```swift Swift Package Manager
+package.dependencies.append(
+    .package(url: "https://github.com/unstoppabledomains/resolution-swift", from: "<latest version number>")
+)
+```
 
 <embed src="/snippets/_libraries-provider-config.md" />
 

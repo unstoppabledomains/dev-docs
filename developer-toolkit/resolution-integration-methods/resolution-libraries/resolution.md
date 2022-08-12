@@ -5,7 +5,31 @@ description: This page details basic configuration and usage of the resolution l
 
 # Resolution
 
-This page details basic configuration and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
+This page details basic installation, configuration, and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
+
+## Installation
+
+Resolution can be installed with either the `yarn` or `npm` command.
+
+```bash yarn
+yarn add @unstoppabledomains/resolution
+```
+
+```bash npm
+npm install @unstoppabledomains/resolution --save
+```
+
+## Updating Resolution
+
+Resolution can be updated with either the `yarn` or `npm` command.
+
+```bash yarn
+yarn upgrade @unstoppabledomains/resolution --latest
+```
+
+```bash npm
+npm update @unstoppabledomains/resolution --save
+```
 
 <embed src="/snippets/_libraries-provider-config.md" />
 

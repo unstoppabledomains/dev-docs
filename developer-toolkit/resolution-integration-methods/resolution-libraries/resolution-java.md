@@ -5,7 +5,11 @@ description: This page details basic configuration and usage of the resolution-j
 
 # Resolution-Java
 
-This page details basic configuration and usage of the [resolution-java library](https://github.com/unstoppabledomains/resolution-java).
+This page details basic installation, configuration, and usage of the [resolution-java library](https://github.com/unstoppabledomains/resolution-java).
+
+## Installation
+
+Resolution Java can be installed with using the [JitPack](https://jitpack.io/#unstoppabledomains/resolution-java) package repository.
 
 <embed src="/snippets/_libraries-provider-config.md" />
 

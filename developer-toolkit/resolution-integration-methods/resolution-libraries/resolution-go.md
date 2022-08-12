@@ -5,7 +5,23 @@ description: This page details basic configuration and usage of the resolution-g
 
 # Resolution-Go
 
-This page details basic configuration and usage of the [resolution-go library](https://github.com/unstoppabledomains/resolution-go).
+This page details basic installation, configuration, and usage of the [resolution-go library](https://github.com/unstoppabledomains/resolution-go).
+
+## Installation
+
+Resolution Go can be installed with the `go get` command.
+
+```bash
+go get github.com/unstoppabledomains/resolution-go
+```
+
+## Updating Resolution Go
+
+Resolution Go can be updated with the `go get` command.
+
+```bash
+go get -u github.com/unstoppabledomains/resolution-go
+```
 
 <embed src="/snippets/_libraries-provider-config.md" />
 
