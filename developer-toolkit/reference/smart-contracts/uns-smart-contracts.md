@@ -6,7 +6,7 @@ editPage:
 ---
 # UNS Smart Contracts
 
-Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [UNS repository](https://github.com/unstoppabledomains/uns) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how UNS works, see [UNS Architecture overview](/getting-started/domain-registry-essentials/uns-architecture-overview.md).
+Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity Smart Contracts that lives on the blockchain. The Unstoppable Domains team maintains the source code. This page lists the smart contracts from the [UNS repository](https://github.com/unstoppabledomains/uns), gives a brief description, and links to the source code and deployment addresses. For high-level details about how UNS works, see the [UNS Architecture Overview](/getting-started/domain-registry-essentials/uns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
