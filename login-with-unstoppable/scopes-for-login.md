@@ -64,7 +64,7 @@ This is a required scope for using Login with Unstoppable. The [OpenID scope](ht
 The Login with Unstoppable `wallet` scope is best used for retrieving metadata about the user’s wallet. It returns two custom claims:
 
 1. `wallet_address` - The address associated with the domain.
-2. `wallet_type_hint` - A string indicating the type of wallet associated with the domain with two possible values:
+2. `wallet_type_hint` - A string indicating the type of wallet associated with the domain with three possible values:
    * `web3` - A web3/browser-based wallet like [MetaMask](https://docs.metamask.io/guide/)
    * `walletconnect` - Using the [WalletConnect](https://walletconnect.org) protocol
    * `coinbase-wallet` - Using the [Coinbase Wallet](https://www.coinbase.com/wallet)
