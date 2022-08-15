@@ -36,15 +36,19 @@ See [Scopes for Login](./scopes-for-login.md) for more details on each of these.
 
 ## Step 3: Choose Your Integration Path
 
-There are several ways to integrate with Login with Unstoppable, which are detailed in the chart below.
+There are several ways to integrate with Login with Unstoppable, which are listed in the table below.
 
-| Integration Guide                                                          | Package            | Ethereum Provider | Callback | Front-end UI       |
-|----------------------------------------------------------------------------|:------------------:|:-----------------:|:--------:|:------------------:|
-| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       |`@uauth/js`          |     &#10060;     | &#10060; | JavaScript, Pop-up |
-| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |`@uauth/js`           |     &#10060;     | &#9989;  |  React, no Pop-up  |
+Because pop-ups are a more integration friendly approach, every integration path except for **Login without Pop-up** and **Node.js Server** uses them by default. You can use redirects instead with the `login()` method of `@uauth/js` or the `shouldLoginWithRedirect` configuration option for other `@uauth/*` libraries.
+
+For dApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboard`, and `moralis`, UAuth provides packages that help you wrap a new UAuth instance in an interface that each library supports. After configuring these packages, you can continue using the web3 library normally.
+
+| Integration Guide                                                                               | Package            | Ethereum Provider | Redirect | Front-end UI       |
+|-------------------------------------------------------------------------------------------------|:-------------------:|:----------------:|:--------:|:------------------:|
+| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       |`@uauth/js`          |     &#10060;     | &#10060; |      JavaScript    |
+| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |`@uauth/js`          |     &#10060;     | &#9989;  |        React       |
 | [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              |`@uauth/web3-react`  |     &#9989;      | &#10060; |     `web3-react`   |
-| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              |`@uauth/web3-modal`  |     &#9989;      | &#10060; |     `web3-modal`   |
-| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |`@uauth/web3onboard` |     &#9989;      | &#10060; |   `web3-onboard`   |
+| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              |`@uauth/web3modal`   |     &#9989;      | &#10060; |     `web3-modal`   |
+| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |`@uauth/web3-onboard` |     &#9989;     | &#10060; |   `web3-onboard`   |
 | [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    |`@uauth/moralis`     |     &#9989;      | &#10060; |     `moralis`      |
 | [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      |`@uauth/node`        |     &#10060;     | &#9989;  |        None        |
 
