@@ -12,9 +12,9 @@ description: This page provides a high-level overview of the Login with Unstoppa
 <figcaption>Login with Unstoppable Promo</figcaption>
 </figure>
 
-Login with Unstoppable allows owners of Unstoppable Domains on Ethereum or Polygon to log in and share profile information with applications. This gives users more control over their own information and allows application developers to learn about their users without needing to host or maintain their own CRM database. 
+Login with Unstoppable allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
 
-With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users.Login with Unstoppable provides users and applications with a simple solution to this problem. The UAuth protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and their users.
+The UAuth protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and their users.
 
 <figure>
 
