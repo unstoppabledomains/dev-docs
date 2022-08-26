@@ -1,6 +1,7 @@
 ---
 title: Web3 React Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
+showNextButton: false
 ---
 
 # Web3 React Guide: Login with Unstoppable
@@ -108,10 +109,6 @@ async function handleLogout() {
 }
 ```
 
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
-
 ## Reference
 
 ### `UAuthConnector`
@@ -177,3 +174,5 @@ useEffect(() => {
     })
 }, [])
 ```
+
+<embed src="/snippets/_login-paths-next.md" />

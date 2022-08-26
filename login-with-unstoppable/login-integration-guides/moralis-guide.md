@@ -1,6 +1,7 @@
 ---
 title: Moralis Guide for Login With Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Moralis library.
+showNextButton: false
 ---
 
 # Moralis Guide: Login With Unstoppable
@@ -90,6 +91,4 @@ async function handleLogout() {
 }
 ```
 
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
+<embed src="/snippets/_login-paths-next.md" />

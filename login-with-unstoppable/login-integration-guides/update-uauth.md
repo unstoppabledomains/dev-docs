@@ -1,6 +1,7 @@
 ---
 title: Updating Your UAuth Libraries | UD Developer Portal
 description: This page details how to update the UAuth libraries in an existing Login With Unstoppable integration.
+showNextButton: false
 ---
 
 # Updating Your UAuth Libraries

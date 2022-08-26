@@ -1,6 +1,7 @@
 ---
 title: Web3 Modal Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
+showNextButton: false
 ---
 
 # Web3 Modal Guide: Login with Unstoppable
@@ -106,10 +107,6 @@ function handleLogout() {
 // Save provider in state
 ```
 
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
-
 ## Reference
 
 ### `shouldLoginWithRedirect`
@@ -181,3 +178,4 @@ export function getUAuth(UAuth: typeof UAuthSPA, opts: IUAuthOptions): UAuth {
 }
 ```
 
+<embed src="/snippets/_login-paths-next.md" />
