@@ -44,14 +44,35 @@ pages:
       - label: Updating UAuth Libraries
         page: login-integration-guides/update-uauth.md
     separatorLine: true
-  - group: Login Protocols
+  - group: Reference
     expanded: false
     pages:
-      - label: Authorization Server
-        page: login-protocols/authorization-server.md
-      - label: Authentication Protocol
-        page: login-protocols/authentication-protocol.md
-    separatorLine: true 
+      - group: UAuth Libraries
+        expanded: false
+        selectFirstItemOnExpand: true
+        pages:
+          - label: Overview
+            page: libraries/uauth-overview.md
+          - label: UAuth JS
+            page: libraries/uauth-js.md
+          - label: UAuth Node
+            page: libraries/uauth-node.md
+          - label: Web3-React
+            page: libraries/uauth-web3-react.md
+          - label: Web3Modal
+            page: libraries/uauth-web3modal.md
+          - label: Web3 Onboard
+            page: libraries/uauth-web3-onboard.md
+          - label: Moralis
+            page: libraries/uauth-moralis.md
+      - group: Login Protocols
+        expanded: false
+        pages:
+          - label: Authorization Server
+            page: login-protocols/authorization-server.md
+          - label: Authentication Protocol
+            page: login-protocols/authentication-protocol.md
+        separatorLine: true 
   - group: Troubleshoot Your Login Integration
     expanded: false
     pages: 
