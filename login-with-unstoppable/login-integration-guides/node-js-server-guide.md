@@ -8,10 +8,6 @@ showNextButton: false
 
 This integration guide is for the `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
-:::info
-For a completed example of a server integration using `@uauth/node` library, you can [download this example project](https://github.com/unstoppabledomains/uauth/tree/main/examples/server).
-:::
-
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ## Step 1: Install the @uauth/node Library
