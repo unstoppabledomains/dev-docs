@@ -1,5 +1,5 @@
 ---
-title: [x] Tutorial | Unstoppable Domains Developer Portal
+title: Tutorial | Unstoppable Domains Developer Portal
 description: This tutorial will show you how to [do something] with [UD Product]
 ---
 

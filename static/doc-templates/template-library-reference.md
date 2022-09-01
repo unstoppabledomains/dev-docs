@@ -1,5 +1,5 @@
 ---
-title: [Library Name] Library | Unstoppable Domains Developer Portal
+title: Library Reference | Unstoppable Domains Developer Portal
 description: This page details the public interface of the [Library Name] library.
 ---
 
