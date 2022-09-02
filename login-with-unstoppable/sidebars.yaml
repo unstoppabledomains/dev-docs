@@ -13,9 +13,6 @@ pages:
   - label: Login Client Analytics
     page: client-analytics.md
     separatorLine: true
-  - label: Scopes for Login
-    page: scopes-for-login.md
-    separatorLine: true
   - group: Login Integration Guides
     expanded: false
     pages:
@@ -47,6 +44,8 @@ pages:
   - group: Reference
     expanded: false
     pages:
+      - label: Scopes for Login
+        page: scopes-for-login.md
       - group: UAuth Libraries
         expanded: false
         selectFirstItemOnExpand: true
@@ -72,7 +71,7 @@ pages:
             page: login-protocols/authorization-server.md
           - label: Authentication Protocol
             page: login-protocols/authentication-protocol.md
-        separatorLine: true 
+    separatorLine: true 
   - group: Troubleshoot Your Login Integration
     expanded: false
     pages: 
