@@ -91,7 +91,7 @@ let resolution = try Resolution(configs: Configurations(
 ```golang Go
 import (
   "github.com/ethereum/go-ethereum/ethclient"
-	"github.com/unstoppabledomains/resolution-go"
+	"github.com/unstoppabledomains/resolution-go/v2"
 )
 
 var ethereumUrl = ALCHEMY_ETHEREUM_API
