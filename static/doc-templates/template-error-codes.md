@@ -15,4 +15,4 @@ Below is a list of all the error codes you might encounter when using [UD Produc
 
 | Error Message | Description | Solution |
 | - | - | - |
-| [Error code to throw] | [Specific state(s) or configuration(s) that cause the error] | [Actions to take to resolve it] |
+| [Error code] | [Specific state(s) or configuration(s) that cause the error] | [Actions to take to resolve it] |
