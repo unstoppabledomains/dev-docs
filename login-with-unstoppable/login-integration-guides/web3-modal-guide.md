@@ -97,7 +97,10 @@ async function handleLogin() {
 }
 
 function handleLogout() {
-  web3modal.disconnect(); 
+  if (web3modal.cachedProvider === 'custom-uauth') {
+    await uauth.logout()
+  }
+  web3modal.clearCachedProvider()
 }
 
 // Save provider in state
