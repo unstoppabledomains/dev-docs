@@ -5,48 +5,94 @@ description: This page provides documents the public interface of the @uauth/web
 
 # UAuth Web3-React Library
 
-### `UAuthConnector`
+## `UAuthConnector`
 
-The `UAuthConnector` class is the default export.
+The `UAuthConnector` class is the default export of the `@uauth/web3-react` library.
+
+### constructor
 
 ```typescript
-import type {
-  UAuthConnectors,
-  UAuthConnectorOptions,
-  ConnectorLoginCallbackOptions,
-} from '@uauth/web3-react'
-import type UAuth from '@uauth/js'
-
-export default class UAuthConnector extends AbstractConnector {
-  // A reference to the UAuth library. Used to construct a UAuth instance if one
-  // isn't passed in the constructor.
-  static UAuth: typeof UAuth
-
-  // Assigns pkg to UAuthConnector.UAuth.
-  static registerUAuth(pkg: typeof UAuth): void
-
-  // Dynamically imports UAuth and assigns it to UAuthConnector.UAuth.
-  public static async importUAuth(): Promise<void>
-
+class UAuthConnector extends AbstractConnector {
   constructor(public options: UAuthConnectorOptions) {}
+}
 
-  // Calls this.uauth.loginCallback and activates the connector using the
-  // activate argument.
-  async callbackAndActivate<T>(
-    options: ConnectorLoginCallbackOptions,
-  ): Promise<void>
+const uauthConnector = new UAuthConnector(options);
+```
 
-  // Gets connector used internally to connect into `web3-react`.
-  public get subConnector(): AbstractConnector & {
-    isAuthorized?(): Promise<boolean>
-  }
+### registerUAuth()
 
-  // Gets the local UAuth instance.
-  public get uauth(): UAuth
+Assigns pkg to `UAuthConnector.UAuth`.
+
+```typescript
+static registerUAuth(pkg: typeof UAuth): void
+```
+
+### importUAuth()
+
+Dynamically imports UAuth and assigns it to `UAuthConnector.UAuth`.
+
+```typescript
+public static async importUAuth(): Promise<void>
+```
+
+### callbackAndActivate()
+
+Calls the [loginCallback()](/login-with-unstoppable/libraries/uauth-js.md#logincallback) method of [this.uauth](#uauth) and activates the connector using the activate argument.
+
+```typescript
+async callbackAndActivate<T>(
+  options: ConnectorLoginCallbackOptions,
+): Promise<void>
+```
+
+### uauth
+
+Returns the local UAuth instance.
+
+```typescript
+public get uauth(): UAuth
+```
+
+### subConnector
+
+Returns the connector used internally to connect to `web3-react`.
+
+```typescript
+public get subConnector(): AbstractConnector & {
+  isAuthorized?(): Promise<boolean>
 }
 ```
 
-### `shouldLoginWithRedirect`
+## UAuthConnectors
+
+```typescript
+interface UAuthConnectors {
+  injected: AbstractConnector
+  walletconnect: AbstractConnector
+}
+```
+
+## UAuthConnectorOptions
+
+The options object passed to the UAuthConnector [constructor](#constructor).
+
+```typescript
+interface UAuthConnectorOptions
+  extends AbstractConnectorArguments,
+    Partial<UAuthConstructorOptions> {
+  uauth?: UAuth
+  connectors: UAuthConnectors
+  shouldLoginWithRedirect?: boolean
+}
+```
+
+|           Field           |                 Type                | Description |
+| ------------------------- | :---------------------------------: | ----------- |
+|         `uauth`           | [UAuth Client](/login-with-unstoppable/libraries/uauth-js.md#client) | |
+|         `connectors`      | [UAuthConnectors](#uauthconnectors) | |
+| `shouldLoginWithRedirect` |             `boolean`               | If set to `true`, the `uauthConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup). |
+
+### shouldLoginWithRedirect
 
 If `shouldLoginWithRedirect` is set to `true`, then you must set up a callback page for the authorization server to redirect back to.
 
@@ -67,4 +113,19 @@ useEffect(() => {
       // Redirect to failure page
     })
 }, [])
+```
+
+## ConnectorLoginCallbackOptions
+
+```typescript
+interface ConnectorLoginCallbackOptions {
+  url?: string
+  activate: (
+    connector: AbstractConnector,
+    onError?: (error: Error) => void,
+    throwErrors?: boolean,
+  ) => Promise<void>
+  onError?: (error: Error) => void
+  throwErrors?: boolean
+}
 ```

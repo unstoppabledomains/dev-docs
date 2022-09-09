@@ -16,20 +16,15 @@ const uauthModule = new uauthBNCModule(options: ConstructorOptions);
 ## ConstructorOptions
 
 ```typescript
-export interface ConstructorOptions {
+interface ConstructorOptions {
   uauth: UAuth
   shouldLoginWithRedirect?: boolean
   walletconnect: IWalletConnectProviderOptions
 }
 ```
 
-### uauth
-
-An instance of the `@uauth/js` [Client](/login-with-unstoppable/libraries/uauth-js.md#client).
-
-### shouldLoginWithRedirect
-
-If `true`, `uauthBNCModule` will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
-
-### walletconnect
-
+|       Field               | Type       | Description |
+| ------------------------- | ---------- | ----------- |
+| `uauth`                   |  `UAuth`   | An instance of the `@uauth/js` [Client](/login-with-unstoppable/libraries/uauth-js.md#client). |
+| `shouldLoginWithRedirect` |  `boolean` | If set to `true`, the `uauthBNCModule` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup). |
+| `walletconnect`           |  `IWalletConnectProviderOptions` |          |

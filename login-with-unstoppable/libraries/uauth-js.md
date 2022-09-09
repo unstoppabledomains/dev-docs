@@ -17,9 +17,7 @@ The `Client` class is the default export for the `@uauth/js` package.
 const uauth = new Client(options: ClientOptions);
 ```
 
-### Methods
-
-#### `login()`
+### login()
 
 Initiates UAuth authentication with an auth server redirect flow.
 
@@ -29,7 +27,7 @@ async login(
     ): Promise<void>
 ```
 
-#### `loginWithPopUp()`
+### loginWithPopUp()
 
 Initiates UAuth authentication with a React popup flow.
 
@@ -40,7 +38,15 @@ async loginWithPopup(
     ): Promise<Authorization>
 ```
 
-#### `user()`
+### loginCallback()
+
+```typescript
+async loginCallback<T>(
+        options?: Partial<LoginCallbackOptions>,
+    ): Promise<LoginCallbackResponse<T>>
+```
+
+### user()
 
 Returns the [`UserInfo`](#userinfo) associated with the current UAuth instance.
 
@@ -48,7 +54,7 @@ Returns the [`UserInfo`](#userinfo) associated with the current UAuth instance.
 async user(options: UserOptions = {}): Promise<UserInfo>
 ```
 
-#### `logout()`
+### logout()
 
 Executes the `beforeRedirect` callback if defined in [`LogoutOptions`](#logoutoptions), deletes the session authorization from the local clientstore, and redirects to the `postLogoutRedirectUri`.
 
@@ -77,7 +83,7 @@ export interface AuthorizationOptions {
 
 ### `ClientOptions`
 
-The ClientOptions interface is passed to the constructor of the [Client](#client) class when creating a new instance.
+The options object passed to the Client [constructor](#constructor).
 
 ```typescript
 export interface ClientOptions {
@@ -112,7 +118,7 @@ export interface ClientOptions {
 ### `LoginOptions`
 
 ```typescript
-export interface LoginOptions {
+interface LoginOptions {
 // BaseLoginOptions
   clientID: string
   clientSecret?: string
@@ -137,7 +143,7 @@ export interface LoginOptions {
 ### `LogoutOptions`
 
 ```typescript
-export interface LogoutOptions {
+interface LogoutOptions {
 // BaseLogoutOptions
   rpInitiatedLogout: boolean
   postLogoutRedirectUri?: string
@@ -159,7 +165,7 @@ Extends `BaseLogoutOptions` and `AuthorizationOptions`.
 ### `UserInfo`
 
 ```typescript
-export interface UserInfo {
+interface UserInfo {
 // Partial<WalletClaims>
     wallet_address: string
     wallet_type_hint: WalletType

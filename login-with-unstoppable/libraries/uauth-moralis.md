@@ -49,7 +49,7 @@ public get uauth(): UAuth
 ## UAuthConnectorOptions
 
 ```typescript
-export interface UAuthConnectorOptions
+interface UAuthConnectorOptions
   extends Partial<UAuthConstructorOptions> {
   uauth?: UAuth
   connectors: UAuthMoralisConnectors
@@ -60,7 +60,7 @@ export interface UAuthConnectorOptions
 ## UAuthMoralisConnectors
 
 ```typescript
-export interface UAuthMoralisConnectors {
+interface UAuthMoralisConnectors {
   injected: any | undefined
   walletconnect: any | undefined
 }
