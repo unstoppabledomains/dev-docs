@@ -25,7 +25,7 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 
 ## Benefits for Applications
 
-1. Avoid hosting a database of user contact information by requestin access only when it's needed.
+1. Avoid hosting a database of user contact information by requesting access only when it's needed.
 2. Request additional data from users such as social profiles to further enhance the user experience.
 3. Communicate with users directly via opt-in access and the `@ud.me` proxy email service.
 
@@ -33,7 +33,7 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 
 1. Maintain absolute control over login credentials.
 2. Sharing personal information is 100% opt-in.
-3. Recieve email communications without sharing private email addresses.
+3. Receive email communications without sharing private email addresses.
 4. Only one login for every web3 app. No need to remember multiple unique usernames and passwords.
 
 ## Supported TLDs
