@@ -5,7 +5,7 @@ description: This guide covers how to retrieve the reverse record of UD domains 
 
 # Resolution Service API Integration Guide
 
-Unstoppable Domains provides an HTTP-based API for getting domain data and metadata from every supported blockchain without accessing any blockchain APIs. Please see the [Resolution Service API](../../developer-toolkit/resolution-service/overview.md) guide for a detailed description and configuration.
+Unstoppable Domains provides an HTTP-based API for getting domain data and metadata from every supported blockchain without accessing any blockchain APIs. Please see the [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md) guide for a detailed description and configuration.
 
 ## Get Reverse Record for an Address
 
