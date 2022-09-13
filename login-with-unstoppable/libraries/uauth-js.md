@@ -14,7 +14,11 @@ The `Client` class is the default export for the `@uauth/js` package.
 ### Constructor
 
 ```javascript
-const uauth = new Client(options: ClientOptions);
+constructor(options: ClientOptions){
+  ...
+}
+
+const uauth = new Client(options);
 ```
 
 ### login()

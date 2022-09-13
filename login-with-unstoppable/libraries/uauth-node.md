@@ -5,17 +5,61 @@ description: This page provides documents the public interface of the core @uaut
 
 # UAuth Node.js Library
 
-### `createLogin<Context>()`
+The `@uauth/node` library is the core UAuth library for server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. 
 
-This is the login factory method for the `Client` class. Here is an example using `express-sessions`.
+## Client
 
-```javascript
-interface ExpressSessionContext {
-  req: Request
-  res: Response
-  next: NextFunction
-}
+The `Client` class is the default export for the `@uauth/node` package.
 
+### constructor
+
+```typescript
+constructor(options: ClientConstructorOptions)
+```
+
+### createExpressSessionLogin()
+
+```typescript
+createExpressSessionLogin(
+    sessionKey = 'uauth',
+    localsKey = 'uauth',
+): ExpressSessionLogin 
+```
+
+### validAuthorization()
+
+```typescript
+validateAuthorization(
+    authorization: Authorization | undefined,
+    scopes: string[] = [],
+)
+```
+
+### createLogin()
+
+This is the login factory method for the `Client` class.
+
+```typescript
+createLogin<T>(actions: {
+    storeInteraction: (ctx: T, interaction: Interaction) => void | Promise<void>,
+    retrieveInteraction: (ctx: T) => Interaction | undefined | Promise<Interaction | undefined>,
+    deleteInteraction: (ctx: T) => void | Promise<void>,
+    storeAuthorization: (ctx: T, authorization: Authorization) => void | Promise<void>,
+    retrieveAuthorization: (ctx: T) => Authorization | undefined | Promise<Authorization | undefined>,
+    deleteAuthorization: (ctx: T) => void | Promise<void>,
+    retrieveAuthorizationEndpointResponse: (ctx: T) => AuthorizationEndpointResponse,
+    passOnAuthorization: (ctx: T, authorization: Authorization) => void,
+    redirect: (ctx: T, url: string) => void | Promise<void>,
+  }): {
+    login(ctx: T, options: LoginOptions): Promise<void>
+    callback(ctx: T): Promise<Authorization>
+    middleware(ctx: T, scopes?: string[]): void
+  }
+```
+
+Here is an example using `express-sessions`.
+
+```typescript
 const {login, callback, middleware} = client.createLogin<ExpressSessionContext>(
   {
     // Interaction CR*D operations
@@ -51,4 +95,91 @@ const {login, callback, middleware} = client.createLogin<ExpressSessionContext>(
     },
   },
 )
+```
+
+## ClientOptions
+
+```typescript
+interface ClientOptions {
+  clientID: string
+  clientSecret: string
+  scope: string
+  redirectUri: string
+  maxAge: number
+  clockSkew: number
+  audience?: string
+  resolution: DomainResolver
+  fallbackIssuer: string
+  createIpfsUrl: (cid: string, path: string) => string
+}
+```
+
+## ClientConstructorOptions
+
+```typescript
+type ClientConstructorOptions = Optional<
+  ClientOptions,
+  'fallbackIssuer' | 'scope' | 'maxAge' | 'clockSkew' | 'createIpfsUrl'
+>
+```
+
+## BuildAuthorizationUrlAndInteractionOptions
+```typescript
+interface BuildAuthorizationUrlAndInteractionOptions {
+  username?: string
+}
+```
+
+## Interaction
+
+```typescript
+interface Interaction {
+  state: string
+  nonce: string
+  verifier: string
+  tokenEndpoint: string
+  jwksUri?: string
+  jwks?: string
+}
+```
+
+## LoginOptions
+
+Extends [BuildAuthorizationUrlAndInteractionOptions](#buildauthorizationurlandinteractionoptions).
+
+```typescript
+interface LoginOptions extends BuildAuthorizationUrlAndInteractionOptions {
+  beforeRedirect?(options: LoginOptions, url: string): Promise<void> | void
+}
+```
+
+## ExpressSessionContext
+
+```typescript
+interface ExpressSessionContext {
+  req: Request
+  res: Response
+  next: NextFunction
+}
+```
+
+## ExpressSessionLogin
+
+```typescript
+interface ExpressSessionLogin {
+  login: (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+    options: LoginOptions,
+  ) => Promise<void>
+  callback: (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => Promise<Authorization>
+  middleware: (
+    scopes?: string[],
+  ) => (req: Request, res: Response, next: NextFunction) => void
+}
 ```
