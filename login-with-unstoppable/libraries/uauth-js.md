@@ -70,7 +70,7 @@ async logout({
 
 ## Interfaces
 
-### `AuthorizationOptions`
+### AuthorizationOptions
 
 ```typescript
 export interface AuthorizationOptions {
@@ -81,7 +81,7 @@ export interface AuthorizationOptions {
 }
 ```
 
-### `ClientOptions`
+### ClientOptions
 
 The options object passed to the Client [constructor](#constructor).
 
@@ -115,7 +115,7 @@ export interface ClientOptions {
 }
 ```
 
-### `LoginOptions`
+### LoginOptions
 
 ```typescript
 interface LoginOptions {
@@ -140,7 +140,7 @@ interface LoginOptions {
 }
 ```
 
-### `LogoutOptions`
+### LogoutOptions
 
 ```typescript
 interface LogoutOptions {
@@ -162,7 +162,7 @@ interface LogoutOptions {
 
 Extends `BaseLogoutOptions` and `AuthorizationOptions`.
 
-### `UserInfo`
+### UserInfo
 
 ```typescript
 interface UserInfo {

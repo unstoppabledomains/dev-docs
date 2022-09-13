@@ -5,7 +5,58 @@ description: This page provides documents the public interface of the @uauth/web
 
 # UAuth Web3Modal Library
 
-### `shouldLoginWithRedirect`
+## connector()
+
+The `connector` function is used to create a provider for the `web3modal` library.
+
+```typescript
+async function connector(
+  UAuth: typeof UAuthSPA,
+  opts: IUAuthOptions,
+): Promise<any>
+```
+
+## registerWeb3Modal()
+
+The `connector()` function needs access to a `web3modal` instance in order to connect a provider properly. This function registers a `web3modal` instance for the `connector` to use. This function **MUST** be called before [connector()](#connector).
+
+```typescript
+function registerWeb3Modal(web3modal: Web3Modal) => void
+```
+
+## getUAuth()
+
+This function creates and returns a new UAuth instance using the package and options.
+
+```typescript
+function getUAuth(
+  UAuth: typeof UAuthSPA,
+  opts: IUAuthOptions): UAuth
+```
+
+## display
+
+Since UAuth is not natively integrated into the `web3modal` library, applications must supply some assets for the Web3 Modal UI. These are those assets.
+
+```typescript
+import type {IProviderDisplay} from 'web3modal'
+
+export const display: IProviderDisplay = { ... }
+```
+
+## IUAuthOptions
+
+The options object passed to the [connector](#connector) function to configure a UAuth provider for Web3Modal. Extends `IAbstractConnectorOptions` and [UAuthConstructorOptions](/login-with-unstoppable/libraries/uauth-js.md#clientoptions);
+
+```typescript
+interface IUAuthOptions
+  extends Partial<IAbstractConnectorOptions>,
+    UAuthConstructorOptions {
+  shouldLoginWithRedirect?: boolean
+}
+```
+
+### shouldLoginWithRedirect
 
 If `shouldLoginWithRedirect` in your `IUAuthOptions` is set to `true`, then you must set up a callback page for the authorization server to redirect back to.
 
@@ -26,50 +77,4 @@ UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions)
   .catch(error => {
     // Redirect to failure page
   })
-```
-
-### `connector`
-
-The `connector` is used to create a provider for the `web3modal` library.
-
-```typescript
-import type UAuthSPA from '@uauth/js'
-import type {IUAuthOptions} from '@uauth/web3modal'
-
-export async function connector(
-  UAuth: typeof UAuthSPA,
-  opts: IUAuthOptions,
-): Promise<any>
-```
-
-### `display`
-
-Since UAuth is not yet natively integrated into the `web3modal` library, applications must supply some digital assets for the Web3 Modal UI. These are those assets.
-
-```typescript
-import type {IProviderDisplay} from 'web3modal'
-
-export const display: IProviderDisplay = { ... }
-```
-
-### `registerWeb3Modal()`
-
-The `connector` needs access to the `web3modal` instance in order to connect a provider properly. This function registers the `web3modal` instance for the `connector` to use. This function MUST be called for the connector to work.
-
-```typescript
-import type Web3Modal from 'web3modal'
-
-export function registerWeb3Modal(web3modal: Web3Modal) => void
-```
-
-### `getUAuth()`
-
-This function creates a UAuth instance using the package and options.
-
-```typescript
-import type UAuthSPA from '@uauth/js'
-
-export function getUAuth(UAuth: typeof UAuthSPA, opts: IUAuthOptions): UAuth {
-  return new UAuth(opts)
-}
 ```
