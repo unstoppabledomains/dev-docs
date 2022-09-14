@@ -5,7 +5,9 @@ description: This page provides documents the public interface of the @uauth/web
 
 # UAuth Web3-React Library
 
-## `UAuthConnector`
+The `@uauth/web3-react` library is a middleware library used for integrating UAuth with web3-react applications.
+
+## UAuthConnector
 
 The `UAuthConnector` class is the default export of the `@uauth/web3-react` library.
 
@@ -72,9 +74,17 @@ interface UAuthConnectors {
 }
 ```
 
+`injected`
+
+Type: **Abstractconnector**
+
+`walletconnect`
+
+Type: **AbstractConnector**
+
 ## UAuthConnectorOptions
 
-The options object passed to the UAuthConnector [constructor](#constructor).
+The options object passed to the UAuthConnector [constructor](#constructor).Type
 
 ```typescript
 interface UAuthConnectorOptions
@@ -86,11 +96,19 @@ interface UAuthConnectorOptions
 }
 ```
 
-|           Field           |                 Type                | Description |
-| ------------------------- | :---------------------------------: | ----------- |
-|         `uauth`           | [UAuth Client](/login-with-unstoppable/libraries/uauth-js.md#client) | |
-|         `connectors`      | [UAuthConnectors](#uauthconnectors) | |
-| `shouldLoginWithRedirect` |             `boolean`               | If set to `true`, the `uauthConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup). |
+`uauth`
+
+Type: [**UAuth Client**](/login-with-unstoppable/libraries/uauth-js.md#client)
+
+`connectors`
+
+Type: [**UAuthConnectors**](#uauthconnectors)
+
+`shouldLoginWithRedirect`
+
+Type: **boolean**
+
+If set to `true`, the `uauthConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
 ### shouldLoginWithRedirect
 

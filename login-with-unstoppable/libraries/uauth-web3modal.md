@@ -5,6 +5,8 @@ description: This page provides documents the public interface of the @uauth/web
 
 # UAuth Web3Modal Library
 
+The `@uauth/web3modal` library is a middleware library used for integrating UAuth with Web3Modal applications.
+
 ## connector()
 
 The `connector` function is used to create a provider for the `web3modal` library.
@@ -55,6 +57,12 @@ interface IUAuthOptions
   shouldLoginWithRedirect?: boolean
 }
 ```
+
+`shouldLoginWithRedirect`
+
+Type: **boolean**
+
+If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
 ### shouldLoginWithRedirect
 

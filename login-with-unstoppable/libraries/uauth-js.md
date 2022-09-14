@@ -11,19 +11,17 @@ The `@uauth/js` library is the core UAuth library for single-page applications. 
 
 The `Client` class is the default export for the `@uauth/js` package.
 
-### Constructor
+### constructor
 
 ```javascript
-constructor(options: ClientOptions){
-  ...
-}
+constructor(options: ClientOptions) {}
 
 const uauth = new Client(options);
 ```
 
 ### login()
 
-Initiates UAuth authentication with an auth server redirect flow.
+Initiates UAuth authentication with an auth server redirect and callback flow.
 
 ```typescript
 async login(
@@ -74,17 +72,6 @@ async logout({
 
 ## Interfaces
 
-### AuthorizationOptions
-
-```typescript
-export interface AuthorizationOptions {
-  clientID?: string
-  username?: string
-  scope?: string
-  resource?: string
-}
-```
-
 ### ClientOptions
 
 The options object passed to the Client [constructor](#constructor).
@@ -123,7 +110,6 @@ export interface ClientOptions {
 
 ```typescript
 interface LoginOptions {
-// BaseLoginOptions
   clientID: string
   clientSecret?: string
   clientAuthMethod: ClientAuthMethod
@@ -137,75 +123,83 @@ interface LoginOptions {
   packageName?: string
   packageVersion?: string
 
-// FullLoginOptions extends BaseLoginOptions {
   username?: string
   state?: any
   beforeRedirect?(url: string): Promise<void> | void
+}
+```
+
+### AuthorizationOptions
+
+```typescript
+export interface AuthorizationOptions {
+  clientID?: string
+  username?: string
+  scope?: string
+  resource?: string
+}
+```
+
+### BaseLogoutOptions
+
+```typescript
+interface BaseLogoutOptions {
+  rpInitiatedLogout: boolean
+  postLogoutRedirectUri?: string
 }
 ```
 
 ### LogoutOptions
 
+Extends [BaseLogoutOptions](#baselogoutoptions) and [AuthorizationOptions](#authorizationoptions).
+
 ```typescript
 interface LogoutOptions {
-// BaseLogoutOptions
-  rpInitiatedLogout: boolean
-  postLogoutRedirectUri?: string
-
-// AuthorizationOptions 
-  clientID?: string
-  username?: string
-  scope?: string
-  resource?: string
-
-// LogoutOptions
   state?: any
   beforeRedirect?(url: string): Promise<void> | void
 }
 ```
-
-Extends `BaseLogoutOptions` and `AuthorizationOptions`.
 
 ### UserInfo
 
 ```typescript
 interface UserInfo {
 // Partial<WalletClaims>
-    wallet_address: string
-    wallet_type_hint: WalletType
-    eip4361_message: string
-    eip4361_signature: string
+  wallet_address: string
+  wallet_type_hint: WalletType
+  eip4361_message: string
+  eip4361_signature: string
             
 // Partial<EmailClaims>
-    email: string
-    email_verified: boolean
+  email: string
+  email_verified: boolean
             
 // Partial<AddressClaims>
-    address: AddressClaim
+  address: AddressClaim
 
 // Partial<PhoneClaims>
-    phone_number: string
-    phone_number_verified: boolean
+  phone_number: string
+  phone_number_verified: boolean
 
 // Partial<ProfileClaims>
-    name: string
-    given_name: string
-    family_name: string
-    middle_name: string
-    nickname: string
-    preferred_username: string
-    profile: string
-    picture: string
-    website: string
-    gender: string
-    birthdate: string
-    zoneinfo: string
-    locale: string
-    updated_at: string
+  name: string
+  given_name: string
+  family_name: string
+  middle_name: string
+  nickname: string
+  preferred_username: string
+  profile: string
+  picture: string
+  website: string
+  gender: string
+  birthdate: string
+  zoneinfo: string
+  locale: string
+  updated_at: string
             
 // Partial<HumanityCheckClaims> { sub: string }
-    humanity_check_id: string
+  humanity_check_id: string
 }
 ```
 
-Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization sesson, based on the values defined in the `ClientOptions` scope field. See [Scope for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
+Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization sesson, based on the values defined in the `ClientOptions` scope field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.

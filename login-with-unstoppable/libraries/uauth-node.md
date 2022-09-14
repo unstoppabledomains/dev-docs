@@ -26,7 +26,7 @@ createExpressSessionLogin(
 ): ExpressSessionLogin 
 ```
 
-### validAuthorization()
+### validateAuthorization()
 
 ```typescript
 validateAuthorization(
@@ -115,6 +115,8 @@ interface ClientOptions {
 ```
 
 ## ClientConstructorOptions
+
+The configuration options object passed to the `@uauth/node` Client [constructor](#constructor).
 
 ```typescript
 type ClientConstructorOptions = Optional<
