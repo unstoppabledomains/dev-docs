@@ -58,10 +58,8 @@ interface IUAuthOptions
 }
 ```
 
-`shouldLoginWithRedirect`
-
-Type: **boolean**
-
+`shouldLoginWithRedirect`\
+Type: **boolean**\
 If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
 ### shouldLoginWithRedirect

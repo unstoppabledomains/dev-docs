@@ -147,7 +147,7 @@ interface Interaction {
 
 ## LoginOptions
 
-Extends [BuildAuthorizationUrlAndInteractionOptions](#buildauthorizationurlandinteractionoptions).
+The options object passed to the login function returned by [createLogin](#createlogin). Extends [BuildAuthorizationUrlAndInteractionOptions](#buildauthorizationurlandinteractionoptions).
 
 ```typescript
 interface LoginOptions extends BuildAuthorizationUrlAndInteractionOptions {

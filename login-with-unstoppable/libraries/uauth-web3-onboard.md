@@ -12,10 +12,14 @@ The `@uauth/web3-onboard` library is a middleware library used for integrating U
 The default export for the the `@uauth/web3-onboard` library. Implements Web3 Onboard `WalletInit`.
 
 ```typescript
-const uauthModule = new uauthBNCModule(options: ConstructorOptions);
+function uauthBNCModule(
+  options: ConstructorOptions,
+): WalletInit
 ```
 
 ## ConstructorOptions
+
+The options object passed to [uauthBNCModule](#uauthbncmodule).
 
 ```typescript
 interface ConstructorOptions {
@@ -25,20 +29,14 @@ interface ConstructorOptions {
 }
 ```
 
-`uauth`
-
-Type: [UAuth Client](/login-with-unstoppable/libraries/uauth-js.md#client)
-
+`uauth`\
+Type: [**UAuth Client**](/login-with-unstoppable/libraries/uauth-js.md#client)\
 An instance of the UAuth Client class.
 
-`shouldLoginWithRedirect`
-
-Type: **boolean**
-
+`shouldLoginWithRedirect`\
+Type: **boolean**\
 If set to `true`, the `uauthBNCModule` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
-`walletconnect`
-
-Type: **IWalletConnectProviderOptions**
-
+`walletconnect`\
+Type: **IWalletConnectProviderOptions**\
 Configuration options used to to support authentication with WalletConnect.

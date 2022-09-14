@@ -108,6 +108,8 @@ export interface ClientOptions {
 
 ### LoginOptions
 
+The options object passed to [login()](#login) and [loginWithPopup()].
+
 ```typescript
 interface LoginOptions {
   clientID: string
@@ -151,7 +153,7 @@ interface BaseLogoutOptions {
 
 ### LogoutOptions
 
-Extends [BaseLogoutOptions](#baselogoutoptions) and [AuthorizationOptions](#authorizationoptions).
+The options object passed to [logout()](#logout). Extends [BaseLogoutOptions](#baselogoutoptions) and [AuthorizationOptions](#authorizationoptions).
 
 ```typescript
 interface LogoutOptions {
@@ -161,6 +163,8 @@ interface LogoutOptions {
 ```
 
 ### UserInfo
+
+Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
 
 ```typescript
 interface UserInfo {
@@ -201,5 +205,3 @@ interface UserInfo {
   humanity_check_id: string
 }
 ```
-
-Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization sesson, based on the values defined in the `ClientOptions` scope field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.

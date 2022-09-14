@@ -74,12 +74,10 @@ interface UAuthConnectors {
 }
 ```
 
-`injected`
-
+`injected`\
 Type: **Abstractconnector**
 
-`walletconnect`
-
+`walletconnect`\
 Type: **AbstractConnector**
 
 ## UAuthConnectorOptions
@@ -96,18 +94,14 @@ interface UAuthConnectorOptions
 }
 ```
 
-`uauth`
-
+`uauth`\
 Type: [**UAuth Client**](/login-with-unstoppable/libraries/uauth-js.md#client)
 
-`connectors`
-
+`connectors`\
 Type: [**UAuthConnectors**](#uauthconnectors)
 
-`shouldLoginWithRedirect`
-
-Type: **boolean**
-
+`shouldLoginWithRedirect`\
+Type: **boolean**\
 If set to `true`, the `uauthConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
 ### shouldLoginWithRedirect
