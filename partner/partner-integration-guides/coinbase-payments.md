@@ -5,6 +5,10 @@ description: This guide shows how to configure your Partner account to accept Co
 
 # Coinbase Payments Guide
 
+:::warning
+The Coinbase payments feature is still under development and may not work as expected. Partners will be notified when support for this feature has resumed.
+:::
+
 Unstoppable Domains supports [Coinbase](https://developers.coinbase.com) payments. Coinbase allows you to accept other forms of payments from your customers, such as bitcoin, litecoin, and other crypto currencies.
 
 The following diagram shows the general process that occurs between Coinbase and Unstoppable Domains, after a customer buys a domain.

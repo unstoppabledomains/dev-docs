@@ -51,69 +51,22 @@ After clicking the Stripe Live or Stripe Test `CONNECT` button, Stripe will walk
 
 Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe dashboard.
 
-## Step 3: Generate a Stripe Payment Token
-
-Stripe generates a payment token for every transaction, which Unstoppable Domains later uses to process the payment. This keeps Unstoppable Domains from needing to store your customer’s sensitive data.
-
-See the [Stripe Tokens](https://stripe.com/docs/api/tokens) and [Payment Integrations](https://stripe.com/docs/payments) guides to learn how to generate a payment token using your Stripe API key. Here’s an example of the Stripe token response:
-
-```json
-{
-    "id": "tok_1L6Ys1G8PQyZCUJhiFcaDUVy",
-    "object": "token",
-    "card": {
-        "id": "card_1L6Ys1G8PQyZCUJh3Jv2N8xc",
-        "object": "card",
-        "address_city": null,
-        "address_country": null,
-        "address_line1": null,
-        "address_line1_check": null,
-        "address_line2": null,
-        "address_state": null,
-        "address_zip": null,
-        "address_zip_check": null,
-        "brand": "Visa",
-        "country": "US",
-        "cvc_check": "unchecked",
-        "dynamic_last4": null,
-        "exp_month": 4,
-        "exp_year": 2023,
-        "fingerprint": "0w14LEeNDGGIdQgB",
-        "funding": "credit",
-        "last4": "4242",
-        "metadata": {},
-        "name": null,
-        "tokenization_method": null
-    },
-    "client_ip": null,
-    "created": 1654256449,
-    "livemode": false,
-    "type": "card",
-    "used": false
-}
-```
-
-The payment token is stored in the `id` field. In the example above, the value is `tok_1L6Ys1G8PQyZCUJhiFcaDUVy`.
-
-## Step 4: Retrieve Your Reseller ID and Secret API Token
+## Step 3: Retrieve Your Reseller ID and Secret API Token
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 5: Prepare Your Authorization Headers
+## Step 4: Prepare Your Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 
-## Step 6: Prepare Your Request Body
+## Step 5: Prepare Your Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
 ```javascript
 {
   "payment": {
-    "method": "stripe",
-    "properties": {
-      "tokenId": string // Stripe payment token
-    }
+    "method": "stripe"
   },
   "domains": [
     {
@@ -128,8 +81,6 @@ The request body contains information about your order and must be in JSON forma
 
 * `payment`: A key-value dictionary with payment information about the order:
     * `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
-    * `properties`: A key-value dictionary with more information about the order payment method:
-      * `tokenId`: The Stripe payment token for the order
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
@@ -140,9 +91,30 @@ The request body contains information about your order and must be in JSON forma
 You need to provide either the `ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
 :::
 
-## Step 7: Use the Orders Endpoint
+## Step 6: Use the Orders Endpoint
 
 <embed src="/snippets/_orders-endpoint-usage.md" />
+
+## Step 7: Retrieve the Stripe Payment Intent ID
+
+Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://stripe.com/docs/payments/payment-intents) to process Stripe payments and generates a `Payment Intent ID` for the partner to complete the payment. The `Buy a Domain or Claim Free Domain` endpoint response follows this format:
+
+```json
+{
+    "orderNumber": "ORDER_NUMBER",
+    "total": 500,
+    "payment": {
+        "method": "stripe",
+        "details": {
+          "clientSecret": "STRIPE_CLIENT_SECRET",
+          "paymentIntentId": "STRIPE_PAYMENT_INTENT_ID"
+        }
+    },
+    "items": []
+}
+```
+
+The value of the `clientSecret` and `paymentIntentId` fields can be used with the Stripe [Payment Intents](https://stripe.com/docs/api/payment_intents) API to complete the payment.
 
 ## Stripe Payment Example
 
@@ -150,7 +122,6 @@ Here is an example request to purchase a domain with the following details using
 
 | Field Name | Value |
 | - | - |
-| Stripe Token | tok_1L6Ys1G8PQyZCUJhiFcaDUVy |
 | Domain Name | partner-test-67687986466871.wallet |
 | Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
 | Customer Email | sandbox-test@unstoppabledomains.com |
@@ -159,15 +130,12 @@ Here is an example request to purchase a domain with the following details using
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/orders' \
 --header 'Authorization: Bearer {Secret API Token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "payment": {
-        "method": "stripe",
-        "properties": {
-            "tokenId": "tok_1L6Ys1G8PQyZCUJhiFcaDUVy"
-        }
+        "method": "stripe"
     },
     "domains": [
         {
@@ -190,7 +158,11 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{Res
     "orderNumber": "78085",
     "total": 500,
     "payment": {
-        "method": "stripe"
+        "method": "stripe",
+        "details": {
+          "clientSecret": "pi_3LbAAG8POyZCUJh0h2YXvwg_secret_nktbz6kcVk8U1X5UJI36BA6c",
+          "paymentIntentId": "pi_3LbABAG8POyZcuJhen2YXwwo"
+        }
     },
     "items": [
         {

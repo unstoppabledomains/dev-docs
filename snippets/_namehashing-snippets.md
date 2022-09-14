@@ -27,7 +27,7 @@ package main
 
 import (
     "fmt"
-    "github.com/unstoppabledomains/resolution-go"
+    "github.com/unstoppabledomains/resolution-go/v2"
 )
 
 func main() {

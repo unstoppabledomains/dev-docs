@@ -58,13 +58,13 @@ Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, w
 Sandbox Environment:
 
 ```
-POST https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/security/fingerprintjs/keys
+POST https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/security/fingerprintjs/keys
 ```
 
 Production Environment:
 
 ```
-POST https://unstoppabledomains.com/api/v2/resellers/{ResellerID}/security/fingerprintjs/keys
+POST https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/security/fingerprintjs/keys
 ```
 
 :::info
@@ -108,7 +108,7 @@ Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.
 ```javascript
 // Get the visitor identifier when you need it.
 fpPromise
-  .then(fp => fp.get({linkedId: '{ResellerID}'}))
+  .then(fp => fp.get({linkedId: '{{ResellerID}}'}))
   .then(result => console.log(result.visitorId));
 ```
 
@@ -124,7 +124,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 
   // Get the visitor identifier when you need it.
   fpPromise
-    .then(fp => fp.get({linkedId: '{ResellerID}'}))
+    .then(fp => fp.get({linkedId: '{{ResellerID}}'}))
     .then(result => console.log(result.visitorId));
 </script>
 ```
@@ -196,7 +196,7 @@ Here is an example request to mint a free domain with the following details:
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{ResellerID}/orders/' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/orders/' \
 --header 'Authorization: Bearer {Secret API Token}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -273,7 +273,7 @@ To reserve a domain, you need to request the Reserve Free Domains endpoint with 
 ### Domain Reservation Example
 
 ```bash
-curl --location -g --request POST '/{resellerID}/domains/{domainName}/reserve/' \
+curl --location -g --request POST '/{{ResellerID}}/domains/{{domainName}}/reserve/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "resellerIdentityKey": "{domainReservationID}"

@@ -8,10 +8,6 @@ showNextButton: false
 
 This is the basic installation guide for the `web3-react` framework and is best used for React-based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
-:::info
-For a completed example of a Web3 React application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/).
-:::
-
 ## Step 1: Install the Libraries
 
 Install with `yarn` or `npm`.

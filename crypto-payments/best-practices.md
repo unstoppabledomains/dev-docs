@@ -1,11 +1,11 @@
 ---
-title: Best Practices for Crypto Payments Integration | UD Developer Portal
+title: Best Practices for Integrating Crypto Payments | UD Developer Portal
 description: This page covers best practices to follow while integrating crypto payments.
 ---
 
-# Best Practices for Crypto Payments Integration
+# Best Practices for Integrating Crypto Payments
 
-Here are best practices to ensure the proper integration of the Unstoppable Domains crypto payments features into your applications:
+Here are best practices to ensure the proper integration of the Unstoppable Domains crypto payments feature into your applications:
 
 ## Don’t Hard-code UD Domain Endings Into Your Application
 

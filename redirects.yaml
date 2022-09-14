@@ -328,3 +328,12 @@
 '/developer-toolkit/resolve-with-maticjs/':
   to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/'
   type: 301
+'/crypto-payments/api-integration/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-service/overview/'
+  type: 301
+'/crypto-payments/library-integration/':
+  to: '/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/'
+  type: 301
+'/crypto-payments/other-integrations/':
+  to: '/crypto-payments/'
+  type: 301

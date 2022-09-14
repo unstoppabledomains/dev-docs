@@ -82,8 +82,20 @@ try {
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in Java.
 
 ```java
+// record consists the value of the requested record
+// use this value in your application
 String record = resolution.getRecord("ryan.crypto", "custom.record.value");
 assertEquals("Example custom record value", record);
+```
+
+## Use Case: Resolve Addresses Existing on Multiple Blockchains
+
+The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in Java.
+
+```java
+// receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
+// use this address as recipient of the payment
+String receiverUSDTAddress = resolution.getMultiChainAddress("udtestdev-usdt.crypto", "USDT", "ERC20");
 ```
 
 <embed src="/snippets/_discord.md" />

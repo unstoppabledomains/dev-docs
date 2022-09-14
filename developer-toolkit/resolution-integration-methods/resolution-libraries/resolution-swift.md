@@ -147,4 +147,21 @@ resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result
 }
 ```
 
+## Use Case: Resolve Addresses Existing on Multiple Blockchains
+
+The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in Swift.
+
+```swift
+// resolve multichain address
+resolution.multiChainAddress(domain: "udtestdev-usdt.crypto", ticker: "USDT", chain: "ERC20") { (result) in
+  switch result {
+  case .success(let returnValue):
+     receiverUSDTAddress = returnValue;
+     // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
+     // use this address as recipient of the payment
+  case .failure(let error):
+     print("Expected USDT-ETC20 Address, but got \(error)")
+  }
+```
+
 <embed src="/snippets/_discord.md" />
