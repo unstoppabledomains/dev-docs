@@ -126,4 +126,14 @@ ethAddress, _ := uns.Addr("brad.crypto", "ETH")
 fmt.Println("ETH address for brad.crypto is", ethAddress)
 ```
 
+## Use Case: Resolve Addresses Existing on Multiple Blockchains
+
+The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in Golang.
+
+```go
+uns, _ := resolution.NewUnsBuilder().Build()
+usdtAddress, _ := uns.AddrVersion("udtestdev-usdt.crypto", "USDT", "ERC20")
+fmt.Println("USDT-ERC20 address for udtestdev-usdt.crypto is", usdtAddress)
+```
+
 <embed src="/snippets/_discord.md" />

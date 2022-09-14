@@ -4,14 +4,62 @@ pages:
   - page: index.md
     label: Getting Started with Payments
     separatorLine: true
-  - label: Integrate Crypto Payments Using the Resolution API
-    page: api-integration.md
+  - group: Integrate Crypto Payments Using the Resolution API
+    expanded: false
+    pages:
+      - label: Overview
+        href: /developer-toolkit/resolution-integration-methods/resolution-service/overview/
+        external: true
+      - label: Get Records for a Domain
+        href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain/
+        external: true
+      - label: Error Codes
+        href: /developer-toolkit/resolution-integration-methods/resolution-service/error-codes/
+        external: true
     separatorLine: true
-  - label: Integrate Crypto Payments Using Libraries
-    page: library-integration.md
+  - group: Integrate Crypto Payments Using Libraries
+    expanded: false
+    pages:
+      - label: Libraries Overview
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/
+        external: true
+      - label: Resolution
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution/
+        external: true
+      - label: Resolution-Java
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-java/
+        external: true
+      - label: Resolution-Swift
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-swift/
+        external: true
+      - label: Resolution-Go
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-go/
+        external: true
     separatorLine: true
-  - label: Other Ways To Integrate Crypto Payments
-    page: other-integrations.md
+  - group: Other Ways To Integrate Crypto Payments
+    expanded: false
+    pages:
+      - label: Resolution CLI
+        href: /developer-toolkit/resolution-integration-methods/resolution-cli/
+        external: true
+      - label: Matic.js SDK
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/
+        external: true
+      - group: Resolve With Direct Blockchain Calls
+        expanded: false
+        pages:
+          - label: Overview
+            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview/
+            external: true
+          - label: Resolve UD Domains With Direct Blockchain Calls
+            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/
+            external: true
+          - label: Resolve .zil With Direct Blockchain Calls
+            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries/
+            external: true
+          - label: Resolve Domains Using Smart Contracts
+            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/
+            external: true
     separatorLine: true
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
