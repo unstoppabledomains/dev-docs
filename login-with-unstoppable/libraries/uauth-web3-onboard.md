@@ -29,14 +29,6 @@ interface ConstructorOptions {
 }
 ```
 
-`uauth`\
-Type: [**UAuth Client**](/login-with-unstoppable/libraries/uauth-js.md#client)\
-An instance of the UAuth Client class.
+### shouldLoginWithRedirect
 
-`shouldLoginWithRedirect`\
-Type: **boolean**\
-If set to `true`, the `uauthBNCModule` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
-
-`walletconnect`\
-Type: **IWalletConnectProviderOptions**\
-Configuration options used to to support authentication with WalletConnect.
+If `shouldLoginWithRedirect` is set to `true`, the [uauthBNCModule](#uauthbncmodule) instance will use the [uauth.login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [uauth.loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).

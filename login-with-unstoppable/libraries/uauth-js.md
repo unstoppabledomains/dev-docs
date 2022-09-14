@@ -50,7 +50,7 @@ async loginCallback<T>(
 
 ### user()
 
-Returns the [`UserInfo`](#userinfo) associated with the current UAuth instance.
+Returns the [UserInfo](#userinfo) associated with the current UAuth instance.
 
 ```typescript
 async user(options: UserOptions = {}): Promise<UserInfo>
@@ -70,9 +70,7 @@ async logout({
   }: Partial<LogoutOptions> = {}): Promise<void>
 ```
 
-## Interfaces
-
-### ClientOptions
+## ClientOptions
 
 The options object passed to the Client [constructor](#constructor).
 
@@ -106,9 +104,9 @@ export interface ClientOptions {
 }
 ```
 
-### LoginOptions
+## LoginOptions
 
-The options object passed to [login()](#login) and [loginWithPopup()].
+The options object passed to [login()](#login) and [loginWithPopup()](#loginwithpopup).
 
 ```typescript
 interface LoginOptions {
@@ -131,7 +129,7 @@ interface LoginOptions {
 }
 ```
 
-### AuthorizationOptions
+## AuthorizationOptions
 
 ```typescript
 export interface AuthorizationOptions {
@@ -142,7 +140,7 @@ export interface AuthorizationOptions {
 }
 ```
 
-### BaseLogoutOptions
+## BaseLogoutOptions
 
 ```typescript
 interface BaseLogoutOptions {
@@ -151,7 +149,7 @@ interface BaseLogoutOptions {
 }
 ```
 
-### LogoutOptions
+## LogoutOptions
 
 The options object passed to [logout()](#logout). Extends [BaseLogoutOptions](#baselogoutoptions) and [AuthorizationOptions](#authorizationoptions).
 
@@ -162,7 +160,7 @@ interface LogoutOptions {
 }
 ```
 
-### UserInfo
+## UserInfo
 
 Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
 

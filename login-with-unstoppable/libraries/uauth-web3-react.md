@@ -74,12 +74,6 @@ interface UAuthConnectors {
 }
 ```
 
-`injected`\
-Type: **Abstractconnector**
-
-`walletconnect`\
-Type: **AbstractConnector**
-
 ## UAuthConnectorOptions
 
 The options object passed to the UAuthConnector [constructor](#constructor).Type
@@ -94,19 +88,11 @@ interface UAuthConnectorOptions
 }
 ```
 
-`uauth`\
-Type: [**UAuth Client**](/login-with-unstoppable/libraries/uauth-js.md#client)
-
-`connectors`\
-Type: [**UAuthConnectors**](#uauthconnectors)
-
-`shouldLoginWithRedirect`\
-Type: **boolean**\
-If set to `true`, the `uauthConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
-
 ### shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` is set to `true`, then you must set up a callback page for the authorization server to redirect back to.
+If `shouldLoginWithRedirect` is set to `true`, the [uauthConnector](#uauthconnector) instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+
+Then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
 import {uauth} from './connectors'

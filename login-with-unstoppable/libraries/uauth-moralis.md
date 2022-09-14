@@ -61,16 +61,9 @@ interface UAuthConnectorOptions
 }
 ```
 
-`uauth`\
-Type: [**UAuth**](/login-with-unstoppable/libraries/uauth-js.md#client)\
-An instance of the UAuth Client class.
+### shouldLoginWithRedirect
 
-`connectors`\
-Type: [**UAuthMoralisConnectors**](#uauthmoralisconnectors)
-
-`shouldLoginWithRedirect`\
-Type: **boolean**\
-If set to `true`, the `UAuthMoralisConnector` instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If `shouldLoginWithRedirect` is set to `true`, the [UAuthMoralisConnector](#uauthmoralisconnector) instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
 ## UAuthMoralisConnectors
 

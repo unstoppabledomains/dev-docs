@@ -58,13 +58,11 @@ interface IUAuthOptions
 }
 ```
 
-`shouldLoginWithRedirect`\
-Type: **boolean**\
-If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
-
 ### shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` in your `IUAuthOptions` is set to `true`, then you must set up a callback page for the authorization server to redirect back to.
+If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+
+Then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
 import UAuthSPA from '@uauth/js'
