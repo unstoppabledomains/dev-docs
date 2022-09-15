@@ -1,4 +1,4 @@
 ---
-title: Use Case Template | Unstoppable Domains Developer Portal
-description: This page explains the use case of [XXXX] when integrating Unstoppable Domains products.
+title: [UD Product] Use Case | Unstoppable Domains Developer Portal
+description: This page outlines the use case for using/integrating [UD Product].
 ---
