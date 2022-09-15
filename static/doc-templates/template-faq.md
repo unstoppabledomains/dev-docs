@@ -7,7 +7,7 @@ description: Frequently asked questions about [UD Product].
 
 ## [Question]
 
-[A short and precise answer to the question]
+[Short and precise answer to the question]
 
 ## [Question]
 
