@@ -1,5 +1,5 @@
 ---
-title: Best Practices | Unstoppable Domains Developer Portal
+title: [UD Product] Best Practices | Unstoppable Domains Developer Portal
 description: This page covers best practices to follow while integrating [UD Product].
 ---
 
@@ -16,3 +16,7 @@ Here are best practices to ensure the proper integration of [UD Product] into yo
 ![Best practice demo](/images/link-to/screenshot)
 
 <figcaption>[Best practice demo OR relevant source file name]</figcaption>
+
+## [Best Practice Instruction]
+
+## [Best Practice Instruction]

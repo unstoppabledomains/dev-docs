@@ -1,5 +1,5 @@
 ---
-title: Error Codes | Unstoppable Domains Developer Portal
+title: [UD Product] Error Codes | Unstoppable Domains Developer Portal
 description: This page covers the error codes you might encounter when using [UD Product].
 ---
 
