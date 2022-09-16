@@ -15,9 +15,7 @@ Below is a list of all the error codes you might encounter when using the Resolu
         {
             httpCode: number, // error status code
             name: string, // one of our custom error names
-            message: string, // human-readable error summary
-            level: "error",
-            service: "resolution-service"
+            message: string // human-readable error summary
         }
     ]
 }

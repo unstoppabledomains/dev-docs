@@ -29,11 +29,7 @@ This endpoint returns the domain name records and metadata owned by wallet addre
 | sortBy | STRING | NO | The field to use for sorting of the response. Currently supports `id` (domain ID), `name` (domain name alphabetically), and `created_at` (domain creation date) |
 | sortDirection | STRING | NO | The order to use for sorting of the response. Currently supports `ASC` (ascending) and `DESC` (descending) |
 | perPage | NUMBER | NO | The number of results to return per response page. Must be a value between 1 and 200 |
-| startingAfter | STRING | NO | The API will skip the results before this value in the response. Value depends on `sortBy` value |
-
-:::info
-Your request must contain an instance of the `owners` or `resolution` query params. The `owners` param lets you filter domains by their owner address, while the `resolution` param lets you filter domains by their resolution records.
-:::
+| startingAfter | STRING | NO | The API will skip the results before this value in the response. This value depends on the `nextStartingAfter` response field |
 
 :::info
 If your request must include multiple `owners` or `tlds`, you need to use a new `owners` or `tlds` query param instance for each wallet address and TLD.

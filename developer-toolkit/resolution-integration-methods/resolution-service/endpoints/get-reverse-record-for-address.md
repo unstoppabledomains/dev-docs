@@ -27,7 +27,7 @@ This endpoint will return the reverse record of the wallet address and all the d
 
 ## Returns
 
-A single object with the following fields:
+An object with the following fields:
 
 * `meta`: A key-value dictionary with general information about the domain:
     * `domain`: (string) domain name.

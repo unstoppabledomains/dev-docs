@@ -31,7 +31,7 @@ The Resolution Service will not return an error in the case of an invalid domain
 
 ## Returns
 
-A single object with the following fields:
+An object with the following fields:
 
 * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 * `meta`: A key-value dictionary with general information about the domain:
