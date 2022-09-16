@@ -21,7 +21,7 @@ const uauth = new Client(options);
 
 ### login()
 
-Initiates UAuth authentication with an auth server redirect and callback flow.
+Initiates UAuth authentication with an auth server redirect and callback flow. When using this method, the `redirectUri` in the [ClientOptions](#clientoptions) must point to a page that calls [loginCallback()](#logincallback).
 
 ```typescript
 async login(
@@ -41,6 +41,8 @@ async loginWithPopup(
 ```
 
 ### loginCallback()
+
+Parses the authorization code and application state after [login()](#login) has been called and the authorization server has redirected back to the `redirectUri` defined in the [ClientOptions](#clientoptions).
 
 ```typescript
 async loginCallback<T>(
@@ -129,14 +131,38 @@ interface LoginOptions {
 }
 ```
 
+## Authorization
+
+The authorization object returned by [loginWithPopup()](#loginwithpopup) and [loginCallback()](#logincallback).
+
+```typescript
+interface Authorization {
+  accessToken: string
+  expiresAt: number
+  idToken: IdToken
+  scope: string
+  resource?: string
+}
+```
+
 ## AuthorizationOptions
 
 ```typescript
-export interface AuthorizationOptions {
+interface AuthorizationOptions {
   clientID?: string
   username?: string
   scope?: string
   resource?: string
+}
+```
+
+## UserOptions
+
+The options object passed to [user()](#user).
+
+```typescript
+interface UserOptions extends AuthorizationOptions {
+  claims?: string[]
 }
 ```
 
@@ -160,9 +186,30 @@ interface LogoutOptions {
 }
 ```
 
+## LoginCallbackOptions
+
+The options object passed to [loginCallback()](#logincallback).
+
+```typescript
+interface LoginCallbackOptions {
+  url?: string
+}
+```
+
+## LoginCallbackResponse
+
+The object returned by [loginCallback()](#logincallback).
+
+```typescript
+interface LoginCallbackResponse<T> {
+  authorization: Authorization
+  state?: T
+}
+```
+
 ## UserInfo
 
-Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
+The object returned by [user()](#user). Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
 
 ```typescript
 interface UserInfo {
