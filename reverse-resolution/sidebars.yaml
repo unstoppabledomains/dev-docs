@@ -19,6 +19,9 @@ pages:
         label: Smart Contract Integration Guide
       - page: integration-guides/resolution-libraries.md
         label: Resolution Libraries Integration Guide
+      - href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address/
+        label: Resolution Service API Integration Guide
+        external: true
     separatorLine: true
   - label: Frequently Asked Questions
     page: reverse-resolution-faq.md

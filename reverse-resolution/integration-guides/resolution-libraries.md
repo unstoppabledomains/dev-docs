@@ -80,7 +80,7 @@ resolution.reverse(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", locati
 ```
 
 :::success Congratulations
-You have successfully integrated reverse resolution using UD's Resolution Libraries. Happy Hacking!
+You have successfully integrated Reverse Resolution using UD's Resolution Libraries. Happy Hacking!
 :::
 
 <embed src="/snippets/_discord.md" />

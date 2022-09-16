@@ -11,6 +11,10 @@ https://resolve.unstoppabledomains.com/supported_tlds
 
 This endpoint returns all the domain endings provided and supported by Unstoppable Domains.
 
+:::info
+This endpoint does not require any form of authentication to access.
+:::
+
 ## Request Method
 
 * GET
@@ -25,7 +29,7 @@ This endpoint returns all the domain endings provided and supported by Unstoppab
 
 ## Returns
 
-An object with a `tlds` field which contains a list of domain endings supported by Unstoppable Domains.
+An object with a `tlds` field that contains a list of domain endings supported by Unstoppable Domains.
 
 * `tlds`: (array) An array of the domain endings supported by Unstoppable Domains.
 
@@ -36,7 +40,7 @@ Here is an example request to query for the domain endings supported by Unstoppa
 ### Request
 
 ```bash
-curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_tlds'
+curl --location --request GET 'https://unstoppabledomains.g.alchemy.com/supported_tlds'
 ```
 
 ### Response

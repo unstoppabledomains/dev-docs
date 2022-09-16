@@ -9,7 +9,7 @@ description: This page covers the documentation for the `Get domain transfer eve
 https://resolve.unstoppabledomains.com/domains/<domain name>/transfers/latest
 ```
 
-This endpoint tracks which block and which blockchain domain names are being transferred from one owner wallet address to another.
+This endpoint tracks the blocks and blockchains domain names are being transferred from one owner wallet address to another.
 
 ## Request Method
 
@@ -37,18 +37,18 @@ An object with a `data` field that contains a list of domain transfer events.
     * `domain`: (string) The domain name.
     * `from`: (address) The wallet address that sent the domain.
     * `to`: (address) The wallet address of the receiver.
-    * networkId: (number) Rhe blockchain network ID
+    * `networkId`: (number) The blockchain network ID
         * 1 - Ethereum or Zilliqa Mainnet
         * 137 - Polygon (Matic) Mainnet
         * 80001 - Polygon (Matic) Mumbai Testnet
         * 4 - Ethereum Rinkeby Testnet
         * 5 - Ethereum Goerly Testnet
-    * blockNumber: (number) The blockchain block where the transfer happened.
-    * blockchain: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+    * `blockNumber`: (number) The blockchain block where the transfer happened.
+    * `blockchain`: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
 
 ## Example
 
-Here is an example request to query for the transfer events of the `brad.crypto` domain.
+Here is an example request to query for the transfer events of the `brad.crypto` domain:
 
 ### Request
 

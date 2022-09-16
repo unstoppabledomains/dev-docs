@@ -13,7 +13,7 @@ No, each wallet address can only have one reverse record configured.
 
 No, you can only have one primary domain linked to an address.
 
-### Can I change the domain I set for reverse resolution?
+### Can I change the domain I set for Reverse Resolution?
 
 Yes, you can change and switch the domain you link to a wallet address at any time.
 
@@ -21,17 +21,17 @@ Yes, you can change and switch the domain you link to a wallet address at any ti
 
 Yes and no. There’s nothing stopping users from pointing multiple addresses to a domain in the contracts. However, our website UI does not support this at the moment. If there is demand, we may change this in the future.
 
-### How can applications add reverse resolution support?
+### How can applications add Reverse Resolution support?
 
-We’ll add reverse resolution support to our resolution libraries and APIs. Our docs give more detailed instructions.
+Our resolution libraries and APIs support Reverse Resolution. See our [Integration Pathways](index.md#choose-an-integration-path) guides for more detailed instructions.
 
-### Will apps have to update to make reverse resolution work?
+### Will apps have to update to make Reverse Resolution work?
 
-Yes, reverse resolution is a new feature for our domains with a new set of smart contracts. Applications will need to upgrade their resolution libraries to access the new reverse record functions we’ll include.
+Yes, Reverse Resolution is a new feature for our domains with a new set of smart contracts. Applications will need to upgrade their resolution libraries to access the new reverse record functions we’ll include.
 
 ### Can I set reverse records for Ethereum-based domains?
 
-Yes, there is a separate reverse resolution contract on Ethereum for L1 domains.
+Yes, there is a separate Reverse Resolution contract on Ethereum for L1 domains.
 
 ### Can I set reverse records for Zilliqa-based domains?
 
@@ -39,7 +39,7 @@ No, you cannot set reverse records for Zilliqa domains. Reverse resolution only 
 
 ### Can I set reverse records for other address types like Bitcoin?
 
-No, reverse resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for setting reverse records.
+No, Reverse Resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for setting reverse records.
 
 ### What happens when a single wallet has a reverse record to both Unstoppable Domains and a third party?
 
