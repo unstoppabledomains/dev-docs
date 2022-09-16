@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get records for a domai
 # Get Records for a Domain
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/domains/<domain name>
+https://resolve.unstoppabledomains.com/domains/<domain name>
 ```
 
 This endpoint returns all the resolution records configured to a domain in a single response.
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -18,7 +22,7 @@ This endpoint returns all the resolution records configured to a domain in a sin
 | domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
 :::info
-The Resolution Service API will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
+The Resolution Service will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
 :::
 
 ## Query Params
@@ -51,7 +55,7 @@ Here is an example request to query for the records and metadata of the `brad.cr
 
 ```bash
 curl \
---request GET 'https://unstoppabledomains.g.alchemy.com/domains/brad.crypto' \
+--request GET 'https://resolve.unstoppabledomains.com/domains/brad.crypto' \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -59,6 +63,14 @@ curl \
 
 ```json
 {
+  "meta": {
+    "domain": "brad.crypto",
+    "blockchain": "ETH",
+    "networkId": 1,
+    "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
+    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
+    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe"
+  },
   "records": {
     "ipfs.html.value": "QmVHmG6BDRsDuzcFrWw6m5ByDnzcvfQbmdQF9bbSFTUeD1",
     "crypto.ADA.address": "DdzFFzCqrhsuwQKiR3CdQ1FzuPAydtVCBFTRdy9FPKepAHEoXCee2qrio975M4cEbqYwZBsWJTNyrJ8NLJmAReSwAakQEHWBEd2HvSS7",
@@ -68,14 +80,6 @@ curl \
     "social.picture.value": "1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317",
     "gundb.public_key.value": "pqeBHabDQdCHhbdivgNEc74QO-x8CPGXq4PKWgfIzhY.7WJR5cZFuSyh1bFwx0GWzjmrim0T5Y6Bp0SSK0im3nI",
     "ipfs.redirect_domain.value": "https://abbfe6z95qov3d40hf6j30g7auo7afhp.mypinata.cloud/ipfs/Qme54oEzRkgooJbCDr78vzKAWcv6DDEZqRhhDyDtzgrZP6"
-  },
-  "meta": {
-    "domain": "brad.crypto",
-    "blockchain": "ETH",
-    "networkId": 1,
-    "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
-    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe"
   }
 }
 ```

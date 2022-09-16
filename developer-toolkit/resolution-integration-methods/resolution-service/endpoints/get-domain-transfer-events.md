@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get domain transfer eve
 # Get Domain Transfer Events
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/domains/<domain name>/transfers/latest
+https://resolve.unstoppabledomains.com/domains/<domain name>/transfers/latest
 ```
 
 This endpoint tracks the blocks and blockchains domain names are being transferred from one owner wallet address to another.
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -18,7 +22,7 @@ This endpoint tracks the blocks and blockchains domain names are being transferr
 | domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
 :::info
-The Resolution Service API will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
+The Resolution Service will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
 :::
 
 ## Query Params
@@ -50,7 +54,7 @@ Here is an example request to query for the transfer events of the `brad.crypto`
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/domains/brad.crypto/transfers/latest" \
+--request GET "https://resolve.unstoppabledomains.com/domains/brad.crypto/transfers/latest" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 

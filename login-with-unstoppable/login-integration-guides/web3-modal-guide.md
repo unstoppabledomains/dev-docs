@@ -1,15 +1,12 @@
 ---
 title: Web3 Modal Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
+showNextButton: false
 ---
 
 # Web3 Modal Guide: Login with Unstoppable
 
 This is the basic installation guide for the `web3modal` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3modal).
-
-:::info
-For a completed example of a Web3 Modal application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal).
-:::
 
 ## Step 1: Install the Libraries
 
@@ -100,15 +97,14 @@ async function handleLogin() {
 }
 
 function handleLogout() {
-  web3modal.disconnect(); 
+  if (web3modal.cachedProvider === 'custom-uauth') {
+    await uauth.logout()
+  }
+  web3modal.clearCachedProvider()
 }
 
 // Save provider in state
 ```
-
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
 
 ## Reference
 
@@ -181,3 +177,4 @@ export function getUAuth(UAuth: typeof UAuthSPA, opts: IUAuthOptions): UAuth {
 }
 ```
 
+<embed src="/snippets/_login-paths-next.md" />

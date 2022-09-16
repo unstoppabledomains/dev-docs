@@ -34,6 +34,43 @@ figcaption {
     color: #A0A0A0;
 }
 
+.custom-next-to {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custom-next-to p {
+    margin-block: 0;
+}
+
+.custom-next-to a {
+    padding: 8px 20px;
+    font-size: 14px;
+
+    font-weight: 600;
+
+    outline: none;
+    border: none;
+    border-radius: 4px;
+
+    background-color: #ffffff;
+    color: #3E4C59!important;
+    box-shadow: none;
+    -webkit-transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    transition: background-color 0.25s ease,box-shadow 0.25s ease;
+}
+
+.custom-next-to a strong {
+    font-weight: 800;
+}
+
+.custom-next-to a:hover {
+    background-color:#f2f2f2;
+    box-shadow:0px 0px 12px 0px rgba(0,0,0,0.1);
+}
+
 .one-third-inline-block {
     vertical-align: top;
     width: 32%;

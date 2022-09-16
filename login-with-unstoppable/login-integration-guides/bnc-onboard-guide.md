@@ -1,6 +1,7 @@
 ---
 title: BNC Onboard Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the BNC Onboard library.
+showNextButton: false
 ---
 
 # BNC Onboard Guide: Login with Unstoppable
@@ -214,3 +215,5 @@ if (previouslySelectedWallet != null) {
   }
 }
 ```
+
+<embed src="/snippets/_login-paths-next.md" />

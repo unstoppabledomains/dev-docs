@@ -15,7 +15,9 @@ Below is a list of all the error codes you might encounter when using the Resolu
         {
             httpCode: number, // error status code
             name: string, // one of our custom error names
-            message: string // human-readable error summary
+            message: string, // human-readable error summary
+            level: "error",
+            service: "resolution-service"
         }
     ]
 }
@@ -27,8 +29,6 @@ The resolution service will not return an error in the case of an invalid or uns
 
 | Error Message | Description |
 |---|---|
-| each value in owners should not be empty | There is no domain name provided to the `domains` endpoint. |
-| owners should not be empty | There is no domain name provided to the `domains` endpoint. |
 | perPage must not be greater than 200 | The provided `perPage` parameter is a value greater than 200. |
 | perPage must not be less than 1 | The provided `perPage` parameter is a value less than 1. |
 | perPage must be an integer number | The provided `perPage` parameter is not an integer value. |
@@ -41,8 +41,7 @@ The resolution service will not return an error in the case of an invalid or uns
 
 | Error Message | Description |
 |---|---|
-| This API requires an auth token provided in an Authorization header in the form "Bearer \<auth-token\>". | There is no Alchemy API key provided in the API request |
-| Invalid API key | The provided Alchemy API key is invalid or has expired. |
+| Please provide a valid API key. | The provided API key is invalid or has expired. |
 
 ## 404 Error: Not Found
 

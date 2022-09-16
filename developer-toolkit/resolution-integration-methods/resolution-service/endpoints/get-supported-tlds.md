@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get supported TLDs` end
 # Get Supported TLDs
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/supported_tlds
+https://resolve.unstoppabledomains.com/supported_tlds
 ```
 
 This endpoint returns all the domain endings provided and supported by Unstoppable Domains.
@@ -14,6 +14,10 @@ This endpoint returns all the domain endings provided and supported by Unstoppab
 :::info
 This endpoint does not require any form of authentication to access.
 :::
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -26,6 +30,8 @@ This endpoint does not require any form of authentication to access.
 ## Returns
 
 An object with a `tlds` field that contains a list of domain endings supported by Unstoppable Domains.
+
+* `tlds`: (array) An array of the domain endings supported by Unstoppable Domains.
 
 ## Example
 

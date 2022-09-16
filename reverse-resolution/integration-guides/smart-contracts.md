@@ -58,7 +58,7 @@ The `reverseOf()` method will return a value of `0` if there is no reverse recor
 Send a `GET` request to the [Unstoppable Domains metadata endpoint](https://resolve.unstoppabledomains.com/api-docs/#/Meta%20Data/MetaDataController.getMetaData) to retrieve the metadata of the domain associated with the namehash returned from the `reverseOf()` method call:
 
 ```
-https://resolve.unstoppabledomains.com/metadata/{tokenId}
+https://resolve.unstoppabledomains.com/metadata/{namehash}
 ```
 
 ## Step 5: Get the Domain Name From the Metadata

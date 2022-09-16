@@ -45,37 +45,9 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 3: Locate the domain ending namehash for Polygon
 
-* The domain ending namehash can be found by using the website API:
-  * .wallet domain ending -[https://unstoppabledomains.com/api/v1/wallet](https://unstoppabledomains.com/api/v1/wallet)
-  * .888 domain ending -[https://unstoppabledomains.com/api/v1/888](https://unstoppabledomains.com/api/v1/888)
-  * .dao domain ending -[https://unstoppabledomains.com/api/v1/dao](https://unstoppabledomains.com/api/v1/dao)
+You can locate the domain ending [namehash](../domain-registry-essentials/namehashing.md) using the following list:
 
-For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
-
-```json
-{
-  "addresses": {},
-  "multicoinAddresses": {},
-  "whois": {},
-  "ipfs": {},
-  "social": {},
-  "dns": [],
-  "meta": {
-    "domain": "dao",
-    "namehash": "0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553",
-    "tokenId": "82297499899003349669721577255820055932923117933045045557665992854629036320083",
-    "owner": null,
-    "resolver": null,
-    "type": "CNS",
-    "ttl": 0
-  },
-  "records": {}
-}
-```
-
-* Or, you can locate the domain ending namehash in the following list:
-
-```json
+```bash
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'wallet';
 0x7674e7282552c15f203b9c4a6025aeaf28176ef7f5451b280f9bada3f8bc98e2 = 'coin';
@@ -86,6 +58,8 @@ For example, the API response for .dao domain ending namehash is `0xb5f2bbf81da5
 0x5c828ec285c0bf152a30a325b3963661a80cb87641d60920344caf04d4a0f31e = '888';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'dao';
 ```
+
+For example, the `.dao` domain ending namehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
 
 ## Step 4: Write the Polygonscan Smart Contract Request
 

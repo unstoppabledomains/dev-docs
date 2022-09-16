@@ -1,15 +1,12 @@
 ---
 title: Moralis Guide for Login With Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Moralis library.
+showNextButton: false
 ---
 
 # Moralis Guide: Login With Unstoppable
 
 This is the basic installation guide for the `moralis` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/moralis).
-
-:::info
-For a completed example of a Moralis application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis).
-:::
 
 ## Step 1: Install the Libraries
 
@@ -90,6 +87,4 @@ async function handleLogout() {
 }
 ```
 
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
+<embed src="/snippets/_login-paths-next.md" />

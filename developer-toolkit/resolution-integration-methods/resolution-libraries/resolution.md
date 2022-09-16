@@ -5,7 +5,31 @@ description: This page details basic configuration and usage of the resolution l
 
 # Resolution
 
-This page details basic configuration and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
+This page details basic installation, configuration, and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
+
+## Installation
+
+Resolution can be installed with either the `yarn` or `npm` command.
+
+```bash yarn
+yarn add @unstoppabledomains/resolution
+```
+
+```bash npm
+npm install @unstoppabledomains/resolution --save
+```
+
+## Updating Resolution
+
+Resolution can be updated with either the `yarn` or `npm` command.
+
+```bash yarn
+yarn upgrade @unstoppabledomains/resolution --latest
+```
+
+```bash npm
+npm update @unstoppabledomains/resolution --save
+```
 
 <embed src="/snippets/_libraries-provider-config.md" />
 
@@ -127,6 +151,23 @@ function resolveCustomRecord(domain, record) {
 }
 
 resolveCustomRecord('homecakes.crypto', 'custom.record.value');
+```
+
+## Use Case: Resolve Addresses Existing on Multiple Blockchains
+
+The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in JavaScript.
+
+```javascript
+const {default: Resolution} = require('@unstoppabledomains/resolution');
+const resolution = new Resolution();
+
+resolution
+    .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')
+    .then((receiverUSDTAddress) => {
+        // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
+        // use this address as recipient of the payment
+    })
+    .catch(console.error);
 ```
 
 <embed src="/snippets/_discord.md" />

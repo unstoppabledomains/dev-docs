@@ -1,6 +1,7 @@
 ---
 title: Web3 Onboard Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the web3 onboard library.
+showNextButton: false
 ---
 
 # Web3 Onboard Guide: Login with Unstoppable
@@ -10,10 +11,6 @@ This guide and the `@uauth/web3-onboard` package uses `web3-onboard`, the latest
 :::
 
 This is the basic installation guide for the `web3-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-onboard).
-
-:::info
-For a completed example of a Web3 Onboard application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-onboard).
-:::
 
 ## Step 1: Install the Libraries
 
@@ -77,6 +74,4 @@ async function handleLogout() {
 }
 ```
 
-## Step 4: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
+<embed src="/snippets/_login-paths-next.md" />

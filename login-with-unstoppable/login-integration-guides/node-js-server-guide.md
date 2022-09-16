@@ -1,15 +1,12 @@
 ---
 title: Node.js Server Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/node integration for server-side applications and does not come with a default front-end UI.
+showNextButton: false
 ---
 
 # Node.js Server Guide: Login with Unstoppable
 
-This installation guide is for custom `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
-
-:::info
-For a completed example of a server integration using `@uauth/node` library, you can [download this example project](https://github.com/unstoppabledomains/uauth/tree/main/examples/server).
-:::
+This integration guide is for the `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
@@ -27,9 +24,9 @@ npm install --save @uauth/node @unstoppabledomains/resolution
 
 ## Step 2: Setup @uauth/node Library
 
-Then, setup and configure the library.
+Then, setup and configure the library. On your client dashboard, you will need to set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration/#token-endpoint-authentication-method) to **Client Secret Post**. You can then initialize a new `Client` instance using the Client Metadata copied from the **Basic** page.
 
-```javascript
+```typescript
 import {Client} from '@uauth/node'
 import Resolution from '@unstoppabledomains/resolution'
 // This package requires a fetch polyfill for now.
@@ -44,9 +41,10 @@ global.XMLHttpRequestUpload = (
 // Done polyfilling fetch.
 
 const client = new Client({
-  clientID: 'uauth_example_spa_id',
+  clientID: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+  clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxx',
   redirectUri: 'http://localhost:5000/callback',
-  scope: 'openid email wallet'
+  scope: 'openid wallet',
   resolution: new Resolution(),
 })
 ```
@@ -142,11 +140,7 @@ app.get('/', (_, res) => {
 })
 ```
 
-## Step 5: Configure the Login UI
-
-<embed src="/snippets/_login-ui-config.md" />
-
-## Step 6: Run the Server!
+## Step 5: Run the Server!
 
 The server can now listen and serve requests.
 
@@ -209,3 +203,5 @@ const {login, callback, middleware} = client.createLogin<ExpressSessionContext>(
   },
 )
 ```
+
+<embed src="/snippets/_login-paths-next.md" />

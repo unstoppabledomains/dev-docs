@@ -22,41 +22,41 @@ When you've customized your client and saved your changes, you will need the **C
 {
     clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     redirectUri: "http://localhost",
-    scope: "openid . . . "
+    scope: "openid wallet",
 }
 ```
 
 </figure>
 
-## Step 2: Configure Login Scopes
+The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes. For information on the other scopes Login supports, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
 
-The `scope` property from your client metadata will contain all available scopes by default, some of which are mutually exclusive. The minimum scope required for login is `openid`.
+## Step 2: Choose Your Integration Path
 
-See [Scopes for Login](./scopes-for-login.md) for more details on each of these.
+There are several ways to integrate with Login with Unstoppable, which are listed in the table below.
 
-## Step 3: Choose Your Integration Path
+Because pop-ups are a more integration friendly approach, every integration path except for **Login without Pop-up** and **Node.js Server** uses them by default. You can use redirects instead with the `login()` method of `@uauth/js` or the `shouldLoginWithRedirect` configuration option for other `@uauth/*` libraries.
 
-There are several ways to integrate with Login with Unstoppable, which are detailed in the chart below.
+For dApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboard`, and `moralis`, UAuth provides packages that help you wrap a new UAuth instance in an interface that each library supports. After configuring these packages, you can continue using the web3 library normally.
 
-| Integration Guide                                                          | Package            | Ethereum Provider | Callback | Front-end UI       |
-|----------------------------------------------------------------------------|:------------------:|:-----------------:|:--------:|:------------------:|
-| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       |`@uauth/js`          |     &#10060;     | &#10060; | JavaScript, Pop-up |
-| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |`@uauth/js`           |     &#10060;     | &#9989;  |  React, no Pop-up  |
-| [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              |`@uauth/web3-react`  |     &#9989;      | &#10060; |     `web3-react`   |
-| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              |`@uauth/web3-modal`  |     &#9989;      | &#10060; |     `web3-modal`   |
-| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |`@uauth/web3onboard` |     &#9989;      | &#10060; |   `web3-onboard`   |
-| [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    |`@uauth/moralis`     |     &#9989;      | &#10060; |     `moralis`      |
-| [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      |`@uauth/node`        |     &#10060;     | &#9989;  |        None        |
+| Integration Guide                                                                               |                                         Example Project                                     |   Web3 Provider   | Package             |     Front-end UI   |
+|-------------------------------------------------------------------------------------------------| :-----------------------------------------------------------------------------------------: | :---------------: |:-------------------:|:------------------:|
+| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       | [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/)                  |       &#10060;    |`@uauth/js`          |      JavaScript    |
+| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |                                                 -                                           |       &#10060;    |`@uauth/js`          |        React       |
+| [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/)    |       &#9989;     |`@uauth/web3-react`  |     `web3-react`   |
+| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              | [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)      |       &#9989;     |`@uauth/web3modal`   |     `web3-modal`   |
+| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          | [web3-onboard](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-onboard/)|       &#9989;     |`@uauth/web3-onboard`|   `web3-onboard`   |
+| [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    | [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)           |       &#9989;     |`@uauth/moralis`     |     `moralis`      |
+| [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      | [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)             |       &#10060;    |`@uauth/node`        |        None        |
 
 :::info
-The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
+The [UAuth Demo](https://uauth-demo.uc.r.appspot.com) is available for developer use along with the example [single page application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/) to model the flow.
 :::
 
-## Step 4: Configure the Login UI
+## Step 3: Configure the Login UI
 
 Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](/login-with-unstoppable/login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
 
-## Step 5: Promote Your Application
+## Step 4: Promote Your Application
 
 Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps). 
 

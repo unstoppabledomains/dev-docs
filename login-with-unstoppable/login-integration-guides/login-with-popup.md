@@ -1,6 +1,7 @@
 ---
 title: 5 Minute Guide for Login with Unstoppable with Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and with the popup feature.
+showNextButton: false
 ---
 
 # 5 Minute Guide: Login with Unstoppable with Popup
@@ -99,10 +100,6 @@ window.logout = async () => {
 
 ## Step 6: Login with Unstoppable
 
-:::info
-You need a domain in order to use the Login with Unstoppable feature. If you don’t have a domain, you can mint a [test domain](../../getting-started/test-domains/faucet.md) with the self-serve faucet. Or, you can [purchase a domain](https://unstoppabledomains.com) for $5 and mint it to Polygon for free.
-:::
-
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 The following command will run the app. Keep in mind that the credentials will only work if you are on the correct port.
@@ -110,3 +107,5 @@ The following command will run the app. Keep in mind that the credentials will o
 ```shell
 yarn parcel --open --port 5000 index.html
 ```
+
+<embed src="/snippets/_login-paths-next.md" />

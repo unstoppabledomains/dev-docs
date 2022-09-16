@@ -52,11 +52,11 @@ pages:
         pages:
           - label: Overview
             page: resolution-integration-methods/direct-blockchain-calls/bc-overview.md
-          - label: Resolve UD Domains Without Libraries
+          - label: Resolve UD Domains With Direct Blockchain Calls
             page: resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md
-          - label: Resolve .zil Domains Without Libraries
+          - label: Resolve .zil With Direct Blockchain Calls
             page: resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries.md
-          - label: Resolve Domains with Smart Contracts
+          - label: Resolve Domains Using Smart Contracts
             page: resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
   - group: Advanced Resolution Use Cases
@@ -87,6 +87,8 @@ pages:
             page: reference/smart-contracts/cns-smart-contracts.md
       - label: Records Reference
         page: reference/records-reference.md
+      - label: Ethereum Providers
+        page: reference/ethereum-providers.md
     separatorLine: true
   - group: Changelogs
     expanded: false

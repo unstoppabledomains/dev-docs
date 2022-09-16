@@ -5,7 +5,7 @@ description: This page describes how to use the Resolution library to resolve NF
 
 # Resolving Domains in Web Applications
 
-Resolution is a library for interacting with NFT domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md), IPFS hashes for [decentralized websites](/d-websites/index.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
+Resolution is a library for interacting with NFT domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md) and IPFS hashes for [decentralized websites](/d-websites/index.md).
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 

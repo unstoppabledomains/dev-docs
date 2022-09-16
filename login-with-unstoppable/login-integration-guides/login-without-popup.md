@@ -1,6 +1,7 @@
 ---
 title: Login with Unstoppable without Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
+showNextButton: false
 ---
 
 # Login with Unstoppable without Popup
@@ -219,3 +220,5 @@ return (
 :::success Contratulations
 You now have an Login with Unstoppable single-page application without the popup feature. Type `yarn start`/`npm start` to preview your example application with a local server.
 :::
+
+<embed src="/snippets/_login-paths-next.md" />

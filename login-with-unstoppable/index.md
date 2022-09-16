@@ -12,13 +12,9 @@ description: This page provides a high-level overview of the Login with Unstoppa
 <figcaption>Login with Unstoppable Promo</figcaption>
 </figure>
 
-Login with Unstoppable allows an Unstoppable Domain owner to log in and share information with applications, which works for Polygon and Ethereum domains. This allows application developers to learn information about their users (email, for example) without needing to host or maintain their own CRM database. With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users.
+Login with Unstoppable allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
 
-Login with Unstoppable gives users and applications a simple way to solve this problem. This protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and the communities they serve.
-
-:::info
-Login with Unstoppable is currently configured for users to share the email address associated with their UD account. Future updates will allow users to share other metadata such as social profiles and community memberships with their login, as well as receive direct requests from applications to share specialized information.
-:::
+The UAuth protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and their users.
 
 <figure>
 
@@ -29,19 +25,38 @@ Login with Unstoppable is currently configured for users to share the email addr
 
 ## Benefits for Applications
 
-1. Communicate with community members directly via opt-in access to their email addresses.
-2. Avoid hosting a database of user contact information by asking for permissions to access that information only when it's needed.
-3. Request additional data from users, such as social profiles, to further enhance the user experience (future release).
+1. Avoid hosting a database of user contact information by requesting access only when it's needed.
+2. Request additional data from users such as social profiles to further enhance the user experience.
+3. Communicate with users directly via opt-in access and the `@ud.me` proxy email service.
 
 ## Benefits for Users
 
-1. Information sharing is 100% opt-in.
-2. Only one login for every web3 application. No need to remember multiple unique usernames and passwords.
-3. Gives users absolute control over their login credentials (private key), not a corporation.
+1. Maintain absolute control over login credentials.
+2. Sharing personal information is 100% opt-in.
+3. Receive email communications without sharing private email addresses.
+4. Only one login for every web3 app. No need to remember multiple unique usernames and passwords.
+
+## Supported TLDs
+
+Login with Unstoppable currently supports the following top-level domains (TLDs):
+
+- .crypto
+- .nft
+- .blockchain
+- .bitcoin 
+- .coin
+- .wallet 
+- .888 
+- .dao
+- .x 
+- .zil *
+
+:::warning
+\* Login with Unstoppable only supports `.zil` domains that have been bridged to the Polygon blockchain.
+:::
 
 ## Considerations
 
-* Does not support .zil domains
-* Pre-made components are only available initially in React. The modal is written in react, which has a larger library size.
+* The components provided by the UAuth libraries are only available in React. The UAuth modal is written in React, which has a larger library size.
 
 <embed src="/snippets/_developer-survey-embed.md" />

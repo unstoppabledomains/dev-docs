@@ -1,6 +1,7 @@
 ---
 title: Login UI Configuration Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Login UI to obtain user information and display the authenticated user's domain name instead of address.
+showNextButton: false
 ---
 
 import ColorSample from '../../components/color-sample.jsx'
@@ -79,7 +80,19 @@ uauthMoralisConnector.uauth.user().then().catch()
 
 ```
 
-Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
+The `user()` method will return an object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the `"openid wallet"` scopes defined:
+
+```json
+{
+  "sub" : "domain.tld", // The domain used to login
+  "wallet_address" : "0x . . . ", // The Ethereum wallet that owns the domain
+  "wallet_type_hint" : "web3",
+  "eip4361_message" : "identity.unstoppable domains wants you sign in with your Ethereum account: . . . ",
+  "eip4361_signature" : "0x . . . ",
+}
+```
+
+Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the wallet address.
 
 <figure>
 <img src="/images/third-UI-example-login-domains.png" alt="Showing an authenticated user's domain" width="50%"/>
@@ -138,3 +151,9 @@ Or you can download the full set of default [Login With Unstoppable buttons](/im
 :::success Congratulations!
 You just configured the Login with Unstoppable UI.
 :::
+
+<div class="custom-next-to">
+
+[Next to **Promote Your Application**](/login-with-unstoppable/get-started-login.md#step-4-promote-your-application)
+
+</div>

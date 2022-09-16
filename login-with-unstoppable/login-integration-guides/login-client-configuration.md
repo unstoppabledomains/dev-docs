@@ -1,6 +1,7 @@
 ---
 title: Login Client Configuration | Unstoppable Domains Developer Portal
 description: This guide covers the process for configuring the Login with Unstoppable client.
+showNextButton: false
 ---
 
 # Login Client Configuration
@@ -69,19 +70,15 @@ The following table describes the fields for the cosmetic configuration UI secti
 | Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
 | Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
 
-## Step 4: Save Your Changes
+## Step 4: Confirm Your Changes
 
-You must save any changes made to the configuration options before they will take effect. For enhanced security, any changes made to update the application will require a wallet connection and signature.
+You must save any changes made to the configuration options before they will take effect. For enhanced security, changes made to update the application may require a wallet signature.
 
 <figure>
 
-![Save button](/images/login-client-config-save-button.png '#width=60%; margin: auto;')
+![Confirm Changes button](/images/login-client-confirm-changes.png '#width=30%;max-width=200px;min-width=150px')
 
-<p style="padding: 1%" >or</p>
-
-![Save icon](/images/login-client-config-save-icon.png '#width=5%; vertical-align: middle;')
-
-<figcaption>Click the save button</figcaption>
+<figcaption>Click to Confirm Changes</figcaption>
 </figure>
 
 
@@ -158,3 +155,10 @@ This setting configures how to send the client secret to the authorization serve
 :::danger warning
 **Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
 :::
+
+
+<div class="custom-next-to">
+
+[Next to **Choose Your Integration Path**](/login-with-unstoppable/get-started-login#step-2-choose-your-integration-path)
+
+</div>
