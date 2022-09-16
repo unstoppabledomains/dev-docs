@@ -15,7 +15,7 @@ Reverse Resolution works like a phonebook where you would typically search for a
 
 <figure>
 
-![reverse resolution demo](/images/reverse-resolution-etherscan-demo.png "#width=80%;")
+![reverse resolution demo](/images/reverse-resolution-illustration.jpeg "#width=80%;")
 
 <figcaption>Reverse Resolution demo</figcaption>
 </figure>
@@ -30,4 +30,4 @@ Individuals maintain absolute control over their domains and their reverse recor
 
 ## How do I get started?
 
-See the [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md), [Resolution Libraries](/reverse-resolution/integration-guides/resolution-libraries.md), and [Smart Contracts](/reverse-resolution/integration-guides/smart-contracts.md) guides to get started integrating the Reverse Resolution feature into your application. You should also review the [Frequently Asked Questions](/reverse-resolution/reverse-resolution-faq.md) page for answers to common questions you might have.
+See the [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md), [Resolution Libraries](/reverse-resolution/integration-guides/resolution-libraries.md), and [Smart Contracts](/reverse-resolution/integration-guides/smart-contracts.md) guides to get started integrating the Reverse Resolution feature into your application. You should also review the [Frequently Asked Questions](/reverse-resolution/reverse-resolution-faq.md) page for answers to common questions you might have.

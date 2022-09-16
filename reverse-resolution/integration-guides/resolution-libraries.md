@@ -32,8 +32,8 @@ function reverseUrl(address) {
     .catch(console.error);
 }
 
-reverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
-reverseUrl("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+reverseTokenId("0x88bc9b6c56743a38223335fac05825d9355e9f83");
+reverseUrl("0x88bc9b6c56743a38223335fac05825d9355e9f83");
 ```
 
 ```java Java
@@ -42,11 +42,11 @@ import com.unstoppabledomains.resolution.Resolution;
 Resolution resolution = new Resolution();
 
 // tokenId consists the namehash of the domain with reverse resolution to that address
-String tokenId = resolution.getReverseTokenId("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+String tokenId = resolution.getReverseTokenId("0x88bc9b6c56743a38223335fac05825d9355e9f83");
 
 // domain consists of the domain with reverse resolution to that address
 // use this domain in your application
-String domain = resolution.getReverse("0xcb9c0e0Cd1949a42C4F876C384647aD652a95886");
+String domain = resolution.getReverse("0x88bc9b6c56743a38223335fac05825d9355e9f83");
 ```
 
 ```swift Swift
@@ -58,7 +58,7 @@ guard let resolution = try? Resolution() else {
 }
 
 // tokenId consists the namehash of the domain with reverse resolution to that address
-resolution.reverseTokenId(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", location: nil) { (result) in
+resolution.reverseTokenId(address: "0x88bc9b6c56743a38223335fac05825d9355e9f83", location: nil) { (result) in
     switch result {
         case .success(let returnValue):
             let tokenId = returnValue
@@ -69,7 +69,7 @@ resolution.reverseTokenId(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886",
 
 // domain consists of the domain with reverse resolution to that address
 // use this domain in your application
-resolution.reverse(address: "0xcb9c0e0Cd1949a42C4F876C384647aD652a95886", location: nil) { (result) in
+resolution.reverse(address: "0x88bc9b6c56743a38223335fac05825d9355e9f83", location: nil) { (result) in
     switch result {
     case .success(let returnValue):
         let domain = returnValue
