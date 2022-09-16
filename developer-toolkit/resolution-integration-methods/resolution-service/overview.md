@@ -34,11 +34,13 @@ The API key provided by Unstoppable Domains is free to acquire (no cost to open 
 
 ### Making Requests to the Resolution Service
 
-All HTTP requests made to the Resolution Service API must contain the following headers:
+The Resolution Service API uses bearer tokens to authorize requests with the API key gotten from Unstoppable Domains.
 
-| Header Name | Description |
+| Field Name | Value |
 | - | - |
-| API KEY | The Unstoppable Domains API key as a string |
+| Security Scheme Type | HTTP |
+| HTTP Authorization Scheme | bearer |
+| Bearer Format | a token provided by Unstoppable Domains |
 
 ## API Endpoints Spec
 
