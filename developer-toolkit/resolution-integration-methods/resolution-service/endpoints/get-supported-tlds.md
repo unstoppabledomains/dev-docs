@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get supported TLDs` end
 # Get Supported TLDs
 
 ```
-GET https://resolve.unstoppabledomains.com/supported_tlds
+https://resolve.unstoppabledomains.com/supported_tlds
 ```
 
 This endpoint returns all the domain endings provided and supported by Unstoppable Domains.
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -22,6 +26,8 @@ This endpoint returns all the domain endings provided and supported by Unstoppab
 ## Returns
 
 An object with a `tlds` field which contains a list of domain endings supported by Unstoppable Domains.
+
+* `tlds`: (array) An array of the domain endings supported by Unstoppable Domains.
 
 ## Example
 

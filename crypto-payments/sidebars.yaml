@@ -20,7 +20,7 @@ pages:
   - group: Integrate Crypto Payments Using Libraries
     expanded: false
     pages:
-      - label: Libraries Overview
+      - label: Overview
         href: /developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/
         external: true
       - label: Resolution

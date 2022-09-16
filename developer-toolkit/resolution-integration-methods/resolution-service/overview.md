@@ -1,6 +1,6 @@
 ---
 title: Resolution Service API | Unstoppable Domains Developer Portal
-description: This page covers the resolution service API feature for Unstoppable domains hosted by Alchemy.
+description: This page provides a high-level overview of the Resolution Service API hosted by Unstoppable Domains.
 ---
 
 # Resolution Service API
@@ -22,33 +22,27 @@ The Resolution Service API supports decentralized domains across two main zones:
 <embed src="/snippets/_new_tld_warning.md" />
 :::
 
-## Getting Started With Alchemy
+## Getting Started With the Resolution Service
 
-### Generating an API Key
+### Acquire an API Key
 
-Before being able to make any requests to the API, you must create an API key via the [Alchemy dashboard](https://dashboard.alchemyapi.io/).
+Before being able to make any requests to the Resolution Service API, you must acquire an API key from Unstoppable Domains. Please email <partnerengineering@unstoppabledomains.com> to request an API key for your integration.
 
 :::info
-The API key provided by Alchemy is free and effectively unlimited (no cost to open source projects). However, storing the keys in a secret manager or environment variables for open-source projects like other third-party APIs is advisable.
+The API key provided by Unstoppable Domains is free to acquire (no cost to open source projects). However, storing the keys in a secret manager or environment variables for open-source projects like other third-party APIs is advisable.
 :::
 
-### Making Requests to the API
+### Making Requests to the Resolution Service
 
-All requests made to the Resolution Service API must contain the following headers:
+All HTTP requests made to the Resolution Service API must contain the following headers:
 
 | Header Name | Description |
 | - | - |
-| API KEY | The Alchemy API key as a string |
-
-### Quickstart Guide
-
-Here’s a guide on setting up your Alchemy account and querying the Unstoppable Domains Resolution Service API.
-
-<div class="video-container">
-<iframe src="https://www.loom.com/embed/7cd5398275e74d8ba024323985cd90c7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
+| API KEY | The Unstoppable Domains API key as a string |
 
 ## API Endpoints Spec
+
+Below is a table of all the API endpoints provided by the Resolution Service, a short description of their function, and links to their respective documentation.
 
 | Endpoint | Short Description | Documentation |
 | - | - | - |
