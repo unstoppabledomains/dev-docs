@@ -1,5 +1,5 @@
 ---
-title: [UD Product] Integration Guide | Unstoppable Domains Developer Portal
+title: Integration Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to [do something] with [UD Product] using [Integration Pathway].
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: [UD Product] API Endpoints Spec | Unstoppable Domains Developer Portal
+title: API Endpoints Spec | Unstoppable Domains Developer Portal
 description: This page highlights the API endpoints provided by [UD Product], gives a short description of their function and contains links to their respective documentation.
 ---
 

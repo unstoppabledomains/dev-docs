@@ -1,5 +1,5 @@
 ---
-title: [UD Product] FAQs | Unstoppable Domains Developer Portal
+title: Frequently Asked Questions | Unstoppable Domains Developer Portal
 description: Frequently asked questions about [UD Product].
 ---
 
