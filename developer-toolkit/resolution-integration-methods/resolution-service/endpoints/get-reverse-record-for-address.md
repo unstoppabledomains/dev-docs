@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get reverse record for 
 # Get Reverse Record for an Address
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/reverse/<wallet address>
+https://resolve.unstoppabledomains.com/reverse/<wallet address>
 ```
 
 This endpoint will return the reverse record of the wallet address and all the domain name records and domain metadata in a single response.
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -37,17 +41,17 @@ A single object with the following fields:
         * 80001 - Polygon (Matic) Mumbai Testnet
         * 4 - Ethereum Rinkeby Testnet
         * 5 - Ethereum Goerli Testnet
-* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](../../records-reference.md) documentation.
+* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 
 ## Example
 
-Here is an example request to query for the reverse record for the `"0xcb9c0e0Cd1949a42C4F876C384647aD652a95886"` wallet address:
+Here is an example request to query for the reverse record for the `"0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19"` wallet address:
 
 ### Request
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/reverse/0xcb9c0e0Cd1949a42C4F876C384647aD652a95886" \
+--request GET "https://resolve.unstoppabledomains.com/reverse/0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -56,15 +60,17 @@ curl \
 ```json
 {
   "meta": {
-    "domain": "brad.crypto",
-    "owner": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
-    "resolver": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe",
-    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe",
-    "blockchain": "ETH",
-    "networkId": 1337,
+    "domain": "reseller-test-udtesting-034215839398.crypto",
+    "blockchain": "MATIC",
+    "networkId": 137,
+    "owner": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19",
+    "resolver": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
+    "registry": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f"
   },
   "records": {
-    "crypto.ETH.address": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
+    "crypto.ETH.address": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19",
+    "crypto.MATIC.version.ERC20.address": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19",
+    "crypto.MATIC.version.MATIC.address": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19"
   }
 }
 ```
