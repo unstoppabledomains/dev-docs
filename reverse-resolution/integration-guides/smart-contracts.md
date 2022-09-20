@@ -31,7 +31,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ## Step 3: Retrieve the Reverse Record
 
-The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured reverse resolution to that address.
+The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured Reverse Resolution to that address.
 
 <figure>
 
@@ -108,18 +108,18 @@ const proxyReaderContract = new ethers.Contract(
   provider
 );
 
-const address = "0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19";
+const address = "0x88bc9b6c56743a38223335fac05825d9355e9f83";
 
 const reverseResolutionTokenId = await proxyReaderContract.reverseOf(address);
 fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
   .then(response => response.json())
   .then(data => console.log(data.name));
 
-// lordghostx.wallet
+// jim-unstoppable.x
 ```
 
 :::success Congratulations
-You have successfully integrated reverse resolution using smart contracts. Happy Hacking!
+You have successfully integrated Reverse Resolution using smart contracts. Happy Hacking!
 :::
 
 <embed src="/snippets/_discord.md" />

@@ -2,7 +2,7 @@ pages:
   - separator: Send and Receive Crypto Payments
     separatorLine: true
   - page: index.md
-    label: Getting Started with Payments
+    label: Getting Started With Crypto Payments
     separatorLine: true
   - group: Integrate Crypto Payments Using the Resolution API
     expanded: false
@@ -20,7 +20,7 @@ pages:
   - group: Integrate Crypto Payments Using Libraries
     expanded: false
     pages:
-      - label: Libraries Overview
+      - label: Overview
         href: /developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/
         external: true
       - label: Resolution

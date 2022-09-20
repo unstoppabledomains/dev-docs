@@ -26,7 +26,7 @@ To make domain resolution easier, we've written libraries for web, Android, and 
 
 If you're familiar with blockchain development and would rather avoid an additional dependency in your application, you can also read domain metadata directly.
 
-* [Resolve .crypto With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md)
+* [Resolve Unstoppable Domains With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md)
 * [Resolve .zil With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries.md)
 * [Resolve Using Smart Contracts](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md)
 * [CNS Smart Contracts reference](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md)

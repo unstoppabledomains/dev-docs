@@ -13,7 +13,7 @@ You've reached the developer toolkit. Here's a guide to get you up and running.
 
 ## Resolution Service API
 
-For our Alchemy-hosted web API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md). The Unstoppable Domains team manages this service.
+For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md). The Unstoppable Domains team manages this service.
 
 ## Resolution Libraries
 
@@ -25,7 +25,7 @@ For an Unstoppable-managed, blockchain-agnostic command-line interface for resol
 
 ## Resolve With Direct Blockchain Calls
 
-For developers who want more direct, low-level control over domain resolution, see the [Resolve With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview.md) guide. This will require updates to any integration to reflect future changes in Unstoppable resolution services, such as new domain endings.
+For developers who want more direct, low-level control over domain resolution, see the [Resolve With Direct Blockchain Calls](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview.md) guide. This will require updates to any integration to reflect future changes in Unstoppable's resolution services, such as new domain endings.
 
 ## Resolve Using Matic.js SDK
 

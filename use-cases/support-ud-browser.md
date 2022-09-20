@@ -5,7 +5,7 @@ description: This page outlines the use case for supporting Unstoppable Domains 
 
 # Support Unstoppable Domains in Your Web Browser
 
-This page outlines the use case for supporting Unstoppable Domains in my web browser, which allows users of your browser to create and view decentralized websites.
+This page outlines the use case for supporting Unstoppable Domains in my web browser, allowing users of your browser to create and view decentralized websites.
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_aIf4Nac6DU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -17,7 +17,7 @@ The website is decentralized by being created on the Ethereum blockchain, and th
 
 ## Who controls the content?
 
-Individuals control their own content and identity with a decentralized website. This means that no one can delete content (such as blogs, podcasts, artwork, social media) or move it around other than the domain owner.
+Individuals control their content and identity with a decentralized website. No one can delete content (such as blogs, podcasts, artwork, or social media) or move it around other than the domain owner.
 
 ## Are there working integrations for this feature?
 

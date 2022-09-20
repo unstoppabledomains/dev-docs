@@ -6,10 +6,14 @@ description: This page covers the documentation for the `Get Records for Owner A
 # Get Records for Owner Addresses
 
 ```
-GET https://unstoppabledomains.g.alchemy.com/domains
+https://resolve.unstoppabledomains.com/domains
 ```
 
-Request domain name records and metadata when given single or multiple owner addresses or configured to a resolution record.
+This endpoint returns the domain name records and metadata owned by wallet addresses or configured to a resolution record.
+
+## Request Method
+
+* GET
 
 ## URL Params
 
@@ -24,11 +28,8 @@ Request domain name records and metadata when given single or multiple owner add
 | tlds | ARRAY[STRING] | NO | A list of domain endings the response should be filtered with. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 | sortBy | STRING | NO | The field to use for sorting of the response. Currently supports `id` (domain ID), `name` (domain name alphabetically), and `created_at` (domain creation date) |
 | sortDirection | STRING | NO | The order to use for sorting of the response. Currently supports `ASC` (ascending) and `DESC` (descending) |
-| startingAfter | STRING | NO | The API will skip the results before this value in the response. Value depends on `sortBy` value |
-
-:::info
-Your request must contain an instance of the `owners` or `resolution` query params. The `owners` param lets you filter domains by their owner address, while the `resolution` param lets you filter domains by their resolution records.
-:::
+| perPage | NUMBER | NO | The number of results to return per response page. Must be a value between 1 and 200 |
+| startingAfter | STRING | NO | The API will skip the results before this value in the response. This value depends on the `nextStartingAfter` response field |
 
 :::info
 If your request must include multiple `owners` or `tlds`, you need to use a new `owners` or `tlds` query param instance for each wallet address and TLD.
@@ -36,7 +37,7 @@ If your request must include multiple `owners` or `tlds`, you need to use a new 
 
 ## Returns
 
-An object with a `data` field contains a list of domain details and some meta about the request.
+An object with a `data` field that contains a list of domain details and some meta about the request.
 
 * `data`: (array) An array with the data and metadata of domains owned by a wallet address.
     * `id`: (string) The domain ID.
@@ -59,7 +60,7 @@ Here is an example request to query for the records and metadata for two owner a
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
+--request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -120,7 +121,7 @@ The response has more data that is not included on the first page, so the query 
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&startingAfter=556766" \
+--request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&startingAfter=556766" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -134,7 +135,7 @@ Here is an example request to query for the domains with a resolution record:
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y" \
+--request GET "https://resolve.unstoppabledomains.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -207,7 +208,7 @@ Here is an example request to query for the records and metadata of domains with
 
 ```bash
 curl \
---request GET "https://unstoppabledomains.g.alchemy.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
+--request GET "https://resolve.unstoppabledomains.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 

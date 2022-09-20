@@ -22,6 +22,8 @@ pages:
                 page: resolution-integration-methods/resolution-service/endpoints/get-records-for-owner-addresses.md
               - label: Get Domain Transfer Events
                 page: resolution-integration-methods/resolution-service/endpoints/get-domain-transfer-events.md
+              - label: Get Reverse Record for an Address
+                page: resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md
               - label: Get Supported TLDs
                 page: resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md
           - label: Error Codes
