@@ -160,9 +160,6 @@
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/stripe-payments-guide':
   to: '/partner/partner-integration-guides/stripe-payments/'
   type: 301
-'/sell-domains-to-users-in-my-app/reseller-integration-guides/coinbase-payments-guide':
-  to: '/partner/partner-integration-guides/coinbase-payments/'
-  type: 301
 '/sell-domains-to-users-in-my-app/reseller-integration-guides/claim-free-domains-guide':
   to: '/partner/partner-integration-guides/mint-free-domains/'
   type: 301
@@ -222,9 +219,6 @@
   type: 301
 '/reseller/reseller-integration-guides/stripe-payments/':
   to: '/partner/partner-integration-guides/stripe-payments/'
-  type: 301
-'/reseller/reseller-integration-guides/coinbase-payments/':
-  to: '/partner/partner-integration-guides/coinbase-payments/'
   type: 301
 '/reseller/reseller-integration-guides/redirect-url-payments/':
   to: '/partner/partner-integration-guides/redirect-url-payments/'

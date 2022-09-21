@@ -17,7 +17,7 @@ Before beginning the integration process for Unstoppable's Partner API, you must
 
 ## Step 2: Locate Your Reseller ID
 
-To integrate free or paid domain minting (via Stripe, Coinbase, Redirect URL, etc.) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner Dashboard](https://unstoppabledomains.com/resellers).
+To integrate free or paid domain minting (via Stripe or Redirect URLs) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner Dashboard](https://unstoppabledomains.com/resellers).
 
 <figure>
 
@@ -34,7 +34,6 @@ There are several ways to integrate with Unstoppable's Partner API, detailed in 
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](partner-integration-guides/mint-free-domains.md)       |
 | Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](partner-integration-guides/stripe-payments.md)             |
-| Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](partner-integration-guides/coinbase-payments.md)         |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](partner-integration-guides/redirect-url-payments.md) |
 
 :::info

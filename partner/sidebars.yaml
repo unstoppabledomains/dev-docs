@@ -19,8 +19,6 @@ pages:
         label: Free Domain Minting Guide
       - page: partner-integration-guides/stripe-payments.md
         label: Stripe Payments Guide
-      - page: partner-integration-guides/coinbase-payments.md
-        label: Coinbase Payments Guide
       - page: partner-integration-guides/redirect-url-payments.md
         label: Redirect URL Payments Guide
     separatorLine: true

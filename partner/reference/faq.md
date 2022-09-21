@@ -13,10 +13,6 @@ You would be able to put in an order, but no crypto records would be available t
 
 Yes, you should create a Stripe token using your Stripe details. Please note that this token is single-use.
 
-### How are the funds collected for Coinbase payments?
-
-Unstoppable Domains creates the Coinbase charge using the partner details.
-
 ### What are the requirements for a domain to be "free"?
 
 An account manager from the BD team establishes the terms and conditions (T&Cs) with the partner, including the allowed TLDs, allowed tiers, and pricing. This information is used to configure the partner account for selling and minting free domains. Tiers are usually defined by domain length and the presence of dictionary words.

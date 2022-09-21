@@ -5,7 +5,7 @@ description: This guide covers the process for configuring the Partner account t
 
 # Redirect URL Payments Guide
 
-The Redirect URL payment flow is the easiest payment process to implement for partners. Partners do not have to setup native paid domain flows, using Stripe or Coinbase, and can instead just generate a URL to redirect payments to Unstoppable Domains to be processed.
+The Redirect URL payment flow is the easiest payment process to implement for partners. Partners do not have to setup native paid domain flows using Stripe and can instead just generate a URL to redirect payments to Unstoppable Domains to be processed.
 
 Basically, in this case, the partner acts like an "affiliate". Partners redirect their users to the UD website where users can purchase domains and the partner receives a commission (% of the sale).
 
