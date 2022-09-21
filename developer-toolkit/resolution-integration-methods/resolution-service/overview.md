@@ -48,10 +48,11 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 
 | Endpoint | Short Description | Documentation |
 | - | - | - |
-| Get records for a domain | returns all the records attached to a domain name. | [Get Domain Records Docs](endpoints/get-records-for-a-domain.md) |
-| Get records for owner addresses | returns all the domain names, records, and metadata owned by a wallet address or configured to a resolution record. | [Get Records for Owner Docs](endpoints/get-records-for-owner-addresses.md) |
-| Get domain transfer events | returns the transfer history of a domain name. | [Get Domain Transfers Docs](endpoints/get-domain-transfer-events.md) |
-| Get reverse record for an address | returns the reverse record of a wallet address. | [Get Reverse Record for an Address Docs](endpoints/get-reverse-record-for-address.md) |
-| Get supported TLDs | returns all the domain endings supported by Unstoppable Domains. | [Get Supported TLDs Docs](endpoints/get-supported-tlds.md) |
+| Get Records for a Domain | returns all the records attached to a domain name. | [Get Records for a Domain Docs](endpoints/get-records-for-a-domain.md) |
+| Get Records for Multiple Domains | returns all the records attached to multiple domain names. | [Get Records for Multiple Domains Docs](endpoints/get-records-for-multiple-domains.md) |
+| Get Records for Owner Addresses | returns all the domain names, records, and metadata owned by a wallet address or configured to a resolution record. | [Get Records for Owner Addresses Docs](endpoints/get-records-for-owner-addresses.md) |
+| Get Domain Transfer Events | returns the transfer history of a domain name. | [Get Domain Transfers Docs](endpoints/get-domain-transfer-events.md) |
+| Get Reverse Record for an Address | returns the reverse record of a wallet address. | [Get Reverse Record for an Address Docs](endpoints/get-reverse-record-for-address.md) |
+| Get Supported TLDs | returns all the domain endings supported by Unstoppable Domains. | [Get Supported TLDs Docs](endpoints/get-supported-tlds.md) |
 
 <embed src="/snippets/_discord.md" />

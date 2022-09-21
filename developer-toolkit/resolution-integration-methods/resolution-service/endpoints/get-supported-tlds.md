@@ -1,6 +1,6 @@
 ---
 title: Get Supported TLDs | Unstoppable Domains Developer Portal
-description: This page covers the documentation for the `Get supported TLDs` endpoint.
+description: This page covers the documentation for the `Get Supported TLDs` endpoint.
 ---
 
 # Get Supported TLDs

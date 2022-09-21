@@ -60,7 +60,7 @@ Here is an example request to query for the records and metadata for two owner a
 
 ```bash
 curl \
---request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
+--request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&sortBy=id&sortDirection=DESC&perPage=2" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -121,7 +121,7 @@ The response has more data that is not included on the first page, so the query 
 
 ```bash
 curl \
---request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&sortBy=id&sortDirection=DESC&perPage=2&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&startingAfter=556766" \
+--request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&sortBy=id&sortDirection=DESC&perPage=2&startingAfter=556766" \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 

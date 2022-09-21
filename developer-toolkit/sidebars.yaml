@@ -18,6 +18,8 @@ pages:
             pages:
               - label: Get Records for a Domain
                 page: resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain.md
+              - label: Get Records for Multiple Domains
+                page: resolution-integration-methods/resolution-service/endpoints/get-records-for-multiple-domains.md
               - label: Get Records for Owner Addresses
                 page: resolution-integration-methods/resolution-service/endpoints/get-records-for-owner-addresses.md
               - label: Get Domain Transfer Events

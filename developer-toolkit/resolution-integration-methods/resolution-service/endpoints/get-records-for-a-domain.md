@@ -1,6 +1,6 @@
 ---
 title: Get Records for a Domain | Unstoppable Domains Developer Portal
-description: This page covers the documentation for the `Get records for a domain` endpoint.
+description: This page covers the documentation for the `Get Records for a Domain` endpoint.
 ---
 
 # Get Records for a Domain
@@ -20,10 +20,6 @@ This endpoint returns all the resolution records configured to a domain in a sin
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
-
-:::info
-The Resolution Service will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
-:::
 
 ## Query Params
 

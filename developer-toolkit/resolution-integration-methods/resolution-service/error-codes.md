@@ -21,7 +21,9 @@ Below is a list of all the error codes you might encounter when using the Resolu
 }
 ```
 
-The resolution service will not return an error in the case of an invalid or unsupported domain ending to simplify communication.
+:::info
+The Resolution Service API will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
+:::
 
 ## 400 Error: Bad Request
 

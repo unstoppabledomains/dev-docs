@@ -1,6 +1,6 @@
 ---
 title: Get Domain Transfer Events | Unstoppable Domains Developer Portal
-description: This page covers the documentation for the `Get domain transfer events` endpoint.
+description: This page covers the documentation for the `Get Domain Transfer Events` endpoint.
 ---
 
 # Get Domain Transfer Events
@@ -20,10 +20,6 @@ This endpoint tracks the blocks and blockchains domain names are being transferr
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
-
-:::info
-The Resolution Service will not return an error in the case of an invalid domain or unsupported domain ending to simplify communication.
-:::
 
 ## Query Params
 

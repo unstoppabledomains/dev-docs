@@ -1,6 +1,6 @@
 ---
 title: Get Reverse Record for an Address | Unstoppable Domains Developer Portal
-description: This page covers the documentation for the `Get reverse record for an address` endpoint.
+description: This page covers the documentation for the `Get Reverse Record for an Address` endpoint.
 ---
 
 # Get Reverse Record for an Address
