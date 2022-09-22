@@ -14,7 +14,7 @@ The `Client` class is the default export for the `@uauth/js` package.
 ### constructor
 
 ```javascript
-constructor(options: ClientOptions) {}
+constructor(options: ClientOptions)
 
 const uauth = new Client(options);
 ```
@@ -25,8 +25,8 @@ Initiates UAuth authentication with an auth server redirect and callback flow. W
 
 ```typescript
 async login(
-        options: Partial<LoginOptions> = {}
-    ): Promise<void>
+    options: Partial<LoginOptions> = {}
+): Promise<void>
 ```
 
 ### loginWithPopUp()
@@ -35,9 +35,9 @@ Initiates UAuth authentication with a React popup flow.
 
 ```typescript
 async loginWithPopup(
-        options: Partial<Omit<LoginOptions, 'responseMode'>> = {},
-        config?: PopupConfig,
-    ): Promise<Authorization>
+    options: Partial<Omit<LoginOptions, 'responseMode'>> = {},
+    config?: PopupConfig,
+): Promise<Authorization>
 ```
 
 ### loginCallback()
@@ -46,8 +46,8 @@ Parses the authorization code and application state after [login()](#login) has 
 
 ```typescript
 async loginCallback<T>(
-        options?: Partial<LoginCallbackOptions>,
-    ): Promise<LoginCallbackResponse<T>>
+    options?: Partial<LoginCallbackOptions>,
+): Promise<LoginCallbackResponse<T>>
 ```
 
 ### user()
@@ -56,6 +56,29 @@ Returns the [UserInfo](#userinfo) associated with the current UAuth instance.
 
 ```typescript
 async user(options: UserOptions = {}): Promise<UserInfo>
+```
+
+### getVerifiedAccounts()
+
+Retrieves all verified accounts associated with an authorized domain, with optional symbol filtering. Allows a dapp to request only the verified accounts they are interested in.
+
+```typescript
+getVerifiedAccounts(
+  authorization: Authorization, 
+  symbols: string[] = []
+): VerifiedAddress[]
+```
+
+### getAuthorizationAccount
+
+Retrieves the account that authorized a login request.
+
+```typescript
+getAuthorizationAccount(
+    authorization: Authorization, 
+    type = 'sig', 
+    version = 'v1'
+): VerifiedAddress | undefined
 ```
 
 ### logout()
@@ -69,7 +92,7 @@ async logout({
     scope,
     resource,
     ...options
-  }: Partial<LogoutOptions> = {}): Promise<void>
+}: Partial<LogoutOptions> = {}): Promise<void>
 ```
 
 ## ClientOptions
@@ -133,7 +156,7 @@ interface LoginOptions {
 
 ## Authorization
 
-The authorization object returned by [loginWithPopup()](#loginwithpopup) and [loginCallback()](#logincallback).
+The login authorization returned by [loginWithPopup()](#loginwithpopup) and [loginCallback()](#logincallback).
 
 ```typescript
 interface Authorization {
@@ -248,5 +271,18 @@ interface UserInfo {
             
 // Partial<HumanityCheckClaims> { sub: string }
   humanity_check_id: string
+}
+```
+
+## VerifiedAddress
+
+Defines a verified address associated with an authorized domain. Returned by [getVerifiedAccounts()](#getverifiedaccounts) and [getAuthorizationAccount()](#getauthorizationaccount).
+
+```typescript
+interface VerifiedAddress {
+  address: string
+  message: string
+  signature: string
+  symbol: string
 }
 ```
