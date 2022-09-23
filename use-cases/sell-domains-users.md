@@ -15,10 +15,6 @@ We will provide you with several tools to establish yourself as an official Unst
 
 Blockchain.com is our most recent UD Partner. Blockchain.com has 31 million users who can purchase free and paid Unstoppable Domains directly in Blockchain.com's application.
 
-<div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fmRlMRHC81Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 You can find additional working integrations on UD's Applications List, filtered by the [Partner feature](https://unstoppabledomains.com/apps?filters=4).
 
 ## How do I get started?
