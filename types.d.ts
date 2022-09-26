@@ -20,28 +20,31 @@ interface Breakpoints {
   large: string;
 }
 
+interface TextColors {
+  main: string;
+  contrastText: string;
+  dark: string,
+  light: string
+};
+
 interface Colors {
   background: string;
   navbar: {
     gradient: string;
   };
-  primary: {
-    main: string;
-    contrastText: string;
-  };
-  secondary: {
-    main: string;
-    contrastText: string;
-  };
+  primary: TextColors
+  secondary: TextColors
   tonalOffset: number;
-  // errors: string,
-  // warning: string,
-  // info: string,
-  // success: string,
+  errors: TextColors
+  warning: TextColors
+  info: TextColors
+  success: TextColors
+
   text: {
     primary: string;
     secondary: string;
   };
+  
   http: {
     get: string;
     post: string;

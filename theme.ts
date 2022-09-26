@@ -1,5 +1,6 @@
 import { darken, lighten, readableColor } from 'polished';
 import { Colors, Theme, Typography } from './types';
+import lightTheme from '@unstoppabledomains/ui-kit/styles';
 
 export const theme = {
   // spacing: {
@@ -7,27 +8,24 @@ export const theme = {
   //   sectionHorizontal: ({ spacing }) => spacing.unit * 8,
   //   sectionVertical: ({ spacing }) => spacing.unit * 8,
   // },
-  // breakpoints: {
-  //   xs: 0,
-  //   small: '550px',
-  //   medium: '900px',
-  //   large: '1200px',
+
+  //breakpoints: {
+  // xs: lightTheme.breakpoints.values.xs + (lightTheme.breakpoints.unit || 'px'),
+  //   small: lightTheme.breakpoints.values.sm + (lightTheme.breakpoints.unit || 'px'),
+  //   medium: lightTheme.breakpoints.values.md + (lightTheme.breakpoints.unit || 'px'),
+  //   large: lightTheme.breakpoints.values.lg + (lightTheme.breakpoints.unit || 'px'),
   // },
+
   colors: {
-    tonalOffset: 0.3,
-    primary: {
-      main: '#0D67FE',
-      light: ({ colors }: {colors: Colors }) => lighten(colors.tonalOffset, colors.primary.main),
-      dark: ({ colors }: {colors: Colors })  => darken(colors.tonalOffset, colors.primary.main),
-      contrastText: ({ colors }: {colors: Colors })  => readableColor(colors.primary.main),
-    },
-    secondary: {
-      main: '#ffffff',
-    },
-    text: {
-      primary: '#424242',
-      secondary: '#0D67FE',
-    },
+    tonalOffset: lightTheme.palette.tonalOffset,
+    primary: lightTheme.palette.primary,
+    secondary: lightTheme.palette.secondary,
+    text: lightTheme.palette.text,
+    success: lightTheme.palette.success,
+    warning: lightTheme.palette.warning,
+    error: lightTheme.palette.error,
+    info: lightTheme.palette.info,
+
     // border: {
     //   dark: 'rgba(0,0,0, 0.15)',
     //   light: '#ffffff',
@@ -62,18 +60,19 @@ export const theme = {
       head: '#c167e4',
     },
    navbar: {
-      main: ({ colors }: {colors: Colors })  => colors.secondary.main,
-      contrastText: 'black'
+      main: ({ colors }: {colors: Colors })  => colors.background,
+      contrastText: ({ colors }: {colors: Colors })  => colors.text.primary,
      },
      footer: {
-       main: '#E4E7EB',
-       contrastText: 'black'
+      main: ({ colors }: {colors: Colors })  => colors.background,
+      contrastText: ({ colors }: {colors: Colors })  => colors.text.primary,
      },
  //    buttonColor: {
  //     main: '#E4E7EB',
  //     contrastText: 'black'
-//     }, custom button color for portal homepage, not being used
+//     },
   },
+
   sidebar: {
     backgroundColor: '#fafafa',
     width: '260px',
@@ -83,68 +82,51 @@ export const theme = {
   // },
 
   typography: {
-    fontSize: '18px',
+    fontSize: lightTheme.typography.fontSize,
     lineHeight: '1.5em',
-    fontWeightRegular: '400',
-    fontWeightBold: '600',
-    fontWeightLight: '300',
-    fontFamily: '"Source Sans Pro", sans-serif',
+    fontWeightRegular: lightTheme.typography.fontWeightRegular,
+    fontWeightBold: lightTheme.typography.fontWeightBold,
+    fontWeightLight: lightTheme.typography.fontWeightLight,
+    fontFamily: lightTheme.typography.fontFamily,
     headings: {
-      fontFamily: '"Source Sans Pro", sans-serif',
-      fontWeight: '600',
+      fontFamily: lightTheme.typography.fontFamily,
+      fontWeight: '700',
     },
-    heading1: {
-    //   fontSize: '1.85714em',
-    //   fontWeight: '600',
-    //   fontFamily: ({ typography }) => typography.headings.fontFamily,
-    //   lineHeight: ({ typography }) => typography.lineHeight,
-       color:({ colors }: {colors: Colors })  => colors.text.secondary,
-       capitalize: true,
-     },
+    
+    heading1: lightTheme.typography.h1,
+    // heading2: lightTheme.typography.h2,
+    // heading3: lightTheme.typography.h3,
+    // heading4: lightTheme.typography.h4,
+    // heading5: lightTheme.typography.h5,
+    // heading6: lightTheme.typography.h6,
     heading2: {
-    //   fontSize: '1.57143em',
-    //   fontWeight: '600',
        color: ({ colors }: {colors: Colors })  => colors.text.secondary,
-    //   fontFamily: ({ typography }) => typography.headings.fontFamily,
-    //   lineHeight: ({ typography }) => typography.lineHeight,
-    //   capitalize: false,
-     },
-    heading3: {
-    //   fontSize: '1.27em',
-    //   fontWeight: '600',
-      color: ({ colors }: {colors: Colors })  => lighten(0.2, colors.text.secondary),
-    //   fontFamily: ({ typography }) => typography.headings.fontFamily,
-    //   lineHeight: ({ typography }) => typography.lineHeight,
-    //   capitalize: false,
     },
-    // heading4: {
-    // // ...
-    // },
-    // heading5: {
-    // // ...
-    // },
-    // heading6: {
-    // // ...
-    // },
+    heading3: {
+      color: ({ colors }: {colors: Colors })  => lighten(colors.tonalOffset, colors.text.secondary),
+    },
+
     code: {
       fontSize: '13px',
-      fontFamily: '"Source Code Pro", sans-serif',
-      // fontWeight: ({ typography }) => typography.fontWeightRegular,
+      fontFamily: '"Source Code Pro", monospace',
       color: '#e53935',
       backgroundColor: 'rgba(38, 50, 56, 0.04)',
       wrap: false,
     },
+
     links: {
-      color: ({ colors }: {colors: Colors })  => colors.text.secondary,
-      visited: ({ typography }: { typography: Typography }) => typography.links.color,
-      hover: ({ typography }: { typography: Typography }) => lighten(0.3, typography.links.color),
+      color: lightTheme.palette.link.main,
+      visited: lightTheme.palette.link.dark || darken(lightTheme.palette.tonalOffset, lightTheme.palette.link.main),
+      hover: lightTheme.palette.link.light || lighten(lightTheme.palette.tonalOffset, lightTheme.palette.link.main),
     },
   },
+
   rightPanel: {
     backgroundColor: '#263238',
     width: '40%',
     // textColor: '#ffffff',
   },
+  
   schema: {
     nestedBackground: '#fafafa',
     // linesColor: theme => lighten( theme.colors.tonalOffset, desaturate(theme.colors.tonalOffset, theme.colors.primary.main) ),
@@ -163,44 +145,45 @@ export const theme = {
   //   backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
   //   tokens: {},
   // },
+
   components: {
     alert: {
       variants: {
         info: {
-          backgroundColor: '#F5F7F9',
+          backgroundColor: ({ colors }: {colors: Colors })  => lightTheme.palette.greyShades[50],//'#F5F7F9',
           textColor: ({ colors }: {colors: Colors }) => colors.text.primary,
           headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
-          iconColor: '#3455DB',
+          iconColor: ({ colors }: {colors: Colors })  => lightTheme.palette.iceBlue,//'#3455DB',
           // icon: '<svg ...',
         },
         attention: {
-          backgroundColor: '#F5F7F9',
+          backgroundColor: lightTheme.palette.blueGreyShades[50],//'#F5F7F9',
           textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
-          iconColor: '#3455DB',
+          iconColor: ({ colors }: {colors: Colors }) => colors.primary.main,//'#3455DB',
           // icon: '<svg ...',
       },
         warning: {
-          backgroundColor: '#F5F7F9',
+          backgroundColor: ({ colors }: {colors: Colors })  => lightTheme.palette.greyShades[50],//'#F5F7F9',
           textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
-          iconColor: '#D4AD03',
+          iconColor: ({ colors }: {colors: Colors })  => colors.warning.main,//'#D4AD03',
           // icon: '<svg ...',
       },
         danger: {
-          backgroundColor: '#F5F7F9',
+          backgroundColor: lightTheme.palette.greyShades[50],
           textColor: ({ colors }: {colors: Colors })  => colors.text.primary,
           headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
-          iconColor: '#E53935',
+          iconColor: lightTheme.palette.dangerShades[700],//'#E53935',
           // icon: '<svg ...',
       },
         success: {
-          backgroundColor: '#F5F7F9',
+          backgroundColor: ({ colors }: {colors: Colors })  => lightTheme.palette.greyShades[50],//'#F5F7F9',
           textColor:({ colors }: {colors: Colors })  => colors.text.primary,
           headingColor: ({ colors }: {colors: Colors })  => colors.text.primary,
-          iconColor: '#03AD13',
+          iconColor: ({ colors }: {colors: Colors })  => colors.success.main,//'#03AD13',
           // icon: '<svg ...',
-      },
+        },
       },
     },
   },
