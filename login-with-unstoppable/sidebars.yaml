@@ -25,6 +25,8 @@ pages:
             page: login-integration-guides/login-with-popup.md
           - label: Login Without Pop-up
             page: login-integration-guides/login-without-popup.md
+          - label: Node.js Server
+            page: login-integration-guides/node-js-server-guide.md
           - label: Web3 Modal
             page: login-integration-guides/web3-modal-guide.md
           - label: Web3 React
@@ -33,8 +35,8 @@ pages:
             page: login-integration-guides/web3-onboard-guide.md
           - label: Moralis
             page: login-integration-guides/moralis-guide.md
-          - label: Node.js Server
-            page: login-integration-guides/node-js-server-guide.md
+          - label: Auth0
+            page: login-integration-guides/auth0-guide.md
         separateorLine: true
       - label: Login UI Configuration
         page: login-integration-guides/login-ui-configuration.mdx
