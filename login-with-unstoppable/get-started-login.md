@@ -47,6 +47,7 @@ For dApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 | [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          | [web3-onboard](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-onboard/)|       &#9989;     |`@uauth/web3-onboard`|   `web3-onboard`   |
 | [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    | [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)           |       &#9989;     |`@uauth/moralis`     |     `moralis`      |
 | [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      | [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)             |       &#10060;    |`@uauth/node`        |        None        |
+| [Auth0](/login-with-unstoppable/login-integration-guides/auth0-guide.md)                        | [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)     |       &#10060;    |      `auth0`        |       `auth0`      | 
 
 :::info
 The [UAuth Demo](https://uauth-demo.uc.r.appspot.com) is available for developer use along with the example [single page application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/) to model the flow.
