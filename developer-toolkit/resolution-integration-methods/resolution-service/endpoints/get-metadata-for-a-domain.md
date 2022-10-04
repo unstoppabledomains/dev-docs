@@ -38,8 +38,8 @@ An object with the following fields:
 * `properties`: A key-value dictionary with information about the domain:
     * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 * `external_url`: (string) An external URL attached to the domain.
-* `image`: (string) The PFP of the domain name in base64 format.
-* `image_url`: (string) A link to the PFP of the domain name.
+* `image`: (string) The image data of the domain name in base64 format.
+* `image_url`: (string) A link to the image of the domain name.
 * `attributes`: (array) An array containing the attributes of the domain name.
     * `trait_type`: (string) The domain attribute type.
     * `value`: (string) The attribute type value.
@@ -73,7 +73,7 @@ curl --location --request GET 'https://resolve.unstoppabledomains.com/metadata/b
         }
     },
     "external_url": "https://unstoppabledomains.com/search?searchTerm=brad.crypto",
-    "image": "data:image/svg+xml;base64",
+    "image": "image/svg+xml form of the domain image data",
     "image_url": "https://metadata.unstoppabledomains.com/image-src/brad.crypto.svg",
     "attributes": [
         {

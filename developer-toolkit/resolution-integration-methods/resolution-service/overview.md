@@ -55,5 +55,7 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 | Get Reverse Record for an Address | returns the reverse record of a wallet address. | [Get Reverse Record for an Address Docs](endpoints/get-reverse-record-for-address.md) |
 | Get Supported TLDs | returns all the domain endings supported by Unstoppable Domains. | [Get Supported TLDs Docs](endpoints/get-supported-tlds.md) |
 | Get Metadata for a Domain | returns the ERC721 metadata information of a domain name. | [Get Metadata for a Domain Docs](endpoints/get-metadata-for-a-domain.md) |
+| Get Domain SVG Image | returns the image data of a domain name as a SVG string. | [Get Domain SVG Image Docs](endpoints/get-domain-svg-image.md) |
+| Get Domain Image Source | returns the image data of a domain name in `image/svg+xml` format. | [Get Domain Image Source Docs](endpoints/get-metadata-for-a-domain.md) |
 
 <embed src="/snippets/_discord.md" />
