@@ -15,7 +15,15 @@ This endpoint returns all the records attached to multiple domain names in a sin
 
 * GET
 
+## Authentication
+
+* Bearer Token
+
 ## URL Params
+
+* none
+
+## Query Params
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
@@ -26,15 +34,11 @@ This endpoint returns all the records attached to multiple domain names in a sin
 To retrieve the records of multiple domains, you need to use a new `domains[]` query param instance for each domain name.
 :::
 
-## Query Params
-
-* none
-
 ## Returns
 
 An object with a `data` field that contains a list of domain records.
 
-* `domain`: (string) The domain name.
+* `domain`: (string) Name of the domain.
 * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 
 ## Example 1

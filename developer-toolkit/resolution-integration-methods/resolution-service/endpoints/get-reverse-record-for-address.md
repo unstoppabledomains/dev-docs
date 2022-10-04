@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Reverse Record for 
 # Get Reverse Record for an Address
 
 ```
-https://resolve.unstoppabledomains.com/reverse/<wallet address>
+https://resolve.unstoppabledomains.com/reverse/<walletAddress>
 ```
 
 This endpoint will return the reverse record of the wallet address and all the domain name records and domain metadata in a single response.
@@ -15,11 +15,15 @@ This endpoint will return the reverse record of the wallet address and all the d
 
 * GET
 
+## Authentication
+
+* Bearer Token
+
 ## URL Params
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| wallet address | STRING | YES | A wallet address to query for reverse record |
+| walletAddress | STRING | YES | A wallet address to query for reverse record |
 
 ## Query Params
 
@@ -30,7 +34,7 @@ This endpoint will return the reverse record of the wallet address and all the d
 An object with the following fields:
 
 * `meta`: A key-value dictionary with general information about the domain:
-    * `domain`: (string) domain name.
+    * `domain`: (string) Name of the domain.
     * `owner`: (string) The wallet address that owns the domain.
     * `resolver`: (string) The Resolver smart contract address. This contract is responsible for managing domain records.
     * `registry`: (string) The Registry smart contract address. Registry manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).

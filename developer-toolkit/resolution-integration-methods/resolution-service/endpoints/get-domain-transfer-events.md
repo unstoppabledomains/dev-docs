@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Domain Transfer Eve
 # Get Domain Transfer Events
 
 ```
-https://resolve.unstoppabledomains.com/domains/<domain name>/transfers/latest
+https://resolve.unstoppabledomains.com/domains/<domain>/transfers/latest
 ```
 
 This endpoint tracks the blocks and blockchains domain names are being transferred from one owner wallet address to another.
@@ -15,11 +15,15 @@ This endpoint tracks the blocks and blockchains domain names are being transferr
 
 * GET
 
+## Authentication
+
+* Bearer Token
+
 ## URL Params
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
+| domain | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
 ## Query Params
 
@@ -30,7 +34,7 @@ This endpoint tracks the blocks and blockchains domain names are being transferr
 An object with a `data` field that contains a list of domain transfer events.
 
 * `data`: (array) An array with the latest transfers of the domain in different blockchains.
-    * `domain`: (string) The domain name.
+    * `domain`: (string) Name of the domain.
     * `from`: (address) The wallet address that sent the domain.
     * `to`: (address) The wallet address of the receiver.
     * `networkId`: (number) The blockchain network ID

@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Records for a Domai
 # Get Records for a Domain
 
 ```
-https://resolve.unstoppabledomains.com/domains/<domain name>
+https://resolve.unstoppabledomains.com/domains/<domain>
 ```
 
 This endpoint returns all the resolution records configured to a domain in a single response.
@@ -15,11 +15,15 @@ This endpoint returns all the resolution records configured to a domain in a sin
 
 * GET
 
+## Authentication
+
+* Bearer Token
+
 ## URL Params
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| domain name | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
+| domain | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
 ## Query Params
 
@@ -31,7 +35,7 @@ An object with the following fields:
 
 * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 * `meta`: A key-value dictionary with general information about the domain:
-    * `domain`: (string) domain name.
+    * `domain`: (string) Name of the domain.
     * `blockchain`: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
     * `networkId`: (number) The blockchain network ID.
         * 1 - Ethereum or Zilliqa Mainnet

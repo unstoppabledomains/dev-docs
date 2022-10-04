@@ -15,6 +15,10 @@ This endpoint returns the domain name records and metadata owned by wallet addre
 
 * GET
 
+## Authentication
+
+* Bearer Token
+
 ## URL Params
 
 * none

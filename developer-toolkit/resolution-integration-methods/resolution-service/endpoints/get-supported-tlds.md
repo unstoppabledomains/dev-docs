@@ -11,13 +11,13 @@ https://resolve.unstoppabledomains.com/supported_tlds
 
 This endpoint returns all the domain endings provided and supported by Unstoppable Domains.
 
-:::info
-This endpoint does not require any form of authentication to access.
-:::
-
 ## Request Method
 
 * GET
+
+## Authentication
+
+* none
 
 ## URL Params
 

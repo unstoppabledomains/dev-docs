@@ -54,5 +54,6 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 | Get Domain Transfer Events | returns the transfer history of a domain name. | [Get Domain Transfers Docs](endpoints/get-domain-transfer-events.md) |
 | Get Reverse Record for an Address | returns the reverse record of a wallet address. | [Get Reverse Record for an Address Docs](endpoints/get-reverse-record-for-address.md) |
 | Get Supported TLDs | returns all the domain endings supported by Unstoppable Domains. | [Get Supported TLDs Docs](endpoints/get-supported-tlds.md) |
+| Get Metadata for a Domain | returns the ERC721 metadata information of a domain name. | [Get Metadata for a Domain Docs](endpoints/get-metadata-for-a-domain.md) |
 
 <embed src="/snippets/_discord.md" />

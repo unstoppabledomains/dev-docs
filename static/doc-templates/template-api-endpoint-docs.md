@@ -15,6 +15,10 @@ description: This page covers the documentation for the [Endpoint Name] endpoint
 
 [Request method of the endpoint]
 
+## Authentication
+
+[Authentication scheme of the endpoint]
+
 ## URL Params
 
 | Name | Type | Mandatory | Description |
