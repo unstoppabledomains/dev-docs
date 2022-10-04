@@ -38,6 +38,8 @@ pages:
                     page: resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md
                   - label: Get Domain SVG Image
                     page: resolution-integration-methods/resolution-service/endpoints/get-domain-svg-image.md
+                  - label: Get Domain Image Source
+                    page: resolution-integration-methods/resolution-service/endpoints/get-domain-image-source.md
           - label: Error Codes
             page: resolution-integration-methods/resolution-service/error-codes.md
       - group: Resolution Libraries

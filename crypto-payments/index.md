@@ -5,7 +5,7 @@ description: This page gives an overview of the Unstoppable Domains crypto payme
 
 # Send and Receive Crypto Payments
 
-Unstoppable Domains allows you to make payments with over [285 cryptocurrencies](https://support.unstoppabledomains.com/support/solutions/articles/48001185621-what-cryptocurrencies-are-currently-supported-) using a single domain name. As long as you have configured your addresses to the domain, our members can send crypto to your domain, and it will end up in your wallet.
+Unstoppable Domains allows you to make payments with over [293 cryptocurrencies](https://support.unstoppabledomains.com/support/solutions/articles/48001185621-what-cryptocurrencies-are-currently-supported-) using a single domain name. As long as you have configured your addresses to the domain, our members can send crypto to your domain, and it will end up in your wallet.
 
 Still confused about how it works? If you own the `ryan.crypto` domain and BTC is sent to that domain, you will receive it at your BTC address. If ETH is also sent to that domain, you will receive it at your ETH address. Unstoppable Domains achieves this with a process called Domain Resolution.
 
