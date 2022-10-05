@@ -19,14 +19,15 @@ This integration guide will show you how to configure the Unstoppable Domains so
 
 ## Step 1: Create an Auth0 Account
 
-Before using the Unstoppable Domains social connection, you’ll need an Auth0 account. Auth0 provides a [guide for gettting started with your account](https://auth0.com/docs/get-started/auth0-overview/create-tenants). Once you’re finished, you can continue by adding the Unstoppable Domains social connection below.
+Before using the Unstoppable Domains social connection, you’ll need an [Auth0](https://auth0.com/) account. After creating an account, you will have an automatically generated tenant and a **Default App**. See the Auth0 documentation on [Creating Tenants](https://auth0.com/docs/get-started/auth0-overview/create-tenants) and [Creating Applications](https://auth0.com/docs/get-started/auth0-overview/create-tenants) for more information on creating your own.
 
 ## Step 2 Configure your Login Client
 
 In addition to the basic configuraton outlined in [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md), some configuration specific to Auth0 is required.
 
-1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#step-2-configure-redirect-uris) to `https://TENANT_ID.us.auth0.com/login/callback`.
+1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#step-2-configure-redirect-uris) to `https://TENANT_ID.REGION.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
 2. Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#token-endpoint-authentication-method) in the **Advanced** configuration tab to **Client Secret Post**.
+3. Click **Confirm Changes**.
 
 :::warning
 Make sure that you copy the `client_secret` from the client metadata on the **Basic** tab of the client dashboard. You won't be able to view it again without clicking **Rotate Secret** to generate a new one.
@@ -37,12 +38,12 @@ Make sure that you copy the `client_secret` from the client metadata on the **Ba
 Next you will need to add and configure the social connection. This will require the `client_id` and `client_secret` from your login client metadata.
 
 1. Find the [Unstoppable Domains social connection](https://marketplace.auth0.com/integrations/unstoppable-domains) in the Auth0 Marketplace
-2. Select **Add Integration** 
+2. Click **Add Integration** 
 3. Read the necessary access requirements and click **Continue**.
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
 6. Turn on or off syncing user profile attributes at each login
-7. Select **Create**
+7. Click **Create**
 8. Select the **Applications** tab and choose the apps that should use the Unstoppable Domains social connection
 
 ## Step 3: Add Custom Claims (Optional)
@@ -92,8 +93,9 @@ exports.onExecutePostLogin = async (event, api) => {
 See the Auth0's example for how to [add custom claims to a token](https://auth0.com/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token) for detailed information about the process.
 
 ## Step 5: Login With Unstoppable
+In the left navigation menu, you can expand the **Authentication** section, select **Authentication Profile**, and click **Try** to preview your new Auth0 login flow with Unstoppable Domains.
 
-Once your app is using the Unstoppable Domains social connection, Auth0 will be able to return user metadata to your app. As an example, consider the following user created by Auth0 using the Unstoppable Domains social connection:
+Once your app is using the Unstoppable Domains social connection, Auth0 will be able to return user metadata to your app.As an example, consider the following user created by Auth0 using the Unstoppable Domains social connection:
 
 <figure>
 
