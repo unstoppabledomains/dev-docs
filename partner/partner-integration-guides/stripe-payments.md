@@ -29,13 +29,6 @@ Your Stripe API keys are public keys and they are safe to reveal in your applica
 * pk\_test\_\* (reseller-test-\* namespace)
 * pk\_live\_\* (all other domains)
 
-<figure>
-
-![Strive Live and Stripe Test payment setup areas](/images/screen-shot-2021-07-12-at-2.04.09-pm.png '#width=80%;')
-
-<figcaption>Strive Live and Stripe Test payment setup areas</figcaption>
-</figure>
-
 :::info
 The `Stripe Live Connect Button` is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The `Stripe Test Connect Button` does not involve real money and uses test credentials to integrate.
 :::
@@ -195,13 +188,6 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{Re
 ## Receive Stripe Payouts
 
 Stripe payouts occur daily directly from Stripe and can be tracked within the Partner dashboard by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
-
-<figure>
-
-![Button selection for tracking Stripe payouts](/images/screen-shot-2021-07-12-at-2.53.26-pm.png '#width=80%;')
-
-<figcaption>Button selection for tracking Stripe payouts</figcaption>
-</figure>
 
 :::info
 The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Partner accounts.

@@ -26,7 +26,7 @@ These items are listed in order of complexity. For example, if you are starting 
 - [Developer Integration Guides](/guides.mdx)
   - [Login with Unstoppable](/login-with-unstoppable/index.md)
   - [Crypto Payments](/crypto-payments/index.md)
-  - [Become a Partner](/partner/index.md)
+  - [Unstoppable Partner API](/partner/index.md)
   - [IPFS Websites](/d-websites/index.md)
   - [Reverse Resolution](/reverse-resolution/index.md)
   - [Manage Domains](/manage-domains/index.md)

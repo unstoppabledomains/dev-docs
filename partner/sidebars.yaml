@@ -1,11 +1,11 @@
 pages:
-  - separator: Become a UD Partner
+  - separator: Unstoppable Partner API
     separatorLine: true
   - group: Getting Started with Integrating UD
     expanded: false
     selectFirstItemOnExpand: true
     pages:
-      - label: Register as a Partner
+      - label: Set Up Partner API Access
         page: index.md
       - label: Integration Paths Introduction
         page: integration-paths.md
