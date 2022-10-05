@@ -12,8 +12,7 @@ import ColorSample from '../../components/color-sample.jsx'
 
 Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
 
-* If you integrate with the `@uauth/web3-react` or any other solution that uses `@uauth/js` under the hood (`@uauth/bnc-onboard`, `@uauth/web3modal`, `@uauth/moralis`), then you can access the user information by instantiating a new `UAuth` object with the same client options and calling the `user()` method.
-* There are also methods on `@uauth/web3-react`, `@uauth/web3modal`, `@uauth/bnc-onboard`, & `@uauth/moralis` for getting a `UAuth` instance on the front-end.
+* If you integrate with `@uauth/js` or any middleware package that uses `@uauth/js`, you can access the user information by instantiating a new `UAuth` object with the same client options and calling the `user()` method.
 
 You can use the access methods below to obtain the user information. This information will enable you to display the domain instead of the wallet address and serves as another confirmation for the user that they have logged in successfully.
 
@@ -99,7 +98,30 @@ Once a user has successfully authenticated, the application should display the u
 <figcaption>Showing an authenticated user's domain</figcaption>
 </figure>
 
-## Step 2: Verify the Login Flow and Scopes
+## Step 2: Get the Authorization Account
+
+In addition to logging in with the controlling Ethereum or Polygon wallet, UAuth service allows users to login using certain verified accounts associated with the domain's ud.me profile, such as a Solana wallet address. You can check which account was used to authorize the login session using the [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) method.
+
+```typescript @uauth/js loginWithPop()
+// In the login handler
+const authorization = await uauth.loginWithPopup();
+const account = uauth.getAuthorizationAccount(authorization);
+```
+
+```typescript @uauth/js loginCallback()
+// On the callback page
+const response = await uauth.loginCallback();
+const account = uauth.getAuthorizationAccount(response.authorization);
+```
+
+```typescript @uauth middleware
+const authorization = await uauth.authorization();
+const account = uauth.getAuthorizationAccount(authorization);
+```
+
+This will return a [VerifiedAddress](/login-with-unstoppable/libraries/uauth-js.md#verifiedaddress) describing the account used.
+
+## Step 3: Verify the Login Flow and Scopes
 
 Before launching your application, you should verify the login flow that users will experience and ensure that proper scopes are showing or enabled for users. 
 In the last modal screen shown below, only the minimum scopes are being requested by the application: [openID](/login-with-unstoppable/scopes-for-login.md#openid), 
@@ -135,7 +157,7 @@ The modals are further described below:
 * **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes).
 The user must sign the transaction using their wallet address in order to share their information with the dApp.
 
-## Step 3: Create Login Buttons
+## Step 4: Create Login Buttons
 
 Your integration will need Unstoppable Domains branded login buttons. See the table below for style guidelines.
 

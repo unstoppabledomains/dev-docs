@@ -59,7 +59,7 @@ const onboard = Onboard({
 Because pop-ups are a more integration friendly approach, the `@uauth/web3-onboard` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `uauthBNCOptions` and create a callback page.
 :::
 
-## Step 3: Test the Usage
+## Step 3: Login with Unstoppable
 
 Once configured, the `web3-onboard` library can be used normally.
 

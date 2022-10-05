@@ -50,6 +50,16 @@ async loginCallback<T>(
 ): Promise<LoginCallbackResponse<T>>
 ```
 
+### authorization()
+
+Returns the [Authorization](#authorization) for the current login session.
+
+```typescript
+async authorization(
+    options: AuthorizationOptions = {},
+): Promise<Authorization>
+```
+
 ### user()
 
 Returns the [UserInfo](#userinfo) associated with the current UAuth instance.
@@ -60,7 +70,7 @@ async user(options: UserOptions = {}): Promise<UserInfo>
 
 ### getVerifiedAccounts()
 
-Retrieves all verified accounts associated with an authorized domain, with optional symbol filtering. Allows a dapp to request only the verified accounts they are interested in.
+Returns [VerifiedAddress](#verifiedaddress) array containing all verified accounts associated with an authorized domain, with optional symbol filtering, which allows a dapp to request only the verified accounts they are interested in.
 
 ```typescript
 getVerifiedAccounts(
@@ -71,7 +81,7 @@ getVerifiedAccounts(
 
 ### getAuthorizationAccount
 
-Retrieves the account that authorized a login request.
+The UAuth service allows users to login with certain verified accounts associated with a domain's ud.me profile in addition to the Ethereum or Polygon wallet that owns the domain. This method takes an [Authorization](#authorization) from [loginWithPopup()](#login) or [loginCallback()](#logincallback) and returns a [VerifiedAddress](#verifiedaddress) describing the account that authorized a login request, such as a verified Solana wallet.
 
 ```typescript
 getAuthorizationAccount(

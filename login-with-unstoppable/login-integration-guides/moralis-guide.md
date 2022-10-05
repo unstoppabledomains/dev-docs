@@ -60,7 +60,7 @@ export default connectors
 Because pop-ups are a more integration friendly approach, the `@uauth/moralis` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in the options passed to `setUAthOptions()` and create a callback page.
 :::
 
-## Step 3: Test the Usage
+## Step 3: Login with Unstoppable
 
 Once configured, the `react-moralis` library can be used normally.
 

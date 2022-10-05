@@ -101,7 +101,7 @@ const onboard = initOnboard({
 })
 ```
 
-## Step 4: Test the Usage
+## Step 4: Login with Unstoppable
 
 Once configured, the `bnc-onboard` library can be used normally.
 
