@@ -21,7 +21,7 @@ This integration guide will show you how to configure the Unstoppable Domains so
 
 Before using the Unstoppable Domains social connection, you’ll need an [Auth0](https://auth0.com/) account. After creating an account, you will have an automatically generated tenant and a **Default App**. See the Auth0 documentation on [Creating Tenants](https://auth0.com/docs/get-started/auth0-overview/create-tenants) and [Creating Applications](https://auth0.com/docs/get-started/auth0-overview/create-tenants) for more information on creating your own.
 
-## Step 2 Configure your Login Client
+## Step 2: Configure your Login Client
 
 In addition to the basic configuraton outlined in [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md), some configuration specific to Auth0 is required.
 
@@ -33,7 +33,7 @@ In addition to the basic configuraton outlined in [Login Client Configuration](/
 Make sure that you copy the `client_secret` from the client metadata on the **Basic** tab of the client dashboard. You won't be able to view it again without clicking **Rotate Secret** to generate a new one.
 :::
 
-## Step 2: Add the UD Social Connection
+## Step 3: Add the UD Social Connection
 
 Next you will need to add and configure the social connection. This will require the `client_id` and `client_secret` from your login client metadata.
 
@@ -46,7 +46,7 @@ Next you will need to add and configure the social connection. This will require
 7. Click **Create**
 8. Select the **Applications** tab and choose the apps that should use the Unstoppable Domains social connection
 
-## Step 3: Add Custom Claims (Optional)
+## Step 4: Add Custom Claims (Optional)
 
 Some of the Web3 claims offered by Unstoppable Domains are outside the standard OAuth2 specification. For example, the `wallet_address` claim may be useful to your app but is not included in the default profile. To learn more about the available scopes for Login with Unstoppable Domains, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
 
