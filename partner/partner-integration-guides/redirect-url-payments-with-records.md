@@ -44,7 +44,7 @@ The records parameter should contain URL encoded and minified JSON with domains 
 
 ### strictName (required)
 
-The partner `strictName` is provided by Unstoppable Domains. This parameter may be different than `resellerID` found in the partner dashboard.
+The partner `strictName` is provided by Unstoppable Domains. This parameter may be different than `resellerID` found in your Partner account.
 
 ### timestamp (required)
 

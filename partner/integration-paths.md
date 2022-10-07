@@ -17,7 +17,7 @@ Before beginning the integration process for Unstoppable's Partner API, you must
 
 ## Step 2: Locate Your Reseller ID
 
-To integrate free or paid domain minting (via Stripe or Redirect URLs) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner Dashboard](https://unstoppabledomains.com/resellers).
+To integrate free or paid domain minting (via Stripe or Redirect URLs) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner account](https://unstoppabledomains.com/resellers).
 
 ## Step 3: Choose Your Integration Path
 

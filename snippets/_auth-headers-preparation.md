@@ -1,4 +1,4 @@
-The Partner API uses bearer tokens to authorize requests with the `Secret API Token` from the Partner dashboard.
+The Partner API uses bearer tokens to authorize requests with the `Secret API Token` from your Partner credentials.
 
 | Field Name | Value |
 | - | - |
