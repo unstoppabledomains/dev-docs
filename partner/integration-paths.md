@@ -23,11 +23,12 @@ To integrate free or paid domain minting (via Stripe or Redirect URLs) for your 
 
 There are several ways to integrate with Unstoppable's Partner API, detailed in the chart below. Partners are encouraged to integrate more than one pathway.
 
-| Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Free domains               | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"               | [Free Domain Minting Guide](partner-integration-guides/mint-free-domains.md)       |
-| Paid domains: Stripe       | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                               | [Stripe Payments Guide](partner-integration-guides/stripe-payments.md)             |
+| Pathway | Short Description | Integration Guides |
+| - | - | - |
+| Free domains | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers" | [Free Domain Minting Guide](partner-integration-guides/mint-free-domains.md) |
+| Paid domains: Stripe | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay | [Stripe Payments Guide](partner-integration-guides/stripe-payments.md) |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](partner-integration-guides/redirect-url-payments.md) |
+| Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure crypto records, does not require native paid domain flow  | [Redirect URL Payments With Auto-Configured Crypto Records Guide](partner-integration-guides/redirect-url-payments-with-records.md) |
 
 :::info
 Unstoppable Domains provides a [sandbox environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
