@@ -66,6 +66,26 @@ After adding your IP address, you will be redirected to the Unstoppable Domains 
 <figcaption>UD sandbox homepage</figcaption>
 </figure>
 
+## Sandbox Environment URLs
+
+### Sandbox Website
+
+```
+https://ud-sandbox.com/
+```
+
+### Sandbox API Endpoint
+
+```
+https://api.ud-sandbox.com/
+```
+
+### Sandbox Reseller Dashboard
+
+```
+https://ud-sandbox.com/resellers/
+```
+
 :::success Congratulations!
 You have successfully accessed and set up the Unstoppable Domains sandbox environment. Happy hacking!
 :::
