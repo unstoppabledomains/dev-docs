@@ -14,8 +14,8 @@ The Partner API is limited to 60 requests per hour. However, this is subject to 
 The Partner API endpoints are as follows:
 
 * `GET` **Domain Name Availability**: checks the availability of a domain name before purchase
-* `GET` **Get Domains Suggestions:** provides domain suggestions based on the entered information
-* `GET` **Get Free Domains Suggestions:** provides free domain suggestions based on entered information if the partner is eligible to offer free domains
+* `GET` **Get Domains Suggestions**: provides domain suggestions based on the entered information
+* `GET` **Get Free Domains Suggestions**: provides free domain suggestions based on entered information if the partner is eligible to offer free domains
 * `POST` **Buy a Domain** or **Claim Free Domain**: used to buy domains or mint free domains from Unstoppable Domains
 * `GET` **Get Order Status**: provides the status of your order and tells if the domain has successfully "minted"
 * `POST` **Reserve Free Domain**: reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days
