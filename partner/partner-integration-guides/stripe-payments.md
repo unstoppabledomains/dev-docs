@@ -1,6 +1,6 @@
 ---
 title: Stripe Payments Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in the Unstoppable Domains Partner dashboard.
+description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in your Unstoppable Domains Partner account.
 ---
 
 # Stripe Payments Guide
@@ -22,7 +22,7 @@ You need to have a Stripe account before connecting it to your Unstoppable Domai
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-Click on the `CONNECT` button in the Stripe section of the [UD Partner dashboard](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
+Click on the `CONNECT` button in the Stripe section of your [UD Partner account](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
 
 Your Stripe API keys are public keys and they are safe to reveal in your application:
 
@@ -187,7 +187,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{Re
 
 ## Receive Stripe Payouts
 
-Stripe payouts occur daily directly from Stripe and can be tracked within the Partner dashboard by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
+Stripe payouts occur daily directly from Stripe and can be tracked within your Partner account by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
 
 :::info
 The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Partner accounts.

@@ -22,7 +22,7 @@ This works by having domain owners set a reverse record for their domains on the
 
 There are several ways to set a reverse record for your UD domains, detailed in the chart below.
 
-| Pathway | Short Description | Configuration Guides |
+| Pathway | Description | Configuration Guides |
 | - | - | - |
 | Unstoppable Domains Dashboard | set reverse resolution records using the Unstoppable Domains dashboard | [UD Dashboard Guide](config-guides/ud-dashboard.md) |
 | Smart Contracts | set reverse resolution records using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](config-guides/smart-contracts.md) |
@@ -31,7 +31,7 @@ There are several ways to set a reverse record for your UD domains, detailed in 
 
 There are several ways to integrate Unstoppable's Reverse Resolution feature into your application, detailed in the chart below. Developers are encouraged to integrate more than one pathway.
 
-| Pathway | Short Description | Integration Guides |
+| Pathway | Description | Integration Guides |
 | - | - | - |
 | Resolution Service API | integrate Reverse Resolution using the Resolution Service API hosted by Unstoppable Domains | [Resolution Service API Guide](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md)
 | Resolution Libraries | integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](integration-guides/resolution-libraries.md)

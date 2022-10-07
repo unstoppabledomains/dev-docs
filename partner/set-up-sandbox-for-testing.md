@@ -1,9 +1,9 @@
 ---
-title: Setting up UD Sandbox for Testing | Unstoppable Domains Developer Portal
+title: Set up UD Sandbox for Testing | Unstoppable Domains Developer Portal
 description: This page details how to access and set up the Unstoppable Domains sandbox environment for partners to test their integrations.
 ---
 
-# Setting up UD Sandbox for Testing
+# Set up UD Sandbox for Testing
 
 This page details how to access and set up the Unstoppable Domains sandbox environment for partners to test their integrations.
 
@@ -65,6 +65,26 @@ After adding your IP address, you will be redirected to the Unstoppable Domains 
 
 <figcaption>UD sandbox homepage</figcaption>
 </figure>
+
+## Sandbox Environment URLs
+
+### Sandbox Website
+
+```
+https://ud-sandbox.com/
+```
+
+### Sandbox API Endpoint
+
+```
+https://api.ud-sandbox.com/
+```
+
+### Sandbox Reseller Dashboard
+
+```
+https://ud-sandbox.com/resellers/
+```
 
 :::success Congratulations!
 You have successfully accessed and set up the Unstoppable Domains sandbox environment. Happy hacking!

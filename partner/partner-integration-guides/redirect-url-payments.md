@@ -5,87 +5,52 @@ description: This guide covers the process for configuring the Partner account t
 
 # Redirect URL Payments Guide
 
-The Redirect URL payment flow is the easiest payment process to implement for partners. Partners do not have to setup native paid domain flows using Stripe and can instead just generate a URL to redirect payments to Unstoppable Domains to be processed.
+The Redirect URL payment flow is the most straightforward payment process to implement for partners. Partners do not have to set up native paid domain flows and can instead generate a URL to redirect payments to Unstoppable Domains to be processed.
 
-Basically, in this case, the partner acts like an "affiliate". Partners redirect their users to the UD website where users can purchase domains and the partner receives a commission (% of the sale).
+In this case, the partner acts like an "affiliate" where they redirect their users to the Unstoppable Domains website to purchase domains and receive a commission from the sale.
 
-## Prerequisites
-These following items are necessary to complete this Partner payment integration:
-* A shared secret between Unstoppable Domains and the partner (provided by Unstoppable Domains)
-* strictName (provided by Unstoppable Domains)
+## Step 1: Retrieve Your UD Referral Code
 
-## Step 1: Auto-configure the User’s Paid Domains
+Before integrating Redirect URL payments, you must acquire a referral code from Unstoppable Domains, which helps track and reward the traffic partners bring to Unstoppable Domains and share domain sales revenue. Please email <partnerengineering@unstoppabledomains.com> to request a referral code for your integration.
 
-A common friction for users brought in by a partner is having to configure crypto addresses to a domain post-minting which the partner already knows about. If a user could be given the option to auto-configure their crypto records during the minting step then that would greatly improve their overall experience.
+## Step 2: Search for Available Domain Names (Optional)
 
-This example shows what information to add to the URL so that a user can be given the option to prefill crypto records during the minting step. Here’s how a valid URL could end up looking:
+Unstoppable Domains provides a [Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D/get) endpoint to check if a domain name is available for purchase.
 
-```shell
-https://unstoppabledomains.com/search?searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=foo&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=7038743d813122a9c13c233a24d273535085b67d9a92db5c86669f45ec14b5f2
+## Step 3: Redirect Users to the Unstoppable Domains Website
+
+The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments. After preparing your parameter values, construct the payment URL and redirect the user to it:
+
+| Name | Type | Mandatory | Description |
+| - | - | - | - |
+| ref | STRING | YES | The Partner's referral code for tracking traffic |
+| searchTerm | STRING | NO | The domain name the user wants to purchase |
+
+Sandbox Environment:
+
+```
+https://ud-sandbox.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
 ```
 
-## Step 2: Setup Query Parameters
+Production Environment:
 
-Partners can use as many query parameters as is necessary (e.g., specifying the search term when taking a user to the search page `/search?searchTerm=buyadomain.crypto`), but in order to prefill crypto records for a user there are a few **required** query parameters that must be used.
-
-### records (required)
-
-The records parameter should contain URL encoded and minified JSON with domains records to prefill during the minting step according to the [Records Reference](/developer-toolkit/reference/records-reference.md) standard.
-
-#### JSON Records Example
-```json
-{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh","crypto.USDT.version.ERC20.adress":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.DAI.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.EOS.address":"playuplandme"}
+```
+https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
 ```
 
-#### JSON Records Example URL Encoded
-```shell
-%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.adress%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D
+## Redirect URL Payments Example
+
+Here is an example payment URL for the `example12345.nft` domain name and `unstoppable` referral code:
+
+```
+https://unstoppabledomains.com/search?searchTerm=example12345.nft&ref=unstoppable
 ```
 
-### strictName (required)
+Here's another example that only provides the Partner's referral code:
 
-The partner `strictName` is provided by Unstoppable Domains. This parameter may be different than `resellerID` found in the partner dashboard.
-
-### timestamp (required)
-
-A number representing the milliseconds elapsed since the UNIX epoch. There is an **8 hours** window from the time the signature was generated before UD considers the signature invalid.
-
-Example in JavaScript: `Date.now()`
-
-:::info
-UD is considering making this field optional in the near future. Please share your feedback in our [Discord Community](https://discord.gg/unstoppabledomains).
-:::
-
-### signature (required)
-
-The signature is generated by the partner and is used by Unstoppable Domains to verify both the data integrity and authenticity of the message. The signature should be generated via the HMAC-SHA256 algorithm. This authorization is necessary to help prevent attacks that may substitute insecure URL parameters.
-
-:::info
-In JavaScript, HMAC signatures can be created using the crypto-js library. Similar cryptography libraries can be used for other languages.
-:::
-
-The message object to sign is:
-```typescript
-{
-	strictName,
-	timestamp,
-	records
-}
 ```
-
-To ensure consistency, the message object should be **sorted recursively by its keys** before generating the HMAC hash. In Javascript, you can use a library like [deep-sort-object](https://www.npmjs.com/package/deep-sort-object).
-
-:::warning
-A shared secret between Unstoppable Domains and the partner will be required to generate the signature. It will be provided by Unstoppable Domains.
-:::
-
-## Step 3: Test the Integration
-
-You can use Unstoppable Domains sandbox environment to test the redirect URI payments integration.
-
-1. Navigate to the sandbox environment with the paid domains flow query parameters appended to the URL.
-2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
-3. Proceed to mint the domain. If you are asked to verify records to prefill when minting the domain, then the redirect URI integration is working successfully.
+https://unstoppabledomains.com/search?ref=unstoppable
+```
 
 :::success Congratulations!
 You just configured your Partner account to process payments using a Redirect URL.

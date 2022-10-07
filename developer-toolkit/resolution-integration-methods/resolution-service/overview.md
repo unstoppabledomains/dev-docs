@@ -44,9 +44,9 @@ The Resolution Service API uses bearer tokens to authorize requests with the API
 
 ## API Endpoints Spec
 
-Below is a table of all the API endpoints provided by the Resolution Service, a short description of their function, and links to their respective documentation.
+Below is a table of all the API endpoints provided by the Resolution Service, a description of their function, and links to their respective documentation.
 
-| Endpoint | Short Description | Documentation |
+| Endpoint | Description | Documentation |
 | - | - | - |
 | Get Records for a Domain | returns all the records attached to a domain name. | [Get Records for a Domain Docs](endpoints/get-records-for-a-domain.md) |
 | Get Records for Multiple Domains | returns all the records attached to multiple domain names. | [Get Records for Multiple Domains Docs](endpoints/get-records-for-multiple-domains.md) |
