@@ -5,7 +5,7 @@ pages:
     expanded: false
     selectFirstItemOnExpand: true
     pages:
-      - label: Set Up Partner API Access
+      - label: Set up Partner API Access
         page: index.md
       - label: Set up UD Sandbox for Testing
         page: set-up-sandbox-for-testing.md

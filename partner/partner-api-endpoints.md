@@ -21,7 +21,7 @@ The Partner API endpoints are as follows:
 | Buy a Domain or Claim for Free | used to buy domains or mint free domains from Unstoppable Domains | [Buy a Domain or Claim for Free Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) |
 | Get Order Status | provides the status of your order and tells if the domain has successfully "minted" | [Get Order Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders~1%7BorderNumber%7D/get) |
 | Reserve Free Domain | reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days | [Reserve Free Domain Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D~1reserve/post) |
-| Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations |
+| Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations | [Get Fingerprint Public Key Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/security/paths/~1security~1fingerprintjs~1keys/post) |
 
 :::info
 The generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.

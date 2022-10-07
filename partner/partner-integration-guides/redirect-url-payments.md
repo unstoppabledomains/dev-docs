@@ -19,14 +19,20 @@ Unstoppable Domains provides a [Domain Name Availability](https://docs.unstoppab
 
 ## Step 3: Redirect Users to the Unstoppable Domains Website
 
-The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments.
+The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments. After preparing your parameter values, construct the payment URL and redirect the user to it:
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | ref | STRING | YES | The Partner's referral code for tracking traffic |
 | searchTerm | STRING | NO | The domain name the user wants to purchase |
 
-After preparing your parameter values, construct the payment URL and redirect the user to it:
+Sandbox Environment:
+
+```
+https://ud-sandbox.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
+```
+
+Production Environment:
 
 ```
 https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}

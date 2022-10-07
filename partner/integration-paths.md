@@ -11,9 +11,9 @@ Unstoppable Domains Partner API is a versatile feature with several integration 
 Partner API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](/polygon/polygon-migration-guide.md) to get started.
 :::
 
-## Step 1: Set Up Partner API Access
+## Step 1: Set up Partner API Access
 
-Before beginning the integration process for Unstoppable's Partner API, you must set up Partner API access and obtain partner credentials. Please see the **[Set Up Partner API Access Guide](index.md)** for more details.
+Before beginning the integration process for Unstoppable's Partner API, you must set up Partner API access and obtain partner credentials. Please see the **[Set up Partner API Access Guide](index.md)** for more details.
 
 ## Step 2: Locate Your Reseller ID
 
