@@ -23,7 +23,7 @@ To integrate free or paid domain minting (via Stripe or Redirect URLs) for your 
 
 There are several ways to integrate with Unstoppable's Partner API, detailed in the chart below. Partners are encouraged to integrate more than one pathway.
 
-| Pathway | Short Description | Integration Guides |
+| Pathway | Description | Integration Guides |
 | - | - | - |
 | Free domains | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers" | [Free Domain Minting Guide](partner-integration-guides/mint-free-domains.md) |
 | Paid domains: Stripe | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay | [Stripe Payments Guide](partner-integration-guides/stripe-payments.md) |

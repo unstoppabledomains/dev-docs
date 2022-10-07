@@ -13,13 +13,15 @@ The Partner API is limited to 60 requests per hour. However, this is subject to 
 
 The Partner API endpoints are as follows:
 
-* `GET` **Domain Name Availability**: checks the availability of a domain name before purchase
-* `GET` **Get Domains Suggestions**: provides domain suggestions based on the entered information
-* `GET` **Get Free Domains Suggestions**: provides free domain suggestions based on entered information if the partner is eligible to offer free domains
-* `POST` **Buy a Domain** or **Claim Free Domain**: used to buy domains or mint free domains from Unstoppable Domains
-* `GET` **Get Order Status**: provides the status of your order and tells if the domain has successfully "minted"
-* `POST` **Reserve Free Domain**: reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days
-* `POST` **Get Fingerprint Public Key**: provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations.
+| Endpoint | Description | Documentation |
+| - | - | - |
+| Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D/get) |
+| Get Domains Suggestions | provides domain suggestions based on the entered information | [Get Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions/get) |
+| Get Free Domains Suggestions | provides free domain suggestions based on entered information if the partner is eligible to offer free domains | [Get Free Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) |
+| Buy a Domain or Claim for Free | used to buy domains or mint free domains from Unstoppable Domains | [Buy a Domain or Claim for Free Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) |
+| Get Order Status | provides the status of your order and tells if the domain has successfully "minted" | [Get Order Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders~1%7BorderNumber%7D/get) |
+| Reserve Free Domain | reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days | [Reserve Free Domain Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D~1reserve/post) |
+| Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations |
 
 :::info
 The generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.
