@@ -40,6 +40,12 @@ Here is an example payment URL for the `example12345.nft` domain name and `unsto
 https://unstoppabledomains.com/search?searchTerm=example12345.nft&ref=unstoppable
 ```
 
+Here's another example that only provides the Partner's referral code:
+
+```
+https://unstoppabledomains.com/search?ref=unstoppable
+```
+
 :::success Congratulations!
 You just configured your Partner account to process payments using a Redirect URL.
 :::
