@@ -1,6 +1,6 @@
 ---
 title: Redirect URL Payments Guide | Unstoppable Domains Developer Portal
-description: This guide covers the process for configuring the Partner account to mint paid domains using the redirect URL payment processing flow.
+description: This guide covers configuring the Partner account to mint paid domains using the redirect URL payment processing flow and automatically configure crypto records.
 ---
 
 # Redirect URL Payments Guide
@@ -11,7 +11,7 @@ In this case, the partner acts like an "affiliate" where they redirect their use
 
 ## Step 1: Retrieve Your UD Referral Code
 
-Before integrating Redirect URL payments, you must acquire a referral code from Unstoppable Domains, which helps track and reward the traffic partners bring to Unstoppable Domains and share domain sales revenue. Please email <partnerengineering@unstoppabledomains.com> to request a referral code for your integration.
+Before integrating Redirect URL payments, you must acquire a referral code from Unstoppable Domains, which helps track and reward the traffic partners bring and share sales revenue. Please email <partnerengineering@unstoppabledomains.com> to request a referral code for your integration.
 
 ## Step 2: Search for Available Domain Names (Optional)
 
@@ -46,7 +46,7 @@ Here is an example payment URL for the `example12345.nft` domain name and `unsto
 https://unstoppabledomains.com/search?searchTerm=example12345.nft&ref=unstoppable
 ```
 
-Here's another example that only provides the Partner's referral code:
+Here is an example payment URL that only uses the Partner's referral code:
 
 ```
 https://unstoppabledomains.com/search?ref=unstoppable
