@@ -9,7 +9,7 @@ pages:
         page: index.md
       - label: Set up UD Sandbox for Testing
         page: set-up-sandbox-for-testing.md
-      - label: Integration Paths Introduction
+      - label: Partner API Integration Paths
         page: integration-paths.md
     separatorLine: true
   - group: Partner Integration Guides

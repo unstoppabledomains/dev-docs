@@ -36,7 +36,7 @@ To retrieve the records of multiple domains, you need to use a new `domains` que
 
 ## Returns
 
-An object with a `data` field that contains a list of domain details and some meta about the request.
+An object with a `data` field that contains a list of domains and resolution records.
 
 * `data`: (array) An array with the data and metadata of domains owned by a wallet address.
     * `domain`: (string) Name of the domain.

@@ -9,11 +9,6 @@ The Redirect URL payment flow allows you to provide crypto records that should b
 
 This payment flow is built upon the original [Redirect URL payment](redirect-url-payments.md), where a partner redirects a user to purchase a domain and be rewarded with the added functionality to configure crypto records to the domain name immediately after minting.
 
-<!-- ## Prerequisites
-
-* Your Unstoppable Domains [referral code](/partner/partner-integration-guides/redirect-url-payments.md#step-1-retrieve-your-ud-referral-code)
-* The wallet address the domain will be minted to (owned by the user) -->
-
 ## Step 1: Prepare Your Payment URL
 
 Follow the [Redirect URL Payments](redirect-url-payments.md) guide to prepare a payment URL for the user's purchase with your [referral code](redirect-url-payments.md#step-1-retrieve-your-ud-referral-code) and their desired domain (optional).
@@ -32,7 +27,7 @@ https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMA
 
 ## Step 2: Setup Query Parameters
 
-The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill crypto addresses after minting using a payment URL:
+The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill crypto records after minting using a payment URL:
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
@@ -53,13 +48,13 @@ The message object to sign is:
 
 ```javascript
 {
+	records,
 	strictName,
-	timestamp,
-	records
+	timestamp
 }
 ```
 
-To ensure consistency, the message object should be **sorted recursively by its keys** before generating the HMAC hash and signed using the `Secret API Token` provided in your Partner account. In Javascript, you can use a library like [deep-sort-object](https://www.npmjs.com/package/deep-sort-object).
+To ensure consistency, the message object should be **sorted recursively by its keys** before generating the HMAC-SHA256 hash and signed using the `Secret API Token` provided in your Partner account. In Javascript, you can use a library like [deep-sort-object](https://www.npmjs.com/package/deep-sort-object).
 
 The code snippet below shows how to generate the `signature` parameter:
 
@@ -69,12 +64,10 @@ const crypto = require('crypto');
 // third-party lib to sort objects
 const sortObject = require('deep-sort-object');
 
-// address that the domain will be minted to
-const owner = "0xfa4E1b1095164BcDCA057671E1867369E5F51B92";
 // end-user records can include crypto records, ipfs hashes, etc
 const records = {
     "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
-    "crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+    "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
 };
 // reseller id
 const strictName = "testReseller";
@@ -84,18 +77,18 @@ const timestamp = new Date().getTime();
 // form the message to sign
 // note that the object has to be sorted for consistency; we use deep-sort-object to verify signatures
 // you can use a different approach to sort records, but using the same library to sort ensures that the signatures will match
-const message = JSON.stringify(sortObject({records, owner, strictName, timestamp}));
+const message = JSON.stringify(sortObject({records, strictName, timestamp}));
 
 // The Secret API Token provided by UD in your Partner account
 const signatureKey = "someKey";
-// create the hmac digest
+// create the hmac-sha256 digest
 const signature = crypto.createHmac('sha256', signatureKey).update(message).digest('hex');
 // this is added to the signature parameter in the redirect URL to pass crypto records to UD
 console.log(signature);
 ```
 
 :::info
-You can use similar cryptography libraries for other languages to generate HMAC signatures.
+You can use similar cryptography libraries for other languages and [online tools](https://www.devglan.com/online-tools/hmac-sha256-online) to generate HMAC-SHA256 signatures.
 :::
 
 ## Step 4: Redirect Users to the Unstoppable Domains Website
@@ -124,7 +117,7 @@ You can use Unstoppable Domains [sandbox environment](/partner/set-up-sandbox-fo
 
 1. Navigate to the sandbox environment with the paid domains flow query parameters appended to the URL.
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
-3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto addresses integration is working successfully.
+3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto records integration is working successfully.
 
 ## Redirect URL Payments With Records Example
 
@@ -135,12 +128,13 @@ Here is an example payment URL with the following parameters:
 | ref | unstoppable |
 | searchTerm | buyadomain.crypto |
 | timestamp | 1641586875148 |
-| strictName | foo |
-| records | `{"crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh", "crypto.USDT.version.ERC20.adress": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92", "crypto.DAI.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92", "crypto.EOS.address": "playuplandme"}` |
-| signature | 7038743d813122a9c13c233a24d273535085b67d9a92db5c86669f45ec14b5f2 |
+| strictName | testReseller |
+| records | `{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"}` |
+| signatureKey | someKey |
+| signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
 
 ```
-https://unstoppabledomains.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=foo&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%2C%22crypto.USDT.version.ERC20.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.DAI.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.EOS.address%22%3A%22playuplandme%22%7D&signature=7038743d813122a9c13c233a24d273535085b67d9a92db5c86669f45ec14b5f2
+https://unstoppabledomains.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&signatureKey=someKey&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4
 ```
 
 :::success Congratulations!

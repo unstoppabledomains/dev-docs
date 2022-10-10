@@ -40,10 +40,10 @@ https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMA
 
 ## Redirect URL Payments Example
 
-Here is an example payment URL for the `example12345.nft` domain name and `unstoppable` referral code:
+Here is an example payment URL for the `buyadomain.crypto` domain name and `unstoppable` referral code:
 
 ```
-https://unstoppabledomains.com/search?searchTerm=example12345.nft&ref=unstoppable
+https://unstoppabledomains.com/search?searchTerm=buyadomain.crypto&ref=unstoppable
 ```
 
 Here is an example payment URL that only uses the Partner's referral code:
