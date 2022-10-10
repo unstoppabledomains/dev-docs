@@ -45,6 +45,7 @@ An object with the following fields:
         * 80001 - Polygon (Matic) Mumbai Testnet
         * 4 - Ethereum Rinkeby Testnet
         * 5 - Ethereum Goerli Testnet
+    * `reverse`: (boolean) A boolean indicating if the domain has a reverse record.
 * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 
 ## Example

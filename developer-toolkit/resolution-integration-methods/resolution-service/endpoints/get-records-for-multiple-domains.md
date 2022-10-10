@@ -27,19 +27,20 @@ This endpoint returns all the records attached to multiple domain names in a sin
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| domains[] | ARRAY[STRING] | YES | A list of UD domains to query for resolution records |
+| domains | ARRAY[STRING] | YES | A list of UD domains to query for resolution records |
 | key | STRING | NO | The resolution record to retrieve across the requested domains. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported values |
 
 :::info
-To retrieve the records of multiple domains, you need to use a new `domains[]` query param instance for each domain name.
+To retrieve the records of multiple domains, you need to use a new `domains` query param instance for each domain name.
 :::
 
 ## Returns
 
-An object with a `data` field that contains a list of domain records.
+An object with a `data` field that contains a list of domain details and some meta about the request.
 
-* `domain`: (string) Name of the domain.
-* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
+* `data`: (array) An array with the data and metadata of domains owned by a wallet address.
+    * `domain`: (string) Name of the domain.
+    * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 
 ## Example 1
 
@@ -52,7 +53,7 @@ Here is an example request to query for the records of two domains:
 
 ```bash
 curl \
---request GET 'https://resolve.unstoppabledomains.com/records?domains[]=brad.crypto&domains[]=matt.crypto' \
+--request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto' \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 
@@ -98,7 +99,7 @@ Here is an example request to query for a specific resolution record from multip
 
 ```bash
 curl \
---request GET 'https://resolve.unstoppabledomains.com/records?domains[]=brad.crypto&domains[]=matt.crypto&key=crypto.ETH.address' \
+--request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto&key=crypto.ETH.address' \
 --header 'Authorization: Bearer <YOUR API KEY>'
 ```
 

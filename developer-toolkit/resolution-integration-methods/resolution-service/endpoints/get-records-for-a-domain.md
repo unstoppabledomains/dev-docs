@@ -33,9 +33,11 @@ This endpoint returns all the resolution records configured to a domain in a sin
 
 An object with the following fields:
 
-* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 * `meta`: A key-value dictionary with general information about the domain:
     * `domain`: (string) Name of the domain.
+    * `owner`: (string) The wallet address that owns the domain.
+    * `resolver`: (string) The Resolver smart contract address. This contract is responsible for managing domain records.
+    * `registry`: (string) The Registry smart contract address. Registry manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).
     * `blockchain`: (string) The blockchain the domain is located (MATIC, ETH, ZIL). The blockchain names are coin types according to [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
     * `networkId`: (number) The blockchain network ID.
         * 1 - Ethereum or Zilliqa Mainnet
@@ -43,9 +45,8 @@ An object with the following fields:
         * 80001 - Polygon (Matic) Mumbai Testnet
         * 4 - Ethereum Rinkeby Testnet
         * 5 - Ethereum Goerli Testnet
-* `owner`: (string) The wallet address that owns the domain.
-* `resolver`: (string) The Resolver smart contract address. This contract is responsible for managing domain records.
-* `registry`: (string) The Registry smart contract address. Registry manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the Unstoppable Name Service (UNS).
+    * `reverse`: (boolean) A boolean indicating if the domain has a reverse record.
+* `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
 
 ## Example
 

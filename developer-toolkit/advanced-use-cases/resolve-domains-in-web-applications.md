@@ -177,7 +177,7 @@ Use these commands to set up a local development environment (**macOS Terminal**
 1.  Install `nvm`
 
     ```
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    curl --location --request GET 'https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh' | bash
     ```
 2.  Install concrete version of `node.js`
 
