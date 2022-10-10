@@ -1,6 +1,6 @@
 ---
 title: Redirect URL Payments With Auto-Configured Crypto Records Guide | UD Developer Portal
-description: This guide covers configuring the Partner account to mint paid domains and automatically prefill crypto records using the redirect URL payment processing flow.
+description: This guide covers configuring the Partner account to mint paid domains and automatically pre-fill crypto records using the redirect URL payment processing flow.
 ---
 
 # Redirect URL Payments With Auto-Configured Crypto Records Guide
@@ -32,7 +32,7 @@ https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMA
 
 ## Step 2: Setup Query Parameters
 
-The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to prefill crypto addresses after minting using a payment URL:
+The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill crypto addresses after minting using a payment URL:
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
@@ -124,7 +124,7 @@ You can use Unstoppable Domains [sandbox environment](/partner/set-up-sandbox-fo
 
 1. Navigate to the sandbox environment with the paid domains flow query parameters appended to the URL.
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
-3. Proceed to mint the domain. If you are asked to verify records to prefill when minting the domain, then the redirect URL with crypto addresses integration is working successfully.
+3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto addresses integration is working successfully.
 
 ## Redirect URL Payments With Records Example
 

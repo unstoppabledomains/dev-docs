@@ -99,7 +99,7 @@ async function fetchContractData(keys, tokenId) {
 }
 
 // user domain and records to resolve
-const domain = "udtestdev-test-btc-record.coin";
+const domain = "udtestdev-test.crypto";
 const tokenId = namehash(domain);
 const keys = ["crypto.BTC.address", "crypto.ETH.address"];
 
@@ -107,9 +107,9 @@ const data = await fetchContractData(keys, tokenId)
 console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
 
 // {
-//   owner: "0xe7474D07fD2FA286e7e0aa23cd107F8379085037"
-//   resolver: "0x7fb83000B8eD59D3eAD22f0D584Df3a85fBC0086"
-//   values: ["bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y", "0xe7474D07fD2FA286e7e0aa23cd107F8379085037"]
+//   owner: "0x58ca45e932a88b2e7d0130712b3aa9fb7c5781e2"
+//   resolver: "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842"
+//   values: ["bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y", "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"]
 // }
 ```
 

@@ -5,7 +5,7 @@ description: Frequently asked questions about the Partner API of Unstoppable Dom
 
 # Partner API FAQ
 
-### What happens when the HMAC signature becomes invalid for redirect URI payments?
+### What happens when the HMAC signature becomes invalid for redirect URL payments?
 
 You would be able to put in an order, but no crypto records would be available to pre-fill during the minting step.
 

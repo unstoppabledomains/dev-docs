@@ -13,5 +13,5 @@ POST https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/orders/
 ```
 
 :::info
-The `ResellerID` path parameter is the same one you retrieved from your dashboard earlier.
+The `ResellerID` path parameter is the same one you retrieved from your partner account earlier.
 :::

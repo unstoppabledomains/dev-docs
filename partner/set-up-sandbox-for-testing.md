@@ -80,7 +80,7 @@ https://ud-sandbox.com/
 https://api.ud-sandbox.com/
 ```
 
-### Sandbox Reseller Dashboard
+### Sandbox Partner Account
 
 ```
 https://ud-sandbox.com/resellers/
