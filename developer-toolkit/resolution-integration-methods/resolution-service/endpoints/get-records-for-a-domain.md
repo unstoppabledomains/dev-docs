@@ -70,7 +70,8 @@ curl \
     "networkId": 1,
     "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
     "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
-    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe"
+    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe",
+    "reverse": false
   },
   "records": {
     "ipfs.html.value": "QmVHmG6BDRsDuzcFrWw6m5ByDnzcvfQbmdQF9bbSFTUeD1",

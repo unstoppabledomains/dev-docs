@@ -70,7 +70,8 @@ curl \
     "networkId": 137,
     "owner": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19",
     "resolver": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
-    "registry": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f"
+    "registry": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
+    "reverse": true
   },
   "records": {
     "crypto.ETH.address": "0x3eaa674612f79a97ad451fcf860a51ad41ac2c19",

@@ -134,7 +134,7 @@ Here is an example payment URL with the following parameters:
 | signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
 
 ```
-https://unstoppabledomains.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&signatureKey=someKey&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4
+https://unstoppabledomains.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4
 ```
 
 :::success Congratulations!
