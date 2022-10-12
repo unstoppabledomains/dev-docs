@@ -9,7 +9,6 @@ pages:
     pages:
       - group: Resolution Service API
         expanded: false
-        selectFirstItemOnExpand: true
         pages:
           - label: Overview
             page: resolution-integration-methods/resolution-service/overview.md
@@ -44,7 +43,6 @@ pages:
             page: resolution-integration-methods/resolution-service/error-codes.md
       - group: Resolution Libraries
         expanded: false
-        selectFirstItemOnExpand: true
         pages:
           - label: Overview
             page: resolution-integration-methods/resolution-libraries/libraries-overview.md
@@ -62,7 +60,6 @@ pages:
         page: resolution-integration-methods/resolution-cli.md
       - group: Resolve With Direct Blockchain Calls
         expanded: false
-        selectFirstItemOnExpand: true
         pages:
           - label: Overview
             page: resolution-integration-methods/direct-blockchain-calls/bc-overview.md
@@ -80,7 +77,6 @@ pages:
         page: advanced-use-cases/resolve-domains-in-web-applications.md
       - group: Resolve Domains in a Browser (HTTP & IPFS)
         expanded: false
-        selectFirstItemOnExpand: true
         pages:
           - label: Browser Resolution Overview
             page: advanced-use-cases/resolve-domains-browser/browser-resolution-overview.md

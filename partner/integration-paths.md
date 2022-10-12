@@ -11,13 +11,17 @@ Unstoppable Domains Partner API is a versatile feature with several integration 
 Partner API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](/polygon/polygon-migration-guide.md) to get started.
 :::
 
-## Step 1: Set up Partner API Access
+## Step 1: Locate Your Reseller ID
 
-Before beginning the integration process for Unstoppable's Partner API, you must set up Partner API access and obtain partner credentials. Please see the [Set up Partner API Access Guide](index.md) for more details.
+After [setting up access to the Partner API](index.md), you must obtain your `resellerID` from your [UD Partner account](https://unstoppabledomains.com/resellers) to integrate our services into your application for your customers.
 
-## Step 2: Locate Your Reseller ID
+## Step 2: Add a Domain Search Functionality
 
-To integrate free or paid domain minting (via Stripe or Redirect URLs) for your customers, you must know your `resellerID`. This information can be found in your [UD Partner account](https://unstoppabledomains.com/resellers).
+Before you integrate free or paid domain minting (via Stripe or Redirect URLs) payment flows, you must implement a domain search functionality into your application. Unstoppable Domains provides a set of endpoints to check the availability of a domain name, provide domain suggestions, and reserve domains to purchase later.
+
+| Endpoint | Description | Integration Guides |
+| - | - | - |
+| Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
 
 ## Step 3: Choose Your Integration Path
 

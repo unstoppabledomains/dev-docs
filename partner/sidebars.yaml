@@ -3,7 +3,6 @@ pages:
     separatorLine: true
   - group: Getting Started with Integrating UD
     expanded: false
-    selectFirstItemOnExpand: true
     pages:
       - label: Set up Partner API Access
         page: index.md
@@ -21,12 +20,16 @@ pages:
         label: Stripe Payments Guide
       - group: Redirect URL Payments Guide
         expanded: false
-        selectFirstItemOnExpand: true
         pages:
           - page: partner-integration-guides/redirect-url-payments.md
             label: Without Auto-Configuring Crypto Records
           - page: partner-integration-guides/redirect-url-payments-with-records.md
             label: With Auto-Configuring Crypto Records
+      - group: Domain Search Guides
+        expanded: false
+        pages:
+          - page: partner-integration-guides/domain-name-availability.md
+            label: Domain Name Availability Guide
     separatorLine: true
   - label: Partner API Endpoints
     page: partner-api-endpoints.md

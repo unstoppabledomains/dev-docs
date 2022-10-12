@@ -32,7 +32,7 @@ The Unstoppable Domains website requires additional fields to the `ref` and `sea
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | timestamp | NUMBER | YES | The epoch timestamp in milliseconds when the payment URL is created |
-| strictName | STRING | YES | The Partner's `resellerID` [gotten from their UD Partner account](/partner/integration-paths.md#step-2-locate-your-reseller-id) |
+| strictName | STRING | YES | The Partner's `resellerID` [gotten from their UD Partner account](/partner/integration-paths.md#step-1-locate-your-reseller-id) |
 | records | OBJECT | YES | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported key values |
 | signature | STRING | YES | A HMAC-SHA256 hash of the query parameters for the order security |
 
@@ -125,13 +125,13 @@ Here is an example payment URL with the following parameters:
 
 | Parameter | Value |
 | - | - |
-| ref | unstoppable |
-| searchTerm | buyadomain.crypto |
-| timestamp | 1641586875148 |
-| strictName | testReseller |
-| records | `{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"}` |
-| signatureKey | someKey |
-| signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
+| Partner Referral Code | unstoppable |
+| Domain Name | buyadomain.crypto |
+| Order Timestamp | 1641586875148 |
+| Partner Reseller ID | testReseller |
+| Predefined Domain Records | `{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"}` |
+| Signature Key | someKey |
+| Order Signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
 
 ```
 https://unstoppabledomains.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4

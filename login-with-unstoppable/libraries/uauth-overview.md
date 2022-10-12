@@ -20,7 +20,7 @@ The UAuth middleware libraries provide an additional custom interface for `@uaut
 | ------------------------------------------------------------------------- | ---------------------- | ------------------------------------ |
 | [Web3-React](/login-with-unstoppable/libraries/uauth-web3-react.md)       |  `@uauth/web3-react`   | Middleware library for Web3-React    |
 | [Web3Modal](/login-with-unstoppable/libraries/uauth-web3modal.md)         |  `@uauth/web3modal`    | Middleware library for Web3Modal     |
-| [Web3-Onboard](/login-with-unstoppable/libraries/uauth-web3-onbard.md)    |  `@uauth/web3-onboard` | Middleware library for Web3-Onboard  |
+| [Web3-Onboard](/login-with-unstoppable/libraries/uauth-web3-onboard.md)   |  `@uauth/web3-onboard` | Middleware library for Web3-Onboard  |
 | [Moralis](/login-with-unstoppable/libraries/uauth-moralis.md)             |  `@uauth/mnoralis`     | Middleware library for Moralis       |
 
 ## Examples

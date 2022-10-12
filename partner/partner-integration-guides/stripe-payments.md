@@ -124,7 +124,7 @@ Here is an example request to purchase a domain with the following details using
 
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/orders' \
---header 'Authorization: Bearer {Secret API Token}' \
+--header 'Authorization: Bearer {{Secret API Token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "payment": {
