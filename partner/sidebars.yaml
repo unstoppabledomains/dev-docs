@@ -30,6 +30,8 @@ pages:
         pages:
           - page: partner-integration-guides/domain-name-availability.md
             label: Domain Name Availability Guide
+          - page: partner-integration-guides/get-domains-suggestions.md
+            label: Get Domains Suggestions Guide
     separatorLine: true
   - label: Partner API Endpoints
     page: partner-api-endpoints.md

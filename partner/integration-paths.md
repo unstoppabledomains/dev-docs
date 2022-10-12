@@ -22,6 +22,7 @@ Before you integrate free or paid domain minting (via Stripe or Redirect URLs) p
 | Endpoint | Description | Integration Guides |
 | - | - | - |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
+| Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](partner-integration-guides/get-domains-suggestions.md) |
 
 ## Step 3: Choose Your Integration Path
 

@@ -25,7 +25,7 @@ Production Environment:
 https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
 ```
 
-## Step 2: Setup Query Parameters
+## Step 2: Prepare Query Parameters
 
 The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill crypto records after minting using a payment URL:
 

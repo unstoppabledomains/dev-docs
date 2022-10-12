@@ -5,7 +5,7 @@ description: This guide shows how to check the availability of a domain name bef
 
 # Domain Name Availability Guide
 
-The Partner API provides an endpoint that lets you check the availability of a domain name before purchase to avoid making minting calls to non-available domains. You can use this endpoint to implement a domain name search field in your application that shows users which domain names are available and the prices to purchase them.
+The Partner API offers an endpoint that lets you check the availability of a domain name before purchase to avoid making minting calls to non-available domains. You can use this endpoint to implement a domain name search field in your application that shows users which domain names are available and the prices to purchase them.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
