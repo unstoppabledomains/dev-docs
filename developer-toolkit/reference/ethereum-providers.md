@@ -109,7 +109,7 @@ var znsResolution, _ = resolution.NewZnsBuilder().Build()
 ```
 
 ```bash Resolution CLI
-resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
 ```
 
 ## Resources

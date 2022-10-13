@@ -80,13 +80,13 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
 
 ```json
 {
-    "orderNumber": "ORDER_NUMBER",
-    "total": "TOTAL_ORDER_PRICE",
+    "orderNumber": "{{ ORDER_NUMBER }}",
+    "total": "{{ TOTAL_ORDER_PRICE }}",
     "payment": {
         "method": "stripe",
         "details": {
-          "clientSecret": "STRIPE_CLIENT_SECRET",
-          "paymentIntentId": "STRIPE_PAYMENT_INTENT_ID"
+          "clientSecret": "{{ STRIPE_CLIENT_SECRET }}",
+          "paymentIntentId": "{{ STRIPE_PAYMENT_INTENT_ID }}"
         }
     },
     "items": []
@@ -109,8 +109,8 @@ Here is an example request to purchase a domain with the following details using
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/orders' \
---header 'Authorization: Bearer {{Secret API Token}}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders' \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "payment": {

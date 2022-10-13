@@ -3,13 +3,13 @@ Send a `POST` request with the authorization headers and request body you have p
 Sandbox Environment:
 
 ```
-https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/orders/
+https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/orders/
+https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/
 ```
 
 :::info

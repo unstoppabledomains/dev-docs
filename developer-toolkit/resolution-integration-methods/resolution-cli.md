@@ -31,8 +31,8 @@ go get -u github.com/unstoppabledomains/resolution-cli/resolution
 
 This will retrieve the ETH address of a domain:
 
-```shell
-resolution resolve addr ETH -d brad.crypto
+```bash
+$ resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
 
@@ -43,7 +43,7 @@ The crypto.ETH.address can be located in the [Records Reference](/developer-tool
 And this will retrieve any record from the domain, if it exists, and return the following records:
 
 ```shell
-resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
+$ resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
 {
    "records": {
       "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
@@ -59,7 +59,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 For example:
 
 ```
-resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
 ```
 
 ## Error Codes

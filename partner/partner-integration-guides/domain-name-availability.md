@@ -29,13 +29,13 @@ Send a `GET` request with the authorization headers you have prepared and the do
 Sandbox Environment:
 
 ```
-https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
+https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_TO_CHECK }}
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
+https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_TO_CHECK }}
 ```
 
 :::info
@@ -49,8 +49,8 @@ Here is an example request to check the availability of the `buyadomain.dao` dom
 ### Request
 
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/domains/buyadomain.dao' \
---header 'Authorization: Bearer {{Secret API Token}}'
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/buyadomain.dao' \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response
@@ -80,7 +80,7 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{Res
 }
 ```
 
-From the `availability` field in the API response, we can see the domain hasn't been registered and costs $20 to purchase.
+From the `availability` field in the API response, we can see the domain hasn't been registered and costs `$20` to purchase.
 
 :::success Congratulations!
 You have successfully checked the availability of a domain name with the Partner API.

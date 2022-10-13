@@ -46,13 +46,13 @@ Send a `GET` request with the authorization headers and query parameters you hav
 Sandbox Environment:
 
 ```
-https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
 ```
 
 ### Get Free Domains Suggestions
@@ -60,13 +60,13 @@ https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/s
 Sandbox Environment:
 
 ```
-https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions/free?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions/free?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
 ```
 
 :::info
@@ -85,8 +85,8 @@ Here is an example request to generate paid domain suggestions with the followin
 ### Request
 
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
---header 'Authorization: Bearer {{Secret API Token}}'
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response

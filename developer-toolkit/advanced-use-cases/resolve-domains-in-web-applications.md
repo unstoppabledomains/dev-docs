@@ -126,7 +126,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 For example:
 
 ```
-resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/${secret} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
 ```
 
 Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md) documentation for more information.
@@ -205,8 +205,8 @@ Use these commands to set up a local development environment (**macOS Terminal**
 
 **To update:**
 
-* Network config: `$ yarn network-config:pull`
-* Supported keys: `$ yarn supported-keys:pull`
-* Both configs: `$ yarn config:pull`
+* Network config: `yarn network-config:pull`
+* Supported keys: `yarn supported-keys:pull`
+* Both configs: `yarn config:pull`
 
 <embed src="/snippets/_discord.md" />

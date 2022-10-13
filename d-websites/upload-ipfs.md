@@ -22,7 +22,7 @@ You can upload and attach your d-website to your domain in a single step from th
 <figure>
 
 ![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#width=60%;')
-	
+
 <figcaption>How to locate the 'Website' tab under My Domains --> Manage</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ You can upload and attach your d-website to your domain in a single step from th
 <figure>
 
 ![Upload files using the IPFS Uploader, limited to 20MB per domain](/images/ipfs-file-uploader.png '#width=60%;')
-	
+
 <figcaption>Upload files using the IPFS Uploader, limited to 20MB per domain</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ In order to use it, you need to add one step to `main.yml`:
 
 There will be a build artifact on a runner after [steps](https://dapps-delivery-guide.readthedocs.io/en/latest/delivery/github-actions.html#step-1-create-pipeline) (usually in directory build or dist). You need to pass the directory as a path parameter.
 
-This step will have hash output — it will be needed later to [add the IPFS hash to your domain](connect-ipfs.md). Token **${{ steps.upload.outputs.hash }}** can be used in next steps where _upload_ is the id of current step.
+This step will have hash output — it will be needed later to [add the IPFS hash to your domain](connect-ipfs.md). Token **{{ steps.upload.outputs.hash }}** can be used in next steps where _upload_ is the id of current step.
 
 ### IPFS Upload to Pinata via GitHub Action
 
@@ -97,9 +97,9 @@ In order to use it, you need to add one step to `main.yml`:
   with:
     path: ./build
     service: pinata
-    pinataKey: ${{ secrets.PINATA_KEY }}
-    pinataSecret: ${{ secrets.PINATA_SECRET }}
-    pinataPinName: {pin_name}
+    pinataKey: {{ secrets.PINATA_KEY }}
+    pinataSecret: {{ secrets.PINATA_SECRET }}
+    pinataPinName: {{ PIN_NAME }}
 ```
 
 As in the previous example, you will need to save the hash output to [add the IPFS hash to your domain](connect-ipfs.md).
@@ -114,7 +114,7 @@ You can also upload your static site to IPFS using the Pinata website.
 <figure>
 
 ![Locate the Pin Manager tab for uploading files to Pinata.cloud](/images/pin-manager-pinata.png '#width=60%;')
-	
+
 <figcaption>Locate the Pin Manager tab for uploading files to Pinata.cloud</figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ You can also upload your static site to IPFS using the Pinata website.
 <figure>
 
 ![Locate the IPFS Hash for your d-website in Pinata.cloud](/images/ipfs-hash-pinata-web-interface.png '#width=60%;')
-	
+
 <figcaption>Locate the IPFS Hash for your d-website in Pinata.cloud</figcaption>
 </figure>
 

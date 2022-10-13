@@ -58,17 +58,17 @@ Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, w
 Sandbox Environment:
 
 ```
-POST https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/security/fingerprintjs/keys
+POST https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
 ```
 
 Production Environment:
 
 ```
-POST https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/security/fingerprintjs/keys
+POST https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
 ```
 
 :::info
-The `ResellerID` path parameter is the same one you retrieved from your partner account earlier.
+The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
 :::info
@@ -108,7 +108,7 @@ Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.
 ```javascript
 // Get the visitor identifier when you need it.
 fpPromise
-  .then(fp => fp.get({linkedId: '{{ResellerID}}'}))
+  .then(fp => fp.get({linkedId: '{{ PARTNER_RESELLERID }}'}))
   .then(result => console.log(result.visitorId));
 ```
 
@@ -124,7 +124,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 
   // Get the visitor identifier when you need it.
   fpPromise
-    .then(fp => fp.get({linkedId: '{{ResellerID}}'}))
+    .then(fp => fp.get({linkedId: '{{ PARTNER_RESELLERID }}'}))
     .then(result => console.log(result.visitorId));
 </script>
 ```
@@ -196,8 +196,8 @@ Here is an example request to mint a free domain with the following details:
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/orders/' \
---header 'Authorization: Bearer {{Secret API Token}}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/' \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "payment": {
@@ -273,10 +273,10 @@ To reserve a domain, you need to request the Reserve Free Domains endpoint with 
 ### Domain Reservation Example
 
 ```bash
-curl --location -g --request POST '/{{ResellerID}}/domains/{{domainName}}/reserve/' \
+curl --location -g --request POST '/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "resellerIdentityKey": "{domainReservationID}"
+  "resellerIdentityKey": "{{ DOMAIN_RESERVATION_ID }}"
 }'
 ```
 

@@ -55,7 +55,7 @@ Here is an example request to query for the transfer events of the `brad.crypto`
 ```bash
 curl \
 --request GET "https://resolve.unstoppabledomains.com/domains/brad.crypto/transfers/latest" \
---header 'Authorization: Bearer <YOUR API KEY>'
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response

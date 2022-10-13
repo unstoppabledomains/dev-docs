@@ -42,8 +42,8 @@ use(Web3ClientPlugin);
 use(UnstoppableDomainsClientPlugin);
 
 async function resolveWithUnstoppableExample() {
-    const privateKey = '<key>'
-    const userAddress = '<address>'
+    const privateKey = '{{ KEY }}'
+    const userAddress = '{{ ADDRESS }}'
 
     // Client setup
     const posClient = new POSClient();
@@ -52,13 +52,13 @@ async function resolveWithUnstoppableExample() {
         network: 'testnet',
         version: 'mumbai',
         parent: {
-          provider: new HDWalletProvider(privateKey, '<provider url>'),
+          provider: new HDWalletProvider(privateKey, '{{ PROVIDER_URL }}'),
           defaultConfig: {
             from : userAddress
           }
         },
         child: {
-          provider: new HDWalletProvider(privateKey, '<provider url>'),
+          provider: new HDWalletProvider(privateKey, '{{ PROVIDER_URL }}'),
           defaultConfig: {
             from : userAddress
           }

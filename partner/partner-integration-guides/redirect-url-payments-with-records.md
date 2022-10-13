@@ -16,13 +16,13 @@ Follow the [Redirect URL Payments](redirect-url-payments.md) guide to prepare a 
 Sandbox Environment:
 
 ```
-https://ud-sandbox.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
+https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}
+https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
 ## Step 2: Prepare Query Parameters
@@ -98,13 +98,13 @@ After you have generated the order signature, add it to the payment URL and redi
 Sandbox Environment:
 
 ```
-https://ud-sandbox.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}&timestamp={{CURRENT_TIMESTAMP}}&strictName={{PARTNER_RESELLERID}}&records={{CRYPTO_RECORDS_TO_PREFILL}}&signature={{GENERATED_ORDER_SIGNATURE}}
+https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
 ```
 
 Production Environment:
 
 ```
-https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMAIN_NAME_TO_PURCHASE}}&timestamp={{CURRENT_TIMESTAMP}}&strictName={{PARTNER_RESELLERID}}&records={{CRYPTO_RECORDS_TO_PREFILL}}&signature={{GENERATED_ORDER_SIGNATURE}}
+https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
 ```
 
 :::info

@@ -54,7 +54,7 @@ Here is an example request to query for the records of two domains:
 ```bash
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto' \
---header 'Authorization: Bearer <YOUR API KEY>'
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response
@@ -100,7 +100,7 @@ Here is an example request to query for a specific resolution record from multip
 ```bash
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto&key=crypto.ETH.address' \
---header 'Authorization: Bearer <YOUR API KEY>'
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response

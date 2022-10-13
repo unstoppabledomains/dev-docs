@@ -57,7 +57,7 @@ Here is an example request to query for the records and metadata of the `brad.cr
 ```bash
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/domains/brad.crypto' \
---header 'Authorization: Bearer <YOUR API KEY>'
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 ### Response
