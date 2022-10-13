@@ -28,7 +28,7 @@ The Partner API suggestions endpoints accepts the `search` and `tlds` fields as 
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
-| search | ARRAY[STRING] | NO | Keywords that will be used to build domain suggestions. It can be a TLD or domain name |
+| search | ARRAY[STRING] | NO | Keywords that will be used to build domain suggestions. It can be domain name(s) with or without TLD |
 | tlds | ARRAY[STRING] | NO | Specific TLDs the suggestions should be limited to |
 
 :::info
@@ -41,23 +41,33 @@ The Partner API has two endpoints for generating domain name suggestions: one fo
 
 Send a `GET` request with the authorization headers and query parameters you have prepared to the [Get Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions/get) or [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint. Here is the URL for our API environments:
 
+### Get Domains Suggestions
+
 Sandbox Environment:
 
 ```
-GET https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
-GET https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
 ```
 
 Production Environment:
 
 ```
-GET https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
-GET https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
 ```
 
-:::info
-The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
-:::
+### Get Free Domains Suggestions
+
+Sandbox Environment:
+
+```
+https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+```
+
+Production Environment:
+
+```
+https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/suggestions/free?search={{KEYWORD}}&tlds={{TLD_TO_FILTER}}
+```
 
 :::info
 If the Partner isn't eligible to mint free domains, the [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint will return an error.
@@ -69,13 +79,13 @@ Here is an example request to generate paid domain suggestions with the followin
 
 | Parameter | Value |
 | - | - |
-| Keywords | john, smith, doctor |
-| TLD Filter | nft, wallet |
+| Keywords | buyadomain.dao, hosting, doctor |
+| TLD Filter | dao, nft |
 
 ### Request
 
 ```bash
-curl --location --request GET 'https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/domains/suggestions?search=john&search=smith&search=doctor&tlds=nft&tlds=wallet' \
+curl --location --request GET 'https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
 --header 'Authorization: Bearer {{Secret API Token}}'
 ```
 
@@ -83,22 +93,26 @@ curl --location --request GET 'https://unstoppabledomains.com/api/v2/resellers/{
 
 ```json
 [
-    {
-        "name": "john.nft",
-        "price": 20000
-    },
-    {
-        "name": "spjohn.nft",
-        "price": 100
-    },
-    {
-        "name": "smithhq.nft",
-        "price": 40
-    },
-    {
-        "name": "brdoctor.nft",
-        "price": 20
-    }
+  {
+      "name": "buyadomain.dao",
+      "price": 20
+  },
+  {
+      "name": "buyadomainag.wallet",
+      "price": 20
+  },
+  {
+      "name": "prhosting.dao",
+      "price": 20
+  },
+  {
+      "name": "hostingdb.dao",
+      "price": 20
+  },
+  {
+      "name": "brdoctor.wallet",
+      "price": 20
+  }
 ]
 ```
 

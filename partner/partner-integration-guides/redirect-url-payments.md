@@ -5,7 +5,7 @@ description: This guide covers configuring the Partner account to mint paid doma
 
 # Redirect URL Payments Guide
 
-The Redirect URL payment flow is the most straightforward payment process to implement for Partners. You do not have to set up native paid domain flows in your application and can instead generate a URL to redirect payments to Unstoppable Domains to be processed.
+The Redirect URL payment flow is the most straightforward payment process to implement for Partners. You do not have to set up native paid domain flows in your application and can generate a URL to redirect payments to Unstoppable Domains to be processed.
 
 In this case, the Partner acts like an "affiliate" where they redirect their users to the Unstoppable Domains website to purchase domains and receive a commission from the sale.
 
@@ -15,11 +15,11 @@ Before integrating Redirect URL payments, you must acquire a referral code from 
 
 ## Step 2: Search for Available Domain Names (Optional)
 
-Unstoppable Domains provides a [Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D/get) endpoint to check if a domain name is available for purchase.
+Unstoppable Domains provides the [Domain Name Availability](domain-name-availability.md) and [Get Domains Suggestions](get-domains-suggestions.md) endpoints to check for domain names available for purchase.
 
 ## Step 3: Redirect Users to the Unstoppable Domains Website
 
-The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments. After preparing your parameter values, construct the payment URL and redirect the user to it:
+The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments. After preparing your parameter values, construct the payment URL and redirect the user to it in their browser:
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |

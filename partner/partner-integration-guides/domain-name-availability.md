@@ -29,13 +29,13 @@ Send a `GET` request with the authorization headers you have prepared and the do
 Sandbox Environment:
 
 ```
-GET https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
+https://api.ud-sandbox.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
 ```
 
 Production Environment:
 
 ```
-GET https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
+https://unstoppabledomains.com/api/v2/resellers/{{PARTNER_RESELLERID}}/domains/{{DOMAIN_TO_CHECK}}
 ```
 
 :::info
