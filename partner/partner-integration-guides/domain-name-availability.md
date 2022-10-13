@@ -49,7 +49,7 @@ Here is an example request to check the availability of the `buyadomain.dao` dom
 ### Request
 
 ```bash
-curl --location --request GET 'https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/domains/buyadomain.dao' \
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/domains/buyadomain.dao' \
 --header 'Authorization: Bearer {{Secret API Token}}'
 ```
 

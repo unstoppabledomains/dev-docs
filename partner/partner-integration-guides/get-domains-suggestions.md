@@ -39,7 +39,7 @@ If your request must include multiple `search` or `tlds`, you need to use a new 
 
 The Partner API has two endpoints for generating domain name suggestions: one for paid domains and another for free domains.
 
-Send a `GET` request with the authorization headers and query parameters you have prepared to the [Get Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions/get) or [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint. Here is the URL for our API environments:
+Send a `GET` request with the authorization headers and query parameters you have prepared to the `Get Domains Suggestions` or `Get Free Domains Suggestions` endpoint. Here is the URL for our API environments:
 
 ### Get Domains Suggestions
 
@@ -85,7 +85,7 @@ Here is an example request to generate paid domain suggestions with the followin
 ### Request
 
 ```bash
-curl --location --request GET 'https://unstoppabledomains.com/api/v2/resellers/{{ResellerID}}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ResellerID}}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
 --header 'Authorization: Bearer {{Secret API Token}}'
 ```
 

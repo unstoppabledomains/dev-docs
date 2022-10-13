@@ -40,7 +40,7 @@ Here is an example request to query for the domain endings supported by Unstoppa
 ### Request
 
 ```bash
-curl --location --request GET 'https://unstoppabledomains.g.alchemy.com/supported_tlds'
+curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_tlds'
 ```
 
 ### Response

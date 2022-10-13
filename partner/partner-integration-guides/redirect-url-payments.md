@@ -43,13 +43,13 @@ https://unstoppabledomains.com/search?ref={{UD_REFERRAL_CODE}}&searchTerm={{DOMA
 Here is an example payment URL for the `buyadomain.crypto` domain name and `unstoppable` referral code:
 
 ```
-https://unstoppabledomains.com/search?searchTerm=buyadomain.crypto&ref=unstoppable
+https://ud-sandbox.com/search?searchTerm=buyadomain.crypto&ref=unstoppable
 ```
 
 Here is an example payment URL that only uses the Partner's referral code:
 
 ```
-https://unstoppabledomains.com/search?ref=unstoppable
+https://ud-sandbox.com/search?ref=unstoppable
 ```
 
 :::success Congratulations!
