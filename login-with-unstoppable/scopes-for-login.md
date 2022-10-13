@@ -41,7 +41,7 @@ Login with Unstoppable supports the following scopes which are detailed below:
 
 ## Optional Scopes
 
-Many login scopes have `scope:optional` variations that allow users to opt in or opt out of sharing requested information. These appear with checkmarks next to them in the login request. If the user consents to sharing this information, the claims associated with the standard scope will be returned.
+Many login scopes have `scope:optional` variants that allow users to opt in to or out of sharing requested information, instead of requiring it to login. These appear with checkmarks next to them in the login request. If the user consents to sharing this information, the claims associated with the standard scope will be returned.
 
 <figure>
 
@@ -49,6 +49,10 @@ Many login scopes have `scope:optional` variations that allow users to opt in or
 
 <figcaption>Consenting to the <code>email:optional</code> scope</figcaption>
 </figure>
+
+:::warning
+Optional scopes are mutually exclusive with their equivalent standard scopes. If an application tries to request both `scope` and `scope:optional`, the request will fail and throw an error.
+:::
 
 ## openid
 `optional: false`
@@ -133,8 +137,6 @@ Individual social scopes may also be used separately to require specific social 
 - `social:youtube`
 - `social:discord`
 - `social:telegram`
-- `social:instagram`
-- `social:github`
 
 :::info note
 You should only request either `social`, `social:optional`, or a combination of individual social scopes. Requesting any combination of those three will throw an error.
