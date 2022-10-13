@@ -42,6 +42,9 @@ Next you will need to add and configure the social connection. This will require
 3. Read the necessary access requirements and click **Continue**.
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
+:::warning
+The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/login-with-unstoppable/scopes-for-login.md#optional-scopes) for more information.
+:::
 6. Turn on or off syncing user profile attributes at each login
 7. Click **Create**
 8. Select the **Applications** tab and choose the apps that should use the Unstoppable Domains social connection
