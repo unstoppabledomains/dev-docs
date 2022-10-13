@@ -32,7 +32,7 @@ The Unstoppable Domains website requires additional fields to the `ref` and `sea
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | timestamp | NUMBER | YES | The epoch timestamp in milliseconds when the payment URL is created |
-| strictName | STRING | YES | The Partner's `resellerID` [gotten from their UD Partner account](/partner/integration-paths.md#step-1-locate-your-reseller-id) |
+| strictName | STRING | YES | The Partner's `resellerID` [gotten from their Partner account](/partner/integration-paths.md#step-1-locate-your-reseller-id) |
 | records | OBJECT | YES | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported key values |
 | signature | STRING | YES | A HMAC-SHA256 hash of the query parameters for the order security |
 
