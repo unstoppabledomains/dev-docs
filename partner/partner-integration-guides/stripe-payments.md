@@ -5,16 +5,7 @@ description: This guide shows how to purchase domains using the Stripe payment p
 
 # Stripe Payments Guide
 
-Unstoppable Domains supports [Stripe](https://stripe.com) payments. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
-
-The following diagram shows the general process between Stripe and Unstoppable Domains after a customer buys a domain.
-
-<figure>
-
-![Payment flow for pre-paid domain purchases, such as Stripe](/images/paid-domains-claiming-prepayment.png '#width=80%;')
-
-<figcaption>Payment flow for pre-paid domain purchases, such as Stripe</figcaption>
-</figure>
+Unstoppable Domains supports [Stripe](https://stripe.com) payments to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
 ## Step 1: Create a Stripe Account
 
@@ -22,15 +13,13 @@ You need to have a Stripe account before connecting it to your Unstoppable Domai
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-Click on the `CONNECT` button in the Stripe section of your [UD Partner account](https://unstoppabledomains.com/resellers). Unstoppable Domains uses different Stripe API keys for live and test orders.
-
-Your Stripe API keys are public keys and they are safe to reveal in your application:
+Click on the `Connect` button in the Stripe section of your [Sandbox](https://www.ud-sandbox.com/resellers) or [Production](https://unstoppabledomains.com/resellers) UD Partner account. Unstoppable Domains uses different Stripe API keys for live and test orders. Your Stripe API keys are public keys and they are safe to reveal in your application:
 
 * pk\_test\_\* (reseller-test-\* namespace)
 * pk\_live\_\* (all other domains)
 
 :::info
-The `Stripe Live Connect Button` is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The `Stripe Test Connect Button` does not involve real money and uses test credentials to integrate.
+The `Stripe Live Connect` is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The `Stripe Test Connect` does not involve real money and uses test credentials to integrate.
 :::
 
 After clicking the Stripe Live or Stripe Test `CONNECT` button, Stripe will walk you through the integration form:
@@ -76,13 +65,10 @@ The request body contains information about your order and must be in JSON forma
     * `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
 * `domains`: (array) An array with information about the domains you want to purchase:
     * `name`: The domain name you want to purchase. This parameter is required for every order.
-    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is optional.
+    * `ownerAddress`: The wallet address the domain should be minted to.
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
     * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional and requires the `ownerAddress` parameter to be provided.
-
-:::info
-You need to provide either the `ownerAddress` or `email` parameter in every order request. You can also provide both parameters in your request.
-:::
+    * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
 
 ## Step 6: Use the Orders Endpoint
 
@@ -95,7 +81,7 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
 ```json
 {
     "orderNumber": "ORDER_NUMBER",
-    "total": 500,
+    "total": "TOTAL_ORDER_PRICE",
     "payment": {
         "method": "stripe",
         "details": {

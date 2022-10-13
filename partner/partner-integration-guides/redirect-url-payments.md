@@ -15,7 +15,7 @@ Before integrating Redirect URL payments, you must acquire a referral code from 
 
 ## Step 2: Search for Available Domain Names (Optional)
 
-Unstoppable Domains provides the [Domain Name Availability](domain-name-availability.md) and [Get Domains Suggestions](get-domains-suggestions.md) endpoints to check for domain names available for purchase.
+Unstoppable Domains provides the [Get Domains Suggestions](get-domains-suggestions.md) and [Domain Name Availability](domain-name-availability.md) endpoints to check for domain names available for purchase.
 
 ## Step 3: Redirect Users to the Unstoppable Domains Website
 
