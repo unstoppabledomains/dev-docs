@@ -22,7 +22,7 @@ If none of the `dweb` or legacy `ipfs.html.value` records are set, a browser sho
 
 If none of the `dns.*` records are set, a browser should fall back to the `browser.redirect_url` or legacy `ipfs.redirect_domain.value` keys. `browser.redirect_url` key has a priority over `ipfs.redirect_domain.value` if both are set.
 
-Generally, browsers automatically add `http://` prefix for any domain in the address bar if the protocol is not specified explicitly by a user. For NFT domain names (assuming a browser supports many protocols), it is preferred to determine a protocol only after resolving domain records.
+Generally, browsers automatically add `http://` prefix for any domain in the address bar if the protocol is not specified explicitly by a user. For web3 domain names (assuming a browser supports many protocols), it is preferred to determine a protocol only after resolving domain records.
 
 `browser.redirect_url` and `ipfs.redirect_domain.value` contains full URL according to RFC-1738 and no additional actions required to provide redirect.
 
@@ -56,7 +56,7 @@ This serialization is the only data transformation required when converting a tr
 
 CNS records do not have a domain name associated with them. That is why there is no feature for storing your subdomain records inside a parent domain. Example: `www.example.com` record can only be set inside a resolver of `www.example.com` but never inside `example.com`.
 
-A recommended way to display content in a browser for NFT domains is explained in [Resolve Domains in Web Applications](../resolve-domains-in-web-applications.md).
+A recommended way to display content in a browser for web3 domains is explained in [Resolve Domains in Web Applications](../resolve-domains-in-web-applications.md).
 
 #### TTL records
 
@@ -85,9 +85,9 @@ TTL for individual records of the same type is currently unsupported. This is du
 
 #### Authority responses
 
-It is a common practice in DNS to have an authority of a subdomain delegated to a parent domain. This mechanism is not necessary for NFT domains because the cost of subdomain registration is comparable to setting records. In other words, configuring a subdomain using the parent domain has no benefit and may result in even higher gas costs since it's necessary to store associated subdomain names to each record.
+It is a common practice in DNS to have an authority of a subdomain delegated to a parent domain. This mechanism is not necessary for web3 domains because the cost of subdomain registration is comparable to setting records. In other words, configuring a subdomain using the parent domain has no benefit and may result in even higher gas costs since it's necessary to store associated subdomain names to each record.
 
-Therefore, authority configurations are not supported by NFT domains at the moment.
+Therefore, authority configurations are not supported by web3 domains at the moment.
 
 ### Decentralized Web Records
 

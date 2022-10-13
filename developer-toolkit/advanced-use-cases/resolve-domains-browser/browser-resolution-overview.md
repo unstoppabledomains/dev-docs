@@ -37,11 +37,11 @@ If you're familiar with blockchain development and would rather avoid an additio
 
 ### HTTP Website Browsing
 
-Given an NFT domain has a DNS record configured. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the specified DNS records. Then, the browser requests and displays the content using DNS protocol and HTTP protocol.
+Given a web3 domain has a DNS record configured. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the specified DNS records. Then, the browser requests and displays the content using DNS protocol and HTTP protocol.
 
 ### Distributed Website Browsing
 
-Given an NFT domain has a d-web content identifier record configured (e.g. an IPFS hash). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
+Given a web3 domain has a d-web content identifier record configured (e.g. an IPFS hash). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
 <figure>
 
@@ -52,7 +52,7 @@ Given an NFT domain has a d-web content identifier record configured (e.g. an IP
 
 ### Domain-Level Redirect
 
-Given an NFT domain has both a redirect URL and IPFS hash configured, and the user's browser doesn't support IPFS protocol. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets both the redirect URL and IPFS hash records. Then, the browser redirects the user to the redirect URL because the IPFS protocol is not supported.
+Given a web3 domain has both a redirect URL and IPFS hash configured, and the user's browser doesn't support IPFS protocol. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets both the redirect URL and IPFS hash records. Then, the browser redirects the user to the redirect URL because the IPFS protocol is not supported.
 
 ### Resolution Configuration
 
@@ -78,7 +78,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 
 ## Hypermedia Protocol
 
-In addition to base browser hypermedia protocols like `http`, NFT domains can also be configured for distributed content protocols like `ipfs`. These hypermedia protocols can be associated with an NFT domain:
+In addition to base browser hypermedia protocols like `http`, web3 domains can also be configured for distributed content protocols like `ipfs`. These hypermedia protocols can be associated with a web3 domain:
 
 * Traditional
   * HTTP
@@ -88,7 +88,7 @@ In addition to base browser hypermedia protocols like `http`, NFT domains can al
   * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary\_File\_System) - `ipfs://`
   * [Swarm](https://docs.ethswarm.org/docs/) - `bzz://`
 
-A browser may support any subset of traditional or distributed protocols that still make NFT domain websites displayable.
+A browser may support any subset of traditional or distributed protocols that still make web3 domain websites displayable.
 
 ## Gateway to Simplify the Integration
 
@@ -112,7 +112,7 @@ See a description of how they work below
 
 A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed content protocol. Basic functionality of such a gateway:
 
-1. Receive HTTP request to an NFT domain (like `http://example.crypto`)
+1. Receive HTTP request to a web3 domain (like `http://example.crypto`)
 2. Resolve the domain into crypto records
 3. Get the content based on [Browser Resolution Algorithm](browser-resolution-algorithm.md)
 4. Return the content to the client via HTTP

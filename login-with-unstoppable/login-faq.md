@@ -21,7 +21,7 @@ When a user visits an app and logs in with their domain:
 
 ## Will Login be a paid service?
 
-No, Login with Unstoppable is a free feature members get with the purchase/ownership of their NFT Domain. It is free to use and free for apps to integrate.
+No, Login with Unstoppable is a free feature members get with the purchase/ownership of their web3 domain. It is free to use and free for apps to integrate.
 
 [comment]: # (How is this different from Facebook Login or Google Login?)
 
@@ -33,7 +33,7 @@ Login with Unstoppable is live and available for use. We see it as becoming the 
 
 Login with Unstoppable allows people to login to apps using their desired username instead of using a bank account number/wallet number. Additionally, Login with Unstoppable offers users and apps the ability to permission the sharing of off-chain data should a user choose, which is not available using a wallet. 
 
-Also with Login with Unstoppable your identity/login is associated to your NFT domain, so you can transfer it to a different wallet down the road should you desire. You can't transfer your private key.
+Also with Login with Unstoppable your identity/login is associated to your web3 domain, so you can transfer it to a different wallet down the road should you desire. You can't transfer your private key.
 
 ## Can users choose what information to share with each app?
 

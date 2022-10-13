@@ -46,7 +46,7 @@ IPFS gateways provide workarounds for applications that do not yet support IPFS 
 
 ## **Redirect to a Traditional DNS Record with an Unstoppable Domain**
 
-In order to set up a redirection to a traditional domain, you will need to do a redirection via `index.html` on your NFT domain so visitors are sent to a traditional domain.
+In order to set up a redirection to a traditional domain, you will need to do a redirection via `index.html` on your web3 domain so visitors are sent to a traditional domain.
 
 1. On your computer, open a text editor (for example: Notepad for Windows or TextEdit for Mac) and paste the following code into an empty file.
 
