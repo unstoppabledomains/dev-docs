@@ -197,7 +197,7 @@ Depreciated: use `browser.redirect_url` instead.
 
 **`social.picture.value`**
 
-Stores data about the PFP of a web3 domain (type of NFT, contract address, token id).
+Stores data about the PFP of a Web3 domain (type of NFT, contract address, token id).
 
 | Format                | Example           |
 | --------------------- | ----------------- |

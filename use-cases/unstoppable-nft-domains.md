@@ -1,10 +1,10 @@
 ---
 title: Learn About Unstoppable Domains & NFTs | UD Developer Portal
-description: This page outlines the use case for learning about Unstoppable web3 domains.
+description: This page outlines the use case for learning about Unstoppable Web3 domains.
 ---
 
 # Learn About Unstoppable Domains & NFTs
-This page outlines the use case for learning about Unstoppable web3 domains.
+This page outlines the use case for learning about Unstoppable Web3 domains.
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rs-lYFtwqds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -16,7 +16,7 @@ Unstoppable Domains are NFTs, and they are decentralized. What sets Unstoppable 
 
 Also, there are no renewal fees for Unstoppable Domains names, so once you own the domain, you own it for life.
 
-## What makes web3 domains decentralized?
+## What makes Web3 domains decentralized?
 
 Once users mint a domain to a wallet, they have absolute control over that domain. Web3 domains can be transferred, updated, and linked to other services without involvement from Unstoppable Domains. Unstoppable Domains cannot deactivate, change, or transfer a domain's records without a user's permission.
 

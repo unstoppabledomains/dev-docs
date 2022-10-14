@@ -29,7 +29,7 @@ Also known as TLD or domain extension, it is the last segment of a domain name o
 
 ### Domain Resolution
 
-The process of retrieving the records associated with a web3 domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp).
+The process of retrieving the records associated with a Web3 domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp).
 
 ### Gas
 
@@ -37,7 +37,7 @@ A fee or pricing value paid by a user to successfully conduct a transaction or e
 
 ### Humanity Check
 
-A feature provided by Unstoppable Domains which allows an application to anonymously verify their users' personal information using their [web3 domains](#nft-domains) without revealing their identity.
+A feature provided by Unstoppable Domains which allows an application to anonymously verify their users' personal information using their [Web3 domains](#nft-domains) without revealing their identity.
 
 ### IPFS
 
@@ -85,7 +85,7 @@ A user authorized by Unstoppable Domains to [sell domains to users](/use-cases/s
 
 ### Record
 
-The data associated with a [web3 domain](#nft-domains), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
+The data associated with a [Web3 domain](#nft-domains), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
 
 ### Registry
 
@@ -113,7 +113,7 @@ Short for Unstoppable Domains.
 
 ### UNS
 
-Unstoppable Name Service (UNS) is the [name service](#name-service) handling the minting and management of [web3 domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
+Unstoppable Name Service (UNS) is the [name service](#name-service) handling the minting and management of [Web3 domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
 
 ### ZNS
 

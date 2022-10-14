@@ -13,7 +13,7 @@ This page outlines the use case for supporting Unstoppable Domains on Polygon L2
 
 ## How does it work?
 
-Unstoppable Domains uses [Polygon](https://polygon.technology/) as our Layer 2 (L2) scaling solution. This allows us to make our web3 domains free to mint and manage on L2, and UD customers will no longer have to pay minting fees, renewal fees, or [gas fees](https://youtu.be/h3rP3Ptvka4).
+Unstoppable Domains uses [Polygon](https://polygon.technology/) as our Layer 2 (L2) scaling solution. This allows us to make our Web3 domains free to mint and manage on L2, and UD customers will no longer have to pay minting fees, renewal fees, or [gas fees](https://youtu.be/h3rP3Ptvka4).
 
 As part of this integration, new and existing members will be able to mint and manage their domains for free on Polygon, and existing members will be able to move their domains from Zilliqa and Ethereum to Polygon as well if they so choose.
 

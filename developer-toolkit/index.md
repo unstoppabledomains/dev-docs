@@ -1,6 +1,6 @@
 ---
 title: Developer Toolkit | Unstoppable Domains Developer Portal
-description: An overview of the tools available for developers integrating Unstoppable web3 domain resolution with their Web3 applications.
+description: An overview of the tools available for developers integrating Unstoppable Web3 domain resolution with their Web3 applications.
 ---
 
 # Developer Toolkit
@@ -17,11 +17,11 @@ For our HTTP-based API that allows you to quickly build applications that fetch 
 
 ## Resolution Libraries
 
-For language-specific, blockchain-agnostic libraries for resolving Unstoppable web3 domains (including domains on Ethereum, Polygon, and Zilliqa) see our [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) guide. These are managed by Unstoppable and updated regularly to reflect changes in our services.
+For language-specific, blockchain-agnostic libraries for resolving Unstoppable Web3 domains (including domains on Ethereum, Polygon, and Zilliqa) see our [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) guide. These are managed by Unstoppable and updated regularly to reflect changes in our services.
 
 ## Resolution CLI
 
-For an Unstoppable-managed, blockchain-agnostic command-line interface for resolving all Unstoppable web3 domains, see the [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md) guide.
+For an Unstoppable-managed, blockchain-agnostic command-line interface for resolving all Unstoppable Web3 domains, see the [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md) guide.
 
 ## Resolve With Direct Blockchain Calls
 

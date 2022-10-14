@@ -36,7 +36,7 @@ The main namespaces are:
 
 ### Crypto Payment Records
 
-One essential feature of web3 domains is the ability to specify a human-readable name instead of a destination address for your crypto payment. Cryptocurrency wallets that use this feature will resolve a domain to an underlying crypto address in the same way a browser resolves a domain to IP address.
+One essential feature of Web3 domains is the ability to specify a human-readable name instead of a destination address for your crypto payment. Cryptocurrency wallets that use this feature will resolve a domain to an underlying crypto address in the same way a browser resolves a domain to IP address.
 
 All crypto addresses are stored within the `crypto.*` namespace. Each currency address is stored as a `crypto.<TICKER>.address` record.
 

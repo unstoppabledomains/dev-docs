@@ -68,7 +68,7 @@ There are a number of advantages for decentralized apps to use humanity check wi
 
 ## Can users attach the same unique ID to several wallets/domains? 
 
-No. The Persona ID is associated with a single web3 domain.
+No. The Persona ID is associated with a single Web3 domain.
 
 ## Can users transfer their Humanity Check to another domain?
 

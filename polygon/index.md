@@ -7,13 +7,13 @@ description: This page provides a high-level overview of Polygon Layer 2 scaling
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Unstoppable Domains uses Polygon as our layer 2 (L2) scaling solution. This allows us to make our web3 domains free to mint and manage on L2, and UD customers will no longer have to pay minting fees, renewal fees, or gas fees. As part of this integration, new and existing members will be able to mint and manage their domains for free on Polygon. Existing members will be able to move their minted domains from Zilliqa and Ethereum to Polygon if they so choose.
+Unstoppable Domains uses Polygon as our layer 2 (L2) scaling solution. This allows us to make our Web3 domains free to mint and manage on L2, and UD customers will no longer have to pay minting fees, renewal fees, or gas fees. As part of this integration, new and existing members will be able to mint and manage their domains for free on Polygon. Existing members will be able to move their minted domains from Zilliqa and Ethereum to Polygon if they so choose.
 
 Polygon POS Chain is the leading platform for Ethereum scaling and infrastructure development. Its growing suite of products offers developers easy access to all major scaling and infrastructure solutions: L2 solutions (ZK Rollups and Optimistic Rollups), sidechains, commit chains, hybrid solutions, stand-alone and enterprise chains, data availability solutions, and more.
 
 ## Benefits
 
-By removing the transactional costs involved in hosting and managing web3 domains, a whole new set of capabilities becomes viable for everyday use.
+By removing the transactional costs involved in hosting and managing Web3 domains, a whole new set of capabilities becomes viable for everyday use.
 
 * Customers will be able to connect multiple wallets to their domains for payment, host, and edit decentralized websites (blogs, NFT galleries, etc) without having to worry about paying gas fees.
 * Developers will be able to design and create new templates, with increased complexity and functionality without the concern that users might not be able to afford to use them.
