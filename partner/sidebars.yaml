@@ -32,6 +32,8 @@ pages:
             label: Get Domains Suggestions Guide
           - page: partner-integration-guides/domain-name-availability.md
             label: Domain Name Availability Guide
+          # - page: partner-integration-guides/reserve-domain-name.md
+          #   label: Reserve Domain Name Guide
     separatorLine: true
   - label: Partner API Endpoints
     page: partner-api-endpoints.md

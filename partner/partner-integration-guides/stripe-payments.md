@@ -41,7 +41,7 @@ Once your Stripe and Unstoppable Domains accounts have been connected, your Stri
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 
-## Step 5: Prepare Your Request Body
+## Step 5: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -64,10 +64,10 @@ The request body contains information about your order and must be in JSON forma
 * `payment`: A key-value dictionary with payment information about the order:
     * `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
 * `domains`: (array) An array with information about the domains you want to purchase:
-    * `name`: The domain name you want to purchase. This parameter is required for every order.
-    * `ownerAddress`: The wallet address the domain should be minted to.
+    * `name`: The domain name you want to purchase. This parameter is required.
+    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional and requires the `ownerAddress` parameter to be provided.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional.
     * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
 
 ## Step 6: Use the Orders Endpoint

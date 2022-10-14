@@ -5,7 +5,7 @@ description: This guide shows how to get suggestions of available free and paid 
 
 # Get Domains Suggestions Guide
 
-The Partner API offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. You can use this endpoint to implement a domain suggestions field in your application that shows users alternative domains they can purchase if what they want isn't available.
+The Partner API offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
 
 <figure>
 

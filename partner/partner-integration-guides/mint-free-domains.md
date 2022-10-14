@@ -5,7 +5,7 @@ description: This guide shows how to mint free domains with your Partner account
 
 ## Overview
 
-Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following [API endpoints](../partner-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Free Domain Name`, and `Claim Free Domain`.
+Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following [API endpoints](../partner-api-endpoints.md): `Get Free Domains Suggestions`, `Reserve Domain Name`, and `Claim Free Domain`.
 
 The following diagram shows the general process between the Partner and Unstoppable Domains during the free domain minting process.
 
@@ -133,7 +133,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 The `your-public-api-key` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
 :::
 
-## Step 5: Prepare Your Request Body
+## Step 5: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -260,28 +260,8 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ P
 }
 ```
 
-## Reserving a Free Domain
-
-You can reserve a free domain and mint it at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Partner that reserved it.
-
-To reserve a domain, you need to request the Reserve Free Domains endpoint with the following details:
-
-* Your `resellerID`
-* The `domainName` to reserve
-* A unique identifier for your reservation
-
-### Domain Reservation Example
-
-```bash
-curl --location -g --request POST '/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "resellerIdentityKey": "{{ DOMAIN_RESERVATION_ID }}"
-}'
-```
-
-:::info
-You can only reserve one domain per `resellerIdentityKey`, and the reservation time is 168 hours (7 days).
+:::success congratulations!
+You have successfully minted a free domain with the Partner API.
 :::
 
 ## Considerations
@@ -295,9 +275,5 @@ The following considerations apply to minting free domains:
 * It has 8+ characters, at least one letter, and one number.
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
 * The Fingerprint Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
-
-:::success congratulations!
-You have successfully minted a free domain with the Partner API.
-:::
 
 <embed src="/snippets/_discord.md" />
