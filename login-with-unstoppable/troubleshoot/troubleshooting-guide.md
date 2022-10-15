@@ -33,7 +33,7 @@ To resolve this, make sure that the **redirect URI** in your [client configurati
 
 If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development. MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.
 
-```
+```bash
 lisa@Unstoppable-Lisa login % yarn parcel --port 5000 --open index.html
 yarn run v1.22.17
 $ /Users/username/workspaces/login/node_modules/.bin/parcel --port 5000 --open index.html
@@ -76,7 +76,7 @@ To resolve this, upgrade the UAuth library associated with Login with Unstoppabl
 
 This is a common build error that occurs when you attempt to run the application with an outdated library.
 
-```
+```bash
 ./node_modules/@uauth/js/node_modules/@unstoppabledomains/resolution/build/utils/requireOrFail.js
 Critical dependency: the request of a dependency is an expression
 ```

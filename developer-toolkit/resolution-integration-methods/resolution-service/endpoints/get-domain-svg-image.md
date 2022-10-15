@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Domain SVG Image` e
 
 # Get Domain SVG Image
 
-```
+```bash
 https://resolve.unstoppabledomains.com/image/<domainOrToken>
 ```
 

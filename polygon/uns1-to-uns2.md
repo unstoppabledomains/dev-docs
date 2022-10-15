@@ -5,36 +5,36 @@ description: This guide explains the process for depositing a domain from UNS La
 
 # UNS L1 to UNS L2: Domain Deposit Guide
 
-This guide covers the process for depositing a domain from UNS Layer 1 to UNS Layer 2. This process requires use of the ```depositToPolygon(uint256)``` function. 
+This guide covers the process for depositing a domain from UNS Layer 1 to UNS Layer 2. This process requires use of the `depositToPolygon(uint256)` function.
 
 ## Prerequisites
 * Token ID of minted domain on Layer 1 (Ethereum)
 * Owner’s wallet address
 
-## Step 1: Verify Contract Info for Each Registry 
-* Open the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page 
+## Step 1: Verify Contract Info for Each Registry
+* Open the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page
 * Open the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page
-* Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page). 
+* Verify that you’ve opened the correct contracts by checking the Contract address (top of the page) and tracker field (right side of page).
 
 ### For UNS Layer 1
-* contract address should be: ```0x049aba7510f45BA5b64ea9E658E342F904DB358D```
-* tracker info should read: ```Unstoppable Domains (UD)```
+* contract address should be: `0x049aba7510f45BA5b64ea9E658E342F904DB358D`
+* tracker info should read: `Unstoppable Domains (UD)`
 
 <figure>
 
 ![UNS Layer 1 contract address and tracker info](/images/uns-contract-verify.png)
-	
+
 <figcaption>UNS Layer 1 contract address and tracker info</figcaption>
 </figure>
 
 ### For UNS Layer 2
-* contract address should be: ```0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f```
-* tracker info should read: ```Unstoppable Domains (UD)```
+* contract address should be: `0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f`
+* tracker info should read: `Unstoppable Domains (UD)`
 
 <figure>
 
 ![UNS Layer 2 contract address and tracker info](/images/uns-L2-contract-verify.png)
-	
+
 <figcaption>UNS Layer 2 contract address and tracker info</figcaption>
 </figure>
 
@@ -46,24 +46,24 @@ This guide covers the process for depositing a domain from UNS Layer 1 to UNS La
 * Verify the **wallet address** returned by the OwnerOf query to ensure it is an exact match to your wallet address.
 
 :::info
-You will receive the owner’s wallet address in response to the ```ownerOfquery``` if the domain is located on the CNS registry. Otherwise, you will receive the ER721 error: "owner query for nonexistent token.”
+You will receive the owner’s wallet address in response to the `ownerOfquery` if the domain is located on the CNS registry. Otherwise, you will receive the ER721 error: "owner query for nonexistent token.”
 :::
 
 <figure>
 
 ![UNS Layer 1 ownerOf function](/images/uns_ownership.png)
-	
+
 <figcaption>UNS Layer 1 ownerOf function</figcaption>
 </figure>
 
 ## Step 3: Rewrite the Domain to UNS Registry
 * At the top of the [UNS Layer 1 Contract](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D) page, select **Contract -> Write Contract -> Connect to Web3** to connect your wallet.
-* Then, select **Contract -> Write as Proxy** -> and scroll down to complete the second ```depositToPolygon``` function.
+* Then, select **Contract -> Write as Proxy** -> and scroll down to complete the second `depositToPolygon` function.
 
 <figure>
 
 ![depositToPolygon function on UNS Layer 1](/images/deposit-to-polygon.png)
-	
+
 <figcaption>depositToPolygon function on UNS Layer 1</figcaption>
 </figure>
 
@@ -87,13 +87,13 @@ It is recommended that you double-check the transaction status by verifying doma
 <figure>
 
 ![Verify domain transfer to UNS L1 using Contract -> Read as Proxy](/images/uns-L1-check-owner.png)
-	
+
 <figcaption>Verify domain transfer to UNS L1 using Contract -> Read as Proxy</figcaption>
 </figure>
 
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.
-* Verify the wallet address returned by the ```OwnerOf``` query to ensure it matches the following predicate address: 
+* Verify the wallet address returned by the `OwnerOf` query to ensure it matches the following predicate address:
 
 ```javascript
 "MintableERC721Predicate": {
@@ -103,11 +103,11 @@ It is recommended that you double-check the transaction status by verifying doma
 },
 ```
 :::info
-When tokens are transferred to UNS L2, they will appear as owned by a custody contract called ```MintableERC721Predicate```. This process locks the contract for all tokens in the process of bridging to UNS L2.
+When tokens are transferred to UNS L2, they will appear as owned by a custody contract called `MintableERC721Predicate`. This process locks the contract for all tokens in the process of bridging to UNS L2.
 :::
 
 ## Step 5: Verify Domain Bridging is Complete
-* On the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page, select **Contract -> Read as Proxy** -> and scroll down to complete the ```OwnerOf``` function.
+* On the [UNS Layer 2 Contract](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f) page, select **Contract -> Read as Proxy** -> and scroll down to complete the `OwnerOf` function.
 * Paste the **token ID** into the ‘ownerOf’ field.
 * Select the **Query** button to check the ownership and confirm the location of the domain.
 * Verify the **wallet address** returned by the OwnerOf query to ensure it matches your wallet address. If your wallet address is showing, then it means that your domain was successfully deposited on UNS Layer 2.

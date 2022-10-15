@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Supported TLDs` end
 
 # Get Supported TLDs
 
-```
+```bash
 https://resolve.unstoppabledomains.com/supported_tlds
 ```
 

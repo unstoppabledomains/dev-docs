@@ -150,11 +150,10 @@ The Authentication Server should use the AMR Value of _uns-swk._
 Access tokens are put into an authorization header using the “Bearer” authentication scheme with the following format:
 
 ```
-Authentication: “Bearer ” + Base64<username + “:” + token_id>
+Authentication: "Bearer " + Base64<username + ":" + token_id>
 
 username = The subject of the access_token
 token_id = The token returned from the token_endpoint earlier
-
 ```
 
 This scheme is very similar to the Basic Authentication scheme, but for compatibility purposes, the token is opaque and therefore a Bearer token.

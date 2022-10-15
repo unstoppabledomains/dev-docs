@@ -23,7 +23,7 @@ The Resolution CLI supports decentralized domains across two main zones:
 
 To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
-```
+```bash
 go get -u github.com/unstoppabledomains/resolution-cli/resolution
 ```
 
@@ -58,7 +58,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 
 For example:
 
-```
+```bash
 resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
 ```
 

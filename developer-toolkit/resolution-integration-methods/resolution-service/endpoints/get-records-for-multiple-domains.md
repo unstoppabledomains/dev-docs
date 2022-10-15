@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Records for Multipl
 
 # Get Records for Multiple Domains
 
-```
+```bash
 https://resolve.unstoppabledomains.com/records
 ```
 

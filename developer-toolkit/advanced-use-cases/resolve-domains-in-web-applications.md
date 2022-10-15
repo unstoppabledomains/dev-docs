@@ -19,11 +19,11 @@ For more information on Unstoppable Domains Resolution, see [Resolve Using Smart
 
 Resolution can be installed with either `yarn` or `npm`.
 
-```
+```bash yarn
 yarn add @unstoppabledomains/resolution
 ```
 
-```
+```bash npm
 npm install @unstoppabledomains/resolution --save
 ```
 
@@ -33,10 +33,10 @@ If you're interested in resolving domains via the command line, see the  [CLI se
 
 Create a new project.
 
-```
-mkdir resolution && cd $_
-yarn init -y
-yarn add @unstoppabledomains/resolution
+```bash
+$ mkdir resolution && cd $_
+$ yarn init -y
+$ yarn add @unstoppabledomains/resolution
 ```
 
 ### Look up a domain's crypto address
@@ -90,7 +90,7 @@ resolveIpfsHash('homecakes.crypto');
 
 Execute the script.
 
-```
+```bash
 $ node ipfs_hash.js
 You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv
 ```
@@ -117,7 +117,7 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 
 To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
-```
+```bash
 go get -u github.com/unstoppabledomains/resolution-cli/resolution
 ```
 
@@ -125,7 +125,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 
 For example:
 
-```
+```bash
 resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
 ```
 
@@ -176,28 +176,28 @@ Use these commands to set up a local development environment (**macOS Terminal**
 
 1.  Install `nvm`
 
-    ```
+    ```bash
     curl --location --request GET 'https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh' | bash
     ```
 2.  Install concrete version of `node.js`
 
-    ```
+    ```bash
     nvm install 16.15.0
     ```
 3.  Install `yarn`
 
-    ```
+    ```bash
     npm install -g yarn
     ```
 4.  Clone the repository
 
-    ```
+    ```bash
     git clone https://github.com/unstoppabledomains/resolution.git
     cd resolution
     ```
 5.  Install dependencies
 
-    ```
+    ```bash
     yarn install
     ```
 

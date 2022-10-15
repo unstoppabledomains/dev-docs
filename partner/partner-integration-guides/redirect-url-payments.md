@@ -28,13 +28,13 @@ The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as que
 
 Sandbox Environment:
 
-```
+```bash
 https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
 Production Environment:
 
-```
+```bash
 https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
@@ -42,13 +42,13 @@ https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ D
 
 Here is an example payment URL for the `buyadomain.crypto` domain name and `unstoppable` referral code:
 
-```
+```bash
 https://ud-sandbox.com/search?searchTerm=buyadomain.crypto&ref=unstoppable
 ```
 
 Here is an example payment URL that only uses the Partner's referral code:
 
-```
+```bash
 https://ud-sandbox.com/search?ref=unstoppable
 ```
 

@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Records for Owner A
 
 # Get Records for Owner Addresses
 
-```
+```bash
 https://resolve.unstoppabledomains.com/domains
 ```
 

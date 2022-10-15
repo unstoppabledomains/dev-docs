@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Domain Image Source
 
 # Get Domain Image Source
 
-```
+```bash
 https://resolve.unstoppabledomains.com/image-src/<domainOrToken>
 ```
 

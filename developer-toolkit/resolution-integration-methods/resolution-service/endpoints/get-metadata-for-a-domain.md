@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Metadata for a Doma
 
 # Get Metadata for a Domain
 
-```
+```bash
 https://resolve.unstoppabledomains.com/metadata/<domainOrToken>
 ```
 

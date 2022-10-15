@@ -70,19 +70,19 @@ After adding your IP address, you will be redirected to the Unstoppable Domains 
 
 ### Sandbox Website
 
-```
+```bash
 https://ud-sandbox.com/
 ```
 
 ### Sandbox API Endpoint
 
-```
+```bash
 https://api.ud-sandbox.com/
 ```
 
 ### Sandbox Partner Account
 
-```
+```bash
 https://ud-sandbox.com/resellers/
 ```
 

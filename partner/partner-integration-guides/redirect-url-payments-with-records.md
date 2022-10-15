@@ -15,13 +15,13 @@ Follow the [Redirect URL Payments](redirect-url-payments.md) guide to prepare a 
 
 Sandbox Environment:
 
-```
+```bash
 https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
 Production Environment:
 
-```
+```bash
 https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
 ```
 
@@ -97,13 +97,13 @@ After you have generated the order signature, add it to the payment URL and redi
 
 Sandbox Environment:
 
-```
+```bash
 https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
 ```
 
 Production Environment:
 
-```
+```bash
 https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
 ```
 
@@ -133,7 +133,7 @@ Here is an example payment URL with the following parameters:
 | Signature Key | someKey |
 | Order Signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
 
-```
+```bash
 https://ud-sandbox.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4
 ```
 

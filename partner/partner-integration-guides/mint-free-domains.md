@@ -57,13 +57,13 @@ Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, w
 
 Sandbox Environment:
 
-```
+```bash
 POST https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
 ```
 
 Production Environment:
 
-```
+```bash
 POST https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
 ```
 
@@ -81,13 +81,13 @@ Unstoppable Domains has a dedicated subdomain for Fingerprint verification to im
 
 Sandbox Environment:
 
-```
+```bash
 https://fp.ud-sandbox.com
 ```
 
 Production Environment:
 
-```
+```bash
 https://fp.unstoppabledomains.com
 ```
 

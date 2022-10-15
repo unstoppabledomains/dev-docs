@@ -24,7 +24,7 @@ Here’s the finished product:
 
 First, create a project folder with two files inside: `index.html` and `index.js`
 
-```
+```bash
 $ mkdir zil-resolution
 $ cd zil-resolution
 $ touch index.js index.html
@@ -273,7 +273,7 @@ Order is very important, as the first address in the arguments array is the owne
 
 If we open the `index.html` file in the browser and type `brad.zil` as our domain input, we will see the following in the console:
 
-```
+```bash
 ownerAddress: "0x2d418942dce1afa02d0733a2000c71b371a6ac07",
 resolverAddress: "0xdac22230adfe4601f00631eae92df6d77f054891"
 ```

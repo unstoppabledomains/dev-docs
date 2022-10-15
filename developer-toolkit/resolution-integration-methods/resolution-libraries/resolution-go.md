@@ -27,7 +27,7 @@ go get -u github.com/unstoppabledomains/resolution-go/v2
 
 <embed src="/snippets/_res-lib-default-provider.md" />
 
-```golang
+```go
 package main
 
 import (

@@ -35,13 +35,13 @@ Send a `GET` request with the authorization headers and request body you have pr
 
 Sandbox Environment:
 
-```
+```bash
 https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/
 ```
 
 Production Environment:
 
-```
+```bash
 https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/
 ```
 

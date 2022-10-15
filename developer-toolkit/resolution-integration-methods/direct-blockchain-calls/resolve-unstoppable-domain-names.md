@@ -30,7 +30,7 @@ Let’s visualize the resolution process using some of the simplest tools a web 
 
 The first thing we need to do is create a folder with three files inside: index.html, index.js, and ethers.js.
 
-```
+```bash
 $ mkdir crypto-resolution
 $ cd crypto-resolution
 $ touch index.html index.js ethers.js
@@ -273,7 +273,6 @@ async function resolveBothChains(tokenId, interestedKeys) {
  });
 }
 
-
 async function resolve() {
   const userInput = document.getElementById("input").value;
   const tokenId = namehash(userInput);
@@ -289,10 +288,10 @@ async function resolve() {
 
 If we try to resolve the **brad.crypto** domain with the above keys, we should see the following parsed result from `fetchContractData()` function:
 
-```javascript
+```json
 {
-  "ownerAddress":"0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
-  "resolverAddress":"0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842",
+  "ownerAddress": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
+  "resolverAddress": "0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842",
   "records":[
     "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
     "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
@@ -361,7 +360,6 @@ async function resolveEthNetwork(tokenId, interestedKeys) {
  });
 }
 
-
 async function resolveBothChains(tokenId, interestedKeys) {
  // try to resolve the polygon network first
  fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
@@ -423,7 +421,6 @@ function isEmpty(msg) {
  return !msg || msg === '0x0000000000000000000000000000000000000000';
 }
 
-
 async function resolveEthNetwork(tokenId, interestedKeys) {
  fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
    if (isEmpty(data.owner)) {
@@ -443,7 +440,6 @@ async function resolveEthNetwork(tokenId, interestedKeys) {
    });
  });
 }
-
 
 async function resolveBothChains(tokenId, interestedKeys) {
  // try to resolve the polygon network first

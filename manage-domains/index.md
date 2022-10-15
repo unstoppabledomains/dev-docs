@@ -31,7 +31,7 @@ Methods that change a direct owner of a domain can be called by either a domain 
 
 The `Registry` smart contract supports the following ERC-721 functions for transferring:
 
-```
+```solidity
 transferFrom(address from, address to, uint256 tokenId)
 
 safeTransferFrom(address from, address to, uint256 tokenId)
@@ -41,7 +41,7 @@ safeTransferFrom(address from, address to, uint256 tokenId, bytes _data)
 
 The `Registry` smart contract also implements the `setOwner` function, which is not a part of the ERC-721 standard:
 
-```
+```solidity
 setOwner(address to, uint256 tokenId)
 ```
 
@@ -71,7 +71,7 @@ For UNS, `setOwner` keeps domain records and resets an approved operator. All re
 
 Any Ethereum address can set multiple operators, allowing them to manage domains that a caller owns directly. This is an operation defined by ERC-721:
 
-```
+```solidity
 setApprovalForAll(address to, bool approved)
 ```
 
@@ -79,7 +79,7 @@ setApprovalForAll(address to, bool approved)
 
 An approved address can be set by either a domain owner or an operator. This method is defined by ERC-721 as well:
 
-```
+```solidity
 approve(address to, uint256 tokenId)
 ```
 
@@ -89,6 +89,6 @@ Approved addresses have equal rights as domain owners and operators, being able 
 
 The `Registry` smart contract supports "burning" operations. After burning, a domain is no longer available -- for purchase or re-minting.
 
-```
+```solidity
 burn(tokenId)
 ```

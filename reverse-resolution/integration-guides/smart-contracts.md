@@ -57,7 +57,7 @@ The `reverseOf()` method will return a value of `0` if there is no reverse recor
 
 Send a `GET` request to the [Get Metadata for a Domain](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md) to retrieve the metadata of the domain associated with the namehash returned from the `reverseOf()` method call:
 
-```
+```bash
 https://resolve.unstoppabledomains.com/metadata/{domainOrToken}
 ```
 

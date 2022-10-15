@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Reverse Record for 
 
 # Get Reverse Record for an Address
 
-```
+```bash
 https://resolve.unstoppabledomains.com/reverse/<walletAddress>
 ```
 

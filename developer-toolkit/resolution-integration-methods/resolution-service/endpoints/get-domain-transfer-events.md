@@ -5,7 +5,7 @@ description: This page covers the documentation for the `Get Domain Transfer Eve
 
 # Get Domain Transfer Events
 
-```
+```bash
 https://resolve.unstoppabledomains.com/domains/<domain>/transfers/latest
 ```
 
