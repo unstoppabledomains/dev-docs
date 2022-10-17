@@ -43,12 +43,11 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .crypto
 - .nft
 - .blockchain
-- .bitcoin 
-- .coin
-- .wallet 
-- .888 
+- .bitcoin
+- .wallet
+- .888
 - .dao
-- .x 
+- .x
 - .zil *
 
 :::warning
