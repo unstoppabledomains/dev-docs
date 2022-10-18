@@ -14,7 +14,7 @@ The [Partner API](/partner/integration-paths.md) only supports Polygon Layer2 Ne
 ## Step 1: Gather Requirements for the Website Faucet
 
 * A Web3 compatible wallet
-* Configure your wallet for [Goerli Testnet](etherscan.md#step-1-check-wallet-compatibility-for-etherscan ) or [Polygon/Mumbai](polygonscan.md#step-1-configure-your-metamask-wallet-for-polygon)
+* Configure your wallet for [Goerli Testnet](etherscan.md#step-1-check-wallet-compatibility-for-etherscan) or [Polygon/Mumbai](polygonscan.md#step-1-configure-your-metamask-wallet-for-polygon)
 * Get[ free Ether from Goerli faucet](etherscan.md#step-2-get-free-ether-from-goerli-faucet) or [free MATIC tokens from Polygon faucet](polygonscan.md#step-2-get-free-matic-tokens-from-polygon-faucet) to cover transaction fees (only for Goerli and Mumbai Testnet)
 * Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 

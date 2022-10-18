@@ -1,11 +1,11 @@
 ---
-title: Reserve Domain Name Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to reserve a domain name to purchase at a later date with your Partner account.
+title: Reserve Free Domain Name Guide | Unstoppable Domains Developer Portal
+description: This guide shows how to reserve a free and available domain name to purchase at a later date with your Partner account.
 ---
 
-# Reserve Domain Name Guide
+# Reserve Free Domain Name Guide
 
-The Partner API offers an endpoint that allows Partners to reserve available domains so they'll be minted at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Partner that reserved it for 168 hours (7 days).
+The Partner API offers an endpoint that allows Partners to reserve free and available domains so they'll be minted at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Partner that reserved it for 168 hours (7 days).
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -26,12 +26,12 @@ The request body contains information about your order and must be in JSON forma
 ```
 
 :::info
-Partners can only reserve one domain per reservation identifier and are allowed to use **ANY STRING VALUE** for the `resellerIdentityKey` parameter.
+To reserve a free and available domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint).
 :::
 
-## Step 4: Use the Reserve Domain Name Endpoint
+## Step 4: Use the Reserve Free Domain Name Endpoint
 
-Send a `GET` request with the authorization headers and request body you have prepared to check to the Reserve Domain Name endpoint. Here is the URL for our API environments:
+Send a `POST` request with the authorization headers and request body you have prepared to check to the `Reserve Free Domain Name` endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 
@@ -49,7 +49,7 @@ https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains
 The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
-## Reserve Domain Name Example
+## Reserve Free Domain Name Example
 
 Here is an example request to reserve a domain name with the following parameters:
 
@@ -58,21 +58,13 @@ Here is an example request to reserve a domain name with the following parameter
 | Domain Name | partner-test-67687986466871.crypto |
 | Reservation ID | test-reservation-id |
 
-### Request
-
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/partner-test-67687986466871.crypto/reserve/' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/partner-test-67687986466871.crypto/reserve/' \
 --header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "resellerIdentityKey": "test-reservation-id"
 }'
-```
-
-### Response
-
-```json
-
 ```
 
 ## Minting a Reserved Domain Name
@@ -82,12 +74,13 @@ To mint a domain you have reserved, you need to fill the `resellerIdentityKey` r
 ```json
 {
   "payment": {
-    "method": "{{ PAYMENT_METHOD }}"
+    "method": "free"
   },
+  "security": "{{ ORDER_SECURITY }}",
   "domains": [
     {
       "name": "{{ DOMAIN_NAME }}",
-      "ownerAddress": "{{ MINTING_ADDRESS }}",
+      "ownerAddress": "{{ DOMAIN_OWNER_ADDRESS }}",
       "resellerIdentityKey": "{{ DOMAIN_RESERVATION_ID }}"
     }
   ]
