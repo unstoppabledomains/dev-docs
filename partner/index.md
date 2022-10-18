@@ -11,7 +11,7 @@ The Partner API only supports domains and wallets on the Polygon L2 network. See
 
 ## Step 1: Apply for API Access
 
-You must create an [Unstoppable Domains Partner API account](https://unstoppabledomains.com/resellers) to get started. You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
+You must create an Unstoppable Domains [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
 
 <figure>
 

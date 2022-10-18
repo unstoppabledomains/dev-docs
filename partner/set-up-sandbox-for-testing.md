@@ -83,7 +83,7 @@ https://api.ud-sandbox.com/
 ### Sandbox Partner Account
 
 ```bash
-https://ud-sandbox.com/resellers/
+https://ud-sandbox.com/partner-api-dashboard/
 ```
 
 :::success Congratulations!

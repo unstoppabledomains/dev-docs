@@ -41,7 +41,7 @@ Partner API errors are in JSON format.
 | Error Code | Status Code | Explanation |
 | - | - | - |
 | INVALID\_ORDER\_SCHEMA | 400 | Order information is not properly formatted or is missing critical information such as payment type. |
-| UNALLOWED\_PAYMENT\_METHOD | 400 | Payment method is not supported by UD. Must use Stripe. |
+| UNALLOWED\_PAYMENT\_METHOD | 400 | Payment method is not supported by Unstoppable Domains. Must use Stripe or minted freely. |
 | UNSUPPORTED\_PAYMENT\_METHOD | 400 | Requested payment method is currently not supported. |
 | INVALID\_OWNER\_ADDRESS | 400 | Owner address is not valid. |
 | INVALID\_EMAIL | 400 | Email address is not valid. |
@@ -53,7 +53,7 @@ Partner API errors are in JSON format.
 | MISSING\_FINGERPRINTJS\_VISITOR\_ID | 400 | The request does not contain a Fingerprint Visitor ID. |
 | SECURITY\_PARAMS\_NOT\_PROVIDED | 400 | The request does not contain any security parameters. |
 | UNSUPPORTED\_SECURITY\_TYPE | 400 | Requested security type is currently not supported. |
-| DOMAIN\_RESERVED | 400 | Requested domain has been reserved by another partner. |
+| DOMAIN\_LOCK\_NOT\_AVAILABLE | 400 | Requested domain cannot be reserved. The domain is not available for free or has been minted. |
 
 ## GET **Order Number**
 

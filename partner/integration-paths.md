@@ -13,7 +13,7 @@ Partner API Integrations will only work on **Polygon L2 network**. See the [Poly
 
 ## Step 1: Locate Your Reseller ID
 
-After [setting up access to the Partner API](index.md), you must obtain your `resellerID` from your [Sandbox](https://www.ud-sandbox.com/resellers) or [Production](https://unstoppabledomains.com/resellers) Partner account to integrate our services into your application for your customers.
+After [setting up access to the Partner API](index.md), you must obtain your `resellerID` from your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account to integrate our services into your application for your customers.
 
 ## Step 2: Add a Domain Search Functionality
 
