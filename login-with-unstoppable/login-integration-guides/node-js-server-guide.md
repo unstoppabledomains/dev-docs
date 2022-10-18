@@ -8,11 +8,29 @@ showNextButton: false
 
 This integration guide is for the `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+:::warning
+The example code in this guide assumes that ECMAScript modules are [enabled](https://nodejs.org/dist/latest-v16.x/docs/api/esm.html#enabling). Otherwise, `import` statements should be replaced with CommonJS `require()` statements.
+:::
 
-## Step 1: Install the @uauth/node Library
+## Step 1: Configure the Login Client
 
-Install with `yarn` or `npm`.
+Add `http://localhost:5000/callback` to the [Redirect URIs](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#step-2-configure-redirect-uris) for your client. Make sure that the port matches the port your app is being served to. Example code in this guide assumes port 5000.
+
+Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration/#token-endpoint-authentication-method) on your client dashboard to **Client Secret Post**. Once you've clicked the **Confirm Changes** button, `clientSecret` and `clientAuthMethod` will be added to your client metadata on the **Basic** configuration page.
+
+```javascript
+{
+  clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  clientSecret: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+  clientAuthMethod: "client_secret_post",
+  redirectUri: "http://localhost:5000/callback",
+  scope: "openid wallet"
+}
+```
+
+## Step 2: Install the @uauth/node Library
+
+Install the `@uauth/node` and resolution packages with `yarn` or `npm`.
 
 ```shell yarn
 yarn add @uauth/node @unstoppabledomains/resolution
@@ -22,9 +40,19 @@ yarn add @uauth/node @unstoppabledomains/resolution
 npm install --save @uauth/node @unstoppabledomains/resolution
 ```
 
-## Step 2: Setup @uauth/node Library
+For the example in this guide, you will also need to install the following packages:
 
-Then, setup and configure the library. On your client dashboard, you will need to set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration/#token-endpoint-authentication-method) to **Client Secret Post**. You can then initialize a new `Client` instance using the Client Metadata copied from the **Basic** page.
+```shell yarn
+yarn add express-session express express-async-errors morgan
+```
+
+```shell npm
+yarn intall --save express-session express express-async-errors morgan
+```
+
+## Step 3: Setup @uauth/node Library
+ 
+You can then initialize a new `Client` instance using the Client Metadata copied from the **Basic** page.
 
 ```typescript
 import {Client} from '@uauth/node'
@@ -38,7 +66,7 @@ global.XMLHttpRequestUpload = (
   global.XMLHttpRequest as any
 ).XMLHttpRequestUpload
 
-// Done polyfilling fetch.
+// Initialize the client with the login client metadata and an instance of Resolution
 
 const client = new Client({
   clientID: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
@@ -49,11 +77,11 @@ const client = new Client({
 })
 ```
 
-## Step 3: Build the Server's Endpoints
+## Step 4: Build the Server's Endpoints
 
 Because there are a variety of ways to store session data about a user, the package comes with a way to specify in an abstract way the three methods required to authorize and maintain a user session.
 
-### Step 3A: The Login Method
+### The Login Method
 
 **`login(ctx: Context, options: {username: string}): Promise<void>`**
 
@@ -62,7 +90,7 @@ Because there are a variety of ways to store session data about a user, the pack
 3. Redirects the user to the auth server with a OIDC compliant authorization request.
 4. After every authorization attempt the server will redirect the user to the `redirectUri` specified at instantiation.
 
-### Step 3B: The Callback Method
+### The Callback Method
 
 **`callback(ctx: Context): Promise<Authorization>`**
 
@@ -70,14 +98,14 @@ Because there are a variety of ways to store session data about a user, the pack
 2. Exchanges authorization code for access and id tokens.
 3. Stores authorization (id and access tokens) inside session.
 
-### Step 3C: The Middleware Method
+### The Middleware Method
 
 **`middleware(): (ctx: Context) => void`**
 
 1. The authorization inside the session is attached to the context then passed to the next handler.
 2. If there is no session, it throws an Error.
 
-### Step 3D: Putting it all together
+### Putting it all together
 
 The following is an example of using the pre-configured `express-session` to implement login.
 
@@ -120,11 +148,11 @@ app.get('/profile', onlyAuthorized, (req, res) => {
 })
 ```
 
-Developers can also create their own login system using a different session system from `express-session` using the [login() method](#step-3a-the-login-method).
+Developers can also create their own login system using a different session system from `express-session` using the [login() method](#the-login-method).
 
-## Step 4: Build a Front-end UI
+## Step 5: Build a Front-end UI
 
-The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-the-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
+The form must call the endpoint where the [`login` handler](node-js-server-guide.md#the-login-method) is called and it must correspond with the parameters to that function.
 
 ```javascript
 app.get('/', (_, res) => {
@@ -138,13 +166,7 @@ app.get('/', (_, res) => {
 
   return res.send(indexPage)
 })
-```
 
-## Step 5: Run the Server!
-
-The server can now listen and serve requests.
-
-```javascript
 app.listen(process.env.PORT, () => {
   console.log(`Listening at http://localhost:${process.env.PORT}`)
 })
