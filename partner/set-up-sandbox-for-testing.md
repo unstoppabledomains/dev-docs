@@ -5,32 +5,32 @@ description: This page details how to access and set up the Unstoppable Domains 
 
 # Set up UD Sandbox for Testing
 
-This page details how to access and set up the Unstoppable Domains sandbox environment for partners to test their integrations.
+This page details how to access and set up the Unstoppable Domains Sandbox environment for partners to test their integrations.
 
-## Step 1: Sign In to the UD Sandbox
+## Step 1: Register on the UD Sandbox
 
-Open the UD sandbox in your browser: <https://ud-sandbox.com/>, then click the `SIGN IN WITH GOOGLE` button.
+Open the UD Sandbox in your browser: <https://ud-sandbox.com/>, then provide your contact details (company and email address).
 
 <figure>
 
-![UD sandbox IP adding page](/images/ud-sandbox-ip-adding.png '#width=80%;')
+![UD Sandbox IP adding page](/images/ud-sandbox-ip-adding.png '#width=60%;')
 
-<figcaption>UD sandbox IP adding page</figcaption>
+<figcaption>UD Sandbox IP adding page</figcaption>
 </figure>
 
 :::info
-If your IP address is added in the sandbox allowlist, you will not be redirected to the IP adding page.
+If your IP address is added in the Sandbox allowlist, you will not be redirected to the IP adding page.
 :::
 
 ## Step 2: Verify Your Email Address
 
-Unstoppable Domains will send a verification email to the email address you connected to the sandbox environment.
+Unstoppable Domains will send a verification message to the email address you provided to the Sandbox environment.
 
 <figure>
 
-![UD sandbox verification](/images/ud-sandbox-verification.png '#width=80%;')
+![UD Sandbox verification](/images/ud-sandbox-verification.png '#width=40%;')
 
-<figcaption>UD sandbox verification</figcaption>
+<figcaption>UD Sandbox verification</figcaption>
 </figure>
 
 ## Step 3: Add Your IP Address to the Sandbox
