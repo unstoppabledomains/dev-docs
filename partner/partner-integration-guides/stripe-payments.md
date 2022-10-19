@@ -13,16 +13,16 @@ You need to have a Stripe account before connecting it to your Unstoppable Domai
 
 ## Step 2: Connect Stripe to Unstoppable Domains
 
-Click on the `Connect` button in the Stripe section of your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. Unstoppable Domains uses different Stripe API keys for live and test orders. Your Stripe API keys are public keys and they are safe to reveal in your application:
+Click on the `Connect` button in the Stripe section of your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. Unstoppable Domains uses different Stripe API keys for the Sandbox and Production environments.
 
-* pk\_test\_\* (reseller-test-\* namespace)
-* pk\_live\_\* (all other domains)
+<figure>
 
-:::info
-The `Stripe Live Connect` is how you get paid by Unstoppable Domains when your customers make a purchase; it uses real money and generates real transactions. The `Stripe Test Connect` does not involve real money and uses test credentials to integrate.
-:::
+![Stripe connect button](/images/stripe-connect-button.png)
 
-After clicking the Stripe Live or Stripe Test `CONNECT` button, Stripe will walk you through the integration form:
+<figcaption>Stripe connect button</figcaption>
+</figure>
+
+After clicking the Stripe `CONNECT` button, Stripe will walk you through the integration form:
 
 <figure>
 
