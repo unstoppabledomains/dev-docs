@@ -2690,10 +2690,10 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
-"@unstoppabledomains/ui-kit@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@unstoppabledomains/ui-kit/-/ui-kit-0.2.3.tgz#25ba90ffca4f338dbdaa32cac0dbda147e572d59"
-  integrity sha512-bbHvdo+8vcgh5VKHRn7a/GIl5qQLhuKHb0UtRRPMSxhgSJHUNrTFmLY/QPJPHhMBL5t0V9Xx33y8wfLYRVJqiQ==
+"@unstoppabledomains/ui-kit@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@unstoppabledomains/ui-kit/-/ui-kit-0.2.7.tgz#b5cb2b999675511f6276ab0e1d2e0d63ace6cf91"
+  integrity sha512-0V9TLKEZX1sAWGCMcn2+aBcUFjqtOfDnhtdWTHUP3haCR8NJvS3em/raIky+2MwREiARu0F0cOMhMWOgr++7jQ==
   dependencies:
     "@emotion/react" "^11.0.0"
     "@emotion/styled" "^11.0.0"
