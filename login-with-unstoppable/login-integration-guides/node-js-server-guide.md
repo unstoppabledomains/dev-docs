@@ -14,7 +14,7 @@ The example code in this guide assumes that ECMAScript modules are [enabled](htt
 
 ## Step 1: Configure the Login Client
 
-Add `http://localhost:5000/callback` to the [Redirect URIs](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#step-2-configure-redirect-uris) for your client. Make sure that the port matches the port your app is being served to. Example code in this guide assumes port 5000.
+Add `http://localhost:5000/callback` to your client's [Redirect URIs](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#redirect-uris). Make sure that the port matches the port your app is being served to. Example code in this guide assumes port 5000.
 
 Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration/#token-endpoint-authentication-method) on your client dashboard to **Client Secret Post**. Once you've clicked the **Confirm Changes** button, `clientSecret` and `clientAuthMethod` will be added to your client metadata on the **Basic** configuration page.
 
