@@ -1,15 +1,15 @@
 ---
 title: Login Client Configuration | Unstoppable Domains Developer Portal
-description: This guide covers the process for configuring the Login with Unstoppable client.
+description: This page explains the settings currently available for configuring a Login with Unstoppable client.
 showNextButton: false
 ---
 
 # Login Client Configuration
 
-The default configuration for a new Login Client works right out of the box for local development and all [Login Scopes](../scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client integrated with a live application requires custom [**redirect URIs**](#step-2-configure-redirect-uris).
+This page explains the settings currently available for configuring a Login with Unstoppable client on the [Client Management Dashboard](https://dashboard.auth.unstoppabledomains.com). The default configuration for a new client works right out of the box for local development and all [Login Scopes](../scopes-for-login.md) are enabled by default. The minimum viable configuration for the Login with Unstoppable client integrated with a live application requires custom [**redirect URIs**](#redirect-uris).
 
 :::warning
-You must **Confirm Changes** made to the configuration options before they will take effect. For enhanced security, changes made to update the application may require a wallet signature. This does not require any ETH in your wallet. You will only need to sign transactions to confirm ownership of your wallet address.
+You must **Confirm Changes** made to your client configuration before they will take effect. For enhanced security, certain actions may require a wallet signature. This does not require any ETH in your wallet. You will only need to sign transactions to confirm ownership of your wallet address.
 :::
 
 ## Basic Configuration
