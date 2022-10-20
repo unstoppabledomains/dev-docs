@@ -5,13 +5,7 @@ description: This page details the Partner API endpoints and links to the extern
 
 # Partner API Endpoints
 
-For more details about the Partner API endpoints, see the [Partner API endpoint specification](https://raw.githubusercontent.com/unstoppabledomains/website-api-docs-v2/master/openapi.yaml). These endpoints are specified in OpenAPI format, which provides an [interactive API explorer](https://docs.unstoppabledomains.com/openapi/reference/) in which you can try out sample API calls.
-
-:::info
-The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
-:::
-
-The Partner API endpoints are as follows:
+Below is a table of all the API endpoints provided by the Partner API, a description of their function, and links to their respective documentation. For more details about the endpoints, see the [Partner API endpoint specification](https://raw.githubusercontent.com/unstoppabledomains/website-api-docs-v2/master/openapi.yaml).
 
 | Endpoint | Description | Documentation |
 | - | - | - |
@@ -22,6 +16,10 @@ The Partner API endpoints are as follows:
 | Get Order Status | provides the status of your order and tells if the domain has successfully "minted" | [Get Order Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders~1%7BorderNumber%7D/get) |
 | Reserve Free Domain Name | reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days | [Reserve Free Domain Name Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D~1reserve/post) |
 | Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations | [Get Fingerprint Public Key Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/security/paths/~1security~1fingerprintjs~1keys/post) |
+
+:::info
+The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
+:::
 
 <embed src="/snippets/_discord.md" />
 
