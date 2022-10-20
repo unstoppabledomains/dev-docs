@@ -7,11 +7,7 @@ description: This guide shows how to purchase domains using the Stripe payment p
 
 Unstoppable Domains supports [Stripe](https://stripe.com) payments to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
-## Step 1: Create a Stripe Account
-
-You need to have a Stripe account before connecting it to your Unstoppable Domains Partner account. If you have not created a Stripe account before now, create one here: <https://dashboard.stripe.com/register>.
-
-## Step 2: Connect Stripe to Unstoppable Domains
+## Step 1: Connect Stripe to Unstoppable Domains
 
 Click on the `Connect` button in the Stripe section of your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. Unstoppable Domains uses different Stripe API keys for the Sandbox and Production environments.
 
@@ -33,15 +29,22 @@ After clicking the Stripe `CONNECT` button, Stripe will walk you through the int
 
 Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe dashboard.
 
-## Step 3: Retrieve Your Reseller ID and Secret API Token
+<figure>
+
+![Stripe connect success](/images/stripe-connect-sucess.png)
+
+<figcaption>Stripe connect success</figcaption>
+</figure>
+
+## Step 2: Retrieve Your Reseller ID and Secret API Token
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 4: Prepare Your Authorization Headers
+## Step 3: Prepare Your Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 
-## Step 5: Prepare Request Body
+## Step 4: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -69,11 +72,11 @@ The request body contains information about your order and must be in JSON forma
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
     * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional.
 
-## Step 6: Use the Orders Endpoint
+## Step 5: Use the Orders Endpoint
 
 <embed src="/snippets/_orders-endpoint-usage.md" />
 
-## Step 7: Retrieve the Stripe Payment Intent ID
+## Step 6: Retrieve the Stripe Payment Intent ID
 
 Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://stripe.com/docs/payments/payment-intents) to process Stripe payments and generates a `Payment Intent ID` for the partner to complete the payment. The `Buy a Domain or Claim Free Domain` endpoint response follows this format:
 
@@ -88,7 +91,9 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
           "paymentIntentId": "{{ STRIPE_PAYMENT_INTENT_ID }}"
         }
     },
-    "items": []
+    "items": [
+      "{{ DOMAINS_TO_PURCHASE }}"
+    ]
 }
 ```
 
@@ -172,15 +177,15 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ P
 
 ## Receive Stripe Payouts
 
-Stripe payouts occur daily directly from Stripe and can be tracked within your Partner account by clicking on the `View Test Dashboard` or `View Live Dashboard` button, depending on which payouts are being tracked.
+Stripe payouts occur daily directly from Stripe and can be tracked within your Partner account by clicking on the `View Dashboard` button, depending on which payouts are being tracked.
 
 :::info
-The `View Live Dashboard` and `View Test Dashboard` buttons will only appear after the `Stripe Live` or `Stripe Test` options are successfully connected, linking your Stripe and Unstoppable Domains Partner accounts.
+The `View Dashboard` button will only appear after you have successfully connected your Stripe and Unstoppable Domains Partner accounts.
 :::
 
 ### Stripe Payouts Tab
 
-Clicking either of the `View Dashboard` buttons displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The figure below shows the main view of the Payouts screen.
+Clicking the `View Dashboard` button displays the main tab of the payouts screen, which lists all transactions with dates and payment amounts. The image below shows the main view of the Payouts screen:
 
 <figure>
 

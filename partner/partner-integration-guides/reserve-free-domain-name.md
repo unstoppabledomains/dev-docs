@@ -58,6 +58,8 @@ Here is an example request to reserve a domain name with the following parameter
 | Domain Name | partner-test-67687986466871.crypto |
 | Reservation ID | test-reservation-id |
 
+### Request
+
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/partner-test-67687986466871.crypto/reserve/' \
 --header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
@@ -67,24 +69,27 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ P
 }'
 ```
 
-## Minting a Reserved Domain Name
+### Minting a Reserved Domain Name
 
 To mint a domain you have reserved, you need to fill the `resellerIdentityKey` request body parameter in the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint with the domain reservation identifier.
 
-```json
-{
+```bash
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/' \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
   "payment": {
     "method": "free"
   },
   "security": "{{ ORDER_SECURITY }}",
   "domains": [
     {
-      "name": "{{ DOMAIN_NAME }}",
+      "name": "partner-test-67687986466871.crypto",
       "ownerAddress": "{{ DOMAIN_OWNER_ADDRESS }}",
-      "resellerIdentityKey": "{{ DOMAIN_RESERVATION_ID }}"
+      "resellerIdentityKey": "test-reservation-id"
     }
   ]
-}
+}'
 ```
 
 :::success Congratulations!
