@@ -156,10 +156,10 @@ Resolution.autoNetwork({
     uns: {
         locations: {
             Layer1: {
-                url: 'http://alchemy.com/ethereum/api-key'
+                url: 'http://alchemy.com/ethereum/{{ API_KEY }}'
             },
             Layer2: {
-                url: 'http://alchemy.com/polygon/api-key'
+                url: 'http://alchemy.com/polygon/{{ API_KEY }}'
             }
         }
     }

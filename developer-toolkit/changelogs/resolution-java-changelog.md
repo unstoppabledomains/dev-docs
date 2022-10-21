@@ -7,6 +7,24 @@ editPage:
 
 # Resolution Java Changelog
 
+## 6.1.1
+### Changes
+ * Bump `com.esaulpaugh:headlong` version
+
+## 6.1.0
+### Changes
+ * Updated default providers to use [Alchemy](http://alchemy.com/)
+
+## 6.0.0
+
+### New methods and features
+ * Reverse resolution support via `Resolution#getReverse` and `Resolution#getReverseTokenId` methods
+ * Updated `.zil` domains resolution to support domains that were migrated to UNS
+
+### Breaking changes
+ * `Resolution#getNamehash` now requires a `serviceType` parameter to specify which type of namehash to generate (ZNS or UNS)
+ * `Resolution#getLocations` and `Resolution#getBatchOwners` now support `.zil` domains. Note that ZNS does not have optimized functions for batch operations so performance for `.zil` domains may be slow.
+
 ## 5.0.0
 
 ### Breaking changes

@@ -7,6 +7,15 @@ editPage:
 
 # Resolution Golang Changelog
 
+## 2.2.0
+- Use default networks for UnsBuilder
+
+## 2.1.0
+
+- Update config to use Alchemy
+- Update tests from Rinkeby to Goerli
+- Update resolver-keys
+
 ## 2.0.0
 
 - L2 support
