@@ -180,7 +180,7 @@ You need to provide either the `ownerAddress` or `email` parameter in every orde
 
 <embed src="/snippets/_orders-endpoint-usage.md" />
 
-## Free Domain Minting Example
+## Example
 
 Here is an example request to mint a free domain with the following details:
 

@@ -73,7 +73,7 @@ https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains
 If the Partner isn't eligible to mint free domains, the [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint will return an error.
 :::
 
-## Get Domains Suggestions Example
+## Example
 
 Here is an example request to generate paid domain suggestions with the following parameters:
 

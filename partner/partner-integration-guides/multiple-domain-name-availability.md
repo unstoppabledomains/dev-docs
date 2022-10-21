@@ -54,7 +54,7 @@ https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains
 The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
-## Multiple Domain Name Availability Example
+## Example
 
 Here is an example request to check the availability of the `buyadomain.dao` and `buyanotherdomain.crypto` domains before purchase:
 

@@ -49,7 +49,7 @@ https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains
 The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
-## Reserve Free Domain Name Example
+## Example
 
 Here is an example request to reserve a domain name with the following parameters:
 

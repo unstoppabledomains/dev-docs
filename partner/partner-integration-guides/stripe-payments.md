@@ -99,7 +99,7 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
 
 The value of the `clientSecret` and `paymentIntentId` fields can be used with the Stripe [Payment Intents](https://stripe.com/docs/api/payment_intents) API to complete the payment.
 
-## Stripe Payment Example
+## Example
 
 Here is an example request to purchase a domain with the following details using the Stripe payment method:
 

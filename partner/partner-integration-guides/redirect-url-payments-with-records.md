@@ -119,7 +119,7 @@ You can use Unstoppable Domains [sandbox environment](/partner/set-up-sandbox-fo
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
 3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto records integration is working successfully.
 
-## Redirect URL Payments With Records Example
+## Example
 
 Here is an example payment URL with the following parameters:
 
