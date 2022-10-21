@@ -32,7 +32,7 @@ The Partner API suggestions endpoints accepts the `search` and `tlds` fields as 
 | tlds | ARRAY[STRING] | NO | Specific TLDs the suggestions should be limited to |
 
 :::info
-If your request must include multiple `search` or `tlds`, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
+If your request must include multiple `search` or `tlds` fields, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
 :::
 
 ## Step 4: Use the Get Domains Suggestions Endpoint

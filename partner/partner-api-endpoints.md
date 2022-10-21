@@ -10,6 +10,7 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 | Endpoint | Description | Documentation |
 | - | - | - |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D/get) |
+| Multiple Domain Name Availability | checks the availability of multiple domain names before purchase | [Multiple Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1/get) |
 | Get Domains Suggestions | provides domain suggestions based on the entered information | [Get Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions/get) |
 | Get Free Domains Suggestions | provides free domain suggestions based on entered information if the partner is eligible to offer free domains | [Get Free Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) |
 | Buy a Domain or Claim for Free | used to buy domains or mint free domains from Unstoppable Domains | [Buy a Domain or Claim for Free Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) |

@@ -23,6 +23,7 @@ Before you integrate free or paid domain minting (via Stripe or Redirect URLs) p
 | - | - | - |
 | Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](partner-integration-guides/get-domains-suggestions.md) |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
+| Multiple Domain Name Availability | checks the availability of multiple domain names before purchase | [Multiple Domain Name Availability Guide](partner-integration-guides/multiple-domain-name-availability.md) |
 | Reserve Free Domain Name | reserves a free and available domain name for seven days | [Reserve Free Domain Name Guide](partner-integration-guides/reserve-free-domain-name.md) |
 
 ## Step 3: Choose Your Integration Path

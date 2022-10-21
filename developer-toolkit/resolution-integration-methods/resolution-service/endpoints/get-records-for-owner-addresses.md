@@ -36,7 +36,7 @@ This endpoint returns the domain name records and metadata owned by wallet addre
 | startingAfter | STRING | NO | The API will skip the results before this value in the response. This value depends on the `nextStartingAfter` response field |
 
 :::info
-If your request must include multiple `owners` or `tlds`, you need to use a new `owners` or `tlds` query param instance for each wallet address and TLD.
+If your request must include multiple `owners` or `tlds` fields, you need to use a new `owners` or `tlds` query param instance for each wallet address and TLD.
 :::
 
 ## Returns
@@ -53,166 +53,19 @@ An object with a `data` field that contains a list of domain details and some me
     * `sortDirection` - (string) The order of applied sorting (ascending or descending).
     * `hasMore` - (boolean) It indicates if the response has more domains to show in the next pages.
 
-## Example 1
+## Example
 
-Here is an example request to query for the records and metadata for two owner addresses:
-
-1. 0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c
-2. 0x8aad44321a86b170879d7a244c1e8d360c99dda8
-
-### Request
-
-```bash
-curl \
---request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&sortBy=id&sortDirection=DESC&perPage=2" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
-```
-
-### Response
-
-```json
-{
-  "data": [
-    {
-      "id": "porpoise.nft",
-      "attributes": {
-        "meta": {
-          "domain": "porpoise.nft",
-          "blockchain": "MATIC",
-          "networkId": 137,
-          "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "resolver": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
-          "registry": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f"
-        },
-        "records": {
-          "crypto.ETH.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "social.picture.value": "1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317",
-          "crypto.MATIC.version.ERC20.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "crypto.MATIC.version.MATIC.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8"
-        }
-      }
-    },
-    {
-      "id": "whereyoucantypeinadomain.crypto",
-      "attributes": {
-        "meta": {
-          "domain": "whereyoucantypeinadomain.crypto",
-          "blockchain": "MATIC",
-          "networkId": 137,
-          "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "resolver": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
-          "registry": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f"
-        },
-        "records": {
-          "crypto.ETH.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "crypto.MATIC.version.ERC20.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-          "crypto.MATIC.version.MATIC.address": "0x8aad44321a86b170879d7a244c1e8d360c99dda8"
-        }
-      }
-    }
-  ],
-  "meta": {
-    "perPage": 2,
-    "nextStartingAfter": "556766",
-    "sortBy": "id",
-    "sortDirection": "DESC",
-    "hasMore": true
-  }
-}
-```
-
-The response has more data that is not included on the first page, so the query for the next page would use the `nextStartingAfter` response value:
-
-```bash
-curl \
---request GET "https://resolve.unstoppabledomains.com/domains/?owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&sortBy=id&sortDirection=DESC&perPage=2&startingAfter=556766" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
-```
-
-## Example 2
-
-Here is an example request to query for the domains with a resolution record:
-
-* `{"crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y"}`
-
-### Request
-
-```bash
-curl \
---request GET "https://resolve.unstoppabledomains.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
-```
-
-### Response
-
-```json
-{
-    "data": [
-        {
-            "id": "brad.crypto",
-            "attributes": {
-                "meta": {
-                    "domain": "brad.crypto",
-                    "blockchain": "ETH",
-                    "networkId": 1,
-                    "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-                    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
-                    "registry": "0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe"
-                },
-                "records": {
-                    "ipfs.html.value": "QmTiqc12wo2pBsGa9XsbpavkhrjFiyuSWsKyffvZqVGtut",
-                    "crypto.ADA.address": "DdzFFzCqrhsuwQKiR3CdQ1FzuPAydtVCBFTRdy9FPKepAHEoXCee2qrio975M4cEbqYwZBsWJTNyrJ8NLJmAReSwAakQEHWBEd2HvSS7",
-                    "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
-                    "crypto.ETH.address": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
-                    "gundb.username.value": "0x8912623832e174f2eb1f59cc3b587444d619376ad5bf10070e937e0dc22b9ffb2e3ae059e6ebf729f87746b2f71e5d88ec99c1fb3c7c49b8617e2520d474c48e1c",
-                    "social.picture.value": "1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317",
-                    "gundb.public_key.value": "pqeBHabDQdCHhbdivgNEc74QO-x8CPGXq4PKWgfIzhY.7WJR5cZFuSyh1bFwx0GWzjmrim0T5Y6Bp0SSK0im3nI",
-                    "ipfs.redirect_domain.value": "https://abbfe6z95qov3d40hf6j30g7auo7afhp.mypinata.cloud/ipfs/Qme54oEzRkgooJbCDr78vzKAWcv6DDEZqRhhDyDtzgrZP6"
-                }
-            }
-        },
-        {
-            "id": "udtestdev-test.crypto",
-            "attributes": {
-                "meta": {
-                    "domain": "udtestdev-test.crypto",
-                    "blockchain": "ETH",
-                    "networkId": 1,
-                    "owner": "0x58ca45e932a88b2e7d0130712b3aa9fb7c5781e2",
-                    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
-                    "registry": "0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe"
-                },
-                "records": {
-                    "ipfs.html.value": "Qme54oEzRkgooJbCDr78vzKAWcv6DDEZqRhhDyDtzgrZP6",
-                    "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
-                    "crypto.ETH.address": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
-                    "ipfs.redirect_domain.value": "https://abbfe6z95qov3d40hf6j30g7auo7afhp.mypinata.cloud/ipfs/Qme54oEzRkgooJbCDr78vzKAWcv6DDEZqRhhDyDtzgrZP6"
-                }
-            }
-        }
-    ],
-    "meta": {
-        "perPage": 100,
-        "nextStartingAfter": "592197",
-        "sortBy": "id",
-        "sortDirection": "ASC",
-        "hasMore": false
-    }
-}
-```
-
-## Example 3
-
-Here is an example request to query for the records and metadata of domains with a resolution record and are owned by a wallet address:
+Here is an example request to query for the records and metadata of domains with a resolution record and are owned by either of two wallet address:
 
 * 0x8aad44321a86b170879d7a244c1e8d360c99dda8
+* 0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c
 * `{"crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y"}`
 
 ### Request
 
 ```bash
 curl \
---request GET "https://resolve.unstoppabledomains.com/domains?resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y&owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8" \
+--request GET "https://resolve.unstoppabledomains.com/domains?owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y" \
 --header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
@@ -253,6 +106,14 @@ curl \
         "hasMore": false
     }
 }
+```
+
+The response has more data that is not included on the first page, so the query for the next page would use the `nextStartingAfter` response value:
+
+```bash
+curl \
+--request GET "https://resolve.unstoppabledomains.com/domains?owners=0x8aad44321a86b170879d7a244c1e8d360c99dda8&owners=0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c&resolution%5Bcrypto.BTC.address%5D=bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y&startingAfter=30031" \
+--header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
 ```
 
 <embed src="/snippets/_discord.md" />
