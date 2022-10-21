@@ -8,7 +8,7 @@ showNextButton: false
 
 Login with Unstoppable uses scopes to request data about a user. Instead of requesting all of a user's information at once, scopes are used to make granular requests (for example, a wallet address or an email address). Each scope returns a set of user attributes called **claims**. If the user authorizes the access associated with a scope, the claims are returned inside the **ID Token** associated with that authorization.
 
-These scopes are passed to the authorization request in the `scope` parameter, which is a list of case-sensitive strings called **scope tokens** separated by spaces.
+The scopes included in the authorization request are determined by the `scope` parameter of the UAuth configuration options, which is a list of case-sensitive strings called **scope tokens** separated by spaces. Applications can request additional scopes by adding the respective tokens to this string.
 
 <figure>
 <figcaption>Example scope configuration</figcaption>
@@ -21,7 +21,7 @@ These scopes are passed to the authorization request in the `scope` parameter, w
 
 </figure>
 
-The scopes requested by an application vary depending on the type of user data needed by the application and will be presented to the user in a list.
+The scopes requested by an application will vary depending on the type of user data needed by the application and will be presented to the user in a list.
 
 <figure>
 
