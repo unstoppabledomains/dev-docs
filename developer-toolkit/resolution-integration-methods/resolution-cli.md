@@ -59,7 +59,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 For example:
 
 ```bash
-resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{API_KEY} -d udtestdev-usdt.crypto
 ```
 
 ## Error Codes

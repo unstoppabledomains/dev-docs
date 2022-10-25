@@ -36,13 +36,13 @@ Send a `POST` request with the authorization headers and request body you have p
 Sandbox Environment:
 
 ```bash
-https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/
+https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/{DOMAIN_NAME}/reserve/
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_NAME }}/reserve/
+https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/{DOMAIN_NAME}/reserve/
 ```
 
 :::info
@@ -61,8 +61,8 @@ Here is an example request to reserve a domain name with the following parameter
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/partner-test-67687986466871.crypto/reserve/' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/partner-test-67687986466871.crypto/reserve/' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "resellerIdentityKey": "test-reservation-id"
@@ -74,18 +74,18 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ P
 To mint a domain you have reserved, you need to fill the `resellerIdentityKey` request body parameter in the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint with the domain reservation identifier.
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/orders/' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "payment": {
     "method": "free"
   },
-  "security": "{{ ORDER_SECURITY }}",
+  "security": "{ORDER_SECURITY}",
   "domains": [
     {
       "name": "partner-test-67687986466871.crypto",
-      "ownerAddress": "{{ DOMAIN_OWNER_ADDRESS }}",
+      "ownerAddress": "{DOMAIN_OWNER_ADDRESS}",
       "resellerIdentityKey": "test-reservation-id"
     }
   ]

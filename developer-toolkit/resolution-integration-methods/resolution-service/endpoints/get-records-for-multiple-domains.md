@@ -55,7 +55,7 @@ Here is an example request to query for a specific resolution record from multip
 ```bash
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto&key=crypto.ETH.address' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

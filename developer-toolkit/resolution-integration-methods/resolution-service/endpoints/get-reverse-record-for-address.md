@@ -57,7 +57,7 @@ Here is an example request to query for the reverse record for the `"0x3EAA67461
 ```bash
 curl \
 --request GET "https://resolve.unstoppabledomains.com/reverse/0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

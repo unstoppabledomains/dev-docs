@@ -9,9 +9,9 @@ This page outlines the use case for integrating the Reverse Resolution feature i
 
 ## How does it work?
 
-DApps currently have a poor user experience when displaying wallet addresses of connected users. It is difficult for users to identify which wallet is connected to a platform and have to check the addresses shown in the application with their wallets. [Reverse Resolution](/reverse-resolution/index.md) is a feature that allows applications to show the domain names owned by an address instead of wallet addresses alone.
+[Reverse Resolution](/reverse-resolution/index.md) works like a phonebook where you would typically search for a contact's phone number, but you can also search for a contact with their phone number. This works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected.
 
-Reverse Resolution works like a phonebook where you would typically search for a contact's phone number, but you can also search for a contact with their phone number. This works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected. You can use Reverse Resolution anywhere your application has to display the identity of a connected user.
+You can use Reverse Resolution anywhere your application has to display the identity of a connected user.
 
 <figure>
 
@@ -27,6 +27,8 @@ Individuals maintain absolute control over their domains and their reverse recor
 ## Are there working integrations for this feature?
 
 <https://web3udmintfeed.nft>, a platform that tracks newly minted UD domain names in real-time, has implemented Reverse Resolution and can also be used as a reference for implementation: [web3udmintfeed.nft Code Reference](https://github.com/Noxturnix/web3udmintfeed.nft).
+
+There are UD Partners like [Liquality](https://blog.liquality.io/liquality-x-unstoppable-domains/) and [ShapeShift](https://shapeshift.com/library/easy-shapeshifting-crypto-sending-and-receiving-with-unstoppable-domains) that have integrated Reverse Resolution into their applications.
 
 ## How do I get started?
 

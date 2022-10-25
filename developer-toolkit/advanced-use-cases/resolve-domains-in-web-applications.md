@@ -126,7 +126,7 @@ By default, the CLI uses Alchemy as its primary gateway to the blockchain. If yo
 For example:
 
 ```bash
-resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{{ API_KEY }} -d udtestdev-usdt.crypto
+resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{API_KEY} -d udtestdev-usdt.crypto
 ```
 
 Use the `-h` or `--help` flag to see all the available CLI options. Please see the [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md) documentation for more information.
@@ -156,10 +156,10 @@ Resolution.autoNetwork({
     uns: {
         locations: {
             Layer1: {
-                url: 'http://alchemy.com/ethereum/{{ API_KEY }}'
+                url: 'http://alchemy.com/ethereum/{API_KEY}'
             },
             Layer2: {
-                url: 'http://alchemy.com/polygon/{{ API_KEY }}'
+                url: 'http://alchemy.com/polygon/{API_KEY}'
             }
         }
     }
