@@ -9,7 +9,7 @@ The glossary provides a list of definitions for terms, acronyms, and phrases use
 
 ### Burn
 
-The process of permanently destroying and clearing all the associated [metadata](#metadata) and [records](#record) of a domain, so it is no longer available for purchase or re-minting.
+The process of permanently destroying and clearing all the associated [metadata](#metadata) and [records](#record) of a domain, so it is no longer available for purchase or [re-minting](#minting).
 
 ### Bridge
 
@@ -17,7 +17,7 @@ An interoperability protocol that allows tokens and arbitrary data to be transfe
 
 ### CNS
 
-Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum mainnet. It is depreciated as new domains are minted on [UNS](#uns), which supports various domain endings besides `.crypto`.
+Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto` domains on the Ethereum [mainnet](#mainnet). It is depreciated as new domains are minted on [UNS](#uns), which supports various domain endings besides `.crypto`.
 
 ### DApp
 
@@ -29,7 +29,11 @@ Also known as TLD or domain extension, it is the last segment of a domain name o
 
 ### Domain Resolution
 
-The process of retrieving the records associated with a Web3 domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp).
+The process of retrieving the [records](#record) associated with a Web3 domain, i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp).
+
+### Ethereum Provider
+
+A computer running the Ethereum client software responsible for mining Ethereum, verifying transactions on the blockchain, and keeping the network secure and accurate data.
 
 ### Gas
 
@@ -37,7 +41,7 @@ A fee or pricing value paid by a user to successfully conduct a transaction or e
 
 ### Humanity Check
 
-A feature provided by Unstoppable Domains which allows an application to anonymously verify their users' personal information using their [Web3 domains](#nft-domains) without revealing their identity.
+A feature provided by Unstoppable Domains which allows an application to anonymously verify their users' personal information using their [Web3 domains](#web3-domain) without revealing their identity.
 
 ### IPFS
 
@@ -65,15 +69,15 @@ The process of validating information, such as domain ownership, and registering
 
 ### Name Service
 
-A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsible for defining domain ownership rules, storing domain records and [metadata](#metadata), [minting](#minting), [resolving](#domain-resolution), and [burning](#burn) domains.
+A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsible for defining domain ownership rules, storing domain [records](#record) and [metadata](#metadata), [minting](#minting), [resolving](#domain-resolution), and [burning](#burn) domains.
 
 ### Namehashing
 
 A one-way algorithm that converts a domain name like `example.crypto` into an ERC-721 token Id so [smart contracts](#smart-contract) can understand it.
 
-### Web3 Domains
+### Web3 Domain
 
-The domain names minted on the blockchain which allow people to govern their data, set their Web3 username, take control of their digital worlds, and harness the power of the internet.
+The domain names [minted](#minting) on the blockchain which allow people to govern their data, set their Web3 username, take control of their digital worlds, and harness the power of the internet.
 
 ### Oracle
 
@@ -83,13 +87,25 @@ A service that supplies [smart contracts](#smart-contract) with data from the ou
 
 A user authorized by Unstoppable Domains to [sell domains to users](/use-cases/sell-domains-users.md) in their applications.
 
+### Partner API
+
+An API service maintained by Unstoppable Domains for Partners to [mint](#minting) free and paid domains, check the availability of domain names, reserve domains for users, and get domain name suggestions available for purchase.
+
 ### Record
 
 The data associated with a [Web3 domain](#nft-domains), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
 
 ### Registry
 
-The [naming service](#name-service) [smart contract](#smart-contract) manages domain ownership, minting domains and subdomains, storing domain metadata, and burning domains. The registry also stores and manages domain records in the [Unstoppable Name Service (UNS)](#uns).
+The [naming service](#name-service) [smart contract](#smart-contract) manages domain ownership, minting domains and subdomains, storing domain [metadata](#metadata), and [burning](#burn) domains. The registry also stores and manages domain [records](#record) in the [Unstoppable Name Service (UNS)](#uns).
+
+### Resolution Library
+
+A set of libraries and SDK's maintained by Unstoppable Domains for interacting with [Web3 domain names](#web3-domain). The Resolution Libraries retrieve payment addresses, [IPFS hashes](#ipfs) for decentralized websites, DNS records, and other [record](#records) types.
+
+### Resolution Service
+
+An API service maintained by Unstoppable Domains for getting domain data and [metadata](#metadata). It allows you to build applications directly communicating with the blockchain to get UD domain data with a single API request.
 
 ### Resolver
 
@@ -98,6 +114,10 @@ The [Crypto Name Service (CNS)](#cns) [smart contract](#smart-contract) that is 
 ### Reverse Resolution
 
 A feature that enables applications that integrate with Unstoppable Domains to show domain names where they would typically only show addresses.
+
+### Sandbox
+
+A controlled environment maintained by Unstoppable Domains for [Partners](#partner) to test their integrations before deploying them in production.
 
 ### Smart Contract
 
@@ -113,7 +133,7 @@ Short for Unstoppable Domains.
 
 ### UNS
 
-Unstoppable Name Service (UNS) is the [name service](#name-service) handling the minting and management of [Web3 domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
+Unstoppable Name Service (UNS) is the [name service](#name-service) handling the [minting](#minting) and management of [Web3 domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
 
 ### ZNS
 

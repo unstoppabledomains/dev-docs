@@ -9,13 +9,13 @@ This page outlines the use case for reselling Unstoppable Domains to users in yo
 
 ## How does it work?
 
-We will provide you with several tools to establish yourself as an official Unstoppable Domains Partner. You can configure several integration pathways for your application, allowing users to mint both paid and free domains.
+We will provide you with several tools to establish yourself as an official Unstoppable Domains Partner. You can configure several integration pathways for your application, allowing your users to mint both paid and free domains.
 
 ## Are there working integrations for this feature?
 
 Blockchain.com is our most recent UD Partner. Blockchain.com has 31 million users who can purchase free and paid Unstoppable Domains directly in Blockchain.com's application.
 
-You can find additional working integrations on UD's Applications List, filtered by the [Partner feature](https://unstoppabledomains.com/apps?filters=4).
+You can find additional working integrations on UD's Applications list, filtered by the [Partner feature](https://unstoppabledomains.com/apps?filters=4).
 
 ## How do I get started?
 
