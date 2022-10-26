@@ -49,7 +49,7 @@ nav:
     page: /guides.mdx
 
   - label: API Reference
-    page: openapi/reference.page.yaml
+    page: openapi/resolution.page.yaml
 
   - label: Toolkit
     page: developer-toolkit/index.md

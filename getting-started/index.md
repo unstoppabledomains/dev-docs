@@ -31,7 +31,7 @@ These items are listed in order of complexity. For example, if you are starting 
   - [Reverse Resolution](/reverse-resolution/index.md)
   - [Manage Domains](/manage-domains/index.md)
   - [Migrate to Polygon](/polygon/index.md)
-- [API Reference](/openapi/reference.page.yaml)
+- [API Reference](/openapi/resolution.page.yaml)
 - [Developer Toolkit](/developer-toolkit/index.md)
 
 <embed src="/snippets/_discord.md" />
