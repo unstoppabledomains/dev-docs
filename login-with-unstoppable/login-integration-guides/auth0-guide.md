@@ -10,9 +10,9 @@ The Unstoppable Domains social connection for Auth0 abstracts blockchain impleme
 
 <figure>
 
-![UD + Auth0 login sequence](/images/login-auth0-diagram.svg)
+![Auth0 with Unstoppable Domains](/images/login-selection-auth0.png '#width=40%')
 
-<figcaption>UD + Auth0 login sequence</figcaption>
+<figcaption>Auth0 with Unstoppable Domains</figcaption>
 </figure>
 
 This integration guide will show you how to configure the Unstoppable Domains social connection for Auth0 to support web3 login without writing any blockchain-specific code.

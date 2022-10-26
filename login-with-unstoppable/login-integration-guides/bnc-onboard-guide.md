@@ -12,6 +12,13 @@ This guide and the `@uauth/bnc-onboard` package uses `bnc-onboard`, a depreciate
 
 This is the basic installation guide for the `bnc-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/bnc-onboard).
 
+<figure>
+
+![BNC Onboard with Unstoppable Domains](/images/login-selection-bnc-onboard.png '#width=70%')
+
+<figcaption>BNC Onboard with Unstoppable Domains</figcaption>
+</figure>
+
 :::info
 For a completed example of a BNC Onboard application, you can [download this example project](https://github.com/unstoppabledomains/uauth/blob/main/examples/bnc-onboard/).
 :::
