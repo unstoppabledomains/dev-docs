@@ -7,6 +7,9 @@ pages:
   - label: Humanity Check for Login
     page: humanity-check.md
     separatorLine: true
+  - label: Featured Updates
+    page: featured-updates.md
+    separatorLine: true
   - label: Getting Started with Login
     page: get-started-login.md
     separatorLine: true
