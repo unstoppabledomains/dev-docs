@@ -36,4 +36,4 @@ Login with Unstoppable now supports authentication with certain verified account
 | Method | Description |
 | ------ | ----------- |
 | [getVerifiedAccounts()](/login-with-unstoppable/libraries/uauth-js.md#getverifiedaccounts) | Returns a list of verified accounts associated with the domain. |
-| [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account the used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |
+| [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |
