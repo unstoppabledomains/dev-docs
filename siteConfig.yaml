@@ -16,7 +16,7 @@ linkChecker:
 oasDefinitions:
   partner: https://api.redoc.ly/registry/bundle/unstoppable-domains/Reseller%20API/v2/openapi.yaml
   login-unstoppable: https://api.redocly.com/registry/bundle/unstoppable-domains/Login%20API/v1/openapi.yaml
-  resolution: https://api.redocly.com/registry/assets/unstoppable-domains/Resolution%20API/v1?branch=root
+  resolution: https://api.redocly.com/registry/bundle/unstoppable-domains/Resolution%20API/v1/openapi.yaml?branch=root
   # add links to definitions in our API registry by using a fully qualified URL.
 stylesheets:
   - ./static/css/main.css
