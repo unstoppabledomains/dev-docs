@@ -1,0 +1,13 @@
+type: reference-docs
+definitionId: resolution
+settings:
+  pagination: none
+  showConsole: true
+  generateCodeSamples:
+    languages:
+      - lang: JavaScript
+      - lang: Node.js
+      - lang: Python
+      - lang: Java
+      - lang: Go
+  hideDownloadButton: true

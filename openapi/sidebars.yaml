@@ -1,5 +1,7 @@
 pages:
-  - page: reference.page.yaml
+  - page: resolution.page.yaml
     separatorLine: true
-  - page: loginref.page.yaml
+  - page: partner.page.yaml
+    separatorLine: true
+  - page: login.page.yaml
     separatorLine: true
