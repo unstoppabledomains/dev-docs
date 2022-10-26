@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Domain SVG Image` e
 # Get Domain SVG Image
 
 ```bash
-https://resolve.unstoppabledomains.com/image/<domainOrToken>
+https://resolve.unstoppabledomains.com/image/{domainOrToken}
 ```
 
 This endpoint returns the image data of a domain name as a SVG string.

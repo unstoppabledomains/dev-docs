@@ -121,7 +121,7 @@ A controlled environment maintained by Unstoppable Domains for [Partners](#partn
 
 ### Smart Contract
 
-A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out their terms and conditions with total transparency and no counterparty risk, allowing transactions to be made without an intermediary figure and trust between the parties involved.
+A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out their terms and conditions with total transparency and no counterparty risk, allowing transactions without an intermediary figure and trust between the parties involved.
 
 ### Testnet
 

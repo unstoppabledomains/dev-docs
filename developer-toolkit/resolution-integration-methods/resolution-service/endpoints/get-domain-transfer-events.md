@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Domain Transfer Eve
 # Get Domain Transfer Events
 
 ```bash
-https://resolve.unstoppabledomains.com/domains/<domain>/transfers/latest
+https://resolve.unstoppabledomains.com/domains/{domain}/transfers/latest
 ```
 
 This endpoint tracks the blocks and blockchains domain names are being transferred from one owner wallet address to another.
