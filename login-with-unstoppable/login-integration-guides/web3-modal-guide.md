@@ -8,6 +8,13 @@ showNextButton: false
 
 This is the basic installation guide for the `web3modal` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3modal).
 
+<figure>
+
+![Web3 Modal with Unstoppable Domains](/images/login-selection-web3modal.png '#width=70%')
+
+<figcaption>Web3 Modal with Unstoppable Domains</figcaption>
+</figure>
+
 ## Step 1: Install the Libraries
 
 Install with `yarn` or `npm`.

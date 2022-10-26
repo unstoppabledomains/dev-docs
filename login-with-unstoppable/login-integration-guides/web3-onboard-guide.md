@@ -12,6 +12,13 @@ This guide and the `@uauth/web3-onboard` package uses `web3-onboard`, the latest
 
 This is the basic installation guide for the `web3-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-onboard).
 
+<figure>
+
+![Web3 Onboard with Unstoppable Domains](/images/login-selection-web3-onboard.png '#width=70%')
+
+<figcaption>Web3 Onboard with Unstoppable Domains</figcaption>
+</figure>
+
 ## Step 1: Install the Libraries
 
 Install with `yarn` or `npm`.

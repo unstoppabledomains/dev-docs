@@ -10,9 +10,9 @@ The Unstoppable Domains social connection for Auth0 abstracts blockchain impleme
 
 <figure>
 
-![UD + Auth0 login sequence](/images/login-auth0-diagram.svg)
+![Auth0 with Unstoppable Domains](/images/login-selection-auth0.png '#width=40%')
 
-<figcaption>UD + Auth0 login sequence</figcaption>
+<figcaption>Auth0 with Unstoppable Domains</figcaption>
 </figure>
 
 This integration guide will show you how to configure the Unstoppable Domains social connection for Auth0 to support web3 login without writing any blockchain-specific code.
@@ -25,7 +25,7 @@ Before using the Unstoppable Domains social connection, you’ll need an [Auth0]
 
 In addition to the basic configuraton outlined in [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md), some configuration specific to Auth0 is required.
 
-1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#step-2-configure-redirect-uris) to `https://TENANT_ID.REGION.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
+1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#redirect-uris) to `https://{{ TENANT_ID}} .{{ REGION }}.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
 2. Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#token-endpoint-authentication-method) in the **Advanced** configuration tab to **Client Secret Post**.
 3. Click **Confirm Changes**.
 
