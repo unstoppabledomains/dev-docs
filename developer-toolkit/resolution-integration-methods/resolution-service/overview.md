@@ -47,7 +47,7 @@ Unstoppable Domains provides a Postman collection that you can fork to your work
 
 ## API Endpoints Spec
 
-Below is a table of all the API endpoints provided by the Resolution Service, a description of their function, and links to their respective documentation.
+Below is a table of all the API endpoints provided by the Resolution Service, a description of their function, and links to their respective documentation. For more details about the endpoints, see the [Resolution Service endpoint specification](https://docs.unstoppabledomains.com/openapi/resolution/).
 
 | Endpoint | Description | Documentation |
 | - | - | - |

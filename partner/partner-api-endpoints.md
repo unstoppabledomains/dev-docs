@@ -5,7 +5,7 @@ description: This page details the Partner API endpoints and links to the extern
 
 # Partner API Endpoints
 
-Below is a table of all the API endpoints provided by the Partner API, a description of their function, and links to their respective documentation. For more details about the endpoints, see the [Partner API endpoint specification](https://raw.githubusercontent.com/unstoppabledomains/website-api-docs-v2/master/openapi.yaml).
+Below is a table of all the API endpoints provided by the Partner API, a description of their function, and links to their respective documentation. For more details about the endpoints, see the [Partner API endpoint specification](https://docs.unstoppabledomains.com/openapi/reference/).
 
 | Endpoint | Description | Documentation |
 | - | - | - |
