@@ -7,34 +7,34 @@ description: This page describes the process for requesting a free test domain a
 
 <embed src="/snippets/_test-domain-explain.md" />
 
-:::warning important
-The [Partner API](/partner/integration-paths.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login.md), applications must use **Polygon Mainnet** as the domain network.
+:::warning
+The [Partner API](/partner/index.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
 :::
 
 ## Step 1: Gather Requirements for the Website Faucet
 
 * A Web3 compatible wallet
-* Configure your wallet for [Goerli Testnet](etherscan.md#step-1-check-wallet-compatibility-for-etherscan) or [Polygon/Mumbai](polygonscan.md#step-1-configure-your-metamask-wallet-for-polygon)
-* Get[ free Ether from Goerli faucet](etherscan.md#step-2-get-free-ether-from-goerli-faucet) or [free MATIC tokens from Polygon faucet](polygonscan.md#step-2-get-free-matic-tokens-from-polygon-faucet) to cover transaction fees (only for Goerli and Mumbai Testnet)
-* Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
+* Configure your wallet for the [Polygon/Mumbai](/polygon/add-polygon-to-metamask.md) network
+* Get [free MATIC tokens from Polygon faucet](/polygon/get-polygon-test-tokens.md) to cover transaction fees (only for Mumbai testnet)
+* Ensure you have funds in your wallet to pay transaction fees
 
 :::info
-Domains on Polygon Mainnet can be purchased for free through Unstoppable Website Faucet, but members will need to cover their own gas fees to mint the domain.
+Domains on Polygon mainnet can be purchased for free through Unstoppable Website Faucet, but members will need to cover their own gas fees to mint the domain.
 :::
 
 ## Step 2: Configure the Test Domain
 
 * Go to the [Unstoppable Website Faucet](https://unstoppabledomains.com/developers/testdomain) page for developers.
-* Select the network for the domain: **Goerli Testnet**, **Polygon Mainnet,** or **Mumbai Testnet**.
+* Select the network for the domain: **Polygon Mainnet** or **Mumbai Testnet**.
 * Configure the domain options:
-  * **domain ending**: .888, .crypto, .x, .wallet, .bitcoin, .nft, .dao, .blockchain
-  * **domain suffix**: the part of the domain the follows `udtestdev-`
-  * **recipient address**: must enter ETH address (required)
-  * **cryptocurrency records**: add optional cryptocurrency addresses, such as bitcoin or litecoin
-  * **custom records**: add optional key and value pairs
+  * **domain ending:** .crypto, .wallet, .blockchain, .bitcoin, .x, .888, .nft, .dao, .zil
+  * **domain suffix:** the part of the domain the follows `udtestdev-`
+  * **recipient address:** must enter Polygon address (required)
+  * **cryptocurrency records:** add optional cryptocurrency addresses, such as Bitcoin or Litecoin
+  * **custom records:** add optional key and value pairs
 
-:::info reminder
-The [Partner API](/partner/integration-paths.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login.md), applications must use **Polygon Mainnet** as the domain network.
+:::warning
+The [Partner API](/partner/index.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/login-with-unstoppable/get-started-login.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
 :::
 
 <figure>

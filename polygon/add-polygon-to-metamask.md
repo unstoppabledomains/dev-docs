@@ -40,7 +40,7 @@ Click the `Add a network` button on the network settings page:
 
 Then, fill the network configuration for the Polygon network you want to add (mainnet or testnet) into the fields displayed in MetaMask.
 
-| Field Name | Polygon mainnet | Polygon testnet (Mumbai) |
+| Field Name | Polygon Mainnet | Polygon Testnet (Mumbai) |
 | - | - | - |
 | Network Name | Polygon | Mumbai |
 | New RPC URL | https://polygon-rpc.com/ | https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78 |

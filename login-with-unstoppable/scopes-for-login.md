@@ -79,7 +79,7 @@ The Login with Unstoppable `wallet` scope is best used for retrieving metadata a
 
 The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain owners with a proxy email service that doesn't share their private address.
 
-Unstoppable email is disabled for domains by default. If a user has not enabled this feature but consents to the `email` scope, a unique, dApp-specific email address is generated and authorized for their domain. This unique email address is then returned in the `email` claim.
+Unstoppable email is disabled for domains by default. If a user has not enabled this feature but consents to the `email` scope, a unique, DApp-specific email address is generated and authorized for their domain. This unique email address is then returned in the `email` claim.
 
 ## humanity_check
 `optional: true`

@@ -86,7 +86,7 @@ For domains owned by multisig wallets, owner-based authentication isn’t suffic
 The below fields are used to specify a public key that can be used for authentication.
 
 :::info
-It’s recommended that dApps support the web3 and oob methods at a minimum.
+It’s recommended that DApps support the web3 and oob methods at a minimum.
 :::
 
 | Field            | Description                                                                                                                                                                                                                                              |

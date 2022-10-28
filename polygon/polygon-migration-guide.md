@@ -11,7 +11,7 @@ There will be minimal changes to Unstoppable Domains’ resolution libraries and
 
 Polygon apps will resolve domains by reading [UNS Smart Contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
 
-To further assist with L2, the Polygon team will be adding Unstoppable Domains resolution to their API and Matic.js library. This will make it easier, for example, for Polygon apps to use domains for payments in wallets and login with dapps.
+To further assist with L2, the Polygon team will be adding Unstoppable Domains resolution to their API and Matic.js library. This will make it easier, for example, for Polygon apps to use domains for payments in wallets and login with DApps.
 
 ## Resolution Library Updates
 
