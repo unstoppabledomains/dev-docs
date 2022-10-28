@@ -23,11 +23,9 @@ You can generate the namehash of a domain using any of the [Resolution Libraries
 
 <embed src="/snippets/_namehashing-snippets.md" />
 
-## Reverse lookup
+## Reverse Lookup
 
-Fundamentally, namehashing is a one-way operation. It recursively hashes the labels using the SHA-256 hash function.
-
-If one possesses a precomputed table of all hashes and corresponding domains reverse lookups are possible. This table can be reconstructed using the events on the CNS and UNS Registry `NewURI` event.
+Fundamentally, namehashing is a one-way operation. It recursively hashes the labels using the SHA-256 hash function. If one possesses a precomputed table of all hashes and corresponding domains reverse lookups are possible. This table can be reconstructed using the events on the CNS and UNS Registry `NewURI` event.
 
 ## JSON RPC
 
@@ -55,7 +53,7 @@ let metadata = await metadataResponse.json();
 console.log(metadata.name);
 ```
 
-## NewURI events
+## NewURI Events
 
 When a domain is created its name and token ID are logged using a `NewURI` event. This event can be looked up in order to reverse the namehash of a domain. This approach also works for CNS and UNS.
 
@@ -65,4 +63,4 @@ Note that regardless of the way a namehash is reversed, it should always be forw
 
 ## Public API
 
-Unstoppable Domains maintains a public-facing API which can be used to obtain domain information with a namehash. To learn more, visit the [Get Metadata for a Domain](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md) documentation.
+Unstoppable Domains maintains a public-facing API which can be used to obtain the information of a domain using its namehash. To learn more, visit the [Get Metadata for a Domain](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md) documentation.

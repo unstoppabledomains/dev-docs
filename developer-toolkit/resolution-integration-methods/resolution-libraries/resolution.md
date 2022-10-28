@@ -41,7 +41,7 @@ const {default: Resolution} = require('@unstoppabledomains/resolution');
 const ethereumProviderUrl = ALCHEMY_ETHEREUM_API;
 const polygonProviderUrl = ALCHEMY_POLYGON_API;
 
-// custom provider config using the `Resolution` constructor options
+// custom provider config using the Resolution constructor options
 const resolution = new Resolution({
     sourceConfig: {
       uns: {
@@ -85,7 +85,6 @@ Connect a provider from [ethers.js](https://www.npmjs.com/package/ethers)
 
 ```javascript
 import Resolution from "@unstoppabledomains/resolution";
-
 const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```
 
@@ -95,6 +94,7 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
+
 const resolution = new Resolution();
 resolution
     .addr('domain-with-error.crypto', 'ETH')
