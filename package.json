@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "redocly-portal develop -p 3000",
-    "build": "redocly-portal build",
+    "build": "redocly-portal build --ignore-openapi-errors=true",
     "clean": "redocly-portal clean",
     "generate": "node --experimental-loader=ts-node/esm .templates/smart-contracts-renderer cns && node --experimental-loader=ts-node/esm .templates/smart-contracts-renderer uns"
   },
