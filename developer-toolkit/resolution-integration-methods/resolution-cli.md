@@ -24,7 +24,7 @@ The Resolution CLI supports decentralized domains across two main zones:
 To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
 ```bash
-go get -u github.com/unstoppabledomains/resolution-cli/resolution
+go install github.com/unstoppabledomains/resolution-cli/resolution@latest
 ```
 
 ## Use Case: Retrieve an ETH Address
