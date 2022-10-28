@@ -31,8 +31,9 @@ analytics:
     enableonDevMode: true
 scripts:
   - ./static/scripts/etlb.js
+  - ./static/scripts/fd-widget.js
+  - https://widget.freshworks.com/widgets/48000002534.js
   - https://embed.typeform.com/next/embed.js
-#  - ./static/intercom.js
 editPage:
   baseUrl: https://github.com/unstoppabledomains/dev-docs/blob/main/
   text: Edit this page
