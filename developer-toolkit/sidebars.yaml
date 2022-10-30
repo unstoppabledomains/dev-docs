@@ -84,6 +84,8 @@ pages:
             page: advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md
           - label: Browser Resolution Test Domains
             page: advanced-use-cases/resolve-domains-browser/test-domains.md
+      - label: Retrieve Domain Metadata Using Smart Contracts
+        page: advanced-use-cases/retrieve-metadata-smart-contracts.md
     separatorLine: true
   - group: Reference
     expanded: false
