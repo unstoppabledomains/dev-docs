@@ -47,4 +47,4 @@ You must provide a wallet address or an email when purchasing a domain. If you o
 
 ### What is the difference between a UD affiliate and a UD partner?
 
-An affiliate uses a link with tracking and re-directs people to run searches on the UD website. Meanwhile, UD partners require developer resources to integrate because partners call Unstoppable Domains Partner API and surfacing results inside their application or page. UD partners can create an immersive experience for their users where they can complete the entire purchase experience using the Partner API without sending traffic directly to UD's website.
+An affiliate uses a link with tracking and re-directs people to run searches on the UD website. Meanwhile, UD partners require developer resources to integrate because partners call Unstoppable Domains Partner API and surfacing results inside their application or page. UD partners can create an immersive experience for their users where they can complete the entire purchase experience using the Partner API without sending traffic directly to Unstoppable Domains website.

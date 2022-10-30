@@ -1,6 +1,6 @@
 ---
 title: Partner API Integration Paths | Unstoppable Domains Developer Portal
-description: This page reviews the integration guides for UD's Partner API feature. This feature works for Polygon domains.
+description: This page reviews the integration guides for Unstoppable Domains Partner API feature. This feature works for Polygon domains.
 ---
 
 # Partner API Integration Paths

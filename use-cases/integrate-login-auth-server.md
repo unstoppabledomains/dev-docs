@@ -23,7 +23,7 @@ Information sharing is 100% opt-in for users, and users maintain absolute contro
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tKOI1nIktdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-You can find additional working integrations on UD's Applications List, filtered by the [Login feature](https://unstoppabledomains.com/apps?filters=26).
+You can find additional working integrations on Unstoppable Domains Applications List, filtered by the [Login feature](https://unstoppabledomains.com/apps?filters=26).
 
 ## How do I get started?
 

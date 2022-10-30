@@ -62,6 +62,10 @@ For example:
 resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{API_KEY} -d udtestdev-usdt.crypto
 ```
 
+:::info
+Use the `-h` or `--help` flag to see all the available CLI options.
+:::
+
 ## Error Codes
 
 Below is a list of all the error codes you might encounter when using the Resolution CLI.

@@ -12,7 +12,7 @@ Resolution is built and maintained by Unstoppable Domains and supports decentral
 <embed src="/snippets/_supported-domain-endings.md" />
 
 :::info
-For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](../resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.
+For more information on Unstoppable Domains Resolution, see [Resolve Using Smart Contracts](../resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md) and the [Resolution Library Reference](https://unstoppabledomains.github.io/resolution/). To make domain resolution easier, we've written libraries for web, Android, and iOS.
 :::
 
 ## Installing Resolution
@@ -113,12 +113,12 @@ function resolveCustomRecord(domain, record) {
 resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 ```
 
-### Command Line Interface
+## Command Line Interface
 
 To use resolution via the command line, [download one of the binaries](https://github.com/unstoppabledomains/resolution-cli/releases) or install using Go.
 
 ```bash
-go get -u github.com/unstoppabledomains/resolution-cli/resolution
+go install github.com/unstoppabledomains/resolution-cli/resolution@latest
 ```
 
 By default, the CLI uses Alchemy as its primary gateway to the blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-provider-url` flag for Ethereum and `ethereum-l2-provider-url` for Polygon.

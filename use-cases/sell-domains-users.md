@@ -15,8 +15,8 @@ We will provide you with several tools to establish yourself as an official Unst
 
 Blockchain.com is our most recent UD Partner. Blockchain.com has 31 million users who can purchase free and paid Unstoppable Domains directly in Blockchain.com's application.
 
-You can find additional working integrations on UD's Applications list, filtered by the [Partner feature](https://unstoppabledomains.com/apps?filters=4).
+You can find additional working integrations on Unstoppable Domains Applications list, filtered by the [Partner feature](https://unstoppabledomains.com/apps?filters=4).
 
 ## How do I get started?
 
-If you want to resell domains, you must first [Set up Partner API Access](/partner/index.md) with Unstoppable Domains and [configure a payment method](/partner/integration-paths.md) for your partner account. You can process payments natively using Stripe or you can use [UD's Redirect URL payment flow](/partner/partner-integration-guides/redirect-url-payments.md), where we process the payments on your behalf. See the [Partner API Spec](/openapi/reference/) for detailed parameters.
+If you want to resell domains, you must first [Set up Partner API Access](/partner/index.md) with Unstoppable Domains and [configure a payment method](/partner/integration-paths.md) for your partner account. You can process payments natively using Stripe or you can use [Unstoppable Domains Redirect URL payment flow](/partner/partner-integration-guides/redirect-url-payments.md), where we process the payments on your behalf. See the [Partner API Spec](/openapi/reference/) for detailed parameters.

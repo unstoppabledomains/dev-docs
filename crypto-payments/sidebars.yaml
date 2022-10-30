@@ -4,7 +4,7 @@ pages:
   - page: index.md
     label: Getting Started With Crypto Payments
     separatorLine: true
-  - group: Integrate Crypto Payments Using the Resolution API
+  - group: Integrate Crypto Payments Using the Resolution Service
     expanded: false
     pages:
       - label: Overview
@@ -29,14 +29,14 @@ pages:
         href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-swift/
       - label: Resolution-Go
         href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-go/
+      - label: Matic.js SDK
+        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/
     separatorLine: true
   - group: Other Ways To Integrate Crypto Payments
     expanded: false
     pages:
       - label: Resolution CLI
         href: /developer-toolkit/resolution-integration-methods/resolution-cli/
-      - label: Matic.js SDK
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/
       - group: Resolve With Direct Blockchain Calls
         expanded: false
         pages:
