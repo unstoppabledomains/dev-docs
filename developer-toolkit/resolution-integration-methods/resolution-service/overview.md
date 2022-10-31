@@ -61,4 +61,8 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 | Get Domain SVG Image | returns the image data of a domain name as a SVG string. | [Get Domain SVG Image Docs](endpoints/get-domain-svg-image.md) |
 | Get Domain Image Source | returns the image data of a domain name in `image/svg+xml` format. | [Get Domain Image Source Docs](endpoints/get-domain-image-source.md) |
 
+## Running the Resolution Service
+
+The Resolution Service is freely available to be installed and configured locally. Unstoppable Domains provides the Resolution Service as a docker image so it can be launched on various platforms and in the cloud. Please see the [installation guide](https://github.com/unstoppabledomains/resolution-service#installation) for the steps for configuring the service.
+
 <embed src="/snippets/_discord.md" />

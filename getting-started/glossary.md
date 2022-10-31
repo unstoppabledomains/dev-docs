@@ -93,7 +93,7 @@ An API service maintained by Unstoppable Domains for Partners to [mint](#minting
 
 ### Record
 
-The data associated with a [Web3 domain](#nft-domains), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
+The data associated with a [Web3 domain](#web3-domain), i.e., cryptocurrency addresses, chat IDs, and IPFS hashes for [decentralized websites](#dapp). It is stored as a key-value dictionary by the domain on the blockchain.
 
 ### Registry
 
@@ -101,7 +101,7 @@ The [naming service](#name-service) [smart contract](#smart-contract) manages do
 
 ### Resolution Library
 
-A set of libraries and SDK's maintained by Unstoppable Domains for interacting with [Web3 domain names](#web3-domain). The Resolution Libraries retrieve payment addresses, [IPFS hashes](#ipfs) for decentralized websites, DNS records, and other [record](#records) types.
+A set of libraries and SDK's maintained by Unstoppable Domains for interacting with [Web3 domain names](#web3-domain). The Resolution Libraries retrieve payment addresses, [IPFS hashes](#ipfs) for decentralized websites, DNS records, and other [record](#record) types.
 
 ### Resolution Service
 
@@ -133,7 +133,7 @@ Short for Unstoppable Domains.
 
 ### UNS
 
-Unstoppable Name Service (UNS) is the [name service](#name-service) handling the [minting](#minting) and management of [Web3 domains](#nft-domains) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
+Unstoppable Name Service (UNS) is the [name service](#name-service) handling the [minting](#minting) and management of [Web3 domains](#web3-domain) on the [Ethereum (L1)](#l1) and [Polygon (L2)](#l2) blockchains.
 
 ### ZNS
 

@@ -5,13 +5,13 @@ description: This page highlights some of the latest features added to Unstoppab
 
 # Featured Updates for Login With Unstoppable
 
-Login with Unstoppable is in active development and we're working to add new features on a regular basis. This page will highlight some of the newest additions, including features added to domain profiles and the Unstoppable authentication service. Many of these features require little or no change to existing integrations. 
+Login with Unstoppable is in active development and we're working to add new features on a regular basis. This page will highlight some of the newest additions, including features added to domain profiles and the Unstoppable authentication service. Many of these features require little or no change to existing integrations.
 
-## Login with Verified Solana Wallet 
+## Login with Verified Solana Wallet
 
 Users who have added a verified Solana address to their **ud.me** profile now automatically see the option to sign with the **Phantom** wallet to confirm ownership of their domain and login.
 
-Applications can confirm that a user authenticated with a Solana address using the [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) method of [UAuth](/login-with-unstoppable//libraries/uauth-js.md). 
+Applications can confirm that a user authenticated with a Solana address using the [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) method of [UAuth](/login-with-unstoppable/libraries/uauth-js.md). 
 
 ```javascript
 const authorization = await uauth.loginWithPopup();
