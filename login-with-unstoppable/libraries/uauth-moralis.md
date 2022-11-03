@@ -50,7 +50,7 @@ public get uauth(): UAuth
 
 ## UAuthConnectorOptions
 
-The configuration options object passed to the UAuthMoralisConnector [constructor](#constructor).
+The configuration options object passed to the UAuthMoralisConnector **constructor**.
 
 ```typescript
 interface UAuthConnectorOptions

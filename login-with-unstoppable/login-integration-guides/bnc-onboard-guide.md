@@ -74,7 +74,7 @@ const uauthOnboard = new UAuthBncOnboard({
 ```
 
 :::info
-Because pop-ups are a more integration friendly approach, the `@uauth/bnc-onboard` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in the `ConstructorOptions` passed to your new instance of `UAuthBNCOnboard` and [create a callback page](#shouldloginwithredirect).
+Because pop-ups are a more integration friendly approach, the `@uauth/bnc-onboard` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in the `ConstructorOptions` passed to your new instance of `UAuthBNCOnboard` and [create a callback page](/login-with-unstoppable/libraries/uauth-bnc-onboard.md#shouldloginwithredirect).
 :::
 
 ## Step 3: Configure the bnc-onboard Library

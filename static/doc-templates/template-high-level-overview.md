@@ -7,11 +7,11 @@ description: This page provides a high-level overview of [UD Product].
 
 [High-level overview that provides background information that developers must know before they can successfully learn more about or work with the product or feature]
 
-<figure>
+<!---<figure>
 
 ![graphics OR flow chart of the product or feature](/images/link-to/screenshot)
 
-<figcaption>[Relevant source file name]</figcaption>
+<figcaption>[Relevant source file name]</figcaption>--->
 
 ## Benefits
 

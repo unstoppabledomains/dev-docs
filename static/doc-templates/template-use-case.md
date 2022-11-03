@@ -13,9 +13,9 @@ This use case will show or explain how to [do something] with [UD product]. [Pro
 
 [embed a video, image, and/or code snippet that helps further explain the use case]
 
-![example image or sketch](/images/link-to/screenshot)
+<!---![example image or sketch](/images/link-to/screenshot)
 
-<figcaption>[Place for descriptive caption for the image or diagram]</figcaption>
+<figcaption>[Place for descriptive caption for the image or diagram]</figcaption>--->
 
 ```
 // example code snippet

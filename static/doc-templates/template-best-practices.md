@@ -11,11 +11,11 @@ Here are best practices to ensure the proper integration of [UD Product] into yo
 
 [Provide more explanation of the instruction and describe why it is considered a best practice, including how it improves the integration]
 
-<figure>
+<!---<figure>
 
 ![Best practice demo](/images/link-to/screenshot)
 
-<figcaption>[Best practice demo OR relevant source file name]</figcaption>
+<figcaption>[Best practice demo OR relevant source file name]</figcaption>--->
 
 ## [Best Practice Instruction]
 

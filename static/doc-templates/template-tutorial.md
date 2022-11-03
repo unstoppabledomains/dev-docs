@@ -9,11 +9,11 @@ This tutorial will show you how to [do something] with [UD product]. [Brief desc
 
 [Description of step]
 
-<figure>
+<!---<figure>
 
 ![Step action](/images/link-to/screenshot)
 
-<figcaption>[Step action OR relevant source file name]</figcaption>
+<figcaption>[Step action OR relevant source file name]</figcaption>--->
 
 ```
 // example code snippet
@@ -29,8 +29,8 @@ This tutorial will show you how to [do something] with [UD product]. [Brief desc
 You have successfully [done something] with [UD product]!
 :::
 
-<div class="custom-next-to">
+<!---<div class="custom-next-to">
 
 [Next to **Related Page or Heading**](/path-to/page.md#heading)
 
-</div>
+</div>--->

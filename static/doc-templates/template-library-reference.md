@@ -31,7 +31,7 @@ Type: [type]
 
 #### Methods
 
-##### [methodName]()
+//##### [methodName]()
 
 ```language
 [return type] [class].[method](
@@ -44,7 +44,7 @@ Type: [type]
 
 ## Functions
 
-### [functionName]()
+//### [functionName]()
 
 ```language
 [return type] [function](

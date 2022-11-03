@@ -75,7 +75,7 @@ const uauth = new UAuthConnector({
 ```
 
 :::info
-Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `UAuthConnectorOptions` and [create a callback page](#shouldloginwithredirect).
+Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `UAuthConnectorOptions` and [create a callback page](/login-with-unstoppable/libraries/uauth-web3-react.md#shouldloginwithredirect).
 :::
 
 ## Step 3: Login with Unstoppable

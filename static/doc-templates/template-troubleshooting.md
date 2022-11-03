@@ -12,8 +12,8 @@ Here are some of the problems you may frequently encounter when [doing things] w
 [Description of the error and explanation of common causes].
 To resolve this, [concrete steps the user can take to solve the problem].
 
-<div class="custom-next-to">
+<!---<div class="custom-next-to">
 
 [Next to **Related Page or Heading**](/path-to/page.md#heading)
 
-</div>
+</div>--->

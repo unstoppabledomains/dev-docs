@@ -17,11 +17,11 @@ description: This guide shows how to [do something] with [UD Product] using [Int
 
 [Description of step]
 
-<figure>
+<!---<figure>
 
 ![Step action](/images/link-to/screenshot)
 
-<figcaption>[Step action OR relevant source file name]</figcaption>
+<figcaption>[Step action OR relevant source file name]</figcaption>--->
 
 ```
 // example code snippet
