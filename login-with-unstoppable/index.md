@@ -48,6 +48,7 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .888
 - .dao
 - .x
+- .klever
 - .zil *
 
 :::warning

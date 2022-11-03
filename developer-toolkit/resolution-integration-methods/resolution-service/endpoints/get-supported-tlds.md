@@ -56,6 +56,7 @@ curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_
         "888",
         "wallet",
         "x",
+        "klever",
         "zil"
     ]
 }
