@@ -1,5 +1,5 @@
 ---
-title: Login Integration Pathways | Unstoppable Domains Developer Portal
+title: Getting Started with Login | Unstoppable Domains Developer Portal
 description: This page provides a step-by-step overview of the Login integration process. This feature works for Polygon and Ethereum domains.
 ---
 
@@ -11,12 +11,20 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 ## Step 1: Get Your Client Credentials
 
-To begin the integration process for Login with Unstoppable, you will need to obtain and configure your client credentials using the **My Clients** and **Client Configuration** pages. Please see the [**Login Client Configuration**](/login-with-unstoppable/login-integration-guides/login-client-configuration.md) guide for more details.
+* Go to the [Client Management Dashboard](https://dashboard.auth.unstoppabledomains.com).
+* Click the **Connect Wallet** and sign the transaction.
+* Click the **Create Client** button to add a new client.
 
-When you've customized your client and saved your changes, you will need the **Client Metadata** to configure your integration. This can be copied directly from the first section of the **Client Configuration** page.
+The dashboard will generate a unique **client ID** and open the configuration page for your new client. The **Client Metadata** is automatically populated with the `clientID` and default values for the `redirectURI` and `scope`. See [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md) for more details about the settings on this page.
 
 <figure>
-<figcaption>Example client metadata</figcaption>
+<video loop autoplay muted width="100%" src="/videos/connect-wallet-and-create-client.mp4"></video>
+<figcaption>Connect a wallet and create a new client</figcaption>
+</figure>
+
+Once you've created your client, you will need the **Client Metadata** to configure your UAuth application. This can be copied directly from the **Basic** section of the **Client Configuration** page.
+
+<figure>
 
 ```javascript
 {
@@ -26,9 +34,12 @@ When you've customized your client and saved your changes, you will need the **C
 }
 ```
 
+<figcaption>Example client metadata</figcaption>
 </figure>
 
-The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes. For information on the other scopes Login supports, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
+:::info
+The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes to this string. For information on the other scopes Login supports, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
+:::
 
 ## Step 2: Choose Your Integration Path
 
