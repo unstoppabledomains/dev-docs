@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Domain Transfer Eve
 # Get Domain Transfer Events
 
 ```bash
-https://resolve.unstoppabledomains.com/domains/<domain>/transfers/latest
+https://resolve.unstoppabledomains.com/domains/{domain}/transfers/latest
 ```
 
 This endpoint tracks the blocks and blockchains domain names are being transferred from one owner wallet address to another.
@@ -55,7 +55,7 @@ Here is an example request to query for the transfer events of the `brad.crypto`
 ```bash
 curl \
 --request GET "https://resolve.unstoppabledomains.com/domains/brad.crypto/transfers/latest" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

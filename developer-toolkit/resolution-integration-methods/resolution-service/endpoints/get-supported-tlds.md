@@ -49,13 +49,13 @@ curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_
 {
     "tlds": [
         "crypto",
-        "wallet",
-        "blockchain",
         "bitcoin",
-        "x",
-        "888",
-        "nft",
+        "blockchain",
         "dao",
+        "nft",
+        "888",
+        "wallet",
+        "x",
         "zil"
     ]
 }

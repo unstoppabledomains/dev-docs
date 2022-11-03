@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Metadata for a Doma
 # Get Metadata for a Domain
 
 ```bash
-https://resolve.unstoppabledomains.com/metadata/<domainOrToken>
+https://resolve.unstoppabledomains.com/metadata/{domainOrToken}
 ```
 
 This endpoint returns the ERC721 metadata information of a domain name in a single response.

@@ -29,28 +29,28 @@ Send a `GET` request with the authorization headers you have prepared and the do
 Sandbox Environment:
 
 ```bash
-https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_TO_CHECK }}
+https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/{DOMAIN_TO_CHECK}
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/{{ DOMAIN_TO_CHECK }}
+https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/{DOMAIN_TO_CHECK}
 ```
 
 :::info
 The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
-## Domain Name Availability Example
+## Example
 
 Here is an example request to check the availability of the `buyadomain.dao` domain before purchase:
 
 ### Request
 
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/buyadomain.dao' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/buyadomain.dao' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

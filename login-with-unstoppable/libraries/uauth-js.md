@@ -70,11 +70,11 @@ async user(options: UserOptions = {}): Promise<UserInfo>
 
 ### getVerifiedAccounts()
 
-Returns [VerifiedAddress](#verifiedaddress) array containing all verified accounts associated with an authorized domain, with optional symbol filtering, which allows a dapp to request only the verified accounts they are interested in.
+Returns [VerifiedAddress](#verifiedaddress) array containing all verified accounts associated with an authorized domain, with optional symbol filtering, which allows a DApp to request only the verified accounts they are interested in.
 
 ```typescript
 getVerifiedAccounts(
-  authorization: Authorization, 
+  authorization: Authorization,
   symbols: string[] = []
 ): VerifiedAddress[]
 ```
@@ -85,8 +85,8 @@ The UAuth service allows users to login with certain verified accounts associate
 
 ```typescript
 getAuthorizationAccount(
-    authorization: Authorization, 
-    type = 'sig', 
+    authorization: Authorization,
+    type = 'sig',
     version = 'v1'
 ): VerifiedAddress | undefined
 ```
@@ -251,11 +251,11 @@ interface UserInfo {
   wallet_type_hint: WalletType
   eip4361_message: string
   eip4361_signature: string
-            
+
 // Partial<EmailClaims>
   email: string
   email_verified: boolean
-            
+
 // Partial<AddressClaims>
   address: AddressClaim
 
@@ -278,7 +278,7 @@ interface UserInfo {
   zoneinfo: string
   locale: string
   updated_at: string
-            
+
 // Partial<HumanityCheckClaims> { sub: string }
   humanity_check_id: string
 }

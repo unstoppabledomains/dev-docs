@@ -58,13 +58,13 @@ Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, w
 Sandbox Environment:
 
 ```bash
-POST https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
+POST https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
 ```
 
 Production Environment:
 
 ```bash
-POST https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/security/fingerprintjs/keys
+POST https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
 ```
 
 :::info
@@ -108,7 +108,7 @@ Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.
 ```javascript
 // Get the visitor identifier when you need it.
 fpPromise
-  .then(fp => fp.get({linkedId: '{{ PARTNER_RESELLERID }}'}))
+  .then(fp => fp.get({linkedId: '{PARTNER_RESELLERID}'}))
   .then(result => console.log(result.visitorId));
 ```
 
@@ -124,7 +124,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 
   // Get the visitor identifier when you need it.
   fpPromise
-    .then(fp => fp.get({linkedId: '{{ PARTNER_RESELLERID }}'}))
+    .then(fp => fp.get({linkedId: '{PARTNER_RESELLERID}'}))
     .then(result => console.log(result.visitorId));
 </script>
 ```
@@ -180,7 +180,7 @@ You need to provide either the `ownerAddress` or `email` parameter in every orde
 
 <embed src="/snippets/_orders-endpoint-usage.md" />
 
-## Free Domain Minting Example
+## Example
 
 Here is an example request to mint a free domain with the following details:
 
@@ -196,8 +196,8 @@ Here is an example request to mint a free domain with the following details:
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders/' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/orders/' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "payment": {

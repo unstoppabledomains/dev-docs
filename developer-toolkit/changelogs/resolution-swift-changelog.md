@@ -5,7 +5,16 @@ editPage:
   disable: true
 ---
 
-# Resolution Swift Changelog
+# Resolution-Swift Changelog
+
+## 5.0.0
+
+- Ability to resolve `.zil` domains from Polygon and Ethereum networks
+- Reverse resolution support via `Resolution#reverse` and `Resolution#reverseTokenId` methods
+- Change default blockchain provider from Infura to Alchemy
+### Breaking changes
+- ZNS support moved under UNS nameserice
+- Remove separate ZNS config
 
 ## 4.0.0
 

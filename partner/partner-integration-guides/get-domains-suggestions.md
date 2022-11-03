@@ -32,7 +32,7 @@ The Partner API suggestions endpoints accepts the `search` and `tlds` fields as 
 | tlds | ARRAY[STRING] | NO | Specific TLDs the suggestions should be limited to |
 
 :::info
-If your request must include multiple `search` or `tlds`, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
+If your request must include multiple `search` or `tlds` fields, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
 :::
 
 ## Step 4: Use the Get Domains Suggestions Endpoint
@@ -46,13 +46,13 @@ Send a `GET` request with the authorization headers and query parameters you hav
 Sandbox Environment:
 
 ```bash
-https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
+https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions?search={KEYWORD}&tlds={TLD_TO_FILTER}
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
+https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions?search={KEYWORD}&tlds={TLD_TO_FILTER}
 ```
 
 ### Get Free Domains Suggestions
@@ -60,20 +60,20 @@ https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains
 Sandbox Environment:
 
 ```bash
-https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions/free?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
+https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions/free?search={KEYWORD}&tlds={TLD_TO_FILTER}
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions/free?search={{ KEYWORD }}&tlds={{ TLD_TO_FILTER }}
+https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions/free?search={KEYWORD}&tlds={TLD_TO_FILTER}
 ```
 
 :::info
 If the Partner isn't eligible to mint free domains, the [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint will return an error.
 :::
 
-## Get Domains Suggestions Example
+## Example
 
 Here is an example request to generate paid domain suggestions with the following parameters:
 
@@ -85,8 +85,8 @@ Here is an example request to generate paid domain suggestions with the followin
 ### Request
 
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

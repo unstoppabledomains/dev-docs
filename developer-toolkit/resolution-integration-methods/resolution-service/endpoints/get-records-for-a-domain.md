@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Records for a Domai
 # Get Records for a Domain
 
 ```bash
-https://resolve.unstoppabledomains.com/domains/<domain>
+https://resolve.unstoppabledomains.com/domains/{domain}
 ```
 
 This endpoint returns all the resolution records configured to a domain in a single response.
@@ -57,7 +57,7 @@ Here is an example request to query for the records and metadata of the `brad.cr
 ```bash
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/domains/brad.crypto' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

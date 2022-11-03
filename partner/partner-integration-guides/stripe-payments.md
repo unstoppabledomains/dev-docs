@@ -82,24 +82,24 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
 
 ```json
 {
-    "orderNumber": "{{ ORDER_NUMBER }}",
-    "total": "{{ TOTAL_ORDER_PRICE }}",
+    "orderNumber": "{ORDER_NUMBER}",
+    "total": "{TOTAL_ORDER_PRICE}",
     "payment": {
         "method": "stripe",
         "details": {
-          "clientSecret": "{{ STRIPE_CLIENT_SECRET }}",
-          "paymentIntentId": "{{ STRIPE_PAYMENT_INTENT_ID }}"
+          "clientSecret": "{STRIPE_CLIENT_SECRET}",
+          "paymentIntentId": "{STRIPE_PAYMENT_INTENT_ID}"
         }
     },
     "items": [
-      "{{ DOMAINS_TO_PURCHASE }}"
+      "{DOMAINS_TO_PURCHASE}"
     ]
 }
 ```
 
 The value of the `clientSecret` and `paymentIntentId` fields can be used with the Stripe [Payment Intents](https://stripe.com/docs/api/payment_intents) API to complete the payment.
 
-## Stripe Payment Example
+## Example
 
 Here is an example request to purchase a domain with the following details using the Stripe payment method:
 
@@ -113,8 +113,8 @@ Here is an example request to purchase a domain with the following details using
 ### Request
 
 ```bash
-curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{{ PARTNER_RESELLERID }}/orders' \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/orders' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "payment": {

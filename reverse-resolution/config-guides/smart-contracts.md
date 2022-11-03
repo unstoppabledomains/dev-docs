@@ -13,9 +13,9 @@ The [UNS Registry](/developer-toolkit/reference/smart-contracts/uns-smart-contra
 
 <figure>
 
-![Polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
+![polygon registry contract](/images/polygon-registry-contract.png)
 
-<figcaption>polygon testnet registry contract</figcaption>
+<figcaption>polygon registry contract</figcaption>
 </figure>
 
 ## Step 2: Open the “Write as Proxy” Tab for the Registry Contract
@@ -24,7 +24,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![Polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png '#width=50%')
+![Polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png)
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>

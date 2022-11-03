@@ -16,13 +16,13 @@ Follow the [Redirect URL Payments](redirect-url-payments.md) guide to prepare a 
 Sandbox Environment:
 
 ```bash
-https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
+https://ud-sandbox.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_NAME_TO_PURCHASE}
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}
+https://unstoppabledomains.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_NAME_TO_PURCHASE}
 ```
 
 ## Step 2: Prepare Query Parameters
@@ -98,13 +98,13 @@ After you have generated the order signature, add it to the payment URL and redi
 Sandbox Environment:
 
 ```bash
-https://ud-sandbox.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
+https://ud-sandbox.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_NAME_TO_PURCHASE}&timestamp={CURRENT_TIMESTAMP}&strictName={PARTNER_RESELLERID}&records={CRYPTO_RECORDS_TO_PREFILL}&signature={GENERATED_ORDER_SIGNATURE}
 ```
 
 Production Environment:
 
 ```bash
-https://unstoppabledomains.com/search?ref={{ UD_REFERRAL_CODE }}&searchTerm={{ DOMAIN_NAME_TO_PURCHASE }}&timestamp={{ CURRENT_TIMESTAMP }}&strictName={{ PARTNER_RESELLERID }}&records={{ CRYPTO_RECORDS_TO_PREFILL }}&signature={{ GENERATED_ORDER_SIGNATURE }}
+https://unstoppabledomains.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_NAME_TO_PURCHASE}&timestamp={CURRENT_TIMESTAMP}&strictName={PARTNER_RESELLERID}&records={CRYPTO_RECORDS_TO_PREFILL}&signature={GENERATED_ORDER_SIGNATURE}
 ```
 
 :::info
@@ -113,13 +113,13 @@ The `timestamp` parameter value should be the same as the one signed in the orde
 
 ## Step 5: Test the Integration
 
-You can use Unstoppable Domains [sandbox environment](/partner/set-up-sandbox-for-testing.md) to test the redirect URL payments integration.
+You can use Unstoppable Domains [Sandbox environment](/partner/set-up-sandbox-for-testing.md) to test the redirect URL payments integration.
 
-1. Navigate to the sandbox environment with the paid domains flow query parameters appended to the URL.
+1. Navigate to the Sandbox environment with the paid domains flow query parameters appended to the URL.
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
 3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto records integration is working successfully.
 
-## Redirect URL Payments With Records Example
+## Example
 
 Here is an example payment URL with the following parameters:
 

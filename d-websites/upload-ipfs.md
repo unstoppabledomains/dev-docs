@@ -83,7 +83,7 @@ In order to use it, you need to add one step to `main.yml`:
 
 There will be a build artifact on a runner after [steps](https://dapps-delivery-guide.readthedocs.io/en/latest/delivery/github-actions.html#step-1-create-pipeline) (usually in directory build or dist). You need to pass the directory as a path parameter.
 
-This step will have hash output — it will be needed later to [add the IPFS hash to your domain](connect-ipfs.md). Token **{{ steps.upload.outputs.hash }}** can be used in next steps where _upload_ is the id of current step.
+This step will have hash output — it will be needed later to [add the IPFS hash to your domain](connect-ipfs.md). Token **{steps.upload.outputs.hash}** can be used in next steps where _upload_ is the id of current step.
 
 ### IPFS Upload to Pinata via GitHub Action
 
@@ -97,9 +97,9 @@ In order to use it, you need to add one step to `main.yml`:
   with:
     path: ./build
     service: pinata
-    pinataKey: {{ secrets.PINATA_KEY }}
-    pinataSecret: {{ secrets.PINATA_SECRET }}
-    pinataPinName: {{ PIN_NAME }}
+    pinataKey: {PINATA_KEY}
+    pinataSecret: {PINATA_SECRET}
+    pinataPinName: {PIN_NAME}
 ```
 
 As in the previous example, you will need to save the hash output to [add the IPFS hash to your domain](connect-ipfs.md).

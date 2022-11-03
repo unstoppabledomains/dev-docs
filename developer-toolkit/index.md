@@ -29,7 +29,7 @@ For developers who want more direct, low-level control over domain resolution, s
 
 ## Resolve Using Matic.js SDK
 
-For developers interacting with the Matic network using the [Matic.js SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see the [Resolve Using Matic.js SDK](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs.md) guide.
+For developers developing on Polygon using the [Matic.js SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see the [Resolve Using Matic.js SDK](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs.md) guide.
 
 <embed src="/snippets/_discord.md" />
 

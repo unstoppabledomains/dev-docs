@@ -17,11 +17,17 @@ Partner API errors are in JSON format.
 }
 ```
 
-## GET Domain name
+## GET Domain Name Availability
 
-| Error Code                  | Status Code | Explanation               |
-| --------------------------- | - | ----------------------------------- |
+| Error Code                  | Status Code | Explanation            |
+| --------------------------- | - | -------------------------------- |
 | DOMAIN\_NAME\_INVALID | 400 | The provided domain name is invalid. |
+
+## GET Multiple Domain Name Availability
+
+| Error Code                  | Status Code | Explanation            |
+| --------------------------- | - | -------------------------------- |
+| DOMAIN\_NAME\_NOT\_PROVIDED | 400 | The request does not contain any domain name to search. |
 
 ## GET Domains Suggestions
 
@@ -29,14 +35,21 @@ Partner API errors are in JSON format.
 | ----------------------------- | - | --------------------------------------- |
 | INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid. |
 
-## GET **Domains Suggestions Free**
+## GET Domains Suggestions Free
 
-| Error Code                    | Status Code | Explanation                                                    |
-| ----------------------------- | - | ------------------------------------------------------------------------ |
-| INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid.                                  |
+| Error Code                    | Status Code | Explanation                                                |
+| ----------------------------- | - | -------------------------------------------------------------------- |
+| INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid.                       |
 | NOT\_SUPPORTED          | 400 | The partner does not provide free domains (for free domain suggestions). |
 
-## POST **Orders**
+## POST Reserve Free Domain Name
+
+| Error Code                    | Status Code | Explanation                                                |
+| ----------------------------- | - | -------------------------------------------------------------------- |
+| DOMAIN\_NAME\_INVALID | 400 | The provided domain name is invalid. |
+| DOMAIN\_LOCK\_NOT\_AVAILABLE  | 400 | Requested domain cannot be reserved. The domain is not available for free or has been minted. |
+
+## POST Buy a Domain or Claim for Free
 
 | Error Code | Status Code | Explanation |
 | - | - | - |
@@ -53,11 +66,10 @@ Partner API errors are in JSON format.
 | MISSING\_FINGERPRINTJS\_VISITOR\_ID | 400 | The request does not contain a Fingerprint Visitor ID. |
 | SECURITY\_PARAMS\_NOT\_PROVIDED | 400 | The request does not contain any security parameters. |
 | UNSUPPORTED\_SECURITY\_TYPE | 400 | Requested security type is currently not supported. |
-| DOMAIN\_LOCK\_NOT\_AVAILABLE | 400 | Requested domain cannot be reserved. The domain is not available for free or has been minted. |
 
-## GET **Order Number**
+## GET Order Status
 
-| Error Code              | Status Code | Explanation         |
+| Error Code              | Status Code | Explanation |
 | ----------------------- | - | ------------------ |
 | ORDER\_NOT\_FOUND | 404 | Order is not found. |
 

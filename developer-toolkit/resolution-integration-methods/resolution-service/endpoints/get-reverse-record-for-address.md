@@ -6,7 +6,7 @@ description: This page covers the documentation for the `Get Reverse Record for 
 # Get Reverse Record for an Address
 
 ```bash
-https://resolve.unstoppabledomains.com/reverse/<walletAddress>
+https://resolve.unstoppabledomains.com/reverse/{walletAddress}
 ```
 
 This endpoint will return the reverse record of the wallet address and all the domain name records and domain metadata in a single response.
@@ -57,7 +57,7 @@ Here is an example request to query for the reverse record for the `"0x3EAA67461
 ```bash
 curl \
 --request GET "https://resolve.unstoppabledomains.com/reverse/0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19" \
---header 'Authorization: Bearer {{ SECRET_API_TOKEN }}'
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

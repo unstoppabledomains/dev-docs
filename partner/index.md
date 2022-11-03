@@ -20,7 +20,7 @@ You must create an Unstoppable Domains [Sandbox](https://www.ud-sandbox.com/part
 <figcaption>Login or sign-up options for new partners</figcaption>
 </figure>
 
-## Step 2: Submit Approval For API Key
+## Step 2: Submit Approval for API Key
 
 After logging in, you will have the option to submit a partner application. Please complete the required information and submit the application. The review process takes up to five business days but is usually sooner.
 

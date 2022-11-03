@@ -15,7 +15,7 @@ You can configure your application to edit domain metadata manually with a direc
 
 Popular open-source crypto wallet, [MyEtherWallet](https://www.myetherwallet.com/), has implemented domain management and can also be used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/main/src/dapps/unstoppable-domains-dapp).
 
-You can find additional working integrations on UD's Applications List, filtered by the [Domain Management feature](https://unstoppabledomains.com/apps?filters=7).
+You can find additional working integrations on Unstoppable Domains Applications List, filtered by the [Domain Management feature](https://unstoppabledomains.com/apps?filters=7).
 
 ## How do I get started?
 

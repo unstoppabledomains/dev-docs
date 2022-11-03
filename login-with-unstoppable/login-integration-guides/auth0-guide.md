@@ -38,7 +38,7 @@ Make sure that you copy the `client_secret` from the client metadata on the **Ba
 Next you will need to add and configure the social connection. This will require the `client_id` and `client_secret` from your login client metadata.
 
 1. Find the [Unstoppable Domains social connection](https://marketplace.auth0.com/integrations/unstoppable-domains) in the Auth0 Marketplace
-2. Click **Add Integration** 
+2. Click **Add Integration**
 3. Read the necessary access requirements and click **Continue**.
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
@@ -59,7 +59,7 @@ Adding a custom claim requires a few one-time steps in your Auth0 tenant. The pr
 2. Click the **Flows** menu item
 3. Click **Login** to define a new login flow
 4. Click the “+” icon to the right of **Add Action**
-5. Use the code editor to copy/paste the example code. 
+5. Use the code editor to copy/paste the example code.
 
 <figure>
 

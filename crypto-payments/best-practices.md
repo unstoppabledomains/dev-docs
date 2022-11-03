@@ -22,7 +22,7 @@ Always display the resolved crypto address near the domain name for additional s
 <figcaption>preview of resolved address near domain name</figcaption>
 </figure>
 
-## Don't Overwrite the Input Field With Resolved Addresses
+## Don’t Overwrite the Input Field With Resolved Addresses
 
 For the best user experience of your application, don't overwrite the domain input field with cryptocurrency addresses after resolving the domain. Doing this allows them to quickly fix typos if they make any without typing the domain name again because an address has replaced it.
 
@@ -32,11 +32,7 @@ When you don't find a currency address record for a domain, please do not make a
 
 ## Handle Errors According to Their Type
 
-When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently.
-
-:::info
-Please see the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) docs for language-specific error handling guides and library error codes you might encounter during integration.
-:::
+When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) docs for language-specific error handling guides and library error codes you might encounter during integration.
 
 ## Validate the Addresses Resolved From Domains
 

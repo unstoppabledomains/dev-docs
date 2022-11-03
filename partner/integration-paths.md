@@ -1,6 +1,6 @@
 ---
 title: Partner API Integration Paths | Unstoppable Domains Developer Portal
-description: This page reviews the integration guides for UD's Partner API feature. This feature works for Polygon domains.
+description: This page reviews the integration guides for Unstoppable Domains Partner API feature. This feature works for Polygon domains.
 ---
 
 # Partner API Integration Paths
@@ -17,12 +17,13 @@ After [setting up access to the Partner API](index.md), you must obtain your `re
 
 ## Step 2: Add a Domain Search Functionality
 
-Before you integrate free or paid domain minting (via Stripe or Redirect URLs) payment flows, you must implement a domain search functionality into your application. Unstoppable Domains provides a set of endpoints to provide domain suggestions, check the availability of a domain name, and reserve free and available domain names.
+Before you integrate free or paid domain minting (via Stripe or Redirect URLs) payment flows, you must implement a domain search functionality into your application. Unstoppable Domains provides a set of endpoints to provide domain suggestions, check the availability of domain names, and reserve free domain names.
 
 | Endpoint | Description | Integration Guides |
 | - | - | - |
 | Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](partner-integration-guides/get-domains-suggestions.md) |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
+| Multiple Domain Name Availability | checks the availability of multiple domain names before purchase | [Multiple Domain Name Availability Guide](partner-integration-guides/multiple-domain-name-availability.md) |
 | Reserve Free Domain Name | reserves a free and available domain name for seven days | [Reserve Free Domain Name Guide](partner-integration-guides/reserve-free-domain-name.md) |
 
 ## Step 3: Choose Your Integration Path
@@ -37,7 +38,7 @@ There are several ways to integrate with Unstoppable's Partner API, detailed in 
 | Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure crypto records, does not require native paid domain flow  | [Redirect URL Payments With Auto-Configured Crypto Records Guide](partner-integration-guides/redirect-url-payments-with-records.md) |
 
 :::info
-Unstoppable Domains provides a [sandbox environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
+Unstoppable Domains provides a [Sandbox environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
 :::
 
 ## Considerations

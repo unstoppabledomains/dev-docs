@@ -38,6 +38,7 @@ Login with Unstoppable supports the following scopes which are detailed below:
 * [humanity_check](#humanity_check)
 * [profile](#profile)
 * [social](#social)
+* [badges](#badges)
 
 ## Optional Scopes
 
@@ -79,7 +80,7 @@ The Login with Unstoppable `wallet` scope is best used for retrieving metadata a
 
 The Login with Unstoppable `email` scope can be used to retrieve the users's `domain.tld@ud.me` [Unstoppable Email](https://support.unstoppabledomains.com/support/solutions/articles/48001218107-unstoppable-email) address, which provides Unstoppable Domain owners with a proxy email service that doesn't share their private address.
 
-Unstoppable email is disabled for domains by default. If a user has not enabled this feature but consents to the `email` scope, a unique, dApp-specific email address is generated and authorized for their domain. This unique email address is then returned in the `email` claim.
+Unstoppable email is disabled for domains by default. If a user has not enabled this feature but consents to the `email` scope, a unique, DApp-specific email address is generated and authorized for their domain. This unique email address is then returned in the `email` claim.
 
 ## humanity_check
 `optional: true`
@@ -116,7 +117,7 @@ See [Humanity Check for Login](/login-with-unstoppable/humanity-check.md) for mo
 ## profile
 `optional: true`
 
-The Login with Unstoppable `profile` scope is used to retrieve profile metadata the user has associated with their domain. It returns the following claims.
+The Login with Unstoppable `profile` scope is used to retrieve profile metadata the user has associated with their domain. It returns the following claims:
 
 * `name` - Display name
 * `picture` - Cover photo URI
@@ -141,3 +142,24 @@ Individual social scopes may also be used separately to require specific social 
 :::info note
 You should only request either `social`, `social:optional`, or a combination of individual social scopes. Requesting any combination of those three will throw an error.
 :::
+
+## badges
+`optional: true`
+
+The Login with Unstoppable `badges` scope is used to retrieve a list of badges associated with a user's domain profile. It returns the following claim:
+
+<figure>
+
+```json
+"badges": [
+  {
+    "code": "NFTDomainHolder",
+    "description": "Holds Unstoppable Domains NFT domain",
+    "logo": "http://storage/googleapis.com/unstoppable-client-assets/images/badges/ud-logo.svg",
+    "name": "NFT Domain",
+  }
+],
+```
+
+<figcaption>Example <code>badges</code> claim</figcaption>
+</figure>

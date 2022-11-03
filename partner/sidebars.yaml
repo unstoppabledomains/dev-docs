@@ -32,6 +32,8 @@ pages:
             label: Get Domains Suggestions Guide
           - page: partner-integration-guides/domain-name-availability.md
             label: Domain Name Availability Guide
+          - page: partner-integration-guides/multiple-domain-name-availability.md
+            label: Multiple Domain Name Availability Guide
           - page: partner-integration-guides/reserve-free-domain-name.md
             label: Reserve Free Domain Name Guide
     separatorLine: true

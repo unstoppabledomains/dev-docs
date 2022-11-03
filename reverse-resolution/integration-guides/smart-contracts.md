@@ -13,9 +13,9 @@ The [UNS Registry](/developer-toolkit/reference/smart-contracts/uns-smart-contra
 
 <figure>
 
-![Polygon testnet registry contract](/images/polygon-testnet-registry-contract.png)
+![polygon registry contract](/images/polygon-registry-contract.png)
 
-<figcaption>polygon testnet registry contract</figcaption>
+<figcaption>polygon registry contract</figcaption>
 </figure>
 
 ## Step 2: Open the “Read as Proxy” Tab for the Registry Contract
@@ -24,9 +24,9 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![Polygonscan write as proxy tab](/images/read-as-proxy.png)
+![polygonscan read as proxy tab](/images/polygonscan-read-as-proxy.png)
 
-<figcaption>polygonscan write as proxy tab</figcaption>
+<figcaption>polygonscan read as proxy tab</figcaption>
 </figure>
 
 ## Step 3: Retrieve the Reverse Record
@@ -35,7 +35,7 @@ The UNS contract has a `reverseOf()` method that takes in a wallet address and r
 
 <figure>
 
-![Polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
+![polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
 
 <figcaption>polygonscan reverseOf method</figcaption>
 </figure>
@@ -44,7 +44,7 @@ Add the wallet address you want to resolve in the `addr` field of the `reverseOf
 
 <figure>
 
-![Polygonscan reverseOf response](/images/reverse-of-abi-response.png)
+![polygonscan reverseOf response](/images/reverse-of-abi-response.png)
 
 <figcaption>polygonscan reverseOf response</figcaption>
 </figure>
@@ -68,19 +68,16 @@ The metadata endpoint returns a JSON response in the following format:
 ```javascript
 {
   "name": string,
-  "external_link": string,
-  "image_url": string,
-  "image_data": string,
-  "properties": object,
-  "attributes": [
-    string
-  ],
-  "background_color": string,
-  "animation_url": string,
-  "youtube_url": string,
   "description": string,
+  "properties": object,
+  "external_url": string,
   "image": string,
-  "external_url": string
+  "image_url": string,
+  "attributes": [
+    object
+  ],
+  "image_data": string,
+  "background_color": string
 }
 ```
 
@@ -95,9 +92,9 @@ You can also integrate Reverse Resolution into your application using libraries 
 An example in JavaScript of integrating Reverse Resolution (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
-const proxyReaderAddress = "0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E";
+const proxyReaderAddress = "0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680";
 
-// partial ABI, just for the reverseOf function.
+// partial ABI, just for the reverseOf method
 const proxyReaderAbi = [
   "function reverseOf(address addr) external view returns (uint256)",
 ];
@@ -110,6 +107,7 @@ const proxyReaderContract = new ethers.Contract(
 
 const address = "0x88bc9b6c56743a38223335fac05825d9355e9f83";
 
+// call the reverseOf method
 const reverseResolutionTokenId = await proxyReaderContract.reverseOf(address);
 fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
   .then(response => response.json())
