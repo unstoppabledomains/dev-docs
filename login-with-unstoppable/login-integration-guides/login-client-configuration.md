@@ -12,7 +12,31 @@ This page explains the settings currently available for configuring a Login with
 You must **Confirm Changes** made to your client configuration before they will take effect. For enhanced security, certain actions may require a wallet signature. This does not require any ETH in your wallet. You will only need to sign transactions to confirm ownership of your wallet address.
 :::
 
-## Basic Configuration
+## Branding
+
+The **Branding Configuration** page allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
+
+<figure>
+
+![Client Configuration UI, Cosmetic Config section](/images/login-client-config-branding.png '#width=50%')
+
+<figcaption>Client Branding Configuration</figcaption>
+</figure>
+
+The following table describes the fields for the cosmetic configuration UI section.
+
+| Cosmetic Config Field | Description                                                                                                                 |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Client Name           | The client name as presented to the user; display name of the **Client URI** hyperlink.                                     |
+| Client URI            | The default value of the hyperlink is the client redirect URI (from **Client Metadata**) unless this field is complete.     |
+| Logo URI              | If provided, the client will retrieve and display an image from this location directly above the **Client Name**.           |
+| Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
+| Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
+
+
+## Login
+
+The **Login** configuration page contains settings and metadata specific to Login with Unstoppable integrations.
 
 ### Client Metadata
 
@@ -59,27 +83,6 @@ The Redirect URIs follow three rules:
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 :::
 
-## Branding Configuration
-
-The **Branding Configuration** section allows developers to customize the Login With Unstoppable UI to more closely match their own application's user experience.
-
-<figure>
-
-![Client Configuration UI, Cosmetic Config section](/images/login-client-config-branding.png '#width=50%')
-
-<figcaption>Client Branding Configuration</figcaption>
-</figure>
-
-The following table describes the fields for the cosmetic configuration UI section.
-
-| Cosmetic Config Field | Description                                                                                                                 |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Client Name           | The client name as presented to the user; display name of the **Client URI** hyperlink.                                     |
-| Client URI            | The default value of the hyperlink is the client redirect URI (from **Client Metadata**) unless this field is complete.     |
-| Logo URI              | If provided, the client will retrieve and display an image from this location directly above the **Client Name**.           |
-| Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
-| Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
-
 ## Advanced Configuration
 
 The **Advanced Configuration** page includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.
@@ -92,10 +95,10 @@ The advanced configuration settings are unnecessary for many configurations and 
 
 ![Login Client Advanced Configuration](/images/login-client-advanced-config.png '#width=50%')
 
-<figcaption>Advanced Configuration</figcaption>
+<figcaption>Advanced</figcaption>
 </figure>
 
-The following section describes the fields for the advanced configuration UI section.
+The following section describes the fields for the **Advanced** configuration page.
 
 ### Allowed CORS Origins
 

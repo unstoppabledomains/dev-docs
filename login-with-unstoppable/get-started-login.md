@@ -22,7 +22,7 @@ The dashboard will generate a unique **client ID** and open the configuration pa
 <figcaption>Connect a wallet and create a new client</figcaption>
 </figure>
 
-Once you've created your client, you will need the **Client Metadata** to configure your UAuth application. This can be copied directly from the **Basic** section of the **Client Configuration** page.
+Once you've created your client, you will need the **Client Metadata** to configure your UAuth application. This can be copied directly from the **Login** page of your **Client Configuration**.
 
 <figure>
 

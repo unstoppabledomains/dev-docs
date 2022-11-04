@@ -26,11 +26,11 @@ Before using the Unstoppable Domains social connection, you’ll need an [Auth0]
 In addition to the basic configuraton outlined in [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md), some configuration specific to Auth0 is required.
 
 1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#redirect-uris) to `https://{{ TENANT_ID}} .{{ REGION }}.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
-2. Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#token-endpoint-authentication-method) in the **Advanced** configuration tab to **Client Secret Post**.
+2. Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#token-endpoint-authentication-method) in the **Advanced** configuration page to **Client Secret Post**.
 3. Click **Confirm Changes**.
 
 :::warning
-Make sure that you copy the `client_secret` from the client metadata on the **Basic** tab of the client dashboard. You won't be able to view it again without clicking **Rotate Secret** to generate a new one.
+Make sure that you copy the `client_secret` from the client metadata on the **Login** page of your client configuration. You won't be able to view it again without clicking **Rotate Secret** to generate a new one.
 :::
 
 ## Step 3: Add the UD Social Connection
