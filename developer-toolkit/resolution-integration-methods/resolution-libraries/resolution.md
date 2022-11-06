@@ -5,7 +5,7 @@ description: This page details basic configuration and usage of the resolution l
 
 # Resolution
 
-This page details basic installation, configuration, and usage of the JavaScript [Resolution Library](https://github.com/unstoppabledomains/resolution).
+This page details basic installation, configuration, and usage of the [JavaScript Resolution Library](https://github.com/unstoppabledomains/resolution).
 
 ## Installation
 

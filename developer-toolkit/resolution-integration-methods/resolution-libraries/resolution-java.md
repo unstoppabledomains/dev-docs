@@ -5,7 +5,7 @@ description: This page details basic configuration and usage of the resolution-j
 
 # Resolution-Java
 
-This page details basic installation, configuration, and usage of the [resolution-java library](https://github.com/unstoppabledomains/resolution-java).
+This page details basic installation, configuration, and usage of the [Java Resolution Library](https://github.com/unstoppabledomains/resolution-java).
 
 ## Installation
 

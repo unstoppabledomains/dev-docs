@@ -7,7 +7,7 @@ description: This page reviews the Resolution CLI option for resolving a domain.
 
 The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with Web3 domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md), IPFS hashes for [decentralized websites](/d-websites/index.md), DNS records and other [records types](/developer-toolkit/reference/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.
 
-For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
+For more information on resolving domains using the Resolution CLI application, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
 ## Supported Domains for Resolution CLI
 

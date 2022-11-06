@@ -5,7 +5,7 @@ description: This page details basic configuration and usage of the resolution-g
 
 # Resolution-Go
 
-This page details basic installation, configuration, and usage of the [resolution-go library](https://github.com/unstoppabledomains/resolution-go).
+This page details basic installation, configuration, and usage of the [Golang Resolution Library](https://github.com/unstoppabledomains/resolution-go).
 
 ## Installation
 

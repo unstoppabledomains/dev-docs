@@ -7,7 +7,7 @@ description: This page provides a high-level overview of the Resolution Service 
 
 The Resolution Service provides an API for getting domain data and metadata regardless of the blockchain in which the domain is stored. The service caches blockchain events in a database for easy retrieval without accessing any blockchain APIs.
 
-With the Resolution Service API, you can quickly build applications directly communicating with the blockchain to get UD domain data with a single API request.
+With the Resolution Service API, you can quickly build applications directly communicating with the blockchain to get UD domain data with a single API request. For example, the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) was built using the Resolution Service API.
 
 ## Supported Domains Endings
 
@@ -63,6 +63,6 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 
 ## Self-hosting the Resolution Service
 
-The Resolution Service can be installed, configured, and self-hosted locally and in the cloud. Unstoppable Domains provides the Resolution Service as a docker image so it can be launched on various platforms. For running a self-hosted version of the Resolution Service, please see the [installation guide](https://github.com/unstoppabledomains/resolution-service#installation).
+The Resolution Service can be installed, configured, and self-hosted locally and in the cloud. Unstoppable Domains provides the Resolution Service as a docker image so it can be launched on various platforms. Please see the [Resolution Service installation guide](https://github.com/unstoppabledomains/resolution-service#installation) for steps on running a self-hosted version of the service.
 
 <embed src="/snippets/_discord.md" />

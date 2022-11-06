@@ -5,10 +5,10 @@ description: This page covers the Unstoppable domain resolution plugin in the ma
 
 # Resolve Using Matic.js SDK
 
-The [Unstoppable Domains resolution plugin](https://github.com/unstoppabledomains/maticjs-resolution) is natively integrated into the official [Matic SDK](https://github.com/maticnetwork/matic.js) `utils` namespace, so you can access all Unstoppable's library functions using the same syntax as `web3.js` and `ethers.js`. This allows developers building Polygon-based applications to easily integrate Unstoppable domain resolution functionalities.
+The [Unstoppable Domains Resolution Plugin](https://github.com/unstoppabledomains/maticjs-resolution) is natively integrated into the official [Matic SDK](https://github.com/maticnetwork/matic.js) `utils` namespace, so you can access all Unstoppable's library functions using the same syntax as `web3.js` and `ethers.js`. This allows developers building Polygon-based applications to easily integrate Unstoppable Domains resolution functionalities.
 
 :::info
-The resolution plugin has the same API as the [Resolution Library](https://github.com/unstoppabledomains/resolution), so all the functions that are in the [JavaScript library](https://github.com/unstoppabledomains/resolution/blob/master/README.md#using-resolution) are available via the resolution plugin and Matic SDK.
+The Resolution Plugin has the same API as the [JavaScript Resolution Library](https://github.com/unstoppabledomains/resolution), so all the functions that are in the library are available in the Resolution Plugin and Matic SDK.
 :::
 
 ## Prerequisites

@@ -5,7 +5,7 @@ description: This page details basic configuration and usage of the resolution-s
 
 # Resolution-Swift
 
-This page details basic installation, configuration, and usage of the [resolution-swift library](https://github.com/unstoppabledomains/resolution-swift).
+This page details basic installation, configuration, and usage of the [Swift Resolution Library](https://github.com/unstoppabledomains/resolution-swift).
 
 ## Installation
 

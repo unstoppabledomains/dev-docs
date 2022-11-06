@@ -5,9 +5,9 @@ description: This page provides a high-level overview of the Reverse Resolution 
 
 # Reverse Resolution Overview
 
-Reverse Resolution is a feature that enables applications that integrate with Unstoppable Domains to show domain names where they would typically only show addresses.
+Reverse Resolution is a feature that enables applications that integrate with Unstoppable Domains to show domain names where they would typically only show addresses. As a domain owner, you can now see your domain names instead of wallet addresses in applications integrating Reverse Resolution.
 
-Unlike standard domain resolution, where a domain is provided to an application and returns a wallet address, Reverse Resolution allows applications to take a wallet address and return the domain name linked to them. As a domain owner, you can now see your domain names instead of wallet addresses in any integrated Reverse Resolution application.
+Unlike standard domain resolution, where a domain is provided to an application and returns a wallet address, Reverse Resolution allows applications to take a wallet address and return the domain name linked to them.
 
 <figure>
 
@@ -16,7 +16,9 @@ Unlike standard domain resolution, where a domain is provided to an application 
 <figcaption>Reverse Resolution demo</figcaption>
 </figure>
 
-This works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected.
+## How Reverse Resolution Works
+
+Reverse Resolution works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected. Please see the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) to understand how Reverse Resolution works.
 
 ## Choose a Configuration Path
 
