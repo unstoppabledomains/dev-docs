@@ -76,7 +76,6 @@ The metadata endpoint returns a JSON response in the following format:
   "attributes": [
     object
   ],
-  "image_data": string,
   "background_color": string
 }
 ```
