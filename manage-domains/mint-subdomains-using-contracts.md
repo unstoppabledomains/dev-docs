@@ -58,7 +58,7 @@ Choose the `mintWithRecords()` method from the `Write as Proxy` tab section. The
 <figcaption>polygonscan mintWithRecords method</figcaption>
 </figure>
 
-Next, add your wallet address that owns the base domain to the `to` field and the subdomain you want to mint to the `labels` field. For example, if you own the `example.crypto` domain with your wallet address as `0xC37d3c4326ab0E1D2b9D8b916bBdf5715f780fcF` and you want to mint `blog.example.crypto`, you will fill the parameters like so:
+Next, add your wallet address that owns the root domain to the `to` field and the subdomain you want to mint to the `labels` field. For example, if you own the `example.crypto` domain with your wallet address as `0xC37d3c4326ab0E1D2b9D8b916bBdf5715f780fcF` and you want to mint `blog.example.crypto`, you will fill the parameters like so:
 
 <figure>
 
@@ -78,20 +78,11 @@ Then, add the record(s) you want pre-filled in the subdomain after minting to th
 
 ## Step 5: Execute the Contract
 
-Click the `Write` button to sign the transaction and execute the contract:
+Click the `Write` button to sign the transaction and execute the contract. After signing the transaction, you can view its details on the blockchain explorer, like so:
 
 <figure>
 
-![metamask sign transaction](/images/metamask-sign-subdomain-minting-transaction.png '#width=50%')
-
-<figcaption>metamask sign transaction</figcaption>
-</figure>
-
-After signing the transaction, you can view its details on the blockchain explorer, like so:
-
-<figure>
-
-![polygonscan transaction details](/images/polygonscan-subdomain-minting-transaction-details.png '#width=50%')
+![polygonscan transaction details](/images/polygonscan-subdomain-minting-transaction-details.png)
 
 <figcaption>polygonscan transaction details</figcaption>
 </figure>
