@@ -11,7 +11,7 @@ There is no limit on the number of subdomains that can be minted to a domain.
 
 ### Will apps have to update in order to make subdomains work?
 
-No, subdomains should be supported by all application automatically. Only subdomains minting requires custom support.
+Unstoppable Domains APIs and libraries will not need to be updated. However, apps may want to confirm their code will support the format for subdomains (e.g., "blog.example.crypto")
 
 ### Can subdomains be minted for Ethereum-based domains?
 
