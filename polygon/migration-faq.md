@@ -41,3 +41,7 @@ You’ll be responsible for covering the one-time ETH gas fee related to bridgin
 ### Will the information like my crypto addresses, websites and NFT avatar move to Polygon also?
 
 Yes the final stage of bridging includes automatic transfer of domain records from Ethereum to Polygon.
+
+### What happens when a subdomain is bridged?
+
+It will proceed just like a regular domain.

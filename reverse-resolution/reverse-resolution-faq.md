@@ -27,19 +27,23 @@ Our resolution libraries and APIs support Reverse Resolution. See our [Integrati
 
 ### Will apps have to update to make Reverse Resolution work?
 
-Yes, Reverse Resolution is a new feature for our domains with a new set of smart contracts. Applications will need to upgrade their resolution libraries to access the new reverse record functions we’ll include.
+Yes, Reverse Resolution is a new feature for our domains with a new set of smart contracts. Applications will need to upgrade their resolution libraries to access the new Reverse Resolution functions we’ll include.
 
-### Can I set reverse records for Ethereum-based domains?
+### Can I set Reverse Resolution for Ethereum-based domains?
 
 Yes, there is a separate Reverse Resolution contract on Ethereum for L1 domains.
 
-### Can I set reverse records for Zilliqa-based domains?
+### Can I set Reverse Resolution for Zilliqa-based domains?
 
-No, you cannot set reverse records for Zilliqa domains. Reverse resolution only supports Ethereum and Polygon domains.
+No, you cannot set Reverse Resolution for Zilliqa domains. Reverse resolution only supports Ethereum and Polygon domains.
 
-### Can I set reverse records for other address types like Bitcoin?
+### Can I set Reverse Resolution for other address types like Bitcoin?
 
-No, Reverse Resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for setting reverse records.
+No, Reverse Resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for configuring Reverse Resolution.
+
+### Can I set Reverse Resolution for subdomains?
+
+Yes, you can configure Reverse Resolution for subdomains, as there is no difference from a regular domain.
 
 ### What happens when a single wallet has a reverse record to both Unstoppable Domains and a third party?
 
