@@ -1,11 +1,11 @@
 ---
-title: Managing Domains Using Smart Contracts | UD Developer Portal
-description: This guide covers how to manage UD domain records using the Etherscan and Polygonscan user interfaces to write and execute contracts.
+title: Manage Domains Using Smart Contracts | UD Developer Portal
+description: This guide covers how to manage UD domain records using the Etherscan and Polygonscan user interfaces to write and execute proxy contracts.
 ---
 
-# Managing Domains Using Smart Contracts
+# Manage Domains Using Smart Contracts
 
-This guide covers how to manage UD domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
+This guide covers how to manage UD domain records using proxy contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 
 ## Step 1: Select a UNS Registry Smart Contract
 
@@ -114,5 +114,5 @@ After signing the transaction, you can view its details on the blockchain explor
 </figure>
 
 :::success Congratulations!
-You have successfully managed your Unstoppable Domain records using contracts. Happy hacking!
+You have successfully managed your Unstoppable Domain records using smart contracts. Happy hacking!
 :::
