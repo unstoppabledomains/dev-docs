@@ -26,10 +26,6 @@ You will be responsible for paying the one-time ETH gas fee for bridging. We wil
 
 Ethereum domains reside on L1 (mainnet), whereas Polygon domains reside on L2 (sidechain), with each having a different list of supported applications for browser/wallet resolution.
 
-### When will bridging from L2 to L1 be available?
-
-Early Q2.
-
 ### Can I move my domain back to Ethereum after moving it over to Polygon?
 
 When the L2 to L1 bridge becomes available in early Q2.
@@ -41,7 +37,3 @@ You’ll be responsible for covering the one-time ETH gas fee related to bridgin
 ### Will the information like my crypto addresses, websites and NFT avatar move to Polygon also?
 
 Yes the final stage of bridging includes automatic transfer of domain records from Ethereum to Polygon.
-
-### What happens when a subdomain is bridged?
-
-Nothing, it will remain intact and proceed just like a regular domain.
