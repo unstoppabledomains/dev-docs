@@ -74,25 +74,6 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 | Polygon mainnet | &mdash; | &mdash; |
 | Polygon testnet (Mumbai) | &mdash; | &mdash; |
 
-### TwitterValidationOperator
-
-`TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
-
-| Network                  | Contract address                                                                                                                |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Ethereum mainnet                  | [0x2F659766E3D08561CA3408FbAba7C0749ab2c402](https://etherscan.io/address/0x2F659766E3D08561CA3408FbAba7C0749ab2c402)           |
-| Ethereum testnet (Goerli)                  | [0x0000000000000000000000000000000000000000](https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000)   |
-| Polygon mainnet          | [0x0000000000000000000000000000000000000000](https://polygonscan.com/address/0x0000000000000000000000000000000000000000)        |
-| Polygon testnet (Mumbai) | [0x0000000000000000000000000000000000000000](https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000) |
-
-
-
-| Network | Legacy addresses                                                                                                              |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Ethereum mainnet | [0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855](https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855)         |
-
-**Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol)
-
 ### FreeMinter
 
 
@@ -255,16 +236,6 @@ The `IUNSRegistry` interface declares all the `UNSRegistry` events and methods (
 
 * [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
-### ERC677Receiver
-
-The `ERC677Receiver` interface declares an ERC-677 method for receiving smart contracts.
-
-**Source code:** [contracts/util/ERC677Receiver.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/utils/ERC677Receiver.sol)
-
-**Implemented by:**
-
-* [TwitterValidationOperator.sol](uns-smart-contracts.md#twittervalidationoperator)
-
 ## Utility contracts
 
 Utility contracts are generally used to share common functionality between other smart contracts. This list also includes some contracts that are used internally by the Unstoppable Domains team.
@@ -289,16 +260,6 @@ Utility contracts are generally used to share common functionality between other
 
 * [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
-### CapperRole
-
-`CapperRole` is an extension of Open Zeppelin's `AccessControlUpgradeable` that adds operations for adding and removing capper accounts.
-
-**Source code:** [contracts/roles/CapperRole.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/roles/CapperRole.sol)
-
-**Used by:**
-
-* [TwitterValidationOperator.sol](uns-smart-contracts.md#twittervalidationoperator)
-
 ### MinterRole
 
 `MinterRole` is an extension of Open Zeppelin's `AccessControlUpgradeable` that adds operations for adding and removing minting accounts.
@@ -308,16 +269,6 @@ Utility contracts are generally used to share common functionality between other
 **Used by:**
 
 * [MintingManager.sol](uns-smart-contracts.md#mintingmanager)
-
-### WhitelistedRole
-
-`WhitelistedRole` is an extension of Open Zeppelin's `AccessControlUpgradeable` that adds operations for adding and removing whitelisted accounts.
-
-**Source code:** [contracts/roles/WhitelistedRole.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/roles/WhitelistedRole.sol)
-
-**Used by:**
-
-* [TwitterValidationOperator.sol](uns-smart-contracts.md#twittervalidationoperator)
 
 ### MultiSend
 
