@@ -1,9 +1,9 @@
 ---
-title: Managing Domains Using Contracts | UD Developer Portal
+title: Managing Domains Using Smart Contracts | UD Developer Portal
 description: This guide covers how to manage UD domain records using the Etherscan and Polygonscan user interfaces to write and execute contracts.
 ---
 
-# Managing Domains Using Contracts
+# Managing Domains Using Smart Contracts
 
 This guide covers how to manage UD domain records using contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute contracts.
 
@@ -51,14 +51,21 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 Choose the `set` or `setMany` method from the `Write as Proxy` tab section. The `set` method allows you to update a single record, while the `setMany` method allows you to update multiple records simultaneously.
 
-<figure>
+<figure class="half-inline-block">
 
-![polygonscan setMany method](/images/polygonscan-setmany-method.png '#width=50%')
+![polygonscan set method](/images/polygonscan-set-method.png)
+
+<figcaption>polygonscan set method</figcaption>
+</figure>
+
+<figure class="half-inline-block">
+
+![polygonscan setMany method](/images/polygonscan-setmany-method.png)
 
 <figcaption>polygonscan setMany method</figcaption>
 </figure>
 
-Next, add the records you want to manage to the `keys` and `values` fields as a single value for the `set` method or array of values for the `setMany` method.
+Next, add the record(s) you want to manage to the `key` and `value` fields as a single value for the `set` method or array of values for the `setMany` method.
 
 <figure>
 
