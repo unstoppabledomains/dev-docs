@@ -37,13 +37,13 @@ Yes, there is a separate Reverse Resolution contract on Ethereum for L1 domains.
 
 No, you cannot set Reverse Resolution for Zilliqa domains. Reverse resolution only supports Ethereum and Polygon domains.
 
-### Can I set Reverse Resolution for other address types like Bitcoin?
-
-No, Reverse Resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for configuring Reverse Resolution.
-
 ### Can I set Reverse Resolution for subdomains?
 
 Yes, you can configure Reverse Resolution for subdomains, as there is no difference from a regular domain.
+
+### Can I set Reverse Resolution for other address types like Bitcoin?
+
+No, Reverse Resolution only supports Ethereum addresses because the Ethereum blockchain only supports the algorithms to verify the signature of Ethereum transactions. We would have to implement signature verification of other blockchains into our smart contracts to support them, significantly increasing gas costs for configuring Reverse Resolution.
 
 ### What happens when a single wallet has a reverse record to both Unstoppable Domains and a third party?
 

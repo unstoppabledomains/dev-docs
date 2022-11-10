@@ -22,3 +22,6 @@ pages:
   - page: delegating-domain-management.md
     label: Delegate Domain Management
     separatorLine: true
+  - page: domain-management-faq.md
+    label: Frequently Asked Questions
+    separatorLine: true

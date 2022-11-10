@@ -44,4 +44,4 @@ Yes the final stage of bridging includes automatic transfer of domain records fr
 
 ### What happens when a subdomain is bridged?
 
-It will proceed just like a regular domain.
+Nothing, it will remain intact and proceed just like a regular domain.
