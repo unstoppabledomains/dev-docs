@@ -83,6 +83,46 @@ The Redirect URIs follow three rules:
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 :::
 
+## Payment
+
+The **Payment** page allows Login partners to enable revenue share and receive a percentage of paid domains sold in the integrated login flow. This requires no additional code from existing login integrations. To enable this feature:
+
+1. Enable **Receive revenue from selling domains**
+
+<figure>
+
+![Enable Receive revenue from selling domains](/images/login-client-enable-rev-share.png '#width=65%')
+
+<figcaption>Enable <strong>Receive revenue from selling domains</strong></figcaption>
+</figure>
+
+2. Enter your [Reseller ID](/partner/partner-integration-guides/mint-free-domains/#step-1-retrieve-your-reseller-id-and-secret-api-token). If you don't have one, you will need to [create a new UD Partner account](/partner/).
+
+<figure>
+
+![Enter your Reseller ID](/images/login-client-reseller-id-entered.png '#width=65%')
+
+<figcaption>Enter your Reseller ID</figcaption>
+</figure>
+
+3. Enter your email and send a revenue share request.
+
+<figure>
+
+![Send revenue share request](/images/login-client-send-rev-share-request.png '#width=65%')
+
+<figcaption>Send revenue share request</figcaption>
+</figure>
+
+4. Once your revenue share has been approved, connect a Stripe account to start receiving payments.
+
+<figure>
+
+![Stripe account connected and revenue share configuration complete](/images/login-client-rev-share-complete.png '#width=65%')
+
+<figcaption>Revenue share configuration complete</figcaption>
+</figure>
+
 ## Advanced Configuration
 
 The **Advanced Configuration** page includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.

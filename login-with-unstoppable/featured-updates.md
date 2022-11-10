@@ -7,6 +7,20 @@ description: This page highlights some of the latest features added to Unstoppab
 
 Login with Unstoppable is in active development and we're working to add new features on a regular basis. This page will highlight some of the newest additions, including features added to domain profiles and the Unstoppable authentication service. Many of these features require little or no change to existing integrations.
 
+## Revenue Share for Login
+
+Partners will now be able to generate additional revenue by offering paid domains within the integrated Login flow, and receiving revenue share payments immediately through Stripe after each purchase. Partners can view the revenue share percentage they will recieve on their [Client Management Dashboard](https://dashboard.auth.unstoppabledomains.com) and see a more detailed view of the transactions through their Stripe dashboard.
+
+For partners with existing integrations, offering Paid Domains via Login integration is a zero code update. See the instructions for requesting and configuring revenue share on the [Payment](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#payment) page of the login client configuration.
+
+<figure>
+
+![Paid domain search results in the UD Login flow](/images/login-paid-domain-search.png '#width=50%')
+
+<figcaption>Paid domain search results in the UD Login flow</figcaption>
+</figure>
+
+
 ## Login with Verified Solana Wallet
 
 Users who have added a verified Solana address to their **ud.me** profile now automatically see the option to sign with the **Phantom** wallet to confirm ownership of their domain and login.
