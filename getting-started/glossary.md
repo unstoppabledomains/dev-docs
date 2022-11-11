@@ -123,6 +123,10 @@ A controlled environment maintained by Unstoppable Domains for [Partners](#partn
 
 A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out their terms and conditions with total transparency and no counterparty risk, allowing transactions without an intermediary figure and trust between the parties involved.
 
+### Subdomain
+
+A subdomain is a domain name registered on another domain, e.g., `blog.example.crypto`, where the `blog` domain is registered on `example.crypto`. Subdomains also resolve to crypto records and can have Reverse Resolution configured like a regular domain name.
+
 ### Testnet
 
 A software environment that mimics a [mainnet](#mainnet) blockchain. It is used to test network upgrades and [smart contracts](#smart-contract) before deploying them to the [mainnet](#mainnet).
