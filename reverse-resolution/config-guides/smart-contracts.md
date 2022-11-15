@@ -9,7 +9,7 @@ This guide covers how to set Reverse Resolution records for UD domains using sma
 
 ## Step 1: Select a UNS Registry Smart Contract
 
-The [UNS Registry](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#unsregistry) contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
+The [UNS Registry](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#unsregistry) smart contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
 
 <figure>
 
@@ -76,16 +76,7 @@ Add the generated namehash of the domain you want to configure Reverse Resolutio
 
 ## Step 6: Execute the Contract
 
-Click the `Write` button to sign the transaction and execute the contract.
-
-<figure>
-
-![Metamask sign transaction](/images/set-reverse-tx-sign.png '#width=50%')
-
-<figcaption>metamask sign transaction</figcaption>
-</figure>
-
-After signing the transaction, you can view its details on the blockchain explorer, like so:
+Click the `Write` button to sign the transaction and execute the contract. After signing the transaction, you can view its details on the blockchain explorer, like so:
 
 <figure>
 
