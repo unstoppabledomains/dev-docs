@@ -13,7 +13,7 @@ The [UNS Registry](/developer-toolkit/reference/smart-contracts/uns-smart-contra
 
 <figure>
 
-![polygon registry contract](/images/polygon-registry-contract.png)
+![polygon registry contract](../static/images/polygon-registry-contract.png)
 
 <figcaption>polygon registry contract</figcaption>
 </figure>
@@ -24,7 +24,7 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 <figure>
 
-![polygonscan write as proxy tab](/images/polygonscan-write-as-proxy-tab.png)
+![polygonscan write as proxy tab](../static/images/polygonscan-write-as-proxy-tab.png)
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
@@ -35,14 +35,14 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 <figure class="half-inline-block">
 
-![polygonscan connect wallet](/images/polygonscan-connect-wallet.png)
+![polygonscan connect wallet](../static/images/polygonscan-connect-wallet.png)
 
 <figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
 <figure class="half-inline-block">
 
-![wallet provider list](/images/wallet-provider-list.png)
+![wallet provider list](../static/images/wallet-provider-list.png)
 
 <figcaption>wallet provider list</figcaption>
 </figure>
@@ -53,7 +53,7 @@ Choose the `mintWithRecords()` method from the `Write as Proxy` tab section. The
 
 <figure>
 
-![polygonscan mintWithRecords method](/images/polygonscan-mint-with-records-method.png '#width=50%')
+![polygonscan mintWithRecords method](../static/images/polygonscan-mint-with-records-method.png '#width=50%')
 
 <figcaption>polygonscan mintWithRecords method</figcaption>
 </figure>
@@ -62,7 +62,7 @@ Next, add your wallet address that owns the root domain to the `to` field and th
 
 <figure>
 
-![filling mintWithRecords parameters](/images/filling-mint-with-records-parameters.png '#width=50%')
+![filling mintWithRecords parameters](../static/images/filling-mint-with-records-parameters.png '#width=50%')
 
 <figcaption>filling mintWithRecords parameters</figcaption>
 </figure>
@@ -71,7 +71,7 @@ Then, add the record(s) you want pre-filled in the subdomain after minting to th
 
 <figure>
 
-![filling mintWithRecords parameters](/images/filling-mint-with-records-parameters-2.png '#width=50%')
+![filling mintWithRecords parameters](../static/images/filling-mint-with-records-parameters-2.png '#width=50%')
 
 <figcaption>filling mintWithRecords parameters</figcaption>
 </figure>
@@ -82,7 +82,7 @@ Click the `Write` button to sign the transaction and execute the contract. After
 
 <figure>
 
-![polygonscan transaction details](/images/polygonscan-subdomain-minting-transaction-details.png)
+![polygonscan transaction details](../static/images/polygonscan-subdomain-minting-transaction-details.png)
 
 <figcaption>polygonscan transaction details</figcaption>
 </figure>
