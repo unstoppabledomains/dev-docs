@@ -17,9 +17,13 @@ Unstoppable Domains APIs and libraries will not need to be updated. However, app
 
 Yes, L1 domains can mint subdomains on L1 and L2 domains can mint subdomains on L2.
 
-### Can subdomains be set for Zilliqa-based domains?
+### Can subdomains be minted for Zilliqa-based domains?
 
 No, Zilliqa domains will need to be migrated to Polygon before they can mint subdomains.
+
+### Can subdomains resolve to crypto addresses and IPFS websites?
+
+Yes, subdomains can resolve into crypto records and IPFS websites like a regular domain name.
 
 ### Can I set Reverse Resolution for subdomains?
 
@@ -32,3 +36,7 @@ Nothing, they remain intact and will be owned by the same address, having the sa
 ### What happens when a subdomain is bridged?
 
 Nothing, it will remain intact and proceed just like a regular domain.
+
+### Can I block or restrict subdomains on my domain?
+
+You need to approve every subdomain created, so if you don't want a subdomain to exist, you can decline to create it. Unstoppable Domains cannot create a subdomain for a domain you hold. Only you can do that.
