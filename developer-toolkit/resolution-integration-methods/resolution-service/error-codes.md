@@ -41,12 +41,18 @@ The Resolution Service API will not return an error in the case of an invalid do
 
 | Error Message | Description |
 |---|---|
-| Please provide a valid API key. | The provided API key is invalid or has expired. |
+| Please provide a valid API key | The provided API key is invalid or has expired. |
 
 ## 404 Error: Not Found
 
 | Error Message | Description |
 |---|---|
 | Not Found | Could not find the requested resource(s). |
+
+## 429 Error: Too Many Requests
+
+| Error Message | Description |
+|---|---|
+| Too many requests, please try again later | You have exceeded the API rate limits |
 
 <embed src="/snippets/_discord.md" />
