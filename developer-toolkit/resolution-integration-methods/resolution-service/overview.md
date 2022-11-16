@@ -29,7 +29,7 @@ Before you can make any request to the Resolution Service API, you must acquire 
 The API key provided by Unstoppable Domains is free to acquire (no cost to open source projects). However, storing the keys in a secret manager or environment variables for open-source projects like other third-party APIs is advisable.
 :::
 
-### Authenticating Your Requests
+### Authenticate Your Requests
 
 The Resolution Service API uses `Bearer Tokens` to authorize requests with the API key gotten from Unstoppable Domains.
 
@@ -60,6 +60,17 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 | Get Metadata for a Domain | returns the ERC721 metadata information of a domain name. | [Get Metadata for a Domain Docs](endpoints/get-metadata-for-a-domain.md) |
 | Get Domain SVG Image | returns the image data of a domain name as a SVG string. | [Get Domain SVG Image Docs](endpoints/get-domain-svg-image.md) |
 | Get Domain Image Source | returns the image data of a domain name in `image/svg+xml` format. | [Get Domain Image Source Docs](endpoints/get-domain-image-source.md) |
+
+## Rate Limits
+
+The rate limits for the Resolution Service endpoints are as follows:
+
+* 10 requests per IP per second for metadata endpoints
+* 5 requests per IP per second for other endpoints
+
+:::info
+When the rate limit is exceeded, a status of **429** will be returned.
+:::
 
 ## Self-hosting the Resolution Service
 
