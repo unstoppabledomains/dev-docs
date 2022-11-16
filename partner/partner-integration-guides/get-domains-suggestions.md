@@ -70,7 +70,7 @@ https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/sug
 ```
 
 :::info
-If the Partner isn't eligible to mint free domains, the [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1suggestions~1free/get) endpoint will return an error.
+If the Partner isn't eligible to mint free domains, the [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestionsFree) endpoint will return an error.
 :::
 
 ## Example

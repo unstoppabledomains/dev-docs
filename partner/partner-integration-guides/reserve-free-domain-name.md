@@ -26,7 +26,7 @@ The request body contains information about your order and must be in JSON forma
 ```
 
 :::info
-To reserve a free and available domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint).
+To reserve a free and available domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint).
 :::
 
 ## Step 4: Use the Reserve Free Domain Name Endpoint
@@ -71,7 +71,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 
 ### Minting a Reserved Domain Name
 
-To mint a domain you have reserved, you need to fill the `resellerIdentityKey` request body parameter in the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint with the domain reservation identifier.
+To mint a domain you have reserved, you need to fill the `resellerIdentityKey` request body parameter in the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint with the domain reservation identifier.
 
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/orders/' \

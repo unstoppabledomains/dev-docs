@@ -36,7 +36,7 @@ If your request must include multiple `search` fields, you need to use a new `se
 
 ## Step 4: Use the Multiple Domain Name Availability Endpoint
 
-Send a `GET` request with the authorization headers you have prepared and the domain name you want to check to the [Multiple Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1/get) endpoint. Here is the URL for our API environments:
+Send a `GET` request with the authorization headers you have prepared and the domain name you want to check to the [Multiple Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomains) endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 

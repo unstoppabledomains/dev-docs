@@ -24,7 +24,7 @@ The Partner API offers an endpoint that lets you check the availability of a dom
 
 ## Step 3: Use the Domain Name Availability Endpoint
 
-Send a `GET` request with the authorization headers you have prepared and the domain name you want to check to the [Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#tag/domains/paths/~1domains~1%7BdomainName%7D/get) endpoint. Here is the URL for our API environments:
+Send a `GET` request with the authorization headers you have prepared and the domain name you want to check to the [Domain Name Availability](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomain) endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 

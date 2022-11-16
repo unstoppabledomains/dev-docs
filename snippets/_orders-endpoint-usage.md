@@ -1,4 +1,4 @@
-Send a `POST` request with the authorization headers and request body you have prepared to the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#tag/orders/paths/~1orders/post) endpoint. Here is the URL for our API environments:
+Send a `POST` request with the authorization headers and request body you have prepared to the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint. Here is the URL for our API environments:
 
 Sandbox Environment:
 
