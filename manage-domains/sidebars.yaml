@@ -10,6 +10,9 @@ pages:
   - page: managing-domains-using-contracts.md
     label: Manage Domains Using Smart Contracts
     separatorLine: true
+  - page: mint-subdomains-using-contracts.md
+    label: Mint Subdomains Using Smart Contracts
+    separatorLine: true
   - page: domains-configuration.md
     label: Domain Configuration GUI
     separatorLine: true
@@ -18,4 +21,7 @@ pages:
     separatorLine: true
   - page: delegating-domain-management.md
     label: Delegate Domain Management
+    separatorLine: true
+  - page: domain-management-faq.md
+    label: Frequently Asked Questions
     separatorLine: true
