@@ -14,11 +14,11 @@ The `UAuthConnector` class is the default export of the `@uauth/web3-react` libr
 ### constructor
 
 ```typescript
-class UAuthConnector extends AbstractConnector {
-  constructor(public options: UAuthConnectorOptions) {}
+class UAuthConnector extends Connector {
+  constructor({actions, options, onError}: UAuthConnectorConstructorArgs) {}
 }
 
-const uauthConnector = new UAuthConnector(options);
+const uauthConnector = new UAuthConnector(args);
 ```
 
 ### registerUAuth()
@@ -60,7 +60,7 @@ public get uauth(): UAuth
 Returns the connector used internally to connect to `web3-react`.
 
 ```typescript
-public get subConnector(): AbstractConnector & {
+public get subConnector(): Connector & {
   isAuthorized?(): Promise<boolean>
 }
 ```
@@ -69,26 +69,28 @@ public get subConnector(): AbstractConnector & {
 
 ```typescript
 interface UAuthConnectors {
-  injected: AbstractConnector
-  walletconnect: AbstractConnector
+  injected: Connector
+  walletconnect: Connector
 }
 ```
 
-## UAuthConnectorOptions
+## UAuthConnectorConstructorArgs
 
-The options object passed to the UAuthConnector [constructor](#constructor).Type
+The arguments object passed to the UAuthConnector [constructor](#constructor).
 
 ```typescript
-interface UAuthConnectorOptions
-  extends AbstractConnectorArguments,
-    Partial<UAuthConstructorOptions> {
-  uauth?: UAuth
-  connectors: UAuthConnectors
-  shouldLoginWithRedirect?: boolean
+interface UAuthConnectorConstructorArgs {
+  actions: Actions
+  options: UAuthConstructorOptions & {
+    uauth?: UAuth
+    connectors: UAuthConnectors
+    shouldLoginWithRedirect?: boolean
+  }
+  onError?: (error: Error) => void
 }
 ```
 
-### shouldLoginWithRedirect
+### options.shouldLoginWithRedirect
 
 If `shouldLoginWithRedirect` is set to `true`, the [uauthConnector](#uauthconnector) instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
 
@@ -119,7 +121,7 @@ useEffect(() => {
 interface ConnectorLoginCallbackOptions {
   url?: string
   activate: (
-    connector: AbstractConnector,
+    connector: Connector,
     onError?: (error: Error) => void,
     throwErrors?: boolean,
   ) => Promise<void>
