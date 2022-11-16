@@ -67,6 +67,10 @@ A collection of data provides information about one or more aspects of another d
 
 The process of validating information, such as domain ownership, and registering that onto the blockchain.
 
+### Minting Manager
+
+The [naming service](#name-service) [smart contract](#smart-contract) that manages the minting of second-level domains. The Unstoppable Domains team primarily uses the Minting Manager, but its interface also supports delegating the minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md).
+
 ### Name Service
 
 A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsible for defining domain ownership rules, storing domain [records](#record) and [metadata](#metadata), [minting](#minting), [resolving](#domain-resolution), and [burning](#burn) domains.
@@ -97,7 +101,7 @@ The data associated with a [Web3 domain](#web3-domain), i.e., cryptocurrency add
 
 ### Registry
 
-The [naming service](#name-service) [smart contract](#smart-contract) manages domain ownership, minting domains and subdomains, storing domain [metadata](#metadata), and [burning](#burn) domains. The registry also stores and manages domain [records](#record) in the [Unstoppable Name Service (UNS)](#uns).
+The [naming service](#name-service) [smart contract](#smart-contract) that manages domain ownership, minting domains and subdomains, storing domain [metadata](#metadata), and [burning](#burn) domains. The registry also stores and manages domain [records](#record) in the [Unstoppable Name Service (UNS)](#uns).
 
 ### Resolution Library
 
