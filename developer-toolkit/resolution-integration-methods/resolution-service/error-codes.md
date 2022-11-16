@@ -53,6 +53,6 @@ The Resolution Service API will not return an error in the case of an invalid do
 
 | Error Message | Description |
 |---|---|
-| Too many requests, please try again later | You have exceeded the API rate limits |
+| Too many requests, please try again later | You have exceeded the API rate limit |
 
 <embed src="/snippets/_discord.md" />

@@ -71,7 +71,7 @@ The rate limits for the Resolution Service endpoints are as follows:
 * 5 requests per IP per second for other endpoints
 
 :::info
-When the rate limit is exceeded, a status of **429** will be returned.
+When the rate limit is exceeded, a status code of **429** will be returned.
 :::
 
 ## Self-hosting the Resolution Service
