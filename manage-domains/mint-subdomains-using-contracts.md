@@ -1,15 +1,19 @@
 ---
 title: Mint Subdomains Using Smart Contracts | UD Developer Portal
-description: This guide covers how to mint UD subdomains using the Etherscan and Polygonscan user interfaces to write and execute proxy contracts.
+description: This guide covers how to mint UD subdomains using the Polygonscan user interfaces to write and execute proxy contracts.
 ---
 
 # Mint Subdomains Using Smart Contracts
 
-This guide covers how to mint UD subdomains using proxy contracts. This process requires using the Etherscan and Polygonscan user interface to write and execute proxy contracts.
+This guide covers how to mint UD subdomains using proxy contracts. This process requires using the Polygonscan user interface to write and execute proxy contracts.
+
+:::info
+Subdomains can only be minted for Polygon-based (L2) domains. Ethereum and Zilliqa domains will need to be migrated to Polygon before they can mint subdomains.
+:::
 
 ## Step 1: Select a Minting Manager Smart Contract
 
-The [Minting Manager](/developer-toolkit/reference/smart-contracts/uns-smart-contracts/#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either mainnet or testnet).
+The [Minting Manager](/developer-toolkit/reference/smart-contracts/uns-smart-contracts/#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either Polygon mainnet or testnet).
 
 <figure>
 
@@ -20,7 +24,7 @@ The [Minting Manager](/developer-toolkit/reference/smart-contracts/uns-smart-con
 
 ## Step 2: Open the "Write as Proxy" Tab for the Minting Manager
 
-Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of the Minting Manager contract and click on the `Write as Proxy` tab:
+Navigate to the `Contract` tab in either the Polygonscan page of the Minting Manager contract and click on the `Write as Proxy` tab:
 
 <figure>
 
