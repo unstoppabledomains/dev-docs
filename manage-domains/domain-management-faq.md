@@ -15,7 +15,7 @@ Unstoppable Domains APIs and libraries will not need to be updated. However, app
 
 ### Can subdomains be minted for Ethereum-based domains?
 
-Yes, L1 domains can mint subdomains on L1 and L2 domains can mint subdomains on L2.
+No, Ethereum domains will need to be migrated to Polygon before they can mint subdomains.
 
 ### Can subdomains be minted for Zilliqa-based domains?
 
@@ -33,10 +33,6 @@ Yes, you can configure Reverse Resolution for subdomains, as there is no differe
 
 Nothing, they remain intact and will be owned by the same address, having the same records.
 
-### What happens when a subdomain is bridged?
-
-Nothing, it will remain intact and proceed just like a regular domain.
-
-### Can I block or restrict subdomains on my domain?
+### Can I block or restrict subdomain minting on my domain?
 
 You need to approve every subdomain created, so if you don't want a subdomain to exist, you can decline to create it. Unstoppable Domains cannot create a subdomain for a domain you hold. Only you can do that.
