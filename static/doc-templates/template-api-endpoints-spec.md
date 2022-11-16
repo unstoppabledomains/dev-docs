@@ -9,4 +9,5 @@ Below is a table of all the API endpoints provided by [UD Product], a descriptio
 
 | Endpoint | Description | Documentation |
 | - | - | - |
+| [Endpoint category] |
 | [Name of the endpoint] | [Brief description of the endpoint function and usage] | [A link to more detailed and comprehensive documentation on the endpoint] |
