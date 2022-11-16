@@ -21,10 +21,10 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 | Security Endpoints |
 | Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations | [Get Fingerprint Public Key Docs](https://docs.unstoppabledomains.com/openapi/reference/#tag/security/paths/~1security~1fingerprintjs~1keys/post) |
 | Domain Actions Endpoints |
-| Search Domain Actions | provides domain actions performed by a user, domain or owner address | [Search Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) |
-| Create Domain Action Request | provides a list of transactions that need to be signed by the user in order to perform a blockchain operation | [Create Domain Action Request Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) |
-| Get Domain Action Status | receives a `domain action Id` and provides a list of transactions that need to be signed by the user in order to perform that operation | [Get Domain Action Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) |
-| Submit Blockchain Action signature | used to submit the required data for a blockchain action to be executed | [Submit Blockchain Action signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) |
+| Get Domain Actions | provides domain actions performed by a user, domain or owner address | [Get Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) |
+| Create Domain Action Request | provides a list of transactions that need to be signed by the user in order to perform a domain action | [Create Domain Action Request Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) |
+| Get Domain Action Status | receives a `domain action Id` and provides a list of transactions that need to be signed by the user in order to perform that action | [Get Domain Action Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) |
+| Submit Domain Action Signature | used to submit the required data for a domain action to be executed | [Submit Domain Action Signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) |
 
 :::info
 The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.

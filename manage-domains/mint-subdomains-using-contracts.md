@@ -1,6 +1,6 @@
 ---
 title: Mint Subdomains Using Smart Contracts | UD Developer Portal
-description: This guide covers how to mint UD subdomains using the Polygonscan user interfaces to write and execute proxy contracts.
+description: This guide covers how to mint UD subdomains using the Polygonscan user interface to write and execute proxy contracts.
 ---
 
 # Mint Subdomains Using Smart Contracts
@@ -17,18 +17,18 @@ The [Minting Manager](/developer-toolkit/reference/smart-contracts/uns-smart-con
 
 <figure>
 
-![polygon minting manager contract](../static/images/polygon-minting-manager-contract.png)
+![polygon minting manager contract](/images/polygon-minting-manager-contract.png)
 
 <figcaption>polygon minting manager contract</figcaption>
 </figure>
 
 ## Step 2: Open the "Write as Proxy" Tab for the Minting Manager
 
-Navigate to the `Contract` tab in either the Polygonscan page of the Minting Manager contract and click on the `Write as Proxy` tab:
+Navigate to the `Contract` tab in the Polygonscan page of the Minting Manager contract and click on the `Write as Proxy` tab:
 
 <figure>
 
-![polygonscan write as proxy tab](../static/images/minting-manager-write-as-proxy-tab.png)
+![polygonscan write as proxy tab](/images/minting-manager-write-as-proxy-tab.png)
 
 <figcaption>polygonscan write as proxy tab</figcaption>
 </figure>
@@ -39,14 +39,14 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 <figure class="half-inline-block">
 
-![polygonscan connect wallet](../static/images/minting-manager-connect-wallet.png)
+![polygonscan connect wallet](/images/minting-manager-connect-wallet.png)
 
 <figcaption>polygonscan connect wallet</figcaption>
 </figure>
 
 <figure class="half-inline-block">
 
-![wallet provider list](../static/images/wallet-provider-list.png)
+![wallet provider list](/images/wallet-provider-list.png)
 
 <figcaption>wallet provider list</figcaption>
 </figure>
@@ -57,7 +57,7 @@ Choose the `issueWithRecords()` method from the `Write as Proxy` tab section. Th
 
 <figure>
 
-![polygonscan issueWithRecords method](../static/images/polygonscan-issue-with-records-method.png '#width=50%')
+![polygonscan issueWithRecords method](/images/polygonscan-issue-with-records-method.png '#width=50%')
 
 <figcaption>polygonscan issueWithRecords method</figcaption>
 </figure>
@@ -66,7 +66,7 @@ Next, add your wallet address that owns the root domain to the `to` field and th
 
 <figure>
 
-![filling issueWithRecords parameters](../static/images/filling-issue-with-records-parameters.png '#width=50%')
+![filling issueWithRecords parameters](/images/filling-issue-with-records-parameters.png '#width=50%')
 
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
@@ -75,7 +75,7 @@ Then, add the record(s) you want pre-filled in the subdomain after minting to th
 
 <figure>
 
-![filling issueWithRecords parameters](../static/images/filling-issue-with-records-parameters-2.png '#width=50%')
+![filling issueWithRecords parameters](/images/filling-issue-with-records-parameters-2.png '#width=50%')
 
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
@@ -86,7 +86,7 @@ Click the `Write` button to sign the transaction and execute the contract. After
 
 <figure>
 
-![polygonscan transaction details](../static/images/polygonscan-subdomain-minting-transaction-details.png)
+![polygonscan transaction details](/images/polygonscan-subdomain-minting-transaction-details.png)
 
 <figcaption>polygonscan transaction details</figcaption>
 </figure>
