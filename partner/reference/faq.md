@@ -7,7 +7,7 @@ description: Frequently asked questions about the Partner API of Unstoppable Dom
 
 ### What happens when the HMAC signature becomes invalid for redirect URL payments?
 
-You would be able to put in an order, but no crypto records would be available to pre-fill during the minting step.
+You would be able to put in an order, but no resolution records would be available to pre-fill during the minting step.
 
 ### Can I use my Stripe account to generate tokens and pass them to the Partner API?
 

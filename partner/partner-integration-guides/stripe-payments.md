@@ -70,7 +70,7 @@ The request body contains information about your order and must be in JSON forma
     * `name`: The domain name you want to purchase. This parameter is required.
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
 
 ## Step 5: Use the Orders Endpoint
 

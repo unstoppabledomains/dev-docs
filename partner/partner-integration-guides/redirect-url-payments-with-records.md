@@ -1,13 +1,13 @@
 ---
 title: Redirect URL Payments With Auto-Configured Crypto Records Guide | UD Developer Portal
-description: This guide covers configuring the Partner account to mint paid domains and automatically pre-fill crypto records using the redirect URL payment processing flow.
+description: This guide covers configuring the Partner account to mint paid domains and automatically pre-fill resolution records using the redirect URL payment processing flow.
 ---
 
 # Redirect URL Payments With Auto-Configured Crypto Records Guide
 
-The Redirect URL payment flow allows you to provide crypto records that should be automatically configured to the domain name purchased by the user after minting.
+The Redirect URL payment flow allows you to provide resolution records that should be automatically configured to the domain name purchased by the user after minting.
 
-This payment flow is built upon the original [Redirect URL payment](redirect-url-payments.md), where a partner redirects a user to purchase a domain and be rewarded with the added functionality to configure crypto records to the domain name immediately after minting.
+This payment flow is built upon the original [Redirect URL payment](redirect-url-payments.md), where a partner redirects a user to purchase a domain and be rewarded with the added functionality to configure resolution records to the domain name immediately after minting.
 
 ## Step 1: Prepare Your Payment URL
 
@@ -27,7 +27,7 @@ https://unstoppabledomains.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_
 
 ## Step 2: Prepare Query Parameters
 
-The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill crypto records after minting using a payment URL:
+The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill resolution records after minting using a payment URL:
 
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
@@ -64,7 +64,7 @@ const crypto = require('crypto');
 // third-party lib to sort objects
 const sortObject = require('deep-sort-object');
 
-// end-user records can include crypto records, ipfs hashes, etc
+// end-user records can include resolution records, ipfs hashes, etc
 const records = {
     "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
     "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
@@ -83,7 +83,7 @@ const message = JSON.stringify(sortObject({records, strictName, timestamp}));
 const signatureKey = "someKey";
 // create the hmac-sha256 digest
 const signature = crypto.createHmac('sha256', signatureKey).update(message).digest('hex');
-// this is added to the signature parameter in the redirect URL to pass crypto records to UD
+// this is added to the signature parameter in the redirect URL to pass resolution records to UD
 console.log(signature);
 ```
 
@@ -117,7 +117,7 @@ You can use Unstoppable Domains [Sandbox environment](/partner/set-up-sandbox-fo
 
 1. Navigate to the Sandbox environment with the paid domains flow query parameters appended to the URL.
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.
-3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with crypto records integration is working successfully.
+3. Proceed to mint the domain. If you are asked to verify records to pre-fill when minting the domain, then the redirect URL with resolution records integration is working successfully.
 
 ## Example
 
@@ -138,7 +138,7 @@ https://ud-sandbox.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&times
 ```
 
 :::success Congratulations!
-You just configured your Partner account to process payments and automatically configure crypto records using a Redirect URL.
+You just configured your Partner account to process payments and automatically configure resolution records using a Redirect URL.
 :::
 
 <embed src="/snippets/_discord.md" />

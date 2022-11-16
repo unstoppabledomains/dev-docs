@@ -113,7 +113,7 @@ See a description of how they work below
 A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed content protocol. Basic functionality of such a gateway:
 
 1. Receive HTTP request to a Web3 domain (like `http://example.crypto`)
-2. Resolve the domain into crypto records
+2. Resolve the domain into resolution records
 3. Get the content based on [Browser Resolution Algorithm](browser-resolution-algorithm.md)
 4. Return the content to the client via HTTP
 
@@ -127,7 +127,7 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
    * If a domain is set using DNS, transform [Crypto DNS records](browser-resolution-algorithm.md#dns-records) into classical records
    * If a domain is set using distributed content
      * If the client requests `A` record, resolve to [Distributed Content Gateway](#distributed-content-gateway) IP Address
-     * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
+     * If the client requests a `TXT` record, resolve to all resolution records in JSON encoded key-value format
 4. Send resolution to client
 
 <figure>
