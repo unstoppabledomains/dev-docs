@@ -1,11 +1,11 @@
 ---
 title: UpdateRecords Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to update domain records using the Domains Actions API.
+description: This guide shows how to create a domain action request to update resolution records using the Domains Actions API.
 ---
 
 # UpdateRecords Domain Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to update domain records without having to form them on the client.
+The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -33,28 +33,12 @@ The request body contains information about your order and must be in JSON forma
 * `action`: (string) The domain action you want to perform. To update resolution records, the value should be `"UpdateRecords"`.
 * `parameters`: A key-value dictionary with additional information about the action:
   * `records`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values.
-* `domain`: The domain name you want to update it's records
-* `gasCompensationPolicy`: The gas compensation policy that should be used for the domain action.
+* `domain`: (string) The domain name you want to update it's records.
+* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
 
 ## Step 4: Use the Create Domain Action Request Endpoint
 
-Send a `POST` request with the authorization headers and request body you have prepared to the [Create Domain Action Request](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) endpoint. Here is the URL for our API environments:
-
-Sandbox Environment:
-
-```bash
-https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions
-```
-
-Production Environment:
-
-```bash
-https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/actions
-```
-
-:::info
-The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
-:::
+<embed src="/snippets/_domain-actions-endpoint-usage.md" />
 
 ## Example
 
@@ -63,7 +47,7 @@ Here is an example request to create the domain action request to update resolut
 | Parameter | Value |
 | - | - |
 | Domain Action | UpdateRecords |
-| Resolution Records | {"crypto.ETH.address": "0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19"} |
+| Resolution Records | `{"crypto.ETH.address": "0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19"}` |
 | Domain | reseller-test-udtesting-602716235250.crypto |
 | Gas Compensation Policy | CompensateFree |
 

@@ -43,8 +43,10 @@ pages:
   #     - group: Create Domain Action Request Guides
   #       expanded: false
   #       pages:
-  #         - page: partner-integration-guides/update-records-action.md
+  #         - page: partner-integration-guides/update-records-domain-action.md
   #           label: UpdateRecords Action Guide
+  #         - page: partner-integration-guides/transfer-domain-action.md
+  #           label: Transfer Action Guide
   #     - page: partner-integration-guides/get-domain-actions.md
   #       label: Get Domain Actions Guide
   #   separatorLine: true

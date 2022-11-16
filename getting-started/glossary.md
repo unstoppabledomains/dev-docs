@@ -129,7 +129,7 @@ A smart contract is a contract whose terms are expressed as a computer program w
 
 ### Subdomain
 
-A subdomain is a domain name registered on another domain, e.g., `blog.example.crypto`, where the `blog` domain is registered on `example.crypto`. Subdomains also resolve to resolution records and can have Reverse Resolution configured like a regular domain name.
+A subdomain is a domain name registered on another domain, e.g., `blog.example.crypto`, where the `blog` domain is registered on `example.crypto`. Subdomains also resolve to domain records and can have Reverse Resolution configured like a regular domain name.
 
 ### Testnet
 

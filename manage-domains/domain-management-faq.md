@@ -23,7 +23,7 @@ No, Zilliqa domains will need to be migrated to Polygon before they can mint sub
 
 ### Can subdomains resolve to crypto addresses and IPFS websites?
 
-Yes, subdomains can resolve into resolution records and IPFS websites like a regular domain name.
+Yes, subdomains can resolve into domain records and IPFS websites like a regular domain name.
 
 ### Can I set Reverse Resolution for subdomains?
 

@@ -64,7 +64,7 @@ const crypto = require('crypto');
 // third-party lib to sort objects
 const sortObject = require('deep-sort-object');
 
-// end-user records can include resolution records, ipfs hashes, etc
+// end-user records can include crypto records, ipfs hashes, etc
 const records = {
     "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
     "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
