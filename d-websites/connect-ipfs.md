@@ -8,7 +8,7 @@ description: This guide outlines the process for connecting your IPFS website to
 This guide outlines the process for connecting your IPFS website to your Unstoppable Domain.
 
 :::warning
-If you uploaded your website to IPFS externally, using [using an external service](upload-ipfs.md#option-2-manually-upload-your-website-to-ipfs), then you must retrieve the IPFS hash to connect it to your Unstoppable Domain.
+If you uploaded your website to IPFS externally, [using an external service](upload-ipfs.md#option-2-manually-upload-your-website-to-ipfs), then you must retrieve the IPFS hash to connect it to your Unstoppable Domain.
 :::
 
 ## Step 1: Navigate to the My Domains Area
