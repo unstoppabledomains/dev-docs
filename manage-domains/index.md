@@ -1,11 +1,11 @@
 ---
-title: Managing Domain Ownership | Unstoppable Domains Developer Portal
+title: Manage Domain Ownership | Unstoppable Domains Developer Portal
 description: This page covers all the Registry methods that can be used for managing domain ownership.
 ---
 
-# Managing Domain Ownership
+# Manage Domain Ownership
 
-The smart contract is built upon [OpenZeppelin's implementation](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Burnable) of the [ERC-721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md) token standard.
+This page covers all the Registry methods that can be used for managing domain ownership. The smart contract is built upon [OpenZeppelin's implementation](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Burnable) of the [ERC-721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md) token standard.
 
 Entities that can control domains are defined by the ERC-721 standard:
 
