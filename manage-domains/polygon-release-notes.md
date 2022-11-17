@@ -1,9 +1,12 @@
 ---
-title: Polygon Migration Guide | Unstoppable Domains Developer Portal
+title: Polygon Migration Release Notes | Unstoppable Domains Developer Portal
 description: This page outlines the steps developers will take to migrate to Polygon and support Unstoppable domains on Polygon L2 network.
+redirectFrom:
+  - /polygon/
+  - /polygon/polygon-migration-guide/
 ---
 
-# Polygon Migration Guide
+# Polygon Migration Release Notes
 
 There will be minimal changes to Unstoppable Domains’ resolution libraries and resolution service with the rollout of our Layer 2 solution on Polygon. Over 90% of the library and resolution service will be similar to what we provide for Ethereum. However, for UD developers, all of the integrated "apps" will need to update their resolution libraries or API endpoints in order to be able to read and resolve Web3 domains on Polygon.
 
@@ -135,10 +138,7 @@ You have several methods for transferring and depositing your Unstoppable Domain
 
 | Transfer Option                          | Description                                                                                                                   | Transfer Guide Guide                                                   |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| CNS L1 to UNS L1    | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum)                                                | [CNS L1 to UNS L1: Domain Transfer Guide](cns1-to-uns1.md)       |
-| CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide](cns1-to-uns2.md) |
-| UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide](uns1-to-uns2.md)                             |
+| CNS L1 to UNS L1    | how to transfer or migrate a domain from CNS L1 (Ethereum) to UNS L1 (Ethereum)                                                | [CNS L1 to UNS L1: Domain Transfer Guide](/manage-domains/guides/cns1-to-uns1.md)       |
+| CNS L1 to UNS L2    | how to deposit your domain from CNS L1 (Ethereum) to UNS L2 (Polygon) feature                                                  | [CNS L1 to UNS L2: Domain Deposit Guide](//manage-domains/guides/cns1-to-uns2.md) |
+| UNS L1 to UNS L2  | how to deposit your domain from UNS L1 (Ethereum) to UNS L2 (Polygon)                                                              | [UNS L1 to UNS L2: Domain Deposit Guide](/manage-domains/guides/uns1-to-uns2.md)                             |
 
-:::success Congratulations!
-You just migrated to Polygon Layer2 Network.
-:::

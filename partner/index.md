@@ -6,7 +6,7 @@ description: This page describes the process for creating an account and applyin
 # Set up Partner API Access
 
 :::warning
-The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/polygon/polygon-migration-guide.md) to get started.
+The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/manage-domains/polygon-release-notes.md) to get started.
 :::
 
 ## Step 1: Apply for API Access

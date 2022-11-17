@@ -1,9 +1,12 @@
 ---
 title: Polygon Layer2 Solution | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of Polygon Layer 2 scaling solution for Unstoppable Domains.
+redirectFrom:
+  - /guides/
+  - /polygon/
 ---
 
-# Polygon L2 High Level Overview
+# Polygon L2 Network Overview
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5IVXzy2VBeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

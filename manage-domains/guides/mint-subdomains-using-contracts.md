@@ -1,6 +1,8 @@
 ---
 title: Mint Subdomains Using Smart Contracts | UD Developer Portal
 description: This guide covers how to mint UD subdomains using the Polygonscan user interface to write and execute proxy contracts.
+redirectFrom:
+  - /manage-domains/mint-subdomains-using-contracts/
 ---
 
 # Mint Subdomains Using Smart Contracts

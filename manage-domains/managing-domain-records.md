@@ -1,11 +1,25 @@
 ---
-title: Managing Domain Records | Unstoppable Domains Developer Portal
+title: Manage Domain Records | Unstoppable Domains Developer Portal
 description: This page describes the record architectures for CNS and UNS, record types, and administrative patterns for managing domain records.
 ---
 
-# Managing Domain Records
+# Manage Domain Records Overview
+This page describes the record architectures for UNS and CNS, record types, and administrative patterns for managing domain records.
 
-For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. For UNS, domain records are managed via `RecordStorage`.
+## Domain Record Architectures
+
+### UNS
+For UNS, domain records are managed via `RecordStorage`.
+
+<figure>
+
+![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png '#width=70%;')
+
+<figcaption>UNS Records Architecture shows how RecordStorage is used to manage domain records</figcaption>
+</figure>
+
+### CNS
+For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. 
 
 <figure>
 
@@ -14,12 +28,6 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 <figcaption>CNS Records Architecture shows how resolvers are used to manage domain records</figcaption>
 </figure>
 
-<figure>
-
-![UNS Records Architecture shows how RecordStorage is used to manage domain records](/images/uns-record-architecture.png '#width=70%;')
-
-<figcaption>UNS Records Architecture shows how RecordStorage is used to manage domain records</figcaption>
-</figure>
 
 ## Domain Record Types
 
@@ -99,10 +107,12 @@ In addition to manually calling these methods, records are `reset` automatically
 
 ### Pre-configuring Records
 
+#### UNS
+
+Since the UNS registry doesn't have separate resolver contracts, it has dedicated methods for minting domains with records `mintWithRecords`. It similarly allows Minting EOAs to mint and preconfigure domains.
+
 #### CNS
 
 The default CNS Resolver allows the Unstoppable Minting EOAs to mint and preconfigure domains in one step. This `preconfigure` method only lets the Minting EOAs configure unowned domains not names already minted to the CNS Registry.
 
-#### UNS
 
-Since the UNS registry doesn't have separate resolver contracts, it has dedicated methods for minting domains with records `mintWithRecords`. It similarly allows Minting EOAs to mint and preconfigure domains.

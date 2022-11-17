@@ -1,6 +1,9 @@
 ---
 title: CNS L1 to UNS L1--Domain Transfer Guide | UD Developer Portal
 description: This guide explains the process for transferring a domain from CNS Layer 1 (Ethereum) registry to the UNS Layer 1 (Ethereum) registry.
+redirectFrom:
+  - /polygon/cns1-to-uns1/
+  - /polygon/polygon-migration-guide/
 ---
 
 # CNS L1 to UNS L1: Domain Transfer Guide

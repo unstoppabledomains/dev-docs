@@ -14,8 +14,8 @@ The [Partner API](/partner/index.md) only supports Polygon Layer2 Network. And, 
 ## Step 1: Gather Requirements for the Website Faucet
 
 * A Web3 compatible wallet
-* Configure your wallet for the [Polygon/Mumbai](/polygon/add-polygon-to-metamask.md) network
-* Get [free MATIC tokens from Polygon faucet](/polygon/get-polygon-test-tokens.md) to cover transaction fees (only for Mumbai testnet)
+* Configure your wallet for the [Polygon/Mumbai](/manage-domains/guides/add-polygon-to-metamask.md) network
+* Get [free MATIC tokens from Polygon faucet](/manage-domains/guides/get-polygon-test-tokens.md) to cover transaction fees (only for Mumbai testnet)
 * Ensure you have funds in your wallet to pay transaction fees
 
 :::info

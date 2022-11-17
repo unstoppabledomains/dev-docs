@@ -125,13 +125,13 @@
   to: '/login-with-unstoppable/humanity-check-faq/'
   type: 301
 '/polygon-l2-network/polygon-high-level-overview':
-  to: '/polygon/'
+  to: '/manage-domains/polygon-overview/'
   type: 301
 '/polygon-l2-network/polygon-developer-integration':
-  to: '/polygon/polygon-migration-guide/'
+  to: '/manage-domains/polygon-release-notes/'
   type: 301
 '/polygon-l2-network/l1-ethereum-vs-l2-polygon-comparison':
-  to: '/polygon/'
+  to: '/manage-domains/polygon-overview/'
   type: 301
 '/domain-registry-essentials/uns-vs-cns-comparison':
   to: '/getting-started/domain-registry-essentials/cns-uns-comparison/'

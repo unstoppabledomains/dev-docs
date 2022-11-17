@@ -1,6 +1,8 @@
 ---
 title: Manage Domains Using Smart Contracts | UD Developer Portal
 description: This guide covers how to manage UD domain records using the Etherscan and Polygonscan user interfaces to write and execute proxy contracts.
+redirectFrom:
+  - /manage-domains/managing-domains-using-contracts/
 ---
 
 # Manage Domains Using Smart Contracts

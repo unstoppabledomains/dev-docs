@@ -8,7 +8,7 @@ description: This page reviews the integration guides for Unstoppable Domains Pa
 Unstoppable Domains Partner API is a versatile feature with several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option.
 
 :::warning important
-Partner API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](/polygon/polygon-migration-guide.md) to get started.
+Partner API Integrations will only work on **Polygon L2 network**. See the [Polygon Developer Integration Guide](/manage-domains/polygon-release-notes.md) to get started.
 :::
 
 ## Step 1: Locate Your Reseller ID
