@@ -11,11 +11,7 @@ The Domains Actions API offers the functionality to generate a list of transacti
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 2: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 3: Prepare Request Body
+## Step 2: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -38,7 +34,7 @@ The request body contains information about your order and must be in JSON forma
 * `domain`: (string) The domain name you want to transfer.
 * `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
 
-## Step 4: Use the Create Domain Action Request Endpoint
+## Step 3: Use the Create Domain Action Request Endpoint
 
 <embed src="/snippets/_domain-actions-endpoint-usage.md" />
 
@@ -58,7 +54,6 @@ Here is an example request to create the domain action request to transfer a dom
 
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
---header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "action": "Transfer",
