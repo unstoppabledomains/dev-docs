@@ -67,8 +67,8 @@ Below is a table of all the API endpoints provided by the Resolution Service, a 
 
 The rate limits for the Resolution Service endpoints are as follows:
 
-* 10 requests per IP per second for metadata endpoints
-* 5 requests per IP per second for other endpoints
+* 20 requests per IP per second for metadata endpoints
+* 20 requests per IP per second for other endpoints
 
 :::info
 When the rate limit is exceeded, a status code of **429** will be returned.
