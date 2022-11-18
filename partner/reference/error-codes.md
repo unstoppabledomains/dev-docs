@@ -17,60 +17,34 @@ Partner API errors are in JSON format.
 }
 ```
 
-## GET Domain Name Availability
+## 400 Error: Bad Request
 
-| Error Code                  | Status Code | Explanation            |
-| --------------------------- | - | -------------------------------- |
-| DOMAIN\_NAME\_INVALID | 400 | The provided domain name is invalid. |
+| Error Message | Description |
+| - | - |
+| DOMAIN\_NAME\_INVALID | The provided domain name is invalid |
+| DOMAIN\_NAME\_NOT\_PROVIDED | The request does not contain any domain name to search |
+| INVALID\_DOMAIN\_SUFFIX | The provided domain endings in TLD filter are invalid |
+| NOT\_SUPPORTED | The partner does not provide free domains (for free domain suggestions) |
+| DOMAIN\_LOCK\_NOT\_AVAILABLE | The requested domain cannot be reserved. The domain is not available for free or has been minted |
+| DOMAIN\_NAME\_NOT\_PROVIDED | The request does not contain any domain name to search |
+| INVALID\_ORDER\_SCHEMA | The order information is not properly formatted or is missing critical information such as payment type |
+| UNALLOWED\_PAYMENT\_METHOD | The payment method is not supported by Unstoppable Domains. Must use Stripe or minted freely |
+| UNSUPPORTED\_PAYMENT\_METHOD | The requested payment method is currently not supported |
+| INVALID\_OWNER\_ADDRESS | The owner address is not valid |
+| INVALID\_EMAIL | The email address is not valid |
+| DOMAIN\_NOT\_AVAILABLE | The domain name is unavailable for purchase |
+| USER\_NOT\_ELIGIBLE | The provided user is not eligible for a free domain |
+| WALLET\_NOT\_ELIGIBLE | The provided wallet address is not eligible for a free domain |
+| FREE\_DOMAIN\_POLICY\_VIOLATION | The provided user has already claimed a free domain before |
+| INVALID\_FINGERPRINTJS\_VISIT | The provided Fingerprint Visitor ID is invalid or is older than 30 seconds |
+| MISSING\_FINGERPRINTJS\_VISITOR\_ID | The request does not contain a Fingerprint Visitor ID |
+| SECURITY\_PARAMS\_NOT\_PROVIDED | The request does not contain any security parameters |
+| UNSUPPORTED\_SECURITY\_TYPE | The requested security type is currently not supported |
 
-## GET Multiple Domain Name Availability
+## 404 Error: Not Found
 
-| Error Code                  | Status Code | Explanation            |
-| --------------------------- | - | -------------------------------- |
-| DOMAIN\_NAME\_NOT\_PROVIDED | 400 | The request does not contain any domain name to search. |
-
-## GET Domains Suggestions
-
-| Error Code                    | Status Code | Explanation                   |
-| ----------------------------- | - | --------------------------------------- |
-| INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid. |
-
-## GET Domains Suggestions Free
-
-| Error Code                    | Status Code | Explanation                                                |
-| ----------------------------- | - | -------------------------------------------------------------------- |
-| INVALID\_DOMAIN\_SUFFIX | 400 | Provided domain endings in TLD filter are invalid.                       |
-| NOT\_SUPPORTED          | 400 | The partner does not provide free domains (for free domain suggestions). |
-
-## POST Reserve Free Domain Name
-
-| Error Code                    | Status Code | Explanation                                                |
-| ----------------------------- | - | -------------------------------------------------------------------- |
-| DOMAIN\_NAME\_INVALID | 400 | The provided domain name is invalid. |
-| DOMAIN\_LOCK\_NOT\_AVAILABLE  | 400 | Requested domain cannot be reserved. The domain is not available for free or has been minted. |
-
-## POST Buy a Domain or Claim for Free
-
-| Error Code | Status Code | Explanation |
-| - | - | - |
-| INVALID\_ORDER\_SCHEMA | 400 | Order information is not properly formatted or is missing critical information such as payment type. |
-| UNALLOWED\_PAYMENT\_METHOD | 400 | Payment method is not supported by Unstoppable Domains. Must use Stripe or minted freely. |
-| UNSUPPORTED\_PAYMENT\_METHOD | 400 | Requested payment method is currently not supported. |
-| INVALID\_OWNER\_ADDRESS | 400 | Owner address is not valid. |
-| INVALID\_EMAIL | 400 | Email address is not valid. |
-| DOMAIN\_NOT\_AVAILABLE | 400 | Domain name is unavailable for purchase. |
-| USER\_NOT\_ELIGIBLE | 400 | The provided user is not eligible for a free domain. |
-| WALLET\_NOT\_ELIGIBLE | 400 | The provided wallet address is not eligible for a free domain. |
-| FREE\_DOMAIN\_POLICY\_VIOLATION | 400 | The provided user has already claimed a free domain before. |
-| INVALID\_FINGERPRINTJS\_VISIT | 400 | The provided Fingerprint Visitor ID is invalid or is older than 30 seconds. |
-| MISSING\_FINGERPRINTJS\_VISITOR\_ID | 400 | The request does not contain a Fingerprint Visitor ID. |
-| SECURITY\_PARAMS\_NOT\_PROVIDED | 400 | The request does not contain any security parameters. |
-| UNSUPPORTED\_SECURITY\_TYPE | 400 | Requested security type is currently not supported. |
-
-## GET Order Status
-
-| Error Code              | Status Code | Explanation |
-| ----------------------- | - | ------------------ |
-| ORDER\_NOT\_FOUND | 404 | Order is not found. |
+| Error Message | Description |
+| - | - |
+| ORDER\_NOT\_FOUND | The requested order is not found |
 
 <embed src="/snippets/_discord.md" />
