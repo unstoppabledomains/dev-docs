@@ -77,7 +77,7 @@ For more information on how the resolution process works read [Resolving domain 
 
 A domain can be owned by both an external address (one that is accessed with a private key) or an internal address (i.e.: a smart contract). Managing domains with smart contracts opens up many new ways to structure ownership. For example, domain management could be governed by a multi-signature wallet or it could be equally shared among a group of administrators. These are two simple examples but there are many more possibilities.
 
-Such an ownership model might not be suitable for every member. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract. Twitter verification works in this way, and the best example is the [TwitterValidationOperator contract](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol).
+Such an ownership model might not be suitable for every member. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract.
 
 :::info
 If the owner of a `.wallet` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting subsection of [Delegating Domain Management](#delegating-domain-management).

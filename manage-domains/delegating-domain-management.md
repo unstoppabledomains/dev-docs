@@ -12,5 +12,3 @@ Creating a custom smart contract is a way to implement a flexible permission mod
 
 A custom smart contract can be implemented as a separate contract.
 
-The [Twitter Validation Operator](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol) is an example of a smart contract with a flexible permission model.
-
