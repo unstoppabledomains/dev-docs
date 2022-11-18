@@ -1,6 +1,8 @@
 ---
 title: UNS Smart Contracts | Unstoppable Domains Developer Portal
 description: This page provides brief descriptions with links to source code and deployment addresses for the Unstoppable Name Service smart contracts.
+editPage:
+  disable: true
 ---
 # UNS Smart Contracts
 
