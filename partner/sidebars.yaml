@@ -37,23 +37,23 @@ pages:
           - page: partner-integration-guides/reserve-free-domain-name.md
             label: Reserve Free Domain Name Guide
     separatorLine: true
-  # - group: Domain Action API Guides
-  #   expanded: false
-  #   pages:
-  #     - group: Create Domain Action Request Guides
-  #       expanded: false
-  #       pages:
-  #         - page: domain-actions-guides/update-records-action.md
-  #           label: UpdateRecords Action Guide
-  #         - page: domain-actions-guides/set-reverse-resolution-action.md
-  #           label: SetReverseResolution Action Guide
-  #         - page: domain-actions-guides/transfer-action.md
-  #           label: Transfer Action Guide
-  #     - page: domain-actions-guides/get-domain-actions.md
-  #       label: Get Domain Actions Guide
-  #     - page: domain-actions-guides/get-domain-action.md
-  #       label: Get Domain Action Guide
-  #   separatorLine: true
+  - group: Domain Action API Guides
+    expanded: false
+    pages:
+      - group: Create Domain Action Request Guides
+        expanded: false
+        pages:
+          - page: domain-actions-guides/update-records-action.md
+            label: UpdateRecords Action Guide
+          - page: domain-actions-guides/set-reverse-resolution-action.md
+            label: SetReverseResolution Action Guide
+          - page: domain-actions-guides/transfer-action.md
+            label: Transfer Action Guide
+      - page: domain-actions-guides/get-domain-action.md
+        label: Get Domain Action Guide
+      - page: domain-actions-guides/get-domain-actions.md
+        label: Get Domain Actions Guide
+    separatorLine: true
   - label: Partner API Endpoints
     page: partner-api-endpoints.md
     separatorLine: true

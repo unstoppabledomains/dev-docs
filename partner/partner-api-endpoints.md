@@ -22,9 +22,9 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 | Get Fingerprint Public Key | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations | [Get Fingerprint Public Key Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostSecurityFingerprintjsKeys) |
 | Domain Actions Endpoints |
 | Create Domain Action Request | provides a list of transactions that need to be signed by the user in order to perform a domain action | [Create Domain Action Request Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) |
-| Get Domain Actions | provides domain actions performed by a user, domain or owner address | [Get Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) |
 | Get Domain Action | receives a `domain action Id` and provides a list of transactions that need to be signed by the user in order to perform that action | [Get Domain Action Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) |
-| Submit Domain Action Signature | used to submit the required data for a domain action to be executed | [Submit Domain Action Signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) |
+| Get Domain Actions | provides domain actions performed by a user, domain or owner address | [Get Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) |
+| Submit Domain Action Signature | submits the required data for a domain action to be executed | [Submit Domain Action Signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) |
 
 :::info
 The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
