@@ -63,3 +63,5 @@ pages:
         label: Error Codes for Troubleshooting
       - page: reference/faq.md
         label: Frequently Asked Questions
+      - page: reference/best-practices.md
+        label: Best Practices for Partner API Integration

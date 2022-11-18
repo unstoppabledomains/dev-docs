@@ -52,6 +52,6 @@ pages:
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
     separatorLine: true
-  - label: Best Practices for Crypto Payments Integration
+  - label: Best Practices for Integrating Crypto Payments
     page: best-practices.md
     separatorLine: true
