@@ -23,6 +23,7 @@ You'll need the following to get started:
 These items are listed in order of complexity. For example, if you are starting with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the integration guides, API reference, or developer toolkit.
 
 - [Use Cases](/use-cases/index.mdx)
+- [Unstoppable Resolution](/developer-toolkit/index.md)
 - [Developer Integration Guides](/guides.mdx)
   - [Login with Unstoppable](/login-with-unstoppable/index.md)
   - [Unstoppable Partner API](/partner/index.md)
@@ -31,7 +32,7 @@ These items are listed in order of complexity. For example, if you are starting 
   - [Crypto Payments](/crypto-payments/index.md)
   - [IPFS Websites](/d-websites/index.md)
 - [API Reference](/openapi/resolution.page.yaml)
-- [Developer Toolkit](/developer-toolkit/index.md)
+- [Contribute](/contribute/unstoppable-quests.md)
 
 <embed src="/snippets/_discord.md" />
 

@@ -1,8 +1,8 @@
 pages:
-  - separator: UD Developer Toolkit
+  - separator: Unstoppable Resolution
     separatorLine: true
   - page: index.md
-    label: Toolkit Overview
+    label: Resolution Overview
     separatorLine: true
   - group: Resolution Integration Methods
     expanded: false
@@ -87,16 +87,17 @@ pages:
       - label: Retrieve Domain Metadata Using Smart Contracts
         page: advanced-use-cases/retrieve-metadata-smart-contracts.md
     separatorLine: true
+  - group: Smart Contracts
+    expanded: false
+    pages:
+      - label: UNS Smart Contracts
+        page: reference/smart-contracts/uns-smart-contracts.md
+      - label: CNS Smart Contracts
+        page: reference/smart-contracts/cns-smart-contracts.md
+    separatorLine: true
   - group: Reference
     expanded: false
     pages:
-      - group: Smart Contracts
-        expanded: false
-        pages:
-          - label: UNS Smart Contracts
-            page: reference/smart-contracts/uns-smart-contracts.md
-          - label: CNS Smart Contracts
-            page: reference/smart-contracts/cns-smart-contracts.md
       - label: Records Reference
         page: reference/records-reference.md
       - label: Ethereum Providers
