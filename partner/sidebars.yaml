@@ -47,6 +47,8 @@ pages:
   #           label: UpdateRecords Action Guide
   #         - page: partner-integration-guides/transfer-domain-action.md
   #           label: Transfer Action Guide
+  #     - page: partner-integration-guides/get-domain-action.md
+  #       label: Get Domain Action Guide
   #     - page: partner-integration-guides/get-domain-actions.md
   #       label: Get Domain Actions Guide
   #   separatorLine: true

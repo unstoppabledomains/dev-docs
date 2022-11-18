@@ -108,7 +108,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }
 ```
 
-The `txs` field in the API response contains the list of transactions that needs to be performed to transfer the `reseller-test-udtesting-602716235250.crypto` domain to `0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19`.
+The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to transfer the `reseller-test-udtesting-602716235250.crypto` domain to `0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19`.
 
 :::success Congratulations!
 You have successfully created the domain action request to transfer a domain with the Domain Actions API.

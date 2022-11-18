@@ -106,7 +106,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }
 ```
 
-The `txs` field in the API response contains the list of transactions that needs to be performed to update the resolution records for the `reseller-test-udtesting-602716235250.crypto` domain.
+The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to update the resolution records for the `reseller-test-udtesting-602716235250.crypto` domain.
 
 :::success Congratulations!
 You have successfully created the domain action request to update resolution records with the Domain Actions API.
