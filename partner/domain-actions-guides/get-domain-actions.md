@@ -5,7 +5,7 @@ description: This guide shows how to retrieve the domain actions performed by a 
 
 # Get Domain Actions Guide
 
-The Domains Actions API offers the functionality to retrieve the domain actions performed by a user, domain or owner address.
+The Domains Actions API offers the functionality to **retrieve the domain actions** performed by a user, domain or owner address.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
