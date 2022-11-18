@@ -40,11 +40,22 @@ Partner API errors are in JSON format.
 | MISSING\_FINGERPRINTJS\_VISITOR\_ID | The request does not contain a Fingerprint Visitor ID |
 | SECURITY\_PARAMS\_NOT\_PROVIDED | The request does not contain any security parameters |
 | UNSUPPORTED\_SECURITY\_TYPE | The requested security type is currently not supported |
+| QUERY\_ARGUMENT\_REQUIRED | The request does not contain critical query parameters |
+| BRIDGE\_DISABLED | The Polygon bridge feature flag is not enabled in your environment |
+| REQUEST\_INVALID | The request body is not properly formatted or is missing critical information |
+
+## 401 Error: Unauthorized
+
+| Error Message | Description |
+| - | - |
+| PARTNER\_NOT\_FOUND | The requested Partner is not found |
 
 ## 404 Error: Not Found
 
 | Error Message | Description |
 | - | - |
 | ORDER\_NOT\_FOUND | The requested order is not found |
+| DOMAIN\_NOT\_FOUND | The requested domain name is not registered |
+| ACTION\_NOT\_FOUND | The requested domain action is not found |
 
 <embed src="/snippets/_discord.md" />
