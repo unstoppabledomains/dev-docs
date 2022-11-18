@@ -13,7 +13,7 @@ The Domains Actions API offers the functionality to retrieve the domain actions 
 
 ## Step 2: Prepare Query Parameters
 
-| Name | Type | Mandatory | Description |s
+| Name | Type | Mandatory | Description |
 | - | - | - | - |
 | status | STRING | NO | The blockchain action status the response results should be filtered with. Currently supports `InProgress`, `Completed`, and `Failed` |
 | userId | NUMBER | NO | The ID of the user to query for domain actions |

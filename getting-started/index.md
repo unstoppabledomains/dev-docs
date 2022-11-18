@@ -27,7 +27,7 @@ These items are listed in order of complexity. For example, if you are starting 
   - [Login with Unstoppable](/login-with-unstoppable/index.md)
   - [Unstoppable Partner API](/partner/index.md)
   - [Reverse Resolution](/reverse-resolution/index.md)
-  - [Manage Domains](/manage-domains/index.md)
+  - [Domain Management](/manage-domains/index.md)
   - [Crypto Payments](/crypto-payments/index.md)
   - [IPFS Websites](/d-websites/index.md)
 - [API Reference](/openapi/resolution.page.yaml)
