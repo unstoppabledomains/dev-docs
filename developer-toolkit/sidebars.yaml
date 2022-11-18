@@ -101,6 +101,8 @@ pages:
         page: reference/records-reference.md
       - label: Ethereum Providers
         page: reference/ethereum-providers.md
+      - label: Best Practices for Integrating Domain Resolution
+        page: reference/resolution-best-practices.md
     separatorLine: true
   - group: Changelogs
     expanded: false

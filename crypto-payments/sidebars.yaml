@@ -53,5 +53,5 @@ pages:
     page: troubleshooting-guide.md
     separatorLine: true
   - label: Best Practices for Integrating Crypto Payments
-    page: best-practices.md
+    href: /developer-toolkit/reference/resolution-best-practices/
     separatorLine: true

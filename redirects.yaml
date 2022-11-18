@@ -331,3 +331,6 @@
 '/crypto-payments/other-integrations/':
   to: '/crypto-payments/'
   type: 301
+'/crypto-payments/best-practices/':
+  to: '/developer-toolkit/reference/resolution-best-practices/'
+  type: 301
