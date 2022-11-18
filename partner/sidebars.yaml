@@ -45,6 +45,8 @@ pages:
         pages:
           - page: domain-actions-guides/update-records-action.md
             label: UpdateRecords Action Guide
+          - page: domain-actions-guides/return-action.md
+            label: Return Action Guide
           - page: domain-actions-guides/set-reverse-resolution-action.md
             label: SetReverseResolution Action Guide
           - page: domain-actions-guides/transfer-action.md
