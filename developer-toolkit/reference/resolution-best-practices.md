@@ -40,6 +40,8 @@ Always validate the addresses you resolve from domains using the resolution meth
 
 ## Remind Your Users That They Can Use Their Domain To Send Crypto
 
+Add notes, hints, and placeholders in your application to remind users that they can use their UD domains to send crypto instead of using long wallet addresses every time.
+
 <figure>
 
 ![preview of resolved address near domain name](/images/domain-btc-resolving-example.png '#width=60%')
