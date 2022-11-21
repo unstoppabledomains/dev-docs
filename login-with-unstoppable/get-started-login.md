@@ -64,12 +64,12 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
 :::
 
-## Step 3: Configure the Login UI
+## Step 3: Login Best Practices
 
-Login with Unstoppable has UI requirements that must be configured to properly display the authenticated user's domain name after a successful login. Please follow the instructions in the [**Login UI Configuration**](/login-with-unstoppable/login-integration-guides/login-ui-configuration.mdx) guide to complete this final step in the integration process.
+Login with Unstoppable will require some additional configuration to display the authenticated user's information in your dApp after a successful login. See the [**Login Best Practices**](/login-with-unstoppable/login-integration-guides/login-best-practices.mdx) guide for more information about accessing and displaying logged-in user information and Login with Unstoppable UI button styles.
 
 ## Step 4: Promote Your Application
 
-Once your integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps).
+Once your login integration is live, you can [promote your application](/use-cases/promote-ud-integration.md) by submitting it to the official UD [app integrations database](https://unstoppabledomains.com/apps).
 
 <embed src="/snippets/_discord.md" />

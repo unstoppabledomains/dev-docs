@@ -103,9 +103,6 @@
 '/login-with-unstoppable/get-started-login/integration-pathways/':
   to: '/login-with-unstoppable/get-started-login/'
   type: 301
-'/login-with-unstoppable/login-ui-configuration':
-  to: '/login-with-unstoppable/login-integration-guides/login-ui-configuration/'
-  type: 301
 '/login-with-unstoppable/humanity-check/humanity-check-for-login/':
   to: '/login-with-unstoppable/humanity-check/'
   type: 301

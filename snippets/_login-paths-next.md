@@ -1,5 +1,5 @@
 <div class="custom-next-to">
 
-[Next to **Login UI Configuration**](/login-with-unstoppable/login-integration-guides/login-ui-configuration.mdx)
+[Next to **Login Best Practices**](/login-with-unstoppable/login-integration-guides/login-best-practices.mdx)
 
 </div>
