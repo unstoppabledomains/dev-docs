@@ -4,6 +4,9 @@ pages:
   - page: index.md
     label: Developer Portal Overview
     separatorLine: true
+  - page: ../use-cases/index.mdx
+    label: Use Cases
+    separatorLine: true
   - group: Get a Test Domain
     expanded: false
     pages:
