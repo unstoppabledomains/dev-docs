@@ -45,8 +45,8 @@ Unstoppable Domains provides a [Sandbox environment](set-up-sandbox-for-testing.
 
 The following considerations apply to purchasing domains:
 
-* The domain must contain only alphabets (`A-Z`), numbers (`0-9`), and hyphens (`-`)
-* The domain name cannot start with a hyphen
+* The domain must contain only letters (`a-z`), numbers (`0-9`), and hyphens (`-`)
+* The domain name cannot start with a hyphen (`-`)
 * The domain length must not exceed 253 characters
 
 <embed src="/snippets/_discord.md" />
