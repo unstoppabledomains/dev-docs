@@ -26,9 +26,9 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 | Get Domain Actions | provides domain actions performed by a user, domain or owner address | [Get Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) |
 | Submit Domain Action Signature | submits the required data for a domain action to be executed | [Submit Domain Action Signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) |
 
-:::info
-The Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
-:::
+## Rate Limits
+
+The rate limits for the Partner API endpoints are limited to **60 requests per hour**. However, this is subject to change in the future.
 
 ## Fork Our Postman Collection
 
