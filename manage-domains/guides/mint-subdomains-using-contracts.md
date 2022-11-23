@@ -99,7 +99,6 @@ The following considerations apply to minting subdomains:
 
 * Subdomains must contain only lowercase letters (`a-z`), numbers (`0-9`), and hyphens (`-`)
 * Subdomain names cannot start with a hyphen (`-`)
-* The subdomain length must not exceed 253 characters
 
 :::success Congratulations!
 You have successfully minted a subdomain using smart contracts. Happy hacking!

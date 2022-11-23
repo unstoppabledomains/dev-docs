@@ -43,11 +43,11 @@ nav:
   - label: Get Started
     page: getting-started/index.md
 
-  - label: Resolution
-    page: developer-toolkit/index.md
-
   - label: Guides
     page: /guides.mdx
+
+  - label: Resolution
+    page: developer-toolkit/index.md
 
   - label: API Reference
     page: openapi/resolution.page.yaml

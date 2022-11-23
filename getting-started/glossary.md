@@ -67,9 +67,9 @@ A collection of data provides information about one or more aspects of another d
 
 The process of validating information, such as domain ownership, and registering that onto the blockchain.
 
-### Minting Manager
+### MintingManager
 
-The [naming service](#name-service) [smart contract](#smart-contract) that manages the minting of second-level domains. The Unstoppable Domains team primarily uses the Minting Manager, but its interface also supports delegating the minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md).
+The [naming service](#name-service) [smart contract](#smart-contract) that manages the minting of second-level domains. The Unstoppable Domains team primarily uses the MintingManager, but its interface also supports delegating the minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md).
 
 ### Name Service
 
@@ -94,6 +94,10 @@ A user authorized by Unstoppable Domains to [sell domains to users](/use-cases/s
 ### Partner API
 
 An API service maintained by Unstoppable Domains for Partners to [mint](#minting) free and paid domains, check the availability of domain names, reserve domains for users, and get domain name suggestions available for purchase.
+
+### ProxyReader
+
+The [naming service](#name-service) [smart contract](#smart-contract) that allows members to fetch information about domains from both [UNSRegistry](#registry) and [CNS](#cns) smart contracts in one call.
 
 ### Record
 
