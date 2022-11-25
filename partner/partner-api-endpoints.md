@@ -28,7 +28,7 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 
 ## Rate Limits
 
-The rate limits for the Partner API endpoints are limited to **60 requests per hour**. However, this is subject to change in the future.
+The rate limits for the Partner API endpoints are limited to **60 requests per IP per hour**. However, this is subject to change in the future.
 
 ## Fork Our Postman Collection
 
