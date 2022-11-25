@@ -47,7 +47,7 @@ Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free 
 The Unstoppable Domains Partner API will only accept a `Visitor ID` generated within the past 30 seconds and has a confidence score of at least 90%.
 :::
 
-### Generate a Fingerprint Public Key
+### Integrate Fingerprint Key Generation
 
 Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, which are needed for generating the `Visitor ID`. Send a `POST` request with the authorization headers you have prepared to the `Get Fingerprint Public Key` endpoint. Here is the URL for our API environments:
 
@@ -71,7 +71,7 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 The endpoint returns a different key when called to avoid rate limitations. Also, the generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.
 :::
 
-### Integrate the Fingerprint Subdomain
+### Integrate Fingerprint Subdomain
 
 Unstoppable Domains has a dedicated subdomain for Fingerprint verification to improve integration and user identification. You need to set the `endpoint` property in your Fingerprint initialization to our subdomain.
 

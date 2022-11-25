@@ -39,7 +39,7 @@ Yes, you can use the Partner API to resell domains offered for sale on the UD we
 
 ### Are there any limitations to the Partner API account I should know?
 
-Yes, the Partner API is limited to 60 requests per hour. However, this is subject to change in the future.
+Yes, the Partner API is limited to 60 requests per IP per hour. However, this is subject to change in the future.
 
 ### What happens when a domain is purchased without providing a wallet?
 
