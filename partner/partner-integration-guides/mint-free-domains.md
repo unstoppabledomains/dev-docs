@@ -167,11 +167,11 @@ The request body contains information about your order and must be in JSON forma
     * `type`: The order security method. The value should be `"fingerprintjs"` for Fingerprint verification.
     * `identifier`: The Fingerprint Visitor ID of the user minting the domain.
 * `domains`: (array) An array with information about the domains you want to purchase:
-    * `name`: The domain name you want to purchase. This parameter is required for every order.
-    * `ownerAddress`: The wallet address the domain should be minted to.
+    * `name`: The domain name you want to purchase. This parameter is required.
+    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
     * `phone`: The phone number of the user minting the free domain. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional and requires the `ownerAddress` parameter to be provided.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional.
     * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
 
 :::info
