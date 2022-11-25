@@ -58,13 +58,13 @@ Unstoppable Domains provided an API endpoint to fetch Fingerprint public keys, w
 Sandbox Environment:
 
 ```bash
-POST https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
+https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
 ```
 
 Production Environment:
 
 ```bash
-POST https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
+https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fingerprintjs/keys
 ```
 
 :::info
@@ -95,7 +95,7 @@ Here's a sample code snippet:
 
 ```javascript
 // Initialize the agent at application startup.
-const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
+const fpPromise = import('https://fpcdn.io/v3/{FINGERPRINT_API_KEY}')
   .then(FingerprintJS => FingerprintJS.load({
     endpoint: 'https://fp.unstoppabledomains.com'
   }));
@@ -117,7 +117,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 ```javascript
 <script>
   // Initialize the agent at application startup.
-  const fpPromise = import('https://fpcdn.io/v3/your-public-api-key')
+  const fpPromise = import('https://fpcdn.io/v3/{FINGERPRINT_API_KEY}')
     .then(FingerprintJS => FingerprintJS.load({
       endpoint: 'https://fp.unstoppabledomains.com'
     }));
@@ -130,7 +130,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 ```
 
 :::info
-The `your-public-api-key` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
+The `FINGERPRINT_API_KEY` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
 :::
 
 ## Step 5: Prepare Request Body
@@ -171,7 +171,7 @@ The request body contains information about your order and must be in JSON forma
     * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
     * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
     * `phone`: The phone number of the user minting the free domain. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the Records Reference guide for supported key values. This parameter is optional.
+    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
     * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
 
 :::info
