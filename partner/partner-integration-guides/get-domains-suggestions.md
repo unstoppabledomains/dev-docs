@@ -18,11 +18,7 @@ The Partner API offers an endpoint that provides free and paid domain suggestion
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 2: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 3: Prepare Query Parameters
+## Step 2: Prepare Query Parameters
 
 The Partner API suggestions endpoints accepts the `search` and `tlds` fields as query parameters to build domain name suggestions:
 
@@ -34,6 +30,10 @@ The Partner API suggestions endpoints accepts the `search` and `tlds` fields as 
 :::info
 If your request must include multiple `search` or `tlds` fields, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
 :::
+
+## Step 3: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 4: Use the Get Domains Suggestions Endpoint
 

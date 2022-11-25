@@ -11,11 +11,7 @@ The Partner API offers an endpoint that allows Partners to reserve free and avai
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 2: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 3: Prepare Request Body
+## Step 2: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -28,6 +24,10 @@ The request body contains information about your order and must be in JSON forma
 :::info
 To reserve a free and available domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the [Buy a Domain or Claim for Free](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint).
 :::
+
+## Step 3: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 4: Use the Reserve Free Domain Name Endpoint
 

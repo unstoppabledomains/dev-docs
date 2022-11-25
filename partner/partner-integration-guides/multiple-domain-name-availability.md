@@ -18,11 +18,7 @@ The Partner API offers an endpoint that lets you check the availability of multi
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 2: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 3: Prepare Query Parameters
+## Step 2: Prepare Query Parameters
 
 The `Multiple Domain Name Availability` endpoint requires a `search` field which contains the domain name(s) to check with or without TLD. If you omit the domain name TLD, the endpoint will return the domain name with all the [supported domain endings](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md).
 
@@ -33,6 +29,10 @@ The `Multiple Domain Name Availability` endpoint requires a `search` field which
 :::info
 If your request must include multiple `search` fields, you need to use a new `search` query param instance for each domain name.
 :::
+
+## Step 3: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 4: Use the Multiple Domain Name Availability Endpoint
 

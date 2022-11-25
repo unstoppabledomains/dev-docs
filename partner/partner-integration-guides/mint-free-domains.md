@@ -39,11 +39,7 @@ The table below shows how the pricing tiers are structured at Unstoppable Domain
 Domains containing numerals in the name (i.e: tim1, monica95, etc) are discounted by up to 75% of the standard prices, and most free domains fall within this category.
 :::
 
-## Step 3: Prepare Your Authorization Headers
-
-<embed src="/snippets/_auth-headers-preparation.md" />
-
-## Step 4: Prepare Your Order Security
+## Step 3: Prepare Your Order Security
 
 Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free domain orders and catch sophisticated fraudsters. See the [Fingerprint Docs](https://dev.fingerprint.com/docs) for integration guides and how to generate a Fingerprint Visitor ID for your users.
 
@@ -133,7 +129,7 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 The `FINGERPRINT_API_KEY` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
 :::
 
-## Step 5: Prepare Request Body
+## Step 4: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
 
@@ -177,6 +173,10 @@ The request body contains information about your order and must be in JSON forma
 :::info
 You need to provide either the `email` or `phone` parameter in every order request. You can also provide both parameters in your request.
 :::
+
+## Step 5: Prepare Your Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
 
 ## Step 6: Use the Orders Endpoint
 
