@@ -64,9 +64,88 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
 :::
 
-## Step 3: Login Best Practices
+## Step 3: Display the User's Domain
 
-Login with Unstoppable will require some additional configuration to display the authenticated user's information in your dApp after a successful login. See the [**Login Best Practices**](/login-with-unstoppable/login-integration-guides/login-best-practices.mdx) guide for more information about accessing and displaying logged-in user information and Login with Unstoppable UI button styles.
+Once a user has successfully authenticated, the application should display the user’s **domain** (and not their **wallet address**) in the application’s UI to confirm the authorization was successful.
+
+<figure>
+<img src="/images/third-UI-example-login-domains.png" alt="Showing an authenticated user's domain" width="50%"/>
+<figcaption>Showing an authenticated user's domain</figcaption>
+</figure>
+
+Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
+Any integration using [@uauth/js](/login-with-unstoppable/libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/login-with-unstoppable/libraries/uauth-js.md#client) object with the same client options and calling the [user()](/login-with-unstoppable/libraries/uauth-js.md#user) method.
+
+```javascript @uauth/js
+import UAuth from '@uauth/js'
+
+const uauth = new UAuth({
+  // ... options
+})
+
+uauth.user()
+  .then((user) => {
+    // user exists
+    console.log("User information:", user)
+  })
+  .catch(() => {
+    // user does not exist
+  })
+```
+
+```javascript web3-onboard
+import UAuth from '@uauth/js;
+
+const uauthOptions = {
+  clientID: "",
+  redirectUri: ""
+}
+
+new UAuth(uauthOptions).user().then().catch()
+```
+
+```javascript web3-react
+const uauthConnector = new UAuthConnector()
+
+uauthConnector.uauth.user().then().catch()
+```
+
+```javascript web3modal
+import UAuth from '@uauth/js'
+
+const uauthOptions = {
+  clientID: "",
+  redirectUri: ""
+}
+
+const web3ModalOptions = {
+  'custom-uauth': {
+    ...uauthOptions}
+}
+
+const web3Modal = new Web3Modal(web3ModalOptions)
+
+new UAuth(uauthOptions).user().then().catch()
+```
+
+```javascript moralis
+const uauthMoralisConnector = new UAuthMoralisConnector()
+
+uauthMoralisConnector.uauth.user().then().catch()
+
+```
+
+The `user()` method will return a [UserInfo](/login-with-unstoppable/libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
+
+```json
+{
+  "sub" : "domain.tld", // The domain used to login
+  "wallet_address" : "0x . . . ", // The Ethereum wallet that owns the domain
+  "wallet_type_hint" : "web3",
+  "eip4361_message" : "identity.unstoppable domains wants you sign in with your Ethereum account: . . . ",
+  "eip4361_signature" : "0x . . . ",
+}
+```
 
 ## Step 4: Promote Your Application
 

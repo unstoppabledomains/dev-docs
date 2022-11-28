@@ -41,14 +41,14 @@ pages:
           - label: Auth0
             page: login-integration-guides/auth0-guide.md
         separateorLine: true
-      - label: Login Best Practices
-        page: login-integration-guides/login-best-practices.mdx
       - label: Updating UAuth Libraries
         page: login-integration-guides/update-uauth.md
     separatorLine: true
   - group: Reference
     expanded: false
     pages:
+      - label: Login Best Practices
+        page: login-best-practices.mdx
       - label: Scopes for Login
         page: scopes-for-login.md
       - group: UAuth Libraries

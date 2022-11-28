@@ -30,7 +30,7 @@ import {InjectedConnector} from '@web3-react/injected-connector'
 import {WalletConnectConnector} from '@web3-react/walletconnect-connector'
 import type {AbstractConnector} from '@web3-react/abstract-connector'
 
-// Instanciate your other connectors.
+// Instantiate your other connectors.
 export const injected = new InjectedConnector({supportedChainIds: [1]})
 
 export const walletconnect = new WalletConnectConnector({

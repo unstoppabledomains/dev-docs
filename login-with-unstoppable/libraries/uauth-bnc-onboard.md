@@ -23,7 +23,7 @@ constructor(public options: ConstructorOptions)
 
 ### UAuth
 
-A reference to the UAuth library. Used to construct a UAuth instance if one isn't passed in the constructor.
+A reference to the UAuth library. Used to construct a UAuth instance if one isn't passed to the constructor.
 
 ```typescript  
 public static UAuth: typeof UAuth
@@ -31,7 +31,7 @@ public static UAuth: typeof UAuth
 
 ### registerUAuth()
 
-Assigns pkg to UAuthConnector.UAuth.
+Registers an imported `@uauth/js` package as `UAuthConnector.UAuth.`
 
 ```typescript 
 public static registerUAuth(pkg: typeof UAuth): void
@@ -73,7 +73,7 @@ public async callbackAndWalletSelect(
 
 ### module()
 
-Creates a wallet module used to instanciate an Onboard instance
+Creates a wallet module used to instantiate an Onboard instance
 
 ```typescript
 public module({preferred = true, walletconnect}: ModuleOptions): WalletModule}

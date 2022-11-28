@@ -7,102 +7,13 @@ redirectFrom:
   - /login-with-unstoppable/login-integration-guides/login-ui-configuration/
 ---
 
-import ColorSample from '../../components/color-sample.jsx'
+import ColorSample from '../components/color-sample.jsx'
 
 # Best Practices for Login with Unstoppable
 
-Here are the best practices for integrating your application with Login with Unstoppable.
+The following are some best practices for integrating your application with Login with Unstoppable.
 
-## Accessing User Info
-
-Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
-Integrations using [@uauth/js](/login-with-unstoppable/libraries/uauth-js.md) or any UAuth middleware package that uses it, you can access the user information by instantiating a new `UAuth` object with the same client options and calling the `user()` method.
-
-You can use the access methods below to obtain the user information.
-
-:::info
-The `@uauth/js` code snippet below can be used for [Login with Popup](login-with-popup.md) and [Login without Popup](login-without-popup.md) integrations.
-:::
-
-```javascript @uauth/js
-import UAuth from '@uauth/js'
-
-const uauth = new UAuth({
-  // ... options
-})
-
-uauth.user()
-  .then((user) => {
-    // user exists
-    console.log("User information:", user)
-  })
-  .catch(() => {
-    // user does not exist
-  })
-```
-
-```javascript web3-onboard
-import UAuth from '@uauth/js;
-
-const uauthOptions = {
-  clientID: "",
-  redirectUri: ""
-}
-
-new UAuth(uauthOptions).user().then().catch()
-```
-
-```javascript web3-react
-const uauthConnector = new UAuthConnector()
-
-uauthConnector.uauth.user().then().catch()
-```
-
-```javascript web3modal
-import UAuth from '@uauth/js'
-
-const uauthOptions = {
-  clientID: "",
-  redirectUri: ""
-}
-
-const web3ModalOptions = {
-  'custom-uauth': {
-    ...uauthOptions}
-}
-
-const web3Modal = new Web3Modal(web3ModalOptions)
-
-new UAuth(uauthOptions).user().then().catch()
-```
-
-```javascript moralis
-const uauthMoralisConnector = new UAuthMoralisConnector()
-
-uauthMoralisConnector.uauth.user().then().catch()
-
-```
-
-The `user()` method will return an object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the `"openid wallet"` scopes defined:
-
-```json
-{
-  "sub" : "domain.tld", // The domain used to login
-  "wallet_address" : "0x . . . ", // The Ethereum wallet that owns the domain
-  "wallet_type_hint" : "web3",
-  "eip4361_message" : "identity.unstoppable domains wants you sign in with your Ethereum account: . . . ",
-  "eip4361_signature" : "0x . . . ",
-}
-```
-
-Once a user has successfully authenticated, the application should display the user’s **domain** (and not their **wallet address**) in the application’s UI to confirm the authorization was successful.
-
-<figure>
-<img src="/images/third-UI-example-login-domains.png" alt="Showing an authenticated user's domain" width="50%"/>
-<figcaption>Showing an authenticated user's domain</figcaption>
-</figure>
-
-## Getting the Authorization Account
+## Confirm the Authorization Account
 
 In addition to logging in with the controlling Ethereum or Polygon wallet, the UAuth service allows users to login using certain verified accounts associated with the domain's **ud.me** profile, such as a [Solana wallet address](/login-with-unstoppable/featured-updates.md#login-with-verified-solana-wallet). You can check which account was used to authorize the login session using the [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) method.
 
@@ -123,7 +34,7 @@ const authorization = await uauth.authorization();
 const account = uauth.getAuthorizationAccount(authorization);
 ```
 
-This will return a [VerifiedAddress](/login-with-unstoppable/libraries/uauth-js.md#verifiedaddress) describing the account used.
+This will return a [VerifiedAddress](/login-with-unstoppable/libraries/uauth-js.md#verifiedaddress) describing the account used. For a standard Unstoppable Login, this will be the wallet address that owns the domain.
 
 ## Verify the Login Flow and Scopes
 
@@ -161,7 +72,7 @@ The modals are further described below:
 * **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes).
 The user must sign the transaction using their wallet address in order to share their information with the dApp.
 
-## Login with Unstoppable Buttons
+## Style the Login Buttons
 
 Your integration will need Unstoppable Domains branded login buttons. See the table below for style guidelines.
 
