@@ -67,6 +67,14 @@ https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/security/fi
 The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your partner account earlier.
 :::
 
+Here's a sample response from the [Get Fingerprint Public Key](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostSecurityFingerprintjsKeys) endpoint:
+
+```json
+{
+    "key": "qwerty12345"
+}
+```
+
 :::info
 The endpoint returns a different key when called to avoid rate limitations. Also, the generated Fingerprint `Visitor ID` will always be the same despite the different public keys being returned.
 :::
@@ -129,8 +137,24 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 The `FINGERPRINT_API_KEY` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
 :::
 
+Here's a sample response from the Fingerprint integration:
+
+```json
+{
+    "requestId": "1669648408882.1kcr2m",
+    "confidence": {
+        "score": 0.999170944804056
+    },
+    "meta": {
+        "version": "v1.1.971+673281e1"
+    },
+    "visitorFound": true,
+    "visitorId": "qwerty12345"
+}
+```
+
 :::info
-The `confidence score` is a floating-point number between 0 and 1 that represents the probability of accurate identification. Unstoppable Domains will only accept a `Visitor ID` with a confidence score of at least 90% (0.9).
+The `confidence.score` field is a floating-point number between `0` and `1` that represents the probability of accurate identification. Unstoppable Domains will only accept a `Visitor ID` with a confidence score of at least 90% (0.9).
 :::
 
 ## Step 4: Prepare Request Body
