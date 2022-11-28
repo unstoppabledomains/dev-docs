@@ -10,7 +10,7 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 | Endpoint | Description | Documentation |
 | - | - | - |
 | Orders Endpoints |
-| Buy a Domain or Claim for Free | used to buy domains or mint free domains from Unstoppable Domains | [Buy a Domain or Claim for Free Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) |
+| Buy a Domain or Claim Free Domain | used to buy domains or mint free domains from Unstoppable Domains | [Buy a Domain or Claim Free Domain Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) |
 | Get Order Status | provides the status of your order and tells if the domain has successfully "minted" | [Get Order Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetOrder) |
 | Domains Endpoints |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomain) |
