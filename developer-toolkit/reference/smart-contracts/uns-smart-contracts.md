@@ -305,3 +305,13 @@ The `Pausable` smart contract is used internally by the Unstoppable Domains team
 **Used by:**
 
 * [MintingManager.sol](uns-smart-contracts.md#mintingmanager)
+
+### Strings
+
+The `Strings` smart contract is used to work with string data type in contracts. It simplifies things like splitting domain names to label and extension.
+
+**Source code:** [contracts/utils/Strings.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/utils/Strings.sol)
+
+**Used by:**
+
+* [MintingManager.sol](uns-smart-contracts.md#mintingmanager)
