@@ -129,6 +129,10 @@ The code snippet below shows how to completely integrate Fingerprint verificatio
 The `FINGERPRINT_API_KEY` placeholder in the code snippet above should be replaced with the public key gotten from the `Get Fingerprint Public Key` endpoint.
 :::
 
+:::info
+The `confidence score` is a floating-point number between 0 and 1 that represents the probability of accurate identification. Unstoppable Domains will only accept a `Visitor ID` with a confidence score of at least 90% (0.9).
+:::
+
 ## Step 4: Prepare Request Body
 
 The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
