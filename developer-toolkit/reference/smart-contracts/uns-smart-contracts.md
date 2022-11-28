@@ -236,11 +236,25 @@ The `IUNSRegistry` interface declares all the `UNSRegistry` events and methods (
 
 * [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
+### IRootRegistry
+
+The `IRootRegistry` interface declares a set of methods for depositing and withdrawing (bridging tokens and records) to Polygon.
+
+**Source code:** [contracts/IRootRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/IRootRegistry.sol)
+
+**Implemented by:**
+
+* [RootChainManager](uns-smart-contracts.md#rootchainmanager)
+
 ### IReverseRegistry
 
 The `IReverseRegistry` interface declares a set of events and methods for managing Reverse Resolution records (both read and write).
 
 **Source code:** [contracts/IReverseRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/IReverseRegistry.sol)
+
+**Implemented by:**
+
+* [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
 ## Utility contracts
 
