@@ -294,4 +294,14 @@ Utility contracts are generally used to share common functionality between other
 
 The `MultiSend` smart contract is used internally by the Unstoppable Domains team to fund worker accounts.
 
-**Source code:** [contracts/util/MultiSend.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/utils/MultiSend.sol)
+**Source code:** [contracts/utils/MultiSend.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/utils/MultiSend.sol)
+
+### Pausable
+
+The `Pausable` smart contract is used internally by the Unstoppable Domains team to pause the minting of domains in case of emergencies (hacks).
+
+**Source code:** [contracts/utils/Pausable.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/utils/Pausable.sol)
+
+**Used by:**
+
+* [MintingManager.sol](uns-smart-contracts.md#mintingmanager)
