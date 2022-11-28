@@ -236,6 +236,12 @@ The `IUNSRegistry` interface declares all the `UNSRegistry` events and methods (
 
 * [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
+### IReverseRegistry
+
+The `IReverseRegistry` interface declares a set of events and methods for managing Reverse Resolution records (both read and write).
+
+**Source code:** [contracts/IReverseRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/IReverseRegistry.sol)
+
 ## Utility contracts
 
 Utility contracts are generally used to share common functionality between other smart contracts. This list also includes some contracts that are used internally by the Unstoppable Domains team.
