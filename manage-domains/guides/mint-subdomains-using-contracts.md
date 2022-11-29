@@ -82,6 +82,10 @@ Then, add the record(s) you want pre-filled in the subdomain after minting to th
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
 
+:::info
+Domain records aren't automatically pre-filled in subdomains unless specified during minting. If you do not provide any records when minting a subdomain, you can always add/update them at a later time.
+:::
+
 ## Step 5: Execute the Contract
 
 Click the `Write` button to sign the transaction and execute the contract. After signing the transaction, you can view its details on the blockchain explorer, like so:
