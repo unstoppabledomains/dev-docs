@@ -6,18 +6,22 @@ showNextButton: false
 
 # Web3 React Guide: Login with Unstoppable
 
-This is the basic installation guide for the `web3-react` framework and is best used for React-based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
+This is the basic installation guide for the [web3-react](https://github.com/Uniswap/web3-react/) framework and is best used for React-based single page applications (SPAs). For more information about the UAuth middleware package for web3-react, see the [reference](/login-with-unstoppable/libraries/uauth-web3-react.md) and source code on [github](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
+
+:::warning
+This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses the latest v8 beta branch of `web3-react`. For integrating Login with the previous [v6 branch](https://github.com/Uniswap/web3-react/tree/v6), see the [v6 Web3 React guide](/login-with-unstoppable/login-integration-guides/web3-react-v6-guide.md).
+:::
 
 ## Step 1: Install the Libraries
 
-Install `web3-react` the connectors for MetaMask, WalletConnect, and UAuth with `yarn` or `npm`.
+Install `web3-react` and the connectors for MetaMask, WalletConnect, and UAuth with `yarn` or `npm`.
 
 ```shell yarn
-yarn add @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @uauth/web3-react
+yarn add @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
 
 ```shell npm
-npm install --save @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @uauth/web3-react
+npm install --save @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
 
 ## Step 2: Configure the `web3-react` Library
@@ -30,7 +34,10 @@ Next, configure the MetaMask, WalletConnect, and UAuth connectors for `web3-reac
 import {initializeConnector} from '@web3-react/core'
 import {MetaMask} from '@web3-react/metamask'
 import {WalletConnect} from '@web3-react/walletconnect'
+import UAuth from '@uauth/js'
 import {UAuthConnector} from '@uauth/web3-react'
+
+UAuthConnector.registerUAuth(UAuth);
 
 const metaMask = initializeConnector((actions) => new MetaMask({ actions }));
 
@@ -52,6 +59,7 @@ const uauth = initializeConnector(
       // These values can be copied from your dashboard client configuration
       clientID: process.env.REACT_APP_CLIENT_ID,
       redirectUri: process.env.REACT_APP_REDIRECT_URI,
+      // Scope must include openid and wallet
       scope: 'openid wallet',
 
       // Injected/metamask and walletconnect connectors are required
@@ -112,7 +120,7 @@ function App() {
     else if (!isActivating) {
       setConnectionStatus('Connecting...')
 
-      // Activate the connector and update state
+      // Activate the connector and update states
       connector.activate(1)
         .then(() => {
           setConnectionStatus('Connected')
@@ -124,19 +132,19 @@ function App() {
     }
   }
 
-  // Control connector activation with a button and track simple connection and error state
   return (
+    <>
       <h1>Login with Unstoppable</h1>
       <h3>Status - {(error?.message) ? ("Error: " + error.message) : connectionStatus}</h3>
       
       <button onClick={handleToggleConnect} disabled={false}>
         {isActive ? "Disconnect" : "Connect"}
       </button>
+    </>
   )
 }
 
 export default App
-
 ```
 
 <figcaption> <code>App.jsx</code> </figcaption>

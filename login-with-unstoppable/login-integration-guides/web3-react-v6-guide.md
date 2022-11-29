@@ -1,23 +1,27 @@
 ---
-title: Web3 React Guide for Login with Unstoppable | UD Developer Portal
+title: Web3 React v6 Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
 showNextButton: false
 ---
 
-# Web3 React Guide: Login with Unstoppable
+# Web3 React v6 Guide: Login with Unstoppable
 
 This is the basic installation guide for the `web3-react` framework and is best used for React-based single page applications (SPAs). For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
+
+:::warning
+This guide is for `@uauth/web3-react` version `2.4.0` and earlier, which uses the [v6 branch](https://github.com/Uniswap/web3-react/tree/v6) of web3-react. For integrating login with the latest v8 beta branch, see the [v8 Web3 React guide](/login-with-unstoppable/login-integration-guides/web3-react-guide.md).
+:::
 
 ## Step 1: Install the Libraries
 
 Install with `yarn` or `npm`.
 
 ```shell yarn
-yarn add @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector
+yarn add @web3-react/core@6.1.9 @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector @uauth/web3-react@2.4.0
 ```
 
 ```shell npm
-npm install --save @uauth/web3-react @web3-react/core @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector
+npm install --save @web3-react/core@6.1.9 @web3-react/injected-connector @web3-react/walletconnect-connector @web3-react/abstract-connector @uauth/web3-react@2.4.0
 ```
 
 ## Step 2: Configure the `web3-react` Library

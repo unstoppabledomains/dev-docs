@@ -9,7 +9,7 @@ Login with Unstoppable is in active development and we're working to add new fea
 
 ## Web3-React v8 (Beta) Support
 
-With version `3.0.0`, the `@uauth/web3-react` library now uses the v8 (beta) branch of web3-react. This new version of web3-react makes hooks available for each individual connector. Global state management can be achieved by providing these hooks to the `Web3ReactProvider` or by using the individual connector hooks to listen for connection status changes.
+With version `2.4.1-rc.0`, the `@uauth/web3-react` library now uses the v8 (beta) branch of web3-react. This new version of web3-react makes hooks available for each individual connector. Global state management can be achieved by providing these hooks to the `Web3ReactProvider` or by using the individual connector hooks to listen for connection status changes.
 
 Developers will need to install the `v8.x.x-beta.0` versions of the web3-react core and connector packages to make use of this update. See the updated `web3-react` [integration guide](/login-with-unstoppable/login-integration-guides/web3-react-guide.md) and the more advanced [example app](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) for more information.
 
