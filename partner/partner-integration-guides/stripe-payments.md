@@ -7,6 +7,15 @@ description: This guide shows how to purchase domains using the Stripe payment p
 
 Unstoppable Domains supports [Stripe](https://stripe.com) payments to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
+The following diagram shows the general process between the Partner and Unstoppable Domains during the Stripe payment process.
+
+<figure>
+
+![Success flow for buying domains with Stripe](/images/stripe-payment-success-flow.png '#width=80%;')
+
+<figcaption>Success flow for buying domains with Stripe</figcaption>
+</figure>
+
 ## Step 1: Connect Stripe to Unstoppable Domains
 
 Click on the `Connect` button in the Stripe section of your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. Unstoppable Domains uses different Stripe API keys for the Sandbox and Production environments.

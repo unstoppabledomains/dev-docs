@@ -26,7 +26,7 @@ In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The appl
 
 <figure>
 
-![the crypto payments success flow diagram](/images/crypto-payments-success-flow.png)
+![the crypto payments success flow diagram](/images/crypto-payments-success-flow.svg)
 
 <figcaption>Crypto payments success flow</figcaption>
 </figure>
