@@ -83,6 +83,12 @@ The Redirect URIs follow three rules:
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
 :::
 
+## TLDs
+
+The **TLDs Configuration** page allows Login partners to select which TLDs (also known as domain endings or domain extensions) will be availabe to users as part of this Login client's free and paid domain flows.
+
+View the full list of supported TLDs by clicking the **Manage TLD** button.
+
 ## Payment
 
 The **Payment** page allows Login partners to enable revenue share and receive a percentage of paid domains sold in the integrated login flow. This requires no additional code from existing login integrations. To enable this feature:
