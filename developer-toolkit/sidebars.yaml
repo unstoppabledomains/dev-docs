@@ -26,10 +26,18 @@ pages:
                     page: resolution-integration-methods/resolution-service/endpoints/get-records-for-owner-addresses.md
                   - label: Get Domain Transfer Events
                     page: resolution-integration-methods/resolution-service/endpoints/get-domain-transfer-events.md
-              - label: Get Reverse Record for an Address
-                page: resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md
-              - label: Get Supported TLDs
-                page: resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md
+              - group: Reverse
+                expanded: false
+                pages:
+                  - label: Get Reverse Record for an Address
+                    page: resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address.md
+                  - label: Get Reverse Record for Multiple Addresses
+                    page: resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-multiple-addresses.md
+              - group: TLDs
+                expanded: false
+                pages:
+                  - label: Get Supported TLDs
+                    page: resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md
               - group: Meta Data
                 expanded: false
                 pages:
