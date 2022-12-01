@@ -25,15 +25,11 @@ This endpoint returns all the resolution records configured to a domain in a sin
 | - | - | - | - |
 | domain | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
-## Query Params
-
-* none
-
 ## Returns
 
 An object with the following fields:
 
-* `meta`: A key-value dictionary with general information about the domain:
+* `meta`: A key-value dictionary with general information about the domain.
     * `domain`: (string) Name of the domain.
     * `owner`: (string) The wallet address that owns the domain.
     * `resolver`: (string) The Resolver smart contract address. This contract is responsible for managing domain records.

@@ -25,10 +25,6 @@ This endpoint returns the image data of a domain name in `image/svg+xml` format.
 | - | - | - | - |
 | domainOrToken | STRING | YES | A domain name or the [namehash](/getting-started/domain-registry-essentials/namehashing.md) of a domain registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
-## Query Params
-
-* none
-
 ## Returns
 
 The image data of the domain in `image/svg+xml` format.

@@ -25,15 +25,11 @@ This endpoint will return the reverse record of the wallet address and all the d
 | - | - | - | - |
 | walletAddress | STRING | YES | A wallet address to query for reverse record |
 
-## Query Params
-
-* none
-
 ## Returns
 
 An object with the following fields:
 
-* `meta`: A key-value dictionary with general information about the domain:
+* `meta`: A key-value dictionary with general information about the domain.
     * `domain`: (string) Name of the domain.
     * `owner`: (string) The wallet address that owns the domain.
     * `resolver`: (string) The Resolver smart contract address. This contract is responsible for managing domain records.

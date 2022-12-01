@@ -25,10 +25,6 @@ This endpoint tracks the blocks and blockchains domain names are being transferr
 | - | - | - | - |
 | domain | STRING | YES | A domain name registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
-## Query Params
-
-* none
-
 ## Returns
 
 An object with a `data` field that contains a list of domain transfer events.

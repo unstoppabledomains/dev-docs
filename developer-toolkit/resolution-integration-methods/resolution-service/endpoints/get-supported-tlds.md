@@ -19,14 +19,6 @@ This endpoint returns all the domain endings provided and supported by Unstoppab
 
 * none
 
-## URL Params
-
-* none
-
-## Query Params
-
-* none
-
 ## Returns
 
 An object with a `tlds` field that contains a list of domain endings supported by Unstoppable Domains.

@@ -19,10 +19,6 @@ This endpoint returns all the records attached to multiple domain names in a sin
 
 * Bearer Token
 
-## URL Params
-
-* none
-
 ## Query Params
 
 | Name | Type | Mandatory | Description |

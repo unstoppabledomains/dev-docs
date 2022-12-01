@@ -19,10 +19,6 @@ This endpoint returns the domain name records and metadata owned by wallet addre
 
 * Bearer Token
 
-## URL Params
-
-* none
-
 ## Query Params
 
 | Name | Type | Mandatory | Description |

@@ -25,10 +25,6 @@ This endpoint returns the ERC721 metadata information of a domain name in a sing
 | - | - | - | - |
 | domainOrToken | STRING | YES | A domain name or the [namehash](/getting-started/domain-registry-essentials/namehashing.md) of a domain registered by Unstoppable Domains. See all the [supported domain endings](../overview.md#supported-domains-endings) |
 
-## Query Params
-
-* none
-
 ## Returns
 
 An object with the following fields:
