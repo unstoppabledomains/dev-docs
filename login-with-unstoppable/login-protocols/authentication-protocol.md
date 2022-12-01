@@ -2,6 +2,8 @@
 title: Login Authentication Protocol | Unstoppable Domains Developer Portal
 description: This page describes the extension of the OpenID Connect protocol used by Login with Unstoppable to obtain a user's wallet signature.
 showNextButton: false
+redirectFrom:
+    - /login-with-unstoppable/high-level-overview/authentication-protocol/
 ---
 
 # Authentication Protocol

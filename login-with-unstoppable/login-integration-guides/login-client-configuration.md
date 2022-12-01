@@ -2,6 +2,10 @@
 title: Login Client Configuration | Unstoppable Domains Developer Portal
 description: This page explains the settings currently available for configuring a Login with Unstoppable client.
 showNextButton: false
+redirectFrom:
+    - /login-with-unstoppable/register-your-application/
+    - /login-with-unstoppable/get-started-login/register-your-application/
+    - /login-with-unstoppable/login-client-configuration/
 ---
 
 # Login Client Configuration

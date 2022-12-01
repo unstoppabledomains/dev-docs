@@ -1,6 +1,8 @@
 ---
 title: Humanity Check for Login | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the Humanity Check feature for Login with Unstoppable.
+redirectFrom:
+    - /login-with-unstoppable/humanity-check/humanity-check-for-login/
 ---
 
 # Humanity Check for Login

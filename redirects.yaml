@@ -79,48 +79,6 @@
 '/build-a-decentralized-website/examples-of-d-websites':
   to: '/d-websites/dwebsite-examples/'
   type: 301
-'/login-with-unstoppable/high-level-overview':
-  to: '/login-with-unstoppable/'
-  type: 301
-'/login-with-unstoppable/register-your-application':
-  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
-  type: 301
-'/login-with-unstoppable/get-started-login/register-your-application/':
-  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
-  type: 301
-'/login-with-unstoppable/login-client-configuration':
-  to: '/login-with-unstoppable/login-integration-guides/login-client-configuration/'
-  type: 301
-'/login-with-unstoppable/developer-integration':
-  to: '/login-with-unstoppable/get-started-login/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/':
-  to: '/login-with-unstoppable/get-started-login/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/integration-pathways/':
-  to: '/login-with-unstoppable/get-started-login/'
-  type: 301
-'/login-with-unstoppable/get-started-login/integration-pathways/':
-  to: '/login-with-unstoppable/get-started-login/'
-  type: 301
-'/login-with-unstoppable/humanity-check/humanity-check-for-login/':
-  to: '/login-with-unstoppable/humanity-check/'
-  type: 301
-'/login-with-unstoppable/get-started-login/scopes-for-login/':
-  to: '/login-with-unstoppable/scopes-for-login'
-  type: 301
-'/login-with-unstoppable/troubleshooting-guide':
-  to: '/login-with-unstoppable/troubleshoot/troubleshooting-guide/'
-  type: 301
-'/login-with-unstoppable/login-error-codes':
-  to: '/login-with-unstoppable/troubleshoot/login-error-codes/'
-  type: 301
-'/login-with-unstoppable/get-started-login/login-faq':
-  to: '/login-with-unstoppable/login-faq'
-  type: '301'
-'/login-with-unstoppable/humanity-check/humanity-check-faq/':
-  to: '/login-with-unstoppable/humanity-check-faq/'
-  type: 301
 '/polygon-l2-network/polygon-high-level-overview':
   to: '/manage-domains/polygon-overview/'
   type: 301
@@ -169,9 +127,6 @@
 '/build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website':
   to: '/d-websites/build-website/'
   type: 301
-'/login-with-unstoppable/high-level-overview/authentication-protocol':
-  to: '/login-with-unstoppable/login-protocols/authentication-protocol/'
-  type: 301
 '/send-and-receive-crypto-payments/direct-blockchain-calls/resolve-unstoppable-domain-names':
   to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/'
   type: 301
@@ -180,27 +135,6 @@
   type: 301
 '/allow-my-users-to-manage-existing-domains/managing-domain-ownership/domains-configuration':
   to: '/manage-domains/domains-configuration/'
-  type: 301
-'/login-with-unstoppable/high-level-overview/authorization-server':
-  to: '/login-with-unstoppable/login-protocols/authorization-server/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/login-with-popup':
-  to: '/login-with-unstoppable/login-integration-guides/login-with-popup/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/login-without-popup':
-  to: '/login-with-unstoppable/login-integration-guides/login-without-popup/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/web3-react-guide':
-  to: '/login-with-unstoppable/login-integration-guides/web3-react-guide/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/web3-modal-guide':
-  to: '/login-with-unstoppable/login-integration-guides/web3-modal-guide/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/bnc-onboard-guide':
-  to: '/login-with-unstoppable/login-integration-guides/bnc-onboard-guide/'
-  type: 301
-'/login-with-unstoppable/login-integration-guides/node-js-server-guide':
-  to: '/login-with-unstoppable/login-integration-guides/node-js-server-guide/'
   type: 301
 '/reseller/reseller-integration-guides/reseller-pathways/':
   to: '/partner/integration-paths/'

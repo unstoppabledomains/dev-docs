@@ -1,6 +1,11 @@
 ---
 title: Getting Started with Login | Unstoppable Domains Developer Portal
 description: This page provides a step-by-step overview of the Login integration process. This feature works for Polygon and Ethereum domains.
+redirectFrom:
+  - /login-with-unstoppable/developer-integration
+  - /login-with-unstoppable/login-integration-guides/
+  - /login-with-unstoppable/login-integration-guides/integration-pathways/
+  - /login-with-unstoppable/get-started-login/integration-pathways/
 ---
 
 # Getting Started with Login

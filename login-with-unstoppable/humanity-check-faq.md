@@ -1,6 +1,8 @@
 ---
 title: Humanity Check Frequently Asked Questions | UD Developer Portal
 description: Frequently asked questions about the Humanity Check feature of the Login With Unstoppable service.
+redirectFrom:
+    - /login-with-unstoppable/humanity-check/humanity-check-faq/
 ---
 
 # Humanity Check Frequently Asked Questions
