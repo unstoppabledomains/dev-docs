@@ -66,6 +66,10 @@ After adding your IP address, you will be redirected to the Unstoppable Domains 
 <figcaption>UD Sandbox homepage</figcaption>
 </figure>
 
+:::info
+Please see the [Get a Test Domain using Unstoppable Website Faucet](/getting-started/test-domains/faucet.md) guide for instructions on minting a free domain for testing purposes.
+:::
+
 ## Sandbox Environment URLs
 
 ### Sandbox Website
