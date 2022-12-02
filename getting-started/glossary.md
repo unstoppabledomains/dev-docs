@@ -23,7 +23,7 @@ Crypto Name Service (CNS) is the [name service](#name-service) handling `.crypto
 
 Decentralized Application (DApp), also known as Decentralized Website (D-Website), is an application or website that exist and run on a blockchain or peer-to-peer network of computers instead of a single computer and is outside the purview and control of a single authority. They are usually powered by [smart contracts](#smart-contract).
 
-## Domain Actions API
+### Domain Actions API
 
 An API service provided by Unstoppable Domains for generating transactions to interact with a domain on the blockchain. It allows partners to perform actions such as updating domain records, configuring reverse resolution, or transferring domain ownership with a single API request, without having to handle the complex details of forming transactions on the client.
 
@@ -42,6 +42,10 @@ A computer running the Ethereum client software responsible for mining Ethereum,
 ### Gas
 
 A fee or pricing value paid by a user to successfully conduct a transaction or execute a [smart contract](#smart-contract) on the blockchain. This fee depends upon the transaction’s complexity and the current demand on the network.
+
+### Gas Compensation Policy
+
+A set of rules that determine how transaction fees ([gas](#gas)) are paid when executing a domain action on the blockchain.
 
 ### Humanity Check
 
