@@ -1,11 +1,11 @@
 ---
 title: Bridge Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to create a domain action request to bridge domains between Ethereum and Polygon using the Domains Actions API.
+description: This guide shows how to create a domain action request to bridge domains between Ethereum and Polygon using the Domain Actions API.
 ---
 
 # Bridge Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **bridge domains between Ethereum and Polygon** without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **bridge domains between Ethereum and Polygon** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -32,7 +32,7 @@ The request body contains information about your order and must be in JSON forma
   * `resetRecords`: (boolean) Setting this value to `true` will reset the domain's records before bridging, while `false` will keep the records after the bridging.
   * `resetReverse`: (boolean) Setting this value to `true` will remove reverse resolution records before bridging, while `false` will remove the reverse resolution records after the bridging.
 * `domain`: (string) The domain name you want to bridge.
-* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Use the Create Domain Action Request Endpoint
 

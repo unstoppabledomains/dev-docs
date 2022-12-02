@@ -1,11 +1,11 @@
 ---
 title: Transfer Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to create a domain action request to transfer domains using the Domains Actions API.
+description: This guide shows how to create a domain action request to transfer domains using the Domain Actions API.
 ---
 
 # Transfer Domain Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **transfer a domain name** without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **transfer a domain name** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -32,7 +32,7 @@ The request body contains information about your order and must be in JSON forma
   * `to`: (string) The wallet address where the domain name should be transferred to.
   * `resetRecords`: (boolean) Setting this value to `true` will reset the domain's records before transferring, while `false` will keep the records after the transfer.
 * `domain`: (string) The domain name you want to transfer.
-* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Use the Create Domain Action Request Endpoint
 

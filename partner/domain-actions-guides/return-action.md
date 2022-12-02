@@ -1,11 +1,11 @@
 ---
 title: Return Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to create a domain action request to return a domain to Unstoppable Domains and receive a refund using the Domains Actions API.
+description: This guide shows how to create a domain action request to return a domain to Unstoppable Domains and receive a refund using the Domain Actions API.
 ---
 
 # Return Domain Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains** and receive a refund without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -25,7 +25,7 @@ The request body contains information about your order and must be in JSON forma
 
 * `action`: (string) The domain action you want to perform. To return domains, the value should be `"Return"`.
 * `domain`: (string) The domain name you want to return.
-* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Use the Create Domain Action Request Endpoint
 

@@ -22,7 +22,7 @@ Reverse Resolution works by having domain owners set a reverse record for their 
 
 ## Choose a Configuration Path
 
-There are several ways to set a reverse record for your UD domains, detailed in the chart below.
+There are several ways to set a reverse record for your UD domains, detailed in the table below.
 
 | Pathway | Description | Configuration Guides |
 | - | - | - |
@@ -31,7 +31,7 @@ There are several ways to set a reverse record for your UD domains, detailed in 
 
 ## Choose an Integration Path
 
-There are several ways to integrate Unstoppable's Reverse Resolution feature into your application, detailed in the chart below. Developers are encouraged to integrate more than one pathway.
+There are several ways to integrate Unstoppable's Reverse Resolution feature into your application, detailed in the table below. Developers are encouraged to integrate more than one pathway.
 
 | Pathway | Description | Integration Guides |
 | - | - | - |

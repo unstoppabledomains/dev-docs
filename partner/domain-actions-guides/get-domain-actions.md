@@ -1,11 +1,11 @@
 ---
 title: Get Domain Actions Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to retrieve the domain actions performed by a user, domain or owner address using the Domains Actions API.
+description: This guide shows how to retrieve the domain actions performed by a user, domain or owner address using the Domain Actions API.
 ---
 
 # Get Domain Actions Guide
 
-The Domains Actions API offers the functionality to **retrieve the domain actions** performed by a user, domain or owner address.
+The Domain Actions API offers the functionality to **retrieve the domain actions** performed by a user, domain or owner address.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

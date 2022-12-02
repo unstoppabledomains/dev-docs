@@ -1,11 +1,11 @@
 ---
 title: SetReverseResolution Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to configure reverse resolution records using the Domains Actions API.
+description: This guide shows how to configure reverse resolution records using the Domain Actions API.
 ---
 
 # SetReverseResolution Domain Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -30,7 +30,7 @@ The request body contains information about your order and must be in JSON forma
 * `parameters`: A key-value dictionary with additional information about the action:
   * `remove`: (boolean) Setting this value to `true` will remove reverse resolution records, while `false` will set reverse resolution records.
 * `domain`: (string) The domain name you want to set reverse resolution records.
-* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
 :::info
 The `SetReverseResolution` domain action sets the transaction message signer address as a reverse address for the domain by default.

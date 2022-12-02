@@ -19,7 +19,7 @@ After [setting up access to the Partner API](index.md), you must obtain your `re
 
 Before you integrate free or paid domain minting (via Stripe or Redirect URLs) payment flows, you must implement a domain search functionality into your application. Unstoppable Domains provides a set of endpoints to provide domain suggestions, check the availability of domain names, and reserve free domain names.
 
-| Endpoint | Description | Integration Guides |
+| Pathway | Description | Integration Guides |
 | - | - | - |
 | Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](partner-integration-guides/get-domains-suggestions.md) |
 | Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
@@ -28,7 +28,7 @@ Before you integrate free or paid domain minting (via Stripe or Redirect URLs) p
 
 ## Step 3: Choose Your Integration Path
 
-There are several ways to integrate with Unstoppable's Partner API, detailed in the chart below. Partners are encouraged to integrate more than one pathway.
+There are several ways to integrate with Unstoppable's Partner API, detailed in the table below. Partners are encouraged to integrate more than one pathway.
 
 | Pathway | Description | Integration Guides |
 | - | - | - |

@@ -40,8 +40,8 @@ pages:
   - group: Domain Action API Guides
     expanded: false
     pages:
-      # - page: domain-actions-guides/overview.md
-      #   label: Domain Actions API Overview
+      - page: domain-actions-guides/overview.md
+        label: Domain Actions API Overview
       - group: Create Domain Action Request Guides
         expanded: false
         pages:

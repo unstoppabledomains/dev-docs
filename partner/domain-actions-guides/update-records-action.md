@@ -1,11 +1,11 @@
 ---
 title: UpdateRecords Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to create a domain action request to update resolution records using the Domains Actions API.
+description: This guide shows how to create a domain action request to update resolution records using the Domain Actions API.
 ---
 
 # UpdateRecords Domain Action Guide
 
-The Domains Actions API offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -30,7 +30,7 @@ The request body contains information about your order and must be in JSON forma
 * `parameters`: A key-value dictionary with additional information about the action:
   * `records`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values.
 * `domain`: (string) The domain name you want to update it's records.
-* `gasCompensationPolicy`: (string) The gas compensation policy that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Use the Create Domain Action Request Endpoint
 

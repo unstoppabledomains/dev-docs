@@ -1,11 +1,11 @@
 ---
 title: Get Domain Action Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to retrieve the details of a domain action request using the Domains Actions API.
+description: This guide shows how to retrieve the details of a domain action request using the Domain Actions API.
 ---
 
 # Get Domain Action Guide
 
-The Domains Actions API offers the functionality to **retrieve the details** of a domain action request.
+The Domain Actions API offers the functionality to **retrieve the details** of a domain action request with its domain action ID.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
