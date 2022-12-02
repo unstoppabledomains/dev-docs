@@ -7,7 +7,7 @@ description: This page provides a high-level overview of the Domain Actions API 
 
 Unstoppable Domains provides the Domain Actions API for conveniently generating the transactions you need to perform to interact with a domain on the blockchain, saving you the burden of forming them on the client.
 
-The Domain Actions API provides a convenient and efficient way for Partners to perform transactions on the blockchain (e.g., update domain records, configure reverse resolution, or transfer domain ownership) with a single API request without having to handle the details themselves.
+With the Domain Actions API, Partners can quickly and efficiently perform transactions on the blockchain (e.g., update domain records, configure reverse resolution, or transfer domain ownership) with a single API request without having to handle the complex details themselves.
 
 <!-- The following diagram shows the general process between the Partner and Unstoppable Domains when using the Domain Actions API. -->
 

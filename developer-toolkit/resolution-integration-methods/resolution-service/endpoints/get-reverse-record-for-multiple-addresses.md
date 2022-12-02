@@ -31,6 +31,10 @@ The request body contains information about your query and must be in JSON forma
 }
 ```
 
+:::info
+The `addresses` field can accept a maximum of 1000 wallet addresses per request to query for reverse resolution records.
+:::
+
 ## Returns
 
 An object with a `data` field that contains a list of reverse resolution records:
