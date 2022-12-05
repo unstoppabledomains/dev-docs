@@ -1,5 +1,5 @@
 ---
-title: UNS L1 to UNS L2--Domain Deposit Guide | UD Developer Portal
+title: UNS L1 to UNS L2 - Domain Deposit Guide | UD Developer Portal
 description: This guide explains the process for depositing a domain from UNS Layer 1 (Ethereum) registry to the UNS Layer 2 (Polygon) registry.
 redirectFrom:
   - /polygon/uns1-to-uns2/

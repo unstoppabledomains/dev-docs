@@ -1,5 +1,5 @@
 ---
-title: CNS L1 to UNS L2--Domain Deposit Guide | UD Developer Portal
+title: CNS L1 to UNS L2 - Domain Deposit Guide | UD Developer Portal
 description: This guide explains the process for depositing a domain from CNS Layer 1 (Ethereum) registry to the UNS Layer 2 (Polygon) registry.
 redirectFrom:
   - /polygon/cns1-to-uns2/

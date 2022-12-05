@@ -50,9 +50,9 @@ For a `Regular` transaction, the process is slightly different. After signing th
 
 <figure>
 
-![Sign message on Etherscan](/images/etherscan-sign-message.png '#width=40%;')
+![Signing messages on Etherscan](/images/etherscan-sign-message.png '#width=40%;')
 
-<figcaption>Sign message on Etherscan</figcaption>
+<figcaption>Signing messages on Etherscan</figcaption>
 </figure>
 
 ## Step 3: Submit Domain Action Signature

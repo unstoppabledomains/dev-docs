@@ -44,11 +44,11 @@ Here is an example of a request that you can use to create a domain action reque
 ### Request
 
 ```bash
-curl --location --request POST 'https://unstoppabledomains.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "action": "Return",
-    "domain": "lordghostx.wallet",
+    "domain": "reseller-test-udtesting-602716235250.crypto",
     "gasCompensationPolicy": "CompensateFree"
 }'
 ```
