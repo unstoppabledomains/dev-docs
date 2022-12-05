@@ -7,7 +7,7 @@ description: This guide shows how to mint free domains with your Partner account
 
 Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following API endpoints: [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestionsFree), [Reserve Free Domain Name](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostDomainReserve), and [Claim Free Domain](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders).
 
-The following diagram shows the general process between the Partner and Unstoppable Domains during the free domain minting process.
+The diagram below illustrates the general process between a Partner and Unstoppable Domains during the process of minting a free domain.
 
 <figure>
 
