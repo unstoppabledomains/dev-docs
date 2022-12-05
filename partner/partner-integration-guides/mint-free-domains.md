@@ -159,7 +159,7 @@ The `confidence.score` field is a floating-point number between `0` and `1` that
 
 ## Step 4: Prepare Request Body
 
-The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
+When making an order, the body must contain information about your domain order in JSON format with the following structure:
 
 ```javascript
 {

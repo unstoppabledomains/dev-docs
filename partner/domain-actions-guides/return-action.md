@@ -13,7 +13,7 @@ The Domain Actions API offers the functionality to generate a list of transactio
 
 ## Step 2: Prepare Request Body
 
-The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
+When making a domain action request, the body must contain information about your domain action in JSON format with the following structure:
 
 ```javascript
 {
@@ -33,7 +33,7 @@ The request body contains information about your order and must be in JSON forma
 
 ## Example
 
-Here is an example request to create the domain action request to return a domain with the following parameters:
+Here is an example of a request that you can use to create a domain action request to return a domain with the following parameters:
 
 | Parameter | Value |
 | - | - |

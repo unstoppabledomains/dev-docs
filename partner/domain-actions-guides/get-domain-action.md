@@ -19,7 +19,7 @@ The Domain Actions API offers the functionality to **retrieve the details** of a
 
 ## Step 3: Use the Get Domain Action Endpoint
 
-Send a `GET` request with the `domain action Id` to the [Get Domain Action](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) endpoint. Here is the URL for our API environments:
+Send a `GET` request with the `domain action Id` to the [Get Domain Action](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) endpoint:
 
 Sandbox Environment:
 
@@ -40,7 +40,7 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 
 ## Example
 
-Here is an example request to retrieve the details of a domain action request with `domain action id` of `10`:
+Here is an example of a request that you can use to retrieve the details of a domain action request with a `domain action ID` of `10`:
 
 ### Request
 
@@ -91,7 +91,7 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 ```
 
 :::success Congratulations!
-You have successfully retrieved the details of a domain action request with the Domain Actions API.
+The Domain Actions API has successfully provided the details of a requested domain action.
 :::
 
 <embed src="/snippets/_discord.md" />

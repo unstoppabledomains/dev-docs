@@ -5,7 +5,7 @@ description: This page details the Partner API endpoints and links to the extern
 
 # Partner API Endpoints
 
-Below is a table of all the API endpoints provided by the Partner API, a description of their function, and links to their respective documentation. For more details about the endpoints, see the [Partner API endpoint specification](https://docs.unstoppabledomains.com/openapi/reference/).
+The table below lists all the API endpoints provided by the Partner API, along with a description of their function and links to their documentation. For more information about the endpoints, please consult the [Partner API endpoint specification](https://docs.unstoppabledomains.com/openapi/reference/).
 
 | Endpoint | Description | Documentation |
 | - | - | - |
@@ -28,11 +28,11 @@ Below is a table of all the API endpoints provided by the Partner API, a descrip
 
 ## Rate Limits
 
-The rate limits for the Partner API endpoints are limited to **60 requests per IP per hour**. However, this is subject to change in the future.
+Currently, the rate limits for the Partner API endpoints are set at **60 requests per IP per hour**. Please note that these limits are subject to change in the future.
 
 ## Fork Our Postman Collection
 
-Unstoppable Domains provides a Postman collection that you can fork to your workspace and interact with the Partner API in one click.
+Unstoppable Domains offers a Postman collection that you can easily import into your workspace to quickly interact with the Partner API.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19507736-d4edfdfc-0eb1-4def-bea7-d7bcbabf3aa9?action=collection%2Ffork&collection-url=entityId%3D19507736-d4edfdfc-0eb1-4def-bea7-d7bcbabf3aa9%26entityType%3Dcollection%26workspaceId%3D6762865c-b510-4216-ba7f-45cd07f164c7#?env%5BSandbox%20-%20Partner%20API%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnVkLXNhbmRib3guY29tIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiJodHRwczovL2FwaS51ZC1zYW5kYm94LmNvbSIsInNlc3Npb25JbmRleCI6MH0seyJrZXkiOiJodHRwX2F1dGgiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOmZhbHNlLCJ0eXBlIjoic2VjcmV0Iiwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjoxfSx7ImtleSI6ImFwaV9rZXkiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJzZWNyZXQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjJ9LHsia2V5IjoicmVzZWxsZXJfaWQiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0Iiwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjozfSx7ImtleSI6InN0cmlwZV90ZXN0X2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InNlY3JldCIsInNlc3Npb25WYWx1ZSI6IiIsInNlc3Npb25JbmRleCI6NH1d)
 

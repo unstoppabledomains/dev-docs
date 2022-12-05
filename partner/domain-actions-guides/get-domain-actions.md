@@ -28,7 +28,7 @@ You need to provide at least one of `userId`, `domain`, or `ownerAddress` in eve
 
 ## Step 3: Use the Get Domain Actions Endpoint
 
-Send a `GET` request with the query parameters to the [Get Domain Actions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) endpoint. Here is the URL for our API environments:
+Send a `GET` request with the query parameters to the [Get Domain Actions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) endpoint:
 
 Sandbox Environment:
 
@@ -49,7 +49,7 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 
 ## Example
 
-Here is an example request to create the domain action request to transfer a domain with the following parameters:
+Here is an example of a request that you can use to retrieve domain actions with the following parameters:
 
 | Parameter | Value |
 | - | - |
@@ -105,7 +105,7 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 ```
 
 :::success Congratulations!
-You have successfully retrieved the domain actions performed by a domain with the Domain Actions API.
+The Domain Actions API has successfully provided the details of domain actions performed by a specified domain.
 :::
 
 <embed src="/snippets/_discord.md" />

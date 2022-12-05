@@ -13,7 +13,7 @@ The Partner API offers an endpoint that allows Partners to reserve free and avai
 
 ## Step 2: Prepare Request Body
 
-The request body contains information about your order and must be in JSON format for the API. Here’s the structure:
+When reserving a domain, the body must contain information about your reservation in JSON format with the following structure:
 
 ```javascript
 {

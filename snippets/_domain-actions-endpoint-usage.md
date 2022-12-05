@@ -1,4 +1,4 @@
-Send a `POST` request with the request body you have prepared to the [Create Domain Action Request](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) endpoint. Here is the URL for our API environments:
+Send a `POST` request to the [Create Domain Action Request](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions) endpoint. To make a successful request, you must include the request body you have prepared, which should contain information about the domain action you want to perform.
 
 Sandbox Environment:
 
