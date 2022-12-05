@@ -37,7 +37,6 @@ The following table describes the fields for the cosmetic configuration UI secti
 | Policy URI            | Policy URI will display at the bottom of the UI.                                                                            |
 | Terms of Service URI  | Terms of Service URI will display at the bottom of the UI.                                                                  |
 
-
 ## Login
 
 The **Login** configuration page contains settings and metadata specific to Login with Unstoppable integrations.
@@ -124,13 +123,51 @@ The **Payment** page allows Login partners to enable revenue share and receive a
 <figcaption>Send revenue share request</figcaption>
 </figure>
 
-4. Once your revenue share has been approved, connect a Stripe account to start receiving payments.
+4. Once your revenue share has been approved, click **Connect Stripe Live** and connect a Stripe account to start receiving payments.
 
 <figure>
 
 ![Stripe account connected and revenue share configuration complete](/images/login-client-rev-share-complete.png '#width=65%')
 
 <figcaption>Revenue share configuration complete</figcaption>
+</figure>
+
+## Badges
+
+The **Badges** configuration page allows partners to submit custom badges that can be earned and displayed on users' Unstoppable Domains profile pages. For an example of a ud.me profile with multiple badges earned see [ud.me/sandy.nft](https://ud.me/sandy.nft).
+
+<figure>
+
+![Badges page with an existing badge](../../static/images/login-client-config-badges-list.png '#width=65%;')
+
+
+<figcaption>Badges configuration page with a pending badge</figcaption>
+</figure>
+
+For clients with no existing badges, the badge configuration form will be displayed by default. For clients with one or more existing badges defined, click **Create new badge** or click on any badge in the list to edit.
+
+<figure>
+
+![Badge Configuration Settings](../../static/images/login-client-config-edit-badge.png '#width=50%')
+
+<figcaption>Badge configuration settings</figcaption>
+</figure>
+
+|    Configuration Field    | Description |
+| ------------------------- | ----------- |
+| Badge Logo                | The URI of the image to be displayed in the ud.me profile of users who have earned this badge.            |
+| Badge Name                | Short name for badge. 60 characters or less.           |
+| Badge Description         | A description of the badge and the conditions required for users to earn it. 250 characters or less.           |
+| Smart Contract Blockchain | The blockchain on which the badge smart contract lives. Currently supports EVM chains.            |
+| Smart Contract Address    | The address of the smart contract defining the conditions under which users can earn this badge. The contract will be checked periodically and the badge automatically added to qualifying ud.me profiles. |
+
+Click **Confirm changes** to save the new or modified badge configuration or click **Preview Badge** to see a preview modal of the configured badge.
+
+<figure>
+
+![Badge preview](../../static/images/login-client-config-badge-preview.png '#height=150px;')
+
+<figcaption>Badge preview</figcaption>
 </figure>
 
 ## Advanced Configuration
