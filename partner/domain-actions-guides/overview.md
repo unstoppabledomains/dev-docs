@@ -40,9 +40,20 @@ There are several functionalities offered by the Domain Actions API to interact 
 | Return | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](return-action.md) |
 | SetReverseResolution | generate transactions to configure reverse resolution records for a domain | [SetReverseResolution Action Guide](set-reverse-resolution-action.md) |
 | Transfer | generate transactions to transfer a domain name | [Transfer Action Guide](transfer-action.md) |
-| Bridge | generate transactions to bridge domains between Ethereum and Polygon | [Bridge Action Guide](bridge-action.md) |
+| Deposit or Withdraw | generate transactions to bridge domains between Ethereum and Polygon and vice versa | [Deposit or Withdraw Action Guide](bridge-action.md) |
 
 ## Step 2: Sign the Transaction
+
+When working with a `Meta` transaction, you must sign the `tx.messageToSign` obtained from the Domain Actions API using the `ethers.js` library or a tool such as [Etherscan](https://etherscan.io/verifiedSignatures) or [Polygonscan](https://polygonscan.com/verifiedSignatures). After signing the message, you must send the signature to the Domain Actions API.
+
+For a `Regular` transaction, the process is slightly different. After signing the message, you must send it to the transaction pool. Once the transaction has been added to the pool, you send the `transaction hash` to the Domain Actions API.
+
+<figure>
+
+![Sign message on Etherscan](/images/etherscan-sign-message.png '#width=40%;')
+
+<figcaption>Sign message on Etherscan</figcaption>
+</figure>
 
 ## Step 3: Submit Domain Action Signature
 

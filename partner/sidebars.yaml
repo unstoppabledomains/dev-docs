@@ -54,7 +54,7 @@ pages:
           - page: domain-actions-guides/transfer-action.md
             label: Transfer Action Guide
           - page: domain-actions-guides/bridge-action.md
-            label: Bridge Action Guide
+            label: Deposit or Withdraw Action Guide
       - page: domain-actions-guides/get-domain-action.md
         label: Get Domain Action Guide
       - page: domain-actions-guides/get-domain-actions.md
