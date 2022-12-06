@@ -35,9 +35,9 @@ Ethereum address to receive cryptocurrency payments.
 
 Bitcoin address to receive cryptocurrency payments.
 
-| Format                                                                                                                                       | Example                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:\~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
+| Format | Example |
+| - | - |
+| `bc1[ac-hj-np-z02-9]{6,87}$|^[13][a-km-zA-HJ-NP-Z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
 
 **`crypto.<TICKER>.address`**
 
@@ -57,19 +57,19 @@ Some currencies exist on multiple chains.
 
 | Format                                                                             | Example                              |
 | ---------------------------------------------------------------------------------- | ------------------------------------ |
-| [Address - Tron Docs](https://developers.tron.network/docs/account#address-format) | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk` |
+| `[a-zA-Z0-9]{34}` | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk` |
 
 **`crypto.USDT.version.EOS.address`**
 
 | Format                         | Example              |
 | ------------------------------ | -------------------- |
-| `^[a-z][a-z1-5.]{10}[a-z1-5]$` | `unstoppabledomains` |
+| `[a-z][a-z1-5.]{10}[a-z1-5]` | `unstoppabledomains` |
 
 **`crypto.USDT.version.OMNI.address`**
 
 | Format                                                                                                                                       | Example                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address#:\~:text=A%20Bitcoin%20address%2C%20or%20simply,by%20any%20user%20of%20Bitcoin.) | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
+| `(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
 
 **`crypto.<TICKER>.version.<VERSION>.address`**
 

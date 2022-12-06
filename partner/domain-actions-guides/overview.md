@@ -40,7 +40,7 @@ There are several functionalities offered by the Domain Actions API to interact 
 | Return | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](return-action.md) |
 | SetReverseResolution | generate transactions to configure reverse resolution records for a domain | [SetReverseResolution Action Guide](set-reverse-resolution-action.md) |
 | Transfer | generate transactions to transfer a domain name | [Transfer Action Guide](transfer-action.md) |
-| Deposit or Withdraw | generate transactions to bridge domains between Ethereum and Polygon and vice versa | [Deposit or Withdraw Action Guide](bridge-action.md) |
+| Deposit or Withdraw | generate transactions to bridge domains from Ethereum to Polygon and vice versa | [Deposit or Withdraw Action Guide](bridge-action.md) |
 
 ## Step 2: Sign the Transaction
 
