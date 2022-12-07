@@ -32,7 +32,11 @@ When making a domain action request, the body must contain information about you
 * `domain`: (string) The domain name you want to update it's records.
 * `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
-## Step 3: Use the Create Domain Action Request Endpoint
+## Step 3: Prepare Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Use the Create Domain Action Request Endpoint
 
 <embed src="/snippets/_domain-actions-endpoint-usage.md" />
 

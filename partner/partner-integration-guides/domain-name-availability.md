@@ -18,7 +18,7 @@ The Partner API offers an endpoint that lets you check the availability of a dom
 
 <embed src="/snippets/_reseller-id-location.md" />
 
-## Step 2: Prepare Your Authorization Headers
+## Step 2: Prepare Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 

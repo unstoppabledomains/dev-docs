@@ -31,7 +31,7 @@ The Partner API suggestions endpoints accepts the `search` and `tlds` fields as 
 If your request must include multiple `search` or `tlds` fields, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
 :::
 
-## Step 3: Prepare Your Authorization Headers
+## Step 3: Prepare Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 

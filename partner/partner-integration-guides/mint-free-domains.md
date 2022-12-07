@@ -202,7 +202,7 @@ When making an order, the body must contain information about your domain order 
 You need to provide either the `email` or `phone` parameter in every order request. You can also provide both parameters in your request.
 :::
 
-## Step 5: Prepare Your Authorization Headers
+## Step 5: Prepare Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 

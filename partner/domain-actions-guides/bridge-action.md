@@ -5,7 +5,7 @@ description: This guide shows how to create a domain action request to bridge do
 
 # Deposit or Withdraw Action Guide
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **bridge domains between Ethereum and Polygon** without having to form them on the client.
+The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **bridge domains from Ethereum to Polygon and vice versa** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
@@ -34,7 +34,11 @@ When making a domain action request, the body must contain information about you
 * `domain`: (string) The domain name you want to bridge.
 * `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
 
-## Step 3: Use the Create Domain Action Request Endpoint
+## Step 3: Prepare Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Use the Create Domain Action Request Endpoint
 
 <embed src="/snippets/_domain-actions-endpoint-usage.md" />
 

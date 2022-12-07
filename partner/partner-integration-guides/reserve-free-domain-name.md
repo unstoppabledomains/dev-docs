@@ -23,7 +23,7 @@ When reserving a domain, the body must contain information about your reservatio
 
 To reserve a free and available domain, the partner must provide a unique user identifier (this could be an email or some other internal user identifier). The same identifier must be provided in the `resellerIdentityKey` parameter when minting the domain (using the [Buy a Domain or Claim Free Domain](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint).
 
-## Step 3: Prepare Your Authorization Headers
+## Step 3: Prepare Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 

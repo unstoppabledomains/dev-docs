@@ -30,7 +30,7 @@ The `Multiple Domain Name Availability` endpoint requires a `search` field which
 If your request must include multiple `search` fields, you need to use a new `search` query param instance for each domain name.
 :::
 
-## Step 3: Prepare Your Authorization Headers
+## Step 3: Prepare Authorization Headers
 
 <embed src="/snippets/_auth-headers-preparation.md" />
 

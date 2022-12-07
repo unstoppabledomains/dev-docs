@@ -36,7 +36,11 @@ When making a domain action request, the body must contain information about you
 The `SetReverseResolution` domain action sets the transaction message signer address as a reverse address for the domain by default.
 :::
 
-## Step 3: Use the Create Domain Action Request Endpoint
+## Step 3: Prepare Authorization Headers
+
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Use the Create Domain Action Request Endpoint
 
 <embed src="/snippets/_domain-actions-endpoint-usage.md" />
 

@@ -26,9 +26,13 @@ The Domain Actions API offers the functionality to **retrieve the domain actions
 You need to provide at least one of `userId`, `domain`, or `ownerAddress` in every request. Every other parameter is optional.
 :::
 
-## Step 3: Use the Get Domain Actions Endpoint
+## Step 3: Prepare Authorization Headers
 
-Send a `GET` request with the query parameters to the [Get Domain Actions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) endpoint:
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Use the Get Domain Actions Endpoint
+
+Send a `GET` request with the query parameters and authorization headers to the [Get Domain Actions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions) endpoint:
 
 Sandbox Environment:
 

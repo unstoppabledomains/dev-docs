@@ -17,9 +17,13 @@ The Domain Actions API offers the functionality to **retrieve the details** of a
 | - | - | - | - |
 | actionId | NUMBER | YES | Domain action `id` obtained from the [Create Domain Action Request](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) endpoint |
 
-## Step 3: Use the Get Domain Action Endpoint
+## Step 3: Prepare Authorization Headers
 
-Send a `GET` request with the `domain action Id` to the [Get Domain Action](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) endpoint:
+<embed src="/snippets/_auth-headers-preparation.md" />
+
+## Step 4: Use the Get Domain Action Endpoint
+
+Send a `GET` request with the `domain action Id` and authorization headers to the [Get Domain Action](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction) endpoint:
 
 Sandbox Environment:
 
