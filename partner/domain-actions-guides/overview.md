@@ -44,7 +44,7 @@ There are several functionalities offered by the Domain Actions API to interact 
 
 ## Step 2: Sign the Transaction
 
-When working with a `Meta` transaction, you must sign the `tx.messageToSign` obtained from the Domain Actions API using the `ethers.js` library or a tool such as [Etherscan](https://etherscan.io/verifiedSignatures) or [Polygonscan](https://polygonscan.com/verifiedSignatures). After signing the message, you must send the signature to the Domain Actions API.
+When working with a `Meta` transaction, you must sign the `tx.messageToSign` obtained from the Domain Actions API using the `ethers.js` library or a tool such as [Etherscan](https://etherscan.io/verifiedSignatures), [Polygonscan](https://polygonscan.com/verifiedSignatures), or [Mumbai Polygonscan](https://mumbai.polygonscan.com/verifiedSignatures). After signing the message, you must send the signature to the Domain Actions API.
 
 For a `Regular` transaction, the process is slightly different. After signing the message, you must send it to the transaction pool. Once the transaction has been added to the pool, you send the `transaction hash` to the Domain Actions API.
 
