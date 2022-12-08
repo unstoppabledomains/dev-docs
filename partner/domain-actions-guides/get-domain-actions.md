@@ -62,16 +62,12 @@ Here is an example of a request that you can use to retrieve domain actions with
 | perPage | 10 |
 | page | 1 |
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions?domain=matt.dao&status=InProgress&perPage=10&page=1' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
   "id": 12882,
   "status": "Draft",

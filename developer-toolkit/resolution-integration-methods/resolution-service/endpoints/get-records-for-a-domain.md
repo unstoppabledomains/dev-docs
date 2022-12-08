@@ -48,17 +48,13 @@ An object with the following fields:
 
 Here is an example request to query for the records and metadata of the `brad.crypto` domain:
 
-### Request
-
-```bash
+```bash Request
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/domains/brad.crypto' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
   "meta": {
     "domain": "brad.crypto",

@@ -58,16 +58,12 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 
 Here is an example request to check the availability of the `buyadomain.dao` and `buyanotherdomain.crypto` domains before purchase:
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains?search=buyadomain.dao&search=buyanotherdomain.crypto' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "domains": [
         {

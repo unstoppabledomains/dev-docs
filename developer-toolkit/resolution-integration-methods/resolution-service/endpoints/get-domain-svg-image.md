@@ -35,15 +35,11 @@ An object with the following field:
 
 Here is an example request to retrieve the SVG image data of the `brad.crypto` domain:
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://resolve.unstoppabledomains.com/image/brad.crypto'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "image_data": "image/svg+xml form of the domain image data"
 }

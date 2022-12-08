@@ -44,15 +44,11 @@ An object with the following fields:
 
 Here is an example request to retrieve the ERC721 metadata information of the `brad.crypto` domain:
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://resolve.unstoppabledomains.com/metadata/brad.crypto'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "name": "brad.crypto",
     "description": "A CNS or UNS blockchain domain. Use it to resolve your cryptocurrency addresses and decentralized websites.\nhttps://gateway.pinata.cloud/ipfs/QmTiqc12wo2pBsGa9XsbpavkhrjFiyuSWsKyffvZqVGtut",

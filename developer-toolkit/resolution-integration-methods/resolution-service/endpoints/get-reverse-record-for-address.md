@@ -48,17 +48,13 @@ An object with the following fields:
 
 Here is an example request to query for the reverse record for the `"0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19"` wallet address:
 
-### Request
-
-```bash
+```bash Request
 curl \
 --request GET "https://resolve.unstoppabledomains.com/reverse/0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19" \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
   "meta": {
     "domain": "reseller-test-udtesting-034215839398.crypto",

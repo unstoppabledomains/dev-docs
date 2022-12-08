@@ -39,14 +39,10 @@ description: This page covers the documentation for the [Endpoint Name] endpoint
 
 Here is an example request to [do something with endpoint]:
 
-### Request
-
-```
+``` Request
 // example API request in cURL
 ```
 
-### Response
-
-```
+``` Response
 // example API response in JSON
 ```

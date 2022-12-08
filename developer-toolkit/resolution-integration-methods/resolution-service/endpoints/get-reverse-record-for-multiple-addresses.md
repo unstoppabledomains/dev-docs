@@ -56,9 +56,7 @@ Here is an example request to query for the reverse record for following wallet 
 * 0x88bc9b6c56743a38223335fac05825d9355e9f83
 * 0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19
 
-### Request
-
-```bash
+```bash Request
 curl --location --request POST 'https://resolve.unstoppabledomains.com/reverse/query' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
@@ -70,9 +68,7 @@ curl --location --request POST 'https://resolve.unstoppabledomains.com/reverse/q
 }'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "data": [
         {

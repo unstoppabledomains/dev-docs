@@ -56,8 +56,6 @@ Here is an example request to reserve a domain name with the following parameter
 | Domain Name | partner-test-67687986466871.crypto |
 | Reservation ID | test-reservation-id |
 
-### Request
-
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/partner-test-67687986466871.crypto/reserve/' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}' \
@@ -67,7 +65,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }'
 ```
 
-### Minting a Reserved Domain Name
+## Minting a Reserved Domain Name
 
 To mint a domain you have reserved, you need to fill the `resellerIdentityKey` request body parameter in the [Buy a Domain or Claim Free Domain](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders) endpoint with the domain reservation identifier.
 
@@ -82,9 +80,9 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
   "security": "{ORDER_SECURITY}",
   "domains": [
     {
-      "name": "partner-test-67687986466871.crypto",
+      "name": "{DOMAIN_TO_PURCHASE}",
       "ownerAddress": "{DOMAIN_OWNER_ADDRESS}",
-      "resellerIdentityKey": "test-reservation-id"
+      "resellerIdentityKey": "{DOMAIN_RESERVATION_ID}"
     }
   ]
 }'

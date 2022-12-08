@@ -46,17 +46,13 @@ An object with a `data` field that contains a list of domain transfer events.
 
 Here is an example request to query for the transfer events of the `brad.crypto` domain:
 
-### Request
-
-```bash
+```bash Request
 curl \
 --request GET "https://resolve.unstoppabledomains.com/domains/brad.crypto/transfers/latest" \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
   "data": [
     {

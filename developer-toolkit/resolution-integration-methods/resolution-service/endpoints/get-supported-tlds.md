@@ -29,15 +29,11 @@ An object with a `tlds` field that contains a list of domain endings supported b
 
 Here is an example request to query for the domain endings supported by Unstoppable Domains:
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_tlds'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "tlds": [
         "crypto",

@@ -46,16 +46,12 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 
 Here is an example of a request that you can use to retrieve the details of a domain action request with a `domain action ID` of `10`:
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions/10' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "id": 10,
     "action": "SetReverseResolution",

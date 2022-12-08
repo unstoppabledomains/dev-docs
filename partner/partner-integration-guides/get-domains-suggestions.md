@@ -82,16 +82,12 @@ Here is an example request to generate paid domain suggestions with the followin
 | Keywords | buyadomain.dao, hosting, doctor |
 | TLD Filter | dao, nft |
 
-### Request
-
-```bash
+```bash Request
 curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 [
   {
       "name": "buyadomain.dao",

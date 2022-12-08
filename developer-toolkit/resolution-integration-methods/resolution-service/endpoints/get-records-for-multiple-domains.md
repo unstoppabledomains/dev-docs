@@ -46,17 +46,13 @@ Here is an example request to query for a specific resolution record from multip
 2. `matt.crypto`
 3. `crypto.ETH.address`
 
-### Request
-
-```bash
+```bash Request
 curl \
 --request GET 'https://resolve.unstoppabledomains.com/records?domains=brad.crypto&domains=matt.crypto&key=crypto.ETH.address' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
-### Response
-
-```json
+```json Response
 {
   "data": [
     {

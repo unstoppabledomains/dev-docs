@@ -42,7 +42,7 @@ When making a domain action request, the body must contain information about you
 
 <embed src="/snippets/_domain-actions-endpoint-usage.md" />
 
-## Example
+## Deposit Example
 
 Here is an example of a request that you can use to create a domain action request to bridge a domain from Ethereum to Polygon with the following parameters:
 
@@ -54,9 +54,7 @@ Here is an example of a request that you can use to create a domain action reque
 | Remove Reverse Resolution | Yes |
 | Gas Compensation Policy | CompensateFree |
 
-### Request
-
-```bash
+```bash Request
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
@@ -71,9 +69,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "id": 233580,
     "action": "Deposit",
@@ -125,8 +121,97 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to bridge the `reseller-test-udtesting-052523593694.crypto` domain from Ethereum to Polygon.
 
+## Withdraw Example
+
+Here is an example of a request that you can use to create a domain action request to bridge a domain from Polygon to Ethereum with the following parameters:
+
+| Parameter | Value |
+| - | - |
+| Domain Action | Withdraw |
+| Domain | reseller-test-udtesting-602716235250.crypto |
+| Reset Records | Yes |
+| Remove Reverse Resolution | Yes |
+| Gas Compensation Policy | CompensateFree |
+
+```bash Request
+curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "action": "Withdraw",
+    "parameters": {
+        "resetRecords": true,
+        "resetReverse": true
+    },
+    "domain": "reseller-test-udtesting-602716235250.crypto",
+    "gasCompensationPolicy": "CompensateFree"
+}'
+```
+
+```json Response
+{
+    "id": 277718,
+    "action": "Withdraw",
+    "status": "Draft",
+    "domain": {
+        "id": 165454501,
+        "name": "reseller-test-udtesting-602716235250.crypto",
+        "ownerAddress": "0x499dd6d875787869670900a2130223d85d4f6aa7",
+        "resolver": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
+        "resolution": {
+            "crypto.ETH.address": "0x499dd6d875787869670900a2130223d85d4f6aa7",
+            "crypto.MATIC.version.ERC20.address": "0x499dd6d875787869670900a2130223d85d4f6aa7",
+            "crypto.MATIC.version.MATIC.address": "0x499dd6d875787869670900a2130223d85d4f6aa7"
+        },
+        "blockchain": "MATIC",
+        "projectedBlockchain": "MATIC",
+        "registryAddress": "0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f",
+        "networkId": 137,
+        "freeToClaim": true,
+        "node": "0xb2c3ea44b9e0d14f5c6c783bb59cf15a476279dff6fdb7d17d17ea2b6e775b39"
+    },
+    "txs": [
+        {
+            "id": 3381657,
+            "blockchain": "MATIC",
+            "hash": null,
+            "from": "0x499dd6d875787869670900a2130223d85d4f6aa7",
+            "status": "Draft",
+            "operation": "WithdrawToEthereum",
+            "failReason": null,
+            "type": "Meta",
+            "signatureStatus": "Required",
+            "messageToSign": "0xd251a40ed8275b401505fd7681a7d38b746ea8c2605481fbb5f50ec37b4dcfba"
+        },
+        {
+            "id": 3381658,
+            "type": "System",
+            "blockchain": "ETH",
+            "hash": null,
+            "status": "Draft",
+            "signatureStatus": "NotRequired",
+            "operation": "TrackPolygonCheckpoint",
+            "failReason": null
+        },
+        {
+            "id": 3381659,
+            "blockchain": "ETH",
+            "status": "Draft",
+            "operation": "MintOnWithdrawal",
+            "hash": null,
+            "failReason": null,
+            "type": "Regular",
+            "signatureStatus": "WillBeRequired"
+        }
+    ],
+    "paymentInfo": null
+}
+```
+
+The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to bridge the `reseller-test-udtesting-602716235250.crypto` domain from Polygon to Ethereum.
+
 :::success Congratulations!
-You have successfully created the domain action request to bridge a domain from Ethereum to Polygon with the Domain Actions API.
+You have successfully created the domain action request to bridge domains between Ethereum and Polygon with the Domain Actions API.
 :::
 
 <embed src="/snippets/_discord.md" />

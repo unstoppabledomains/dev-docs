@@ -223,9 +223,7 @@ Here is an example request to mint a free domain with the following details:
 | Customer Email | sandbox-test@unstoppabledomains.com |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
 
-### Request
-
-```bash
+```bash Request
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/orders/' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
@@ -253,9 +251,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "orderNumber": "78023",
     "total": 0,

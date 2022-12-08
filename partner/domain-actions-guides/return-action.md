@@ -45,9 +45,7 @@ Here is an example of a request that you can use to create a domain action reque
 | Domain | reseller-test-udtesting-602716235250.crypto |
 | Gas Compensation Policy | CompensateFree |
 
-### Request
-
-```bash
+```bash Request
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
 --header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
@@ -58,9 +56,7 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 }'
 ```
 
-### Response
-
-```json
+```json Response
 {
     "id": 11,
     "action": "Return",
