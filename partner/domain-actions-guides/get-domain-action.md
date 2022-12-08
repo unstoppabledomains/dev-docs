@@ -49,7 +49,8 @@ Here is an example of a request that you can use to retrieve the details of a do
 ### Request
 
 ```bash
-curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions/10'
+curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions/10' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}'
 ```
 
 ### Response

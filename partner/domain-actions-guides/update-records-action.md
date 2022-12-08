@@ -55,6 +55,7 @@ Here is an example of a request that you can use to create a domain action reque
 
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/actions' \
+--header 'Authorization: Bearer {SECRET_API_TOKEN}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "action": "UpdateRecords",
