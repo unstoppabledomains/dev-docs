@@ -1,6 +1,7 @@
 ---
 title: SetReverseResolution Domain Action Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to configure reverse resolution records using the Domain Actions API.
+showNextButton: false
 ---
 
 # SetReverseResolution Domain Action Guide
@@ -116,3 +117,9 @@ You have successfully created the domain action request to configure reverse res
 :::
 
 <embed src="/snippets/_discord.md" />
+
+<div class="custom-next-to">
+
+[Next to **Sign the Transaction**](/partner/domain-actions-guides/overview.md#step-2-sign-the-transaction)
+
+</div>

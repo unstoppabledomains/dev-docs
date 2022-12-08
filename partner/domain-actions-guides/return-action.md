@@ -1,6 +1,7 @@
 ---
 title: Return Domain Action Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to return a domain to Unstoppable Domains and receive a refund using the Domain Actions API.
+showNextButton: false
 ---
 
 # Return Domain Action Guide
@@ -103,3 +104,9 @@ You have successfully created the domain action request to return a domain with 
 :::
 
 <embed src="/snippets/_discord.md" />
+
+<div class="custom-next-to">
+
+[Next to **Sign the Transaction**](/partner/domain-actions-guides/overview.md#step-2-sign-the-transaction)
+
+</div>
