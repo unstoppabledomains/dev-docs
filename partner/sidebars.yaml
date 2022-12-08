@@ -37,7 +37,7 @@ pages:
           - page: partner-integration-guides/reserve-free-domain-name.md
             label: Reserve Free Domain Name Guide
     separatorLine: true
-  - group: Domain Action API Guides
+  - group: Domain Actions API Guides
     expanded: false
     pages:
       - page: domain-actions-guides/overview.md

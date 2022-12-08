@@ -1,9 +1,11 @@
 ---
 title: Set up Partner API Access | Unstoppable Domains Developer Portal
-description: This page describes the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
+description: This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 ---
 
 # Set up Partner API Access
+
+This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 
 :::warning
 The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/manage-domains/polygon-release-notes.md) to get started.
@@ -32,7 +34,7 @@ After your application is approved, you will be given full access to your Partne
 
 ## Step 3: Configure Payment Information
 
-The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the **[Partner Integration Guides](integration-paths.md)** to integrate one or more payment methods for your partner account.
+The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](integration-paths.md) to integrate one or more payment methods for your partner account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.

@@ -5,7 +5,7 @@ description: This guide shows how to purchase domains using the Stripe payment p
 
 # Stripe Payments Guide
 
-Unstoppable Domains supports [Stripe](https://stripe.com) payments to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
+Unstoppable Domains supports [Stripe payments](https://stripe.com) to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
 The diagram below illustrates the general process between a Partner and Unstoppable Domains during the process of buying a domain with Stripe.
 

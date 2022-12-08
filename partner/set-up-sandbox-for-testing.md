@@ -1,11 +1,11 @@
 ---
 title: Set up UD Sandbox for Testing | Unstoppable Domains Developer Portal
-description: This page details how to access and set up the Unstoppable Domains Sandbox environment for partners to test their integrations.
+description: This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
 ---
 
 # Set up UD Sandbox for Testing
 
-This page details how to access and set up the Unstoppable Domains Sandbox environment for partners to test their integrations.
+This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
 
 ## Step 1: Register on the UD Sandbox
 
@@ -24,7 +24,7 @@ If your IP address is added in the Sandbox allowlist, you will not be redirected
 
 ## Step 2: Verify Your Email Address
 
-Unstoppable Domains will send a verification message to the email address you provided to the Sandbox environment.
+Unstoppable Domains will send a verification message to the email address you provided to the Sandbox Environment.
 
 <figure>
 
@@ -35,7 +35,7 @@ Unstoppable Domains will send a verification message to the email address you pr
 
 ## Step 3: Add Your IP Address to the Sandbox
 
-Open the verification email and click the link to add your IP address to the UD Sandbox environment allowlist.
+Open the verification email and click the link to add your IP address to the UD Sandbox Environment allowlist.
 
 <figure>
 
@@ -50,7 +50,7 @@ You can use the second link to revoke your IP address from the Sandbox allowlist
 
 ## Step 4: Access the UD Sandbox
 
-After adding your IP address, you will be redirected to the Unstoppable Domains Sandbox environment, where you can test your integrations.
+After adding your IP address, you will be redirected to the Unstoppable Domains Sandbox Environment, where you can test your integrations.
 
 <figure>
 
@@ -91,7 +91,7 @@ https://ud-sandbox.com/partner-api-dashboard/
 ```
 
 :::success Congratulations!
-You have successfully accessed and set up the Unstoppable Domains Sandbox environment. Happy hacking!
+You have successfully accessed and set up the Unstoppable Domains Sandbox Environment. Happy hacking!
 :::
 
 <embed src="/snippets/_discord.md" />

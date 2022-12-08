@@ -7,15 +7,15 @@ description: This page provides a high-level overview of the Domain Actions API 
 
 The Domain Actions API from Unstoppable Domains is designed to make it easier for Partners to interact with domains on the blockchain. It provides a convenient way to generate the transactions needed to perform various actions, such as updating domain records, configuring reverse resolution, or transferring domain ownership.
 
-This allows Partners to quickly and efficiently perform these actions with a single API request without worrying about the complex details of forming transactions on the client side.
+This allows Partners to quickly and efficiently perform these actions with a single API request without worrying about the complex details of forming transactions on the client side. For more information about the endpoints, please consult the [Partner API endpoint specification](https://docs.unstoppabledomains.com/openapi/reference/).
 
 The diagram below illustrates the general process between a Partner and Unstoppable Domains when utilizing the Domain Actions API.
 
 <figure>
 
-![Domain action API success flow](/images/domain-action-api-flow.png '#width=80%;')
+![Domain Actions API success flow](/images/domain-action-api-flow.png '#width=80%;')
 
-<figcaption>Domain action API success flow</figcaption>
+<figcaption>Domain Actions API success flow</figcaption>
 </figure>
 
 ## Gas Compensation Policies
@@ -67,6 +67,12 @@ There are several ways to track the status of transactions submitted to the Doma
 | - | - | - |
 | Get Domain Action | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](get-domain-action.md) |
 | Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address | [Get Domain Action Guide](get-domain-action.md) |
+
+## Fork Our Postman Collection
+
+Unstoppable Domains offers a Postman collection that you can easily import into your workspace to quickly interact with the Partner and Domain Actions API.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19507736-d4edfdfc-0eb1-4def-bea7-d7bcbabf3aa9?action=collection%2Ffork&collection-url=entityId%3D19507736-d4edfdfc-0eb1-4def-bea7-d7bcbabf3aa9%26entityType%3Dcollection%26workspaceId%3D6762865c-b510-4216-ba7f-45cd07f164c7#?env%5BSandbox%20-%20Partner%20API%5D=W3sia2V5IjoiYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHBzOi8vYXBpLnVkLXNhbmRib3guY29tIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiJodHRwczovL2FwaS51ZC1zYW5kYm94LmNvbSIsInNlc3Npb25JbmRleCI6MH0seyJrZXkiOiJodHRwX2F1dGgiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOmZhbHNlLCJ0eXBlIjoic2VjcmV0Iiwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjoxfSx7ImtleSI6ImFwaV9rZXkiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJzZWNyZXQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjJ9LHsia2V5IjoicmVzZWxsZXJfaWQiLCJ2YWx1ZSI6IiIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0Iiwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjozfSx7ImtleSI6InN0cmlwZV90ZXN0X2tleSIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InNlY3JldCIsInNlc3Npb25WYWx1ZSI6IiIsInNlc3Npb25JbmRleCI6NH1d)
 
 <embed src="/snippets/_discord.md" />
 
