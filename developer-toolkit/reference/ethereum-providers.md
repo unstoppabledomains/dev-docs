@@ -9,29 +9,19 @@ This page covers Ethereum providers and shows how to use them with the Resolutio
 
 ## Ethereum Nodes
 
-An Ethereum node is a computer running the Ethereum client software. They are responsible for mining Ethereum, verifying transactions on the blockchain, and keeping the network secure and the data accurate. There are different types of nodes:
+Ethereum nodes are computers that run the Ethereum client software. They perform various functions such as mining Ethereum, verifying transactions on the blockchain, and maintaining the security and accuracy of the network. There are different types of nodes available:
 
-### Full Node
-
-They store the entire blockchain data and participate in mining Ethereum and validating new blocks.
-
-### Light Node
-
-They do not store the entire blockchain data but request it from a full node. Light nodes allow low-end devices to participate in the Ethereum network.
-
-### Archive Node
-
-They store all the data from full nodes and build an archive of historical states. Archive nodes are handy for services like block explorers, wallet vendors, and on-chain analytics.
+* `Full Nodes`: These nodes store the entire blockchain data and are involved in the mining and validating of new blocks.
+* `Light Nodes`: These nodes do not store the entire blockchain data but instead request it from a full node. This allows low-end devices to participate in the Ethereum network.
+* `Archive Nodes`: These nodes store all the data from full nodes and create an archive of historical states. Archive nodes are useful for services such as block explorers, wallet vendors, and on-chain analytics.
 
 ## Node Service Providers
 
-Node service providers run optimized and distributed node infrastructures, then expose an interface for you to access the functionalities of the node and participate in the network. They bear all the maintenance and operational responsibility of the blockchain node, so you can focus on developing your application or product instead.
+Node service providers operate optimized and distributed node infrastructures, providing an interface for users to access the node's functionality and participate in the network. These providers are responsible for maintaining and operating the blockchain node, allowing users to focus on developing their applications or products.
 
 ## Using Custom Ethereum Providers
 
-Each of the Resolution Libraries supports an Ethereum provider URL for configuration. You can obtain a provider URL from a service like Alchemy, where getting an API key is free and only requires creating an account.
-
-To choose an alternative Ethereum provider see the [Nodes as a Service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/) guide.
+Each of the Resolution Libraries supports using an Ethereum provider URL for configuration. You can obtain this URL from a service like Alchemy, which offers a free API key to users who create an account. If you wish to use an alternative Ethereum provider, see the [Nodes as a Service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/) guide for more information.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -88,7 +78,7 @@ let resolution = try Resolution(configs: Configurations(
 );
 ```
 
-```golang Go
+```go Golang
 import (
   "github.com/ethereum/go-ethereum/ethclient"
   "github.com/unstoppabledomains/resolution-go/v2"
