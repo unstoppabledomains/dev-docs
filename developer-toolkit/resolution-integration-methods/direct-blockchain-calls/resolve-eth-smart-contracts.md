@@ -1,9 +1,9 @@
 ---
-title: Resolve Using Smart Contracts | UD Developer Portal
+title: Resolve Using Smart Contracts Guide | UD Developer Portal
 description: This page explains the process for resolving domain records by making calls to Ethereum and Polygon smart contracts using Ethereum JSON RPC.
 ---
 
-# Resolve Domains Using Smart Contracts
+# Resolve Domains Using Smart Contracts Guide
 
 Resolving a domain is retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the Registry side. Anyone accessing a mainnet Ethereum or Polygon Node can resolve a domain.
 

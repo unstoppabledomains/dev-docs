@@ -1,9 +1,9 @@
 ---
-title: Upload Your Website to IPFS | Unstoppable Domains Developer Portal
+title: Upload Your Website to IPFS Guide | Unstoppable Domains Developer Portal
 description: This guide covers several different options of uploading your website to IPFS.
 ---
 
-# Upload Your Website to IPFS
+# Upload Your Website to IPFS Guide
 
 There are several different options for uploading your website to IPFS. The preferred option is to simply use the Unstoppable Domains IPFS Uploader located within your My Domains account. A second option is to use an external IPFS service, which will require you to upload, retrieve the IPFS hash, and paste it into your UD account.
 

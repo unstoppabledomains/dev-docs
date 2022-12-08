@@ -4,9 +4,9 @@ pages:
   - group: Getting Started with Integrating UD
     expanded: false
     pages:
-      - label: Set up Partner API Access
+      - label: Set up Partner API Access Guide
         page: index.md
-      - label: Set up UD Sandbox for Testing
+      - label: Set up UD Sandbox for Testing Guide
         page: set-up-sandbox-for-testing.md
       - label: Partner API Integration Paths
         page: integration-paths.md

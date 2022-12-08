@@ -1,9 +1,9 @@
 ---
-title: Connect Your IPFS Site to Your Domain | UD Developer Portal
+title: Connect Your IPFS Site to Your Domain Guide | UD Developer Portal
 description: This guide outlines the process for connecting your IPFS website to your Unstoppable Domain.
 ---
 
-# Connect Your IPFS Site to Your Domain
+# Connect Your IPFS Site to Your Domain Guide
 
 This guide outlines the process for connecting your IPFS website to your Unstoppable Domain.
 
@@ -21,7 +21,7 @@ If you uploaded your website to IPFS externally, [using an external service](upl
 <figure>
 
 ![How to locate the 'Website' tab under My Domains --> Manage](/images/website-tab-manage-domains.png '#width=60%;')
-	
+
 <figcaption>How to locate the 'Website' tab under My Domains --> Manage</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ If you uploaded your website to IPFS externally, [using an external service](upl
 <figure>
 
 ![How to update IPFS hash field for your domain](/images/add-ipfs-hash-mydomains.png '#width=60%;')
-	
+
 <figcaption>How to update IPFS hash field for your domain</figcaption>
 </figure>
 

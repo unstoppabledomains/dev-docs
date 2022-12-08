@@ -1,9 +1,9 @@
 ---
-title: Resolving Domains in Web Applications | UD Developer Portal
+title: Resolving Domains in Web Applications Guide | UD Developer Portal
 description: This page describes how to use the Resolution library to resolve Web3 domains in web applications. It assumes a basic understanding of UD Resolution.
 ---
 
-# Resolving Domains in Web Applications
+# Resolving Domains in Web Applications Guide
 
 Resolution is a library for interacting with Web3 domain names. It can be used to retrieve [payment addresses](/crypto-payments/index.md) and IPFS hashes for [decentralized websites](/d-websites/index.md).
 

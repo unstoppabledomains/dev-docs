@@ -1,9 +1,9 @@
 ---
-title: Get a Free Polygon Test Domain | Unstoppable Domains Developer Portal
+title: Get a Free Polygon Test Domain Guide | Unstoppable Domains Developer Portal
 description: This guide covers the process of obtaining a free test domain, through direct smart contract calling on Polygonscan.
 ---
 
-# Get a Free Polygon Test Domain
+# Get a Free Polygon Test Domain Guide
 
 <embed src="/snippets/_test-domain-explain.md" />
 

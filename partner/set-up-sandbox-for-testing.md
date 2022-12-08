@@ -1,9 +1,9 @@
 ---
-title: Set up UD Sandbox for Testing | Unstoppable Domains Developer Portal
+title: Set up UD Sandbox for Testing Guide | Unstoppable Domains Developer Portal
 description: This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
 ---
 
-# Set up UD Sandbox for Testing
+# Set up UD Sandbox for Testing Guide
 
 This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
 

@@ -1,12 +1,12 @@
 ---
-title: Add Polygon Network to MetaMask Wallet | UD Developer Portal
+title: Add Polygon Network to MetaMask Wallet Guide | UD Developer Portal
 description: This guide shows how to configure the MetaMask wallet browser extension to support both Polygon mainnet and testnet (Mumbai) networks.
 redirectFrom:
   - /polygon/
   - /polygon/add-polygon-to-metamask/
 ---
 
-# Add Polygon Network to MetaMask Wallet
+# Add Polygon Network to MetaMask Wallet Guide
 
 This guide covers configuring the MetaMask wallet to support both Polygon mainnet and testnet (Mumbai) networks. This process requires the use of the MetaMask browser extension.
 

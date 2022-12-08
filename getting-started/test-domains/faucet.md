@@ -1,9 +1,9 @@
 ---
-title: Get a Test Domain using Unstoppable Website Faucet
+title: Get a Test Domain using Unstoppable Website Faucet Guide
 description: This page describes the process for requesting a free test domain as a developer using the Unstoppable Website faucet.
 ---
 
-# Get a Test Domain using Unstoppable Website Faucet
+# Get a Test Domain using Unstoppable Website Faucet Guide
 
 <embed src="/snippets/_test-domain-explain.md" />
 

@@ -1,9 +1,9 @@
 ---
-title: Set up Partner API Access | Unstoppable Domains Developer Portal
+title: Set up Partner API Access Guide | Unstoppable Domains Developer Portal
 description: This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 ---
 
-# Set up Partner API Access
+# Set up Partner API Access Guide
 
 This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 

@@ -15,7 +15,7 @@ Also, you might explore our growing list of [Integrated Applications](https://un
 You'll need the following to get started:
 - Basic understanding of [CNS](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md) and [UNS](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md) Smart Contracts
 - Knowledge of differences between [L1 and L2 network](/manage-domains/polygon-overview.md)
-- A [free test domain](test-domains/etherscan.md)
+- A [free test domain](test-domains/faucet.md)
 - A stable test environment
 
 ## How This Portal Is Organized

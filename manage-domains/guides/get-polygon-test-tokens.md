@@ -1,11 +1,11 @@
 ---
-title: Get Polygon Test Tokens | Unstoppable Domains Developer Portal
+title: Get Polygon Test Tokens Guide | Unstoppable Domains Developer Portal
 description: This guide covers getting test tokens for your wallet on the Polygon network. This process requires the use of the Polygon Faucet.
 redirectFrom:
   - /polygon/
 ---
 
-# Get Polygon Test Tokens
+# Get Polygon Test Tokens Guide
 
 This guide covers getting test tokens for your wallet on the Polygon network. This process requires the use of the Polygon Faucet.
 

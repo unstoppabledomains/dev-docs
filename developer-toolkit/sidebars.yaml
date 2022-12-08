@@ -71,17 +71,17 @@ pages:
         pages:
           - label: Overview
             page: resolution-integration-methods/direct-blockchain-calls/bc-overview.md
-          - label: Resolve UD Domains With Direct Blockchain Calls
+          - label: Resolve UD Domains With Direct Blockchain Calls Guide
             page: resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md
-          - label: Resolve .zil With Direct Blockchain Calls
+          - label: Resolve .zil With Direct Blockchain Calls Guide
             page: resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries.md
-          - label: Resolve Domains Using Smart Contracts
+          - label: Resolve Domains Using Smart Contracts Guide
             page: resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md
     separatorLine: true
   - group: Advanced Resolution Use Cases
     expanded: false
     pages:
-      - label: Resolve Domains in Web Applications
+      - label: Resolve Domains in Web Applications Guide
         page: advanced-use-cases/resolve-domains-in-web-applications.md
       - group: Resolve Domains in a Browser (HTTP & IPFS)
         expanded: false
@@ -92,7 +92,7 @@ pages:
             page: advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md
           - label: Browser Resolution Test Domains
             page: advanced-use-cases/resolve-domains-browser/test-domains.md
-      - label: Retrieve Domain Metadata Using Smart Contracts
+      - label: Retrieve Domain Metadata Using Smart Contracts Guide
         page: advanced-use-cases/retrieve-metadata-smart-contracts.md
     separatorLine: true
   - group: Smart Contracts

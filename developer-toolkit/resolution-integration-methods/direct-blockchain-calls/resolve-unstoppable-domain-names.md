@@ -1,9 +1,9 @@
 ---
-title: Resolve Unstoppable Domains with Direct Blockchain Calls
+title: Resolve Unstoppable Domains with Direct Blockchain Calls Guide | UD Developer Portal
 description: This page reviews the process for resolving Unstoppable domains with direct blockchain calls. It has been updated to reflect changes on L2 Polygon network.
 ---
 
-# Resolve Unstoppable Domains With Direct Blockchain Calls
+# Resolve Unstoppable Domains With Direct Blockchain Calls Guide
 
 :::info
 The `.zil` namespace is located on a separate chain and requires a [different process](resolve-zil-without-libraries.md).

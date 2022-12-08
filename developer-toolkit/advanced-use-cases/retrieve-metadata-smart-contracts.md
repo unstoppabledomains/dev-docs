@@ -1,9 +1,9 @@
 ---
-title: Retrieve Domain Metadata Using Smart Contracts | UD Developer Portal
+title: Retrieve Domain Metadata Using Smart Contracts Guide | UD Developer Portal
 description: This guide covers retrieving the metadata of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 ---
 
-# Retrieve Domain Metadata Using Smart Contracts
+# Retrieve Domain Metadata Using Smart Contracts Guide
 
 This guide covers retrieving the metadata of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 
