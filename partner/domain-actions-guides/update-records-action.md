@@ -111,13 +111,13 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to update the resolution records for the `reseller-test-udtesting-602716235250.crypto` domain.
 
 :::success Congratulations!
-You have successfully created the domain action request to update resolution records with the Domain Actions API.
+You have successfully created the domain action request to update resolution records with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](overview.md#step-2-sign-the-transaction).
 :::
 
 <embed src="/snippets/_discord.md" />
 
 <div class="custom-next-to">
 
-[Next to **Sign the Transaction**](/partner/domain-actions-guides/overview.md#step-2-sign-the-transaction)
+[Next to **Sign the Transaction**](overview.md#step-2-sign-the-transaction)
 
 </div>
