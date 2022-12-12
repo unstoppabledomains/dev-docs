@@ -54,8 +54,12 @@ Many login scopes have `scope:optional` variants that allow users to opt in to o
 </figure>
 
 :::warning
-Optional scopes are mutually exclusive with their equivalent standard scopes. If an application tries to request both `scope` and `scope:optional`, the request will fail and throw an error.
+Optional scopes are mutually exclusive with their equivalent standard scopes. If an application tries to request both `scope` and `scope:optional`, the request will fail and throw an error. Applications should only request one or the other.
 :::
+
+## Sub Scopes
+
+For scopes such as [profile](#profile) and [social](#social) which encapsulate multiple subscopes, an application may request any combination of the scope and its sub scopes. The more specific optional or required scopes will always take priority. For example, if an application requests `social` and `social:twitter:optional`, all social subscopes except for twitter will be required.
 
 ## openid
 `optional: false`
@@ -123,27 +127,26 @@ The Login with Unstoppable `profile` scope is used to retrieve profile metadata 
 
 * `name` - Display name
 * `picture` - Cover photo URI
-* `profile` - ud.me profile URI (e.g. `https://ud.me/domain.tld`)
+* `uri` - ud.me profile URI (e.g. `https://ud.me/domain.tld`)
 * `ipfs_website` - IFPS website hash
 * `website` - Web2 URI to the IPFS hash
 * `location` - The domain owner's location
+
+
+Individual profile subscopes (e.g. `profile:name`) may also be requested separately or in combination with the profile scope for more granular permissions. All subscopes support the `:optional` flag. See [Sub Scopes](#sub-scopes) for more information.
 
 ## social
 `optional: true`
 
 The Login with Unstoppable `social` scope is used to retrieve metadata about the user's social media profiles.
 
-Individual social scopes may also be used separately to require specific social media profiles from users. These scopes cannot be optional.
+Individual social subscopes may also be requested separately or in combination with the social scope for more granular permissions. All subscopes support the `:optional` flag. See [Sub Scopes](#sub-scopes) for more information.
 
 - `social:twitter`
 - `social:reddit`
 - `social:youtube`
 - `social:discord`
 - `social:telegram`
-
-:::info note
-You should only request either `social`, `social:optional`, or a combination of individual social scopes. Requesting any combination of those three will throw an error.
-:::
 
 ## badges
 `optional: true`
