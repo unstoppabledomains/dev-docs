@@ -165,7 +165,7 @@ Click **Confirm changes** to save the new or modified badge configuration or cli
 
 <figure>
 
-![Badge preview](../../static/images/login-client-config-badge-preview.png '#height=150px;')
+![Badge preview](../../static/images/login-client-config-badge-preview.png)
 
 <figcaption>Badge preview</figcaption>
 </figure>
