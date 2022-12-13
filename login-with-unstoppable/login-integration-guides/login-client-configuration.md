@@ -29,7 +29,7 @@ The **Branding Configuration** page allows developers to customize the Login Wit
 
 The following table describes the fields for the cosmetic configuration UI section.
 
-| Cosmetic Config Field | Description                                                                                                                 |
+| Field | Description                                                                                                                                 |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Client Name           | The client name as presented to the user; display name of the **Client URI** hyperlink.                                     |
 | Client URI            | The default value of the hyperlink is the client redirect URI (from **Client Metadata**) unless this field is complete.     |
@@ -153,13 +153,13 @@ For clients with no existing badges, the badge configuration form will be displa
 <figcaption>Badge configuration settings</figcaption>
 </figure>
 
-|    Configuration Field    | Description |
-| ------------------------- | ----------- |
-| Badge Logo                | The URI of the image to be displayed in the ud.me profile of users who have earned this badge.            |
-| Badge Name                | Short name for badge. 60 characters or less.           |
-| Badge Description         | A description of the badge and the conditions required for users to earn it. 250 characters or less.           |
+| <span id="badges-configuration-fields">Field</span> | Description |
+| --------------------------------------------------- | ----------- |
+| Badge Logo | The URI of the image to be displayed in the ud.me profile of users who have earned this badge. |
+| Badge Name | Short name for badge. 60 characters or less. |
+| Badge Description | A description of the badge and the conditions required for users to earn it. 250 characters or less. |
 | Smart Contract Blockchain | The blockchain on which the badge smart contract lives. Currently supports EVM chains.            |
-| Smart Contract Address    | The address of the smart contract defining the conditions under which users can earn this badge. The contract will be checked periodically and the badge automatically added to qualifying ud.me profiles. |
+| <span id="badges-smart-contract-address">Smart Contract Address</span> | The address of the smart contract defining the conditions under which users can earn this badge. The contract will be checked periodically and the badge automatically added to qualifying ud.me profiles. |
 
 Click **Confirm changes** to save the new or modified badge configuration or click **Preview Badge** to see a preview modal of the configured badge.
 
