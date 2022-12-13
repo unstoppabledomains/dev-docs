@@ -9,15 +9,13 @@ figure p {
     margin-block: 0;
 }
 
-figure img {
-    /* Filter drop shadow is aware of image transparency */
+figure video, figure > p > img, figure .gatsby-resp-image-wrapper {
     -webkit-filter: drop-shadow(0 0 1px #000);
     filter: drop-shadow(0 0 1px #000);
 }
-
-figure video {
-    -webkit-filter: drop-shadow(0 0 1px #000);
-    filter: drop-shadow(0 0 1px #000);
+  
+figure .gatsby-img-attributes {
+    display: inline-block!important;
 }
 
 figure p img {
