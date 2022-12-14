@@ -71,8 +71,6 @@ footer:
       items:
         - label: Discord
           href: 'https://discord.gg/unstoppabledomains'
-        - label: Telegram
-          href: 'https://t.me/unstoppabledomains'
         - label: Twitter
           href: 'https://twitter.com/unstoppableweb'
         - label: Facebook

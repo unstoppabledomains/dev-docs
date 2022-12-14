@@ -19,6 +19,5 @@ You can find additional support through any of the following resources:
 
 You can connect with our developer community using the following methods:
 * [Discord](https://discord.gg/unstoppabledomains)
-* [Telegram](https://t.me/unstoppabledomains)
 * [Twitter](https://twitter.com/unstoppableweb)
 * [Facebook](https://www.facebook.com/unstoppableweb/)
