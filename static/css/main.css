@@ -1,3 +1,8 @@
+:root {
+    --ud-blue: #0D67FE;
+    --video-max-width: 100%;
+}
+
 figure {
     margin-left: 0;
     margin-right: 0;
@@ -101,9 +106,14 @@ figcaption {
 
 .video-container {
     position: relative;
-    padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); /* Default to 16:9 aspect ratio */
+    max-width: var(--video-max-width);
+    /* calculate height based on aspect ratio (or default to 16:9) and clamp based on max-width */
+    padding-bottom: min(
+        calc(var(--aspect-ratio, .5625) * 100%),
+        calc(var(--aspect-ratio, .5625) * var(--video-max-width))
+      );
     height: 0;
-}
+  }
 
 .video-container iframe {
     position: absolute;
