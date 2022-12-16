@@ -87,4 +87,8 @@ async function handleLogout() {
 }
 ```
 
+:::success Congratulations!
+You have implemented Login with Unstoppable with Moralis.
+:::
+
 <embed src="/snippets/_login-paths-next.md" />

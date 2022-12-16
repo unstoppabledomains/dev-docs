@@ -151,7 +151,7 @@ export default App
 </figure>
 
 :::success Congratulations!
-You have implemented Login with Unstoppable using web3-react
+You have implemented Login with Unstoppable with web3-react.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

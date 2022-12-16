@@ -5,7 +5,7 @@ description: This page provides documents the public interface of the @uauth/bnc
 
 # UAuth BNC-Onboard Library
 
-The `@uauth/bnc-onboard` library is a deprecated middleware library used for integrating UAuth with Blocknative BNC Onboard applications. For middleware for the latest Blocknative Onboard version, see [web3-onboard](/login-with-unstoppable/libraries/uauth-web3-onboard.md).
+The `@uauth/bnc-onboard` package is a deprecated middleware library used for integrating UAuth with Blocknative BNC Onboard applications. For the latest Blocknative Web3-Onboard module, see [@web3-onboard/uauth](/login-with-unstoppable/libraries/web3-onboard-uauth.md).
 
 ## UAuthBNCOnboard
 

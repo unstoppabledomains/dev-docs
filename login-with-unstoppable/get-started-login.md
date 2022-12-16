@@ -60,10 +60,10 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 | [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |                                                 -                                           |       &#10060;    |`@uauth/js`          |        React       |
 | [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/)    |       &#9989;     |`@uauth/web3-react`  |     `web3-react`   |
 | [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              | [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)      |       &#9989;     |`@uauth/web3modal`   |     `web3-modal`   |
-| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          | [web3-onboard](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-onboard/)|       &#9989;     |`@uauth/web3-onboard`|   `web3-onboard`   |
+| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |                                               -                                             |       &#9989;     |`@web3-onboard/uauth`|   `web3-onboard`   |
 | [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    | [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)           |       &#9989;     |`@uauth/moralis`     |     `moralis`      |
 | [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      | [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)             |       &#10060;    |`@uauth/node`        |        None        |
-| [Auth0](/login-with-unstoppable/login-integration-guides/auth0-guide.md)                        | [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)     |       &#10060;    |      `auth0`        |       `auth0`      |
+| [Auth0](/login-with-unstoppable/login-integration-guides/auth0-guide.md)                        | [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)             |       &#10060;    |      `auth0`        |       `auth0`      |
 
 :::info
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
@@ -74,7 +74,9 @@ See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a 
 Once a user has successfully authenticated, the application should display the user’s **domain** (and not their **wallet address**) in the application’s UI to confirm the authorization was successful.
 
 <figure>
-<img src="/images/third-UI-example-login-domains.png" alt="Showing an authenticated user's domain" width="50%"/>
+
+![Showing an authenticated user's domain](../static/images/third-UI-example-login-domains.png '#width=50%')
+
 <figcaption>Showing an authenticated user's domain</figcaption>
 </figure>
 
@@ -99,14 +101,15 @@ uauth.user()
 ```
 
 ```javascript web3-onboard
-import UAuth from '@uauth/js;
+const wallets$ = onboard.state.select('wallets').pipe(share())
 
-const uauthOptions = {
-  clientID: "",
-  redirectUri: ""
-}
-
-new UAuth(uauthOptions).user().then().catch()
+wallets$.subscribe(wallet => {
+  const unstoppableUser = wallet.find(
+    provider => provider.label === 'Unstoppable'
+  )
+  
+  if (unstoppableUser) console.log(unstoppableUser.instance.user)
+})
 ```
 
 ```javascript web3-react
