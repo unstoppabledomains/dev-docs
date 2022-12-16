@@ -7,7 +7,7 @@ showNextButton: false
 # BNC Onboard Guide: Login with Unstoppable
 
 :::warning Web3-onboard
-This guide and the `@uauth/bnc-onboard` package uses `bnc-onboard`, a depreciated version of the **Blocknative Onboard** library. For integrating with `web3-onboard` (onboard `v2.0.0` and later), see the [Web3 Onboard Guide](./web3-onboard-guide.md).
+This guide and the `@uauth/bnc-onboard` package uses `bnc-onboard`, a deprecated version of the **Blocknative Onboard** library. For integrating with `web3-onboard` (onboard `v2.0.0` and later), see the [Web3 Onboard Guide](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md).
 :::
 
 This is the basic installation guide for the `bnc-onboard` library and is best used for single page applications (SPAs). For more information about this library, please see the associated [GitHub repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/bnc-onboard).

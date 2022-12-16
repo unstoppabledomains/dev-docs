@@ -143,3 +143,7 @@ Once your app is using the Unstoppable Domains social connection, Auth0 will be 
 
 <figcaption>Example user metadata</figcaption>
 </figure>
+
+:::success Congratulations!
+You have implemented Login with Unstoppable with Auth0.
+:::

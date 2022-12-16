@@ -113,4 +113,8 @@ function handleLogout() {
 // Save provider in state
 ```
 
+:::success Congratulations!
+You have implemented Login with Unstoppable with web3modal.
+:::
+
 <embed src="/snippets/_login-paths-next.md" />

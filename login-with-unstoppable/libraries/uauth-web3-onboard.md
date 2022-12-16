@@ -5,7 +5,7 @@ description: This page provides documents the public interface of the @uauth/web
 
 # UAuth Web3-Onboard Library
 
-The `@uauth/web3-onboard` library is a middleware library used for integrating UAuth with Blocknative Web3-Onboard applications.
+The `@uauth/web3-onboard` package is a deprecated middleware library used for integrating UAuth with Blocknative BNC Onboard applications. For the latest Blocknative Web3-Onboard module, see [@web3-onboard/uauth](/login-with-unstoppable/libraries/web3-onboard-uauth.md).
 
 ## uauthBNCModule
 
