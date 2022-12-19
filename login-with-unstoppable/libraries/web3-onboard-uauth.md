@@ -19,7 +19,7 @@ function uauthModule(
 
 ## UauthInitOptions
 
-The options object passed to [uauthModule](#uauthModule).
+The options object passed to [uauthModule](#uauthmodule).
 
 ```typescript
 type UauthInitOptions = {
@@ -37,4 +37,4 @@ type UauthInitOptions = {
 
 ### shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` is set to `true`, the [uauthModule](#uauthModule) instance will use the [uauth.login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [uauth.loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If `shouldLoginWithRedirect` is set to `true`, the [uauthModule](#uauthmodule) instance will use the [uauth.login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [uauth.loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
