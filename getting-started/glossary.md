@@ -83,6 +83,10 @@ The [naming service](#name-service) [smart contract](#smart-contract) that manag
 
 A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsible for defining domain ownership rules, storing domain [records](#record) and [metadata](#metadata), [minting](#minting), [resolving](#domain-resolution), and [burning](#burn) domains.
 
+### Namehash
+
+A hexadecimal representation of the [unique identifier](#token-id) of a domain. It is produced by the [namehashing](#namehashing) algorithm.
+
 ### Namehashing
 
 A one-way algorithm that converts a domain name like `example.crypto` into an ERC-721 token ID so [smart contracts](#smart-contract) can understand it.
@@ -146,6 +150,10 @@ A subdomain is a domain name registered on another domain, e.g., `blog.example.c
 ### Testnet
 
 A software environment that mimics a [mainnet](#mainnet) blockchain. It is used to test network upgrades and [smart contracts](#smart-contract) before deploying them to the [mainnet](#mainnet).
+
+### Token ID
+
+The unique identifier of a domain name on the blockchain. It is defined as a part of the [EIP-137](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md#namehash-algorithm) standard and is used by [smart contracts](#smart-contract).
 
 ### UD
 
