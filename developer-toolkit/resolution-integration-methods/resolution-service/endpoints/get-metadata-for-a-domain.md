@@ -30,6 +30,8 @@ This endpoint returns the ERC721 metadata information of a domain name in a sing
 An object with the following fields:
 
 * `name`: (string) Name of the domain.
+* `tokenId`: (string) The unique identifier of the domain used by smart contracts.
+* `namehash`: (string) The hexadecimal representation of the domain's `token ID`.
 * `description`: (string) A description of the domain name.
 * `properties`: A key-value dictionary with information about the domain:
     * `records`: A key-value dictionary with all domain records set on-chain. This includes wallet addresses and IPFS website hashes. To get more details, visit the Unstoppable Domains [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
@@ -51,6 +53,8 @@ curl --location --request GET 'https://resolve.unstoppabledomains.com/metadata/b
 ```json Response
 {
     "name": "brad.crypto",
+    "tokenId": "53115498937382692782103703677178119840631903773202805882273058578308100329417",
+    "namehash": "0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9",
     "description": "A CNS or UNS blockchain domain. Use it to resolve your cryptocurrency addresses and decentralized websites.\nhttps://gateway.pinata.cloud/ipfs/QmTiqc12wo2pBsGa9XsbpavkhrjFiyuSWsKyffvZqVGtut",
     "properties": {
         "records": {

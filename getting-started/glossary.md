@@ -85,7 +85,7 @@ A bundle of [smart contracts](#smart-contract) hosted on the blockchain responsi
 
 ### Namehashing
 
-A one-way algorithm that converts a domain name like `example.crypto` into an ERC-721 token Id so [smart contracts](#smart-contract) can understand it.
+A one-way algorithm that converts a domain name like `example.crypto` into an ERC-721 token ID so [smart contracts](#smart-contract) can understand it.
 
 ### Web3 Domain
 

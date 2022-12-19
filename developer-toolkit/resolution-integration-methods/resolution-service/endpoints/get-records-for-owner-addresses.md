@@ -41,7 +41,7 @@ An object with a `data` field that contains a list of domain details and some me
 
 * `data`: (array) An array with the data and metadata of domains owned by a wallet address.
     * `id`: (string) The domain ID.
-    * `attributes`: A list of domain details. The details are the same as for [Get records for a domain](get-records-for-a-domain.md#returns) response.
+    * `attributes`: A list of domain details. The details are the same as for [Get Records for a Domain](get-records-for-a-domain.md#returns) response.
 * `meta`: Contains list metadata.
     * `perPage` - (number) The number of elements in the list in a single response.
     * `nextStartingAfter` - (string) A value you can pass in the `startingAfter` query parameter to get the next page of the domains list.
@@ -69,14 +69,6 @@ curl \
         {
             "id": "brad.crypto",
             "attributes": {
-                "meta": {
-                    "domain": "brad.crypto",
-                    "blockchain": "ETH",
-                    "networkId": 1,
-                    "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
-                    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
-                    "registry": "0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe"
-                },
                 "records": {
                     "ipfs.html.value": "QmTiqc12wo2pBsGa9XsbpavkhrjFiyuSWsKyffvZqVGtut",
                     "crypto.ADA.address": "DdzFFzCqrhsuwQKiR3CdQ1FzuPAydtVCBFTRdy9FPKepAHEoXCee2qrio975M4cEbqYwZBsWJTNyrJ8NLJmAReSwAakQEHWBEd2HvSS7",
@@ -86,13 +78,24 @@ curl \
                     "social.picture.value": "1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317",
                     "gundb.public_key.value": "pqeBHabDQdCHhbdivgNEc74QO-x8CPGXq4PKWgfIzhY.7WJR5cZFuSyh1bFwx0GWzjmrim0T5Y6Bp0SSK0im3nI",
                     "ipfs.redirect_domain.value": "https://abbfe6z95qov3d40hf6j30g7auo7afhp.mypinata.cloud/ipfs/Qme54oEzRkgooJbCDr78vzKAWcv6DDEZqRhhDyDtzgrZP6"
+                },
+                "meta": {
+                    "domain": "brad.crypto",
+                    "tokenId": "53115498937382692782103703677178119840631903773202805882273058578308100329417",
+                    "namehash": "0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9",
+                    "blockchain": "ETH",
+                    "networkId": 1,
+                    "owner": "0x8aad44321a86b170879d7a244c1e8d360c99dda8",
+                    "resolver": "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842",
+                    "registry": "0xd1e5b0ff1287aa9f9a268759062e4ab08b9dacbe",
+                    "reverse": false
                 }
             }
         }
     ],
     "meta": {
         "perPage": 100,
-        "nextStartingAfter": "12777",
+        "nextStartingAfter": "30031",
         "sortBy": "id",
         "sortDirection": "ASC",
         "hasMore": false
