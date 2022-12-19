@@ -31,8 +31,6 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ## Step 3: Generate the Namehash of the Domain
 
-You can generate the [namehash](/getting-started/domain-registry-essentials/namehashing.md) of a domain using any of the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) or [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
-
 <embed src="/snippets/_namehashing-snippets.md" />
 
 ## Step 4: Retrieve the TokenURI

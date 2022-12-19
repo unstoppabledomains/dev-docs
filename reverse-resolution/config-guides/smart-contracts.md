@@ -50,8 +50,6 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 ## Step 4: Generate the Namehash of Your Domain
 
-You can generate the [namehash](/getting-started/domain-registry-essentials/namehashing.md) of your domain using any of the [resolution libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) or [CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
-
 <embed src="/snippets/_namehashing-snippets.md" />
 
 ## Step 5: Set the Reverse Record

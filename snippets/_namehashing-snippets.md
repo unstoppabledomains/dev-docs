@@ -1,3 +1,5 @@
+You can generate the [namehash](/getting-started/glossary.md#namehash) of a domain using any of the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md), [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md), or [Resolution Service](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
