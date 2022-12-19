@@ -33,4 +33,8 @@ Since distributing Free Domains **requires** strict anti-abuse measures, such as
 
 Unstoppable Domains Partner API can pre-fill crypto payment addresses for the user during the minting process, which adds complexity to the implementation. Therefore, we only recommend doing this if your application is a wallet since wallets contain the addresses of various cryptos for the user.
 
+## Don’t Use Your Secrets in the Frontend
+
+Using your Partner API key from the backend of your application is recommended rather than the frontend. If the API key is placed in the frontend, it becomes accessible by anyone who has access to the client-side code, increasing the risk of unauthorized access or misuse. To protect against this, use the API key from the backend to keep it secure.
+
 <embed src="/snippets/_discord.md" />
