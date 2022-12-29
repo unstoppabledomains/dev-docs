@@ -2,6 +2,7 @@
     --ud-blue: #0D67FE;
     --ud-sky-blue: #00C9FF;
     --video-max-width: 100%;
+    --video-aspect-ratio: calc(9/16);
 }
 
 figure {
@@ -113,8 +114,8 @@ figcaption {
     max-width: var(--video-max-width);
     /* calculate height based on aspect ratio (or default to 16:9) and clamp based on max-width */
     padding-bottom: min(
-        calc(var(--aspect-ratio, .5625) * 100%),
-        calc(var(--aspect-ratio, .5625) * var(--video-max-width))
+        calc(var(--video-aspect-ratio) * 100%),
+        calc(var(--video-aspect-ratio) * var(--video-max-width))
       );
     height: 0;
   }

@@ -6,7 +6,7 @@ export default function ColorSample(props) {
         color: props.color ? '#ffffff' : '#ff0000',
         padding: '0.25em',
         textAlign: 'center',
-    };
+    } as React.CSSProperties;
 
     return (
         <code style={elementStyle}>{props.color || 'undefined'}</code>
