@@ -51,6 +51,7 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .dao
 - .x
 - .klever
+- .hi
 - .zil *
 
 :::warning

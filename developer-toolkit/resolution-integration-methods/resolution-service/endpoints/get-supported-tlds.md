@@ -45,7 +45,8 @@ curl --location --request GET 'https://resolve.unstoppabledomains.com/supported_
         "wallet",
         "x",
         "klever",
-        "zil"
+        "zil",
+        "hi"
     ]
 }
 ```
