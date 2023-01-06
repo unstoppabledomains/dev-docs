@@ -22,7 +22,7 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 ### Method Changes and Updates
 
-* **gettokensownedby** has been depreciated and is no longer supported in L2.
+* **gettokensownedby** has been deprecated and is no longer supported in L2.
 * **getallrecords** has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
 
 ### New Supported Method

@@ -175,11 +175,11 @@ TTL setting for corresponding type of records.
 | ------ | ------- |
 | `\d+`  | `164`   |
 
-### Depreciated records
+### Deprecated records
 
 **`ipfs.html.value`**
 
-Depreciated: use `dweb.ipfs.hash` instead.
+Deprecated: use `dweb.ipfs.hash` instead.
 
 | Format            | Example                                          |
 | ----------------- | ------------------------------------------------ |
@@ -187,7 +187,7 @@ Depreciated: use `dweb.ipfs.hash` instead.
 
 **`ipfs.redirect_domain.value`**
 
-Depreciated: use `browser.redirect_url` instead.
+Deprecated: use `browser.redirect_url` instead.
 
 | Format                                          | Example                        |
 | ----------------------------------------------- | ------------------------------ |
@@ -227,7 +227,7 @@ Off-chain source to implement records forwarding. For example, if you want to ch
 | ---------------- | ------- |
 | `^(https?)://[^\\s/$.?#].[^\\s]*$` | `https://my-record-provider/records/bob` |
 
-### Depreciated records
+### Deprecated records
 
 **`social.twitter.username`**
 
