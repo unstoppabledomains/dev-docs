@@ -5,6 +5,8 @@ description: An overview of the resolution options available for developers inte
 
 # Unstoppable Resolution
 
+Resolution is a feature that enables applications that integrate with Unstoppable Domains to return a wallet address for a cryptocurrency when given a domain.
+
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vQLQ36lWH8Y" title="Tutorial: Introduction To Unstoppable Domains Resolution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
