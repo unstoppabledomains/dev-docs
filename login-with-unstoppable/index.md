@@ -14,7 +14,7 @@ redirectFrom:
 <figcaption>Login with Unstoppable Promo</figcaption>
 </figure>
 
-Login with Unstoppable allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
+Login with Unstoppable allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible and Solana applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
 
 The UAuth protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and their users.
 
