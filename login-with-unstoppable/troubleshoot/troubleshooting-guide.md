@@ -10,6 +10,13 @@ redirectFrom:
 
 Here are some of the most common error messages when integrating Login with Unstoppable and how to fix them.
 
+<figure>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uqGOJ9jKrmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<figcaption>Tutorial: Integrating Login With Popup</figcation>
+</figure>
+
 ## Error: Invalid Redirect URI
 
 This commonly happens when a set of credentials meant to be used in a live environment are copied to the local test environment, which causes a mismatch between the configuration on the server and the configuration of the library instance. The error displays in the console and is highlighted in red when you inspect it (for Chrome).
