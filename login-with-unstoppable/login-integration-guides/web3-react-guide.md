@@ -12,6 +12,13 @@ This is the basic installation guide for the [web3-react](https://github.com/Uni
 This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses the latest v8 beta branch of `web3-react`. For integrating Login with the previous [v6 branch](https://github.com/Uniswap/web3-react/tree/v6), see the [v6 Web3 React guide](/login-with-unstoppable/login-integration-guides/web3-react-v6-guide.md).
 :::
 
+<figure>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/kPxlUe0gAjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<figcaption>Tutorial: Integrating Login With Popup</figcation>
+</figure>
+
 ## Step 1: Install the Libraries
 
 Install `web3-react` and the connectors for MetaMask, WalletConnect, and UAuth with `yarn` or `npm`.
