@@ -38,6 +38,15 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 3. Receive email communications without sharing private email addresses.
 4. Only one login for every web3 app. No need to remember multiple unique usernames and passwords.
 
+## Integration Overview
+
+<figure>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/3-7CLFB7tCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<figcaption>Tutorial: Integrating Login With Unstoppable</figcation>
+</figure>
+
 ## Supported TLDs
 
 Login with Unstoppable currently supports the following top-level domains (TLDs):
