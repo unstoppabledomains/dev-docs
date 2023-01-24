@@ -9,10 +9,16 @@ showNextButton: false
 This is the basic integration guide for the Blocknative Web3-Onboard UAuth module and is best used for single page applications (SPAs). For more information about this module, please see the source code on [github](https://github.com/blocknative/web3-onboard/tree/v2-web3-onboard-develop/packages/uauth).
 
 <figure>
-
 ![Web3 Onboard with Unstoppable Domains](../../static/images/login-selection-web3-onboard.png '#width=70%')
-
 <figcaption>Web3 Onboard with Unstoppable Domains</figcaption>
+</figure>
+
+## Tutorial
+<figure>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/4kBqEYXP4D4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<figcaption>Tutorial: Integrating With Blocknative Web3-Onboard</figcation>
 </figure>
 
 ## Step 1: Install the Blocknative Packages
