@@ -5,6 +5,7 @@ settings:
   showConsole: true
   generateCodeSamples:
     languages:
+      - lang: curl
       - lang: JavaScript
       - lang: Node.js
       - lang: Python
