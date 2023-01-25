@@ -10,5 +10,4 @@ settings:
       - lang: Node.js
       - lang: Python
       - lang: Java
-      - lang: Go
   hideDownloadButton: true
