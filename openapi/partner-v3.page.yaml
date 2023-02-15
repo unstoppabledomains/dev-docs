@@ -1,13 +1,14 @@
 type: reference-docs
-definitionId: partner
+definitionId: partner-v3
 settings:
   pagination: none
   showConsole: true
   generateCodeSamples:
     languages:
       - lang: curl
-      - lang: JavaScript
       - lang: Node.js
       - lang: Python
       - lang: Java
+      - lang: C#
+      - lang: PHP
   hideDownloadButton: true
