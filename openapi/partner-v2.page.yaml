@@ -11,4 +11,5 @@ settings:
       - lang: Java
       - lang: C#
       - lang: PHP
+      - lang: JavaScript
   hideDownloadButton: true
