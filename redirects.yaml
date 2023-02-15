@@ -265,3 +265,6 @@
 '/crypto-payments/best-practices/':
   to: '/developer-toolkit/reference/resolution-best-practices/'
   type: 301
+'/openapi/reference/'
+  to: '/openapi/partner-v2'
+  type: 301
