@@ -27,8 +27,8 @@ export default LandingLayout;
 
 <NavBar location={props.location} standalone={false} />
 
-<Jumbotron>
-  <H1>Developer Documentation</H1>
+<Jumbotron className="jumbotron-padding-bottom-less">
+  <H1 className="h1-less-margin">Developer Documentation</H1>
   <H2>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
      <Button variant="contained" size="xlarge" color="primary" to="getting-started/index.md">
@@ -37,7 +37,7 @@ export default LandingLayout;
   </Flex>
 </Jumbotron>
 <Box my={25}>
-  <SectionHeader>
+  <SectionHeader className="h2-margin-top-bottom-less">
     <Emphasis>Browse By Product</Emphasis>
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
@@ -54,7 +54,7 @@ export default LandingLayout;
         UNS and CNS smart contracts
     </WideTile>
   </FlexSection>
-  <SectionHeader>
+  <SectionHeader className="h2-margin-top-bottom-less">
     Build your <Emphasis> application </Emphasis> today!
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">

@@ -174,3 +174,16 @@ figcaption {
         display: none!important;
     }
 }
+
+.h1-less-margin {
+    margin: 1.0em 0 0.25em 0 !important;
+}
+
+.h2-margin-top-bottom-less {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.jumbotron-padding-bottom-less {
+    padding-bottom: 72px !important;
+}
