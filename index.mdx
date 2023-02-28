@@ -27,9 +27,9 @@ export default LandingLayout;
 
 <NavBar location={props.location} standalone={false} />
 
-<Jumbotron>
-  <H1>Developer Documentation</H1>
-  <H2>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
+<Jumbotron className="padding-top-bottom-20">
+  <H1 className="margin-top-bottom-20">Developer Documentation</H1>
+  <H2 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
      <Button variant="contained" size="xlarge" color="primary" to="getting-started/index.md">
       Get Started
@@ -37,27 +37,27 @@ export default LandingLayout;
   </Flex>
 </Jumbotron>
 <Box my={25}>
-  <SectionHeader>
+  <SectionHeader className="margin-top-bottom-30 padding-top-bottom-10">
     <Emphasis>Browse By Product</Emphasis>
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <WideTile to="developer-toolkit/index.md" header="Resolution">
+    <WideTile to="developer-toolkit/index.md" header="Resolution" className="margin-top-bottom-20">
         Resolve domain names
     </WideTile>
-    <WideTile to="login-with-unstoppable/index.md" header="Identity">
+    <WideTile to="login-with-unstoppable/index.md" header="Identity" className="margin-top-bottom-20">
         Build a universal Web3 login
     </WideTile>
-    <WideTile to="partner/index.md" header="Partner API">
+    <WideTile to="partner/index.md" header="Partner API" className="margin-top-bottom-20">
         Become a partner to generate revenue
     </WideTile>
-    <WideTile to="developer-toolkit/reference/smart-contracts/uns-smart-contracts.md" header="Smart Contracts">
+    <WideTile to="developer-toolkit/reference/smart-contracts/uns-smart-contracts.md" header="Smart Contracts" className="margin-top-bottom-20">
         UNS and CNS smart contracts
     </WideTile>
   </FlexSection>
-  <SectionHeader>
+  <SectionHeader className="margin-top-bottom-30">
     Build your <Emphasis> application </Emphasis> today!
   </SectionHeader>
-  <FlexSection justifyContent="space-around" flexWrap="wrap">
+  <FlexSection justifyContent="space-around" flexWrap="wrap" className="padding-top-bottom-20">
     <ThinTile to="use-cases/index.mdx" icon={usecase} header="Use Cases">
         Review real life use cases along with potential solutions and
         direct links to Unstoppable integration guides, when applicable.
