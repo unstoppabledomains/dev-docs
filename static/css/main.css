@@ -175,15 +175,22 @@ figcaption {
     }
 }
 
-.h1-less-margin {
-    margin: 1.0em 0 0.25em 0 !important;
+.padding-top-bottom-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
-.h2-margin-top-bottom-less {
-    margin-top: 40px !important;
-    margin-bottom: 40px !important;
+.padding-top-bottom-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
 
-.jumbotron-padding-bottom-less {
-    padding-bottom: 72px !important;
+.margin-top-bottom-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.margin-top-bottom-30 {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
 }
