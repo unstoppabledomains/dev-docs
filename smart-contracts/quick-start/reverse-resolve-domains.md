@@ -3,7 +3,7 @@ title: Smart Contract Integration Guide | UD Developer Portal
 description: This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 ---
 
-# Smart Contract Integration Guide
+# Reverse Resolve Domains Using Smart Contracts
 
 This guide covers how to retrieve the reverse record of UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 
