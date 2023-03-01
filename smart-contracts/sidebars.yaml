@@ -10,7 +10,7 @@ pages:
         page: overview/cns-architecture-overview.md
       - label: UNS vs CNS comparison
         page: overview/cns-uns-comparison.md
-  - group: Quick Start
+  - group: Quickstart
     expanded: false
     pages:
       - label: Resolve domains
