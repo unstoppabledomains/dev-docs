@@ -5,24 +5,24 @@ pages:
     expanded: false
     pages:
       - label: UNS Architecture
-        page: ../getting-started/domain-registry-essentials/uns-architecture-overview.md
+        page: overview/uns-architecture-overview.md
       - label: CNS Architecture
-        page: ../getting-started/domain-registry-essentials/cns-architecture-overview.md
+        page: overview/cns-architecture-overview.md
       - label: UNS vs CNS comparison
-        page: ../getting-started/domain-registry-essentials/cns-uns-comparison.md
+        page: overview/cns-uns-comparison.md
   - group: Quick Start
     expanded: false
     pages:
       - label: Resolve domains
-        page: ../developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md
+        page: quick-start/resolve-domains.md
       - label: Reverse resolve domains
-        page: ../reverse-resolution/integration-guides/smart-contracts.md
+        page: quick-start/reverse-resolve-domains.md
       - label: Set reverse records
-        page: ../reverse-resolution/config-guides/smart-contracts.md
-      - label: Manage domains records
-        page: ../manage-domains/guides/managing-domains-using-contracts.md
+        page: quick-start/set-reverse-records.md
+      - label: Manage domain records
+        page: quick-start/manage-domain-records.md
       - label: Mint subdomains
-        page: ../manage-domains/guides/mint-subdomains-using-contracts.md
+        page: quick-start/mint-subdomains.md
   - group: Contract Reference
     expanded: false
     pages:
