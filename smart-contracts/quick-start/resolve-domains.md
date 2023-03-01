@@ -1,167 +1,58 @@
 ---
-title: Resolve Unstoppable Domains with Direct Blockchain Calls Guide | UD Developer Portal
-description: This page reviews the process for resolving Unstoppable domains with direct blockchain calls. It has been updated to reflect changes on L2 Polygon network.
+title: Resolve Using Smart Contracts Guide | UD Developer Portal
+description: This page explains the process for resolving domain records by making calls to Ethereum and Polygon smart contracts using Ethereum JSON RPC.
 ---
 
-# Resolve Unstoppable Domains With Direct Blockchain Calls Guide
+# Resolve Domains Using Smart Contracts Guide
 
-:::info
-The `.zil` namespace is located on a separate chain and requires a [different process](resolve-zil-without-libraries.md).
-:::
+Resolving a domain is retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the Registry side. Anyone accessing a mainnet Ethereum or Polygon Node can resolve a domain.
 
-In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, JavaScript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
+This section describes resolving domain records by making calls to Ethereum and Polygon smart contracts using the Ethereum JSON RPC. For developers who prefer a more straightforward solution, it might be more convenient to use the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) maintained by Unstoppable Domains.
 
-<figure>
+To resolve a domain, your software must access the Ethereum or Polygon network. For more information, see [Configuring an Ethereum Network Connection](#configuring-an-ethereum-network-connection).
 
-![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](/images/crypto-article.gif)
+## Retrieve Records with `ProxyReader`
 
-<figcaption>Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)</figcaption>
-</figure>
+The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-only call to `ProxyReader` smart contract. `ProxyReader` provides an API that allows users to resolve domains by making just one call by passing only keys of records and a domain namehash. Without `ProxyReader` it would require executing at least two calls: one to obtain a domain resolver address and another to get the records themselves. With `ProxyReader` it all happens under the hood.
 
-To resolve an unstoppable domain, we will need to
-
-* Tokenize the domain
-* Configure Ethers.js library
-* Make a call and fetch the data
-
-Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `JavaScript`.
-
-## Initialize the Project Folder
-
-The first thing we need to do is create a folder with three files inside: index.html, index.js, and ethers.js.
-
-```bash
-$ mkdir crypto-resolution
-$ cd crypto-resolution
-$ touch index.html index.js ethers.js
-```
-
-Your project folder should look exactly like the following:
-
-```
-.
-├── index.html
-├── index.js
-├── ethers.js
-```
-
-### Build the Layout: `index.html`
-
-Let’s open the index.html file and build out the layout for our app. To create a positive UI experience for the user, we’ll need to build an input bar, a button to trigger the resolution, and a `<div>` to display our records.
-
-Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
-
-:::info
-We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing](/getting-started/domain-registry-essentials/namehashing.md) guide.
-:::
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Basic .crypto integration</title>
-    </head>
-    <body>
-      <div id="main" style="
-      display: flex;
-      flex-direction: column;
-      height: 100vh;"
-      >
-
-        <input id="input" />
-        <button onclick="resolve()">Resolve</button>
-        <div id="records" style="display: flex; flex-direction: column;">
-
-        </div>
-      </div>
-
-      <!-- This exposes keccak_256 hash function -->
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/js-sha3/0.8.0/sha3.min.js"
-        integrity="sha512-PmGDkK2UHGzTUfkFGcJ8YSrD/swUXekcca+1wWlrwALIZho9JX+3ddaaI9wmmf8PmgDIpMtx6TU8YBJAZS0mPQ=="
-        crossorigin="anonymous">
-      </script>
-
-      <!-- This exposes the ethers.js library as a global variable: ethers -->
-      <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
-        type="application/javascript"></script>
-
-      <!-- This are our custom files -->
-      <script src="ethers.js"></script>
-      <script src="index.js"></script>
-    </body>
-</html>
-```
-
-### Add Some JavaScript: `index.js`
-
-Now that we have our `index.html` file set up, let’s add some JavaScript. We can start by inputting some basic code into our `index.js` file to capture the text from the input field and print it onto our console.
-
-The code snippet below shows the resolve function:
+See the [UNS ProxyReader](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#proxyreader) docs for a list of all the ProxyReader smart contract addresses owned and managed by Unstoppable Domains. Here's an example in JavaScript of getting two records (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
-async function resolve() {
-  const userInput = document.getElementById("input").value;
-  console.log({ domain: userInput });
-}
+// Ethereum ProxyReader contract address
+const proxyReaderAddress = "0x1BDc0fD4fbABeed3E611fd6195fCd5d41dcEF393";
+
+// Partial ABI, just for the getMany function.
+const proxyReaderAbi = [
+  "function getMany(string[] calldata keys, uint256 tokenId) external view returns (string[] memory)",
+];
+
+const proxyReaderContract = new ethers.Contract(
+  proxyReaderAddress,
+  proxyReaderAbi,
+  provider
+);
+
+// user domain and records to resolve
+const domain = "brad.crypto";
+const tokenId = namehash(domain);
+const keys = ["crypto.ETH.address", "crypto.BTC.address"];
+
+const values = await proxyReaderContract.getMany(keys, tokenId);
+console.log(values);
+
+// [
+//   '0x8aaD44321A86b170879d7A244c1e8d360c99DdA8',
+//   'bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y'
+// ]
 ```
 
-:::info
-We can open `index.html` in a browser to make sure everything is connected and launches.
-:::
-
-## Tokenize Your Domain by Namehashing
-
-Namehashing is an algorithm that tokenizes your domain name in a way that the `.crypto` smart contract can understand.
-
-To tokenize our domain, we’ll need to split the domain name by the "." character into separate labels, reverse the array, and reduce it to a single hash. We can do this by implementing a recursive hash function.
-
-We’ll also want to implement an `arrayToHex()` function to get the result as a string, as well as a wrapper function `namehash()`.
+UNS code example:
 
 ```javascript
-function namehash(name) {
-  const hashArray = hash(name);
-  return arrayToHex(hashArray);
-}
-function hash(name) {
-  if (!name) {
-      return new Uint8Array(32);
-  }
-  const [label, ...remainder] = name.split('.');
-  const labelHash = keccak_256.array(label);
-  const remainderHash = hash(remainder.join('.'));
-  return keccak_256.array(new Uint8Array([...remainderHash, ...labelHash]));
-}
-function arrayToHex(arr) {
-  return '0x' + Array.prototype.map.call(arr, x => ('00' + x.toString(16)).slice(-2)).join('');
-}
-```
+// UNS Registry Contract Address
+var unsAddress = '0x070e83FCed225184E67c86302493ffFCDB953f71';
 
-This table shows a list of Namehash examples with different inputs:
-
-| Label       | Namehash                                                             |
-| ----------- | -------------------------------------------------------------------- |
-| ""          | `0x88d4843af302c2093286898cd34cba7a471c3cdce4c78514fc971c3c6a53891e` |
-| crypto      | `0x0f4a10a4f46c388cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f` |
-| brad.crypto | `0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9` |
-
-## Configure the Ethers.js Library
-
-To talk with any blockchain contract using `ethers.js`, we need to know the following:
-
-* Ethereum contract address
-* Polygon contract address
-* Contract ABI
-* Ethereum provider
-* Polygon provider
-
-Let’s add the following information to our `ethers.js` file:
-
-```javascript
-var ethAddress = '0x299974AeD8911bcbd2C61262605b89F591a53E83';
-var polygonAddress = '0x332A8191905fA8E6eeA7350B5799F225B8ed30a9';
-
+// Partial ABI, just for the getMany function.
 var abi = [
   {
     constant: true,
@@ -200,280 +91,71 @@ var abi = [
     type: 'function',
   }
 ];
-var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/demo");
-var provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.alchemyapi.io/v2/demo");
+
+var provider = ethers.providers.getDefaultProvider('goerli');
+var contract = new ethers.Contract(unsAddress, abi, provider);
+async function fetchContractData(keys, tokenId) {
+  return contract.getData(keys, tokenId);
+}
+
+// user domain and records to resolve
+const domain = "udtestdev-test.crypto";
+const tokenId = namehash(domain);
+const keys = ["crypto.BTC.address", "crypto.ETH.address"];
+
+const data = await fetchContractData(keys, tokenId)
+console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
+
+// {
+//   owner: "0x58ca45e932a88b2e7d0130712b3aa9fb7c5781e2"
+//   resolver: "0xb66dce2da6afaaa98f2013446dbcb0f4b0ab2842"
+//   values: ["bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y", "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"]
+// }
 ```
 
 :::info
-The network and contract addresses are from goerli and polygon mumbai test networks respectively. For mainnet, use the following contract addresses: [0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E](https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **goerli**.
+`namehash()` - namehashing algorithm implementation. See the [Namehashing](/getting-started/domain-registry-essentials/namehashing.md) guide for more information.
 :::
-
-For the scope of this project, we will only need to use the `getData()` function from the [CNS Smart Contract](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md#proxyreader).
-
-### Create a Contract Instance
-
-Next, we’ll need to create a contract instance and create a function to query our contract.
-
-```javascript
-var ethContract = new ethers.Contract(ethAddress, abi, provider);
-var polygonContract = new ethers.Contract(polygonAddress, abi, polygonProvider);
-
-async function fetchContractData(contract, keys, tokenId) {
- return contract.getData(keys, tokenId);
-}
-```
-
-By inspecting the contract’s getData function interface, we can see that it requires from us an **array of keys** and a **tokenId**. We can get the **tokenId** by calling the `namehash()` function from above.
-
-:::info
-Although any string can be stored as a key under the domain, Unstoppable Domains has [standardized the keys](/developer-toolkit/reference/records-reference.md) across many applications.
-:::
-
-### Record Keys Lookup
-
-The following table shows record keys and a description for each:
-
-| Key                | Description                        |
-| ------------------ | ---------------------------------- |
-| crypto.BTC.address | BTC address attached to the domain |
-| crypto.ETH.address | ETH address attached to the domain |
-
-## Make the Call to the Contract
-
-Let’s update our `resolve()` function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect it further.
-
-First, we will query the polygon network and check the ownership. If there is no owner for a domain on Polygon network, we need to query the Ethereum network.
-
-```javascript
-async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   console.log({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: data[2]
-   });
- });
-}
-
-async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on polygon network look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
-
-   // proceed with polygon results
-   console.log({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: data[2]
-   });
-
- });
-}
-
-async function resolve() {
-  const userInput = document.getElementById("input").value;
-  const tokenId = namehash(userInput);
-
-  const interestedKeys = [
-    "crypto.BTC.address",
-    "crypto.ETH.address",
-  ];
-
-  resolveBothChains(tokenId, interestedKeys);
-}
-```
-
-If we try to resolve the **brad.crypto** domain with the above keys, we should see the following parsed result from `fetchContractData()` function:
-
-```json
-{
-  "ownerAddress": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
-  "resolverAddress": "0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842",
-  "records":[
-    "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
-    "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
-    ]
-}
-```
-
-:::info
-data\[2] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
-:::
-
-## Display the Records
-
-Since this is a simple example, we won’t get too fancy. We’ll just create a `<span>` element for each record containing its key and value, its owner address, and its resolver address. We’ll also want to set the font to <span style="color: red">red</span> if the record is not found.
-
-```javascript
-function cleanDOM(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-function displayResolution(resolution) {
-  const {ownerAddress, resolverAddress, records} = resolution;
-  const mainContainer = document.getElementById('records');
-  cleanDOM(mainContainer);
-  const ownerRecord = document.createElement('span');
-  ownerRecord.innerHTML = `ownerAddress: ${ownerAddress}`;
-  const resolverRecord = document.createElement('span');
-  resolverRecord.innerHTML = `resolverAddress: ${resolverAddress}`;
-  mainContainer.appendChild(ownerRecord);
-  mainContainer.appendChild(resolverRecord);
-  Object.entries(records).map(([key, value]) => {
-    const recordSpan = document.createElement('span');
-    if (!value) {
-      recordSpan.style.color = 'red';
-      value = `No ${key} found`;
-    }
-    recordSpan.innerHTML = `${key} : ${value}`;
-    mainContainer.appendChild(recordSpan);
-  });
-}
-```
-
-Before we test it out, let’s make our lives a little easier by implementing a function to combine keys and results into one object.
-
-```javascript
-function combineKeysWithRecords(keys, records) {
-  const combined = {};
-  keys.map((key, index) => {
-    combined[key] = records[index];
-  });
-  return combined;
-}
-```
-
-Now we can easily show the records on our page:
-
-```javascript
-async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
-}
-
-async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on polygon look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
-
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
-}
-```
-
-If we are successful, we should see the following on our page:
 
 <figure>
 
-![Example of a successful resolution](/images/example-successful-resolution.png)
+![Resolving domain records via ProxyReader for CNS and UNS Registries](/images/domain-records-via-proxy-reader-smart-contract.png)
 
-<figcaption>Example of a successful resolution</figcaption>
+<figcaption>Resolving domain records via ProxyReader for CNS and UNS Registries</figcaption>
 </figure>
 
-## Set-up Error Notifications
+See the [Records Reference](/developer-toolkit/reference/records-reference.md) for more information about the standardized records.
 
-Now that we've made a successful call, let’s deal with all possible errors that might come up during the resolution.
+:::info
+When resolving domains to records, first check the records on the Polygon network, then check on the Ethereum network.
+:::
 
-To do this, we’ll want to create a function to print an error in our records `<div>`. We’ll also want to add a boolean argument `cleanDom` to remove everything from the records `<div>` before we place an error for display.
+## Record Value Validation
 
-```javascript
-function displayError(message, cleanDom) {
-  const mainContainer = document.getElementById('records');
-  if (cleanDom) {
-    cleanDOM(mainContainer);
-  }
-  const error = document.createElement('p');
-  error.style.color = "red";
-  error.innerHTML = message;
-  mainContainer.appendChild(error);
-  return ;
-}
-```
+For CNS, `Resolver` doesn't have built-in record value validation when updated. For UNS, `RecordStorage` doesn’t have built-in record value validation after an update.
 
-We can easily identify the possible errors by playing around with the app in its current state. The following table lists the possible errors and their descriptions.
+This is for two reasons:
 
-| Errors                   | Description                                                                                                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| Domain is not registered | Owner address is `0x00000000000000000000000000000000`                                                            |
-| Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000`     |
-| Record is not found      | Records are queried for an address (e.g. crypto.BTC.address) but the domain owner hasn't set  up the records yet |
+* Any validation would require additional gas to be paid
+* Solidity is a special-purpose programming language that doesn't have built-in data validation tools like Regular Expressions
 
-Once we’ve identified the errors, we will need to update the callback to the `fetchContractData()` function to show the errors to the user:
+Any domain management application should perform record format validation before submitting a transaction. However, there is no guarantee that all management applications will do it correctly. For this reason, records should be validated when the domain is resolved.
 
-```javascript
-function isEmpty(msg) {
- return !msg || msg === '0x0000000000000000000000000000000000000000';
-}
+See the [Records Reference](/developer-toolkit/reference/records-reference.md) for more information for the validator of each record.
 
-async function resolveEthNetwork(tokenId, interestedKeys) {
- fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     displayError('Domain is not registered', true);
-     return;
-   }
+## Configuring an Ethereum Network Connection
 
-   if (isEmpty(data.resolver)) {
-     displayError('Domain is not configured', true);
-     return ;
-   }
+Domain resolution configuration at a low level requires three configuration parameters:
 
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
-}
+* Ethereum JSON RPC provider
+* Ethereum CHAIN ID
+* Registry Contract Address
 
-async function resolveBothChains(tokenId, interestedKeys) {
- // try to resolve the polygon network first
- fetchContractData(polygonContract, interestedKeys, tokenId).then(data => {
-   if (isEmpty(data.owner)) {
-     // if no owner for domain found on polygon look up the eth network
-     return resolveEthNetwork(tokenId, interestedKeys);
-   }
+Ethereum JSON RPC provider is an API implementing the Ethereum JSON RPC standard. Usually, it is given in the form of an HTTP API endpoint. However, other forms may exist if the Ethereum node is launched locally. Unstoppable Domains recommends the [Cloudflare Ethereum Gateway](https://developers.cloudflare.com/distributed-web/ethereum-gateway), an Ethereum node service provider. To learn more about providers, see [Nodes and client](https://ethereum.org/en/developers/docs/nodes-and-clients/) and [Nodes as a service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-   if (isEmpty(data.resolver)) {
-     displayError('Domain is not configured', true);
-     return ;
-   }
+Ethereum CHAIN ID is an ID of the Ethereum network a node is connected to. You can only connect each RPC provider to one network. There is only one production network with CHAIN ID equal to `1` and called `mainnet`. Other networks are only used for testing purposes. See [EIP-155](https://eips.ethereum.org/EIPS/eip-155) for more information. You can determine CHAIN ID of an Ethereum node by calling the [net version method](https://eth.wiki/json-rpc/API#net\_version) on JSON RPC, which should be used as a default when only JSON RPC provider is given.
 
-   displayResolution({
-     ownerAddress: data.owner,
-     resolverAddress: data.resolver,
-     records: combineKeysWithRecords(interestedKeys, data[2])
-   });
- });
-}
-```
+There are two registry contract addresses, **Crypto Registry Contract Address** and **UNS Registry Contract Address**, each with its production registry address on the mainnet. The following addresses should be used as the default for production configuration:
 
-Now you can resolve any `.crypto` domain and display the appropriate error message to your users. Just open the `index.html` file in your browser and play around with the results to get a better sense of the errors that may come up and the error messages you might want to include.
-
-For example, you can try to resolve the following domains:
-
-| Domain                  | Result                      |
-| ----------------------- | --------------------------- |
-| `homecakes.crypto`      | Domain has no BTC record    |
-| `udtestdev-test.crypto` | Resolves without any issues |
-| `ryan.crypto`           | Domain has no BTC record    |
-
-## Resources
-
-* [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
-* [UD Discord Community](https://discord.gg/unstoppabledomains)
+* CNS production registry address on the mainnet: [0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe)
+* UNS production registry address on the mainnet: [0x049aba7510f45BA5b64ea9E658E342F904DB358D](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D)
