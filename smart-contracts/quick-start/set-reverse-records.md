@@ -3,7 +3,7 @@ title: Smart Contract Configuration Guide | UD Developer Portal
 description: This guide covers how to set Reverse Resolution records for UD domains using smart contracts. This process requires using the ABIs implemented into the Unstoppable Domains UNS smart contract.
 ---
 
-# Smart Contract Configuration Guide
+# Set Reverse Records Using Smart Contracts
 
 This guide covers how to set Reverse Resolution records for UD domains using smart contracts. This process requires using the ABIs built into the Unstoppable Domains UNS smart contract.
 
