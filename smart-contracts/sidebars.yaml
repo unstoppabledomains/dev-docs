@@ -1,5 +1,5 @@
 pages:
-  - separator: Smart Contract
+  - separator: Smart Contracts
     separatorLine: true
   - group: Overview
     expanded: false
