@@ -1,0 +1,32 @@
+pages:
+  - separator: Smart Contract
+    separatorLine: true
+  - group: Overview
+    expanded: false
+    pages:
+      - label: UNS Architecture
+        page: ../getting-started/domain-registry-essentials/uns-architecture-overview.md
+      - label: CNS Architecture
+        page: ../getting-started/domain-registry-essentials/cns-architecture-overview.md
+      - label: UNS vs CNS comparison
+        page: ../getting-started/domain-registry-essentials/cns-uns-comparison.md
+  - group: Quick Start
+    expanded: false
+    pages:
+      - label: Resolve domains
+        page: ../developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names.md
+      - label: Reverse resolve domains
+        page: ../reverse-resolution/integration-guides/smart-contracts.md
+      - label: Set reverse records
+        page: ../reverse-resolution/config-guides/smart-contracts.md
+      - label: Manage domains records
+        page: ../manage-domains/guides/managing-domains-using-contracts.md
+      - label: Mint subdomains
+        page: ../manage-domains/guides/mint-subdomains-using-contracts.md
+  - group: Contract Reference
+    expanded: false
+    pages:
+      - label: UNS Smart Contracts
+        page: contract-reference/uns-smart-contracts.md
+      - label: CNS Smart Contracts
+        page: contract-reference/cns-smart-contracts.md
