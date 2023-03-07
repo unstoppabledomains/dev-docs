@@ -5,5 +5,7 @@ pages:
     separatorLine: true
   - page: partner-v3.page.yaml
     separatorLine: true
+  - page: profile-v1.page.yaml
+    separatorLine: true
   - page: loginref.page.yaml
     separatorLine: true
