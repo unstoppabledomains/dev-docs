@@ -61,6 +61,8 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .x
 - .klever
 - .hi
+- .kresus
+- .polygon
 - .zil *
 
 :::warning
