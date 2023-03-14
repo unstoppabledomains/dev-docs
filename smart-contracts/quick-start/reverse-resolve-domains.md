@@ -31,60 +31,37 @@ Navigate to the `Contract` tab in either the Etherscan or Polygonscan page of th
 
 ## Step 3: Retrieve the Reverse Record
 
-The UNS contract has a `reverseOf()` method that takes in a wallet address and returns the namehash of the domain that has configured Reverse Resolution to that address.
+The UNS contract has a `reverseNameOf()` method that takes in a wallet address and returns the name of the domain that has configured Reverse Resolution to that address.
 
 <figure>
 
-![polygonscan reverseOf method](/images/reverse-of-abi.png '#width=50%')
+![polygonscan reverseNameOf method](/images/reverse-name-of-abi.png '#width=50%')
 
-<figcaption>polygonscan reverseOf method</figcaption>
+<figcaption>polygonscan reverseNameOf method</figcaption>
 </figure>
 
-Add the wallet address you want to resolve in the `addr` field of the `reverseOf()` method and click the `Query` button.
+Add the wallet address you want to resolve in the `addr` field of the `reverseNameOf()` method and click the `Query` button.
 
 <figure>
 
-![polygonscan reverseOf response](/images/reverse-of-abi-response.png)
+![polygonscan reverseNameOf response](/images/reverse-name-of-abi-response.png)
 
-<figcaption>polygonscan reverseOf response</figcaption>
+<figcaption>polygonscan reverseNameOf response</figcaption>
 </figure>
 
 :::info
-The `reverseOf()` method will return a value of `0` if there is no reverse record configured for the wallet address provided.
+The `reverseNameOf()` method will return a value of `''` if there is no reverse record configured for the wallet address provided.
 :::
 
-## Step 4: Get the Domain Metadata
+`reverseNameOf()` method will return human-readable domain name.
 
-Send a `GET` request to the [Get Metadata for a Domain](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md) to retrieve the metadata of the domain associated with the namehash returned from the `reverseOf()` method call:
+To calculate `namehash` from domain name use namehashing functions:
 
-```bash
-https://resolve.unstoppabledomains.com/metadata/{domainOrToken}
-```
-
-## Step 5: Get the Domain Name From the Metadata
-
-The metadata endpoint returns a JSON response in the following format:
-
-```javascript
-{
-  "name": string,
-  "description": string,
-  "properties": object,
-  "external_url": string,
-  "image": string,
-  "image_url": string,
-  "attributes": [
-    object
-  ],
-  "background_color": string
-}
-```
-
-The human-readable form of the domain associated with the token is stored in the `name` field of the API response.
+<embed src="/snippets/_namehashing-snippets.md" />
 
 ## Smart Contract Considerations
 
-Integrating Reverse Resolution with smart contracts involves using the `reverseOf()` method to retrieve the namehash of the reverse record, then using the [Get Metadata for a Domain](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-metadata-for-a-domain.md) to get the human-readable version of the domain.
+Integrating Reverse Resolution with smart contracts involves using the `reverseNameOf()` method to retrieve the domain name of the reverse record.
 
 You can also integrate Reverse Resolution into your application using libraries that allow you to call smart contracts ABIs like [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3.js](https://github.com/ChainSafe/web3.js). Here’s an application that integrates Reverse Resolution using `ethers.js`: <https://github.com/Noxturnix/web3udmintfeed.nft>.
 
@@ -93,25 +70,21 @@ An example in JavaScript of integrating Reverse Resolution (using the [ethers.js
 ```javascript
 const proxyReaderAddress = "0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680";
 
-// partial ABI, just for the reverseOf method
+// partial ABI, just for the reverseNameOf method
 const proxyReaderAbi = [
-  "function reverseOf(address addr) external view returns (uint256)",
+    "function reverseNameOf(address addr) external view returns (string)",
 ];
 
 const proxyReaderContract = new ethers.Contract(
-  proxyReaderAddress,
-  proxyReaderAbi,
-  provider
+    proxyReaderAddress,
+    proxyReaderAbi,
+    provider
 );
 
 const address = "0x88bc9b6c56743a38223335fac05825d9355e9f83";
 
-// call the reverseOf method
-const reverseResolutionTokenId = await proxyReaderContract.reverseOf(address);
-fetch(`https://resolve.unstoppabledomains.com/metadata/${reverseResolutionTokenId}`)
-  .then(response => response.json())
-  .then(data => console.log(data.name));
-
+// call the reverseNameOf method
+const reverseDomainName = await proxyReaderContract.reverseNameOf(address);
 // jim-unstoppable.x
 ```
 
