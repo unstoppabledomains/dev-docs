@@ -1,0 +1,61 @@
+pages:
+  - separator: Unstoppable Resolution
+    separatorLine: true
+  - page: overview.md
+    label: Overview
+  - group: Quickstart
+    expanded: false
+    pages:
+      - label: Retrieve an API key
+        page: quickstart/retrieve-an-api-key.md
+      - label: Resolve domains
+        page: quickstart/resolution.md
+      - label: Reverse resolve domains
+        page: quickstart/reverse-resolution.md
+  - group: How-To Guides
+    expanded: false
+    pages:
+      - label: Records reference
+        page: guides/records-reference.md
+      - label: Etherium providers
+        page: guides/ethereum-providers.md
+      - group: Browser resolution (HTTP & IPFS)
+        expanded: false
+        pages:
+          - label: Overview
+            page: guides/browser-resolution/overview.md
+          - label: Algorithm
+            page: guides/browser-resolution/algorithm.md
+          - label: Test domains
+            page: guides/browser-resolution/test-domains.md
+      - label: Best practices
+        page: guides/best-practices.md
+      - label: FAQs
+        page: guides/faq.md
+  - group: Tech References
+    expanded: false
+    pages:
+    - label: API Reference
+      page: ../openapi/resolution.page.yaml
+    - group: Smart Contracts
+      expanded: false
+      pages:
+        - label: Resolution Contracts
+          page: ../smart-contracts/quick-start/resolve-domains.md
+        - label: Reverse Resolution Contracts
+          page: ../smart-contracts/quick-start/reverse-resolve-domains.md
+    - group: SDKs and Libraries
+      expanded: false
+      pages:
+        - label: JavaScript
+          page: sdks-and-libraries/javascript.md
+        - label: Java
+          page: sdks-and-libraries/java.md
+        - label: Swift
+          page: sdks-and-libraries/swift.md
+        - label: Go
+          page: sdks-and-libraries/go.md
+        - label: CLI
+          page: sdks-and-libraries/cli.md
+        - label: Matic.js SDK
+          page: sdks-and-libraries/maticjs.md
