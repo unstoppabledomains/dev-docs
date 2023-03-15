@@ -54,7 +54,9 @@ Click on the `Connect to Web3` button in the `Write as Proxy` tab and connect th
 
 ## Step 5: Set the Reverse Record
 
-The UNS contract has a `setReverse()` ABI method that takes in the namehash of a domain and sets its reverse record to your wallet address.
+The UNS contract has a `setReverse()` ABI method that takes in the domain name split by labels and sets its reverse record to your wallet address.
+
+Domain name `example.nft` will be formatted as `['example', 'nft']` in labels.
 
 <figure>
 
@@ -63,7 +65,7 @@ The UNS contract has a `setReverse()` ABI method that takes in the namehash of a
 <figcaption>polygonscan setReverse method</figcaption>
 </figure>
 
-Add the generated namehash of the domain you want to configure Reverse Resolution for in the `tokenId` field of the `setReverse()` method and click the `Write` button.
+Add the domain labels of the domain you want to configure Reverse Resolution for in the `labels` field of the `setReverse()` method and click the `Write` button.
 
 <figure>
 
