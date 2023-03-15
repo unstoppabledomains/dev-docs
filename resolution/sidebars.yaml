@@ -12,7 +12,7 @@ pages:
         page: quickstart/resolution.md
       - label: Reverse resolve domains
         page: quickstart/reverse-resolution.md
-  - group: How-To Guides
+  - group: Guides
     expanded: false
     pages:
       - label: Records reference
