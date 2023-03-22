@@ -17,7 +17,7 @@ pages:
     pages:
       - label: Records reference
         page: guides/records-reference.md
-      - label: Etherium providers
+      - label: Ethereum providers
         page: guides/ethereum-providers.md
       - group: Browser resolution (HTTP & IPFS)
         expanded: false
