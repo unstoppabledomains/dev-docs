@@ -34,16 +34,11 @@ After your application is approved, you will be given full access to your Partne
 
 ## Step 3: Configure Payment Information
 
-The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](integration-paths.md) to integrate one or more payment methods for your partner account.
+The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.
 :::
-
-<!-- ---
-title: Set up UD Sandbox for Testing Guide | Unstoppable Domains Developer Portal
-description: This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
---- -->
 
 # Set up UD Sandbox for Testing Guide
 
@@ -146,7 +141,7 @@ Partner API Integrations will only work on **Polygon L2 network**. See the [Poly
 
 ## Step 1: Locate Your Reseller ID
 
-After [setting up access to the Partner API](index.md), you must obtain your `resellerID` from your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account to integrate our services into your application for your customers.
+After [setting up access to the Partner API](#set-up-partner-api-access-guide), you must obtain your `resellerID` from your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account to integrate our services into your application for your customers.
 
 ## Step 2: Add a Domain Search Functionality
 
@@ -154,10 +149,9 @@ Before you integrate free or paid domain minting (via Stripe or Redirect URLs) p
 
 | Pathway | Description | Integration Guides |
 | - | - | - |
-| Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](partner-integration-guides/get-domains-suggestions.md) |
-| Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](partner-integration-guides/domain-name-availability.md) |
-| Multiple Domain Name Availability | checks the availability of multiple domain names before purchase | [Multiple Domain Name Availability Guide](partner-integration-guides/multiple-domain-name-availability.md) |
-| Reserve Free Domain Name | reserves a free and available domain name for seven days | [Reserve Free Domain Name Guide](partner-integration-guides/reserve-free-domain-name.md) |
+| Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](../quickstart/search-domains.md) |
+| Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](../../guides/check-domains-availability.md) |
+| Reserve Free Domain Name | reserves a free and available domain name for seven days | [Reserve Free Domain Name Guide](../../guides/claim-or-reserve-free-domains.md) |
 
 ## Step 3: Choose Your Integration Path
 
@@ -165,10 +159,10 @@ There are several ways to integrate with Unstoppable's Partner API, detailed in 
 
 | Pathway | Description | Integration Guides |
 | - | - | - |
-| Free domains | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers" | [Free Domain Minting Guide](partner-integration-guides/mint-free-domains.md) |
-| Paid domains: Stripe | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay | [Stripe Payments Guide](partner-integration-guides/stripe-payments.md) |
-| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](partner-integration-guides/redirect-url-payments.md) |
-| Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure domain records, does not require native paid domain flow  | [Redirect URL Payments With Auto-Configured Crypto Records Guide](partner-integration-guides/redirect-url-payments-with-records.md) |
+| Free domains | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers" | [Free Domain Minting Guide](../../guides/claim-or-reserve-free-domains.md) |
+| Paid domains: Stripe | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay | [Stripe Payments Guide](../quickstart/purchase-domains-with-stripe.md) |
+| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](../../guides/purchase-domains-with-redirect-url.md) |
+| Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure domain records, does not require native paid domain flow  | [Redirect URL Payments With Auto-Configured Crypto Records Guide](../../guides/purchase-domains-with-redirect-url/#redirect-url-payments-with-auto-configured-crypto-records-guide) |
 
 :::info
 Unstoppable Domains provides a [Sandbox Environment](set-up-sandbox-for-testing.md) for partners to test their integrations.

@@ -1,10 +1,10 @@
 ---
-title: Return Domain Action Guide | Unstoppable Domains Developer Portal
+title: Return Domains | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to return a domain to Unstoppable Domains and receive a refund using the Domain Actions API.
 showNextButton: false
 ---
 
-# Return Domain Action Guide
+# Return Domains
 
 The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
 
@@ -26,7 +26,7 @@ When making a domain action request, the body must contain information about you
 
 * `action`: (string) The domain action you want to perform. To return domains, the value should be `"Return"`.
 * `domain`: (string) The domain name you want to return.
-* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](./overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Prepare Authorization Headers
 
@@ -99,13 +99,13 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to return the `reseller-test-udtesting-602716235250.crypto` domain to Unstoppable Domains for a refund.
 
 :::success Congratulations!
-You have successfully created the domain action request to return a domain with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](overview.md#step-2-sign-the-transaction).
+You have successfully created the domain action request to return a domain with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
 
 <embed src="/snippets/_discord.md" />
 
 <div class="custom-next-to">
 
-[Next to **Sign the Transaction**](overview.md#step-2-sign-the-transaction)
+[Next to **Sign the Transaction**](./overview.md#step-2-sign-the-transaction)
 
 </div>

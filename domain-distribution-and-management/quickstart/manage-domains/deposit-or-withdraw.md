@@ -1,10 +1,10 @@
 ---
-title: Deposit or Withdraw Action Guide | Unstoppable Domains Developer Portal
+title: Deposit or Withdraw Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to bridge domains between Ethereum and Polygon using the Domain Actions API.
 showNextButton: false
 ---
 
-# Deposit or Withdraw Action Guide
+# Deposit or Withdraw Domains
 
 The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **bridge domains from Ethereum to Polygon and vice versa** without having to form them on the client.
 
@@ -33,7 +33,7 @@ When making a domain action request, the body must contain information about you
   * `resetRecords`: (boolean) Setting this value to `true` will reset the domain's records before bridging, while `false` will keep the records after the bridging.
   * `resetReverse`: (boolean) Setting this value to `true` will remove reverse resolution records before bridging, while `false` will remove the reverse resolution records after the bridging.
 * `domain`: (string) The domain name you want to bridge.
-* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](./overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Prepare Authorization Headers
 
@@ -212,13 +212,13 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to bridge the `reseller-test-udtesting-602716235250.crypto` domain from Polygon to Ethereum.
 
 :::success Congratulations!
-You have successfully created the domain action request to bridge domains between Ethereum and Polygon with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](overview.md#step-2-sign-the-transaction).
+You have successfully created the domain action request to bridge domains between Ethereum and Polygon with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
 
 <embed src="/snippets/_discord.md" />
 
 <div class="custom-next-to">
 
-[Next to **Sign the Transaction**](overview.md#step-2-sign-the-transaction)
+[Next to **Sign the Transaction**](./overview.md#step-2-sign-the-transaction)
 
 </div>

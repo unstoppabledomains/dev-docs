@@ -3,7 +3,7 @@ title: Redirect URL Payments Guide | Unstoppable Domains Developer Portal
 description: This guide covers configuring the Partner account to mint paid domains using the redirect URL payment processing flow.
 ---
 
-# Redirect URL Payments Guide
+# Redirect URL Payments
 
 The Redirect URL payment flow is the most straightforward payment process to implement for Partners. You do not have to set up native paid domain flows in your application and can generate a URL to redirect payments to Unstoppable Domains to be processed.
 
@@ -15,7 +15,7 @@ Before integrating Redirect URL payments, you must acquire a referral code from 
 
 ## Step 2: Search for Available Domain Names (Optional)
 
-Unstoppable Domains provides the [Get Domains Suggestions](get-domains-suggestions.md) and [Domain Name Availability](domain-name-availability.md) endpoints to check for domain names available for purchase.
+Unstoppable Domains provides the [Get Domains Suggestions](../quickstart/search-domains.md) and [Domain Name Availability](./check-domains-availability.md) endpoints to check for domain names available for purchase.
 
 ## Step 3: Redirect Users to the Unstoppable Domains Website
 
@@ -67,11 +67,11 @@ description: This guide covers configuring the Partner account to mint paid doma
 
 The Redirect URL payment flow allows you to provide resolution records that should be automatically configured to the domain name purchased by the user after minting.
 
-This payment flow is built upon the original [Redirect URL payment](redirect-url-payments.md), where a partner redirects a user to purchase a domain and be rewarded with the added functionality to configure resolution records to the domain name immediately after minting.
+This payment flow is built upon the original [Redirect URL payment](#redirect-url-payments-guide), where a partner redirects a user to purchase a domain and be rewarded with the added functionality to configure resolution records to the domain name immediately after minting.
 
 ## Step 1: Prepare Your Payment URL
 
-Follow the [Redirect URL Payments](redirect-url-payments.md) guide to prepare a payment URL for the user's purchase with your [referral code](redirect-url-payments.md#step-1-retrieve-your-ud-referral-code) and their desired domain (optional).
+Follow the [Redirect URL Payments](#redirect-url-payments-guide) guide to prepare a payment URL for the user's purchase with your [referral code](#step-1-retrieve-your-ud-referral-code) and their desired domain (optional).
 
 Sandbox Environment:
 
@@ -92,7 +92,7 @@ The Unstoppable Domains website requires additional fields to the `ref` and `sea
 | Name | Type | Mandatory | Description |
 | - | - | - | - |
 | timestamp | NUMBER | YES | The epoch timestamp in milliseconds when the payment URL is created |
-| strictName | STRING | YES | The Partner's `resellerID` [gotten from their Partner account](/partner/integration-paths.md#step-1-locate-your-reseller-id) |
+| strictName | STRING | YES | The Partner's `resellerID` [gotten from their Partner account](../quickstart/retrieve-an-api-key.md#step-1-locate-your-reseller-id) |
 | records | OBJECT | YES | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported key values |
 | signature | STRING | YES | A HMAC-SHA256 hash of the query parameters for the order security |
 
@@ -173,7 +173,7 @@ The `timestamp` parameter value should be the same as the one signed in the orde
 
 ## Step 5: Test the Integration
 
-You can use Unstoppable Domains [Sandbox Environment](/partner/set-up-sandbox-for-testing.md) to test the redirect URL payments integration.
+You can use Unstoppable Domains [Sandbox Environment](../quickstart/retrieve-an-api-key.md#set-up-ud-sandbox-for-testing-guide) to test the redirect URL payments integration.
 
 1. Navigate to the Sandbox Environment with the paid domains flow query parameters appended to the URL.
 2. Purchase a domain. You can use `4242 4242 4242 4242` as the credit card number to checkout for free.

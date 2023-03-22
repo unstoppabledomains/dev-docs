@@ -9,7 +9,7 @@ Here are best practices to ensure the proper integration of the Unstoppable Doma
 
 ## Simplify Your Domain Search Fields With the Domains Suggestions Endpoint
 
-Instead of making API calls to both the [Domain Name Availability](/partner/partner-integration-guides/domain-name-availability.md) and [Get Domains Suggestions](/partner/partner-integration-guides/get-domains-suggestions.md) endpoints to check the availability of a domain name and generate domain suggestions for a domain search field, you can make a single request to the `Get Domains Suggestions` endpoint with the requested domain name as a `search` parameter. If the domain name is available, it will be at the top of the list, along with other suggestions.
+Instead of making API calls to both the [Domain Name Availability](./check-domains-availability.md) and [Get Domains Suggestions](../quickstart/search-domains.md) endpoints to check the availability of a domain name and generate domain suggestions for a domain search field, you can make a single request to the `Get Domains Suggestions` endpoint with the requested domain name as a `search` parameter. If the domain name is available, it will be at the top of the list, along with other suggestions.
 
 <figure class="half-inline-block">
 

@@ -36,11 +36,11 @@ There are several functionalities offered by the Domain Actions API to interact 
 
 | Action Name | Description | Integration Guides |
 | - | - | - |
-| UpdateRecords | generate transactions to update resolution records for a domain | [UpdateRecords Action Guide](update-records-action.md) |
-| Return | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](return-action.md) |
-| SetReverseResolution | generate transactions to configure reverse resolution records for a domain | [SetReverseResolution Action Guide](set-reverse-resolution-action.md) |
-| Transfer | generate transactions to transfer a domain name | [Transfer Action Guide](transfer-action.md) |
-| Deposit or Withdraw | generate transactions to bridge domains from Ethereum to Polygon and vice versa | [Deposit or Withdraw Action Guide](bridge-action.md) |
+| UpdateRecords | generate transactions to update resolution records for a domain | [UpdateRecords Action Guide](../manage-domains/update-records.md) |
+| Return | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](../manage-domains/return-domains.md) |
+| SetReverseResolution | generate transactions to configure reverse resolution records for a domain | [SetReverseResolution Action Guide](../manage-domains/set-reverse-resolution.md) |
+| Transfer | generate transactions to transfer a domain name | [Transfer Action Guide](../manage-domains/transfer.md) |
+| Deposit or Withdraw | generate transactions to bridge domains from Ethereum to Polygon and vice versa | [Deposit or Withdraw Action Guide](../manage-domains/deposit-or-withdraw.md) |
 
 ## Step 2: Sign the Transaction
 
@@ -65,8 +65,8 @@ There are several ways to track the status of transactions submitted to the Doma
 
 | Endpoint | Description | Integration Guides |
 | - | - | - |
-| Get Domain Action | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](get-domain-action.md) |
-| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address | [Get Domain Action Guide](get-domain-action.md) |
+| Get Domain Action | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetAction) |
+| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetActions) |
 
 ## Fork Our Postman Collection
 

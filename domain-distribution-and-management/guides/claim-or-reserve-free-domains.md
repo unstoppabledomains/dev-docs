@@ -1,9 +1,9 @@
 ---
-title: Free Domain Minting Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to mint free domains with your Partner account.
+title: Claim or Reserve Free Domains Guide | Unstoppable Domains Developer Portal
+description: This guide shows how to mint or reserve free domains with your Partner account.
 ---
 
-## Overview
+# Claim Free Domains
 
 Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following API endpoints: [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestionsFree), [Reserve Free Domain Name](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostDomainReserve), and [Claim Free Domain](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders).
 
@@ -302,14 +302,7 @@ The following considerations apply to minting free domains:
 * If a wallet or email already has a free domain, then a second free domain is not permitted.
 * The Fingerprint Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
 
-<embed src="/snippets/_discord.md" />
-
-<!-- ---
-title: Reserve Free Domain Name Guide | Unstoppable Domains Developer Portal
-description: This guide shows how to reserve a free and available domain name to purchase at a later date with your Partner account.
---- -->
-
-# Reserve Free Domain Name Guide
+# Reserve Free Domain Name
 
 The Partner API offers an endpoint that allows Partners to reserve free and available domains so they'll be minted at a later date. Reserved domains become unavailable to be claimed and minted by anyone except the Partner that reserved it for 168 hours (7 days).
 

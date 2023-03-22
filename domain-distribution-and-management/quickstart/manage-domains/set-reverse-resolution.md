@@ -1,10 +1,10 @@
 ---
-title: SetReverseResolution Domain Action Guide | Unstoppable Domains Developer Portal
+title: Set Domain Reverse Resolution Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to configure reverse resolution records using the Domain Actions API.
 showNextButton: false
 ---
 
-# SetReverseResolution Domain Action Guide
+# Set Domain Reverse Resolution
 
 The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
 
@@ -31,7 +31,7 @@ When making a domain action request, the body must contain information about you
 * `parameters`: A key-value dictionary with additional information about the action:
   * `remove`: (boolean) Setting this value to `true` will remove reverse resolution records, while `false` will set reverse resolution records.
 * `domain`: (string) The domain name you want to set reverse resolution records.
-* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](./overview.md#gas-compensation-policies) that should be used for the domain action.
 
 :::info
 The `SetReverseResolution` domain action sets the transaction message signer address as a reverse address for the domain by default.
@@ -113,13 +113,13 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to configure reverse resolution records.
 
 :::success Congratulations!
-You have successfully created the domain action request to configure reverse resolution records with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](overview.md#step-2-sign-the-transaction).
+You have successfully created the domain action request to configure reverse resolution records with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
 
 <embed src="/snippets/_discord.md" />
 
 <div class="custom-next-to">
 
-[Next to **Sign the Transaction**](overview.md#step-2-sign-the-transaction)
+[Next to **Sign the Transaction**](./overview.md#step-2-sign-the-transaction)
 
 </div>

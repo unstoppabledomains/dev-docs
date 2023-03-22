@@ -1,10 +1,10 @@
 ---
-title: Transfer Domain Action Guide | Unstoppable Domains Developer Portal
+title: Transfer Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to transfer domains using the Domain Actions API.
 showNextButton: false
 ---
 
-# Transfer Domain Action Guide
+# Transfer Domains
 
 The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **transfer a domain name** without having to form them on the client.
 
@@ -33,7 +33,7 @@ When making a domain action request, the body must contain information about you
   * `to`: (string) The wallet address where the domain name should be transferred to.
   * `resetRecords`: (boolean) Setting this value to `true` will reset the domain's records before transferring, while `false` will keep the records after the transfer.
 * `domain`: (string) The domain name you want to transfer.
-* `gasCompensationPolicy`: (string) The [gas compensation policy](overview.md#gas-compensation-policies) that should be used for the domain action.
+* `gasCompensationPolicy`: (string) The [gas compensation policy](./overview.md#gas-compensation-policies) that should be used for the domain action.
 
 ## Step 3: Prepare Authorization Headers
 
@@ -113,13 +113,13 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 The `id` field in the API response is the domain action ID and the `txs` field contains the list of transactions that needs to be performed to transfer the `reseller-test-udtesting-602716235250.crypto` domain to `0x3EAA674612f79A97ad451fCF860A51Ad41aC2C19`.
 
 :::success Congratulations!
-You have successfully created the domain action request to transfer a domain with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](overview.md#step-2-sign-the-transaction).
+You have successfully created the domain action request to transfer a domain with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
 
 <embed src="/snippets/_discord.md" />
 
 <div class="custom-next-to">
 
-[Next to **Sign the Transaction**](overview.md#step-2-sign-the-transaction)
+[Next to **Sign the Transaction**](./overview.md#step-2-sign-the-transaction)
 
 </div>

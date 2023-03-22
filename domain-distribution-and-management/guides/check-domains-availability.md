@@ -1,9 +1,9 @@
 ---
-title: Multiple Domain Name Availability Guide | Unstoppable Domains Developer Portal
+title: Check Domains Availability Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to check the availability of multiple domain names before purchase with your Partner account.
 ---
 
-# Multiple Domain Name Availability Guide
+# Check Domains Availability
 
 The Partner API offers an endpoint that lets you check the availability of multiple domain names before purchase to avoid making minting calls to non-available domains. Partners can use this endpoint to implement a bulk domain name search field in their application, allowing users to search for multiple domains simultaneously.
 

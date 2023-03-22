@@ -1,7 +1,11 @@
 ---
-title: Partner API Endpoints | Unstoppable Domains Developer Portal
-description: This page details the Partner API endpoints and links to the external Partner API specification.
+title: Domain Distribution and Management Overview | Unstoppable Domains Developer Portal
+description: Domain distribution and management overview and Partner API introduction.
 ---
+
+# Domain Distribution and Management Overview
+
+Domain distribution and managemnt can be achieved via the Unstoppable Partner API and Smart Contracts.
 
 # Partner API Endpoints
 
