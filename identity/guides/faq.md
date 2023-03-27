@@ -29,7 +29,7 @@ No, Login with Unstoppable is a free feature members get with the purchase/owner
 
 ## How is this different from Login with Ethereum?
 
-Login with Unstoppable is live and available for use. We see it as becoming the foundations of your digital identity. That’s why we don’t charge renewal fees on our domains, we don’t think you should ever be able to lose your identity.
+Login with Unstoppable is live and available for use. We see it as becoming the foundations of your digital identity. That’s why we don’t charge renewal fees on our domains, we don’t believe that you should ever be able to lose your identity.
 
 ## How is this different from logging in with a wallet?
 
