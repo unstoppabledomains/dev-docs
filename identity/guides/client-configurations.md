@@ -134,7 +134,7 @@ The **Payment** page allows Login partners to enable revenue share and receive a
 
 ## Badges
 
-The **Badges** configuration page allows partners to submit custom badges that can be earned and displayed on users' Unstoppable Domains profile pages. For an example of a ud.me profile with multiple badges earned see [ud.me/sandy.nft](https://ud.me/sandy.nft).
+The **Badges** configuration page allows partners to submit custom badges that can be earned and displayed on users' Unstoppable Domains profile pages. See [ud.me/sandy.nft](https://ud.me/sandy.nft) for an example of a ud.me profile with multiple badges earned.
 
 <figure>
 
