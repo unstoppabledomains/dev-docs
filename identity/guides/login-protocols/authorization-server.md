@@ -2,7 +2,7 @@
 title: Login Authorization Server | Unstoppable Domains Developer Portal
 description: This page outlines the authorization server for the Login with Unstoppable feature.
 redirectFrom:
-	- /login-with-unstoppable/high-level-overview/authorization-server/
+  - /login-with-unstoppable/high-level-overview/authorization-server/
 ---
 
 # Authorization Server
