@@ -7,6 +7,10 @@ editPage:
 
 # Resolution Changelog
 
+## 9.0.0
+- Initialize UNS resolution with Unstoppable Domains' partner key
+- Deprecate default Infura Rpc URL
+
 ## 8.3.2
 
 - Fixed reverse function padding issue

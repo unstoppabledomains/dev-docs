@@ -7,6 +7,10 @@ editPage:
 
 # Resolution-Swift Changelog
 
+## 6.0.0
+- Initialize UNS resolution with Unstoppable Domains' partner key
+- Deprecate default Infura Rpc URL
+
 ## 5.0.0
 
 - Ability to resolve `.zil` domains from Polygon and Ethereum networks
