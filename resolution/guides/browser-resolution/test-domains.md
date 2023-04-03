@@ -28,7 +28,8 @@ Check records with the [Resolution Libraries](/resolution/sdks-and-libraries/jav
 ```typescript JavaScript
 import Resolution from '@unstoppabledomains/resolution/build/Resolution';
 
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 resolution.allRecords('udtestdev-dns-ipfs.crypto').then((records) => {
   console.log(records);
   // Output
@@ -63,8 +64,9 @@ $ resolution -d udtestdev-dns-ipfs.crypto -a
 ```swift Swift
 import UnstoppableDomainsResolution
 
-guard let resolution = try? Resolution() else {
-  print ("Init of Resolution instance with default parameters failed...")
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+guard let resolution = try? Resolution(apiKey: "<api_key>") else {
+  print ("Init of Resolution instance failed...")
   return
 }
 
@@ -98,7 +100,8 @@ import java.util.Map;
 public class Main {
   public static void main(String[] args) {
     try {
-      Resolution res = new Resolution();
+      // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-java for more initialization options
+      DomainResolution resolution = new Resolution("<api_key>");
       Map<String, String> records = res.getAllRecords("udtestdev-dns-ipfs.crypto");
       for (Map.Entry<String, String> entry : records.entrySet()) {
         System.out.println(String.format("'%s': '%s'", entry.getKey(), entry.getValue());
@@ -132,7 +135,8 @@ import (
 )
 ​
 func main() {
-  uns, _ := resolution.NewUnsBuilder().Build()
+  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-go for more initialization options
+  uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
   allUnsRecords, _ := uns.AllRecords("udtestdev-dns-ipfs.crypto")
   fmt.Println("Records for udtestdev-dns-ipfs.crypto", allUnsRecords)
   // Output

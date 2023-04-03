@@ -95,7 +95,8 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 resolution
     .addr('domain-with-error.crypto', 'ETH')
     .then((ethAddress) => {
@@ -141,7 +142,8 @@ Retrieve any record of a domain. Applications sometimes set custom records for a
 
 ```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function resolveCustomRecord(domain, record) {
   resolution
@@ -159,7 +161,8 @@ The resolution library provides a method for resolving the addresses of tickers 
 
 ```javascript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 resolution
     .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')

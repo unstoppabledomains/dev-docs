@@ -36,7 +36,7 @@ npm update @unstoppabledomains/resolution --save
 ```javascript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 const resolution = new Resolution({
-  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
   apiKey: "<api_key>",
   sourceConfig: {
     zns: {
@@ -111,6 +111,7 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 
 const resolution = new Resolution({
+  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
   apiKey: "<api_key>",
   sourceConfig: {
     zns: {
