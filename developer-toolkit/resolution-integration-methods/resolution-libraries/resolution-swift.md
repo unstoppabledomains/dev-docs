@@ -35,36 +35,39 @@ package.dependencies.append(
 )
 ```
 
+## Initialize with Unstoppable Domains' Proxy Provider
+
+```swift
+import UnstoppableDomainsResolution
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+guard let resolution = try? Resolution(apiKey: "<api_key>") else {
+  print ("Init of Resolution instance failed...")
+  return
+}
+```
+
+## Initialize with Custom Ethereum Configuration
+
 <embed src="/snippets/_libraries-provider-config.md" />
 
-<embed src="/snippets/_res-lib-default-provider.md" />
 
 ```swift
 import UnstoppableDomainsResolution
 
+// obtain a key from https://www.infura.io
 let resolution = try Resolution(configs: Configurations(
         uns: UnsLocations = UnsLocations(
             layer1: NamingServiceConfig(
-                providerUrl: "https://eth-mainnet.alchemyapi.io/v2/_BDuTLPgioYxULIE5cGq3wivWAJborcM",
+                providerUrl: "https://mainnet.infura.io/v3/<infura_api_key>",
                 network: "mainnet"),
             layer2: NamingServiceConfig(
-                providerUrl: "https://polygon-mainnet.g.alchemy.com/v2/bKmEKAC4HJUEDNlnoYITvXYuhrIshFsa",
+                providerUrl: "https://polygon-mainnet.infura.io/v3/<infura_api_key>",
                 network: "polygon-mainnet"),
-            zlayer: NamingServiceConfig(
+            znsLayer: NamingServiceConfig(
                 providerUrl: "https://api.zilliqa.com",
                 network: "mainnet")
         )
 );
-
-resolution.addr(domain: "brad.crypto", ticker: "eth") { (result) in
-    switch result {
-    case .success(let returnValue):
-        ethAddress = returnValue
-        domainReceived.fulfill()
-    case .failure(let error):
-        XCTFail("Expected Eth Address, but got \(error)")
-    }
-}
 ```
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
@@ -76,8 +79,9 @@ resolution.addr(domain: "brad.crypto", ticker: "eth") { (result) in
 ```swift
 import UnstoppableDomainsResolution
 
-guard let resolution = try? Resolution() else {
-  print ("Init of Resolution instance with default parameters failed...")
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+guard let resolution = try? Resolution(apiKey: "<api_key>") else {
+  print ("Init of Resolution instance failed...")
   return
 }
 

@@ -31,33 +31,48 @@ yarn upgrade @unstoppabledomains/resolution --latest
 npm update @unstoppabledomains/resolution --save
 ```
 
-<embed src="/snippets/_libraries-provider-config.md" />
-
-<embed src="/snippets/_res-lib-default-provider.md" />
+## Initialize with Unstoppable Domains' UNS Proxy Provider
 
 ```javascript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-
-const ethereumProviderUrl = ALCHEMY_ETHEREUM_API;
-const polygonProviderUrl = ALCHEMY_POLYGON_API;
-
-// custom provider config using the Resolution constructor options
 const resolution = new Resolution({
-    sourceConfig: {
-      uns: {
-        locations: {
-          Layer1: {
-            url: ethereumProviderUrl,
-            network: 'mainnet'
-          },
-          Layer2: {
-            url: polygonProviderUrl,
-            network: 'polygon-mainnet',
-          },
+  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+  apiKey: "<api_key>",
+  sourceConfig: {
+    zns: {
+      url: 'https://api.zilliqa.com',
+      network: 'mainnet',
+    },
+  },
+});
+```
+
+## Initialize with Custom Provider Configuration
+<embed src="/snippets/_libraries-provider-config.md" />
+
+```javascript
+const {default: Resolution} = require('@unstoppabledomains/resolution');
+// obtain a key from https://www.infura.io
+const resolution = new Resolution({
+  sourceConfig: {
+    uns: {
+      locations: {
+        Layer1: {
+          url: "https://mainnet.infura.io/v3/<infura_api_key>",
+          network: 'mainnet'
+        },
+        Layer2: {
+          url: "https://polygon-mainnet.infura.io/v3/<infura_api_key>",
+          network: 'polygon-mainnet',
         },
       },
     },
-  });
+    zns: {
+      url: 'https://api.zilliqa.com',
+      network: 'mainnet',
+    },
+  },
+});
 ```
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
@@ -95,7 +110,17 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 
-const resolution = new Resolution();
+const resolution = new Resolution({
+  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+  apiKey: "<api_key>",
+  sourceConfig: {
+    zns: {
+      url: 'https://api.zilliqa.com',
+      network: 'mainnet',
+    },
+  },
+});
+
 resolution
     .addr('domain-with-error.crypto', 'ETH')
     .then((ethAddress) => {
@@ -140,9 +165,6 @@ resolution
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in JavaScript.
 
 ```javascript
-const { default: Resolution } = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
-
 function resolveCustomRecord(domain, record) {
   resolution
     .records(domain, [record])
@@ -158,9 +180,6 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in JavaScript.
 
 ```javascript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
-
 resolution
     .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')
     .then((receiverUSDTAddress) => {
