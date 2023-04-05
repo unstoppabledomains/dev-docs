@@ -68,12 +68,13 @@ global.XMLHttpRequestUpload = (
 
 // Initialize the client with the login client metadata and an instance of Resolution
 
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxxx';
 const client = new Client({
   clientID: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-  clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxx',
+  clientSecret: clientSecret,
   redirectUri: 'http://localhost:5000/callback',
   scope: 'openid wallet',
-  resolution: new Resolution(),
+  resolution: new Resolution({ apiKey: clientSecret });
 })
 ```
 

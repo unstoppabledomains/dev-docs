@@ -12,7 +12,7 @@ This page details basic installation, configuration, and usage of the [Golang Re
 Resolution Go can be installed with the `go get` command.
 
 ```bash
-go get github.com/unstoppabledomains/resolution-go/v2
+go get github.com/unstoppabledomains/resolution-go/v3
 ```
 
 ## Updating Resolution Go
@@ -20,35 +20,47 @@ go get github.com/unstoppabledomains/resolution-go/v2
 Resolution Go can be updated with the `go get` command.
 
 ```bash
-go get -u github.com/unstoppabledomains/resolution-go/v2
+go get -u github.com/unstoppabledomains/resolution-go/v3
 ```
 
-<embed src="/snippets/_libraries-provider-config.md" />
-
-<embed src="/snippets/_res-lib-default-provider.md" />
+## Initialize with Unstoppable Domains' Proxy Provider
 
 ```go
 package main
-
 import (
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/unstoppabledomains/resolution-go/v2"
+	"fmt"
+	"github.com/unstoppabledomains/resolution-go/v3"
 )
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
+zilliqaProvider := provider.NewProvider("https://api.zilliqa.com")
+	zns, _ := resolution.NewZnsBuilder().SetProvider(zilliqaProvider).Build()
+```
 
+## Initialize with Custom Ethereum Provider Configuration
+
+<embed src="/snippets/_libraries-provider-config.md" />
+
+```go
+package main
+import (
+	"fmt"
+	"github.com/Zilliqa/gozilliqa-sdk/provider"
+	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/unstoppabledomains/resolution-go/v3"
+)
 func main() {
-	var alchemyApiKey = ALCHEMY_PROJECT_ID
-	var ethereumUrl = "https://eth-mainnet.g.alchemy.com/v2/" + alchemyApiKey
-	var ethereumL2Url = "https://polygon-mainnet.g.alchemy.com/v2/" + alchemyApiKey
-
+	// obtain a key from https://www.infura.io
+	var ethereumUrl = "https://mainnet.infura.io/v3/<infura_api_key>"
+	var ethereumL2Url = "https://polygon-mainnet.infura.io/v3/<infura_api_key>"
 	var unsBuilder := resolution.NewUnsBuilder()
 	var backend, _ := ethclient.Dial(ethereumUrl)
 	var backendL2, _ := ethclient.Dial(ethereumL2Url)
-
 	unsBuilder.SetContractBackend(backend)
 	unsBuilder.SetL2ContractBackend(backendL2)
-
-	var unsResolution, _ = unsBuilder.Build()
-	var znsResolution, _ = resolution.NewZnsBuilder().Build()
+	var uns, _ = unsBuilder.Build()
+	zilliqaProvider := provider.NewProvider("https://api.zilliqa.com")
+	zns, _ := resolution.NewZnsBuilder().SetProvider(zilliqaProvider).Build()
 }
 ```
 
@@ -63,11 +75,12 @@ package main
 
 import (
     "fmt"
-    "github.com/unstoppabledomains/resolution-go/v2"
+    "github.com/unstoppabledomains/resolution-go/v3"
 )
 
 func main() {
-    uns, err := resolution.NewUnsBuilder().Build()
+    // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+    uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
 
     if err != nil {
         switch err.(type) {
@@ -121,7 +134,6 @@ func main() {
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in Golang.
 
 ```go
-uns, _ := resolution.NewUnsBuilder().Build()
 ethAddress, _ := uns.Addr("brad.crypto", "ETH")
 fmt.Println("ETH address for brad.crypto is", ethAddress)
 ```
@@ -131,7 +143,6 @@ fmt.Println("ETH address for brad.crypto is", ethAddress)
 The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in Golang.
 
 ```go
-uns, _ := resolution.NewUnsBuilder().Build()
 usdtAddress, _ := uns.AddrVersion("udtestdev-usdt.crypto", "USDT", "ERC20")
 fmt.Println("USDT-ERC20 address for udtestdev-usdt.crypto is", usdtAddress)
 ```

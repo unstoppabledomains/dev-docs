@@ -7,6 +7,10 @@ editPage:
 
 # Resolution Java Changelog
 
+## 7.0.0
+- Initialize UNS resolution with Unstoppable Domains' partner key
+- Deprecate default key
+
 ## 6.1.1
 ### Changes
  * Bump `com.esaulpaugh:headlong` version
@@ -111,7 +115,7 @@ editPage:
 
 ## 1.10.0
 * Fixed missing information on NamingServiceException thrown from ZNS
-* Introduced IProvider interface -- implement it in order to get full control over HTTP requests to blockchain provider  
+* Introduced IProvider interface -- implement it in order to get full control over HTTP requests to blockchain provider
 * Moved Lombok dependency to compileOnly group
 ## 1.9.1
 * Added ability to instantly check a domain according to naming service rules for valid domain names

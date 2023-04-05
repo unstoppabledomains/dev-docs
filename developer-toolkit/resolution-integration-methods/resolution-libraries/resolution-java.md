@@ -11,20 +11,33 @@ This page details basic installation, configuration, and usage of the [Java Reso
 
 Resolution Java can be installed with using the [JitPack](https://jitpack.io/#unstoppabledomains/resolution-java) package repository.
 
-<embed src="/snippets/_libraries-provider-config.md" />
+## Initialize with Unstoppable Domains' Proxy Provider
 
-<embed src="/snippets/_res-lib-default-provider.md" />
+```java
+DomainResolution resolution = Resolution
+  .builder()
+  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+  .udUnsClient("<api_key>")
+  .znsProviderUrl("https://api.zilliqa.com")
+  .build();
+```
+
+## Initialize with Custom Ethereum Configuration
+
+<embed src="/snippets/_libraries-provider-config.md" />
 
 ```java
 import com.unstoppabledomains.resolution.Resolution;
 
-String ethProviderURL = ALCHEMY_ETHEREUM_API;
-String polygonProviderURL = ALCHEMY_POLYGON_API;
+// obtain a key from https://www.infura.io
+String ethProviderURL = "https://mainnet.infura.io/v3/<infura_api_key>";
+String polygonProviderURL = "https://polygon-mainnet.infura.io/v3/<infura_api_key>";
 
 DomainResolution resolution = Resolution.builder()
-                .unsProviderUrl(UNSLocation.Layer1, ethProviderURL)
-                .unsProviderUrl(UNSLocation.Layer2, polygonProviderURL)
-                .build();
+  .unsProviderUrl(UNSLocation.Layer1, ethProviderURL)
+  .unsProviderUrl(UNSLocation.Layer2, polygonProviderURL)
+  .znsProviderUrl("https://api.zilliqa.com")
+  .build();
 ```
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
@@ -38,7 +51,9 @@ import com.unstoppabledomains.resolution.Resolution;
 import com.unstoppabledomains.exceptions.ns.NamingServiceException;
 import com.unstoppabledomains.exceptions.ns.NSExceptionCode;
 
-DomainResolution resolution = new Resolution();
+DomainResolution resolution = Resolution
+  .builder()
+  .udUnsClient("<api_key>")
 try {
     String receiverETHAddress = resolution.getAddress("domain-with-error.crypto", "ETH");
 } catch (NamingServiceException exception) {

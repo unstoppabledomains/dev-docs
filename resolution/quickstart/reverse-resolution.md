@@ -13,7 +13,8 @@ To resolve the reverse record of a wallet address, you must call the appropriate
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function reverseTokenId(address) {
   resolution
@@ -39,7 +40,8 @@ reverseUrl("0x88bc9b6c56743a38223335fac05825d9355e9f83");
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
-Resolution resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-java for more initialization options
+DomainResolution resolution = new Resolution("<api_key>");
 
 // tokenId consists the namehash of the domain with reverse resolution to that address
 String tokenId = resolution.getReverseTokenId("0x88bc9b6c56743a38223335fac05825d9355e9f83");
@@ -52,8 +54,9 @@ String domain = resolution.getReverse("0x88bc9b6c56743a38223335fac05825d9355e9f8
 ```swift Swift
 import UnstoppableDomainsResolution
 
-guard let resolution = try? Resolution() else {
-  print ("Init of Resolution instance with default parameters failed...")
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+guard let resolution = try? Resolution(apiKey: "<api_key>") else {
+  print ("Init of Resolution instance failed...")
   return
 }
 

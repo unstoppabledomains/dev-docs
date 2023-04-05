@@ -45,7 +45,8 @@ Create a new file in your project, `address.js`.
 
 ```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function resolve(domain, currency) {
   resolution
@@ -72,7 +73,8 @@ Create a new file in your project, `ipfs_hash.js`.
 
 ```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function resolveIpfsHash(domain) {
   resolution
@@ -101,7 +103,8 @@ Create a new file in your project, `custom-resolution.js`.
 
 ```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
-const resolution = new Resolution();
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function resolveCustomRecord(domain, record) {
   resolution

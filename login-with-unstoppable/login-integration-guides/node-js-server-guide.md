@@ -51,7 +51,7 @@ yarn intall --save express-session express express-async-errors morgan
 ```
 
 ## Step 3: Setup @uauth/node Library
- 
+
 You can then initialize a new `Client` instance using the Client Metadata copied from the **Basic** page.
 
 ```typescript
@@ -68,12 +68,13 @@ global.XMLHttpRequestUpload = (
 
 // Initialize the client with the login client metadata and an instance of Resolution
 
+const clientSecret = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 const client = new Client({
   clientID: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-  clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxx',
+  clientSecret: clientSecret,
   redirectUri: 'http://localhost:5000/callback',
   scope: 'openid wallet',
-  resolution: new Resolution(),
+  resolution: new Resolution({ apiKey: clientSecret}),
 })
 ```
 
@@ -156,7 +157,7 @@ The form must call the endpoint where the [`login` handler](node-js-server-guide
 
 ```javascript
 app.get('/', (_, res) => {
-  const indexPage = 
+  const indexPage =
   `<!DOCTYPE html><html><body>
     <form action="/login" method="POST">
       <input name="domain" id="domain" />
