@@ -131,7 +131,7 @@ package main
 ​
 import (
   "fmt"
-  "github.com/unstoppabledomains/resolution-go/v2"
+  "github.com/unstoppabledomains/resolution-go/v3"
 )
 ​
 func main() {

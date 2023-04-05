@@ -12,7 +12,7 @@ This page details basic installation, configuration, and usage of the [Golang Re
 Resolution Go can be installed with the `go get` command.
 
 ```bash
-go get github.com/unstoppabledomains/resolution-go/v2
+go get github.com/unstoppabledomains/resolution-go/v3
 ```
 
 ## Updating Resolution Go
@@ -20,7 +20,7 @@ go get github.com/unstoppabledomains/resolution-go/v2
 Resolution Go can be updated with the `go get` command.
 
 ```bash
-go get -u github.com/unstoppabledomains/resolution-go/v2
+go get -u github.com/unstoppabledomains/resolution-go/v3
 ```
 
 ## Initialize with Unstoppable Domains' Proxy Provider
@@ -29,7 +29,7 @@ go get -u github.com/unstoppabledomains/resolution-go/v2
 package main
 import (
 	"fmt"
-	"github.com/unstoppabledomains/resolution-go/v2"
+	"github.com/unstoppabledomains/resolution-go/v3"
 )
 // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
 uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
@@ -47,7 +47,7 @@ import (
 	"fmt"
 	"github.com/Zilliqa/gozilliqa-sdk/provider"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/unstoppabledomains/resolution-go/v2"
+	"github.com/unstoppabledomains/resolution-go/v3"
 )
 func main() {
 	// obtain a key from https://www.infura.io
@@ -75,7 +75,7 @@ package main
 
 import (
     "fmt"
-    "github.com/unstoppabledomains/resolution-go/v2"
+    "github.com/unstoppabledomains/resolution-go/v3"
 )
 
 func main() {

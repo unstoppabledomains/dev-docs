@@ -17,8 +17,9 @@ String namehash = resolution.getNamehash("brad.crypto", "UNS");
 ```swift Swift
 import UnstoppableDomainsResolution
 
-guard let resolution = try? Resolution() else {
-  print ("Init of Resolution instance with default parameters failed...")
+// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+guard let resolution = try? Resolution(apiKey: "<api_key>") else {
+  print ("Init of Resolution instance failed...")
   return
 }
 
@@ -30,7 +31,7 @@ package main
 
 import (
     "fmt"
-    "github.com/unstoppabledomains/resolution-go/v2"
+    "github.com/unstoppabledomains/resolution-go/v3"
 )
 
 func main() {
