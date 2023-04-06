@@ -73,7 +73,7 @@ Next, add your wallet address that owns the root domain to the `to` field and th
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
 
-Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported values. You can also provide empty records if you wish to.
+Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported values. You can also provide empty records if you wish to. Set parameter `withReverse` to `false` if you do not need to set reverse record for the subdomain. It is possible to set reverse record for subdomain only if it is going to be minted to parent's domain owner, otherwise setting reverse is considered insecure without subdomain owner's signature.
 
 <figure>
 
