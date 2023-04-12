@@ -24,36 +24,18 @@ Users will always have full control over which pieces of data they share with wh
 
 ## Identity Verification Partners
 
-To offer the Humanity Check feature, Unstoppable Domains has partnered with identity verification services such as [Persona](https://withpersona.com). When a Humanity Check provider verifies a new person, it assigns that person a new randomly generated ID number, which is then passed to UD.
+To offer the Humanity Check feature, Unstoppable Domains uses Captcha for the verification process.
+
+<figure class="one-third-inline-block">
+
+![Screenshot for Humanity Check with Captcha](/images/captcha_humanity_check.png)
+
+<figcaption>Humanity Check with Captcha</figcaption>
+</figure>
 
 :::info
 Login with Unstoppable will partner with additional Humanity Check providers in future releases. Applications will have the ability to ask for a specific Humanity Check provider, but the Client Configuration UI will have a default provider selected.
 :::
-
-### Persona
-
-Persona asks users to take a photo of their government-issued ID and a few selfies. Persona uses these images to verify that a person is who they claim to be. Every time Persona verifies a new person, it gives that person a new randomly generated ID number.
-
-<figure class="one-third-inline-block">
-
-![Persona UI for uploading government ID](/images/persona_upload_photo_id.png)
-
-<figcaption>Uploading government ID</figcaption>
-</figure>
-
-<figure class="one-third-inline-block">
-
-![Persona UI for uploading live photos or selfies](/images/persona_live_photo_capture.png)
-
-<figcaption>Uploading live photos or selfies</figcaption>
-</figure>
-
-<figure class="one-third-inline-block">
-
-![Persona UI after identity verification is complete](/images/persona_congratuations.png)
-
-<figcaption>Persona identity verification complete</figcaption>
-</figure>
 
 ## Humanity Check Configuration
 
@@ -78,6 +60,3 @@ While users can maintain a humanity-check-approved identity on the blockchain, t
 The Login with Unstoppable Humanity Check feature assumes the following:
 
 * Users must have a UD-minted domain inside their wallet either on Polygon or Ethereum.
-* Users should have a Government ID of some kind to verify their identity (i.e., drivers license, passport, visa, etc.).
-* Users need access to a webcam / camera phone to take additional verification photos.
-* Users probably need 5 minutes to complete the web-based verification process with a UD identity partner.
