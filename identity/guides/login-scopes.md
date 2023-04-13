@@ -91,9 +91,9 @@ Unstoppable email is disabled for domains by default. If a user has not enabled 
 ## humanity_check
 `optional: true`
 
-The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using Captcha.
+The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using CAPTCHA.
 
-After the user authenticates and proves their identity with Captcha, the application will receive a `humanity_check_id`, which is a unique identifier for each user to serve as that user's "humanity check"
+After the user authenticates and proves their identity with CAPTCHA, the application will receive a `humanity_check_id`, which is a unique identifier for each user to serve as that user's "humanity check"
 
 See [Humanity Check for Login](/identity/overview/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
 

@@ -24,13 +24,13 @@ Users will always have full control over which pieces of data they share with wh
 
 ## Identity Verification Partners
 
-To offer the Humanity Check feature, Unstoppable Domains uses Captcha for the verification process.
+To offer the Humanity Check feature, Unstoppable Domains uses CAPTCHA for the verification process.
 
 <figure class="one-third-inline-block">
 
-![Screenshot for Humanity Check with Captcha](/images/captcha_humanity_check.png)
+![Screenshot for Humanity Check with CAPTCHA](/images/captcha_humanity_check.png)
 
-<figcaption>Humanity Check with Captcha</figcaption>
+<figcaption>Humanity Check with CAPTCHA</figcaption>
 </figure>
 
 :::info
