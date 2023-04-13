@@ -3,6 +3,7 @@ pages:
     separatorLine: true
   - page: overview.md
     label: Overview
+    separatorLine: true
   - group: Quickstart
     expanded: false
     pages:
@@ -12,6 +13,7 @@ pages:
         page: quickstart/resolution.md
       - label: Reverse resolve domains
         page: quickstart/reverse-resolution.md
+    separatorLine: true
   - group: Guides
     expanded: false
     pages:
@@ -32,6 +34,7 @@ pages:
         page: guides/best-practices.md
       - label: FAQs
         page: guides/faq.md
+    separatorLine: true
   - group: Tech References
     expanded: false
     pages:
@@ -59,3 +62,4 @@ pages:
           page: sdks-and-libraries/cli.md
         - label: Matic.js SDK
           page: sdks-and-libraries/maticjs.md
+    separatorLine: true

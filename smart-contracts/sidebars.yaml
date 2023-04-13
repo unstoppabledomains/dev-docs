@@ -10,6 +10,7 @@ pages:
         page: overview/cns-architecture-overview.md
       - label: UNS vs CNS comparison
         page: overview/cns-uns-comparison.md
+    separatorLine: true
   - group: Quickstart
     expanded: false
     pages:
@@ -23,6 +24,7 @@ pages:
         page: quick-start/manage-domain-records.md
       - label: Mint subdomains
         page: quick-start/mint-subdomains.md
+    separatorLine: true
   - group: Contract Reference
     expanded: false
     pages:
@@ -30,3 +32,4 @@ pages:
         page: contract-reference/uns-smart-contracts.md
       - label: CNS Smart Contracts
         page: contract-reference/cns-smart-contracts.md
+    separatorLine: true

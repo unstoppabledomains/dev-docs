@@ -3,6 +3,7 @@ pages:
     separatorLine: true
   - page: overview.md
     label: Overview
+    separatorLine: true
   - group: Quickstart
     expanded: false
     pages:
@@ -27,6 +28,7 @@ pages:
             page: quickstart/manage-domains/transfer.md
           - label: Deposit or Withdraw
             page: quickstart/manage-domains/deposit-or-withdraw.md
+    separatorLine: true
   - group: Guides
     expanded: false
     pages:
@@ -40,6 +42,7 @@ pages:
         page: guides/best-practices.md
       - label: FAQs
         page: guides/faq.md
+    separatorLine: true
   - group: Tech References
     expanded: false
     pages:
@@ -47,3 +50,4 @@ pages:
         page: ../openapi/partner-v2.page.yaml
       - label: Smart Contracts
         page: ../smart-contracts/quick-start/manage-domain-records.md
+    separatorLine: true
