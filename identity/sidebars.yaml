@@ -22,6 +22,8 @@ pages:
         page: quickstart/login-with-pop-up.md
       - label: Login without Pop-Up
         page: quickstart/login-without-pop-up.md
+      - label: Display Users Domain
+        page: quickstart/display-users-domain.md
       - group: Other Integration Paths
         expanded: false
         pages:

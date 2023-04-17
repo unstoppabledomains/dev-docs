@@ -91,34 +91,11 @@ Unstoppable email is disabled for domains by default. If a user has not enabled 
 ## humanity_check
 `optional: true`
 
-The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).
+The Login with Unstoppable `humanity_check` scope must be added to the library for existing apps that want to integrate the Humanity Check feature using CAPTCHA.
 
-After the user authenticates and proves their identity with the Persona authorization system, the application will receive a `humanity_id`, which is a unique identifier for each user to serve as that user's "[humanity check](/login-with-unstoppable/humanity-check.md#persona)."
+After the user authenticates and proves their identity with CAPTCHA, the application will receive a `humanity_check_id`, which is a unique identifier for each user to serve as that user's "humanity check"
 
-
-<figure class="one-third-inline-block">
-
-![UI for Humanity Check, can be used for any identity provider, including Persona](/images/humanity-check-optional.png)
-
-<figcaption>Humanity Check request</figcaption>
-</figure>
-
-
-<figure class="one-third-inline-block">
-
-![Getting Started UI screen for Persona](/images/persona_getting_started.png)
-
-<figcaption>Persona, getting started</figcaption>
-</figure>
-
-<figure class="one-third-inline-block">
-
-![Upload Drivers License UI screen for Persona](/images/persona_front_drivers_license.png)
-<figcaption>Upload driver license</figcaption>
-</figure>
-
-
-See [Humanity Check for Login](/login-with-unstoppable/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
+See [Humanity Check for Login](/identity/overview/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
 
 ## profile
 `optional: true`

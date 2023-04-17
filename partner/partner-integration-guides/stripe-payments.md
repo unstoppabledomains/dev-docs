@@ -27,13 +27,13 @@ Click on the `Connect` button in the Stripe section of your [Sandbox](https://ww
 <figcaption>Stripe connect button</figcaption>
 </figure>
 
-After clicking the Stripe `CONNECT` button, Stripe will walk you through the integration form:
+After clicking the Stripe `CONNECT` button, Stripe will walk you through the business integration form:
 
 <figure>
 
 ![Stripe integrations form to connect your Stripe and UD accounts](/images/10.png '#width=80%;')
 
-<figcaption>Stripe integrations form to connect your Stripe and UD accounts</figcaption>
+<figcaption>Stripe business integrations form to connect your Stripe and UD accounts</figcaption>
 </figure>
 
 Once your Stripe and Unstoppable Domains accounts have been connected, your Stripe API key will appear directly in your Stripe dashboard.

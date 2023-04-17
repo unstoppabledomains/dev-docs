@@ -74,6 +74,8 @@ Yes.
 
 ## How/where is user data stored? How do they know their data is safe?
 
+**Note: we have switched our Humanity Check provider from Persona to CAPTCHA**
+
 Persona is an identity verification industry leader and works with cryptocurrency exchanges such as BlockFi, Swan, Dacxi and TantraLabs, as well as companies such as Square and Postmates to help facilitate identity verification. Persona securely stores all photos of identity documents that you upload, photos of your face that you upload, and data from scans of facial geometry extracted from the photos of your face that you upload in an encrypted format on their servers.
 
 Persona will not sell, lease, trade, or, other than to provide the Verification to their partners.  Persona will not disclose, redisclose, or otherwise disseminate data from scans of facial geometry extracted from the photos of your face that you upload unless doing so:
@@ -88,6 +90,8 @@ Persona does not use, share, rent or sell the Personal Data of our Users’ Cust
 See the [Persona Security and Privacy](https://withpersona.com/security) page for more information.
 
 ## What happens to user personal data? Is it stored on web2?
+
+**Note: we have switched our Humanity Check provider from Persona to CAPTCHA**
 
 Persona collects a set of information (documentary, selfie, non-documentary) to identify users, and deter would-be fraudsters. This information is stored in a dashboard to track verifications and corresponding decisions (pass / fail).
 
