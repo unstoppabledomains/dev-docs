@@ -1,13 +1,15 @@
 ---
 title: Browser Resolution Algorithm | Unstoppable Domains Developer Portal
 description: This section explains how different domain record configurations should be interpreted by browsers.
+redirectFrom:
+  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm/
 ---
 
 # Browser Resolution Algorithm
 
 <figure>
 
-![Diagram shows how to Resolve DWeb by direct read from Ethereum](/images/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network.png '#width=75%')
+![Diagram shows how to Resolve DWeb by direct read from Ethereum](/images/resolve_dweb_website_by_direct_reading_from_ethereum_and_decentralized_network.png "#width=75%")
 
 <figcaption>Diagram shows how to Resolve DWeb by direct read from Ethereum</figcaption>
 </figure>
@@ -28,7 +30,7 @@ Generally, browsers automatically add `http://` prefix for any domain in the add
 
 <figure>
 
-![Process diagram depicting entire browser resolution algorithm](/images/browser\_resolution\_algorithm.svg '#width=75%')
+![Process diagram depicting entire browser resolution algorithm](/images/browser_resolution_algorithm.svg "#width=75%")
 
 <figcaption>Process diagram depicting entire browser resolution algorithm</figcaption>
 </figure>
@@ -37,20 +39,20 @@ Generally, browsers automatically add `http://` prefix for any domain in the add
 
 All records related to browser resolution are stored within these namespaces:
 
-* `dns.*` — For traditional DNS records
-* `dweb.*` — For distributed content records
-* `browser.*` — Hint records to help a browser determine a preferred hypermedia protocol
+- `dns.*` — For traditional DNS records
+- `dweb.*` — For distributed content records
+- `browser.*` — Hint records to help a browser determine a preferred hypermedia protocol
 
 To retrieve records associated with a domain, see [Resolve Using Smart Contracts](/smart-contracts/quick-start/resolve-domains.md).
 
 ### DNS records
 
-`Resolver` records may contain classical DNS records along with other records. To distinguish those from other CNS (Crypto Name Service) records, the `dns.*` namespace is used. So DNS `A` corresponds to the `dns.A` CNS record. Any [listed DNS record](https://en.wikipedia.org/wiki/List\_of\_DNS\_record\_types) described in RFC standards is supported. All record names must follow the uppercase naming convention.
+`Resolver` records may contain classical DNS records along with other records. To distinguish those from other CNS (Crypto Name Service) records, the `dns.*` namespace is used. So DNS `A` corresponds to the `dns.A` CNS record. Any [listed DNS record](https://en.wikipedia.org/wiki/List_of_DNS_record_types) described in RFC standards is supported. All record names must follow the uppercase naming convention.
 
 Unlike DNS, the CNS `Resolver` doesn't support multiple records with the same key. Therefore, DNS record values must be stored as a [JSON](http://json.org) serialized array of strings.
 
-* **Example 1:** A domain that needs one `CNAME` record set to `example.com.` must be configured as one crypto record `dns.CNAME` set to `["example.com."]`.
-* **Example 2:** A domain that needs two `A` records set to `10.0.0.1` and `10.0.0.2` must be configured as one crypto record `dns.A` set to `["10.0.0.1","10.0.0.2"]`.
+- **Example 1:** A domain that needs one `CNAME` record set to `example.com.` must be configured as one crypto record `dns.CNAME` set to `["example.com."]`.
+- **Example 2:** A domain that needs two `A` records set to `10.0.0.1` and `10.0.0.2` must be configured as one crypto record `dns.A` set to `["10.0.0.1","10.0.0.2"]`.
 
 This serialization is the only data transformation required when converting a traditional DNS record into a CNS record.
 

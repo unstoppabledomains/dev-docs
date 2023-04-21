@@ -1,36 +1,38 @@
 ---
 title: Browser Resolution Test Domains | Unstoppable Domains Developer Portal
 description: This page provides a list of the browser resolution test domains and reviews the process for retrieving test records.
+redirectFrom:
+  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains/
 ---
 
 # Browser Resolution Test Domains
 
-| Domain name |
-| :--- |
-| udtestdev-dns-ipfs.crypto |
-| udtestdev-dns.crypto |
-| udtestdev-dns-a-record.crypto |
-| udtestdev-ipfs.crypto |
-| udtestdev-dns-global-ttl.crypto |
-| udtestdev-dns-ipfs-no-preffered-records.crypto |
-| udtestdev-dns-cname.crypto |
-| udtestdev-dns-ipfs-redirect.crypto |
-| udtestdev-redirect.crypto |
+| Domain name                                           |
+| :---------------------------------------------------- |
+| udtestdev-dns-ipfs.crypto                             |
+| udtestdev-dns.crypto                                  |
+| udtestdev-dns-a-record.crypto                         |
+| udtestdev-ipfs.crypto                                 |
+| udtestdev-dns-global-ttl.crypto                       |
+| udtestdev-dns-ipfs-no-preffered-records.crypto        |
+| udtestdev-dns-cname.crypto                            |
+| udtestdev-dns-ipfs-redirect.crypto                    |
+| udtestdev-redirect.crypto                             |
 | udtestdev-dns-ipfs-redirect-legacy-ipfs-legacy.crypto |
-| udtestdev-ipfs-legacy.crypto |
-| udtestdev-ipfs-legacy-redirect-legacy.crypto |
-| udtestdev-redirect-legacy.crypto |
+| udtestdev-ipfs-legacy.crypto                          |
+| udtestdev-ipfs-legacy-redirect-legacy.crypto          |
+| udtestdev-redirect-legacy.crypto                      |
 
 ## Getting test records
 
 Check records with the [Resolution Libraries](/resolution/sdks-and-libraries/javascript.md) and [Resolution CLI](/resolution/sdks-and-libraries/cli.md):
 
 ```typescript JavaScript
-import Resolution from '@unstoppabledomains/resolution/build/Resolution';
+import Resolution from "@unstoppabledomains/resolution/build/Resolution";
 
 // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
-resolution.allRecords('udtestdev-dns-ipfs.crypto').then((records) => {
+resolution.allRecords("udtestdev-dns-ipfs.crypto").then((records) => {
   console.log(records);
   // Output
   // {

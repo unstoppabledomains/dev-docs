@@ -1,6 +1,8 @@
 ---
 title: Best Practices for Integrating Domain Resolution | UD Developer Portal
 description: This page covers best practices to follow while integrating Unstoppable Domains resolution.
+redirectFrom:
+  - /developer-toolkit/reference/resolution-best-practices/
 ---
 
 # Best Practices for Integrating Domain Resolution
@@ -17,7 +19,7 @@ Always display the resolved crypto address near the domain name for additional s
 
 <figure>
 
-![preview of resolved address near domain name](/images/successful-domain-resolving.png '#width=50%')
+![preview of resolved address near domain name](/images/successful-domain-resolving.png "#width=50%")
 
 <figcaption>preview of resolved address near domain name</figcaption>
 </figure>
@@ -44,7 +46,7 @@ Add notes, hints, and placeholders in your application to remind users that they
 
 <figure>
 
-![preview of resolved address near domain name](/images/domain-btc-resolving-example.png '#width=60%')
+![preview of resolved address near domain name](/images/domain-btc-resolving-example.png "#width=60%")
 
 <figcaption>preview of resolved address near domain name</figcaption>
 </figure>
