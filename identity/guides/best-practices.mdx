@@ -5,9 +5,10 @@ showNextButton: false
 redirectFrom:
   - /login-with-unstoppable/login-ui-configuration/
   - /login-with-unstoppable/login-integration-guides/login-ui-configuration/
+  - /login-with-unstoppable/login-best-practices/
 ---
 
-import ColorSample from '../../components/ColorSample.tsx'
+import ColorSample from "../../components/ColorSample.tsx";
 
 # Best Practices for Login with Unstoppable
 
@@ -49,14 +50,12 @@ In the last modal screen shown below, only the minimum scopes are being requeste
 <figcaption>Modal 1</figcaption>
 </figure>
 
-
 <figure class="one-third-inline-block" vertical-align="bottom">
 
 ![2)User Enters Unstoppable Domain Address to Login to dApp](/images/login-domains-modal2-v3.png)
 
 <figcaption>Modal 2</figcaption>
 </figure>
-
 
 <figure class="one-third-inline-block" vertical-align="bottom">
 
@@ -67,19 +66,19 @@ In the last modal screen shown below, only the minimum scopes are being requeste
 
 The modals are further described below:
 
-* **Modal 1.** User clicks on Login with Unstoppable Button.
-* **Modal 2.** A modal is displayed which allows the user to begin the authorization process by entering their Unstoppable domain.
-* **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes).
-The user must sign the transaction using their wallet address in order to share their information with the dApp.
+- **Modal 1.** User clicks on Login with Unstoppable Button.
+- **Modal 2.** A modal is displayed which allows the user to begin the authorization process by entering their Unstoppable domain.
+- **Modal 3.** During login, the user will see the resolved address and the information being requested by the application (i.e. the scopes).
+  The user must sign the transaction using their wallet address in order to share their information with the dApp.
 
 ## Style the Login Buttons
 
 Your integration will need Unstoppable Domains branded login buttons. See the table below for style guidelines.
 
-| State   | Color                           | Button                                                                        |
+| State   |              Color              |                                    Button                                     |
 | ------- | :-----------------------------: | :---------------------------------------------------------------------------: |
 | Default | <ColorSample color='#0D67FE' /> | ![Large login button: default](/images/login-buttons/login-default-large.png) |
-| Hover   | <ColorSample color='#0546B7' /> | ![Large login button: hover](/images/login-buttons/login-hover-large.png)     |
+| Hover   | <ColorSample color='#0546B7' /> |   ![Large login button: hover](/images/login-buttons/login-hover-large.png)   |
 | Pressed | <ColorSample color='#478BFE' /> | ![Large login button: pressed](/images/login-buttons/login-pressed-large.png) |
 | Loading | <ColorSample color='#0D67FE' /> | ![Large login button: loading](/images/login-buttons/login-loading-large.png) |
 

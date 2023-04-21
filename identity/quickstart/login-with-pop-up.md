@@ -1,6 +1,8 @@
 ---
 title: Login with Unstoppable with Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and with the popup feature.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/login-with-popup/
 showNextButton: false
 ---
 
@@ -63,12 +65,12 @@ Build out the `index.html` file as follows:
 Now, configure the `app.js` as follows:
 
 ```javascript
-import UAuth from '@uauth/js'
+import UAuth from "@uauth/js";
 
 const uauth = new UAuth({
-  clientID: 'uauth_example_spa_id',
-  redirectUri: 'http://localhost:5000/callback',
-})
+  clientID: "uauth_example_spa_id",
+  redirectUri: "http://localhost:5000/callback",
+});
 ```
 
 ## Step 4: Implement the Login Handler
@@ -78,25 +80,25 @@ Add a login function to `app.js` as follows:
 ```javascript
 window.login = async () => {
   try {
-    const authorization = await uauth.loginWithPopup()
+    const authorization = await uauth.loginWithPopup();
 
-    console.log(authorization)
+    console.log(authorization);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 ```
 
 ## Step 5: Implement the Logout Handler
+
 Add a logout function to `app.js` as follows:
 
 ```javascript
 window.logout = async () => {
-  await uauth.logout()
-  console.log('Logged out with Unstoppable')
-}
+  await uauth.logout();
+  console.log("Logged out with Unstoppable");
+};
 ```
-
 
 ## Step 6: Login with Unstoppable
 

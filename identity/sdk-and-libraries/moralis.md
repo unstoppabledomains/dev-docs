@@ -1,6 +1,8 @@
 ---
 title: UAuth Moralis Library | Unstoppable Domains Developer Portal
 description: This page provides documents the public interface of the @uauth/moralis middleware library.
+redirectFrom:
+  - /login-with-unstoppable/libraries/uauth-moralis/
 ---
 
 # UAuth Moralis Library
@@ -53,11 +55,10 @@ public get uauth(): UAuth
 The configuration options object passed to the UAuthMoralisConnector **constructor**.
 
 ```typescript
-interface UAuthConnectorOptions
-  extends Partial<UAuthConstructorOptions> {
-  uauth?: UAuth
-  connectors: UAuthMoralisConnectors
-  shouldLoginWithRedirect?: boolean
+interface UAuthConnectorOptions extends Partial<UAuthConstructorOptions> {
+  uauth?: UAuth;
+  connectors: UAuthMoralisConnectors;
+  shouldLoginWithRedirect?: boolean;
 }
 ```
 
@@ -69,7 +70,7 @@ If `shouldLoginWithRedirect` is set to `true`, the [UAuthMoralisConnector](#uaut
 
 ```typescript
 interface UAuthMoralisConnectors {
-  injected: any | undefined
-  walletconnect: any | undefined
+  injected: any | undefined;
+  walletconnect: any | undefined;
 }
 ```

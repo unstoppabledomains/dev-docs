@@ -1,6 +1,8 @@
 ---
 title: UAuth Web3Modal Library | Unstoppable Domains Developer Portal
 description: This page provides documents the public interface of the @uauth/web3modal middleware library.
+redirectFrom:
+  - /login-with-unstoppable/libraries/uauth-web3modal/
 ---
 
 # UAuth Web3Modal Library
@@ -14,8 +16,8 @@ The `connector` function is used to create a provider for the `web3modal` librar
 ```typescript
 async function connector(
   UAuth: typeof UAuthSPA,
-  opts: IUAuthOptions,
-): Promise<any>
+  opts: IUAuthOptions
+): Promise<any>;
 ```
 
 ## registerWeb3Modal()
@@ -31,9 +33,7 @@ function registerWeb3Modal(web3modal: Web3Modal) => void
 This function creates and returns a new UAuth instance using the package and options.
 
 ```typescript
-function getUAuth(
-  UAuth: typeof UAuthSPA,
-  opts: IUAuthOptions): UAuth
+function getUAuth(UAuth: typeof UAuthSPA, opts: IUAuthOptions): UAuth;
 ```
 
 ## display
@@ -54,7 +54,7 @@ The options object passed to the [connector](#connector) function to configure a
 interface IUAuthOptions
   extends Partial<IAbstractConnectorOptions>,
     UAuthConstructorOptions {
-  shouldLoginWithRedirect?: boolean
+  shouldLoginWithRedirect?: boolean;
 }
 ```
 
@@ -65,20 +65,20 @@ If set to `true`, the UAuth provider created by the [connector](#connector) func
 Then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
-import UAuthSPA from '@uauth/js'
-import * as UAuthWeb3Modal from '@uauth/web3modal'
-import {uauthOptions} from './web3modal'
+import UAuthSPA from "@uauth/js";
+import * as UAuthWeb3Modal from "@uauth/web3modal";
+import { uauthOptions } from "./web3modal";
 
 // On page load...
 
 UAuthWeb3Modal.getUAuth(UAuthSPA, uauthOptions)
   .loginCallback()
   .then(async () => {
-    const provider = await web3modal.connectTo('custom-uauth')
+    const provider = await web3modal.connectTo("custom-uauth");
 
     // Save provider in state and redirect to success page
   })
-  .catch(error => {
+  .catch((error) => {
     // Redirect to failure page
-  })
+  });
 ```

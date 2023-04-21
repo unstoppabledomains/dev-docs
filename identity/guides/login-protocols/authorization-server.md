@@ -3,6 +3,7 @@ title: Login Authorization Server | Unstoppable Domains Developer Portal
 description: This page outlines the authorization server for the Login with Unstoppable feature.
 redirectFrom:
   - /login-with-unstoppable/high-level-overview/authorization-server/
+	- /login-with-unstoppable/login-protocols/authorization-server/
 ---
 
 # Authorization Server
@@ -17,9 +18,9 @@ Unstoppable Webfinger uses a variety of records stored on domains to resolve a W
 
 [WebFinger](https://datatracker.ietf.org/doc/html/rfc7033) requires the following information to make a discovery request:
 
-* resource: Identifier for the target End-User that is the subject of the discovery request
-* host: Server where a WebFinger service is hosted
-* rel: URI that identifies the type of service whose location is being requested
+- resource: Identifier for the target End-User that is the subject of the discovery request
+- host: Server where a WebFinger service is hosted
+- rel: URI that identifies the type of service whose location is being requested
 
 Traditional Issuer discovery requires only the requestor resource and host to form the request, the rel must be [http://openid.net/specs/connect/1.0/issuer](http://openid.net/specs/connect/1.0/issuer) to make an issuer request.
 
@@ -61,7 +62,7 @@ This is a method used to construct a WebFinger request. The below fields are use
 
 ### By Value
 
-| Field |  Description                                                                                                                                                   |
+| Field | Description                                                                                                                                                    |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | user  | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “By Request” flow.                                                       |
 | value | The WebFinger JRD Document in plaintext.                                                                                                                       |
@@ -75,7 +76,7 @@ Unstoppable Authentication uses two types of authentication that authorization s
 
 ### Owner-based authentication
 
-This is the default authentication method used for Unstoppable Authentication. To consent, users sign a message provided by an Authentication server, instead of using a username and  password combination. We use the owner of the domain as the public key that is recovered.
+This is the default authentication method used for Unstoppable Authentication. To consent, users sign a message provided by an Authentication server, instead of using a username and password combination. We use the owner of the domain as the public key that is recovered.
 
 The Authentication server should use the AMR Value of _uns-own_.
 
@@ -91,13 +92,13 @@ The below fields are used to specify a public key that can be used for authentic
 It’s recommended that DApps support the web3 and oob methods at a minimum.
 :::
 
-| Field            | Description                                                                                                                                                                                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| user             | The OPTIONAL user of the account. If one was resolving this information on domain.tld, the webfinger resource constructed would be acct:user@domain.tld. If no user is present in the record, the account would be domain itself, i.e. acct:@domain.tld. |
-| addr             | An Ethereum address corresponding to a private key a user owns.                                                                                                                                                                                          |
-| addr\_type\_hint | An OPTIONAL hint for the Authentication server to suggest sign-in methods. If no hint is present the Authentication server should display as many methods as it can support.                                                                             |
+| Field          | Description                                                                                                                                                                                                                                              |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| user           | The OPTIONAL user of the account. If one was resolving this information on domain.tld, the webfinger resource constructed would be acct:user@domain.tld. If no user is present in the record, the account would be domain itself, i.e. acct:@domain.tld. |
+| addr           | An Ethereum address corresponding to a private key a user owns.                                                                                                                                                                                          |
+| addr_type_hint | An OPTIONAL hint for the Authentication server to suggest sign-in methods. If no hint is present the Authentication server should display as many methods as it can support.                                                                             |
 
-For context, _addr\_type\_hint_ can have the following values:
+For context, _addr_type_hint_ can have the following values:
 
 | Value         | Description                                                                                                                                                                |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,10 +143,10 @@ Those records would correspond to the user alice@domain.tld.
 
 The Authentication Server should use the AMR Value of _uns-swk._
 
-| Field    | Description                                                                                                    |
-| -------- | -------------------------------------------------------------------------------------------------------------- |
-| user     | The OPTIONAL user of the account. This is interpreted in the same way as it is in the "Ethereum Address" flow. |
-| jwk\_uri | URL of the JWKS document containing the signing key(s) used to prove the identity of the End-User              |
+| Field   | Description                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------- |
+| user    | The OPTIONAL user of the account. This is interpreted in the same way as it is in the "Ethereum Address" flow. |
+| jwk_uri | URL of the JWKS document containing the signing key(s) used to prove the identity of the End-User              |
 
 ## Introspective Access Token Validation
 
@@ -164,16 +165,16 @@ This scheme is very similar to the Basic Authentication scheme, but for compatib
 
 The Authorization server supports several standards beyond Authentication and Authorization explained in these docs.
 
-* [JWT Token Introspection/Userinfo](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html) \*\*
-* [JRAM Responses](https://openid.net/specs/openid-financial-api-jarm.html)+
-* [Client Registration & Management](https://openid.net/specs/openid-connect-registration-1_0.html)
-* [Request Objects](https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests)
-* [Resource Indicators](https://datatracker.ietf.org/doc/html/rfc8707)
-* [Token Revocation](https://datatracker.ietf.org/doc/html/rfc7009)
-* [private\_key\_jwt Client Authentication](https://openid.net/specs/openid-connect-core-1_0-15.html#ClientAuthentication)
-* [PKCE](https://datatracker.ietf.org/doc/html/rfc7636)
-* [Rotating Refresh Tokens](https://auth0.com/docs/security/tokens/refresh-tokens/refresh-token-rotation)
-* [Encrypted JWT Responses](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html#rfc.section.3)
-* [Backchannel Logout](https://openid.net/specs/openid-connect-backchannel-1_0.html)+
+- [JWT Token Introspection/Userinfo](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html) \*\*
+- [JRAM Responses](https://openid.net/specs/openid-financial-api-jarm.html)+
+- [Client Registration & Management](https://openid.net/specs/openid-connect-registration-1_0.html)
+- [Request Objects](https://openid.net/specs/openid-connect-core-1_0.html#JWTRequests)
+- [Resource Indicators](https://datatracker.ietf.org/doc/html/rfc8707)
+- [Token Revocation](https://datatracker.ietf.org/doc/html/rfc7009)
+- [private_key_jwt Client Authentication](https://openid.net/specs/openid-connect-core-1_0-15.html#ClientAuthentication)
+- [PKCE](https://datatracker.ietf.org/doc/html/rfc7636)
+- [Rotating Refresh Tokens](https://auth0.com/docs/security/tokens/refresh-tokens/refresh-token-rotation)
+- [Encrypted JWT Responses](https://tools.ietf.org/id/draft-ietf-oauth-jwt-introspection-response-02.html#rfc.section.3)
+- [Backchannel Logout](https://openid.net/specs/openid-connect-backchannel-1_0.html)+
 
 +The OIDC Consortium hasn’t formally audited these features offered by the server.

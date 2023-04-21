@@ -1,6 +1,8 @@
 ---
 title: Moralis Guide for Login With Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Moralis library.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/moralis-guide/
 showNextButton: false
 ---
 
@@ -27,12 +29,12 @@ Next, configure the `moralis` library:
 ```typescript
 // connectors.ts
 
-import {UAuthMoralisConnector} from '@uauth/moralis'
+import { UAuthMoralisConnector } from "@uauth/moralis";
 
 // Instantiate your other connectors.
-export const injected = {}
+export const injected = {};
 
-export const walletconnect = {provider: 'walletconnect'}
+export const walletconnect = { provider: "walletconnect" };
 
 UAuthMoralisConnector.setUAuthOptions({
   clientID: process.env.REACT_APP_CLIENT_ID!,
@@ -40,20 +42,20 @@ UAuthMoralisConnector.setUAuthOptions({
   fallbackIssuer: process.env.REACT_APP_FALLBACK_ISSUER!,
 
   // Scope must include openid and wallet
-  scope: 'openid wallet',
+  scope: "openid wallet",
   // Injected and walletconnect connectors are required
-  connectors: {injected, walletconnect},
+  connectors: { injected, walletconnect },
 });
 
-export const uauth = {connector: UAuthMoralisConnector};
+export const uauth = { connector: UAuthMoralisConnector };
 
 const connectors: Record<string, any> = {
   injected,
   walletconnect,
   uauth,
-}
+};
 
-export default connectors
+export default connectors;
 ```
 
 :::info
@@ -67,21 +69,20 @@ Once configured, the `react-moralis` library can be used normally.
 <embed src="/snippets/_login-mainnet-warning.md" />
 
 ```typescript
-
-import React from 'react'
-import {useMoralis} from 'react-moralis'
-import {uauth} from './connectors'
+import React from "react";
+import { useMoralis } from "react-moralis";
+import { uauth } from "./connectors";
 
 // On login button click...
 async function handleLogin() {
-  const {authenticate} = useMoralis()
+  const { authenticate } = useMoralis();
 
-  await authenticate(uauth)
+  await authenticate(uauth);
 }
 
 // On logout button click...
 async function handleLogout() {
-  const {logout} = useMoralis();
+  const { logout } = useMoralis();
 
   logout();
 }

@@ -2,7 +2,8 @@
 title: Login with Unstoppable | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the Login with Unstoppable feature.
 redirectFrom:
-    - /login-with-unstoppable/high-level-overview/
+  - /login-with-unstoppable/high-level-overview/
+  - /login-with-unstoppable/
 ---
 
 # Login with Unstoppable Overview
@@ -20,7 +21,7 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 
 <figure>
 
-![User flow for Login with Unstoppable](/images/login-with-unstoppable-flow-revised.png '#width=50%')
+![User flow for Login with Unstoppable](/images/login-with-unstoppable-flow-revised.png "#width=50%")
 
 <figcaption>User flow for Login with Unstoppable</figcaption>
 </figure>
@@ -63,14 +64,13 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .hi
 - .kresus
 - .polygon
-- .zil *
+- .zil \*
 
-:::warning
-\* Login with Unstoppable only supports `.zil` domains that have been bridged to the Polygon blockchain.
+:::warning \* Login with Unstoppable only supports `.zil` domains that have been bridged to the Polygon blockchain.
 :::
 
 ## Considerations
 
-* The components provided by the UAuth libraries are only available in React. The UAuth modal is written in React, which has a larger library size.
+- The components provided by the UAuth libraries are only available in React. The UAuth modal is written in React, which has a larger library size.
 
 <embed src="/snippets/_developer-survey-embed.md" />

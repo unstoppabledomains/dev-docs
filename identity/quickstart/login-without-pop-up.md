@@ -1,6 +1,8 @@
 ---
 title: Login with Unstoppable without Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/login-without-popup/
 showNextButton: false
 ---
 
@@ -43,8 +45,15 @@ npm install --save react-router-dom @uauth/js
 Add the following imports to your `App.tsx`.
 
 ```typescript
-import React, {useEffect, useState} from 'react';
-import {BrowserRouter, RouteProps, Routes, Route, Navigate, useLocation} from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import {
+  BrowserRouter,
+  RouteProps,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 ```
 
 ## Step 3: Configure `UAuth`
@@ -52,12 +61,12 @@ import {BrowserRouter, RouteProps, Routes, Route, Navigate, useLocation} from 'r
 First, you will configure the UAuth class using the [Client Metadata](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#client-metadata) from your login client configuration.
 
 ```typescript
-import UAuth from '@uauth/js'
+import UAuth from "@uauth/js";
 
 const uauth = new UAuth({
-    clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    redirectUri: "http://localhost:3000/callback",
-    scope: "openid wallet email:optional humanity_check:optional"
+  clientID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  redirectUri: "http://localhost:3000/callback",
+  scope: "openid wallet email:optional humanity_check:optional",
 });
 ```
 
@@ -80,27 +89,28 @@ Next, you will call `uauth.login()` to initiate a UAuth login upon clicking the 
 Below is an example of what a login page could look like in React.
 
 ```typescript
-const Login: React.FC<RouteProps> = props => {
+const Login: React.FC<RouteProps> = (props) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(
-    new URLSearchParams(useLocation().search || '').get('error'),
-  )
+    new URLSearchParams(useLocation().search || "").get("error")
+  );
 
-  const handleLoginButtonClick: React.MouseEventHandler<HTMLButtonElement> =
-    e => {
-      setErrorMessage(null)
-      uauth.login().catch(error => {
-        console.error('login error:', error)
-        setErrorMessage('User failed to login.')
-      })
-    }
+  const handleLoginButtonClick: React.MouseEventHandler<HTMLButtonElement> = (
+    e
+  ) => {
+    setErrorMessage(null);
+    uauth.login().catch((error) => {
+      console.error("login error:", error);
+      setErrorMessage("User failed to login.");
+    });
+  };
 
   return (
     <>
       {errorMessage && <div>{errorMessage}</div>}
       <button onClick={handleLoginButtonClick}>Login with Unstoppable</button>
     </>
-  )
-}
+  );
+};
 ```
 
 ## Step 5: Create the Callback Page
@@ -115,31 +125,31 @@ On the page registered as your `redirectUri`, you will call `uauth.loginCallback
 Below is an example of what a callback page could look like in React.
 
 ```typescript
-const Callback: React.FC<RouteProps> = props => {
-  const [navigateTo, setNavigateTo] = useState<string>()
+const Callback: React.FC<RouteProps> = (props) => {
+  const [navigateTo, setNavigateTo] = useState<string>();
 
   useEffect(() => {
     // Try to exchange authorization code for access and id tokens.
     uauth
       .loginCallback()
       // Successfully logged and cached user in `window.localStorage`
-      .then(response => {
-        console.log('loginCallback ->', response)
-        setNavigateTo('/profile')
+      .then((response) => {
+        console.log("loginCallback ->", response);
+        setNavigateTo("/profile");
       })
       // Failed to exchange authorization code for token.
-      .catch(error => {
-        console.error('callback error:', error)
-        setNavigateTo('/login?error=' + error.message)
-      })
-  }, [])
+      .catch((error) => {
+        console.error("callback error:", error);
+        setNavigateTo("/login?error=" + error.message);
+      });
+  }, []);
 
   if (navigateTo) {
-    return <Navigate to={navigateTo} />
+    return <Navigate to={navigateTo} />;
   }
 
-  return <>Loading...</>
-}
+  return <>Loading...</>;
+};
 ```
 
 ## Step 6: Create a Logout Button
@@ -148,44 +158,43 @@ Finally, you will call `uauth.logout()` to handle logging out upon clicking the 
 
 1. Clears cache of authorization.
 2. If the `postLogoutRedirectUri` is present:
-    1. Uses cached authorization to create a logout URI.
-    2. Redirects to that URI.
-    3. After every logout attempt the server will redirect the user to the `postLogoutRedirectUri` specified at instantiation.
+   1. Uses cached authorization to create a logout URI.
+   2. Redirects to that URI.
+   3. After every logout attempt the server will redirect the user to the `postLogoutRedirectUri` specified at instantiation.
 
 ```typescript
 const Profile: React.FC<RouteProps> = () => {
-  const [user, setUser] = useState<any>()
-  const [loading, setLoading] = useState(false)
-  const [navigateTo, setNavigateTo] = useState<string>()
+  const [user, setUser] = useState<any>();
+  const [loading, setLoading] = useState(false);
+  const [navigateTo, setNavigateTo] = useState<string>();
 
   useEffect(() => {
     uauth
       .user()
       .then(setUser)
-      .catch(error => {
-        console.error('profile error:', error)
-        setNavigateTo('/login?error=' + error.message)
-      })
-  }, [])
+      .catch((error) => {
+        console.error("profile error:", error);
+        setNavigateTo("/login?error=" + error.message);
+      });
+  }, []);
 
-  const handleLogoutButtonClick: React.MouseEventHandler<HTMLButtonElement> =
-    e => {
-      console.log('logging out!')
-      setLoading(true)
-      uauth
-        .logout()
-        .catch(error => {
-          console.error('profile error:', error)
-          setLoading(false)
-        })
-    }
+  const handleLogoutButtonClick: React.MouseEventHandler<HTMLButtonElement> = (
+    e
+  ) => {
+    console.log("logging out!");
+    setLoading(true);
+    uauth.logout().catch((error) => {
+      console.error("profile error:", error);
+      setLoading(false);
+    });
+  };
 
   if (navigateTo) {
-    return <Navigate to={navigateTo} />
+    return <Navigate to={navigateTo} />;
   }
 
   if (!user || loading) {
-    return <>Loading...</>
+    return <>Loading...</>;
   }
 
   return (
@@ -193,8 +202,8 @@ const Profile: React.FC<RouteProps> = () => {
       <pre>{JSON.stringify(user, null, 2)}</pre>
       <button onClick={handleLogoutButtonClick}>Logout</button>
     </>
-  )
-}
+  );
+};
 ```
 
 ## Step 7: Routing to your Login Pages
@@ -205,12 +214,12 @@ Once you have all of your pages, you will need to create routes to them for Reac
 return (
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Login />} />
-      <Route path='callback' element={<Callback />} />
-      <Route path='profile' element={<Profile />} />
+      <Route path="/" element={<Login />} />
+      <Route path="callback" element={<Callback />} />
+      <Route path="profile" element={<Profile />} />
     </Routes>
   </BrowserRouter>
-)
+);
 ```
 
 :::success Contratulations

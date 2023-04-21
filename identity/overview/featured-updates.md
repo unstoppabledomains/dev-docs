@@ -1,6 +1,8 @@
 ---
 title: Featured Updates for Login with Unstoppable | UD Developer Portal
 description: This page highlights some of the latest features added to Unstoppable login and identity.
+redirectFrom:
+  - /login-with-unstoppable/featured-updates/
 ---
 
 # Featured Updates for Login With Unstoppable
@@ -21,11 +23,10 @@ For partners with existing integrations, offering Paid Domains via Login integra
 
 <figure>
 
-![Paid domain search results in the UD Login flow](/images/login-paid-domain-search.png '#width=50%')
+![Paid domain search results in the UD Login flow](/images/login-paid-domain-search.png "#width=50%")
 
 <figcaption>Paid domain search results in the UD Login flow</figcaption>
 </figure>
-
 
 ## Login with Verified Solana Wallet
 
@@ -53,7 +54,7 @@ The [VerifiedAddress](/login-with-unstoppable/libraries/uauth-js.md#verifiedaddr
 
 Login with Unstoppable now supports authentication with certain verified accounts on a user's domain profile. This doesn't require an specific change from login integrations to work, but two new methods have been added to UAuth to give applications access to some of this information:
 
-| Method | Description |
-| ------ | ----------- |
-| [getVerifiedAccounts()](/login-with-unstoppable/libraries/uauth-js.md#getverifiedaccounts) | Returns a list of verified accounts associated with the domain. |
+| Method                                                                                             | Description                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [getVerifiedAccounts()](/login-with-unstoppable/libraries/uauth-js.md#getverifiedaccounts)         | Returns a list of verified accounts associated with the domain.                                                                                                       |
 | [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |
