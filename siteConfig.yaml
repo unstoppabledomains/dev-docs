@@ -48,8 +48,8 @@ nav:
   - label: Guides
     page: /guides.mdx
 
-  - label: Resolution
-    page: resolution/overview.md
+  - label: Use Cases
+    page: /use-cases/index.mdx
 
   - label: API Reference
     page: openapi/resolution.page.yaml
