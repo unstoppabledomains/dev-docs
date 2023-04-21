@@ -1,6 +1,8 @@
 ---
 title: Domain Actions API Overview | UD Developer Portal
 description: This page provides a high-level overview of the Domain Actions API hosted by Unstoppable Domains.
+redirectFrom:
+  - /partner/domain-actions-guides/overview/
 ---
 
 # Domain Actions API Overview
@@ -13,7 +15,7 @@ The diagram below illustrates the general process between a Partner and Unstoppa
 
 <figure>
 
-![Domain Actions API success flow](/images/domain-action-api-flow.png '#width=80%;')
+![Domain Actions API success flow](/images/domain-action-api-flow.png "#width=80%;")
 
 <figcaption>Domain Actions API success flow</figcaption>
 </figure>
@@ -22,9 +24,9 @@ The diagram below illustrates the general process between a Partner and Unstoppa
 
 There are three gas compensation policies that Partners can choose from when creating a domain action draft depending on how they want to make users send and pay for transaction fees.
 
-* `AlwaysCompensate`: This policy always assumes the use of [meta transactions](/manage-domains/delegating-transactions.md). It allows the user pay for transactions in USD via [Stripe payment intent](https://stripe.com/docs/payments/payment-intents), rather than in ETH.
-* `CompensateFree`: This policy allows Unstoppable Domains to pay the transaction fees for a user on the Polygon network.
-* `NeverCompensate`: This policy should be used if a client wants to make the user send and pay for the transactions themselves and guarantees maximum privacy.
+- `AlwaysCompensate`: This policy always assumes the use of [meta transactions](/manage-domains/delegating-transactions.md). It allows the user pay for transactions in USD via [Stripe payment intent](https://stripe.com/docs/payments/payment-intents), rather than in ETH.
+- `CompensateFree`: This policy allows Unstoppable Domains to pay the transaction fees for a user on the Polygon network.
+- `NeverCompensate`: This policy should be used if a client wants to make the user send and pay for the transactions themselves and guarantees maximum privacy.
 
 :::info
 You can only use one gas compensation policy per domain action request based on the user experience you want to provide to your users.
@@ -34,13 +36,13 @@ You can only use one gas compensation policy per domain action request based on 
 
 There are several functionalities offered by the Domain Actions API to interact with your domains, detailed in the chart below.
 
-| Action Name | Description | Integration Guides |
-| - | - | - |
-| UpdateRecords | generate transactions to update resolution records for a domain | [UpdateRecords Action Guide](../manage-domains/update-records.md) |
-| Return | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](../manage-domains/return-domains.md) |
-| SetReverseResolution | generate transactions to configure reverse resolution records for a domain | [SetReverseResolution Action Guide](../manage-domains/set-reverse-resolution.md) |
-| Transfer | generate transactions to transfer a domain name | [Transfer Action Guide](../manage-domains/transfer.md) |
-| Deposit or Withdraw | generate transactions to bridge domains from Ethereum to Polygon and vice versa | [Deposit or Withdraw Action Guide](../manage-domains/deposit-or-withdraw.md) |
+| Action Name          | Description                                                                          | Integration Guides                                                               |
+| -------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| UpdateRecords        | generate transactions to update resolution records for a domain                      | [UpdateRecords Action Guide](../manage-domains/update-records.md)                |
+| Return               | generate transactions to return a domain to Unstoppable Domains and receive a refund | [Return Action Guide](../manage-domains/return-domains.md)                       |
+| SetReverseResolution | generate transactions to configure reverse resolution records for a domain           | [SetReverseResolution Action Guide](../manage-domains/set-reverse-resolution.md) |
+| Transfer             | generate transactions to transfer a domain name                                      | [Transfer Action Guide](../manage-domains/transfer.md)                           |
+| Deposit or Withdraw  | generate transactions to bridge domains from Ethereum to Polygon and vice versa      | [Deposit or Withdraw Action Guide](../manage-domains/deposit-or-withdraw.md)     |
 
 ## Step 2: Sign the Transaction
 
@@ -50,7 +52,7 @@ For a `Regular` transaction, the process is slightly different. After signing th
 
 <figure>
 
-![Signing messages on Etherscan](/images/etherscan-sign-message.png '#width=40%;')
+![Signing messages on Etherscan](/images/etherscan-sign-message.png "#width=40%;")
 
 <figcaption>Signing messages on Etherscan</figcaption>
 </figure>
@@ -63,10 +65,10 @@ The Domain Actions API has an endpoint called [Submit Domain Action Signature](h
 
 There are several ways to track the status of transactions submitted to the Domain Actions API, detailed in the table below.
 
-| Endpoint | Description | Integration Guides |
-| - | - | - |
-| Get Domain Action | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetAction) |
-| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetActions) |
+| Endpoint           | Description                                                               | Integration Guides                                                                                      |
+| ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Get Domain Action  | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetAction)  |
+| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address  | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetActions) |
 
 ## Fork Our Postman Collection
 

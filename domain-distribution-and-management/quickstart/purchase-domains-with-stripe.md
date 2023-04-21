@@ -1,6 +1,8 @@
 ---
 title: Purchase Domains with Stripe | Unstoppable Domains Developer Portal
 description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in your Unstoppable Domains Partner account.
+redirectFrom:
+  - /partner/partner-integration-guides/stripe-payments/
 ---
 
 # Purchase Domains with Stripe
@@ -11,7 +13,7 @@ The diagram below illustrates the general process between a Partner and Unstoppa
 
 <figure>
 
-![Success flow for buying domains with Stripe](/images/stripe-payment-success-flow.png '#width=80%;')
+![Success flow for buying domains with Stripe](/images/stripe-payment-success-flow.png "#width=80%;")
 
 <figcaption>Success flow for buying domains with Stripe</figcaption>
 </figure>
@@ -31,7 +33,7 @@ After clicking the Stripe `CONNECT` button, Stripe will walk you through the bus
 
 <figure>
 
-![Stripe business integrations form to connect your Stripe and UD accounts](/images/10.png '#width=80%;')
+![Stripe business integrations form to connect your Stripe and UD accounts](/images/10.png "#width=80%;")
 
 <figcaption>Stripe integrations form to connect your Stripe and UD accounts</figcaption>
 </figure>
@@ -69,13 +71,13 @@ When making an order, the body must contain information about your domain order 
 }
 ```
 
-* `payment`: A key-value dictionary with payment information about the order:
-    * `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
-* `domains`: (array) An array with information about the domains you want to purchase:
-    * `name`: The domain name you want to purchase. This parameter is required.
-    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
-    * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
+- `payment`: A key-value dictionary with payment information about the order:
+  - `method`: (string) The payment method the API should create. For Stripe payments, the value should be `"stripe"`.
+- `domains`: (array) An array with information about the domains you want to purchase:
+  - `name`: The domain name you want to purchase. This parameter is required.
+  - `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
+  - `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is optional.
+  - `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
 
 ## Step 4: Prepare Authorization Headers
 
@@ -91,18 +93,16 @@ Under the hood, Unstoppable Domains uses Stripe's [Payment Intents API](https://
 
 ```json
 {
-    "orderNumber": "{ORDER_NUMBER}",
-    "total": "{TOTAL_ORDER_PRICE}",
-    "payment": {
-        "method": "stripe",
-        "details": {
-          "clientSecret": "{STRIPE_CLIENT_SECRET}",
-          "paymentIntentId": "{STRIPE_PAYMENT_INTENT_ID}"
-        }
-    },
-    "items": [
-      "{DOMAINS_TO_PURCHASE}"
-    ]
+  "orderNumber": "{ORDER_NUMBER}",
+  "total": "{TOTAL_ORDER_PRICE}",
+  "payment": {
+    "method": "stripe",
+    "details": {
+      "clientSecret": "{STRIPE_CLIENT_SECRET}",
+      "paymentIntentId": "{STRIPE_PAYMENT_INTENT_ID}"
+    }
+  },
+  "items": ["{DOMAINS_TO_PURCHASE}"]
 }
 ```
 
@@ -112,11 +112,11 @@ The value of the `clientSecret` and `paymentIntentId` fields can be used with th
 
 Here is an example request to purchase a domain with the following details using the Stripe payment method:
 
-| Field Name | Value |
-| - | - |
-| Domain Name | partner-test-67687986466871.wallet |
-| Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
-| Customer Email | sandbox-test@unstoppabledomains.com |
+| Field Name                | Value                                                                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Domain Name               | partner-test-67687986466871.wallet                                                                                                       |
+| Customer Wallet Address   | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589                                                                                               |
+| Customer Email            | sandbox-test@unstoppabledomains.com                                                                                                      |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
 
 ```bash Request
@@ -143,40 +143,40 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 
 ```json Response
 {
-    "orderNumber": "78085",
-    "total": 500,
-    "payment": {
-        "method": "stripe",
-        "details": {
-          "clientSecret": "pi_3LbAAG8POyZCUJh0h2YXvwg_secret_nktbz6kcVk8U1X5UJI36BA6c",
-          "paymentIntentId": "pi_3LbABAG8POyZcuJhen2YXwwo"
-        }
-    },
-    "items": [
-        {
-            "domain": {
-                "id": 971624,
-                "name": "partner-test-67687986466871.wallet",
-                "ownerAddress": null,
-                "resolver": null,
-                "resolution": {},
-                "blockchain": "MATIC",
-                "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
-                "networkId": 80001,
-                "freeToClaim": true,
-                "node": "0xbf153dc812a038ec41a8f332e20e2b927da06e035592857308745febac1fe855"
-            },
-            "mintingTransaction": {
-                "id": 45081,
-                "type": "MaticTx",
-                "operation": "MintDomain",
-                "statusGroup": "Pending",
-                "hash": null,
-                "blockchain": "MATIC",
-                "blockExplorerUrl": null
-            }
-        }
-    ]
+  "orderNumber": "78085",
+  "total": 500,
+  "payment": {
+    "method": "stripe",
+    "details": {
+      "clientSecret": "pi_3LbAAG8POyZCUJh0h2YXvwg_secret_nktbz6kcVk8U1X5UJI36BA6c",
+      "paymentIntentId": "pi_3LbABAG8POyZcuJhen2YXwwo"
+    }
+  },
+  "items": [
+    {
+      "domain": {
+        "id": 971624,
+        "name": "partner-test-67687986466871.wallet",
+        "ownerAddress": null,
+        "resolver": null,
+        "resolution": {},
+        "blockchain": "MATIC",
+        "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
+        "networkId": 80001,
+        "freeToClaim": true,
+        "node": "0xbf153dc812a038ec41a8f332e20e2b927da06e035592857308745febac1fe855"
+      },
+      "mintingTransaction": {
+        "id": 45081,
+        "type": "MaticTx",
+        "operation": "MintDomain",
+        "statusGroup": "Pending",
+        "hash": null,
+        "blockchain": "MATIC",
+        "blockExplorerUrl": null
+      }
+    }
+  ]
 }
 ```
 
@@ -194,7 +194,7 @@ Clicking the `View Dashboard` button displays the main tab of the payouts screen
 
 <figure>
 
-![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png '#width=80%;')
+![Main/default view of Stripe Payouts (i.e., payouts tab) ](/images/24.png "#width=80%;")
 
 <figcaption>Main/default view of Stripe Payouts (i.e., payouts tab) </figcaption>
 </figure>
@@ -205,7 +205,7 @@ Click the `Account` tab to view Stripe account information or update your Stripe
 
 <figure>
 
-![View of Stripe Account information (i.e., account tab)](/images/25.png '#width=80%;')
+![View of Stripe Account information (i.e., account tab)](/images/25.png "#width=80%;")
 
 <figcaption>View of Stripe Account information (i.e., account tab)</figcaption>
 </figure>

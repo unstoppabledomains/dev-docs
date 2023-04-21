@@ -1,6 +1,8 @@
 ---
 title: Best Practices for Integrating Partner API | Unstoppable Domains Developer Portal
 description: This page covers best practices to follow while integrating the Partner API.
+redirectFrom:
+  - /partner/reference/best-practices/
 ---
 
 # Best Practices for Integrating Partner API

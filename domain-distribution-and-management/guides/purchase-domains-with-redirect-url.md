@@ -1,6 +1,9 @@
 ---
 title: Redirect URL Payments Guide | Unstoppable Domains Developer Portal
 description: This guide covers configuring the Partner account to mint paid domains using the redirect URL payment processing flow.
+redirectFrom:
+  - /partner/partner-integration-guides/redirect-url-payments/
+	- /partner/partner-integration-guides/redirect-url-payments-with-records/
 ---
 
 # Redirect URL Payments
@@ -21,10 +24,10 @@ Unstoppable Domains provides the [Get Domains Suggestions](../quickstart/search-
 
 The Unstoppable Domains website accepts the `ref` and `searchTerm` fields as query parameters for processing Redirect URL payments. After preparing your parameter values, construct the payment URL and redirect the user to it in their browser:
 
-| Name | Type | Mandatory | Description |
-| - | - | - | - |
-| ref | STRING | YES | The Partner's referral code for tracking traffic |
-| searchTerm | STRING | NO | The domain name the user wants to purchase |
+| Name       | Type   | Mandatory | Description                                      |
+| ---------- | ------ | --------- | ------------------------------------------------ |
+| ref        | STRING | YES       | The Partner's referral code for tracking traffic |
+| searchTerm | STRING | NO        | The domain name the user wants to purchase       |
 
 Sandbox Environment:
 
@@ -89,12 +92,12 @@ https://unstoppabledomains.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_
 
 The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill resolution records after minting using a payment URL:
 
-| Name | Type | Mandatory | Description |
-| - | - | - | - |
-| timestamp | NUMBER | YES | The epoch timestamp in milliseconds when the payment URL is created |
-| strictName | STRING | YES | The Partner's `resellerID` [gotten from their Partner account](../quickstart/retrieve-an-api-key.md#step-1-locate-your-reseller-id) |
-| records | OBJECT | YES | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported key values |
-| signature | STRING | YES | A HMAC-SHA256 hash of the query parameters for the order security |
+| Name       | Type   | Mandatory | Description                                                                                                                                                                                      |
+| ---------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| timestamp  | NUMBER | YES       | The epoch timestamp in milliseconds when the payment URL is created                                                                                                                              |
+| strictName | STRING | YES       | The Partner's `resellerID` [gotten from their Partner account](../quickstart/retrieve-an-api-key.md#step-1-locate-your-reseller-id)                                                              |
+| records    | OBJECT | YES       | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported key values |
+| signature  | STRING | YES       | A HMAC-SHA256 hash of the query parameters for the order security                                                                                                                                |
 
 :::info
 There is an 8 hours window from when you generate the payment URL with the given timestamp before UD considers it invalid.
@@ -108,9 +111,7 @@ The message object to sign is:
 
 ```javascript
 {
-	records,
-	strictName,
-	timestamp
+  records, strictName, timestamp;
 }
 ```
 
@@ -120,14 +121,14 @@ The code snippet below shows how to generate the `signature` parameter:
 
 ```javascript
 // built-in node crypto lib
-const crypto = require('crypto');
+const crypto = require("crypto");
 // third-party lib to sort objects
-const sortObject = require('deep-sort-object');
+const sortObject = require("deep-sort-object");
 
 // end-user records can include crypto records, ipfs hashes, etc
 const records = {
-    "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
-    "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
+  "crypto.ETH.address": "0xfa4E1b1095164BcDCA057671E1867369E5F51B92",
+  "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
 };
 // reseller id
 const strictName = "testReseller";
@@ -137,12 +138,15 @@ const timestamp = new Date().getTime();
 // form the message to sign
 // note that the object has to be sorted for consistency; we use deep-sort-object to verify signatures
 // you can use a different approach to sort records, but using the same library to sort ensures that the signatures will match
-const message = JSON.stringify(sortObject({records, strictName, timestamp}));
+const message = JSON.stringify(sortObject({ records, strictName, timestamp }));
 
 // The Secret API Token provided by UD in your Partner account
 const signatureKey = "someKey";
 // create the hmac-sha256 digest
-const signature = crypto.createHmac('sha256', signatureKey).update(message).digest('hex');
+const signature = crypto
+  .createHmac("sha256", signatureKey)
+  .update(message)
+  .digest("hex");
 // this is added to the signature parameter in the redirect URL to pass resolution records to UD
 console.log(signature);
 ```
@@ -183,15 +187,15 @@ You can use Unstoppable Domains [Sandbox Environment](../quickstart/retrieve-an-
 
 Here is an example payment URL with the following parameters:
 
-| Parameter | Value |
-| - | - |
-| Partner Referral Code | unstoppable |
-| Domain Name | buyadomain.crypto |
-| Order Timestamp | 1641586875148 |
-| Partner Reseller ID | testReseller |
+| Parameter                 | Value                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Partner Referral Code     | unstoppable                                                                                                                             |
+| Domain Name               | buyadomain.crypto                                                                                                                       |
+| Order Timestamp           | 1641586875148                                                                                                                           |
+| Partner Reseller ID       | testReseller                                                                                                                            |
 | Predefined Domain Records | `{"crypto.ETH.address":"0xfa4E1b1095164BcDCA057671E1867369E5F51B92","crypto.BTC.address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"}` |
-| Signature Key | someKey |
-| Order Signature | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4 |
+| Signature Key             | someKey                                                                                                                                 |
+| Order Signature           | 064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4                                                                        |
 
 ```bash
 https://ud-sandbox.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&timestamp=1641586875148&strictName=testReseller&records=%7B%22crypto.ETH.address%22%3A%220xfa4E1b1095164BcDCA057671E1867369E5F51B92%22%2C%22crypto.BTC.address%22%3A%22bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh%22%7D&signature=064436d88c9563e6e948fe9576f2a8c0c88317c045628eac5b8f74aea68eeee4

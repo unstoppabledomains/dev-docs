@@ -1,6 +1,9 @@
 ---
 title: Claim or Reserve Free Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to mint or reserve free domains with your Partner account.
+redirectFrom:
+  - /partner/partner-integration-guides/mint-free-domains/
+  - /partner/partner-integration-guides/reserve-free-domain-name/
 ---
 
 # Claim Free Domains
@@ -11,7 +14,7 @@ The diagram below illustrates the general process between a Partner and Unstoppa
 
 <figure>
 
-![Success flow for minting free domains with UD](/images/free-domain-minting-success-flow.png '#width=80%;')
+![Success flow for minting free domains with UD](/images/free-domain-minting-success-flow.png "#width=80%;")
 
 <figcaption>Success flow for minting free domains with UD</figcaption>
 </figure>
@@ -30,7 +33,7 @@ The table below shows how the pricing tiers are structured at Unstoppable Domain
 
 <figure>
 
-![Pricing tiers for UD domains](/images/domain-pricing-tiers.png '#width=80%;')
+![Pricing tiers for UD domains](/images/domain-pricing-tiers.png "#width=80%;")
 
 <figcaption>Pricing tiers for UD domains</figcaption>
 </figure>
@@ -71,7 +74,7 @@ Here's a sample response from the [Get Fingerprint Public Key](https://docs.unst
 
 ```json
 {
-    "key": "qwerty12345"
+  "key": "qwerty12345"
 }
 ```
 
@@ -99,10 +102,12 @@ Here's a sample code snippet:
 
 ```javascript
 // Initialize the agent at application startup.
-const fpPromise = import('https://fpcdn.io/v3/{FINGERPRINT_API_KEY}')
-  .then(FingerprintJS => FingerprintJS.load({
-    endpoint: 'https://fp.unstoppabledomains.com'
-  }));
+const fpPromise = import("https://fpcdn.io/v3/{FINGERPRINT_API_KEY}").then(
+  (FingerprintJS) =>
+    FingerprintJS.load({
+      endpoint: "https://fp.unstoppabledomains.com",
+    })
+);
 ```
 
 ### Tag Your Fingerprint Request
@@ -112,8 +117,8 @@ Unstoppable Domains requires you to [tag your requests](https://dev.fingerprint.
 ```javascript
 // Get the visitor identifier when you need it.
 fpPromise
-  .then(fp => fp.get({linkedId: '{PARTNER_RESELLERID}'}))
-  .then(result => console.log(result.visitorId));
+  .then((fp) => fp.get({ linkedId: "{PARTNER_RESELLERID}" }))
+  .then((result) => console.log(result.visitorId));
 ```
 
 The code snippet below shows how to completely integrate Fingerprint verification into your free domain flow:
@@ -141,15 +146,15 @@ Here's a sample response from the Fingerprint integration:
 
 ```json
 {
-    "requestId": "1669648408882.1kcr2m",
-    "confidence": {
-        "score": 0.999170944804056
-    },
-    "meta": {
-        "version": "v1.1.971+673281e1"
-    },
-    "visitorFound": true,
-    "visitorId": "qwerty12345"
+  "requestId": "1669648408882.1kcr2m",
+  "confidence": {
+    "score": 0.999170944804056
+  },
+  "meta": {
+    "version": "v1.1.971+673281e1"
+  },
+  "visitorFound": true,
+  "visitorId": "qwerty12345"
 }
 ```
 
@@ -185,18 +190,18 @@ When making an order, the body must contain information about your domain order 
 }
 ```
 
-* `payment`: A key-value dictionary with payment information about the order:
-    * `method`: (string) The payment method the API should create. The value should be `"free"` for free domains.
-* `security`: (array) An array with information about the order security:
-    * `type`: The order security method. The value should be `"fingerprintjs"` for Fingerprint verification.
-    * `identifier`: The Fingerprint Visitor ID of the user minting the domain.
-* `domains`: (array) An array with information about the domains you want to purchase:
-    * `name`: The domain name you want to purchase. This parameter is required.
-    * `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
-    * `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is required.
-    * `phone`: The phone number of the user minting the free domain. This parameter is optional.
-    * `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
-    * `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
+- `payment`: A key-value dictionary with payment information about the order:
+  - `method`: (string) The payment method the API should create. The value should be `"free"` for free domains.
+- `security`: (array) An array with information about the order security:
+  - `type`: The order security method. The value should be `"fingerprintjs"` for Fingerprint verification.
+  - `identifier`: The Fingerprint Visitor ID of the user minting the domain.
+- `domains`: (array) An array with information about the domains you want to purchase:
+  - `name`: The domain name you want to purchase. This parameter is required.
+  - `ownerAddress`: The wallet address the domain should be minted to. This parameter is required.
+  - `email`: The email address the domain should be linked to after purchase. The user can mint the domain from their UD dashboard later. This parameter is required.
+  - `phone`: The phone number of the user minting the free domain. This parameter is optional.
+  - `resolution`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values. This parameter is optional.
+  - `resellerIdentityKey`: The domain reservation ID. This parameter is required if you reserved the domain before minting.
 
 :::info
 You need to provide either the `email` or `phone` parameter in every order request. You can also provide both parameters in your request.
@@ -214,13 +219,13 @@ You need to provide either the `email` or `phone` parameter in every order reque
 
 Here is an example request to mint a free domain with the following details:
 
-| Field Name | Value |
-| - | - |
-| Security Type | Fingerprint |
-| Fingerprint Visitor ID | qwerty12345 |
-| Domain Name | partner-test-67687986466875.wallet |
-| Customer Wallet Address | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589 |
-| Customer Email | sandbox-test@unstoppabledomains.com |
+| Field Name                | Value                                                                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Security Type             | Fingerprint                                                                                                                              |
+| Fingerprint Visitor ID    | qwerty12345                                                                                                                              |
+| Domain Name               | partner-test-67687986466875.wallet                                                                                                       |
+| Customer Wallet Address   | 0x6EC0DEeD30605Bcd19342f3c30201DB263291589                                                                                               |
+| Customer Email            | sandbox-test@unstoppabledomains.com                                                                                                      |
 | Predefined Domain Records | {"crypto.ETH.address": "0x6EC0DEeD30605Bcd19342f3c30201DB263291589", "crypto.BTC.address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"} |
 
 ```bash Request
@@ -253,36 +258,36 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 
 ```json Response
 {
-    "orderNumber": "78023",
-    "total": 0,
-    "payment": {
-        "method": "free"
-    },
-    "items": [
-        {
-            "domain": {
-                "id": 966210,
-                "name": "partner-test-67687986466875.wallet",
-                "ownerAddress": null,
-                "resolver": null,
-                "resolution": {},
-                "blockchain": "MATIC",
-                "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
-                "networkId": 80001,
-                "freeToClaim": true,
-                "node": "0xeb55b00b50af99d760b002c6d855532658c332d059dcd69eb167fec5ec97d0fa"
-            },
-            "mintingTransaction": {
-                "id": 44958,
-                "type": "MaticTx",
-                "operation": "MintDomain",
-                "statusGroup": "Pending",
-                "hash": null,
-                "blockchain": "MATIC",
-                "blockExplorerUrl": null
-            }
-        }
-    ]
+  "orderNumber": "78023",
+  "total": 0,
+  "payment": {
+    "method": "free"
+  },
+  "items": [
+    {
+      "domain": {
+        "id": 966210,
+        "name": "partner-test-67687986466875.wallet",
+        "ownerAddress": null,
+        "resolver": null,
+        "resolution": {},
+        "blockchain": "MATIC",
+        "registryAddress": "0x2a93c52e7b6e7054870758e15a1446e769edfb93",
+        "networkId": 80001,
+        "freeToClaim": true,
+        "node": "0xeb55b00b50af99d760b002c6d855532658c332d059dcd69eb167fec5ec97d0fa"
+      },
+      "mintingTransaction": {
+        "id": 44958,
+        "type": "MaticTx",
+        "operation": "MintDomain",
+        "statusGroup": "Pending",
+        "hash": null,
+        "blockchain": "MATIC",
+        "blockExplorerUrl": null
+      }
+    }
+  ]
 }
 ```
 
@@ -294,13 +299,13 @@ You have successfully minted a free domain with the Partner API.
 
 The following considerations apply to minting free domains:
 
-* The Reseller ID will be allowed to provide specified domain endings for free.
-* If the Reseller ID doesn't have an allowance to provide free domains, then they will not be permitted to mint free domains.
-* The domain is available for sale (e.g., it's not restricted, protected, trademarked, claimed, etc.)
-* The domain does not have a custom price set.
-* It has 8+ characters, at least one letter, and one number.
-* If a wallet or email already has a free domain, then a second free domain is not permitted.
-* The Fingerprint Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
+- The Reseller ID will be allowed to provide specified domain endings for free.
+- If the Reseller ID doesn't have an allowance to provide free domains, then they will not be permitted to mint free domains.
+- The domain is available for sale (e.g., it's not restricted, protected, trademarked, claimed, etc.)
+- The domain does not have a custom price set.
+- It has 8+ characters, at least one letter, and one number.
+- If a wallet or email already has a free domain, then a second free domain is not permitted.
+- The Fingerprint Visitor ID provided must be generated within the past 30 seconds and have a confidence score of at least 90%.
 
 # Reserve Free Domain Name
 
@@ -350,10 +355,10 @@ The `PARTNER_RESELLERID` path parameter is the same one you retrieved from your 
 
 Here is an example request to reserve a domain name with the following parameters:
 
-| Parameter | Value |
-| - | - |
-| Domain Name | partner-test-67687986466871.crypto |
-| Reservation ID | test-reservation-id |
+| Parameter      | Value                              |
+| -------------- | ---------------------------------- |
+| Domain Name    | partner-test-67687986466871.crypto |
+| Reservation ID | test-reservation-id                |
 
 ```bash
 curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/partner-test-67687986466871.crypto/reserve/' \

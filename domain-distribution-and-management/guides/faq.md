@@ -1,6 +1,8 @@
 ---
 title: Partner Feature FAQs | Unstoppable Domains Developer Portal
 description: Frequently asked questions about the Partner API of Unstoppable Domains.
+redirectFrom:
+  - /partner/reference/faq/
 ---
 
 # Partner API FAQ
@@ -19,11 +21,11 @@ An account manager from the BD team establishes the terms and conditions (T&Cs) 
 
 The domain is considered free when:
 
-* It has a TLD that is listed in the "allowed free TLDs" list for this specific partner.
-* It matches one of the tiers listed in "allowed free tiers" for the partner.
-* The domain is available for sale (e.g., it's not restricted, protected, trademarked, claimed, etc.)
-* It does not have a custom price set.
-* It has 8+ characters, at least one letter, and one number.
+- It has a TLD that is listed in the "allowed free TLDs" list for this specific partner.
+- It matches one of the tiers listed in "allowed free tiers" for the partner.
+- The domain is available for sale (e.g., it's not restricted, protected, trademarked, claimed, etc.)
+- It does not have a custom price set.
+- It has 8+ characters, at least one letter, and one number.
 
 ### Do you limit one domain per wallet to help with anti-fraud?
 

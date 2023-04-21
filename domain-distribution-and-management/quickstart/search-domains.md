@@ -1,6 +1,8 @@
 ---
 title: Search Domains | Unstoppable Domains Developer Portal
 description: This guide shows how to get suggestions of available free and paid domains to purchase with your Partner account.
+redirectFrom:
+  - /partner/partner-integration-guides/get-domains-suggestions/
 ---
 
 # Search Domains
@@ -9,7 +11,7 @@ The Partner API offers an endpoint that provides free and paid domain suggestion
 
 <figure>
 
-![Domain suggestions field example](/images/domain-suggestions-field.png '#width=70%;')
+![Domain suggestions field example](/images/domain-suggestions-field.png "#width=70%;")
 
 <figcaption>Domain suggestions field example</figcaption>
 </figure>
@@ -22,10 +24,10 @@ The Partner API offers an endpoint that provides free and paid domain suggestion
 
 The Partner API suggestions endpoints accepts the `search` and `tlds` fields as query parameters to build domain name suggestions:
 
-| Name | Type | Mandatory | Description |
-| - | - | - | - |
-| search | ARRAY[STRING] | NO | Keywords that will be used to build domain suggestions. It can be domain name(s) with or without TLD |
-| tlds | ARRAY[STRING] | NO | Specific TLDs the suggestions should be limited to |
+| Name   | Type          | Mandatory | Description                                                                                          |
+| ------ | ------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| search | ARRAY[STRING] | NO        | Keywords that will be used to build domain suggestions. It can be domain name(s) with or without TLD |
+| tlds   | ARRAY[STRING] | NO        | Specific TLDs the suggestions should be limited to                                                   |
 
 :::info
 If your request must include multiple `search` or `tlds` fields, you need to use a new `search` or `tlds` query param instance for each keyword and TLD filter.
@@ -77,10 +79,10 @@ If the Partner isn't eligible to mint free domains, the [Get Free Domains Sugges
 
 Here is an example request to generate paid domain suggestions with the following parameters:
 
-| Parameter | Value |
-| - | - |
-| Keywords | buyadomain.dao, hosting, doctor |
-| TLD Filter | dao, nft |
+| Parameter  | Value                           |
+| ---------- | ------------------------------- |
+| Keywords   | buyadomain.dao, hosting, doctor |
+| TLD Filter | dao, nft                        |
 
 ```bash Request
 curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PARTNER_RESELLERID}/domains/suggestions?search=buyadomain.dao&search=hosting&search=doctor&tlds=dao&tlds=wallet' \
@@ -90,24 +92,24 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 ```json Response
 [
   {
-      "name": "buyadomain.dao",
-      "price": 20
+    "name": "buyadomain.dao",
+    "price": 20
   },
   {
-      "name": "buyadomainag.wallet",
-      "price": 20
+    "name": "buyadomainag.wallet",
+    "price": 20
   },
   {
-      "name": "prhosting.dao",
-      "price": 20
+    "name": "prhosting.dao",
+    "price": 20
   },
   {
-      "name": "hostingdb.dao",
-      "price": 20
+    "name": "hostingdb.dao",
+    "price": 20
   },
   {
-      "name": "brdoctor.wallet",
-      "price": 20
+    "name": "brdoctor.wallet",
+    "price": 20
   }
 ]
 ```
