@@ -3,7 +3,7 @@ title: Redirect URL Payments Guide | Unstoppable Domains Developer Portal
 description: This guide covers configuring the Partner account to mint paid domains using the redirect URL payment processing flow.
 redirectFrom:
   - /partner/partner-integration-guides/redirect-url-payments/
-	- /partner/partner-integration-guides/redirect-url-payments-with-records/
+  - /partner/partner-integration-guides/redirect-url-payments-with-records/
 ---
 
 # Redirect URL Payments
