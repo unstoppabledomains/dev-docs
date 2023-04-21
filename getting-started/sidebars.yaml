@@ -20,12 +20,12 @@ pages:
   - group: Domain Registry Essentials
     expanded: false
     pages:
-      - label: CNS Architecture Overview
-        page: domain-registry-essentials/cns-architecture-overview.md
       - label: UNS Architecture Overview
-        page: domain-registry-essentials/uns-architecture-overview.md
+        page: ../smart-contracts/overview/uns-architecture-overview.md
+      - label: CNS Architecture Overview
+        page: ../smart-contracts/overview/cns-architecture-overview.md
       - label: CNS vs UNS Comparison
-        page: domain-registry-essentials/cns-uns-comparison.md
+        page: ../smart-contracts/overview/cns-uns-comparison.md
       - label: Namehashing
         page: domain-registry-essentials/namehashing.md
     separatorLine: true
