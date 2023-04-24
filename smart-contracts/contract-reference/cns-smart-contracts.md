@@ -1,6 +1,8 @@
 ---
 title: CNS Smart Contract | Unstoppable Domains Developer Portal
 description: This page provides brief descriptions with links to source code and deployment addresses for the Crypto Name Service smart contracts.
+redirectFrom:
+  - /developer-toolkit/reference/smart-contracts/cns-smart-contracts/
 editPage:
   disable: true
 ---
@@ -42,7 +44,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
     </tr>
 </table>
 
-
 **Source code:** [contracts/Registry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol)
 
 ### Resolver
@@ -78,7 +79,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
             </td>
     </tr>
 </table>
-
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
@@ -120,7 +120,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
     </tr>
 </table>
 
-
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/ProxyReader.sol)
 
 ### SignatureController
@@ -143,7 +142,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
         <td><a href="https://goerli.etherscan.io/address/0x5199dAE4B24B987ba18FcE1b64664D1B798d372B">0x5199dAE4B24B987ba18FcE1b64664D1B798d372B</a></td>
     </tr>
 </table>
-
 
 **Source code:** [contracts/controllers/SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol)
 
@@ -168,7 +166,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
     </tr>
 </table>
 
-
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
 ### TwitterValidationOperator
@@ -191,7 +188,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
         <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
 </table>
-
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/operators/TwitterValidationOperator.sol)
 
@@ -220,7 +216,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
     </tr>
 </table>
 
-
 **Source code:** [contracts/controllers/MintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/MintingController.sol)
 
 ### URIPrefixController
@@ -243,7 +238,6 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
         <td><a href="https://goerli.etherscan.io/address/0x29465e3d2daA588E62375977bCe9b3f51406a794">0x29465e3d2daA588E62375977bCe9b3f51406a794</a></td>
     </tr>
 </table>
-
 
 **Source code:** [contracts/controllers/URIPrefixController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/URIPrefixController.sol)
 

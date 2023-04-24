@@ -3,7 +3,8 @@ title: Troubleshooting Guide for Login with Unstoppable | UD Developer Portal
 description: This page reviews frequently encountered problems when integrating the Login with Unstoppable feature. Potential solutions are included.
 showNextButton: false
 redirectFrom:
-    - /login-with-unstoppable/troubleshooting-guide/
+  - /login-with-unstoppable/troubleshooting-guide/
+  - /login-with-unstoppable/troubleshoot/troubleshooting-guide/
 ---
 
 # Troubleshooting Guide
@@ -31,7 +32,7 @@ If the login modal does not close after the signing request has been accepted, t
 
 <figure>
 
-![Login modal should close after signature request is confirmed](/images/login-modal-doesnt-close.png '#width=33%')
+![Login modal should close after signature request is confirmed](/images/login-modal-doesnt-close.png "#width=33%")
 
 <figcaption>Login modal should close after signature request is confirmed</figcaption>
 </figure>
@@ -60,7 +61,7 @@ If you get an error message to “Please unlock or install MetaMask,” it means
 
 <figure>
 
-![Error Message presented to user if MetaMask is not installed](/images/MetaMaskError-small.png '#width=50%')
+![Error Message presented to user if MetaMask is not installed](/images/MetaMaskError-small.png "#width=50%")
 
 <figcaption>Error Message presented to user if MetaMask is not installed</figcaption>
 </figure>

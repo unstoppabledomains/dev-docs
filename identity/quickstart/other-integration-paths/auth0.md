@@ -1,6 +1,8 @@
 ---
 title: Auth0 Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide will demonstrate how to configure the Unstoppable Domains social connection for Auth0.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/auth0-guide/
 showNextButton: false
 ---
 
@@ -10,7 +12,7 @@ The Unstoppable Domains social connection for Auth0 abstracts blockchain impleme
 
 <figure>
 
-![Auth0 with Unstoppable Domains](/images/login-selection-auth0.png '#width=40%')
+![Auth0 with Unstoppable Domains](/images/login-selection-auth0.png "#width=40%")
 
 <figcaption>Auth0 with Unstoppable Domains</figcaption>
 </figure>
@@ -42,9 +44,9 @@ Next you will need to add and configure the social connection. This will require
 3. Read the necessary access requirements and click **Continue**.
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
-:::warning
-The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/login-with-unstoppable/scopes-for-login.md#optional-scopes) for more information.
-:::
+   :::warning
+   The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/login-with-unstoppable/scopes-for-login.md#optional-scopes) for more information.
+   :::
 6. Turn on or off syncing user profile attributes at each login
 7. Click **Create**
 8. Select the **Applications** tab and choose the apps that should use the Unstoppable Domains social connection
@@ -71,19 +73,19 @@ Adding a custom claim requires a few one-time steps in your Auth0 tenant. The pr
  */
 
 exports.onExecutePostLogin = async (event, api) => {
-    const { strategy, name: connection } = event.connection;
-    const { configuration, secrets } = event;
+  const { strategy, name: connection } = event.connection;
+  const { configuration, secrets } = event;
 
-    if (strategy !== "oauth2" || connection !== "unstoppable-domains") {
-        //This action only works for the unstoppable domains connection
-        return;
-    }
+  if (strategy !== "oauth2" || connection !== "unstoppable-domains") {
+    //This action only works for the unstoppable domains connection
+    return;
+  }
 
-    const claim = "https://unstoppabledomains.com/wallet_address";
-    const value = event.user.app_metadata.wallet_address;
+  const claim = "https://unstoppabledomains.com/wallet_address";
+  const value = event.user.app_metadata.wallet_address;
 
-    api.idToken.setCustomClaim(claim, value);
-    api.accessToken.setCustomClaim(claim, value);
+  api.idToken.setCustomClaim(claim, value);
+  api.accessToken.setCustomClaim(claim, value);
 };
 ```
 
@@ -96,6 +98,7 @@ exports.onExecutePostLogin = async (event, api) => {
 See the Auth0's example for how to [add custom claims to a token](https://auth0.com/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token) for detailed information about the process.
 
 ## Step 5: Login With Unstoppable
+
 In the left navigation menu, you can expand the **Authentication** section, select **Authentication Profile**, and click **Try** to preview your new Auth0 login flow with Unstoppable Domains.
 
 Once your app is using the Unstoppable Domains social connection, Auth0 will be able to return user metadata to your app.As an example, consider the following user created by Auth0 using the Unstoppable Domains social connection:
@@ -104,40 +107,40 @@ Once your app is using the Unstoppable Domains social connection, Auth0 will be 
 
 ```json
 {
-   "app_metadata": {
-       "wallet_address": "0xcAa2904218F62455EE24b5D56E43eAbE0a832672",
-       "chain_id": 1
-   },
+  "app_metadata": {
+    "wallet_address": "0xcAa2904218F62455EE24b5D56E43eAbE0a832672",
+    "chain_id": 1
+  },
 
-   "created_at": "2022-08-25T20:33:06.469Z",
-   "email": "mydomain.x@ud.me",
-   "email_verified": true,
-   "identities": [
-       {
-           "provider": "oauth2",
-           "user_id": "unstoppable-domains|mydomain.x",
-           "connection": "unstoppable-domains",
-           "isSocial": true
-       }
-   ],
-   "name": "John Doe",
-   "nickname": "mydomain.x",
-   "picture": "https://storage.googleapis.com/unstoppable-client-assets/images/user/5919054/3cd1b52b-686d-416d-9444-374581d38184.jpeg",
-   "updated_at": "2022-09-13T12:55:30.500Z",
-   "user_id": "oauth2|unstoppable-domains|mydomain.x",
-   "user_metadata": {
-       "social": {
-           "twitter": "@handle"
-       },
+  "created_at": "2022-08-25T20:33:06.469Z",
+  "email": "mydomain.x@ud.me",
+  "email_verified": true,
+  "identities": [
+    {
+      "provider": "oauth2",
+      "user_id": "unstoppable-domains|mydomain.x",
+      "connection": "unstoppable-domains",
+      "isSocial": true
+    }
+  ],
+  "name": "John Doe",
+  "nickname": "mydomain.x",
+  "picture": "https://storage.googleapis.com/unstoppable-client-assets/images/user/5919054/3cd1b52b-686d-416d-9444-374581d38184.jpeg",
+  "updated_at": "2022-09-13T12:55:30.500Z",
+  "user_id": "oauth2|unstoppable-domains|mydomain.x",
+  "user_metadata": {
+    "social": {
+      "twitter": "@handle"
+    },
 
-       "location": "Somewhere, World",
-       "profileURL": "https://ud.me/mydomain.x"
-   },
-   "last_ip": "71.69.169.160",
-   "last_login": "2022-09-13T12:55:30.500Z",
-   "logins_count": 12,
-   "blocked_for": [],
-   "guardian_authenticators": []
+    "location": "Somewhere, World",
+    "profileURL": "https://ud.me/mydomain.x"
+  },
+  "last_ip": "71.69.169.160",
+  "last_login": "2022-09-13T12:55:30.500Z",
+  "logins_count": 12,
+  "blocked_for": [],
+  "guardian_authenticators": []
 }
 ```
 

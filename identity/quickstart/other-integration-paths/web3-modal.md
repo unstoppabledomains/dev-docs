@@ -1,6 +1,8 @@
 ---
 title: Web3 Modal Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/web3-modal-guide/
 showNextButton: false
 ---
 
@@ -10,7 +12,7 @@ This is the basic installation guide for the `web3modal` library and is best use
 
 <figure>
 
-![Web3 Modal with Unstoppable Domains](/images/login-selection-web3modal.png '#width=70%')
+![Web3 Modal with Unstoppable Domains](/images/login-selection-web3modal.png "#width=70%")
 
 <figcaption>Web3 Modal with Unstoppable Domains</figcaption>
 </figure>
@@ -32,19 +34,19 @@ npm install --save web3modal @uauth/web3modal @uauth/js @walletconnect/web3-prov
 Next, configure the `web3modal` library:
 
 ```typescript
-import * as UAuthWeb3Modal from '@uauth/web3modal'
-import UAuthSPA from '@uauth/js'
-import WalletConnectProvider from '@walletconnect/web3-provider'
-import Web3Modal from 'web3modal'
+import * as UAuthWeb3Modal from "@uauth/web3modal";
+import UAuthSPA from "@uauth/js";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3Modal from "web3modal";
 
 // These options are used to construct the UAuthSPA instance.
 export const uauthOptions: IUAuthOptions = {
-  clientID: 'uauth_client_id',
-  redirectUri: 'http://localhost:3000',
+  clientID: "uauth_client_id",
+  redirectUri: "http://localhost:3000",
 
   // Must include both the openid and wallet scopes.
-  scope: 'openid wallet',
-}
+  scope: "openid wallet",
+};
 
 const providerOptions = {
   // Currently the package isn't inside the web3modal library. For now,
@@ -52,7 +54,7 @@ const providerOptions = {
 
   // All custom `web3modal` providers must be registered using the "custom-"
   // prefix.
-  'custom-uauth': {
+  "custom-uauth": {
     // The UI Assets
     display: UAuthWeb3Modal.display,
 
@@ -70,19 +72,19 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider,
     options: {
-      infuraId: 'INFURA_ID',
+      infuraId: "INFURA_ID",
     },
   },
 
   // Include any other web3modal providers here
-}
+};
 
-const web3modal = new Web3Modal({providerOptions})
+const web3modal = new Web3Modal({ providerOptions });
 
 // Register the web3modal so the connector has access to it.
-UAuthWeb3Modal.registerWeb3Modal(web3modal)
+UAuthWeb3Modal.registerWeb3Modal(web3modal);
 
-export default web3modal
+export default web3modal;
 ```
 
 :::info

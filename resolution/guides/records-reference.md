@@ -1,17 +1,19 @@
 ---
 title: Records Reference | Unstoppable Domains Developer Portal
 description: This page contains an overview of all standardized domain records. It covers crypto payments, social records, and browser resolution for DWeb and DNS.
+redirectFrom:
+  - /developer-toolkit/reference/records-reference/
 ---
 
 # Records Reference
 
 This reference page is divided into sections, grouping records by their namespaces and use-cases:
 
-* [Crypto payments](#cryptocurrency-payments)
-* [Browser resolution](#browser-resolution)
-  * [DWeb records](#dweb-records)
-  * [DNS records](#dns-records)
-* [Social records](#social-records)
+- [Crypto payments](#cryptocurrency-payments)
+- [Browser resolution](#browser-resolution)
+  - [DWeb records](#dweb-records)
+  - [DNS records](#dns-records)
+- [Social records](#social-records)
 
 Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](/smart-contracts/overview/cns-architecture-overview.md), [UNS Architecture](/smart-contracts/overview/uns-architecture-overview.md), and [Managing Domain Records](/smart-contracts/quick-start/manage-domain-records.md).
 
@@ -33,9 +35,9 @@ Ethereum address to receive cryptocurrency payments.
 
 Bitcoin address to receive cryptocurrency payments.
 
-| Format | Example |
-| - | - |
-| `bc1[ac-hj-np-z02-9]{6,87}$|^[13][a-km-zA-HJ-NP-Z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
+| Format                      | Example                           |
+| --------------------------- | --------------------------------- | ------------------------------------ |
+| `bc1[ac-hj-np-z02-9]{6,87}$ | ^[13][a-km-za-hj-np-z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
 
 **`crypto.<TICKER>.address`**
 
@@ -53,21 +55,21 @@ Some currencies exist on multiple chains.
 
 **`crypto.USDT.version.TRON.address`**
 
-| Format                                                                             | Example                              |
-| ---------------------------------------------------------------------------------- | ------------------------------------ |
+| Format            | Example                              |
+| ----------------- | ------------------------------------ |
 | `[a-zA-Z0-9]{34}` | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk` |
 
 **`crypto.USDT.version.EOS.address`**
 
-| Format                         | Example              |
-| ------------------------------ | -------------------- |
+| Format                       | Example              |
+| ---------------------------- | -------------------- |
 | `[a-z][a-z1-5.]{10}[a-z1-5]` | `unstoppabledomains` |
 
 **`crypto.USDT.version.OMNI.address`**
 
-| Format                                                                                                                                       | Example                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| `(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
+| Format | Example                        |
+| ------ | ------------------------------ | ------------------------------------ |
+| `(bc1  | [13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
 
 **`crypto.<TICKER>.version.<VERSION>.address`**
 
@@ -89,8 +91,8 @@ Protocols that browser should prioritize to display content for.
 
 A fallback URL, to which a user will be redirected if no other resolution method is supported.
 
-| Format                                          | Example                        |
-| ----------------------------------------------- | ------------------------------ |
+| Format                                                    | Example                        |
+| --------------------------------------------------------- | ------------------------------ |
 | [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
 
 ### DWeb records
@@ -187,8 +189,8 @@ Deprecated: use `dweb.ipfs.hash` instead.
 
 Deprecated: use `browser.redirect_url` instead.
 
-| Format                                          | Example                        |
-| ----------------------------------------------- | ------------------------------ |
+| Format                                                    | Example                        |
+| --------------------------------------------------------- | ------------------------------ |
 | [RFC-1738](https://datatracker.ietf.org/doc/html/rfc1738) | `http://example.com/home.html` |
 
 ## Social records
@@ -197,9 +199,9 @@ Deprecated: use `browser.redirect_url` instead.
 
 Stores data about the PFP of a Web3 domain (type of NFT, contract address, token ID).
 
-| Format                | Example           |
-| --------------------- | ----------------- |
-| None | `1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317` |
+| Format | Example                                                      |
+| ------ | ------------------------------------------------------------ |
+| None   | `1/erc1155:0xc7e5e9434f4a71e6db978bd65b4d61d3593e5f27/14317` |
 
 **`whois.email.value`**
 
@@ -213,16 +215,16 @@ Public email addresses of the domain owner.
 
 Indicates if a domain if available for sale.
 
-| Format           | Example |
-| ---------------- | ------- |
-| `(true)|(false)` | `true`  |
+| Format  | Example  |
+| ------- | -------- | ------ |
+| `(true) | (false)` | `true` |
 
 **`forwarding.url`**
 
 Off-chain source to implement records forwarding. For example, if you want to change your `crypto.ETH.address` every 10 seconds, you may set the `forwarding.url` record to `https://my-record-provider/records/bob` and make sure that URL returns a different `crypto.ETH.address` all the time.
 
-| Format           | Example |
-| ---------------- | ------- |
+| Format                             | Example                                  |
+| ---------------------------------- | ---------------------------------------- |
 | `^(https?)://[^\\s/$.?#].[^\\s]*$` | `https://my-record-provider/records/bob` |
 
 ### Deprecated records
@@ -239,8 +241,8 @@ Twitter username of the domain owner.
 
 A signature generated by some authority confirming the domain owner indeed possesses this Twitter username.
 
-| Format | Example      |
-| ------ | ------------ |
+| Format | Example                                                                                                                                |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | None   | `0x7623989b6437e52560b3b5ac13a6bbcb64ac4274d25daa877379d99d7c9ebcae51a845f7a9a18cd7465b5c12d7fefaf3655fe4bc4abed1aea1dc5e04f2f67bff1b` |
 
 **`gundb.username.value`**

@@ -3,7 +3,8 @@ title: Login Authentication Protocol | Unstoppable Domains Developer Portal
 description: This page describes the extension of the OpenID Connect protocol used by Login with Unstoppable to obtain a user's wallet signature.
 showNextButton: false
 redirectFrom:
-    - /login-with-unstoppable/high-level-overview/authentication-protocol/
+  - /login-with-unstoppable/high-level-overview/authentication-protocol/
+  - /login-with-unstoppable/login-protocols/authentication-protocol/
 ---
 
 # Authentication Protocol
@@ -46,7 +47,7 @@ The table below describes the primary ways that clients ask for tokens. The firs
 
 ## Authentication
 
-Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Login with Unstoppable uses the personal\_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
+Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Login with Unstoppable uses the personal_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
 
 :::info
 Clients and Resource Servers don’t need to know or care what Authentication method the Authorization Server uses.

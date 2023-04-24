@@ -2,7 +2,9 @@
 title: Login with Unstoppable Frequently Asked Questions
 description: Frequently asked questions about the Login with Unstoppable Web3 user authentication service.
 redirectFrom:
-    - /login-with-unstoppable/get-started-login/login-faq/
+  - /login-with-unstoppable/get-started-login/login-faq/
+  - /login-with-unstoppable/login-faq/
+  - /login-with-unstoppable/humanity-check-faq/
 ---
 
 # Login with Unstoppable Frequently Asked Questions
@@ -25,7 +27,7 @@ When a user visits an app and logs in with their domain:
 
 No, Login with Unstoppable is a free feature members get with the purchase/ownership of their Web3 domain. It is free to use and free for apps to integrate.
 
-[comment]: # (How is this different from Facebook Login or Google Login?)
+[comment]: # "How is this different from Facebook Login or Google Login?"
 
 ## How is this different from Login with Ethereum?
 
@@ -49,7 +51,7 @@ No, you can’t currently create an account from the app, so users will need to 
 
 See our official list of application integrations [here](https://unstoppabledomains.com/apps?filters=26).
 
-[comment]: # (Is UD doing a kyc/mlr service?)
+[comment]: # "Is UD doing a kyc/mlr service?"
 
 <!-- ---
 title: Humanity Check Frequently Asked Questions | UD Developer Portal
@@ -78,12 +80,12 @@ Yes.
 
 Persona is an identity verification industry leader and works with cryptocurrency exchanges such as BlockFi, Swan, Dacxi and TantraLabs, as well as companies such as Square and Postmates to help facilitate identity verification. Persona securely stores all photos of identity documents that you upload, photos of your face that you upload, and data from scans of facial geometry extracted from the photos of your face that you upload in an encrypted format on their servers.
 
-Persona will not sell, lease, trade, or, other than to provide the Verification to their partners.  Persona will not disclose, redisclose, or otherwise disseminate data from scans of facial geometry extracted from the photos of your face that you upload unless doing so:
+Persona will not sell, lease, trade, or, other than to provide the Verification to their partners. Persona will not disclose, redisclose, or otherwise disseminate data from scans of facial geometry extracted from the photos of your face that you upload unless doing so:
 
-* A. Completes a Customer transaction requested and authorized by you or your legally authorized representative;
-* B. Is required by state or federal law, or municipal ordinance;
-* C. Is required pursuant to a warrant or subpoena issued by a court of competent jurisdiction;
-* or D. Is expressly consented to by you.
+- A. Completes a Customer transaction requested and authorized by you or your legally authorized representative;
+- B. Is required by state or federal law, or municipal ordinance;
+- C. Is required pursuant to a warrant or subpoena issued by a court of competent jurisdiction;
+- or D. Is expressly consented to by you.
 
 Persona does not use, share, rent or sell the Personal Data of our Users’ Customers for interest-based advertising. We do not sell or rent the Personal Data of our Users, their Customers or our Site visitors.
 

@@ -1,6 +1,8 @@
 ---
 title: Unstoppable Resolution | Unstoppable Domains Developer Portal
 description: An overview of the resolution options available for developers integrating Unstoppable Web3 domains into their Web3 applications.
+redirectFrom:
+  - /developer-toolkit/
 ---
 
 # Unstoppable Resolution Overview

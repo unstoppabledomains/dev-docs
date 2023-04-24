@@ -1,11 +1,13 @@
 ---
 title: UAuth JS Library | Unstoppable Domains Developer Portal
 description: This page provides documents the public interface of the core @uauth/node library.
+redirectFrom:
+  - /login-with-unstoppable/libraries/uauth-node/
 ---
 
 # UAuth Node.js Library
 
-The `@uauth/node` library is the core UAuth library for server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. 
+The `@uauth/node` library is the core UAuth library for server-side applications. It does not come with a default front-end UI and requires custom front-end UI development.
 
 ## Client
 
@@ -23,7 +25,7 @@ constructor(options: ClientConstructorOptions)
 createExpressSessionLogin(
     sessionKey = 'uauth',
     localsKey = 'uauth',
-): ExpressSessionLogin 
+): ExpressSessionLogin
 ```
 
 ### validateAuthorization()
@@ -60,57 +62,56 @@ createLogin<T>(actions: {
 Here is an example using `express-sessions`.
 
 ```typescript
-const {login, callback, middleware} = client.createLogin<ExpressSessionContext>(
-  {
+const { login, callback, middleware } =
+  client.createLogin<ExpressSessionContext>({
     // Interaction CR*D operations
     storeInteraction: (ctx, interaction) => {
-      ctx.req.session.interaction = interaction
+      ctx.req.session.interaction = interaction;
     },
-    retrieveInteraction: ctx => ctx.req.session.interaction,
-    deleteInteraction: ctx => {
-      delete ctx.req.session.interaction
+    retrieveInteraction: (ctx) => ctx.req.session.interaction,
+    deleteInteraction: (ctx) => {
+      delete ctx.req.session.interaction;
     },
 
     // Authorization CR*D operations
     storeAuthorization: (ctx, authorization) => {
-      ctx.req.session.uauth = uauth
+      ctx.req.session.uauth = uauth;
     },
-    retrieveAuthorization: ctx => ctx.req.session.uauth,
-    deleteAuthorization: ctx => {
-      delete ctx.req.session.uauth
+    retrieveAuthorization: (ctx) => ctx.req.session.uauth,
+    deleteAuthorization: (ctx) => {
+      delete ctx.req.session.uauth;
     },
 
     // Takes the context and returns authorization response as an `Object`.
-    retrieveAuthorizationEndpointResponse: ctx => ctx.req.body,
+    retrieveAuthorizationEndpointResponse: (ctx) => ctx.req.body,
 
     // Attaches the authorization to context and calls next.
     passOnAuthorization: (ctx, authorization) => {
-      ctx.res.locals.uauth = authorization
-      return ctx.next()
+      ctx.res.locals.uauth = authorization;
+      return ctx.next();
     },
 
     // Redirects user to different url.
     redirect: (ctx, url) => {
-      ctx.res.redirect(url)
+      ctx.res.redirect(url);
     },
-  },
-)
+  });
 ```
 
 ## ClientOptions
 
 ```typescript
 interface ClientOptions {
-  clientID: string
-  clientSecret: string
-  scope: string
-  redirectUri: string
-  maxAge: number
-  clockSkew: number
-  audience?: string
-  resolution: DomainResolver
-  fallbackIssuer: string
-  createIpfsUrl: (cid: string, path: string) => string
+  clientID: string;
+  clientSecret: string;
+  scope: string;
+  redirectUri: string;
+  maxAge: number;
+  clockSkew: number;
+  audience?: string;
+  resolution: DomainResolver;
+  fallbackIssuer: string;
+  createIpfsUrl: (cid: string, path: string) => string;
 }
 ```
 
@@ -121,14 +122,15 @@ The configuration options object passed to the `@uauth/node` Client [constructor
 ```typescript
 type ClientConstructorOptions = Optional<
   ClientOptions,
-  'fallbackIssuer' | 'scope' | 'maxAge' | 'clockSkew' | 'createIpfsUrl'
->
+  "fallbackIssuer" | "scope" | "maxAge" | "clockSkew" | "createIpfsUrl"
+>;
 ```
 
 ## BuildAuthorizationUrlAndInteractionOptions
+
 ```typescript
 interface BuildAuthorizationUrlAndInteractionOptions {
-  username?: string
+  username?: string;
 }
 ```
 
@@ -136,12 +138,12 @@ interface BuildAuthorizationUrlAndInteractionOptions {
 
 ```typescript
 interface Interaction {
-  state: string
-  nonce: string
-  verifier: string
-  tokenEndpoint: string
-  jwksUri?: string
-  jwks?: string
+  state: string;
+  nonce: string;
+  verifier: string;
+  tokenEndpoint: string;
+  jwksUri?: string;
+  jwks?: string;
 }
 ```
 
@@ -151,7 +153,7 @@ The options object passed to the login function returned by [createLogin](#creat
 
 ```typescript
 interface LoginOptions extends BuildAuthorizationUrlAndInteractionOptions {
-  beforeRedirect?(options: LoginOptions, url: string): Promise<void> | void
+  beforeRedirect?(options: LoginOptions, url: string): Promise<void> | void;
 }
 ```
 
@@ -159,9 +161,9 @@ interface LoginOptions extends BuildAuthorizationUrlAndInteractionOptions {
 
 ```typescript
 interface ExpressSessionContext {
-  req: Request
-  res: Response
-  next: NextFunction
+  req: Request;
+  res: Response;
+  next: NextFunction;
 }
 ```
 
@@ -173,15 +175,15 @@ interface ExpressSessionLogin {
     req: Request,
     res: Response,
     next: NextFunction,
-    options: LoginOptions,
-  ) => Promise<void>
+    options: LoginOptions
+  ) => Promise<void>;
   callback: (
     req: Request,
     res: Response,
-    next: NextFunction,
-  ) => Promise<Authorization>
+    next: NextFunction
+  ) => Promise<Authorization>;
   middleware: (
-    scopes?: string[],
-  ) => (req: Request, res: Response, next: NextFunction) => void
+    scopes?: string[]
+  ) => (req: Request, res: Response, next: NextFunction) => void;
 }
 ```

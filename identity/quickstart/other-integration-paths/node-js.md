@@ -1,6 +1,8 @@
 ---
 title: Node.js Server Guide for Login with Unstoppable | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/node integration for server-side applications and does not come with a default front-end UI.
+redirectFrom:
+  - /login-with-unstoppable/login-integration-guides/node-js-server-guide/
 showNextButton: false
 ---
 
@@ -111,42 +113,42 @@ Because there are a variety of ways to store session data about a user, the pack
 The following is an example of using the pre-configured `express-session` to implement login.
 
 ```javascript
-import session from 'express-session'
-import express from 'express'
-import 'express-async-errors'
-import morgan from 'morgan'
+import session from "express-session";
+import express from "express";
+import "express-async-errors";
+import morgan from "morgan";
 
-const app = express()
+const app = express();
 
-app.use(morgan('dev'))
+app.use(morgan("dev"));
 
 // Required for express session middleware
-app.use(session({secret: 'keyboard cat'}))
+app.use(session({ secret: "keyboard cat" }));
 
 // Required for /login & /callback
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }));
 
-const {login, callback, middleware} = client.createExpressSessionLogin()
+const { login, callback, middleware } = client.createExpressSessionLogin();
 
-app.post('/login', (req, res, next) => {
+app.post("/login", (req, res, next) => {
   return login(req, res, next, {
     username: req.body.domain,
-  })
-})
+  });
+});
 
-app.post('/callback', async (req, res, next) => {
-  console.log('Calling back!')
+app.post("/callback", async (req, res, next) => {
+  console.log("Calling back!");
 
-  await callback(req, res, next)
+  await callback(req, res, next);
 
-  return res.redirect('/profile')
-})
+  return res.redirect("/profile");
+});
 
-const onlyAuthorized = middleware()
+const onlyAuthorized = middleware();
 
-app.get('/profile', onlyAuthorized, (req, res) => {
-  res.json(res.locals.uauth)
-})
+app.get("/profile", onlyAuthorized, (req, res) => {
+  res.json(res.locals.uauth);
+});
 ```
 
 Developers can also create their own login system using a different session system from `express-session` using the [login() method](#the-login-method).
@@ -156,21 +158,20 @@ Developers can also create their own login system using a different session syst
 The form must call the endpoint where the [`login` handler](node-js-server-guide.md#the-login-method) is called and it must correspond with the parameters to that function.
 
 ```javascript
-app.get('/', (_, res) => {
-  const indexPage =
-  `<!DOCTYPE html><html><body>
+app.get("/", (_, res) => {
+  const indexPage = `<!DOCTYPE html><html><body>
     <form action="/login" method="POST">
       <input name="domain" id="domain" />
     <button type="submit">Login</button>
     </form>
-  </body></html>`
+  </body></html>`;
 
-  return res.send(indexPage)
-})
+  return res.send(indexPage);
+});
 
 app.listen(process.env.PORT, () => {
-  console.log(`Listening at http://localhost:${process.env.PORT}`)
-})
+  console.log(`Listening at http://localhost:${process.env.PORT}`);
+});
 ```
 
 :::success Congratulations!

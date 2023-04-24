@@ -1,6 +1,10 @@
 ---
 title: Set up Partner API Access Guide | Unstoppable Domains Developer Portal
 description: This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
+redirectFrom:
+  - /partner/
+  - /partner/set-up-sandbox-for-testing/
+  - /partner/integration-paths/
 ---
 
 # Set up Partner API Access Guide
@@ -17,7 +21,7 @@ You must create an Unstoppable Domains [Sandbox](https://www.ud-sandbox.com/part
 
 <figure>
 
-![Login or sign-up options for new partners](/images/1.png '#width=60%;')
+![Login or sign-up options for new partners](/images/1.png "#width=60%;")
 
 <figcaption>Login or sign-up options for new partners</figcaption>
 </figure>
@@ -50,7 +54,7 @@ Open the UD Sandbox in your browser: <https://ud-sandbox.com/>, then provide you
 
 <figure>
 
-![UD Sandbox IP adding page](/images/ud-sandbox-ip-adding.png '#width=60%;')
+![UD Sandbox IP adding page](/images/ud-sandbox-ip-adding.png "#width=60%;")
 
 <figcaption>UD Sandbox IP adding page</figcaption>
 </figure>
@@ -65,7 +69,7 @@ Unstoppable Domains will send a verification message to the email address you pr
 
 <figure>
 
-![UD Sandbox verification](/images/ud-sandbox-verification.png '#width=40%;')
+![UD Sandbox verification](/images/ud-sandbox-verification.png "#width=40%;")
 
 <figcaption>UD Sandbox verification</figcaption>
 </figure>
@@ -76,7 +80,7 @@ Open the verification email and click the link to add your IP address to the UD 
 
 <figure>
 
-![Add your IP address in the Sandbox](/images/ud-sandbox-ip-adding-links.png '#width=80%;')
+![Add your IP address in the Sandbox](/images/ud-sandbox-ip-adding-links.png "#width=80%;")
 
 <figcaption>Add your IP address to the Sandbox</figcaption>
 </figure>
@@ -91,14 +95,14 @@ After adding your IP address, you will be redirected to the Unstoppable Domains 
 
 <figure>
 
-![Wait to be redirected](/images/ud-sandbox-redirection.png '#width=80%;')
+![Wait to be redirected](/images/ud-sandbox-redirection.png "#width=80%;")
 
 <figcaption>Wait to be redirected</figcaption>
 </figure>
 
 <figure>
 
-![UD Sandbox homepage](/images/ud-sandbox-home.png '#width=80%;')
+![UD Sandbox homepage](/images/ud-sandbox-home.png "#width=80%;")
 
 <figcaption>UD Sandbox homepage</figcaption>
 </figure>
@@ -147,22 +151,22 @@ After [setting up access to the Partner API](#set-up-partner-api-access-guide), 
 
 Before you integrate free or paid domain minting (via Stripe or Redirect URLs) payment flows, you must implement a domain search functionality into your application. Unstoppable Domains provides a set of endpoints to provide domain suggestions, check the availability of domain names, and reserve free domain names.
 
-| Pathway | Description | Integration Guides |
-| - | - | - |
-| Get Domains Suggestions | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](../quickstart/search-domains.md) |
-| Domain Name Availability | checks the availability of a domain name before purchase | [Domain Name Availability Guide](../../guides/check-domains-availability.md) |
-| Reserve Free Domain Name | reserves a free and available domain name for seven days | [Reserve Free Domain Name Guide](../../guides/claim-or-reserve-free-domains.md) |
+| Pathway                  | Description                                                                | Integration Guides                                                              |
+| ------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Get Domains Suggestions  | provides free and paid domain suggestions based on the entered information | [Get Domains Suggestions Guide](../quickstart/search-domains.md)                |
+| Domain Name Availability | checks the availability of a domain name before purchase                   | [Domain Name Availability Guide](../../guides/check-domains-availability.md)    |
+| Reserve Free Domain Name | reserves a free and available domain name for seven days                   | [Reserve Free Domain Name Guide](../../guides/claim-or-reserve-free-domains.md) |
 
 ## Step 3: Choose Your Integration Path
 
 There are several ways to integrate with Unstoppable's Partner API, detailed in the table below. Partners are encouraged to integrate more than one pathway.
 
-| Pathway | Description | Integration Guides |
-| - | - | - |
-| Free domains | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers" | [Free Domain Minting Guide](../../guides/claim-or-reserve-free-domains.md) |
-| Paid domains: Stripe | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay | [Stripe Payments Guide](../quickstart/purchase-domains-with-stripe.md) |
-| Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](../../guides/purchase-domains-with-redirect-url.md) |
-| Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure domain records, does not require native paid domain flow  | [Redirect URL Payments With Auto-Configured Crypto Records Guide](../../guides/purchase-domains-with-redirect-url/#redirect-url-payments-with-auto-configured-crypto-records-guide) |
+| Pathway                                                        | Description                                                                                                                                                     | Integration Guides                                                                                                                                                                  |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Free domains                                                   | mint free domains for customers following pre-determined "allowed free TLDs" and "allowed free tiers"                                                           | [Free Domain Minting Guide](../../guides/claim-or-reserve-free-domains.md)                                                                                                          |
+| Paid domains: Stripe                                           | configure Stripe account to process paid domains via credit card, PayPal, and ApplePay                                                                          | [Stripe Payments Guide](../quickstart/purchase-domains-with-stripe.md)                                                                                                              |
+| Paid domains: Redirect URL                                     | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow                                            | [Redirect URL Payments Guide](../../guides/purchase-domains-with-redirect-url.md)                                                                                                   |
+| Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure domain records, does not require native paid domain flow | [Redirect URL Payments With Auto-Configured Crypto Records Guide](../../guides/purchase-domains-with-redirect-url/#redirect-url-payments-with-auto-configured-crypto-records-guide) |
 
 :::info
 Unstoppable Domains provides a [Sandbox Environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
@@ -172,9 +176,9 @@ Unstoppable Domains provides a [Sandbox Environment](set-up-sandbox-for-testing.
 
 The following considerations apply to purchasing domains:
 
-* The domain must contain only letters (`a-z`), numbers (`0-9`), and hyphens (`-`)
-* The domain name cannot start with a hyphen (`-`)
-* The domain length must not exceed 253 characters
+- The domain must contain only letters (`a-z`), numbers (`0-9`), and hyphens (`-`)
+- The domain name cannot start with a hyphen (`-`)
+- The domain length must not exceed 253 characters
 
 ## Fork Our Postman Collection
 

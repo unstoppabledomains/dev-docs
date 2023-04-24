@@ -1,6 +1,8 @@
 ---
 title: Ethereum Providers Usage | Unstoppable Domains Developer Portal
 description: This page covers Ethereum providers and shows how to use them with the Resolution Libraries.
+redirectFrom:
+  - /developer-toolkit/reference/ethereum-providers/
 ---
 
 # Ethereum Providers Usage
@@ -11,9 +13,9 @@ This page covers Ethereum providers and shows how to use them with the Resolutio
 
 Ethereum nodes are computers that run the Ethereum client software. They perform various functions such as mining Ethereum, verifying transactions on the blockchain, and maintaining the security and accuracy of the network. There are different types of nodes available:
 
-* `Full Nodes`: These nodes store the entire blockchain data and are involved in the mining and validating of new blocks.
-* `Light Nodes`: These nodes do not store the entire blockchain data but instead request it from a full node. This allows low-end devices to participate in the Ethereum network.
-* `Archive Nodes`: These nodes store all the data from full nodes and create an archive of historical states. Archive nodes are useful for services such as block explorers, wallet vendors, and on-chain analytics.
+- `Full Nodes`: These nodes store the entire blockchain data and are involved in the mining and validating of new blocks.
+- `Light Nodes`: These nodes do not store the entire blockchain data but instead request it from a full node. This allows low-end devices to participate in the Ethereum network.
+- `Archive Nodes`: These nodes store all the data from full nodes and create an archive of historical states. Archive nodes are useful for services such as block explorers, wallet vendors, and on-chain analytics.
 
 ## Node Service Providers
 
@@ -24,28 +26,28 @@ Node service providers operate optimized and distributed node infrastructures, p
 Each of the Resolution Libraries supports using an Ethereum provider URL for configuration. You can obtain this URL from a service like Alchemy, which offers a free API key to users who create an account. If you wish to use an alternative Ethereum provider, see the [Nodes as a Service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/) guide for more information.
 
 ```javascript JavaScript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
+const { default: Resolution } = require("@unstoppabledomains/resolution");
 
 const ethereumProviderUrl = ALCHEMY_ETHEREUM_API;
 const polygonProviderUrl = ALCHEMY_POLYGON_API;
 
 // custom provider config using the `Resolution` constructor options
 const resolution = new Resolution({
-    sourceConfig: {
-      uns: {
-        locations: {
-          Layer1: {
-            url: ethereumProviderUrl,
-            network: 'mainnet'
-          },
-          Layer2: {
-            url: polygonProviderUrl,
-            network: 'polygon-mainnet',
-          },
+  sourceConfig: {
+    uns: {
+      locations: {
+        Layer1: {
+          url: ethereumProviderUrl,
+          network: "mainnet",
+        },
+        Layer2: {
+          url: polygonProviderUrl,
+          network: "polygon-mainnet",
         },
       },
     },
-  });
+  },
+});
 ```
 
 ```java Java
@@ -104,5 +106,5 @@ resolution --ethereum-provider-url https://eth-mainnet.g.alchemy.com/v2/{API_KEY
 
 ## Resources
 
-* [Nodes and Clients](https://ethereum.org/en/developers/docs/nodes-and-clients/)
-* [Nodes as a Service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
+- [Nodes and Clients](https://ethereum.org/en/developers/docs/nodes-and-clients/)
+- [Nodes as a Service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)

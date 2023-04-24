@@ -1,6 +1,8 @@
 ---
 title: UAuth JS Library | Unstoppable Domains Developer Portal
 description: This page provides documents the public interface of the core @uauth/js library.
+redirectFrom:
+  - /login-with-unstoppable/libraries/uauth-js/
 ---
 
 # UAuth JS Library
@@ -112,30 +114,30 @@ The options object passed to the Client [constructor](#constructor).
 ```typescript
 export interface ClientOptions {
   // Fallback Login Options
-  clientID: string
-  clientSecret?: string
-  redirectUri: string
-  clientAuthMethod?: ClientAuthMethod
-  resource?: string
-  responseMode?: ResponseMode
-  scope?: string
-  prompt?: string
-  maxAge?: number
+  clientID: string;
+  clientSecret?: string;
+  redirectUri: string;
+  clientAuthMethod?: ClientAuthMethod;
+  resource?: string;
+  responseMode?: ResponseMode;
+  scope?: string;
+  prompt?: string;
+  maxAge?: number;
 
   // Fallback Logout Options
-  rpInitiatedLogout?: boolean
-  postLogoutRedirectUri?: string
+  rpInitiatedLogout?: boolean;
+  postLogoutRedirectUri?: string;
 
   // Cache Options
-  cacheOptions?: CacheOptions
+  cacheOptions?: CacheOptions;
 
   // Other Options
-  window?: Window | undefined
-  fallbackIssuer?: string
-  storeType?: StoreType
-  store?: Store
-  createIpfsUrl?: (cid: string, path: string) => string
-  resolution?: DomainResolver
+  window?: Window | undefined;
+  fallbackIssuer?: string;
+  storeType?: StoreType;
+  store?: Store;
+  createIpfsUrl?: (cid: string, path: string) => string;
+  resolution?: DomainResolver;
 }
 ```
 
@@ -145,22 +147,22 @@ The options object passed to [login()](#login) and [loginWithPopup()](#loginwith
 
 ```typescript
 interface LoginOptions {
-  clientID: string
-  clientSecret?: string
-  clientAuthMethod: ClientAuthMethod
-  maxAge: number
-  prompt: string
-  resource?: string
-  redirectUri: string
-  responseMode: ResponseMode
-  scope: string
-  flowId?: 'login' | 'signup'
-  packageName?: string
-  packageVersion?: string
+  clientID: string;
+  clientSecret?: string;
+  clientAuthMethod: ClientAuthMethod;
+  maxAge: number;
+  prompt: string;
+  resource?: string;
+  redirectUri: string;
+  responseMode: ResponseMode;
+  scope: string;
+  flowId?: "login" | "signup";
+  packageName?: string;
+  packageVersion?: string;
 
-  username?: string
-  state?: any
-  beforeRedirect?(url: string): Promise<void> | void
+  username?: string;
+  state?: any;
+  beforeRedirect?(url: string): Promise<void> | void;
 }
 ```
 
@@ -170,11 +172,11 @@ The login authorization returned by [loginWithPopup()](#loginwithpopup) and [log
 
 ```typescript
 interface Authorization {
-  accessToken: string
-  expiresAt: number
-  idToken: IdToken
-  scope: string
-  resource?: string
+  accessToken: string;
+  expiresAt: number;
+  idToken: IdToken;
+  scope: string;
+  resource?: string;
 }
 ```
 
@@ -182,10 +184,10 @@ interface Authorization {
 
 ```typescript
 interface AuthorizationOptions {
-  clientID?: string
-  username?: string
-  scope?: string
-  resource?: string
+  clientID?: string;
+  username?: string;
+  scope?: string;
+  resource?: string;
 }
 ```
 
@@ -195,7 +197,7 @@ The options object passed to [user()](#user).
 
 ```typescript
 interface UserOptions extends AuthorizationOptions {
-  claims?: string[]
+  claims?: string[];
 }
 ```
 
@@ -203,8 +205,8 @@ interface UserOptions extends AuthorizationOptions {
 
 ```typescript
 interface BaseLogoutOptions {
-  rpInitiatedLogout: boolean
-  postLogoutRedirectUri?: string
+  rpInitiatedLogout: boolean;
+  postLogoutRedirectUri?: string;
 }
 ```
 
@@ -214,8 +216,8 @@ The options object passed to [logout()](#logout). Extends [BaseLogoutOptions](#b
 
 ```typescript
 interface LogoutOptions {
-  state?: any
-  beforeRedirect?(url: string): Promise<void> | void
+  state?: any;
+  beforeRedirect?(url: string): Promise<void> | void;
 }
 ```
 
@@ -225,7 +227,7 @@ The options object passed to [loginCallback()](#logincallback).
 
 ```typescript
 interface LoginCallbackOptions {
-  url?: string
+  url?: string;
 }
 ```
 
@@ -235,8 +237,8 @@ The object returned by [loginCallback()](#logincallback).
 
 ```typescript
 interface LoginCallbackResponse<T> {
-  authorization: Authorization
-  state?: T
+  authorization: Authorization;
+  state?: T;
 }
 ```
 
@@ -246,41 +248,41 @@ The object returned by [user()](#user). Equivalent to the response of the `UserI
 
 ```typescript
 interface UserInfo {
-// Partial<WalletClaims>
-  wallet_address: string
-  wallet_type_hint: WalletType
-  eip4361_message: string
-  eip4361_signature: string
+  // Partial<WalletClaims>
+  wallet_address: string;
+  wallet_type_hint: WalletType;
+  eip4361_message: string;
+  eip4361_signature: string;
 
-// Partial<EmailClaims>
-  email: string
-  email_verified: boolean
+  // Partial<EmailClaims>
+  email: string;
+  email_verified: boolean;
 
-// Partial<AddressClaims>
-  address: AddressClaim
+  // Partial<AddressClaims>
+  address: AddressClaim;
 
-// Partial<PhoneClaims>
-  phone_number: string
-  phone_number_verified: boolean
+  // Partial<PhoneClaims>
+  phone_number: string;
+  phone_number_verified: boolean;
 
-// Partial<ProfileClaims>
-  name: string
-  given_name: string
-  family_name: string
-  middle_name: string
-  nickname: string
-  preferred_username: string
-  profile: string
-  picture: string
-  website: string
-  gender: string
-  birthdate: string
-  zoneinfo: string
-  locale: string
-  updated_at: string
+  // Partial<ProfileClaims>
+  name: string;
+  given_name: string;
+  family_name: string;
+  middle_name: string;
+  nickname: string;
+  preferred_username: string;
+  profile: string;
+  picture: string;
+  website: string;
+  gender: string;
+  birthdate: string;
+  zoneinfo: string;
+  locale: string;
+  updated_at: string;
 
-// Partial<HumanityCheckClaims> { sub: string }
-  humanity_check_id: string
+  // Partial<HumanityCheckClaims> { sub: string }
+  humanity_check_id: string;
 }
 ```
 
@@ -290,9 +292,9 @@ Defines a verified address associated with an authorized domain. Returned by [ge
 
 ```typescript
 interface VerifiedAddress {
-  address: string
-  message: string
-  signature: string
-  symbol: string
+  address: string;
+  message: string;
+  signature: string;
+  symbol: string;
 }
 ```

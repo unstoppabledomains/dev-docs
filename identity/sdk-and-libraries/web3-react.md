@@ -1,6 +1,8 @@
 ---
 title: UAuth Web3-React Library | Unstoppable Domains Developer Portal
 description: This page provides documents the public interface of the @uauth/web3-react middleware library.
+redirectFrom:
+  - /login-with-unstoppable/libraries/uauth-web3-react/
 ---
 
 # UAuth Web3-React Library
@@ -15,7 +17,7 @@ The `UAuthConnector` class is the default export of the `@uauth/web3-react` libr
 
 ```typescript
 class UAuthConnector extends Connector {
-  constructor({actions, options, onError}: UAuthConnectorConstructorArgs) {}
+  constructor({ actions, options, onError }: UAuthConnectorConstructorArgs) {}
 }
 
 const uauthConnector = new UAuthConnector(args);
@@ -69,8 +71,8 @@ public get subConnector(): Connector & {
 
 ```typescript
 interface UAuthConnectors {
-  injected: Connector
-  walletconnect: Connector
+  injected: Connector;
+  walletconnect: Connector;
 }
 ```
 
@@ -80,13 +82,13 @@ The arguments object passed to the UAuthConnector [constructor](#constructor).
 
 ```typescript
 interface UAuthConnectorConstructorArgs {
-  actions: Actions
+  actions: Actions;
   options: UAuthConstructorOptions & {
-    uauth?: UAuth
-    connectors: UAuthConnectors
-    shouldLoginWithRedirect?: boolean
-  }
-  onError?: (error: Error) => void
+    uauth?: UAuth;
+    connectors: UAuthConnectors;
+    shouldLoginWithRedirect?: boolean;
+  };
+  onError?: (error: Error) => void;
 }
 ```
 
@@ -97,35 +99,35 @@ If `shouldLoginWithRedirect` is set to `true`, the [uauthConnector](#uauthconnec
 Then you must set up a callback page for the authorization server to redirect back to.
 
 ```javascript
-import {uauth} from './connectors'
+import { uauth } from "./connectors";
 
 // On page load...
 
-const {activate} = useWeb3React()
+const { activate } = useWeb3React();
 
 useEffect(() => {
   uauth
-    .callbackAndActivate({activate})
+    .callbackAndActivate({ activate })
     .then(() => {
       // Redirect to success page
     })
-    .catch(error => {
+    .catch((error) => {
       // Redirect to failure page
-    })
-}, [])
+    });
+}, []);
 ```
 
 ## ConnectorLoginCallbackOptions
 
 ```typescript
 interface ConnectorLoginCallbackOptions {
-  url?: string
+  url?: string;
   activate: (
     connector: Connector,
     onError?: (error: Error) => void,
-    throwErrors?: boolean,
-  ) => Promise<void>
-  onError?: (error: Error) => void
-  throwErrors?: boolean
+    throwErrors?: boolean
+  ) => Promise<void>;
+  onError?: (error: Error) => void;
+  throwErrors?: boolean;
 }
 ```
