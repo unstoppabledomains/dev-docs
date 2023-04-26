@@ -15,26 +15,87 @@ This page explains the process for creating an account and applying to become an
 The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/manage-domains/polygon-release-notes.md) to get started.
 :::
 
-## Step 1: Apply for API Access
+## Step 1: SignUp to Partner Dashboard
 
-You must create an Unstoppable Domains [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account. You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
+You must create an Unstoppable Domains Partner account in [Partner Dashboard](https://dashboard.auth.unstoppabledomains.com). You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
 
 <figure>
 
-![Login or sign-up options for new partners](/images/1.png "#width=60%;")
+![Login or sign-up options for new partners](/images/partner-signup.png "#width=60%;")
 
 <figcaption>Login or sign-up options for new partners</figcaption>
 </figure>
 
-## Step 2: Submit Approval for API Key
 
-After logging in, you will have the option to submit a partner application. Please complete the required information and submit the application. The review process takes up to five business days but is usually sooner.
+## Step 2: Setup Your First Application
 
-:::info
-To avoid missing the email about your partner application status, please update your email settings to approve messages from [notifications@unstoppabledomains.com](mailto:notifications@unstoppabledomains.com), so it doesn’t end up in your spam folder.
-:::
+Let us know who you are by submitting your **Company name** and **Company type**
 
-After your application is approved, you will be given full access to your Partner API credentials to view your ResellerID and update payment information.
+<figure>
+
+![Submit company details](/images/submit-company-name.png "#width=60%;")
+
+<figcaption>Submit company details</figcaption>
+</figure>
+
+Navigate to [Clients Page](https://dashboard.auth.unstoppabledomains.com/clients) by clicking `Clients` at the top of the app. Read the `Partner API Terms` and submit your agreement.
+
+<figure>
+
+![Partner API Terms](/images/dashboard-client-page.png "#width=90%;")
+
+<figcaption>Partner API Terms</figcaption>
+</figure>
+
+Create your first client by clicking the `Create Client` button.
+
+<figure>
+
+![Create First Client](/images/dashboard-empty-client-page.png "#width=80%;")
+
+<figcaption>Create First Client</figcaption>
+</figure>
+
+Update your client information and click `Confirm Changes`
+
+<figure>
+
+![Update Client Information](/images/dashboard-update-client-info.png "#width=80%;")
+
+<figcaption>Update Client Information</figcaption>
+</figure>
+
+## Step 3: Obtain an API Key
+
+Navigate to the `API Panel` by clicking the `API` button.
+
+<figure>
+
+![API Panel](/images/dashboard-api-pannel.png "#width=80%;")
+
+<figcaption>API Panel</figcaption>
+</figure>
+
+Request one of the following keys depending on your current usage. You **might** be required to provide an email address for our partner engineering team to contact you if you originally signed up using a Wallet address such as MetaMask.
+
+<figure>
+
+![Email Requirement](/images/dashboard-email-requirement.png "#width=80%;")
+
+<figcaption>Email Requirement</figcaption>
+</figure>
+
+### API Key
+Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner-v3/) for supported use cases.
+
+When you click on the `Request key`, an email will be sent to our `Partner engineering team`. The team will be contacting you in shortly via the email you login with or the one submitted when requesting to acquire the key.
+
+### Legacy API Key
+Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolution/) and [Domain Distribution and Management Overview
+](https://docs.unstoppabledomains.com/domain-distribution-and-management/overview/#domain-distribution-and-management-overview) for supported use cases.
+
+Click `Reveal Key` under `Legacy API key` to acquire your API Key
+
 
 ## Step 3: Configure Payment Information
 
@@ -46,70 +107,15 @@ You just registered to become an official Unstoppable Domains Partner.
 
 # Set up UD Sandbox for Testing Guide
 
-This page details how to access and set up the Unstoppable Domains Sandbox Environment for partners to test their integrations.
-
-## Step 1: Register on the UD Sandbox
-
-Open the UD Sandbox in your browser: <https://ud-sandbox.com/>, then provide your contact details (company and email address).
+To test integrations, you can switch to Sandbox mode. This mode allows you play around with test net which does not incur cost during development. To access Sandbox, toggle the `Sandbox` button at the top of the application.
 
 <figure>
 
-![UD Sandbox IP adding page](/images/ud-sandbox-ip-adding.png "#width=60%;")
+![Sandbox Mode](/images/dashboard-sandbox-button.png "#width=90%;")
 
-<figcaption>UD Sandbox IP adding page</figcaption>
+<figcaption>Sandbox Mode</figcaption>
 </figure>
 
-:::info
-If your IP address is added in the Sandbox allowlist, you will not be redirected to the IP adding page.
-:::
-
-## Step 2: Verify Your Email Address
-
-Unstoppable Domains will send a verification message to the email address you provided to the Sandbox Environment.
-
-<figure>
-
-![UD Sandbox verification](/images/ud-sandbox-verification.png "#width=40%;")
-
-<figcaption>UD Sandbox verification</figcaption>
-</figure>
-
-## Step 3: Add Your IP Address to the Sandbox
-
-Open the verification email and click the link to add your IP address to the UD Sandbox Environment allowlist.
-
-<figure>
-
-![Add your IP address in the Sandbox](/images/ud-sandbox-ip-adding-links.png "#width=80%;")
-
-<figcaption>Add your IP address to the Sandbox</figcaption>
-</figure>
-
-:::info
-You can use the second link to revoke your IP address from the Sandbox allowlist.
-:::
-
-## Step 4: Access the UD Sandbox
-
-After adding your IP address, you will be redirected to the Unstoppable Domains Sandbox Environment, where you can test your integrations.
-
-<figure>
-
-![Wait to be redirected](/images/ud-sandbox-redirection.png "#width=80%;")
-
-<figcaption>Wait to be redirected</figcaption>
-</figure>
-
-<figure>
-
-![UD Sandbox homepage](/images/ud-sandbox-home.png "#width=80%;")
-
-<figcaption>UD Sandbox homepage</figcaption>
-</figure>
-
-:::info
-Please see the [Get a Test Domain using Unstoppable Website Faucet](/getting-started/test-domains/faucet.md) guide for instructions on minting a free domain for testing purposes.
-:::
 
 ## Sandbox Environment URLs
 
@@ -123,12 +129,6 @@ https://ud-sandbox.com/
 
 ```bash
 https://api.ud-sandbox.com/
-```
-
-### Sandbox Partner Account
-
-```bash
-https://ud-sandbox.com/partner-api-dashboard/
 ```
 
 :::success Congratulations!
@@ -145,7 +145,7 @@ Partner API Integrations will only work on **Polygon L2 network**. See the [Poly
 
 ## Step 1: Locate Your Reseller ID
 
-After [setting up access to the Partner API](#set-up-partner-api-access-guide), you must obtain your `resellerID` from your [Sandbox](https://www.ud-sandbox.com/partner-api-dashboard) or [Production](https://unstoppabledomains.com/partner-api-dashboard) Partner account to integrate our services into your application for your customers.
+After [setting up access to the Partner API](#set-up-partner-api-access-guide), you must obtain your `resellerID` from the `API Panel` of the [Partner Dashboard](https://dashboard.auth.unstoppabledomains.com) to integrate our services into your application for your customers.
 
 ## Step 2: Add a Domain Search Functionality
 
