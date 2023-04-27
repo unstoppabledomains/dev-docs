@@ -244,7 +244,7 @@ interface LoginCallbackResponse<T> {
 
 ## UserInfo
 
-The object returned by [user()](#user). Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more information about supported login scopes.
+The object returned by [user()](#user). Equivalent to the response of the `UserInfo` endpoint of the UAuth server. Contains the claims requested by the current authorization session, based on the values defined in the `ClientOptions.scope` field. See [Scopes for Login](/identity/guides/login-scopes.md) for more information about supported login scopes.
 
 ```typescript
 interface UserInfo {

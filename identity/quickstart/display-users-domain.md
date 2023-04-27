@@ -8,7 +8,7 @@ Once a user has successfully authenticated, the application should display the u
 </figure>
 
 Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
-Any integration using [@uauth/js](/login-with-unstoppable/libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/login-with-unstoppable/libraries/uauth-js.md#client) object with the same client options and calling the [user()](/login-with-unstoppable/libraries/uauth-js.md#user) method.
+Any integration using [@uauth/js](/identity/sdk-and-libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/identity/sdk-and-libraries/uauth-js.md#client) object with the same client options and calling the [user()](/identity/sdk-and-libraries/uauth-js.md#user) method.
 
 ```javascript @uauth/js
 import UAuth from '@uauth/js'
@@ -70,7 +70,7 @@ uauthMoralisConnector.uauth.user().then().catch()
 
 ```
 
-The `user()` method will return a [UserInfo](/login-with-unstoppable/libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
+The `user()` method will return a [UserInfo](/identity/sdk-and-libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
 
 ```json
 {

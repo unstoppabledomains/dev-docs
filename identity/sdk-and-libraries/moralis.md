@@ -28,7 +28,7 @@ public async activate({
 
 ### disconnect()
 
-Discconnects any walletconnect provider and calls [`uauth.logout()`](/login-with-unstoppable/libraries/uauth-js.md#logout).
+Discconnects any walletconnect provider and calls [`uauth.logout()`](/identity/sdk-and-libraries/uauth-js.md#logout).
 
 ```typescript
 public async deactivate()
@@ -64,7 +64,7 @@ interface UAuthConnectorOptions extends Partial<UAuthConstructorOptions> {
 
 ### shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` is set to `true`, the [UAuthMoralisConnector](#uauthmoralisconnector) instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If `shouldLoginWithRedirect` is set to `true`, the [UAuthMoralisConnector](#uauthmoralisconnector) instance will use the [login()](/identity/sdk-and-libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/identity/sdk-and-libraries/uauth-js.md#loginwithpopup).
 
 ## UAuthMoralisConnectors
 

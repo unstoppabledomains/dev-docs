@@ -37,4 +37,4 @@ type UauthInitOptions = {
 
 ### shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` is set to `true`, the [uauthModule](#uauthmodule) instance will use the [uauth.login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [uauth.loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If `shouldLoginWithRedirect` is set to `true`, the [uauthModule](#uauthmodule) instance will use the [uauth.login()](/identity/sdk-and-libraries/uauth-js.md#login) method instead of the default, [uauth.loginWithPopup()](/identity/sdk-and-libraries/uauth-js.md#loginwithpopup).

@@ -18,8 +18,8 @@ Integration quests will cover open-source crypto wallets (for payments), browser
     * [Resolution-Swift](https://github.com/unstoppabledomains/resolution-swift)
     * [Resolution-Go](https://github.com/unstoppabledomains/resolution-go)
 3. Documentation for resolution libraries is available here
-    * For wallets: [Resolution Libraries Overview](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md)
-    * For browsers: [Resolving Domains in a Web Applications](/developer-toolkit/advanced-use-cases/resolve-domains-in-web-applications.md)
+    * For wallets: [Resolution Libraries Overview](/resolution/sdks-and-libraries/overview.md)
+    * For browsers: [Resolving Domains in a Web Applications](/resolution/sdks-and-libraries/javascript.md)
 4. Inform us before you make the commit. We will setup a code review and confirm that everything is working correctly. After the code review, you can proceed with the commit to the repo.
 5. The quest is completed when the PR is merged into the git repository!
 

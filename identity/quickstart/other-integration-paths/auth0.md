@@ -25,10 +25,10 @@ Before using the Unstoppable Domains social connection, you’ll need an [Auth0]
 
 ## Step 2: Configure your Login Client
 
-In addition to the basic configuraton outlined in [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md), some configuration specific to Auth0 is required.
+In addition to the basic configuraton outlined in [Login Client Configuration](/identity/guides/client-configurations.md), some configuration specific to Auth0 is required.
 
-1. Set your [Redirect URI](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#redirect-uris) to `https://{{ TENANT_ID}} .{{ REGION }}.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
-2. Set the [Token Endpoint Authentication Method](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#token-endpoint-authentication-method) in the **Advanced** configuration page to **Client Secret Post**.
+1. Set your [Redirect URI](/identity/guides/client-configurations.md#redirect-uris) to `https://{{ TENANT_ID}} .{{ REGION }}.auth0.com/login/callback`. You can copy the origin from the **Domain** field of your Auth0 application **Settings**.
+2. Set the [Token Endpoint Authentication Method](/identity/guides/client-configurations.md#token-endpoint-authentication-method) in the **Advanced** configuration page to **Client Secret Post**.
 3. Click **Confirm Changes**.
 
 :::warning
@@ -45,7 +45,7 @@ Next you will need to add and configure the social connection. This will require
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
    :::warning
-   The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/login-with-unstoppable/scopes-for-login.md#optional-scopes) for more information.
+   The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/identity/guides/login-scopes.md#optional-scopes) for more information.
    :::
 6. Turn on or off syncing user profile attributes at each login
 7. Click **Create**
@@ -53,7 +53,7 @@ Next you will need to add and configure the social connection. This will require
 
 ## Step 4: Add Custom Claims (Optional)
 
-Some of the Web3 claims offered by Unstoppable Domains are outside the standard OAuth2 specification. For example, the `wallet_address` claim may be useful to your app but is not included in the default profile. To learn more about the available scopes for Login with Unstoppable Domains, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
+Some of the Web3 claims offered by Unstoppable Domains are outside the standard OAuth2 specification. For example, the `wallet_address` claim may be useful to your app but is not included in the default profile. To learn more about the available scopes for Login with Unstoppable Domains, see [Scopes for Login](/identity/guides/login-scopes.md).
 
 Adding a custom claim requires a few one-time steps in your Auth0 tenant. The process is summarized below, including some example code for creating the custom claim in your Auth0 tenant.
 

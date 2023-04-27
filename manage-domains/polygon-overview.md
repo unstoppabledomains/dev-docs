@@ -19,7 +19,7 @@ By removing the transactional costs involved in hosting and managing Web3 domain
 
 * Customers will be able to connect multiple wallets to their domains for payment, host, and edit decentralized websites (blogs, NFT galleries, etc) without having to worry about paying gas fees.
 * Developers will be able to design and create new templates, with increased complexity and functionality without the concern that users might not be able to afford to use them.
-* Web3 domains will become a viable alternative to existing web2 single sign-on such as with our newly announced product, [Login with Unstoppable](/login-with-unstoppable/index.md).
+* Web3 domains will become a viable alternative to existing web2 single sign-on such as with our newly announced product, [Login with Unstoppable](/identity/overview/login-with-unstoppable.md).
 
 ## High Level Differences between L1 and L2
 

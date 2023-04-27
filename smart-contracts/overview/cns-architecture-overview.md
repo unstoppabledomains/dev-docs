@@ -85,7 +85,7 @@ Domain owners can set one _Approved address_ per domain and many _Operator_ addr
 
 `Resolver` is a smart contract that is used for resolving domains and storing domain records. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/developer-toolkit/reference/records-reference.md).
+Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/resolution/guides/records-reference.md).
 
 In practice, `Resolver`'s data structure is slightly more complicated. If you're interested in the implementation details, see [Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol).
 
@@ -100,7 +100,7 @@ In practice, `Resolver`'s data structure is slightly more complicated. If you're
 
 `ProxyReader` consolidates these operations into a single call.
 
-For more information on how the resolution process works read [Resolving domain records](/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts.md).
+For more information on how the resolution process works read [Resolving domain records](/smart-contracts/quick-start/resolve-domains.md).
 
 ## Domain Hierarchy and Ownership
 

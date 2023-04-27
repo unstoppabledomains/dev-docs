@@ -1,4 +1,4 @@
-You can generate the [namehash](/getting-started/glossary.md#namehash) of a domain using any of the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md), [Resolution CLI](/developer-toolkit/resolution-integration-methods/resolution-cli.md), or [Resolution Service](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain.md). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the [namehash](/getting-started/glossary.md#namehash) of a domain using any of the [Resolution Libraries](/resolution/sdks-and-libraries/overview.md), [Resolution CLI](/resolution/sdks-and-libraries/cli.md), or [Resolution Service](https://docs.unstoppabledomains.com/openapi/resolution/#operation/DomainsController.getDomainsRecords). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
@@ -48,5 +48,5 @@ $ resolution namehash -d brad.crypto
 ```
 
 :::info
-The [JavaScript](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution.md) and [Java](/developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-java.md) Resolution Libraries require a `Naming Service` parameter to generate namehashes. This specifies the name service that manages the domain name, and the value must either be `"UNS"` or `"ZNS"`.
+The [JavaScript](/resolution/sdks-and-libraries/javascript.md) and [Java](/resolution/sdks-and-libraries/java.md) Resolution Libraries require a `Naming Service` parameter to generate namehashes. This specifies the name service that manages the domain name, and the value must either be `"UNS"` or `"ZNS"`.
 :::

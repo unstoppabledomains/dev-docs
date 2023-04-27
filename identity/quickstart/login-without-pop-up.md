@@ -58,7 +58,7 @@ import {
 
 ## Step 3: Configure `UAuth`
 
-First, you will configure the UAuth class using the [Client Metadata](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#client-metadata) from your login client configuration.
+First, you will configure the UAuth class using the [Client Metadata](/identity/guides/client-configurations.md#client-metadata) from your login client configuration.
 
 ```typescript
 import UAuth from "@uauth/js";
@@ -71,7 +71,7 @@ const uauth = new UAuth({
 ```
 
 :::danger
-The redirect URIs used to configure this `UAuth` instance must be an **EXACT** match to the Redirect URIs [Redirect URI](login-client-configuration.md#redirect-uris) entered in your [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md). See [Rules for Redirect URIs](login-client-configuration.md#rules-for-redirect-uris) for more details.
+The redirect URIs used to configure this `UAuth` instance must be an **EXACT** match to the Redirect URIs [Redirect URI](login-client-configuration.md#redirect-uris) entered in your [Login Client Configuration](/identity/guides/client-configurations.md). See [Rules for Redirect URIs](login-client-configuration.md#rules-for-redirect-uris) for more details.
 
 For local testing, they must also match the address and port your application is running on. For Create React App, this is `localhost:3000` by default.
 :::

@@ -31,7 +31,7 @@ When making a domain action request, the body must contain information about you
 
 - `action`: (string) The domain action you want to perform. To update resolution records, the value should be `"UpdateRecords"`.
 - `parameters`: A key-value dictionary with additional information about the action:
-  - `records`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/developer-toolkit/reference/records-reference.md) guide for supported key values.
+  - `records`: A key-value pair of resolution records to configure for the domain after minting. See the [Records Reference](/resolution/guides/records-reference.md) guide for supported key values.
 - `domain`: (string) The domain name you want to update it's records.
 - `gasCompensationPolicy`: (string) The [gas compensation policy](./overview.md#gas-compensation-policies) that should be used for the domain action.
 

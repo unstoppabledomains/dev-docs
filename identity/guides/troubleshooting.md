@@ -24,7 +24,7 @@ This commonly happens when a set of credentials meant to be used in a live envir
 
 To resolve this, modify the redirect URIs in the Login Client to ensure a match between the server and library instance. More than one redirect URI can be added to the Login Client to support two different sets of credentials (i.e. one for the live environment and another for the local test environment).
 
-See [Rules for Redirect URIs](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#rules-for-redirect-uris) for more details on valid redirect URIs.
+See [Rules for Redirect URIs](/identity/guides/client-configurations.md#rules-for-redirect-uris) for more details on valid redirect URIs.
 
 ## Error: Login Modal Doesn't Close
 
@@ -37,7 +37,7 @@ If the login modal does not close after the signing request has been accepted, t
 <figcaption>Login modal should close after signature request is confirmed</figcaption>
 </figure>
 
-To resolve this, make sure that the **redirect URI** in your [client configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md) is at same origin as the application hosting the login flow.
+To resolve this, make sure that the **redirect URI** in your [client configuration](/identity/guides/client-configurations.md) is at same origin as the application hosting the login flow.
 
 ## Error: Port "5000" Could Not Be Used
 

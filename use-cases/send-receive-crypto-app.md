@@ -24,4 +24,4 @@ The most common way to integrate with Unstoppable Domains is through simple doma
 You can find additional working integrations on Unstoppable Domains Applications List, filtered by the [Payment feature](https://unstoppabledomains.com/apps?filters=5).
 
 ## How do I get started?
-To make domain resolution easier, we've written libraries for web, Android, and iOS. See the guides on [Crypto Payments](/crypto-payments/index.md), [Resolution Service API](/developer-toolkit/resolution-integration-methods/resolution-service/overview.md), and [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) for more detail on integrating UD into your application for sending and receiving crypto payments.
+To make domain resolution easier, we've written libraries for web, Android, and iOS. See the guides on [Crypto Payments](/crypto-payments/index.md), [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/), and [Resolution Libraries](/resolution/sdks-and-libraries/overview.md) for more detail on integrating UD into your application for sending and receiving crypto payments.

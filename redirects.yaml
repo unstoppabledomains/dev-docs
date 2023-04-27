@@ -101,7 +101,7 @@
   to: '/getting-started/domain-registry-essentials/namehashing/'
   type: 301
 'domain-registry-essentials/resolving-domain-records':
-  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/'
+  to: '/smart-contracts/quick-start/resolve-domains/'
   type: 301
 '/domain-registry-essentials/records-reference':
   to: '/developer-toolkit/reference/records-reference/'
@@ -212,7 +212,7 @@
   to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/'
   type: 301
 '/developer-toolkit/direct-blockchain-calls/resolve-eth-smart-contracts/':
-  to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/'
+  to: '/smart-contracts/quick-start/resolve-domains/'
   type: 301
 '/developer-toolkit/direct-blockchain-calls/resolve-zil-without-libraries/':
   to: '/developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries/'

@@ -20,38 +20,32 @@ pages:
     expanded: false
     pages:
       - label: Overview
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview/
+        href: /resolution/sdks-and-libraries/overview/
       - label: Resolution
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution/
+        href: /resolution/sdks-and-libraries/javascript/
       - label: Resolution-Java
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-java/
+        href: /resolution/sdks-and-libraries/java/
       - label: Resolution-Swift
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-swift/
+        href: /resolution/sdks-and-libraries/swift/
       - label: Resolution-Go
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolution-go/
+        href: /resolution/sdks-and-libraries/go/
       - label: Matic.js SDK
-        href: /developer-toolkit/resolution-integration-methods/resolution-libraries/resolve-with-maticjs/
+        href: /resolution/sdks-and-libraries/maticjs/
     separatorLine: true
   - group: Other Ways To Integrate Crypto Payments
     expanded: false
     pages:
       - label: Resolution CLI
-        href: /developer-toolkit/resolution-integration-methods/resolution-cli/
+        href: /resolution/sdks-and-libraries/cli/
       - group: Resolve With Direct Blockchain Calls
         expanded: false
         pages:
-          - label: Overview
-            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/bc-overview/
-          - label: Resolve UD Domains With Direct Blockchain Calls
-            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-unstoppable-domain-names/
-          - label: Resolve .zil With Direct Blockchain Calls
-            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-zil-without-libraries/
           - label: Resolve Domains Using Smart Contracts
-            href: /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/resolve-eth-smart-contracts/
+            href: /smart-contracts/quick-start/resolve-domains/
     separatorLine: true
   - label: Crypto Payments Troubleshooting Guide
     page: troubleshooting-guide.md
     separatorLine: true
   - label: Best Practices for Integrating Crypto Payments
-    href: /developer-toolkit/reference/resolution-best-practices/
+    href: /resolution/guides/best-practices/
     separatorLine: true

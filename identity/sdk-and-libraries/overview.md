@@ -11,8 +11,8 @@ redirectFrom:
 
 | Reference                                                     | Package       | Description                           |
 | ------------------------------------------------------------- | ------------- | ------------------------------------- |
-| [UAuth JS](/login-with-unstoppable/libraries/uauth-js.md)     | `@uauth/js`   | SDK used for single-page applications |
-| [UAuth Node](/login-with-unstoppable/libraries/uauth-node.md) | `@uauth/node` | SDK used server-side applications     |
+| [UAuth JS](/identity/sdk-and-libraries/uauth-js.md)     | `@uauth/js`   | SDK used for single-page applications |
+| [UAuth Node](/identity/sdk-and-libraries/uauth-node.md) | `@uauth/node` | SDK used server-side applications     |
 
 ## Middleware libraries
 
@@ -20,10 +20,10 @@ The UAuth middleware libraries provide an additional custom interface for `@uaut
 
 | Reference                                                               | Package               | Description                       |
 | ----------------------------------------------------------------------- | --------------------- | --------------------------------- |
-| [Web3-React](/login-with-unstoppable/libraries/uauth-web3-react.md)     | `@uauth/web3-react`   | Middleware library for Web3-React |
-| [Web3Modal](/login-with-unstoppable/libraries/uauth-web3modal.md)       | `@uauth/web3modal`    | Middleware library for Web3Modal  |
-| [Web3-Onboard](/login-with-unstoppable/libraries/web3-onboard-uauth.md) | `@web3-onboard/uauth` | UAuth Module for Web3-Onboard     |
-| [Moralis](/login-with-unstoppable/libraries/uauth-moralis.md)           | `@uauth/moralis`      | Middleware library for Moralis    |
+| [Web3-React](/identity/sdk-and-libraries/web3-react.md)     | `@uauth/web3-react`   | Middleware library for Web3-React |
+| [Web3Modal](/identity/sdk-and-libraries/web3-modal.md)       | `@uauth/web3modal`    | Middleware library for Web3Modal  |
+| [Web3-Onboard](/identity/sdk-and-libraries/web3-onboard.md) | `@web3-onboard/uauth` | UAuth Module for Web3-Onboard     |
+| [Moralis](/identity/sdk-and-libraries/moralis.md)           | `@uauth/moralis`      | Middleware library for Moralis    |
 
 ## Examples
 
