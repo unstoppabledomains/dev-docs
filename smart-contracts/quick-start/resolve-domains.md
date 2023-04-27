@@ -9,7 +9,7 @@ redirectFrom:
 
 Resolving a domain is retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the Registry side. Anyone accessing a mainnet Ethereum or Polygon Node can resolve a domain.
 
-This section describes resolving domain records by making calls to Ethereum and Polygon smart contracts using the Ethereum JSON RPC. For developers who prefer a more straightforward solution, it might be more convenient to use the [Resolution Libraries](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) maintained by Unstoppable Domains.
+This section describes resolving domain records by making calls to Ethereum and Polygon smart contracts using the Ethereum JSON RPC. For developers who prefer a more straightforward solution, it might be more convenient to use the [Resolution Libraries](/resolution/sdks-and-libraries/overview.md) maintained by Unstoppable Domains.
 
 To resolve a domain, your software must access the Ethereum or Polygon network. For more information, see [Configuring an Ethereum Network Connection](#configuring-an-ethereum-network-connection).
 
@@ -17,7 +17,7 @@ To resolve a domain, your software must access the Ethereum or Polygon network. 
 
 The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-only call to `ProxyReader` smart contract. `ProxyReader` provides an API that allows users to resolve domains by making just one call by passing only keys of records and a domain namehash. Without `ProxyReader` it would require executing at least two calls: one to obtain a domain resolver address and another to get the records themselves. With `ProxyReader` it all happens under the hood.
 
-See the [UNS ProxyReader](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#proxyreader) docs for a list of all the ProxyReader smart contract addresses owned and managed by Unstoppable Domains. Here's an example in JavaScript of getting two records (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
+See the [UNS ProxyReader](/smart-contracts/contract-reference/uns-smart-contracts.md#proxyreader) docs for a list of all the ProxyReader smart contract addresses owned and managed by Unstoppable Domains. Here's an example in JavaScript of getting two records (using the [ethers.js library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
 // Ethereum ProxyReader contract address
@@ -126,7 +126,7 @@ console.log({ resolver: data.resolver, owner: data.owner, values: data[2] });
 <figcaption>Resolving domain records via ProxyReader for CNS and UNS Registries</figcaption>
 </figure>
 
-See the [Records Reference](/developer-toolkit/reference/records-reference.md) for more information about the standardized records.
+See the [Records Reference](/resolution/guides/records-reference.md) for more information about the standardized records.
 
 :::info
 When resolving domains to records, first check the records on the Polygon network, then check on the Ethereum network.
@@ -143,7 +143,7 @@ This is for two reasons:
 
 Any domain management application should perform record format validation before submitting a transaction. However, there is no guarantee that all management applications will do it correctly. For this reason, records should be validated when the domain is resolved.
 
-See the [Records Reference](/developer-toolkit/reference/records-reference.md) for more information for the validator of each record.
+See the [Records Reference](/resolution/guides/records-reference.md) for more information for the validator of each record.
 
 ## Configuring an Ethereum Network Connection
 

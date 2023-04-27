@@ -41,7 +41,7 @@ public static async importUAuth(): Promise<void>
 
 ### callbackAndActivate()
 
-Calls the [loginCallback()](/login-with-unstoppable/libraries/uauth-js.md#logincallback) method of [this.uauth](#uauth) and activates the connector using the activate argument.
+Calls the [loginCallback()](/identity/sdk-and-libraries/uauth-js.md#logincallback) method of [this.uauth](#uauth) and activates the connector using the activate argument.
 
 ```typescript
 async callbackAndActivate<T>(
@@ -94,7 +94,7 @@ interface UAuthConnectorConstructorArgs {
 
 ### options.shouldLoginWithRedirect
 
-If `shouldLoginWithRedirect` is set to `true`, the [uauthConnector](#uauthconnector) instance will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If `shouldLoginWithRedirect` is set to `true`, the [uauthConnector](#uauthconnector) instance will use the [login()](/identity/sdk-and-libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/identity/sdk-and-libraries/uauth-js.md#loginwithpopup).
 
 Then you must set up a callback page for the authorization server to redirect back to.
 

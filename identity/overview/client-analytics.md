@@ -20,7 +20,7 @@ To access the analytics page for any of the login clients you own, find the clie
 
 ## Client Details
 
-The client details section shows you how many distinct users have logged in with this client, the last date this client's configuration was updated, the date this client was created, and a list of all [login scopes](/login-with-unstoppable/scopes-for-login.md) that have been requested using this client ID.
+The client details section shows you how many distinct users have logged in with this client, the last date this client's configuration was updated, the date this client was created, and a list of all [login scopes](/identity/guides/login-scopes.md) that have been requested using this client ID.
 
 <figure>
 

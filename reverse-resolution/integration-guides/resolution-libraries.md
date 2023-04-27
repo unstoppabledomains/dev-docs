@@ -5,7 +5,7 @@ description: This guide covers how to retrieve the reverse record of UD domains 
 
 # Resolution Libraries Integration Guide
 
-This guide covers how to retrieve the reverse record of UD domains using the Resolution Libraries. This process requires using the language-specific and blockchain-agnostic libraries managed by Unstoppable Domains. Please see the [Resolution Libraries Overview](/developer-toolkit/resolution-integration-methods/resolution-libraries/libraries-overview.md) for a detailed description and configuration guide for the libraries.
+This guide covers how to retrieve the reverse record of UD domains using the Resolution Libraries. This process requires using the language-specific and blockchain-agnostic libraries managed by Unstoppable Domains. Please see the [Resolution Libraries Overview](/resolution/sdks-and-libraries/overview.md) for a detailed description and configuration guide for the libraries.
 
 ## Reverse Resolution for an Address
 

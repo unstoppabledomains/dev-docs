@@ -88,7 +88,7 @@ export default web3modal;
 ```
 
 :::info
-Because pop-ups are a more integration friendly approach, the `@uauth/web3modal` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `IUAuthOptions` and [create a callback page](/login-with-unstoppable/libraries/uauth-web3modal.md#shouldloginwithredirect)
+Because pop-ups are a more integration friendly approach, the `@uauth/web3modal` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `IUAuthOptions` and [create a callback page](/identity/sdk-and-libraries/web3-modal.md#shouldloginwithredirect)
 :::
 
 ## Step 3: Login with Unstoppable

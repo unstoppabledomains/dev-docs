@@ -29,4 +29,4 @@ Individuals control their content and identity with a decentralized website. No 
 
 ## How do I get started?
 
-See the guides on [Resolving Domains in Web Applications](/developer-toolkit/advanced-use-cases/resolve-domains-in-web-applications.md) and [Browser Resolution Algorithm](/developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm.md). For a list of test domains, see [Browser Resolution Test Domains](/developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains.md).
+See the guides on [Resolving Domains in Web Applications](/resolution/quickstart/resolution.md) and [Browser Resolution Algorithm](/resolution/guides/browser-resolution/algorithm.md). For a list of test domains, see [Browser Resolution Test Domains](/resolution/guides/browser-resolution/test-domains.md).

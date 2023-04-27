@@ -19,7 +19,7 @@ For UNS, domain records are managed via `RecordStorage`.
 </figure>
 
 ### CNS
-For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. 
+For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions.
 
 <figure>
 
@@ -31,7 +31,7 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 
 ## Domain Record Types
 
-Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a member from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](/developer-toolkit/reference/records-reference.md).
+Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a member from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](/resolution/guides/records-reference.md).
 
 Standard record keys are split by namespaces with a `.` used as a separator.
 
@@ -68,7 +68,7 @@ Example crypto records setup:
 | `crypto.USDT.version.ERC20.address` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 | `crypto.USDT.version.TRON.address`  | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk`         |
 
-`USDT` is present on multiple chains and key format is slightly different. More details can be found in the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation.
+`USDT` is present on multiple chains and key format is slightly different. More details can be found in the [Records Reference](/resolution/guides/records-reference.md) documentation.
 
 ## Domain Record Administrative Patterns
 

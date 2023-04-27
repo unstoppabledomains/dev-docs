@@ -21,7 +21,7 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 - Click the **Connect Wallet** and sign the transaction.
 - Click the **Create Client** button to add a new client.
 
-The dashboard will generate a unique **client ID** and open the configuration page for your new client. The **Client Metadata** is automatically populated with the `clientID` and default values for the `redirectURI` and `scope`. See [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md) for more details about the settings on this page.
+The dashboard will generate a unique **client ID** and open the configuration page for your new client. The **Client Metadata** is automatically populated with the `clientID` and default values for the `redirectURI` and `scope`. See [Login Client Configuration](/identity/guides/client-configurations.md) for more details about the settings on this page.
 
 <figure>
 <video loop autoplay muted width="100%" src="/videos/connect-wallet-and-create-client.mp4"></video>
@@ -44,7 +44,7 @@ Once you've created your client, you will need the **Client Metadata** to config
 </figure>
 
 :::info
-The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes to this string. For information on the other scopes Login supports, see [Scopes for Login](/login-with-unstoppable/scopes-for-login.md).
+The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes to this string. For information on the other scopes Login supports, see [Scopes for Login](/identity/guides/login-scopes.md).
 :::
 
 ## Step 2: Choose Your Integration Path
@@ -57,14 +57,14 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 
 | Integration Guide                                                                               |                                     Example Project                                      | Web3 Provider |        Package        |  Front-end UI  |
 | ----------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------: | :-----------: | :-------------------: | :------------: |
-| [Login with Pop-up](/login-with-unstoppable/login-integration-guides/login-with-popup.md)       |        [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/)        |   &#10060;    |      `@uauth/js`      |   JavaScript   |
-| [Login without Pop-up](/login-with-unstoppable/login-integration-guides/login-without-popup.md) |                                            -                                             |   &#10060;    |      `@uauth/js`      |     React      |
-| [Web3 React](/login-with-unstoppable/login-integration-guides/web3-react-guide.md)              | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) |    &#9989;    |  `@uauth/web3-react`  |  `web3-react`  |
-| [Web3 Modal](/login-with-unstoppable/login-integration-guides/web3-modal-guide.md)              |  [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)  |    &#9989;    |  `@uauth/web3modal`   |  `web3-modal`  |
-| [Web3 Onboard](/login-with-unstoppable/login-integration-guides/web3-onboard-guide.md)          |                                            -                                             |    &#9989;    | `@web3-onboard/uauth` | `web3-onboard` |
-| [Moralis](/login-with-unstoppable/login-integration-guides/moralis-guide.md)                    |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
-| [Node.js Server](/login-with-unstoppable/login-integration-guides/node-js-server-guide.md)      |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
-| [Auth0](/login-with-unstoppable/login-integration-guides/auth0-guide.md)                        |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
+| [Login with Pop-up](/identity/quickstart/login-with-pop-up.md)       |        [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/)        |   &#10060;    |      `@uauth/js`      |   JavaScript   |
+| [Login without Pop-up](/identity/quickstart/login-without-pop-up.md) |                                            -                                             |   &#10060;    |      `@uauth/js`      |     React      |
+| [Web3 React](/identity/quickstart/other-integration-paths/web3-react.md)              | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) |    &#9989;    |  `@uauth/web3-react`  |  `web3-react`  |
+| [Web3 Modal](/identity/quickstart/other-integration-paths/web3-modal.md)              |  [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)  |    &#9989;    |  `@uauth/web3modal`   |  `web3-modal`  |
+| [Web3 Onboard](/identity/quickstart/other-integration-paths/web3-onboard.md)          |                                            -                                             |    &#9989;    | `@web3-onboard/uauth` | `web3-onboard` |
+| [Moralis](/identity/quickstart/other-integration-paths/moralis.md)                    |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
+| [Node.js Server](/identity/quickstart/other-integration-paths/node-js.md)      |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
+| [Auth0](/identity/quickstart/other-integration-paths/auth0.md)                        |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
 
 :::info
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.

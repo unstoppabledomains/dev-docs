@@ -22,4 +22,4 @@ Once users mint a domain to a wallet, they have absolute control over that domai
 
 ## How can I learn more?
 
-To learn more about how Unstoppable Domains work under the hood, see the [CNS Architecture](/getting-started/domain-registry-essentials/cns-architecture-overview.md) and [CNS Smart Contracts](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md) or [UNS Architecture](/getting-started/domain-registry-essentials/uns-architecture-overview.md) along with [UNS Smart Contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md).
+To learn more about how Unstoppable Domains work under the hood, see the [CNS Architecture](/getting-started/domain-registry-essentials/cns-architecture-overview.md) and [CNS Smart Contracts](/smart-contracts/contract-reference/cns-smart-contracts.md) or [UNS Architecture](/getting-started/domain-registry-essentials/uns-architecture-overview.md) along with [UNS Smart Contracts](/smart-contracts/contract-reference/uns-smart-contracts.md).

@@ -13,13 +13,13 @@ Login with Unstoppable is in active development and we're working to add new fea
 
 With version `2.4.1-rc.0`, the `@uauth/web3-react` library now uses the v8 (beta) branch of web3-react. This new version of web3-react makes hooks available for each individual connector. Global state management can be achieved by providing these hooks to the `Web3ReactProvider` or by using the individual connector hooks to listen for connection status changes.
 
-Developers will need to install the `v8.x.x-beta.0` versions of the web3-react core and connector packages to make use of this update. See the updated `web3-react` [integration guide](/login-with-unstoppable/login-integration-guides/web3-react-guide.md) and the more advanced [example app](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) for more information.
+Developers will need to install the `v8.x.x-beta.0` versions of the web3-react core and connector packages to make use of this update. See the updated `web3-react` [integration guide](/identity/quickstart/other-integration-paths/web3-react.md) and the more advanced [example app](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) for more information.
 
 ## Revenue Share for Login
 
 Partners will now be able to generate additional revenue by offering paid domains within the integrated Login flow, and receiving revenue share payments immediately through Stripe after each purchase. Partners can view the revenue share percentage they will recieve on their [Client Management Dashboard](https://dashboard.auth.unstoppabledomains.com) and see a more detailed view of the transactions through their Stripe dashboard.
 
-For partners with existing integrations, offering Paid Domains via Login integration is a zero code update. See the instructions for requesting and configuring revenue share on the [Payment](/login-with-unstoppable/login-integration-guides/login-client-configuration.md#payment) page of the login client configuration.
+For partners with existing integrations, offering Paid Domains via Login integration is a zero code update. See the instructions for requesting and configuring revenue share on the [Payment](/identity/guides/client-configurations.md#payment) page of the login client configuration.
 
 <figure>
 
@@ -32,14 +32,14 @@ For partners with existing integrations, offering Paid Domains via Login integra
 
 Users who have added a verified Solana address to their **ud.me** profile now automatically see the option to sign with the **Phantom** wallet to confirm ownership of their domain and login.
 
-Applications can confirm that a user authenticated with a Solana address using the [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) method of [UAuth](/login-with-unstoppable/libraries/uauth-js.md).
+Applications can confirm that a user authenticated with a Solana address using the [getAuthorizationAccount()](/identity/sdk-and-libraries/uauth-js.md#getauthorizationaccount) method of [UAuth](/identity/sdk-and-libraries/uauth-js.md).
 
 ```javascript
 const authorization = await uauth.loginWithPopup();
 const account = uauth.getAuthorizationAccount(authorization);
 ```
 
-The [VerifiedAddress](/login-with-unstoppable/libraries/uauth-js.md#verifiedaddress) returned for a Login session authorized by a Solana wallet would look something like this:
+The [VerifiedAddress](/identity/sdk-and-libraries/uauth-js.md#verifiedaddress) returned for a Login session authorized by a Solana wallet would look something like this:
 
 ```javascript
 {
@@ -56,5 +56,5 @@ Login with Unstoppable now supports authentication with certain verified account
 
 | Method                                                                                             | Description                                                                                                                                                           |
 | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [getVerifiedAccounts()](/login-with-unstoppable/libraries/uauth-js.md#getverifiedaccounts)         | Returns a list of verified accounts associated with the domain.                                                                                                       |
-| [getAuthorizationAccount()](/login-with-unstoppable/libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |
+| [getVerifiedAccounts()](/identity/sdk-and-libraries/uauth-js.md#getverifiedaccounts)         | Returns a list of verified accounts associated with the domain.                                                                                                       |
+| [getAuthorizationAccount()](/identity/sdk-and-libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |

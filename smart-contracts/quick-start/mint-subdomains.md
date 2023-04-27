@@ -15,7 +15,7 @@ Subdomains can only be minted for Polygon-based (L2) domains. Ethereum and Zilli
 
 ## Step 1: Select a Minting Manager Smart Contract
 
-The [Minting Manager](/developer-toolkit/reference/smart-contracts/uns-smart-contracts/#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either Polygon mainnet or testnet).
+The [Minting Manager](/smart-contracts/contract-reference/uns-smart-contracts.md/#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either Polygon mainnet or testnet).
 
 <figure>
 
@@ -73,7 +73,7 @@ Next, add your wallet address that owns the root domain to the `to` field and th
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
 
-Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/developer-toolkit/reference/records-reference.md) documentation for supported values. You can also provide empty records if you wish to.
+Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/resolution/guides/records-reference.md) documentation for supported values. You can also provide empty records if you wish to.
 
 <figure>
 

@@ -38,9 +38,9 @@ npm i @web3-onboard/core @web3-onboard/uauth
 
 ## Step 2: Configure UAuth
 
-Configure the Blocknative UAuth module using the `clientID` and `redirectUri` from your [Login Client Configuration](/login-with-unstoppable/login-integration-guides/login-client-configuration.md). The remaining fields of [uauthInitOptions](/login-with-unstoppable/libraries/web3-onboard-uauth.md#uauthinitoptions) will be set to default values if left undefined.
+Configure the Blocknative UAuth module using the `clientID` and `redirectUri` from your [Login Client Configuration](/identity/guides/client-configurations.md). The remaining fields of [uauthInitOptions](/identity/sdk-and-libraries/web3-onboard.md#uauthinitoptions) will be set to default values if left undefined.
 
-See [Scopes for Login](/login-with-unstoppable/scopes-for-login.md) for more on the information you can request from users using the `scope` field.
+See [Scopes for Login](/identity/guides/login-scopes.md) for more on the information you can request from users using the `scope` field.
 
 ```javascript
 import Onboard from '@web3-onboard/core'

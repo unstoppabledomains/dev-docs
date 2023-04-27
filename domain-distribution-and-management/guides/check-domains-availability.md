@@ -23,7 +23,7 @@ The Partner API offers an endpoint that lets you check the availability of multi
 
 ## Step 2: Prepare Query Parameters
 
-The `Multiple Domain Name Availability` endpoint requires a `search` field which contains the domain name(s) to check with or without TLD. If you omit the domain name TLD, the endpoint will return the domain name with all the [supported domain endings](/developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-supported-tlds.md).
+The `Multiple Domain Name Availability` endpoint requires a `search` field which contains the domain name(s) to check with or without TLD. If you omit the domain name TLD, the endpoint will return the domain name with all the [supported domain endings](https://docs.unstoppabledomains.com/openapi/resolution/#operation/StatusController.listSupportedTlds).
 
 | Name   | Type          | Mandatory | Description                                                       |
 | ------ | ------------- | --------- | ----------------------------------------------------------------- |

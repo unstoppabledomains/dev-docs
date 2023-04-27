@@ -48,7 +48,7 @@ export const display: IProviderDisplay = { ... }
 
 ## IUAuthOptions
 
-The options object passed to the [connector](#connector) function to configure a UAuth provider for Web3Modal. Extends `IAbstractConnectorOptions` and [UAuthConstructorOptions](/login-with-unstoppable/libraries/uauth-js.md#clientoptions);
+The options object passed to the [connector](#connector) function to configure a UAuth provider for Web3Modal. Extends `IAbstractConnectorOptions` and [UAuthConstructorOptions](/identity/sdk-and-libraries/uauth-js.md#clientoptions);
 
 ```typescript
 interface IUAuthOptions
@@ -60,7 +60,7 @@ interface IUAuthOptions
 
 ### shouldLoginWithRedirect
 
-If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/login-with-unstoppable/libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/login-with-unstoppable/libraries/uauth-js.md#loginwithpopup).
+If set to `true`, the UAuth provider created by the [connector](#connector) function will use the [login()](/identity/sdk-and-libraries/uauth-js.md#login) method instead of the default, [loginWithPopup()](/identity/sdk-and-libraries/uauth-js.md#loginwithpopup).
 
 Then you must set up a callback page for the authorization server to redirect back to.
 

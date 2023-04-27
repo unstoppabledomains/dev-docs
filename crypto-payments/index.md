@@ -11,7 +11,7 @@ Still confused about how it works? If you own the `ryan.crypto` domain and BTC i
 
 ## Overview
 
-Domain Resolution is the process of converting a human-readable domain name like `ryan.crypto` to the cryptocurrency addresses attached to them. It involves retrieving a domain’s records through [Smart Contracts](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md) deployed on the blockchain. Please see the [Reverse Resolution](/reverse-resolution/index.md) guide for converting cryptocurrency addresses into human-readable domain names.
+Domain Resolution is the process of converting a human-readable domain name like `ryan.crypto` to the cryptocurrency addresses attached to them. It involves retrieving a domain’s records through [Smart Contracts](/smart-contracts/contract-reference/uns-smart-contracts.md) deployed on the blockchain. Please see the [Reverse Resolution](/reverse-resolution/index.md) guide for converting cryptocurrency addresses into human-readable domain names.
 
 <figure>
 
@@ -22,7 +22,7 @@ Domain Resolution is the process of converting a human-readable domain name like
 
 ## How Domain Resolution Works
 
-In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The application sends both parameters (`currency` and `domain name`) to the [Resolver Contract](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain to complete the `ETH` transfer to Ryan’s wallet. Please see the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) to understand how Domain Resolution works.
+In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The application sends both parameters (`currency` and `domain name`) to the [Resolver Contract](/smart-contracts/contract-reference/uns-smart-contracts.md/#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain to complete the `ETH` transfer to Ryan’s wallet. Please see the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) to understand how Domain Resolution works.
 
 <figure>
 
@@ -32,7 +32,7 @@ In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The appl
 </figure>
 
 :::info
-A domain can store many records and key formats. To learn about our supported record types, see our [Records Reference](/developer-toolkit/reference/records-reference.md) guide.
+A domain can store many records and key formats. To learn about our supported record types, see our [Records Reference](/resolution/guides/records-reference.md) guide.
 :::
 
 <embed src="/snippets/_developer-survey-embed.md" />

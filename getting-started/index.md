@@ -13,7 +13,7 @@ Also, you might explore our growing list of [Integrated Applications](https://un
 ## Before You Begin
 
 You'll need the following to get started:
-- Basic understanding of [CNS](/developer-toolkit/reference/smart-contracts/cns-smart-contracts.md) and [UNS](/developer-toolkit/reference/smart-contracts/uns-smart-contracts.md) Smart Contracts
+- Basic understanding of [CNS](/smart-contracts/contract-reference/cns-smart-contracts.md) and [UNS](/smart-contracts/contract-reference/uns-smart-contracts.md) Smart Contracts
 - Knowledge of differences between [L1 and L2 network](/manage-domains/polygon-overview.md)
 - A [free test domain](test-domains/faucet.md)
 - A stable test environment
@@ -22,10 +22,10 @@ You'll need the following to get started:
 
 These items are listed in order of complexity. For example, if you are starting with crypto and blockchains, you may want to begin with the use cases and the menu items on your left. More advanced members may decide to jump right to the Unstoppable Resolution, integration guides, or API reference.
 
-- [Unstoppable Resolution](/developer-toolkit/index.md)
+- [Unstoppable Resolution](/resolution/overview.md)
 - [Developer Integration Guides](/guides.mdx)
-  - [Login with Unstoppable](/login-with-unstoppable/index.md)
-  - [Unstoppable Partner API](/partner/index.md)
+  - [Login with Unstoppable](/identity/overview/login-with-unstoppable.md)
+  - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
   - [Reverse Resolution](/reverse-resolution/index.md)
   - [Domain Management](/manage-domains/index.md)
   - [Crypto Payments](/crypto-payments/index.md)
