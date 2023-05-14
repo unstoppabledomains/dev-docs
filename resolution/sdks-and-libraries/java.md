@@ -18,7 +18,7 @@ Resolution Java can be installed with using the [JitPack](https://jitpack.io/#un
 ```java
 DomainResolution resolution = Resolution
   .builder()
-  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+  // obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key
   .udUnsClient("<api_key>")
   .znsProviderUrl("https://api.zilliqa.com")
   .build();

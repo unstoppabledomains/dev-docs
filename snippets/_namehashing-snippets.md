@@ -2,14 +2,14 @@ You can generate the [namehash](/getting-started/glossary.md#namehash) of a doma
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key
 const resolution = new Resolution({ apiKey: "<api_key>" });
 let namehash = resolution.namehash("brad.crypto", "UNS");
 ```
 
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-java for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-java for more initialization options
 DomainResolution resolution = new Resolution("<api_key>");
 String namehash = resolution.getNamehash("brad.crypto", "UNS");
 ```
@@ -17,7 +17,7 @@ String namehash = resolution.getNamehash("brad.crypto", "UNS");
 ```swift Swift
 import UnstoppableDomainsResolution
 
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
 guard let resolution = try? Resolution(apiKey: "<api_key>") else {
   print ("Init of Resolution instance failed...")
   return
@@ -35,7 +35,7 @@ import (
 )
 
 func main() {
-    // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-go for more initialization options
+    // obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-go for more initialization options
     uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
     namehash, _ := uns.Namehash("brad.crypto")
     fmt.Println("The namehash for brad.crypto is", namehash)

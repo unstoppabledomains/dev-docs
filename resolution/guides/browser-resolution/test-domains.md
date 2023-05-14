@@ -30,7 +30,7 @@ Check records with the [Resolution Libraries](/resolution/sdks-and-libraries/jav
 ```typescript JavaScript
 import Resolution from "@unstoppabledomains/resolution/build/Resolution";
 
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 resolution.allRecords("udtestdev-dns-ipfs.crypto").then((records) => {
   console.log(records);
@@ -66,7 +66,7 @@ $ resolution -d udtestdev-dns-ipfs.crypto -a
 ```swift Swift
 import UnstoppableDomainsResolution
 
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
 guard let resolution = try? Resolution(apiKey: "<api_key>") else {
   print ("Init of Resolution instance failed...")
   return
@@ -102,7 +102,7 @@ import java.util.Map;
 public class Main {
   public static void main(String[] args) {
     try {
-      // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-java for more initialization options
+      // obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-java for more initialization options
       DomainResolution resolution = new Resolution("<api_key>");
       Map<String, String> records = res.getAllRecords("udtestdev-dns-ipfs.crypto");
       for (Map.Entry<String, String> entry : records.entrySet()) {
@@ -137,7 +137,7 @@ import (
 )
 ​
 func main() {
-  // obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution-go for more initialization options
+  // obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-go for more initialization options
   uns, _ := resolution.NewUnsBuilder().SetUdClient("<api_key>").Build()
   allUnsRecords, _ := uns.AllRecords("udtestdev-dns-ipfs.crypto")
   fmt.Println("Records for udtestdev-dns-ipfs.crypto", allUnsRecords)
