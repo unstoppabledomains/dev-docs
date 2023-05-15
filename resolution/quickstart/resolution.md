@@ -95,7 +95,7 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
 
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 resolution
     .addr('domain-with-error.crypto', 'ETH')
@@ -142,7 +142,7 @@ Retrieve any record of a domain. Applications sometimes set custom records for a
 
 ```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function resolveCustomRecord(domain, record) {
@@ -161,7 +161,7 @@ The resolution library provides a method for resolving the addresses of tickers 
 
 ```javascript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner. See https://github.com/unstoppabledomains/resolution for more initialization options
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 
 resolution

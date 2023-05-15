@@ -7,7 +7,7 @@ description: This page provides a high-level overview of the Resolution Service 
 
 ## Acquire an API Key
 
-Before you can make any request to the Resolution Service API, you must acquire an API key from Unstoppable Domains. Please email <partnerengineering@unstoppabledomains.com> to request an API key for your integration.
+Before you can make any request to the Resolution Service API, you must acquire an API key from Unstoppable Domains. Please refer to this [document](https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#set-up-partner-api-access-guide) to acquire an API key or email <partnerengineering@unstoppabledomains.com> to request an API key for your integration.
 
 :::info
 The API key provided by Unstoppable Domains is free to acquire (no cost to open source projects). However, storing the keys in a secret manager or environment variables for open-source projects like other third-party APIs is advisable.

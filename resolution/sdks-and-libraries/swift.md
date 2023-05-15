@@ -41,7 +41,7 @@ package.dependencies.append(
 
 ```swift
 import UnstoppableDomainsResolution
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key
 guard let resolution = try? Resolution(apiKey: "<api_key>") else {
   print ("Init of Resolution instance failed...")
   return
@@ -80,7 +80,7 @@ let resolution = try Resolution(configs: Configurations(
 ```swift
 import UnstoppableDomainsResolution
 
-// obtain a key from https://unstoppabledomains.com/partner-api-dashboard if you are a partner
+// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key
 guard let resolution = try? Resolution(apiKey: "<api_key>") else {
   print ("Init of Resolution instance failed...")
   return
