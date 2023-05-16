@@ -64,6 +64,8 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .hi
 - .kresus
 - .polygon
+- .anime
+- .manga
 - .zil \*
 
 :::warning \* Login with Unstoppable only supports `.zil` domains that have been bridged to the Polygon blockchain.
