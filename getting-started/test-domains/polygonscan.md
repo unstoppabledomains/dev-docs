@@ -13,14 +13,14 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 1. Configure your Metamask wallet for Polygon
 
-* Go to [**Metamask**](https://metamask.io) **→ Settings → Networks.**
-* Press **Add Network** button.
-* Fill fields with the following values:
-  * **Network Name:** Mumbai
-  * **New RPC URL:** [https://polygon-rpc.com/](https://polygon-rpc.com/)
-  * **Chain ID:** 80001
-  * **Currency Symbol:** MATIC
-  * **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)
+- Go to [**Metamask**](https://metamask.io) **→ Settings → Networks.**
+- Press **Add Network** button.
+- Fill fields with the following values:
+  - **Network Name:** Mumbai
+  - **New RPC URL:** [https://polygon-rpc.com/](https://polygon-rpc.com/)
+  - **Chain ID:** 80001
+  - **Currency Symbol:** MATIC
+  - **Block Explorer URL:** [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com)
 
 <figure>
 
@@ -31,10 +31,10 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 2. Get free MATIC tokens from Polygon Faucet
 
-* Go to Faucet Page: [https://faucet.polygon.technology/](https://faucet.polygon.technology).
-* Choose MATIC token and Mumbai network.
-* Enter your wallet address.
-* Click **Submit** button.
+- Go to Faucet Page: [https://faucet.polygon.technology/](https://faucet.polygon.technology).
+- Choose MATIC token and Mumbai network.
+- Enter your wallet address.
+- Click **Submit** button.
 
 <figure>
 
@@ -60,16 +60,18 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0xfdb51f7f56d9b1149db5ce99afcf60dda4416fd6fb8dc0649fec13cd03e1803e = 'hi';
 0x2acf53593112265ba651274f0e33a6b3fe86f92bbee4d39211540592fde6b0f3 = 'kresus';
 0xed9ce6b49a0e2c56c57c86795b131bd6df792312183994c3cf3de1516cfe92d6 = 'polygon';
+0xaf4d61a6acdda7379d6f90207923aeb080994d0f1aaba4b8b24a14f965b2bb7c = 'anime';
+0x57ea207b3238a69d8a9a53252de172f2ceae1d856008b13208a203867a707c78 = 'manga';
 ```
 
 For example, the `.dao` domain ending namehash is `0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553`.
 
 ## Step 4: Write the Polygonscan Smart Contract Request
 
-* Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
-* Choose **Write as Proxy** tab.
-* Connect your wallet (Goerli).
-* Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, domain ending namehash, and test domain suffix.
+- Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
+- Choose **Write as Proxy** tab.
+- Connect your wallet (Goerli).
+- Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, domain ending namehash, and test domain suffix.
 
 <figure>
 
@@ -78,7 +80,7 @@ For example, the `.dao` domain ending namehash is `0xb5f2bbf81da581299d4ff7af605
 <figcaption>Enter data for 'claim to records' for Polygonscan domain (Layer2)</figcaption>
 </figure>
 
-* Click the **Write** button to start the transaction.
+- Click the **Write** button to start the transaction.
 
 :::success Congratulations!
 You're the new proud owner of a test domain on Polygon Mumbai testnet. Happy hacking!
