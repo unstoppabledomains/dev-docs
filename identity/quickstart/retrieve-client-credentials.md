@@ -55,16 +55,17 @@ Because pop-ups are a more integration friendly approach, every integration path
 
 For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboard`, and `moralis`, UAuth provides packages that help you wrap a new UAuth instance in an interface that each library supports. After configuring these packages, you can continue using the web3 library normally.
 
-| Integration Guide                                                                               |                                     Example Project                                      | Web3 Provider |        Package        |  Front-end UI  |
-| ----------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------: | :-----------: | :-------------------: | :------------: |
-| [Login with Pop-up](/identity/quickstart/login-with-pop-up.md)       |        [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/)        |   &#10060;    |      `@uauth/js`      |   JavaScript   |
-| [Login without Pop-up](/identity/quickstart/login-without-pop-up.md) |                                            -                                             |   &#10060;    |      `@uauth/js`      |     React      |
-| [Web3 React](/identity/quickstart/other-integration-paths/web3-react.md)              | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) |    &#9989;    |  `@uauth/web3-react`  |  `web3-react`  |
-| [Web3 Modal](/identity/quickstart/other-integration-paths/web3-modal.md)              |  [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)  |    &#9989;    |  `@uauth/web3modal`   |  `web3-modal`  |
-| [Web3 Onboard](/identity/quickstart/other-integration-paths/web3-onboard.md)          |                                            -                                             |    &#9989;    | `@web3-onboard/uauth` | `web3-onboard` |
-| [Moralis](/identity/quickstart/other-integration-paths/moralis.md)                    |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
-| [Node.js Server](/identity/quickstart/other-integration-paths/node-js.md)      |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
-| [Auth0](/identity/quickstart/other-integration-paths/auth0.md)                        |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
+| Integration Guide                                                            |                                     Example Project                                      | Web3 Provider |        Package        |  Front-end UI  |
+| ---------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------: | :-----------: | :-------------------: | :------------: |
+| [Login with Pop-up](/identity/quickstart/login-with-pop-up.md)               |        [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/)        |   &#10060;    |      `@uauth/js`      |   JavaScript   |
+| [Login without Pop-up](/identity/quickstart/login-without-pop-up.md)         |                                            -                                             |   &#10060;    |      `@uauth/js`      |     React      |
+| [Web3 React](/identity/quickstart/other-integration-paths/web3-react.md)     | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) |    &#9989;    |  `@uauth/web3-react`  |  `web3-react`  |
+| [Web3 Modal](/identity/quickstart/other-integration-paths/web3-modal.md)     |  [web3modal](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3modal/)  |    &#9989;    |  `@uauth/web3modal`   |  `web3-modal`  |
+| [Web3 Onboard](/identity/quickstart/other-integration-paths/web3-onboard.md) |                                            -                                             |    &#9989;    | `@web3-onboard/uauth` | `web3-onboard` |
+| [Moralis](/identity/quickstart/other-integration-paths/moralis.md)           |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
+| [Node.js Server](/identity/quickstart/other-integration-paths/node-js.md)    |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
+| [Auth0](/identity/quickstart/other-integration-paths/auth0.md)               |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
+| [WAGMI](/identity/quickstart/other-integration-paths/wagmi.md)               |      [WAGMI](https://github.com/unstoppabledomains/uauth/tree/main/examples/wagmi)       |   &#10060;    |    `@uauth/wagmi`     |    `wagmi`     |
 
 :::info
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.

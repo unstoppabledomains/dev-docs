@@ -39,6 +39,8 @@ pages:
             page: quickstart/other-integration-paths/moralis.md
           - label: Auth0
             page: quickstart/other-integration-paths/auth0.md
+          - label: WAGMI
+            page: quickstart/other-integration-paths/wagmi.md
     separatorLine: true
   - group: Guides
     expanded: false
