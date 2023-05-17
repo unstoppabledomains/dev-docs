@@ -6,8 +6,6 @@ showNextButton: false
 
 # WAGMI Guide: Login With Unstoppable
 
-This is the guide
-
 ## Step 1: Install the Libraries
 
 Install with `yarn` or `npm`.
