@@ -1,8 +1,10 @@
 type: reference-docs
 versions:
-  - definitionId: partner-v3
+  - id: partner-v3
+    definitionId: partner-v3
     title: v3 (Latest)
-  - definitionId: partner-v2
+  - id: partner-v2
+    definitionId: partner-v2
     title: v2 (Legacy)
 settings:
   pagination: none
