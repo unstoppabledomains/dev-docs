@@ -1,0 +1,18 @@
+type: reference-docs
+versions:
+  - definitionId: partner-v3
+    title: v3 (Latest)
+  - definitionId: partner-v2
+    title: v2 (Legacy)
+settings:
+  pagination: none
+  showConsole: true
+  generateCodeSamples:
+    languages:
+      - lang: curl
+      - lang: Node.js
+      - lang: Python
+      - lang: Java
+      - lang: C#
+      - lang: PHP
+  hideDownloadButton: true
