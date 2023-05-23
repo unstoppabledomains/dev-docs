@@ -67,8 +67,8 @@ There are several ways to track the status of transactions submitted to the Doma
 
 | Endpoint           | Description                                                               | Integration Guides                                                                                      |
 | ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Get Domain Action  | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetAction)  |
-| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address  | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner-v2/#operation/GetActions) |
+| Get Domain Action  | retrieve the details of a domain action request with its domain action ID | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner/v2/#operation/GetAction)  |
+| Get Domain Actions | retrieve the domain actions performed by a user, domain or owner address  | [Get Domain Action Guide](https://docs.unstoppabledomains.com/openapi/partner/v2/#operation/GetActions) |
 
 ## Fork Our Postman Collection
 
