@@ -1,9 +1,7 @@
 pages:
   - page: resolution.page.yaml
     separatorLine: true
-  - page: partner-v2.page.yaml
-    separatorLine: true
-  - page: partner-v3.page.yaml
+  - page: partner.page.yaml
     separatorLine: true
   - page: profile-v1.page.yaml
     separatorLine: true

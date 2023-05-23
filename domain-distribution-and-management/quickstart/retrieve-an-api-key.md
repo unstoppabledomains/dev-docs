@@ -86,7 +86,7 @@ Request one of the following keys depending on your current usage. You **might**
 </figure>
 
 ### API Key
-Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner-v3/) for supported use cases.
+Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/) for supported use cases.
 
 When you click on the `Request key`, an email will be sent to our `Partner engineering team`. The team will be contacting you in shortly via the email you login with or the one submitted when requesting to acquire the key.
 
