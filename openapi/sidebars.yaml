@@ -9,3 +9,5 @@ pages:
     separatorLine: true
   - page: loginref.page.yaml
     separatorLine: true
+  - page: partner.page.yaml
+    separatorLine: true
