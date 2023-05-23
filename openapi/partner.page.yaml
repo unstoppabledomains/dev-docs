@@ -3,6 +3,7 @@ versions:
   - id: latest
     definitionId: partner-v3
     title: v3 (Latest)
+    isDefault: true
   - id: v2
     definitionId: partner-v2
     title: v2 (Legacy)
