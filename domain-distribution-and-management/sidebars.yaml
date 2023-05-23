@@ -46,12 +46,10 @@ pages:
   - group: Tech References
     expanded: false
     pages:
-      - label: Partner API v2
-        page: ../openapi/partner-v2.page.yaml
+      - label: Partner API
+        page: ../openapi/partner.page.yaml
       - label: Partner API v2 Error codes
         page: partner-api-v2/error-codes.md
-      - label: Partner API v3
-        page: ../openapi/partner-v3.page.yaml
       - label: Smart Contracts
         page: ../smart-contracts/quick-start/manage-domain-records.md
     separatorLine: true
