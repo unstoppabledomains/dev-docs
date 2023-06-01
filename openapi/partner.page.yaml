@@ -9,6 +9,7 @@ versions:
     title: v2 (Legacy)
 settings:
   pagination: none
+  corsProxyUrl: https://cors.redoc.ly
   showConsole: true
   generateCodeSamples:
     languages:
