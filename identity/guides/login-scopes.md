@@ -18,7 +18,7 @@ The scopes included in the authorization request are determined by the `scope` p
 
 ```json
 {
-  "scope": "openid wallet email:optional"
+  "scope": "openid wallet email:optional messaging:notifications:optional"
 }
 ```
 
@@ -42,6 +42,7 @@ Login with Unstoppable supports the following scopes which are detailed below:
 - [profile](#profile)
 - [social](#social)
 - [badges](#badges)
+- [notification](#notification)
 
 ## Optional Scopes
 
@@ -152,3 +153,9 @@ The Login with Unstoppable `badges` scope is used to retrieve a list of badges a
 
 <figcaption>Example <code>badges</code> claim</figcaption>
 </figure>
+
+## badges
+
+`optional: true`
+
+The Login with Unstoppable `messaging` scope is used to request end users to opt-in to receive notification messages. See the B2U blog post for how it works.
