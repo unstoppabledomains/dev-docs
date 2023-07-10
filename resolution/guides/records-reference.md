@@ -90,20 +90,20 @@ Cryptocurrency address of ticker version
 Wallet address of specific token can be derived from block chain family and network.
 See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-getaddress) for how to resolve the address format
 
-**`crypto.EVM.address`**
+**`token.EVM.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
 | `0x[0-9a-fA-F]{40}` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 
-**`crypto.EVM.ETH.address`**
+**`token.EVM.ETH.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
 | `0x[0-9a-fA-F]{40}` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 
 
-**`crypto.EVM.AVAX.USDT.address`**
+**`token.EVM.AVAX.USDT.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
