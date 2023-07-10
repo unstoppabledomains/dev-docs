@@ -107,6 +107,153 @@ import Resolution from "@unstoppabledomains/resolution";
 const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```
 
+## Resolution Example:
+
+### Resolve wallet address using `addr`
+
+This API is used to retrieve wallet address for single address record. (See
+[Cryptocurrency payment](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#cryptocurrency-payments)
+section for the record format)
+
+With `homecakes.crypto` has `crypto.ETH.address` on-chain:
+
+```javascript
+function getWalletAddr(domain, ticker) {
+  resolution
+    .addr(domain, ticker)
+    .then((address) =>
+      console.log(`Domain ${domain} has address for ${ticker}: ${address}`),
+    )
+    .catch(console.error);
+}
+getWalletAddr('homecakes.crypto', 'ETH');
+// Domain homecakes.crypto has address for ETH: 0xe7474D07fD2FA286e7e0aa23cd107F8379085037
+```
+
+### Resolve multi-chain address format
+
+This API is used to retrieve wallet address for multi-chain address records.
+(See
+[multi-chain currency](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#multi-chain-currencies))
+
+With `aaron.x` has `crypto.AAVE.version.ERC20.address` on-chain:
+
+```javascript
+function getMultiChainWalletAddr(domain, ticker, network) {
+  resolution
+    .multiChainAddr(domain, ticker, network)
+    .then((address) =>
+      console.log(
+        `Domain ${domain} has address for ${ticker} on network ${network}: ${address}`,
+      ),
+    )
+    .catch(console.error);
+}
+getMultiChainWalletAddr('aaron.x', 'AAVE', 'ETH');
+// Domain aaron.x has address for AAVE on network ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+```
+
+### Resolve wallet address using `getAddress`
+
+This (beta) API can be used to resolve different formats
+
+```javascript
+function getWalletAddress(domain, network, token) {
+  resolution
+    .getAddress(domain, network, token)
+    .then((address) =>
+      console.log(
+        `Domain ${domain} has address for ${token} on ${network}: ${address}`,
+      ),
+    )
+    .catch(console.error);
+}
+```
+
+**Resolve single address format (similar to **`addr`** API)**
+
+With `homecakes.crypto` has a `crypto.ETH.address` record set on-chain:
+
+```javascript
+getWalletAddress('homecakes.crypto', 'ETH', 'ETH');
+// Domain homecakes.crypto has address for ETH on ETH: 0xe7474D07fD2FA286e7e0aa23cd107F8379085037
+```
+
+**Resolve multi-chain currency address format (See
+[multi-chain currency](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#multi-chain-currencies))**
+
+With `aaron.x` has a `crypto.AAVE.version.ERC20.address` record set to
+`0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af`. The `ERC20` indicates it's a token
+on `ETH` network:
+
+```javascript
+getWalletAddress('aaron.x', 'ETH', 'AAVE');
+// Domain aaron.x has address for AAVE on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+```
+
+**Derive wallet addresses within the same blockchain network and blockchain
+family.**
+
+The API can also be used by crypto exchanges to infer wallet addresses. In
+centralized exchanges, users have same wallet addresses on different networks
+with same wallet family.
+
+With `blockchain-family-keys.x` only has `token.EVM.address` record on-chain.
+The API resolves to same wallet address for tokens live on EVM compatible
+networks.
+
+```javascript
+getWalletAddress('blockchain-family-keys.x', 'ETH', 'AAVE');
+// Domain blockchain-family-keys.x has address for AAVE on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+
+getWalletAddress('blockchain-family-keys.x', 'ETH', 'ETH');
+// Domain blockchain-family-keys.x has address for ETH on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+
+getWalletAddress('blockchain-family-keys.x', 'AVAX', 'USDT');
+// Domain blockchain-family-keys.x has address for USDT on AVAX: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+```
+
+With `uns-devtest-nickshatilo-withdraw-test2.x` only has `token.EVM.ETH.address`
+record on chain. The API resolves to the same wallet address for tokens
+specifically on Ethereum network.
+
+```javascript
+getWalletAddress('uns-devtest-nickshatilo-withdraw-test2.x', 'ETH', 'AAVE');
+// Domain blockchain-family-keys.x has address for AAVE on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+
+getWalletAddress('uns-devtest-nickshatilo-withdraw-test2.x', 'ETH', 'MATIC');
+// Domain blockchain-family-keys.x has address for ETH on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+
+getWalletAddress('uns-devtest-nickshatilo-withdraw-test2.x', 'ETH', 'USDT');
+// Domain blockchain-family-keys.x has address for USDT on ETH: 0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af
+
+getWalletAddress('uns-devtest-nickshatilo-withdraw-test2.x', 'MATIC', 'USDT');
+// won't work
+```
+
+The API is compatible with other address formats. If a domain has multiple
+address formats set, it will follow the algorithm described as follow:
+
+if a domain has following records set:
+
+```
+token.EVM.address
+crypto.USDC.version.ERC20.address
+token.EVM.ETH.USDC.address
+crypto.USDC.address
+token.EVM.ETH.address
+```
+
+`getAddress(domain, 'ETH', 'USDC')` will lookup records in the following order:
+
+```
+1. token.EVM.ETH.USDC.address
+2. crypto.USDC.address
+3. crypto.USDC.version.ERC20.address
+4. token.EVM.ETH.address
+5. token.EVM.address
+```
+
 ## Error Handling
 
 <embed src="/snippets/_res-lib-error-intro.md" />
