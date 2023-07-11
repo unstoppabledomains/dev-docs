@@ -37,7 +37,7 @@ There are several ways to integrate with Unstoppable's Partner API, detailed in 
 | Paid domains: Redirect URL With Auto-Configured Crypto Records | generate a URL to redirect payments to Unstoppable Domains to be processed and automatically configure domain records, does not require native paid domain flow | [Redirect URL Payments With Auto-Configured Crypto Records Guide](../../guides/purchase-domains-with-redirect-url/#redirect-url-payments-with-auto-configured-crypto-records-guide) |
 
 :::info
-Unstoppable Domains provides a [Sandbox Environment](set-up-sandbox-for-testing.md) for partners to test their integrations.
+Unstoppable Domains provides a [Sandbox Environment](/domain-distribution-and-management/quickstart/retrieve-an-api-key/#set-up-ud-sandbox-for-testing-guide) for partners to test their integrations.
 :::
 
 ## Considerations
