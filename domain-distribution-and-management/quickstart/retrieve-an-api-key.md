@@ -12,7 +12,7 @@ redirectFrom:
 This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 
 :::warning
-The Partner API only supports domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](/manage-domains/polygon-release-notes.md) to get started.
+The Partner API only supports domains and wallets on the Polygon L2 network.
 :::
 
 ## Step 1: Sign Up to Partner Dashboard
@@ -99,7 +99,7 @@ Click `Reveal Key` under `Legacy API key` to acquire your API Key
 
 ## Step 3: Configure Payment Information
 
-The Partner API must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
+The Partner API v2 (Legacy) must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
 
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.
@@ -137,7 +137,7 @@ You have successfully accessed and set up the Unstoppable Domains Sandbox Enviro
 
 ## Get Started with Partner API v2 (Legacy)
 
-Follow the [Partner API v2 (Legacy) integration guide](../partner-api-v2/partner-api-v2-integration.md) to get started.
+Follow the [Partner API v2 (Legacy) integration guide](../partner-api-v2/quickstart/partner-api-v2-integration.md) to get started.
 
 <embed src="/snippets/_discord.md" />
 
