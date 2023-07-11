@@ -59,11 +59,11 @@ For a `Regular` transaction, the process is slightly different. After signing th
 
 ## Step 3: Submit Domain Action Signature
 
-The Domain Actions API has an endpoint called [Submit Domain Action Signature](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign) that allows users to submit the signatures and transaction hashes for their signed transactions. This allows Unstoppable Domains to verify the signatures and confirm that the necessary fees have been paid.
+The Domain Actions API (legacy) has an endpoint that allows users to submit the signatures and transaction hashes for their signed transactions. This allows Unstoppable Domains to verify the signatures and confirm that the necessary fees have been paid.
 
 ## Step 4: Track the Transaction Status
 
-There are several ways to track the status of transactions submitted to the Domain Actions API, detailed in the table below.
+There are several ways to track the status of transactions submitted to the Domain Actions API (Legacy), detailed in the table below.
 
 | Endpoint           | Description                                                               | Integration Guides                                                                                      |
 | ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |

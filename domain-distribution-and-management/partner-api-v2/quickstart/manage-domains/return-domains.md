@@ -8,7 +8,7 @@ showNextButton: false
 
 # Return Domains
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

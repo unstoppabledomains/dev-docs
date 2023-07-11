@@ -9,39 +9,45 @@ pages:
     pages:
       - label: Retrieve an API key
         page: quickstart/retrieve-an-api-key.md
-      - label: Search Domains
-        page: quickstart/search-domains.md
-      - label: Purchase Domains with Stripe
-        page: quickstart/purchase-domains-with-stripe.md
-      - group: Manage Domains
+      - group: Partner API v2 (Legacy)
         expanded: false
         pages:
-          - label: Overview
-            page: quickstart/manage-domains/overview.md
-          - label: Update Records
-            page: quickstart/manage-domains/update-records.md
-          - label: Return Domains
-            page: quickstart/manage-domains/return-domains.md
-          - label: Set Reverse Resolution
-            page: quickstart/manage-domains/set-reverse-resolution.md
-          - label: Transfer
-            page: quickstart/manage-domains/transfer.md
-          - label: Deposit or Withdraw
-            page: quickstart/manage-domains/deposit-or-withdraw.md
+        - label: Search Domains
+          page: quickstart/search-domains.md
+        - label: Purchase Domains with Stripe
+          page: quickstart/purchase-domains-with-stripe.md
+        - group: Manage Domains
+          expanded: false
+          pages:
+            - label: Overview
+              page: quickstart/manage-domains/overview.md
+            - label: Update Records
+              page: quickstart/manage-domains/update-records.md
+            - label: Return Domains
+              page: quickstart/manage-domains/return-domains.md
+            - label: Set Reverse Resolution
+              page: quickstart/manage-domains/set-reverse-resolution.md
+            - label: Transfer
+              page: quickstart/manage-domains/transfer.md
+            - label: Deposit or Withdraw
+              page: quickstart/manage-domains/deposit-or-withdraw.md
     separatorLine: true
   - group: Guides
     expanded: false
     pages:
-      - label: Check Domains Availability
-        page: guides/check-domains-availability.md
-      - label: Purchase Domains with Redirect URL
-        page: guides/purchase-domains-with-redirect-url.md
-      - label: Claim or Reserve Free Domains
-        page: guides/claim-or-reserve-free-domains.md
-      - label: Best Practices
-        page: guides/best-practices.md
-      - label: FAQs
-        page: guides/faq.md
+      - group: Partner API v2 (Legacy)
+        expanded: false
+        pages:
+        - label: Check Domains Availability
+          page: guides/check-domains-availability.md
+        - label: Purchase Domains with Redirect URL
+          page: guides/purchase-domains-with-redirect-url.md
+        - label: Claim or Reserve Free Domains
+          page: guides/claim-or-reserve-free-domains.md
+        - label: Best Practices
+          page: guides/best-practices.md
+        - label: FAQs
+          page: guides/faq.md
     separatorLine: true
   - group: Tech References
     expanded: false

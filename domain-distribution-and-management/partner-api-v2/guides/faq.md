@@ -5,7 +5,7 @@ redirectFrom:
   - /partner/reference/faq/
 ---
 
-# Partner API FAQ
+# Partner API v2 (Legacy) FAQ
 
 ### What happens when the HMAC signature becomes invalid for redirect URL payments?
 
@@ -37,11 +37,11 @@ Unstoppable Domains uses [Fingerprint](https://fingerprint.com/) to verify free 
 
 ### Can the Partner API resell the same domains offered on the UD website?
 
-Yes, you can use the Partner API to resell domains offered for sale on the UD website. However, suppose the domain being purchased is above a certain threshold ($10k). In that case, you must use a cryptocurrency method instead of Stripe or Paypal as these payment processors often decline more significant transactions.
+Yes, you can use the Partner API v2 (Legacy) to resell domains offered for sale on the UD website. However, suppose the domain being purchased is above a certain threshold ($10k). In that case, you must use a cryptocurrency method instead of Stripe or Paypal as these payment processors often decline more significant transactions.
 
 ### Are there any limitations to the Partner API account I should know?
 
-Yes, the Partner API is limited to 60 requests per IP per hour. However, this is subject to change in the future.
+Yes, the Partner API v2 (Legacy) is limited to 60 requests per IP per hour. However, this is subject to change in the future.
 
 ### What happens when a domain is purchased without providing a wallet?
 
@@ -49,4 +49,4 @@ You must provide a wallet address or an email when purchasing a domain. If you o
 
 ### What is the difference between a UD affiliate and a UD partner?
 
-An affiliate uses a link with tracking and re-directs people to run searches on the UD website. Meanwhile, UD partners require developer resources to integrate because partners call Unstoppable Domains Partner API and surfacing results inside their application or page. UD partners can create an immersive experience for their users where they can complete the entire purchase experience using the Partner API without sending traffic directly to Unstoppable Domains website.
+An affiliate uses a link with tracking and re-directs people to run searches on the UD website. Meanwhile, UD partners require developer resources to integrate because partners call Unstoppable Domains Partner API v2 (Legacy) and surfacing results inside their application or page. UD partners can create an immersive experience for their users where they can complete the entire purchase experience using the Partner API without sending traffic directly to Unstoppable Domains website.

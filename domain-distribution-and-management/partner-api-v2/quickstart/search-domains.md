@@ -7,7 +7,7 @@ redirectFrom:
 
 # Search Domains
 
-The Partner API offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
+The Partner API v2 (Legacy) offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
 
 <figure>
 

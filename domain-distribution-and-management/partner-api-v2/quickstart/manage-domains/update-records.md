@@ -8,7 +8,7 @@ showNextButton: false
 
 # Update Domain Records
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 
