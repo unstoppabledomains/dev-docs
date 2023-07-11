@@ -13,7 +13,7 @@ Partner API Integrations will only work on **Polygon L2 network**.
 
 ## Step 1: Locate Your Reseller ID
 
-After [setting up access to the Partner API v2 (Legacy)](../../quickstart/retrieve-an-api-key/), you must obtain your `resellerID` from the `API Panel` of the [Partner Dashboard](https://dashboard.auth.unstoppabledomains.com) to integrate our services into your application for your customers.
+After [setting up access to the Partner API v2 (Legacy)](/domain-distribution-and-management/quickstart/retrieve-an-api-key/), you must obtain your `resellerID` from the `API Panel` of the [Partner Dashboard](https://dashboard.auth.unstoppabledomains.com) to integrate our services into your application for your customers.
 
 ## Step 2: Add Domain Search Functionality
 
