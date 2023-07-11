@@ -9,32 +9,22 @@ redirectFrom:
 
 Domain distribution and managemnt can be achieved via the Unstoppable Partner API and Smart Contracts.
 
-# Partner API Endpoints
+# Partner API
 
-The table below lists all the API endpoints provided by the Partner API, along with a description of their function and links to their documentation. For more information about the endpoints, please consult the [Partner API endpoint specification](https://docs.unstoppabledomains.com/openapi/reference/).
+Our premier solution for domain distribution and management.
+- Claim domains and subdomains
+- Create and manage custody wallets
+- Manage domains, both held in custody and self-custody wallets
 
-| Endpoint                          | Description                                                                                                                                                      | Documentation                                                                                                                     |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Orders Endpoints                  |
-| Buy a Domain or Claim Free Domain | used to buy domains or mint free domains from Unstoppable Domains                                                                                                | [Buy a Domain or Claim Free Domain Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders)             |
-| Get Order Status                  | provides the status of your order and tells if the domain has successfully "minted"                                                                              | [Get Order Status Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetOrder)                                |
-| Domains Endpoints                 |
-| Domain Name Availability          | checks the availability of a domain name before purchase                                                                                                         | [Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomain)                       |
-| Multiple Domain Name Availability | checks the availability of multiple domain names before purchase                                                                                                 | [Multiple Domain Name Availability Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomains)             |
-| Get Domains Suggestions           | provides domain suggestions based on the entered information                                                                                                     | [Get Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestions)            |
-| Get Free Domains Suggestions      | provides free domain suggestions based on entered information if the partner is eligible to offer free domains                                                   | [Get Free Domains Suggestions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestionsFree)   |
-| Reserve Free Domain Name          | reserves a free and available domain for seven days; the domain is automatically unlocked if it is not minted within seven days                                  | [Reserve Free Domain Name Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostDomainReserve)               |
-| Security Endpoints                |
-| Get Fingerprint Public Key        | provides a Fingerprint public key to generate a `Visitor ID` for your order security; the endpoint returns a different key when called to avoid rate limitations | [Get Fingerprint Public Key Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostSecurityFingerprintjsKeys) |
-| Domain Actions Endpoints          |
-| Create Domain Action Request      | provides a list of transactions that need to be signed by the user in order to perform a domain action                                                           | [Create Domain Action Request Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActions)                 |
-| Get Domain Action                 | receives a `domain action Id` and provides a list of transactions that need to be signed by the user in order to perform that action                             | [Get Domain Action Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetAction)                              |
-| Get Domain Actions                | provides domain actions performed by a user, domain or owner address                                                                                             | [Get Domain Actions Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetActions)                            |
-| Submit Domain Action Signature    | submits the required data for a domain action to be executed                                                                                                     | [Submit Domain Action Signature Docs](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostActionSign)            |
+For more information, please consult the [Partner API specification]((https://docs.unstoppabledomains.com/openapi/partner/latest)).
+
+# Partner API v2 (Legacy)
+
+Our legacy Partner API. For more information, please consult the [Partner API v2 (Legacy) specification](https://docs.unstoppabledomains.com/openapi/partner/v2/).
 
 ## Rate Limits
 
-Currently, the rate limits for the Partner API endpoints are set at **60 requests per IP per hour**. Please note that these limits are subject to change in the future.
+Currently, the rate limits for the Partner API v2 (Legacy) endpoints are set at **60 requests per IP per hour**. Please note that these limits are subject to change in the future.
 
 ## Fork Our Postman Collection
 
