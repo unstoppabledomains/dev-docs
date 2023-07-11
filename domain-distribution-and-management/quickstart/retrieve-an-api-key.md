@@ -67,7 +67,7 @@ Update your client information and click `Confirm Changes`
 
 ## Step 3: Obtain an API Key
 
-Navigate to the `API Panel` by clicking the `API` button.
+Navigate to the `API & SDK Panel` by clicking the `API & SDK` button.
 
 <figure>
 
@@ -86,9 +86,21 @@ Request one of the following keys depending on your current usage. You **might**
 </figure>
 
 ### API Key
-Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/) for supported use cases.
+Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/) and [Domain Resolution API](https://docs.unstoppabledomains.com/openapi/resolution/) for supported use cases.
 
-When you click on the `Request key`, an email will be sent to our `Partner engineering team`. The team will be contacting you in shortly via the email you login with or the one submitted when requesting to acquire the key.
+:::warning
+Your API key is only intended for use on your backend servers. Any other usage could result in security risks and or your key being deactivated. Please refer to [Best Practices for Integrating Partner API](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/best-practices/#dont-use-your-secrets-in-the-frontend) for integrating with us.
+:::
+
+By default, you will have access to `Domain Resolution API`.
+
+If you wish to have access to `Partner API v3`, please click `Request access to Partner API v3`. Our `Partner engineering team` team will be contacting you in shortly via email.
+
+
+### SDK Key
+Refer to [Resolution SDKs](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/overview/)
+
+The key is only allowed to be used in Resolution SDKs to interact with EVM RPC providers to query on-chain data. See [example](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#initialize-with-unstoppable-domains-uns-proxy-provider)
 
 ### Legacy API Key
 Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolution/) and [Domain Distribution and Management Overview
