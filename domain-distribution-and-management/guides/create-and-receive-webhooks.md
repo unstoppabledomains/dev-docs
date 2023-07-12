@@ -17,13 +17,13 @@ Webhooks enable applications to be written with reactive, asynchronous logic ins
 
 The Partner API provides [several endpoints for managing webhooks](https://docs.unstoppabledomains.com/openapi/partner/latest/#tag/webhooks).
 
-You will need an absolute URL to your server where we should send webhook requests. For example: `https://api.ud-partner.com/webhooks`. This endpoint should be setup to receive `POST` requests with an `application/json` Content Type.
+You will need an absolute URL to your server where we should send webhook requests. For example: `https://api.my-server.com/webhooks`. This endpoint should be setup to receive `POST` requests with an `application/json` Content Type.
 
 Once you know the URL for your server, you simply need to make a [registration request](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/createWebhook) using that URL and the desired webhook event type. In the following example payload we are using the `OPERATION_FINISHED` webhook event type.
 
 ```json
 {
-  "url": "https://api.ud-partner.com/webhooks",
+  "url": "https://api.my-server.com/webhooks",
   "type": "OPERATION_FINISHED"
 }
 ```
@@ -49,8 +49,8 @@ const app = express();
 app.use(express.json());
 
 
-// Receive the webhook at my-server.com/webhook
-app.post('/webhook', (req, res) => {
+// Receive the webhook at api.my-server.com/webhooks
+app.post('/webhooks', (req, res) => {
   const { body } = req;
   const headers = Object.fromEntries(
       Object.entries(req.headers).filter(
