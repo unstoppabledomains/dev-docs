@@ -126,7 +126,6 @@ import (
     "crypto/hmac"
     "crypto/sha256"
     "encoding/base64"
-    "fmt"
 )
 
 func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey string) bool {
