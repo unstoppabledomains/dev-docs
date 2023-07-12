@@ -3,12 +3,13 @@ title: Transfer Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to transfer domains using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/transfer-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/transfer/
 showNextButton: false
 ---
 
 # Transfer Domains
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **transfer a domain name** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **transfer a domain name** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

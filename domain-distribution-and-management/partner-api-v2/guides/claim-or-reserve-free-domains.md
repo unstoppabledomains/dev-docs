@@ -4,6 +4,7 @@ description: This guide shows how to mint or reserve free domains with your Part
 redirectFrom:
   - /partner/partner-integration-guides/mint-free-domains/
   - /partner/partner-integration-guides/reserve-free-domain-name/
+  - /domain-distribution-and-management/guides/claim-or-reserve-free-domains/
 ---
 
 # Claim Free Domains

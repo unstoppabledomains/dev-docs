@@ -1,13 +1,14 @@
 ---
-title: Best Practices for Integrating Partner API | Unstoppable Domains Developer Portal
-description: This page covers best practices to follow while integrating the Partner API.
+title: Best Practices for Integrating Partner API v2 (Legacy) | Unstoppable Domains Developer Portal
+description: This page covers best practices to follow while integrating the Partner API v2 (Legacy).
 redirectFrom:
   - /partner/reference/best-practices/
+  - /domain-distribution-and-management/guides/best-practices/
 ---
 
-# Best Practices for Integrating Partner API
+# Best Practices for Integrating Partner API v2 (Legacy)
 
-Here are best practices to ensure the proper integration of the Unstoppable Domains Partner API into your applications:
+Here are best practices to ensure the proper integration of the Unstoppable Domains Partner API v2 (Legacy) into your applications:
 
 ## Simplify Your Domain Search Fields With the Domains Suggestions Endpoint
 
@@ -33,10 +34,10 @@ Since distributing Free Domains **requires** strict anti-abuse measures, such as
 
 ## Only Pre-fill Crypto Records if Your App Is a Wallet
 
-Unstoppable Domains Partner API can pre-fill crypto payment addresses for the user during the minting process, which adds complexity to the implementation. Therefore, we only recommend doing this if your application is a wallet since wallets contain the addresses of various cryptos for the user.
+Unstoppable Domains Partner API v2 (Legacy) can pre-fill crypto payment addresses for the user during the minting process, which adds complexity to the implementation. Therefore, we only recommend doing this if your application is a wallet since wallets contain the addresses of various cryptos for the user.
 
 ## Don’t Use Your Secrets in the Frontend
 
-Using your Partner API key from the backend of your application is recommended rather than the frontend. If the API key is placed in the frontend, it becomes accessible by anyone who has access to the client-side code, increasing the risk of unauthorized access or misuse. To protect against this, use the API key from the backend to keep it secure.
+Using your Partner API v2 (Legacy) key from the backend of your application is recommended rather than the frontend. If the API key is placed in the frontend, it becomes accessible by anyone who has access to the client-side code, increasing the risk of unauthorized access or misuse. To protect against this, use the API key from the backend to keep it secure.
 
 <embed src="/snippets/_discord.md" />

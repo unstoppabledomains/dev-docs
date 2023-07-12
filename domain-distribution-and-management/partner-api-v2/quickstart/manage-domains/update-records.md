@@ -3,12 +3,13 @@ title: Update Domain Records Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to update resolution records using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/update-records-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/update-records/
 showNextButton: false
 ---
 
 # Update Domain Records
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **update resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

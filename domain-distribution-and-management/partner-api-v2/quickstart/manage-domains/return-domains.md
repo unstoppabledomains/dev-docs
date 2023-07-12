@@ -3,12 +3,13 @@ title: Return Domains | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to return a domain to Unstoppable Domains and receive a refund using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/return-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/return-domains/
 showNextButton: false
 ---
 
 # Return Domains
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **return a domain to Unstoppable Domains and receive a refund** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

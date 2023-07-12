@@ -3,11 +3,12 @@ title: Search Domains | Unstoppable Domains Developer Portal
 description: This guide shows how to get suggestions of available free and paid domains to purchase with your Partner account.
 redirectFrom:
   - /partner/partner-integration-guides/get-domains-suggestions/
+  - /domain-distribution-and-management/quickstart/search-domains/
 ---
 
 # Search Domains
 
-The Partner API offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
+The Partner API v2 (Legacy) offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
 
 <figure>
 

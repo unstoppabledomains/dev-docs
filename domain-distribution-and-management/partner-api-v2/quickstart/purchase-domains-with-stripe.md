@@ -3,6 +3,7 @@ title: Purchase Domains with Stripe | Unstoppable Domains Developer Portal
 description: This guide shows how to purchase domains using the Stripe payment processing flow. You can track payout information in your Unstoppable Domains Partner account.
 redirectFrom:
   - /partner/partner-integration-guides/stripe-payments/
+  - /domain-distribution-and-management/quickstart/purchase-domains-with-stripe/
 ---
 
 # Purchase Domains with Stripe

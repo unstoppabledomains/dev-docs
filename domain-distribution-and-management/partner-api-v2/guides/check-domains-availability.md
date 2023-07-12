@@ -4,11 +4,12 @@ description: This guide shows how to check the availability of multiple domain n
 redirectFrom:
   - /partner/partner-integration-guides/domain-name-availability/
   - /partner/partner-integration-guides/multiple-domain-name-availability/
+  - /domain-distribution-and-management/guides/check-domains-availability/
 ---
 
 # Check Domains Availability
 
-The Partner API offers an endpoint that lets you check the availability of multiple domain names before purchase to avoid making minting calls to non-available domains. Partners can use this endpoint to implement a bulk domain name search field in their application, allowing users to search for multiple domains simultaneously.
+The Partner API v2 (Legacy) offers an endpoint that lets you check the availability of multiple domain names before purchase to avoid making minting calls to non-available domains. Partners can use this endpoint to implement a bulk domain name search field in their application, allowing users to search for multiple domains simultaneously.
 
 <figure>
 

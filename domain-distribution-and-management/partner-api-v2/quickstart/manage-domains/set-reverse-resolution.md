@@ -3,12 +3,13 @@ title: Set Domain Reverse Resolution Guide | Unstoppable Domains Developer Porta
 description: This guide shows how to configure reverse resolution records using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/set-reverse-resolution-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/set-reverse-resolution/
 showNextButton: false
 ---
 
 # Set Domain Reverse Resolution
 
-The Domain Actions API offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
+The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token
 

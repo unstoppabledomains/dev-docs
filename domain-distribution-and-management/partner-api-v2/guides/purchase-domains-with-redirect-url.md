@@ -4,6 +4,7 @@ description: This guide covers configuring the Partner account to mint paid doma
 redirectFrom:
   - /partner/partner-integration-guides/redirect-url-payments/
   - /partner/partner-integration-guides/redirect-url-payments-with-records/
+  - /domain-distribution-and-management/guides/purchase-domains-with-redirect-url/
 ---
 
 # Redirect URL Payments
