@@ -1,6 +1,6 @@
 ---
-title: Create and Receive Webhooks with the Partner API | Unstoppable Domains Developer Portal
-description: How to create, verify and receive webhooks when using the Partner API
+title: Implementing Webhooks with the Partner API | Unstoppable Domains Developer Portal
+description: How to create, receive and verify webhooks when using the Unstoppable Domains Partner API
 ---
 
 # Webhooks in the Partner API
