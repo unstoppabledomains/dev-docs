@@ -143,6 +143,8 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+// Should be in a class...
+
 public static boolean verifyRequest(String signatureHeader, byte[] rawBodyBytes, String accountApiKey) {
     try {
         Mac mac = Mac.getInstance("HmacSHA256");
@@ -169,6 +171,8 @@ function verifyRequest($signatureHeader, $rawBodyBytes, $accountApiKey) {
 using System;
 using System.Security.Cryptography;
 using System.Text;
+
+// Should be in a class...
 
 public static bool VerifyRequest(string signatureHeader, byte[] rawBodyBytes, string accountApiKey)
 {
