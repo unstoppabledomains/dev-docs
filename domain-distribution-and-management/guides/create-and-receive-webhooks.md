@@ -110,6 +110,76 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
 }
 ```
 
+```python python
+import hashlib
+
+def verify_request(signature_header, raw_body_bytes, account_api_key):
+    computed_signature = hashlib.sha256(account_api_key.encode() + raw_body_bytes).digest()
+    return computed_signature == signature_header
+```
+
+```go go
+import (
+    "crypto/hmac"
+    "crypto/sha256"
+    "encoding/base64"
+    "fmt"
+)
+
+func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey string) bool {
+    key := []byte(accountAPIKey)
+    mac := hmac.New(sha256.New, key)
+    mac.Write(rawBodyBytes)
+    expectedMAC := mac.Sum(nil)
+    computedSignature := base64.StdEncoding.EncodeToString(expectedMAC)
+    return computedSignature == signatureHeader
+}
+```
+
+```java java
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+
+public static boolean verifyRequest(String signatureHeader, byte[] rawBodyBytes, String accountApiKey) {
+    try {
+        Mac mac = Mac.getInstance("HmacSHA256");
+        SecretKeySpec secretKey = new SecretKeySpec(accountApiKey.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+        mac.init(secretKey);
+        byte[] computedSignature = mac.doFinal(rawBodyBytes);
+        String encodedComputedSignature = Base64.getEncoder().encodeToString(computedSignature);
+        return encodedComputedSignature.equals(signatureHeader);
+    } catch (NoSuchAlgorithmException | InvalidKeyException e) {
+        e.printStackTrace();
+    }
+    return false;
+}
+```
+
+```php php
+function verifyRequest($signatureHeader, $rawBodyBytes, $accountApiKey) {
+    $computedSignature = base64_encode(hash_hmac('sha256', $rawBodyBytes, $accountApiKey, true));
+    return $computedSignature === $signatureHeader;
+}
+```
+
+```c# C#
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
+public static bool VerifyRequest(string signatureHeader, byte[] rawBodyBytes, string accountApiKey)
+{
+    using (HMACSHA256 hmac = new HMACSHA256(Encoding.UTF8.GetBytes(accountApiKey)))
+    {
+        byte[] computedSignature = hmac.ComputeHash(rawBodyBytes);
+        string encodedComputedSignature = Convert.ToBase64String(computedSignature);
+        return encodedComputedSignature == signatureHeader;
+    }
+}
+```
 
 When using Node with `express`, you can use the `express.json({ verify: ... })` callback to get access to the raw buffer:
 
