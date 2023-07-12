@@ -37,6 +37,8 @@ pages:
   - group: Guides
     expanded: false
     pages:
+      - label: Create and receive Webhooks
+        page: guides/create-and-receive-webhooks.md
       - group: Partner API v2 (Legacy)
         expanded: false
         pages:
