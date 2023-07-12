@@ -3,6 +3,7 @@ title: Domain Actions API (Legacy) Overview | UD Developer Portal
 description: This page provides a high-level overview of the Domain Actions API hosted by Unstoppable Domains.
 redirectFrom:
   - /partner/domain-actions-guides/overview/
+  - /domain-distribution-and-management/quickstart/manage-domains/overview/
 ---
 
 # Domain Actions API (Legacy) Overview

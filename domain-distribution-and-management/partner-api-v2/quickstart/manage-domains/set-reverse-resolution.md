@@ -3,6 +3,7 @@ title: Set Domain Reverse Resolution Guide | Unstoppable Domains Developer Porta
 description: This guide shows how to configure reverse resolution records using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/set-reverse-resolution-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/set-reverse-resolution/
 showNextButton: false
 ---
 

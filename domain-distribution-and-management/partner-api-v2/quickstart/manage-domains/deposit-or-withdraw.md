@@ -3,6 +3,7 @@ title: Deposit or Withdraw Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to bridge domains between Ethereum and Polygon using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/bridge-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/deposit-or-withdraw/
 showNextButton: false
 ---
 

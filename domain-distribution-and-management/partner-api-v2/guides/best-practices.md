@@ -3,6 +3,7 @@ title: Best Practices for Integrating Partner API v2 (Legacy) | Unstoppable Doma
 description: This page covers best practices to follow while integrating the Partner API v2 (Legacy).
 redirectFrom:
   - /partner/reference/best-practices/
+  - /domain-distribution-and-management/guides/best-practices/
 ---
 
 # Best Practices for Integrating Partner API v2 (Legacy)

@@ -4,6 +4,7 @@ description: This guide shows how to check the availability of multiple domain n
 redirectFrom:
   - /partner/partner-integration-guides/domain-name-availability/
   - /partner/partner-integration-guides/multiple-domain-name-availability/
+  - /domain-distribution-and-management/guides/check-domains-availability/
 ---
 
 # Check Domains Availability

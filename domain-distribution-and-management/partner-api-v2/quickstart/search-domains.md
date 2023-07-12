@@ -3,6 +3,7 @@ title: Search Domains | Unstoppable Domains Developer Portal
 description: This guide shows how to get suggestions of available free and paid domains to purchase with your Partner account.
 redirectFrom:
   - /partner/partner-integration-guides/get-domains-suggestions/
+  - /domain-distribution-and-management/quickstart/search-domains/
 ---
 
 # Search Domains

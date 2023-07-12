@@ -3,6 +3,7 @@ title: Transfer Domains Guide | Unstoppable Domains Developer Portal
 description: This guide shows how to create a domain action request to transfer domains using the Domain Actions API.
 redirectFrom:
   - /partner/domain-actions-guides/transfer-action/
+  - /domain-distribution-and-management/quickstart/manage-domains/transfer/
 showNextButton: false
 ---
 

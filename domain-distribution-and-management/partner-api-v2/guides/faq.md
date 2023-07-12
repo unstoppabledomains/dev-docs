@@ -3,6 +3,7 @@ title: Partner Feature FAQs | Unstoppable Domains Developer Portal
 description: Frequently asked questions about the Partner API of Unstoppable Domains.
 redirectFrom:
   - /partner/reference/faq/
+  - /domain-distribution-and-management/guides/faq/
 ---
 
 # Partner API v2 (Legacy) FAQ
