@@ -32,15 +32,13 @@ That's it! Now your server will receive `POST` requests anytime an operation com
 
 ## Receiving Webhooks
 
-As mentioned in the previous section, your server should be prepared to receive HTTP `POST` requests that have an `application/json` body. The request to your server will include a JSON payload and headers from our server that you can use to process the update.
+Your server should be prepared to receive HTTP `POST` requests that have an `application/json` body. The request to your server will include a JSON payload and headers from our server that you can use to process the update. The request body will depend on the webhook event type. In the example from the previous section, we registered an `OPERATION_FINISHED` webhook. For the exact request to expect, [see the API specification](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/webhook_OperationFinished).
 
-In the example from the previous section, we registered an `OPERATION_FINISHED` webhook. For the exact request to expect, [see the API specification](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/webhook_OperationFinished).
+Other considerations:
+- In addition to processing the JSON payload, you should check the `x-ud-timestamp` header to ensure you are not receiving updates out of order.
+- Your application needs to respond with a `200` status code to confirm it successfully received the request. Any other response status will result in us retrying delivery of the webhook.
 
-In addition to processing the JSON payload, you should check the `x-ud-timestamp` header to ensure you are not receiving updates out of order.
-
-Your application needs to respond with a `200` status code to confirm it successfully received the request. Any other response status will result in us retrying delivery of the webhook.
-
-Here is a simple example of webhook-receiving server using Node and `express`:
+Here is a simple example of a webhook-receiving server using Node and `express`:
 
 ```typescript
 import * as express from 'express';
