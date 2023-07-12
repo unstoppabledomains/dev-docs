@@ -44,8 +44,8 @@ Here is a simple example of a webhook-receiving server using Node and `express`:
 import * as express from 'express';
 const app = express();
 
+// Setup express to receive JSON payloads
 app.use(express.json());
-
 
 // Receive the webhook at api.my-server.com/webhooks
 app.post('/webhooks', (req, res) => {
