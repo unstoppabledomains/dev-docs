@@ -112,9 +112,12 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
 
 ```python python
 import hashlib
+import hmac
+import base64
 
 def verify_request(signature_header, raw_body_bytes, account_api_key):
-    computed_signature = hashlib.sha256(account_api_key.encode() + raw_body_bytes).digest()
+    computed_hmac = hmac.new(account_api_key.encode(), raw_body_bytes, hashlib.sha256).digest()
+    computed_signature = base64.b64encode(computed_hmac).decode()
     return computed_signature == signature_header
 ```
 
@@ -139,6 +142,7 @@ func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey st
 ```java java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
