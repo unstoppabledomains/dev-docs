@@ -40,6 +40,43 @@ In addition to processing the JSON payload, you should check the `x-ud-timestamp
 
 Your application needs to respond with a `200` status code to confirm it successfully received the request. Any other response status will result in us retrying delivery of the webhook.
 
+Here is a simple example of webhook-receiving server using Node and `express`:
+
+```typescript
+import * as express from 'express';
+const app = express();
+
+app.use(express.json());
+
+
+// Receive the webhook at my-server.com/webhook
+app.post('/webhook', (req, res) => {
+  const { body } = req;
+  const headers = Object.fromEntries(
+      Object.entries(req.headers).filter(
+        ([key]) =>
+          key.toLowerCase().startsWith('x-ud-')
+      ),
+    );
+
+  // Log the headers and body
+  console.log(
+    'Received Webhook\nHEADERS:\n',
+    JSON.stringify(headers, null, 2),
+    '\nBODY:\n',
+    JSON.stringify(body, null, 2),
+  );
+
+  // Send successful response to the UD server
+  res.sendStatus(200);
+});
+
+const port = process.env.PORT ?? 3000;
+app.listen(port, () => {
+  console.log('Started webhook dev server on port', port);
+});
+```
+
 ### Webhook Delivery Retries
 
 If your application does not respond with a `200` status code, we will attempt to retry the delivery up to 8 times.
@@ -76,7 +113,7 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
 ```
 
 
-When using Node with `express`, you can use the `verify` callback to get access to the raw buffer:
+When using Node with `express`, you can use the `express.json({ verify: ... })` callback to get access to the raw buffer:
 
 ```typescript
 import * as express from 'express';
