@@ -11,6 +11,7 @@ This reference page is divided into sections, grouping records by their namespac
 
 - [Records Reference](#records-reference)
   - [Cryptocurrency payments](#cryptocurrency-payments)
+    - [Single-chain currencies](#single-chain-currencies)
     - [Multi-chain currencies](#multi-chain-currencies)
     - [Blockchain Family, Network, Token Level Addresses](#blockchain-family-network-token-level-addresses)
   - [Browser resolution](#browser-resolution)
@@ -27,6 +28,8 @@ A list of keys supported by Unstoppable Domains can be found in [reference json 
 :::
 
 ## Cryptocurrency payments
+
+### Single-chain currencies
 
 See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-addr) for how to resolve the address format
 
@@ -90,24 +93,34 @@ Cryptocurrency address of ticker version
 Wallet address of specific token can be derived from block chain family and network.
 See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-getaddress) for how to resolve the address format
 
-**`crypto.EVM.address`**
+**`token.EVM.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
 | `0x[0-9a-fA-F]{40}` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 
-**`crypto.EVM.ETH.address`**
+**`token.<FAMILY>.address`**
+Cryptocurrency address of blockchain family version
+
+
+**`token.EVM.ETH.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
 | `0x[0-9a-fA-F]{40}` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
 
+**`token.<FAMILY>.<NETWORK>.address`**
+Cryptocurrency address of blockchain network version
 
-**`crypto.EVM.AVAX.USDT.address`**
+
+**`token.EVM.AVAX.USDT.address`**
 
 | Format              | Example                                      |
 | ------------------- | -------------------------------------------- |
 | `0x[0-9a-fA-F]{40}` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
+
+**`token.<FAMILY>.<NETWORK>.<TOKEN>.address`**
+Cryptocurrency address of token version
 
 ## Browser resolution
 
