@@ -37,6 +37,8 @@ pages:
   - group: Guides
     expanded: false
     pages:
+      - label: Implement Webhooks
+        page: guides/implementing-webhooks.md
       - group: Partner API v2 (Legacy)
         expanded: false
         pages:
