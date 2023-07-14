@@ -11,10 +11,6 @@ redirectFrom:
 
 This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
 
-:::warning
-The Partner API only supports domains and wallets on the Polygon L2 network.
-:::
-
 ## Step 1: Sign Up to Partner Dashboard
 
 You must create an Unstoppable Domains Partner account in [Partner Dashboard](https://dashboard.auth.unstoppabledomains.com). You may **Login** using your existing Unstoppable Domains account information or **Sign Up** if you don’t already have an account.
