@@ -1601,27 +1601,17 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/ajv@^8.6.4":
-  version "8.6.4"
-  resolved "https://registry.yarnpkg.com/@redocly/ajv/-/ajv-8.6.4.tgz#94053e7a9d4146d1a4feacd3813892873f229a85"
-  integrity sha512-y9qNj0//tZtWB2jfXNK3BX18BSBp9zNR7KE7lMysVHwbZtY392OJCjm6Rb/h4UHH2r1AqjNEHFD6bRn+DqU9Mw==
-  dependencies:
-    fast-deep-equal "^3.1.1"
-    json-schema-traverse "^1.0.0"
-    require-from-string "^2.0.2"
-    uri-js "^4.2.2"
-
-"@redocly/developer-portal@^1.1.0-beta.123":
-  version "1.1.0-beta.123"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.123.tgz#9884c44dee92c704637a28339ba4910f825d946c"
-  integrity sha512-zDbBVK8KwtKEK/eGPy1zmGYjtaj/9+5CAuqcbyRadXD4UZ+7maUZEltDz/zuIOLr+RejaSHW9IPZJSp1+P+3kw==
+"@redocly/developer-portal@^1.1.0-beta.126":
+  version "1.1.0-beta.126"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.126.tgz#8c995afa1dca20ca6f43625a8ff2e5f6ecc2c24e"
+  integrity sha512-IFZiHPti4ZKUUYPlDDNCA0gmOJ3ypKEoWYm0TrYMwiOjpNqKC364zqj+qA9MogB1yd3HD7NJeLYD5fuYceAhTA==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
     "@redocly/gatsby-plugin-manifest" "3.3.2"
     "@redocly/gatsby-remark-images" "4.2.0"
-    "@redocly/openapi-core" "1.0.0-beta.123"
-    "@redocly/reference-docs" "2.39.1"
+    "@redocly/openapi-core" "1.0.0-beta.131"
+    "@redocly/reference-docs" "2.41.1"
     babel-plugin-react-html-attrs "^3.0.5"
     babel-plugin-styled-components "^1.12.0"
     buffer "^6.0.3"
@@ -1765,10 +1755,10 @@
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-"@redocly/openapi-core@1.0.0-beta.123":
-  version "1.0.0-beta.123"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.123.tgz#0c29ae9fabe5f143f571caf608a7d025f41125db"
-  integrity sha512-W6MbUWpb/VaV+Kf0c3jmMIJw3WwwF7iK5nAfcOS+ZwrlbxtIl37+1hEydFlJ209vCR9HL12PaMwdh2Vpihj6Jw==
+"@redocly/openapi-core@1.0.0-beta.131":
+  version "1.0.0-beta.131"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.131.tgz#c5a9c106dcb372bdc8bf479094493a155cc9f2ca"
+  integrity sha512-Dri3Oad3NwcyKgtkYz6hyJO+bAD531ppPrPxNo9Xfqza9LkUtJ6Vi2E6OSRGTWb94iTyEkhrJPbJE56/PbaKhQ==
   dependencies:
     "@redocly/ajv" "^8.11.0"
     "@types/node" "^14.11.8"
@@ -1781,28 +1771,12 @@
     pluralize "^8.0.0"
     yaml-ast-parser "0.0.43"
 
-"@redocly/openapi-core@1.0.0-beta.97":
-  version "1.0.0-beta.97"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.97.tgz#324ed46e9a9aee4c615be22ee348c53f7bb5f180"
-  integrity sha512-3WW9/6flosJuRtU3GI0Vw39OYFZqqXMDCp5TLa3EjXOb7Nm6AZTWRb3Y+I/+UdNJ/NTszVJkQczoa1t476ekiQ==
+"@redocly/reference-docs@2.41.1":
+  version "2.41.1"
+  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.41.1.tgz#d675d1038a8d3183d956353c0ec18f3a91c907fd"
+  integrity sha512-bvoVx8M43spbB8WMvlpYVXYgqmfHwMzTTDWYrjvczVUkTbEx5sn5TB4uRNut5QTgehXEbyTOQHNLASBJfprHtA==
   dependencies:
-    "@redocly/ajv" "^8.6.4"
-    "@types/node" "^14.11.8"
-    colorette "^1.2.0"
-    js-levenshtein "^1.1.6"
-    js-yaml "^4.1.0"
-    lodash.isequal "^4.5.0"
-    minimatch "^5.0.1"
-    node-fetch "^2.6.1"
-    pluralize "^8.0.0"
-    yaml-ast-parser "0.0.43"
-
-"@redocly/reference-docs@2.39.1":
-  version "2.39.1"
-  resolved "https://registry.yarnpkg.com/@redocly/reference-docs/-/reference-docs-2.39.1.tgz#4fa53aba762745e28badfa047f36d005856b0cf4"
-  integrity sha512-qsaU1hEZ6N5zLtZIZFRwqnfhTJ2t994/T4hECVjid7ijZ6jWYbvoBn4hIPW5SbKtvmvpXNEfzPF45rVxkvdFdQ==
-  dependencies:
-    "@redocly/openapi-core" "1.0.0-beta.97"
+    "@redocly/openapi-core" "1.0.0-beta.131"
     "@redocly/vscode-json-languageservice" "3.4.9"
     "@wojtekmaj/enzyme-adapter-react-17" "^0.6.2"
     codemirror "^5.65.0"
