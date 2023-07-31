@@ -1,4 +1,5 @@
 type: reference-docs
+label: Partner
 versions:
   - id: latest
     definitionId: partner-v3

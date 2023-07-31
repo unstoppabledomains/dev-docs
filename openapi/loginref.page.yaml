@@ -1,4 +1,5 @@
 type: reference-docs
+label: Login
 definitionId: login-unstoppable
 settings:
   pagination: none
