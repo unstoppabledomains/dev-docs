@@ -15,7 +15,7 @@ Subdomains can only be minted for Polygon-based (L2) domains. Ethereum and Zilli
 
 ## Step 1: Select a Minting Manager Smart Contract
 
-The [Minting Manager](/smart-contracts/contract-reference/uns-smart-contracts.md/#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either Polygon mainnet or testnet).
+The [Minting Manager](/smart-contracts/contract-reference/uns-smart-contracts.md#mintingmanager) smart contract is an interface for minting second-level domains. Choose one of the Minting Manager smart contracts to interact with (either Polygon mainnet or testnet).
 
 <figure>
 
