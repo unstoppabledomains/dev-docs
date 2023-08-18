@@ -51,4 +51,4 @@ Add notes, hints, and placeholders in your application to remind users that they
 <figcaption>preview of resolved address near domain name</figcaption>
 </figure>
 
-<embed src="/snippets/_discord.md" />
+

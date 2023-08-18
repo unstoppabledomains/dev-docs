@@ -56,6 +56,6 @@ Unstoppable Domains offers a Postman collection that you can easily import into 
 
 
 
-<embed src="/snippets/_discord.md" />
+
 
 <embed src="/snippets/_partner-survey-embed.md" />

@@ -7,7 +7,7 @@ description: This page reviews the process for participating in content generati
 
 **For non-technical community members**, we've created Quests for Content Generation! There are two types of content gen Quests: (1) tutorials, and (2) impression mining.
 
-Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn) or DM [@mvwi](https://twitter.com/mvwi) on Twitter, if you're interested.
+Ask on our [Twitter](https://twitter.com/unstoppableweb) on Twitter, if you're interested.
 
 ## Instructions for Tutorials
 
@@ -21,7 +21,7 @@ We're offering **$100 in domain credits** for any tutorial for Unstoppable Domai
 If submitted, we'll be uploading the content to our YouTube channel (12K+ subscribers) — crediting you for the work!
 
 ## Instructions for Impression Mining
-    
+
 Impression mining allows anyone to become a micro-influencer for Unstoppable Domains! We're offering **$1 in domain credits per 10 impressions on Twitter**.
 
 Participants will simply snap a screenshot of their impression counts and submit to the intake form for a monthly payment in domain credits. Judging submissions is at the sole discretion of Unstoppable Domains. The reviewers reserve the right to cap a payment or deem an account ineligible for current or future rewards.
@@ -29,7 +29,7 @@ Participants will simply snap a screenshot of their impression counts and submit
 <figure>
 
 ![Screenshot of impression counts](/images/quest-impression-mining.png)
-	
+
 <figcaption>Screenshot of impression counts</figcaption>
 </figure>
 

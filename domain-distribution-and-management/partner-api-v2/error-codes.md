@@ -60,4 +60,4 @@ Partner API errors are in JSON format.
 | `DOMAIN_NOT_FOUND` | The requested domain name is not registered |
 | `ACTION_NOT_FOUND` | The requested domain action is not found    |
 
-<embed src="/snippets/_discord.md" />
+

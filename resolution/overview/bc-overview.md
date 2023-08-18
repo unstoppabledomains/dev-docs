@@ -13,4 +13,4 @@ One strategy for resolving domains is to read directly from the blockchain. This
 <embed src="/snippets/_new_tld_warning.md" />
 :::
 
-<embed src="/snippets/_discord.md" />
+

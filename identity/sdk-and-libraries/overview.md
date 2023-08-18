@@ -37,9 +37,6 @@ The UAuth middleware libraries provide an additional custom interface for `@uaut
 | [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)              | Login integration using the `@uauth/node` library.                 |
 | [sveltekit](https://github.com/unstoppabledomains/uauth/tree/main/examples/sveltekit)        | Login integration using the `sveltekit` framework and `@uauth/js`. |
 
-## Get help
-
-[Join our discord community](https://discord.gg/unstoppabledomains) and ask questions.
 
 ## Help us improve
 

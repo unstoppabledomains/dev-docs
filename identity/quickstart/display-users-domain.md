@@ -82,4 +82,3 @@ The `user()` method will return a [UserInfo](/identity/sdk-and-libraries/uauth-j
 }
 ```
 
-<embed src="/snippets/_discord.md" />

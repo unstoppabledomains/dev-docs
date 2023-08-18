@@ -18,6 +18,5 @@ You can find additional support through any of the following resources:
 ## How do I connect with other developers in the UD Community?
 
 You can connect with our developer community using the following methods:
-* [Discord](https://discord.gg/unstoppabledomains)
 * [Twitter](https://twitter.com/unstoppableweb)
 * [Facebook](https://www.facebook.com/unstoppableweb/)

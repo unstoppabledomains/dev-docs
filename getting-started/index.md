@@ -33,6 +33,6 @@ These items are listed in order of complexity. For example, if you are starting 
 - [API Reference](/openapi/resolution.page.yaml)
 - [Contribute](/contribute/unstoppable-quests.md)
 
-<embed src="/snippets/_discord.md" />
+
 
 <embed src="/snippets/_developer-survey-embed.md" />

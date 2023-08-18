@@ -36,4 +36,4 @@ Integration quests will cover open-source crypto wallets (for payments), browser
 
 **Don't see a wallet you want integrated?**
 
-Ask on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn).
+Ask on our [Twitter](https://twitter.com/unstoppableweb).

@@ -397,4 +397,4 @@ curl --location --request POST 'https://api.ud-sandbox.com/api/v2/resellers/{PAR
 You have successfully reserved a domain name with the Partner API.
 :::
 
-<embed src="/snippets/_discord.md" />
+

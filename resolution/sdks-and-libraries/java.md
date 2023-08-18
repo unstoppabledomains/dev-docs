@@ -114,4 +114,4 @@ The resolution library provides a method for resolving the addresses of tickers 
 String receiverUSDTAddress = resolution.getMultiChainAddress("udtestdev-usdt.crypto", "USDT", "ERC20");
 ```
 
-<embed src="/snippets/_discord.md" />
+

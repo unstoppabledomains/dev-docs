@@ -69,7 +69,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 </figure>
 
 :::danger
-If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already minted. Double check that it's available and [contact us on Discord](https://discord.gg/unstoppabledomains) if you continue to have problems.
+If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already minted. Double check that it's available and [contact us on Twitter](https://twitter.com/unstoppableweb) if you continue to have problems.
 :::
 
 :::success Congratulations!

@@ -39,6 +39,6 @@ There are several ways to integrate Unstoppable's Reverse Resolution feature int
 | Resolution Libraries | integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](integration-guides/resolution-libraries.md)
 | Smart Contracts | integrate Reverse Resolution using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](integration-guides/smart-contracts.md) |
 
-<embed src="/snippets/_discord.md" />
+
 
 <embed src="/snippets/_developer-survey-embed.md" />
