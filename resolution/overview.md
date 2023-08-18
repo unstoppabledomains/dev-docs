@@ -29,6 +29,6 @@ For an Unstoppable-managed, blockchain-agnostic command-line interface for resol
 
 For developers developing on Polygon using the [Matic.js SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see the [Resolve Using Matic.js SDK](sdks-and-libraries/maticjs.md) guide.
 
-<embed src="/snippets/_discord.md" />
+
 
 <embed src="/snippets/_developer-survey-embed.md" />

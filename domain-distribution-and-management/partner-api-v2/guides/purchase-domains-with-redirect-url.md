@@ -60,7 +60,7 @@ https://ud-sandbox.com/search?ref=unstoppable
 You just configured your Partner account to process payments using a Redirect URL.
 :::
 
-<embed src="/snippets/_discord.md" />
+
 
 <!-- ---
 title: Redirect URL Payments With Auto-Configured Crypto Records Guide | UD Developer Portal
@@ -206,4 +206,4 @@ https://ud-sandbox.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&times
 You just configured your Partner account to process payments and automatically configure resolution records using a Redirect URL.
 :::
 
-<embed src="/snippets/_discord.md" />
+

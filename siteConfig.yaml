@@ -71,8 +71,6 @@ footer:
 
     - group: Community
       items:
-        - label: Discord
-          href: 'https://discord.gg/unstoppabledomains'
         - label: Twitter
           href: 'https://twitter.com/unstoppableweb'
         - label: Facebook

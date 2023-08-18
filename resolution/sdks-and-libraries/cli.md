@@ -81,4 +81,4 @@ Below is a list of all the error codes you might encounter when using the Resolu
 | Domain was returned from metadata provider | Thrown when you resolve an invalid domain address.                                                                        |
 | Invalid UNS configuration value            | Thrown when the UNS resolution service is misconfigured.                                                                  |
 
-<embed src="/snippets/_discord.md" />
+

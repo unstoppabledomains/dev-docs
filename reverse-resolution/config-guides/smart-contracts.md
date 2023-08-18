@@ -91,4 +91,4 @@ Now, applications that have integrated Reverse Resolution will be able to show t
 You have successfully configured Reverse Resolution for your domain using smart contracts. Happy hacking!
 :::
 
-<embed src="/snippets/_discord.md" />
+

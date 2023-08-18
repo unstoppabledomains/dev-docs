@@ -147,6 +147,6 @@ You have successfully accessed and set up the Unstoppable Domains Sandbox Enviro
 
 Follow the [Partner API v2 (Legacy) integration guide](../partner-api-v2/quickstart/partner-api-v2-integration.md) to get started.
 
-<embed src="/snippets/_discord.md" />
+
 
 <embed src="/snippets/_partner-survey-embed.md" />

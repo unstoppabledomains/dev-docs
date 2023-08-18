@@ -169,4 +169,4 @@ resolution.multiChainAddress(domain: "udtestdev-usdt.crypto", ticker: "USDT", ch
   }
 ```
 
-<embed src="/snippets/_discord.md" />
+

@@ -86,4 +86,4 @@ async function resolveWithUnstoppableExample() {
 resolveWithUnstoppableExample();
 ```
 
-<embed src="/snippets/_discord.md" />
+

@@ -61,5 +61,3 @@ This error can pop up in the following ways depending on the resolution library:
 
 <figcaption>invalid domain error</figcaption>
 </figure>
-
-<embed src="/snippets/_discord.md" />

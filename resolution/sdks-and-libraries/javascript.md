@@ -338,4 +338,4 @@ resolution
   .catch(console.error);
 ```
 
-<embed src="/snippets/_discord.md" />
+

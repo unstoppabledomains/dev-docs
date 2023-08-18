@@ -71,4 +71,4 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
 :::
 
-<embed src="/snippets/_discord.md" />
+

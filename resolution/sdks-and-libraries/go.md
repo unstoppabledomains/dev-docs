@@ -149,4 +149,4 @@ usdtAddress, _ := uns.AddrVersion("udtestdev-usdt.crypto", "USDT", "ERC20")
 fmt.Println("USDT-ERC20 address for udtestdev-usdt.crypto is", usdtAddress)
 ```
 
-<embed src="/snippets/_discord.md" />
+

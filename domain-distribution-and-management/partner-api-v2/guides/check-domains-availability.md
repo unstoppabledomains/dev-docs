@@ -122,4 +122,4 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 You have successfully checked the availability of multiple domain names with the Partner API.
 :::
 
-<embed src="/snippets/_discord.md" />
+

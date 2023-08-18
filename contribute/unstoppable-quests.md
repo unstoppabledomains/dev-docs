@@ -5,7 +5,7 @@ description: This page is an overview of the Unstoppable Domains quest options f
 
 # UD Developer Quests 📚
 
-## Context 
+## Context
 
 > *"If you want to go fast, go alone; if you want to go far, go together."*
 
@@ -24,4 +24,4 @@ We have several ongoing developer quests that you can participate in! Please sel
 
 ## Suggestions for a New Quest
 
-Do you have any questions? Suggestions for another quest (we're always considering new ones)? Reach out on our [Discord](https://discord.com/invite/b6ZVxSZ9Hn).
+Do you have any questions? Suggestions for another quest (we're always considering new ones)? Reach out on our [Twitter](https://twitter.com/unstoppableweb).

@@ -119,4 +119,4 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 You have successfully gotten suggestions of available free and paid domains to purchase with the Partner API.
 :::
 
-<embed src="/snippets/_discord.md" />
+

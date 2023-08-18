@@ -119,7 +119,7 @@ The `id` field in the API response is the domain action ID and the `txs` field c
 You have successfully created the domain action request to configure reverse resolution records with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
 
-<embed src="/snippets/_discord.md" />
+
 
 <div class="custom-next-to">
 

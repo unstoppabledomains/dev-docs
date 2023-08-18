@@ -11,4 +11,3 @@ description: This page provides options for configuring a domain purchased from 
 | Website management | [https://unstoppabledomains.com/domains](https://unstoppabledomains.com/domains) | `.crypto`, `.zil` | `mainnet` |
 | Website guest management | [https://unstoppabledomains.com/manager](https://unstoppabledomains.com/manager) | `.crypto`, `.zil` | `mainnet` |
 
-<embed src="/snippets/_discord.md" />

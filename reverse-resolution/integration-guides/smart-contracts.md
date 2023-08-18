@@ -92,4 +92,4 @@ const reverseDomainName = await proxyReaderContract.reverseNameOf(address);
 You have successfully integrated Reverse Resolution using smart contracts. Happy Hacking!
 :::
 
-<embed src="/snippets/_discord.md" />
+

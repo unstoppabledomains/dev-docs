@@ -31,4 +31,4 @@ The following table lists the UD Resolution Libraries along with links to each r
 | [Golang](resolution-go.md)               | [https://github.com/unstoppabledomains/resolution-go](https://github.com/unstoppabledomains/resolution-go)       |
 | [Matic.js SDK](resolve-with-maticjs.md)  | [https://github.com/unstoppabledomains/maticjs-resolution](https://github.com/unstoppabledomains/maticjs-resolution)       |
 
-<embed src="/snippets/_discord.md" />
+

@@ -40,4 +40,4 @@ Unstoppable Domains Partner API v2 (Legacy) can pre-fill crypto payment addresse
 
 Using your Partner API v2 (Legacy) key from the backend of your application is recommended rather than the frontend. If the API key is placed in the frontend, it becomes accessible by anyone who has access to the client-side code, increasing the risk of unauthorized access or misuse. To protect against this, use the API key from the backend to keep it secure.
 
-<embed src="/snippets/_discord.md" />
+

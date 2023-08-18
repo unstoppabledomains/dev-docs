@@ -86,4 +86,4 @@ resolution.reverse(address: "0x88bc9b6c56743a38223335fac05825d9355e9f83", locati
 You have successfully integrated Reverse Resolution using Unstoppable Domains Resolution Libraries. Happy Hacking!
 :::
 
-<embed src="/snippets/_discord.md" />
+
