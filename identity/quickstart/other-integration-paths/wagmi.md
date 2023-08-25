@@ -91,7 +91,7 @@ function LoginButton() {
   const { connect, connectors } = useConnect();
 
   const onClick = async () => {
-    await connect({ connector: connectors[0] });
+    connect({ connector: connectors[0] });
   };
 
   return <button onClick={onClick}>Login</button>;
@@ -101,7 +101,7 @@ function LogoutButton() {
   const { disconnect } = useDisconnect();
 
   const onClick = async () => {
-    await disconnect();
+    disconnect();
   };
 
   return <button onClick={onClick}>Logout</button>;
