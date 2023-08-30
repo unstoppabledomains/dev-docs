@@ -73,6 +73,8 @@ pages:
             page: ../openapi/loginref.page.yaml
           - label: Profile API
             page: ../openapi/profile-v1.page.yaml
+          - label: Messaging API
+            page: ../openapi/messaging-v1.page.yaml
           - label: Error codes
             page: api-reference/error-codes.md
       - group: SDKs and Libraries
