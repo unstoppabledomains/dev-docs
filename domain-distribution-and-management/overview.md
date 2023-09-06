@@ -7,7 +7,7 @@ redirectFrom:
 
 # Domain Distribution and Management Overview
 
-Domain distribution and managemnt can be achieved via the Unstoppable Partner API and Smart Contracts.
+Domain distribution and management can be achieved via the Unstoppable Partner API and Smart Contracts.
 
 # Partner API
 
