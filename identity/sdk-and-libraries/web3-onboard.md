@@ -11,7 +11,7 @@ The `@web3-onboard/uauth` package is a module used for integrating UAuth with Bl
 
 ## uauthModule
 
-The default export for the the `@web3-onboard/uauth` library. Implements Web3 Onboard `WalletInit`.
+The default export for the `@web3-onboard/uauth` library. Implements Web3 Onboard `WalletInit`.
 
 ```typescript
 function uauthModule(options: UauthInitOptions): WalletInit;
