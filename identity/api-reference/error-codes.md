@@ -1,6 +1,6 @@
 ---
-title: Error Codes for Login with Unstoppable | UD Developer Portal
-description: This page provides error codes and explanations when troubleshooting the Login with Unstoppable feature.
+title: Error Codes for Unstoppable Login | UD Developer Portal
+description: This page provides error codes and explanations when troubleshooting the Unstoppable Login feature.
 showNextButton: false
 redirectFrom:
   - /login-with-unstoppable/login-error-codes/
@@ -9,7 +9,7 @@ redirectFrom:
 
 # Login Error Codes
 
-Login with Unstoppable uses the OAuth 2.0 framework. The error codes below are based on that framework and only include codes specific to the Login feature.
+Unstoppable Login uses the OAuth 2.0 framework. The error codes below are based on that framework and only include codes specific to the Login feature.
 
 ## 400 Error: Bad Request
 

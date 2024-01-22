@@ -4,7 +4,7 @@ pages:
   - group: Overview
     expanded: true
     pages:
-      - label: Login with Unstoppable
+      - label: Unstoppable Login
         page: overview/login-with-unstoppable.md
       - label: Humanity Check
         page: overview/humanity-check.md
@@ -69,7 +69,7 @@ pages:
       - group: API Reference
         expanded: false
         pages:
-          - label: Login with Unstoppable API
+          - label: Unstoppable Login API
             page: ../openapi/loginref.page.yaml
           - label: Profile API
             page: ../openapi/profile-v1.page.yaml

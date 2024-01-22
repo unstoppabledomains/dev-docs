@@ -1,13 +1,13 @@
 ---
-title: Featured Updates for Login with Unstoppable | UD Developer Portal
+title: Featured Updates for Unstoppable Login | UD Developer Portal
 description: This page highlights some of the latest features added to Unstoppable login and identity.
 redirectFrom:
   - /login-with-unstoppable/featured-updates/
 ---
 
-# Featured Updates for Login With Unstoppable
+# Featured Updates for Unstoppable Login
 
-Login with Unstoppable is in active development and we're working to add new features on a regular basis. This page will highlight some of the newest additions, including features added to domain profiles and the Unstoppable authentication service. Many of these features require little or no change to existing integrations.
+Unstoppable Login is in active development and we're working to add new features on a regular basis. This page will highlight some of the newest additions, including features added to domain profiles and the Unstoppable authentication service. Many of these features require little or no change to existing integrations.
 
 ## Web3-React v8 (Beta) Support
 
@@ -52,9 +52,9 @@ The [VerifiedAddress](/identity/sdk-and-libraries/uauth-js.md#verifiedaddress) r
 
 ## Login with Verified Profile Accounts
 
-Login with Unstoppable now supports authentication with certain verified accounts on a user's domain profile. This doesn't require an specific change from login integrations to work, but two new methods have been added to UAuth to give applications access to some of this information:
+Unstoppable Login now supports authentication with certain verified accounts on a user's domain profile. This doesn't require an specific change from login integrations to work, but two new methods have been added to UAuth to give applications access to some of this information:
 
-| Method                                                                                             | Description                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Method                                                                                       | Description                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [getVerifiedAccounts()](/identity/sdk-and-libraries/uauth-js.md#getverifiedaccounts)         | Returns a list of verified accounts associated with the domain.                                                                                                       |
 | [getAuthorizationAccount()](/identity/sdk-and-libraries/uauth-js.md#getauthorizationaccount) | Returns the specific verified account used to authenticate the domain. In the case of a standard UD login, this would return the wallet address that owns the domain. |

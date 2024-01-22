@@ -8,7 +8,7 @@ description: This page describes the process for requesting a free test domain a
 <embed src="/snippets/_test-domain-explain.md" />
 
 :::warning
-The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
+The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Unstoppable Login](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
 :::
 
 ## Step 1: Gather Requirements for the Website Faucet
@@ -34,7 +34,7 @@ Domains on Polygon mainnet can be purchased for free through Unstoppable Website
   - **custom records:** add optional key and value pairs
 
 :::warning
-The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Login with Unstoppable](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
+The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Unstoppable Login](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Mumbai or Goerli) are not supported.
 :::
 
 <figure>

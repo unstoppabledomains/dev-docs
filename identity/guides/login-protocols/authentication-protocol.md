@@ -1,6 +1,6 @@
 ---
 title: Login Authentication Protocol | Unstoppable Domains Developer Portal
-description: This page describes the extension of the OpenID Connect protocol used by Login with Unstoppable to obtain a user's wallet signature.
+description: This page describes the extension of the OpenID Connect protocol used by Unstoppable Login to obtain a user's wallet signature.
 showNextButton: false
 redirectFrom:
   - /login-with-unstoppable/high-level-overview/authentication-protocol/
@@ -9,7 +9,7 @@ redirectFrom:
 
 # Authentication Protocol
 
-Login with Unstoppable uses a modified version of the OpenID Connect (OIDC) protocol to obtain a user’s wallet signature. This allows domain owners to authorize access to information and resources in the same way as the OIDC specification. This modified OIDC protocol, when with a blockchain based domain system, enables a far better decentralized authorization experience across web3 applications.
+Unstoppable Login uses a modified version of the OpenID Connect (OIDC) protocol to obtain a user’s wallet signature. This allows domain owners to authorize access to information and resources in the same way as the OIDC specification. This modified OIDC protocol, when with a blockchain based domain system, enables a far better decentralized authorization experience across web3 applications.
 
 A key distinguisher between traditional and decentralized authorization protocols is that there is no centralized resource access. Decentralized authorization requires that the Authorization Server won’t have pre-existing knowledge of the resources it’s authorizing clients to use. OAuth, OIDC, and SAML only govern the parts of the interaction between clients & authorization Servers. Decentralized authentication is between two parties because resources must provide an interface for Authorization Servers to read from.
 
@@ -47,7 +47,7 @@ The table below describes the primary ways that clients ask for tokens. The firs
 
 ## Authentication
 
-Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Login with Unstoppable uses the personal_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
+Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Unstoppable Login uses the personal_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
 
 :::info
 Clients and Resource Servers don’t need to know or care what Authentication method the Authorization Server uses.
@@ -70,7 +70,7 @@ The table below lists the primary ways Authorization Servers authenticate users.
 | hwk         | Hardware secured key                                         |
 | None        | No authentication method used                                |
 
-Login with Unstoppable uses the following primary authentication methods:
+Unstoppable Login uses the following primary authentication methods:
 
 | Auth Method | Description                                                             | Support Status    |
 | ----------- | ----------------------------------------------------------------------- | ----------------- |
@@ -84,7 +84,7 @@ There are two primary types of access tokens.
 
 ### Opaque (Currently Supported)
 
-Opaque access tokens don’t contain any information within themselves, and in principle cannot be deciphered by a resource server. To validate opaque tokens for use with Login with Unstoppable, resource servers must use the Token Introspection API provided by the Authorization servers.
+Opaque access tokens don’t contain any information within themselves, and in principle cannot be deciphered by a resource server. To validate opaque tokens for use with Unstoppable Login, resource servers must use the Token Introspection API provided by the Authorization servers.
 
 The advantage of using this access token method is that less logic is required on the resource server, it is less subject to versioning issues, and it is easily revocable. On the other hand, this token method is much slower because tokens must be validated every single call to the resource server.
 

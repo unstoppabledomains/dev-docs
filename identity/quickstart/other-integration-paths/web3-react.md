@@ -1,12 +1,12 @@
 ---
-title: Web3 React Guide for Login with Unstoppable | UD Developer Portal
+title: Web3 React Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/web3-react-guide/
 showNextButton: false
 ---
 
-# Web3 React Guide: Login with Unstoppable
+# Web3 React Guide: Unstoppable Login
 
 This is the basic installation guide for the [web3-react](https://github.com/Uniswap/web3-react/) framework and is best used for React-based single page applications (SPAs). For more information about the UAuth middleware package for web3-react, see the [reference](/identity/sdk-and-libraries/web3-react.md) and source code on [github](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
@@ -96,7 +96,7 @@ export default connectors;
 Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `UAuthConnectorConstructorArgs` and [create a callback page](/identity/sdk-and-libraries/web3-react.md#optionsshouldloginwithredirect).
 :::
 
-## Step 3: Login with Unstoppable
+## Step 3: Unstoppable Login
 
 Once the connector is configured, you can call the `activate()` method to trigger UAuth login. The example `App` component below creates a button to acivate and deactive the connector and displays a simple connection and error state.
 
@@ -146,7 +146,7 @@ function App() {
 
   return (
     <>
-      <h1>Login with Unstoppable</h1>
+      <h1>Unstoppable Login</h1>
       <h3>
         Status - {error?.message ? "Error: " + error.message : connectionStatus}
       </h3>
@@ -165,7 +165,7 @@ export default App;
 </figure>
 
 :::success Congratulations!
-You have implemented Login with Unstoppable with web3-react.
+You have implemented Unstoppable Login with web3-react.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

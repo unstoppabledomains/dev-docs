@@ -1,6 +1,6 @@
 ---
 title: Login Client Analytics | UD Developer Portal
-description: This page describes the analytics features offered by the Login with Unstoppable partner dashboard.
+description: This page describes the analytics features offered by the Unstoppable Login partner dashboard.
 redirectFrom:
   - /login-with-unstoppable/client-analytics/
 ---

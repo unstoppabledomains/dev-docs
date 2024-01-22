@@ -14,7 +14,7 @@ pages:
     label: Get Community Support or Connect with Others
     separatorLine: true
   - page: integrate-login-auth-server.md
-    label: Integrate Login with Unstoppable
+    label: Integrate Unstoppable Login
     separatorLine: true
   - page: sell-domains-users.md
     label: Sell Domains to Users in Your App

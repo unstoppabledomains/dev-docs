@@ -1,14 +1,14 @@
 ---
-title: Login with Unstoppable with Popup
+title: Unstoppable Login with Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and with the popup feature.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/login-with-popup/
 showNextButton: false
 ---
 
-# Login with Unstoppable with Popup
+# Unstoppable Login with Popup
 
-In this integration guide, we will show how to add Login with Unstoppable with the pop-up feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a JavaScript developer with a few minutes of time.
+In this integration guide, we will show how to add Unstoppable Login with the pop-up feature to an empty HTML page. There will be no complicated install requirements – to complete this integration, you just need to be a JavaScript developer with a few minutes of time.
 
 <figure>
 <div class="video-container">
@@ -40,7 +40,7 @@ npm install --save @uauth/js
 ```
 
 :::info
-**@uauth/js** is the library used for implementing Login with Unstoppable on the frontend.
+**@uauth/js** is the library used for implementing Unstoppable Login on the frontend.
 :::
 
 ## Step 2: Create an HTML File
@@ -50,10 +50,10 @@ Build out the `index.html` file as follows:
 ```html
 <html>
   <head>
-    <title>Login with Unstoppable</title>
+    <title>Unstoppable Login</title>
   </head>
   <body>
-    <button onclick="login()">Login with Unstoppable</button>
+    <button onclick="login()">Unstoppable Login</button>
     <button onclick="logout()">Logout</button>
     <script type="module" src="app.js"></script>
   </body>
@@ -100,7 +100,7 @@ window.logout = async () => {
 };
 ```
 
-## Step 6: Login with Unstoppable
+## Step 6: Unstoppable Login
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 

@@ -1,17 +1,17 @@
 ---
-title: Integrate Login with Unstoppable | UD Developer Portal
-description: This page outlines the use case for integrating Login with Unstoppable and using the Unstoppable Authorization server.
+title: Integrate Unstoppable Login | UD Developer Portal
+description: This page outlines the use case for integrating Unstoppable Login and using the Unstoppable Authorization server.
 ---
 
-# Integrate Login with Unstoppable
+# Integrate Unstoppable Login
 
-This page outlines the use case for integrating Login with Unstoppable and using the Unstoppable Authorization server.
+This page outlines the use case for integrating Unstoppable Login and using the Unstoppable Authorization server.
 
 ## How does it work?
 
-With current wallet-based sign-in methods, it is difficult or impossible for application developers to contact their users. [Login with Unstoppable](/identity/overview/login-with-unstoppable.md) is a feature that allows any Unstoppable Domain owner to login and share personal information with applications, such as email addresses. This enables developers to learn more about their users without hosting or maintaining a Customer Relationship Management (CRM) system.
+With current wallet-based sign-in methods, it is difficult or impossible for application developers to contact their users. [Unstoppable Login](/identity/overview/login-with-unstoppable.md) is a feature that allows any Unstoppable Domain owner to login and share personal information with applications, such as email addresses. This enables developers to learn more about their users without hosting or maintaining a Customer Relationship Management (CRM) system.
 
-Login with Unstoppable is built using the Unstoppable [Authentication Protocol](/identity/guides/login-protocols/authentication-protocol.md) or simply **UAuth**. UAuth is an authorization system built with domains as the primary subject of authorization instead of usernames or wallet addresses. The UAuth protocol is an extension of the OpenID Connect (OIDC) protocol that allows Unstoppable Domain owners to designate authorization servers (OpenID Providers) to authorize access to a user's digital resources on that user’s behalf.
+Unstoppable Login is built using the Unstoppable [Authentication Protocol](/identity/guides/login-protocols/authentication-protocol.md) or simply **UAuth**. UAuth is an authorization system built with domains as the primary subject of authorization instead of usernames or wallet addresses. The UAuth protocol is an extension of the OpenID Connect (OIDC) protocol that allows Unstoppable Domain owners to designate authorization servers (OpenID Providers) to authorize access to a user's digital resources on that user’s behalf.
 
 ## Who controls the sharing of information?
 

@@ -1,29 +1,29 @@
 ---
-title: Login with Unstoppable | Unstoppable Domains Developer Portal
-description: This page provides a high-level overview of the Login with Unstoppable feature.
+title: Unstoppable Login | Unstoppable Domains Developer Portal
+description: This page provides a high-level overview of the Unstoppable Login feature.
 redirectFrom:
   - /login-with-unstoppable/high-level-overview/
   - /login-with-unstoppable/
 ---
 
-# Login with Unstoppable Overview
+# Unstoppable Login Overview
 
 <figure>
 
-![Login with Unstoppable Promo](/images/login-promo.png)
+![Unstoppable Login Promo](/images/login-promo.png)
 
-<figcaption>Login with Unstoppable Promo</figcaption>
+<figcaption>Unstoppable Login Promo</figcaption>
 </figure>
 
-Login with Unstoppable allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible and Solana applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
+Unstoppable Login allows owners of Unstoppable Domains to log in and share profile information with EVM-compatible and Solana applications. This gives users more control over their personal information and allows developers to access information about their users without needing to host or maintain a CRM database.
 
 The UAuth protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and their users.
 
 <figure>
 
-![User flow for Login with Unstoppable](/images/login-with-unstoppable-flow-revised.png "#width=50%")
+![User flow for Unstoppable Login](/images/login-with-unstoppable-flow-revised.png "#width=50%")
 
-<figcaption>User flow for Login with Unstoppable</figcaption>
+<figcaption>User flow for Unstoppable Login</figcaption>
 </figure>
 
 ## Benefits for Applications
@@ -45,12 +45,12 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/3-7CLFB7tCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<figcaption>Tutorial: Integrating Login With Unstoppable</figcation>
+<figcaption>Tutorial: Integrating Unstoppable Login</figcation>
 </figure>
 
 ## Supported TLDs
 
-Login with Unstoppable currently supports the following top-level domains (TLDs):
+Unstoppable Login currently supports the following top-level domains (TLDs):
 
 - .crypto
 - .nft
@@ -68,7 +68,7 @@ Login with Unstoppable currently supports the following top-level domains (TLDs)
 - .manga
 - .zil \*
 
-:::warning \* Login with Unstoppable only supports `.zil` domains that have been bridged to the Polygon blockchain.
+:::warning \* Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
 :::
 
 ## Considerations
