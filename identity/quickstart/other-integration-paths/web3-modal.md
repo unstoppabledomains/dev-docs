@@ -1,12 +1,12 @@
 ---
-title: Web3 Modal Guide for Login with Unstoppable | UD Developer Portal
+title: Web3 Modal Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/web3-modal-guide/
 showNextButton: false
 ---
 
-# Web3 Modal Guide: Login with Unstoppable
+# Web3 Modal Guide: Unstoppable Login
 
 This is the basic installation guide for the `web3modal` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3modal).
 
@@ -91,7 +91,7 @@ export default web3modal;
 Because pop-ups are a more integration friendly approach, the `@uauth/web3modal` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `IUAuthOptions` and [create a callback page](/identity/sdk-and-libraries/web3-modal.md#shouldloginwithredirect)
 :::
 
-## Step 3: Login with Unstoppable
+## Step 3: Unstoppable Login
 
 Once configured, the `web3modal` library can be used normally.
 
@@ -116,7 +116,7 @@ function handleLogout() {
 ```
 
 :::success Congratulations!
-You have implemented Login with Unstoppable with web3modal.
+You have implemented Unstoppable Login with web3modal.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

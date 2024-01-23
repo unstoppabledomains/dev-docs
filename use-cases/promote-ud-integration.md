@@ -25,4 +25,4 @@ Of course! We select a newly-integrated app to feature in the Unstoppable Domain
 
 ## How can I learn more?
 
-To learn more about our products, see the [Crypto Payments Guides](/crypto-payments/index.md), [Login with Unstoppable Guides](/identity/overview/login-with-unstoppable.md), [IPFS Guides](/d-websites/index.md), or [Partner Integration Guides](/domain-distribution-and-management/quickstart/retrieve-an-api-key.md#partner-api-integration-paths).
+To learn more about our products, see the [Crypto Payments Guides](/crypto-payments/index.md), [Unstoppable Login Guides](/identity/overview/login-with-unstoppable.md), [IPFS Guides](/d-websites/index.md), or [Partner Integration Guides](/domain-distribution-and-management/quickstart/retrieve-an-api-key.md#partner-api-integration-paths).

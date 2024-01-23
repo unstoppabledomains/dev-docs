@@ -1,6 +1,6 @@
 ---
 title: Humanity Check for Login | Unstoppable Domains Developer Portal
-description: This page provides a high-level overview of the Humanity Check feature for Login with Unstoppable.
+description: This page provides a high-level overview of the Humanity Check feature for Unstoppable Login.
 redirectFrom:
   - /login-with-unstoppable/humanity-check/humanity-check-for-login/
   - /login-with-unstoppable/humanity-check/
@@ -12,7 +12,7 @@ redirectFrom:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w2R2GUnzgOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The Login with Unstoppable Humanity Check feature provides a way for applications to verify personal information for their users and attach that information to UD domains. This process allows users to safely prove their ‘uniqueness’ without revealing their identity or personal information. We’re calling this privacy-protected but robust authentication method Humanity Check.
+The Unstoppable Login Humanity Check feature provides a way for applications to verify personal information for their users and attach that information to UD domains. This process allows users to safely prove their ‘uniqueness’ without revealing their identity or personal information. We’re calling this privacy-protected but robust authentication method Humanity Check.
 
 The Humanity Check feature allows Unstoppable Domains to start building a community of data sharing with domains as the central hub through which that information passes.
 
@@ -35,15 +35,15 @@ To offer the Humanity Check feature, Unstoppable Domains uses CAPTCHA for the ve
 </figure>
 
 :::info
-Login with Unstoppable will partner with additional Humanity Check providers in future releases. Applications will have the ability to ask for a specific Humanity Check provider, but the Client Configuration UI will have a default provider selected.
+Unstoppable Login will partner with additional Humanity Check providers in future releases. Applications will have the ability to ask for a specific Humanity Check provider, but the Client Configuration UI will have a default provider selected.
 :::
 
 ## Humanity Check Configuration
 
-Login with Unstoppable passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](/identity/guides/login-scopes.md#humanity_check) to their Login with Unstoppable configuration.
+Unstoppable Login passes the unique Humanity Check ID number (or a proxy for it) from the Humanity Check provider through to applications. To access the humanity check identifier for users, applications can add a [humanity_check scope](/identity/guides/login-scopes.md#humanity_check) to their Unstoppable Login configuration.
 
 :::info
-For the moment, Login with Unstoppable only allows applications to request the Humanity Check identifier, but additional scopes will be added in future releases to allow applications to request more personal data (i.e., name, address, country, location, etc.).
+For the moment, Unstoppable Login only allows applications to request the Humanity Check identifier, but additional scopes will be added in future releases to allow applications to request more personal data (i.e., name, address, country, location, etc.).
 :::
 
 These specific considerations apply to the Humanity Check feature:
@@ -58,6 +58,6 @@ While users can maintain a humanity-check-approved identity on the blockchain, t
 
 ## Considerations
 
-The Login with Unstoppable Humanity Check feature assumes the following:
+The Unstoppable Login Humanity Check feature assumes the following:
 
 - Users must have a UD-minted domain inside their wallet either on Polygon or Ethereum.

@@ -13,6 +13,7 @@ Also, you might explore our growing list of [Integrated Applications](https://un
 ## Before You Begin
 
 You'll need the following to get started:
+
 - Basic understanding of [CNS](/smart-contracts/contract-reference/cns-smart-contracts.md) and [UNS](/smart-contracts/contract-reference/uns-smart-contracts.md) Smart Contracts
 - Knowledge of differences between [L1 and L2 network](/manage-domains/polygon-overview.md)
 - A [free test domain](test-domains/faucet.md)
@@ -24,7 +25,7 @@ These items are listed in order of complexity. For example, if you are starting 
 
 - [Unstoppable Resolution](/resolution/overview.md)
 - [Developer Integration Guides](/guides.mdx)
-  - [Login with Unstoppable](/identity/overview/login-with-unstoppable.md)
+  - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
   - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
   - [Reverse Resolution](/reverse-resolution/index.md)
   - [Domain Management](/manage-domains/index.md)
@@ -32,7 +33,5 @@ These items are listed in order of complexity. For example, if you are starting 
   - [IPFS Websites](/d-websites/index.md)
 - [API Reference](/openapi/resolution.page.yaml)
 - [Contribute](/contribute/unstoppable-quests.md)
-
-
 
 <embed src="/snippets/_developer-survey-embed.md" />

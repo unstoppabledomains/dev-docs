@@ -11,7 +11,7 @@ redirectFrom:
 
 # Retrieve Client Credentials
 
-Login with Unstoppable is a versatile feature with several integration pathways available for developers. This guide will step you through your first login integration with one of several supported libraries.
+Unstoppable Login is a versatile feature with several integration pathways available for developers. This guide will step you through your first login integration with one of several supported libraries.
 
 <embed src="/snippets/_login-mainnet-warning.md" />
 
@@ -49,7 +49,7 @@ The `scope` property of your client metadata will default to `"openid wallet"`, 
 
 ## Step 2: Choose Your Integration Path
 
-There are several ways to integrate with Login with Unstoppable, which are listed in the table below.
+There are several ways to integrate with Unstoppable Login, which are listed in the table below.
 
 Because pop-ups are a more integration friendly approach, every integration path except for **Login without Pop-up** and **Node.js Server** uses them by default. You can use redirects instead with the `login()` method of `@uauth/js` or the `shouldLoginWithRedirect` configuration option for other `@uauth/*` libraries.
 
@@ -70,5 +70,3 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 :::info
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
 :::
-
-

@@ -1,6 +1,6 @@
 ---
 title: Login Authorization Server | Unstoppable Domains Developer Portal
-description: This page outlines the authorization server for the Login with Unstoppable feature.
+description: This page outlines the authorization server for the Unstoppable Login feature.
 redirectFrom:
   - /login-with-unstoppable/high-level-overview/authorization-server/
   - /login-with-unstoppable/login-protocols/authorization-server/
@@ -10,11 +10,11 @@ redirectFrom:
 
 In order for an OpenID Connect Relying Party (RP) to utilize OpenID Connect services for an End-User, the RP needs to know where the OpenID Provider is. RPs can use [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
-Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery). With Login with Unstoppable, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
+Specifically, the extension provides an alternative method for OpenID Connect Issuer Discovery, [Section 2](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery). With Unstoppable Login, clients will resolve WebFinger information using records stored on a domain name instead of resolving WebFinger information from a server. Essentially, this process allows End-Users to specify their OpenID Provider using their domains.
 
 ## Unstoppable WebFinger & Issuer Discovery
 
-Unstoppable Webfinger uses a variety of records stored on domains to resolve a WebFinger Issuer discovery request. For Login with Unstoppable, webfinger information can be stored on the domain in the following ways: by request, reference, or value.
+Unstoppable Webfinger uses a variety of records stored on domains to resolve a WebFinger Issuer discovery request. For Unstoppable Login, webfinger information can be stored on the domain in the following ways: by request, reference, or value.
 
 [WebFinger](https://datatracker.ietf.org/doc/html/rfc7033) requires the following information to make a discovery request:
 

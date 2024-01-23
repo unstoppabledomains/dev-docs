@@ -1,12 +1,12 @@
 ---
-title: Node.js Server Guide for Login with Unstoppable | UD Developer Portal
+title: Node.js Server Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/node integration for server-side applications and does not come with a default front-end UI.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/node-js-server-guide/
 showNextButton: false
 ---
 
-# Node.js Server Guide: Login with Unstoppable
+# Node.js Server Guide: Unstoppable Login
 
 This integration guide is for the `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
@@ -175,7 +175,7 @@ app.listen(process.env.PORT, () => {
 ```
 
 :::success Congratulations!
-You just implemented Login with Unstoppable.
+You just implemented Unstoppable Login.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

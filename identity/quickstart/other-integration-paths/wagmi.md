@@ -1,10 +1,10 @@
 ---
-title: WAGMI Guide for Login With Unstoppable | UD Developer Portal
+title: WAGMI Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with the WAGMI library.
 showNextButton: false
 ---
 
-# WAGMI Guide: Login With Unstoppable
+# WAGMI Guide: Unstoppable Login
 
 ## Step 1: Install the Libraries
 
@@ -77,7 +77,7 @@ import { WagmiConfig } from "wagmi";
 </WagmiConfig>;
 ```
 
-## Step 4: Login with Unstoppable
+## Step 4: Unstoppable Login
 
 Once configured, the `wagmi` library can be used normally.
 
@@ -109,7 +109,7 @@ function LogoutButton() {
 ```
 
 :::success Congratulations!
-You have implemented Login with Unstoppable with WAGMI.
+You have implemented Unstoppable Login with WAGMI.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

@@ -1,12 +1,12 @@
 ---
-title: Login with Unstoppable without Popup
+title: Unstoppable Login without Popup
 description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/login-without-popup/
 showNextButton: false
 ---
 
-# Login with Unstoppable without Popup
+# Unstoppable Login without Popup
 
 This integration guide shows you how to add Login to Unstoppable to a single-page application without the popup feature, using a TypeScript and React Router example. You will configure the application to receive the authorization tokens and metadata by following the steps below.
 
@@ -107,7 +107,7 @@ const Login: React.FC<RouteProps> = (props) => {
   return (
     <>
       {errorMessage && <div>{errorMessage}</div>}
-      <button onClick={handleLoginButtonClick}>Login with Unstoppable</button>
+      <button onClick={handleLoginButtonClick}>Unstoppable Login</button>
     </>
   );
 };
@@ -223,7 +223,7 @@ return (
 ```
 
 :::success Contratulations
-You now have an Login with Unstoppable single-page application without the popup feature. Type `yarn start`/`npm start` to preview your example application with a local server.
+You now have an Unstoppable Login single-page application without the popup feature. Type `yarn start`/`npm start` to preview your example application with a local server.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

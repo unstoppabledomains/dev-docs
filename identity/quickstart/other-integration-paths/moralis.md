@@ -1,12 +1,12 @@
 ---
-title: Moralis Guide for Login With Unstoppable | UD Developer Portal
+title: Moralis Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Moralis library.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/moralis-guide/
 showNextButton: false
 ---
 
-# Moralis Guide: Login With Unstoppable
+# Moralis Guide: Unstoppable Login
 
 This is the basic installation guide for the `moralis` library and is best used for single page applications (SPAs). For more information about this library, please see the [associated github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/moralis).
 
@@ -62,7 +62,7 @@ export default connectors;
 Because pop-ups are a more integration friendly approach, the `@uauth/moralis` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in the options passed to `setUAthOptions()` and create a callback page.
 :::
 
-## Step 3: Login with Unstoppable
+## Step 3: Unstoppable Login
 
 Once configured, the `react-moralis` library can be used normally.
 
@@ -89,7 +89,7 @@ async function handleLogout() {
 ```
 
 :::success Congratulations!
-You have implemented Login with Unstoppable with Moralis.
+You have implemented Unstoppable Login with Moralis.
 :::
 
 <embed src="/snippets/_login-paths-next.md" />

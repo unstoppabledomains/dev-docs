@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting Guide for Login with Unstoppable | UD Developer Portal
-description: This page reviews frequently encountered problems when integrating the Login with Unstoppable feature. Potential solutions are included.
+title: Troubleshooting Guide for Unstoppable Login | UD Developer Portal
+description: This page reviews frequently encountered problems when integrating the Unstoppable Login feature. Potential solutions are included.
 showNextButton: false
 redirectFrom:
   - /login-with-unstoppable/troubleshooting-guide/
@@ -9,7 +9,7 @@ redirectFrom:
 
 # Troubleshooting Guide
 
-Here are some of the most common error messages when integrating Login with Unstoppable and how to fix them.
+Here are some of the most common error messages when integrating Unstoppable Login and how to fix them.
 
 <figure>
 <div class="video-container">
@@ -72,7 +72,7 @@ This error occurs when you try to import the uAuth library, and the system won't
 
 `Reference error: window is not defined`
 
-To resolve this, upgrade the UAuth library associated with Login with Unstoppable.
+To resolve this, upgrade the UAuth library associated with Unstoppable Login.
 
 ## Error: Node Version
 
@@ -80,7 +80,7 @@ This error happens when you try to add a package using the package manager, and 
 
 `The engine "node" is incompatible with this module.`
 
-To resolve this, upgrade the UAuth library associated with Login with Unstoppable.
+To resolve this, upgrade the UAuth library associated with Unstoppable Login.
 
 ## Error: Critical Dependency
 
@@ -91,7 +91,7 @@ This is a common build error that occurs when you attempt to run the application
 Critical dependency: the request of a dependency is an expression
 ```
 
-To resolve this, upgrade the UAuth library associated with Login with Unstoppable.
+To resolve this, upgrade the UAuth library associated with Unstoppable Login.
 
 ## Error: Logging in/Logging Out
 

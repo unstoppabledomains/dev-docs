@@ -1,12 +1,12 @@
 ---
-title: Auth0 Guide for Login with Unstoppable | UD Developer Portal
+title: Auth0 Guide for Unstoppable Login | UD Developer Portal
 description: This integration guide will demonstrate how to configure the Unstoppable Domains social connection for Auth0.
 redirectFrom:
   - /login-with-unstoppable/login-integration-guides/auth0-guide/
 showNextButton: false
 ---
 
-# Auth0 Guide: Login With Unstoppable
+# Auth0 Guide: Unstoppable Login
 
 The Unstoppable Domains social connection for Auth0 abstracts blockchain implementation details behind the OAuth2 standard. While many developers are new to blockchain, most will be familiar with OAuth2. This familiar approach enables your application to request OAuth2 scopes and receive claims to access Web3 user metadata, communication handles and blockchain specific details. Since the social connection is natively integrated into the Auth0 ecosystem, developers can tap into a rich client library to further simplify user management.
 
@@ -53,7 +53,7 @@ Next you will need to add and configure the social connection. This will require
 
 ## Step 4: Add Custom Claims (Optional)
 
-Some of the Web3 claims offered by Unstoppable Domains are outside the standard OAuth2 specification. For example, the `wallet_address` claim may be useful to your app but is not included in the default profile. To learn more about the available scopes for Login with Unstoppable Domains, see [Scopes for Login](/identity/guides/login-scopes.md).
+Some of the Web3 claims offered by Unstoppable Domains are outside the standard OAuth2 specification. For example, the `wallet_address` claim may be useful to your app but is not included in the default profile. To learn more about the available scopes for Unstoppable Login Domains, see [Scopes for Login](/identity/guides/login-scopes.md).
 
 Adding a custom claim requires a few one-time steps in your Auth0 tenant. The process is summarized below, including some example code for creating the custom claim in your Auth0 tenant.
 
@@ -97,7 +97,7 @@ exports.onExecutePostLogin = async (event, api) => {
 
 See the Auth0's example for how to [add custom claims to a token](https://auth0.com/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims#add-custom-claims-to-a-token) for detailed information about the process.
 
-## Step 5: Login With Unstoppable
+## Step 5: Unstoppable Login
 
 In the left navigation menu, you can expand the **Authentication** section, select **Authentication Profile**, and click **Try** to preview your new Auth0 login flow with Unstoppable Domains.
 
@@ -148,5 +148,5 @@ Once your app is using the Unstoppable Domains social connection, Auth0 will be 
 </figure>
 
 :::success Congratulations!
-You have implemented Login with Unstoppable with Auth0.
+You have implemented Unstoppable Login with Auth0.
 :::
