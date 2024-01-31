@@ -5,6 +5,10 @@ description: This guide shows how to get started with Partner API v2 (Legacy).
 
 # Partner API v2 (Legacy) Integration Paths
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 Unstoppable Domains Partner API v2 (Legacy) has several integration pathways available for developers. This page reviews the integration guides and overall features for each installation option. For more information about the endpoints, please consult the [Partner API v2 (Legacy) endpoint specification](https://docs.unstoppabledomains.com/openapi/partner/v2/).
 
 :::warning important

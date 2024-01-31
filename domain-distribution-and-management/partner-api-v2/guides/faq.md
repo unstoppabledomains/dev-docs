@@ -8,6 +8,10 @@ redirectFrom:
 
 # Partner API v2 (Legacy) FAQ
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 ### What happens when the HMAC signature becomes invalid for redirect URL payments?
 
 You would be able to put in an order, but no resolution records would be available to pre-fill during the minting step.

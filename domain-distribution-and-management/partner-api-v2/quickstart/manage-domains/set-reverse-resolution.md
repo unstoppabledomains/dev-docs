@@ -9,6 +9,10 @@ showNextButton: false
 
 # Set Domain Reverse Resolution
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **configure reverse resolution records** without having to form them on the client.
 
 ## Step 1: Retrieve Your Reseller ID and Secret API Token

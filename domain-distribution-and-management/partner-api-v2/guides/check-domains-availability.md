@@ -9,6 +9,10 @@ redirectFrom:
 
 # Check Domains Availability
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 The Partner API v2 (Legacy) offers an endpoint that lets you check the availability of multiple domain names before purchase to avoid making minting calls to non-available domains. Partners can use this endpoint to implement a bulk domain name search field in their application, allowing users to search for multiple domains simultaneously.
 
 <figure>

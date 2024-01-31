@@ -8,6 +8,10 @@ redirectFrom:
 
 # Best Practices for Integrating Partner API v2 (Legacy)
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 Here are best practices to ensure the proper integration of the Unstoppable Domains Partner API v2 (Legacy) into your applications:
 
 ## Simplify Your Domain Search Fields With the Domains Suggestions Endpoint
