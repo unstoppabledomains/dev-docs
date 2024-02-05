@@ -9,6 +9,10 @@ redirectFrom:
 
 # Claim Free Domains
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 Unstoppable Domains offers free domain minting to Partners based on specified criteria. Authorized Partners can use the following API endpoints: [Get Free Domains Suggestions](https://docs.unstoppabledomains.com/openapi/reference/#operation/GetDomainsSuggestionsFree), [Reserve Free Domain Name](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostDomainReserve), and [Claim Free Domain](https://docs.unstoppabledomains.com/openapi/reference/#operation/PostOrders).
 
 The diagram below illustrates the general process between a Partner and Unstoppable Domains during the process of minting a free domain.

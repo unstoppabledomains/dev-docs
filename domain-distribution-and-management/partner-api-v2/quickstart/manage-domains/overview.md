@@ -8,6 +8,10 @@ redirectFrom:
 
 # Domain Actions API (Legacy) Overview
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 The Domain Actions API (Legacy) from Unstoppable Domains is designed to make it easier for Partners to interact with domains on the blockchain. It provides a convenient way to generate the transactions needed to perform various actions, such as updating domain records, configuring reverse resolution, or transferring domain ownership.
 
 This allows Partners to quickly and efficiently perform these actions with a single API request without worrying about the complex details of forming transactions on the client side. For more information about the endpoints, please consult the [Partner API v2 (Legacy) endpoint specification](https://docs.unstoppabledomains.com/openapi/partner/v2/).

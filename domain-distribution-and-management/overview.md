@@ -20,6 +20,10 @@ For more information, please consult the [Partner API specification](https://doc
 
 # Partner API v2 (Legacy)
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 Our legacy Partner API. For more information, please consult the [Partner API v2 (Legacy) specification](https://docs.unstoppabledomains.com/openapi/partner/v2/).
 
 ## Rate Limits

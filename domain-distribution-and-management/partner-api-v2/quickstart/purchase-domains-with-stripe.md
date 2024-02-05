@@ -8,6 +8,10 @@ redirectFrom:
 
 # Purchase Domains with Stripe
 
+:::warning Partner API v2 Deprecation
+Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+:::
+
 Unstoppable Domains supports [Stripe payments](https://stripe.com) to process payments from Partners. Stripe is a payment provider that allows you to accept credit cards, PayPal, and Apple Pay from customers. This is a recommended and secure payment method for partners that mostly use client-side applications.
 
 The diagram below illustrates the general process between a Partner and Unstoppable Domains during the process of buying a domain with Stripe.
