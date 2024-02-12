@@ -9,7 +9,7 @@ redirectFrom:
 # Search Domains
 
 :::warning Partner API v2 Deprecation
-Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
 :::
 
 The Partner API v2 (Legacy) offers an endpoint that provides free and paid domain suggestions available for purchase based on the entered information. Partners can use this endpoint to implement a domain suggestions field in their application to shows users alternative domains they can purchase if what they want isn't available.
@@ -122,5 +122,3 @@ curl --location --request GET 'https://api.ud-sandbox.com/api/v2/resellers/{PART
 :::success Congratulations!
 You have successfully gotten suggestions of available free and paid domains to purchase with the Partner API.
 :::
-
-

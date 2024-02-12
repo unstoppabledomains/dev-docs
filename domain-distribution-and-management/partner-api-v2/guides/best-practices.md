@@ -9,7 +9,7 @@ redirectFrom:
 # Best Practices for Integrating Partner API v2 (Legacy)
 
 :::warning Partner API v2 Deprecation
-Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
 :::
 
 Here are best practices to ensure the proper integration of the Unstoppable Domains Partner API v2 (Legacy) into your applications:
@@ -43,5 +43,3 @@ Unstoppable Domains Partner API v2 (Legacy) can pre-fill crypto payment addresse
 ## Don’t Use Your Secrets in the Frontend
 
 Using your Partner API v2 (Legacy) key from the backend of your application is recommended rather than the frontend. If the API key is placed in the frontend, it becomes accessible by anyone who has access to the client-side code, increasing the risk of unauthorized access or misuse. To protect against this, use the API key from the backend to keep it secure.
-
-
