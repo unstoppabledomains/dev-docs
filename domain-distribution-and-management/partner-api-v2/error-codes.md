@@ -8,7 +8,7 @@ redirectFrom:
 # Error Codes for Troubleshooting
 
 :::warning Partner API v2 Deprecation
-Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
 :::
 
 Partner API errors are in JSON format.
@@ -63,5 +63,3 @@ Partner API errors are in JSON format.
 | `ORDER_NOT_FOUND`  | The requested order is not found            |
 | `DOMAIN_NOT_FOUND` | The requested domain name is not registered |
 | `ACTION_NOT_FOUND` | The requested domain action is not found    |
-
-

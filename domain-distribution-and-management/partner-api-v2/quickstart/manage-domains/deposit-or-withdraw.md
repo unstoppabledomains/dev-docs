@@ -10,7 +10,7 @@ showNextButton: false
 # Deposit or Withdraw Domains
 
 :::warning Partner API v2 Deprecation
-Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
 :::
 
 The Domain Actions API (Legacy) offers the functionality to generate a list of transactions that needs to be performed to **bridge domains from Ethereum to Polygon and vice versa** without having to form them on the client.
@@ -221,8 +221,6 @@ The `id` field in the API response is the domain action ID and the `txs` field c
 :::success Congratulations!
 You have successfully created the domain action request to bridge domains between Ethereum and Polygon with the Domain Actions API. Now that the domain action is created, you can [sign the transaction](./overview.md#step-2-sign-the-transaction).
 :::
-
-
 
 <div class="custom-next-to">
 

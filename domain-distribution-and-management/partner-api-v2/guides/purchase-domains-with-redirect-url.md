@@ -10,7 +10,7 @@ redirectFrom:
 # Redirect URL Payments
 
 :::warning Partner API v2 Deprecation
-Partner API v2 will be deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
+Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
 :::
 
 The Redirect URL payment flow is the most straightforward payment process to implement for Partners. You do not have to set up native paid domain flows in your application and can generate a URL to redirect payments to Unstoppable Domains to be processed.
@@ -64,8 +64,6 @@ https://ud-sandbox.com/search?ref=unstoppable
 You just configured your Partner account to process payments using a Redirect URL.
 :::
 
-
-
 <!-- ---
 title: Redirect URL Payments With Auto-Configured Crypto Records Guide | UD Developer Portal
 description: This guide covers configuring the Partner account to mint paid domains and automatically pre-fill resolution records using the redirect URL payment processing flow.
@@ -97,12 +95,12 @@ https://unstoppabledomains.com/search?ref={UD_REFERRAL_CODE}&searchTerm={DOMAIN_
 
 The Unstoppable Domains website requires additional fields to the `ref` and `searchTerm` query parameters to pre-fill resolution records after minting using a payment URL:
 
-| Name       | Type   | Mandatory | Description                                                                                                                                                                                      |
-| ---------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| timestamp  | NUMBER | YES       | The epoch timestamp in milliseconds when the payment URL is created                                                                                                                              |
-| strictName | STRING | YES       | The Partner's `resellerID` [gotten from their Partner account](../quickstart/retrieve-an-api-key.md#step-1-locate-your-reseller-id)                                                              |
+| Name       | Type   | Mandatory | Description                                                                                                                                                                            |
+| ---------- | ------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timestamp  | NUMBER | YES       | The epoch timestamp in milliseconds when the payment URL is created                                                                                                                    |
+| strictName | STRING | YES       | The Partner's `resellerID` [gotten from their Partner account](../quickstart/retrieve-an-api-key.md#step-1-locate-your-reseller-id)                                                    |
 | records    | OBJECT | YES       | A key-value pair of resolution records the domain should be configured to. See the [Records Reference](/resolution/guides/records-reference.md) documentation for supported key values |
-| signature  | STRING | YES       | A HMAC-SHA256 hash of the query parameters for the order security                                                                                                                                |
+| signature  | STRING | YES       | A HMAC-SHA256 hash of the query parameters for the order security                                                                                                                      |
 
 :::info
 There is an 8 hours window from when you generate the payment URL with the given timestamp before UD considers it invalid.
@@ -209,5 +207,3 @@ https://ud-sandbox.com/search?ref=unstoppable&searchTerm=buyadomain.crypto&times
 :::success Congratulations!
 You just configured your Partner account to process payments and automatically configure resolution records using a Redirect URL.
 :::
-
-
