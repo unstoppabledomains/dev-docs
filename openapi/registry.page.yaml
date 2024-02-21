@@ -1,0 +1,14 @@
+type: reference-docs
+label: Registry
+definitionId: registry
+settings:
+  pagination: none
+  showConsole: true
+  generateCodeSamples:
+    languages:
+      - lang: curl
+      - lang: JavaScript
+      - lang: Node.js
+      - lang: Python
+      - lang: Java
+  hideDownloadButton: true
