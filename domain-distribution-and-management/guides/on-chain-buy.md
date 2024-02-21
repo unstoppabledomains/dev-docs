@@ -42,7 +42,7 @@ Which would yield the below JSON response.
 
 Once you have confirmed the domain is available, you can request the transaction details for purchasing the domain and minting it to a specific wallet address. 
 
-Continuing with the `qwerty.wallet` example, make a `POST` request to the [purchase parameters endpoint](https://docs.unstoppabledomains.com/openapi/registry/#operation/GetDomain) with a payload indicating the claiming wallet address, any crypto records that should be set on mint, as well as the currency the domain will be purchased in.  
+Continuing with the `qwerty.wallet` example, make a `POST` request to the [purchase parameters endpoint](https://docs.unstoppabledomains.com/openapi/registry/#operation/PostDomainPurchaseParameters) with a payload indicating the claiming wallet address, any crypto records that should be set on mint, as well as the currency the domain will be purchased in.  
 
 An example payload would be:
 
