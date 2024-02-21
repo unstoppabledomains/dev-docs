@@ -30,7 +30,7 @@ Clicking **Edit this page** at the upper right corner of any page on the documen
 
 ## Redocly development environment
 
-To preview Redocly-specific features while editing, you will need to clone the respository and [install the Redocly developer portal](https://redocly.com/docs/developer-portal/installation/).
+To preview Redocly-specific features while editing, you will need to clone the repository and [install the Redocly developer portal](https://redocly.com/docs/developer-portal/installation/).
 
 ### Prerequisites
 
