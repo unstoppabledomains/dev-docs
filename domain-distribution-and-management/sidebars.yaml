@@ -39,6 +39,8 @@ pages:
     pages:
       - label: Implement Webhooks
         page: guides/implementing-webhooks.md
+      - label: On-chain Buy
+        page: guides/on-chain-buy.md
       - group: Partner API v2 (Legacy)
         expanded: false
         pages:
