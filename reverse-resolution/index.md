@@ -18,7 +18,7 @@ Unlike standard domain resolution, where a domain is provided to an application 
 
 ## How Reverse Resolution Works
 
-Reverse Resolution works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected. Please see the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) to understand how Reverse Resolution works.
+Reverse Resolution works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected.
 
 ## Choose a Configuration Path
 

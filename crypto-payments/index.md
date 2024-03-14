@@ -22,8 +22,7 @@ Domain Resolution is the process of converting a human-readable domain name like
 
 ## How Domain Resolution Works
 
-In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The application sends both parameters (`currency` and `domain name`) to the [Resolver Contract](/smart-contracts/contract-reference/uns-smart-contracts.md/#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain to complete the `ETH` transfer to Ryan’s wallet. Please see the [Web3 Domain Resolution Demo](https://resolutionwithunstoppable.com) to understand how Domain Resolution works.
-
+In the demo above, we wanted to send `ETH` to the `ryan.crypto` domain. The application sends both parameters (`currency` and `domain name`) to the [Resolver Contract](/smart-contracts/contract-reference/uns-smart-contracts.md/#resolver) on the Ethereum blockchain, which returns the `crypto.ETH.address` record attached to that domain to complete the `ETH` transfer to Ryan’s wallet. 
 <figure>
 
 ![the crypto payments success flow diagram](/images/crypto-payments-success-flow.svg)
