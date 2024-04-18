@@ -13,9 +13,9 @@ This guide covers getting test tokens for your wallet on the Polygon network. Th
 
 Head over to the [Polygon Faucet](https://faucet.polygon.technology/). It is a website that gives out tiny amounts of MATIC cryptocurrency for you to test transactions.
 
-## Step 2: Select Mumbai Test Network
+## Step 2: Select Amoy Test Network
 
-Select `Mumbai` as the Polygon test network and `MATIC token` from the drop-down list of tokens you can receive from the faucet:
+Select `Amoy` as the Polygon test network:
 
 <figure class="half-inline-block">
 
@@ -24,12 +24,6 @@ Select `Mumbai` as the Polygon test network and `MATIC token` from the drop-down
 <figcaption>faucet network selection</figcaption>
 </figure>
 
-<figure class="half-inline-block">
-
-![faucet token selection](/images/faucet-token-selection.png)
-
-<figcaption>faucet token selection</figcaption>
-</figure>
 
 ## Step 3: Submit Your Wallet Address
 
