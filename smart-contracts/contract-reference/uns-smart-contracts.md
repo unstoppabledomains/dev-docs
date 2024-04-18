@@ -18,7 +18,9 @@ This page is divided into sections, grouping contracts by the following categori
 - [Interfaces](uns-smart-contracts.md#interfaces)
 - [Utility contracts](uns-smart-contracts.md#utility-contracts)
 
-All contract addresses are available on the [UNS GitHub repository](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md)
+:::info
+  All contract addresses are available on the [UNS GitHub repository](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md)
+:::
 
 ## User-facing contracts
 
