@@ -1,6 +1,6 @@
 ---
 title: Add Polygon Network to MetaMask Wallet Guide | UD Developer Portal
-description: This guide shows how to configure the MetaMask wallet browser extension to support both Polygon mainnet and testnet (Mumbai) networks.
+description: This guide shows how to configure the MetaMask wallet browser extension to support both Polygon mainnet and testnet (Amoy) networks.
 redirectFrom:
   - /polygon/
   - /polygon/add-polygon-to-metamask/
@@ -8,7 +8,7 @@ redirectFrom:
 
 # Add Polygon Network to MetaMask Wallet Guide
 
-This guide covers configuring the MetaMask wallet to support both Polygon mainnet and testnet (Mumbai) networks. This process requires the use of the MetaMask browser extension.
+This guide covers configuring the MetaMask wallet to support both Polygon mainnet and testnet (Amoy) networks. This process requires the use of the MetaMask browser extension.
 
 ## Step 1: Open MetaMask Network Settings
 
@@ -43,13 +43,13 @@ Click the `Add a network` button on the network settings page:
 
 Then, fill the network configuration for the Polygon network you want to add (mainnet or testnet) into the fields displayed in MetaMask.
 
-| Field Name | Polygon Mainnet | Polygon Testnet (Mumbai) |
-| - | - | - |
-| Network Name | Polygon | Mumbai |
-| New RPC URL | https://polygon-rpc.com/ | https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78 |
-| Chain ID | 137 | 80001 |
-| Currency Symbol | MATIC | MATIC |
-| Block Explorer URL | https://polygonscan.com/ | https://mumbai.polygonscan.com |
+| Field Name | Polygon Mainnet | Polygon Testnet (Amoy)              |
+| - | - |-------------------------------------|
+| Network Name | Polygon | Amoy                                |
+| New RPC URL | https://polygon-rpc.com/ | https://rpc-amoy.polygon.technology |
+| Chain ID | 137 | 80002                               |
+| Currency Symbol | MATIC | MATIC                               |
+| Block Explorer URL | https://polygonscan.com/ | https://www.oklink.com/amoy      |
 
 <figure>
 

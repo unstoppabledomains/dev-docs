@@ -19,6 +19,11 @@ This page is divided into sections, grouping contracts by the following categori
 - [Utility contracts](cns-smart-contracts.md#utility-contracts)
 - [Test smart contracts](cns-smart-contracts.md#test-smart-contracts)
 
+:::info
+All contract addresses are available on the [UNS GitHub repository](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md)
+:::
+
+
 ## User-facing contracts
 
 This section lists all the smart contracts that users can directly interact with.
@@ -27,58 +32,11 @@ This section lists all the smart contracts that users can directly interact with
 
 `Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](/getting-started/domain-registry-essentials/cns-architecture-overview.md#registry).
 
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe">0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x801452cFAC27e79a11c6b185986fdE09e8637589">0x801452cFAC27e79a11c6b185986fdE09e8637589</a></td>
-    </tr>
-</table>
-
 **Source code:** [contracts/Registry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol)
 
 ### Resolver
 
 `Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](/getting-started/domain-registry-essentials/cns-architecture-overview.md#resolver).
-
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842">0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437">0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437</a></td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Network</th>
-    <th>Legacy addresses</th>
-    <tr>
-        <td>Mainnet</td>
-           <td><a
-                    href="https://etherscan.io/address/0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d">0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d</a>
-               <a
-                    href="https://etherscan.io/address/0x878bc2f3f717766ab69c0a5f9a6144931e61aed3">0x878bc2f3f717766ab69c0a5f9a6144931e61aed3</a>
-            </td>
-    </tr>
-</table>
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
@@ -86,62 +44,11 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
 
 `ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/cns-architecture-overview.md#proxyreader).
 
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982">0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982</a></td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Network</th>
-    <th>Legacy addresses</th>
-    <tr>
-        <td>Mainnet</td>
-           <td><a
-                    href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
-            </td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-           <td><a
-                    href="https://goerli.etherscan.io/address/0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68">0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68</a>
-            </td>
-    </tr>
-</table>
-
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/ProxyReader.sol)
 
 ### SignatureController
 
 `SignatureController` allows any account to submit management transactions on behalf of a token owner if an owner provides a signature for that call.
-
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0x82EF94294C95aD0930055f31e53A34509227c5f7">0x82EF94294C95aD0930055f31e53A34509227c5f7</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x5199dAE4B24B987ba18FcE1b64664D1B798d372B">0x5199dAE4B24B987ba18FcE1b64664D1B798d372B</a></td>
-    </tr>
-</table>
 
 **Source code:** [contracts/controllers/SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol)
 
@@ -149,45 +56,11 @@ This is an auto-generated table with CNS smart-contract addresses. See README fo
 
 `DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](/getting-started/domain-registry-essentials/cns-architecture-overview.md#alternative-ownership-models).
 
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7">0xeA70777e28E00E81f58b8921fC47F78B8a72eFE7</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
-    </tr>
-</table>
-
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
 ### TwitterValidationOperator
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
-
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855">0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
-    </tr>
-</table>
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/operators/TwitterValidationOperator.sol)
 
@@ -199,45 +72,11 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 The deployed version of the `Registry` smart contract only allows `MintingController` to mint second-level domains.
 
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xb0EE56339C3253361730F50c08d3d7817ecD60Ca">0xb0EE56339C3253361730F50c08d3d7817ecD60Ca</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0xCEC41677be322049cC885c0DAe2fE0D52CA195ca">0xCEC41677be322049cC885c0DAe2fE0D52CA195ca</a></td>
-    </tr>
-</table>
-
 **Source code:** [contracts/controllers/MintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/MintingController.sol)
 
 ### URIPrefixController
 
 `URIPrefixController` enables the Unstoppable Domains team to edit the token URI prefix.
-
-:::info
-This is an auto-generated table with CNS smart-contract addresses. See README for more info.
-:::
-
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91">0x09B091492759737C03da9dB7eDF1CD6BCC3A9d91</a></td>
-    </tr>
-    <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x29465e3d2daA588E62375977bCe9b3f51406a794">0x29465e3d2daA588E62375977bCe9b3f51406a794</a></td>
-    </tr>
-</table>
 
 **Source code:** [contracts/controllers/URIPrefixController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/URIPrefixController.sol)
 
