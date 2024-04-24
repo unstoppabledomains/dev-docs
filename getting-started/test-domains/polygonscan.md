@@ -8,7 +8,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 <embed src="/snippets/_test-domain-explain.md" />
 
 :::info
-[Polygon faucet](https://faucet.polygon.technology) offers free money in the form of matic tokens for domains minted on Polygon Testnet.
+[Polygon faucet](https://faucet.polygon.technology) offers free MATIC tokens for Polygon Testnets. You will need some MATIC to interact with our smart contracts and claim a free test domain.
 :::
 
 ## Step 1. Configure your Metamask wallet for Polygon
@@ -30,7 +30,6 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 "0x17936dd2b9c99a1e1bfa039dd7d40118f3ed535fcd9c8cda23c8070ffb4c2264 = 'pudgy';
 "0x9bf15275eb85f2e69308f3dbfbe0f94cade4f05c2aa24ba7b9eba5ad2fb1a2cb = 'altimist';
 "0xa264639c3dbff58a1ded5efcf724e50a9c7847ff8197c87c00d009fbba2a3720 = 'go';
-"0x2ac5a394f941733376764fbf4c4b2933098b23a405bd8c55c9a8d32e2c8fb696 = 'realm';
 "0x2a91107027b89ab420a4d8ec457493cfca12ab17615ec8c876695f1343f3f0fd = 'binanceus';
 "0x57ea207b3238a69d8a9a53252de172f2ceae1d856008b13208a203867a707c78 = 'manga';
 "0xaf4d61a6acdda7379d6f90207923aeb080994d0f1aaba4b8b24a14f965b2bb7c = 'anime';
