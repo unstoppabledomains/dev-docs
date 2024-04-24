@@ -10,6 +10,8 @@ pages:
   - group: Get a Test Domain
     expanded: false
     pages:
+      - label: Polygonscan Guide
+        page: test-domains/polygonscan.md
       - label: UD Website Faucet Guide
         page: test-domains/faucet.md
     separatorLine: true
