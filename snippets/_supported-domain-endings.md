@@ -1,4 +1,7 @@
-| Name Service                   | Supported Domains                                                                                                                          |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Zilliqa Name Service (ZNS)     | `.zil`                                                                                                                                     |
-| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.wallet,` `.888`, `.dao`, `.x`, `.klever`, `.hi`, `.kresus`, `.polygon`, `.anime`, `.manga` |
+| Name Service                   | Supported Domains                                                                                                                                                                                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                                                                                                                                                                        |
+| Unstoppable Name Service (UNS) | `.x`, `.polygon`, `.nft`, `.crypto`, `.blockchain`, `.bitcoin`, `.dao`, `.888`, `.wallet`, `.binanceus`, `.hi`, `.klever`, `.kresus`, `.anime`, `.manga`, `.go`, `.altimist`, `.pudgy`, `.unstoppable`, `.austin`, `.bitget`, `.pog`, `.clay` |
+| Ethereum Name Service (ENS)    | `.eth`                                                                                                                                                                                                                                        |
+
+For the full list, check the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds).
