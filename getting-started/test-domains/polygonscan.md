@@ -24,6 +24,7 @@ description: This guide covers the process of obtaining a free test domain, thro
 You can locate the domain ending [namehash](../domain-registry-essentials/namehashing.md) using the following list:
 
 ```bash
+0xf72e00036d7ef2d56e70c6df1d619bcccb64c93ea5b96305e7d7f24c47b4b563 = 'witg';
 0x58872a8ca9414ae0f3ab850f51efaf4c77b647d903f9ec89a03d3018bb42e4fa = 'clay';
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0x89e68000b532da79f9a0d4b8416eaa4f64294236ab233205343453d5bec22933 = 'austin';
