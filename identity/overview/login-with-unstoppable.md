@@ -75,6 +75,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .bitget
 - .pog
 - .clay
+- .witg
 - .eth
 - .zil \*
 
