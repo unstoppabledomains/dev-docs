@@ -98,17 +98,6 @@ Refer to [Resolution SDKs](https://docs.unstoppabledomains.com/resolution/sdks-a
 
 The key is only allowed to be used in Resolution SDKs to interact with EVM RPC providers to query on-chain data. See [example](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#initialize-with-unstoppable-domains-uns-proxy-provider)
 
-### Legacy API Key
-Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolution/) and [Domain Distribution and Management Overview
-](https://docs.unstoppabledomains.com/domain-distribution-and-management/overview/#domain-distribution-and-management-overview) for supported use cases.
-
-Click `Reveal Key` under `Legacy API key` to acquire your API Key
-
-
-## Step 3: Configure Payment Information
-
-The Partner API v2 (Legacy) must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
-
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.
 :::
@@ -142,11 +131,6 @@ https://api.ud-sandbox.com/
 :::success Congratulations!
 You have successfully accessed and set up the Unstoppable Domains Sandbox Environment. Happy hacking!
 :::
-
-## Get Started with Partner API v2 (Legacy)
-
-Follow the [Partner API v2 (Legacy) integration guide](../partner-api-v2/quickstart/partner-api-v2-integration.md) to get started.
-
 
 
 <embed src="/snippets/_partner-survey-embed.md" />
