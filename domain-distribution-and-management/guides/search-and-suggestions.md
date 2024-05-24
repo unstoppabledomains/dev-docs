@@ -69,8 +69,10 @@ Each result in the `items` array will be an object that looks like this:
 ```
 
 - If the `availability.status` is `AVAILABLE`, the domain is available for registration.
-- The price we expect you to collect from the user will be the value of `availability.price.subTotal.usdCents` (expressed as USD cents, divide it by `100` to get the value in USD).
+- All prices are expressed as USD cents. Divide the values by `100` to get the value in USD.
 - The `availability.price.listPrice.usdCents` is the value of the domain before any additional fees are included. Unstoppable Domains does not add any fees for our own TLDs.
+- The price we expect you to collect from the user will be the value of `availability.price.subTotal.usdCents`.
+- See the [full API specification](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/getMultipleDomains!c=200&path=items/@type&t=response) for additional details on possible responses
 
 
 ### Searching across Multiple TLDs
@@ -100,7 +102,80 @@ GET /partner/v3/domains?query=example-123&query=my-brand-example-123
 
 ## Suggestions
 
+Sometimes the exact-match searching will yield many unavailable options. An easy solution is to suggest some alternatives based on the user's original search.
 
+Until the exact-match searching, **all results from the Suggestions API will be available for registration**.
+
+### Request and Response
+
+The basic suggestions request is:
+```
+GET /partner/v3/suggestions/domains?query=example-123
+```
+
+This will return a JSON response that includes a list of results:
+```json
+{
+    "@type": "unstoppabledomains.com/partner.v3.List",
+    "items": [ ... ]
+}
+```
+
+The `items` array will include an array of objects, one per domain (label + TLD) that is being suggested.
+
+Each result in the `items` array will be an object that looks like this:
+```json
+{
+    "@type": "unstoppabledomains.com/partner.v3.DomainSuggestion",
+    "name": "suggested-example-123.x",
+    "price": {
+        "type": "STANDARD",
+        "listPrice": {
+            "usdCents": 4000
+        },
+        "subTotal": {
+            "usdCents": 4000
+        }
+    }
+}
+```
+- Unlike the exact-match search results API, the Suggestions API will only provide domains available for registration, so the response is relatively minimal.
+- All prices are expressed as USD cents. Divide the values by `100` to get the value in USD.
+- The `price.listPrice.usdCents` is the value of the domain before any additional fees are included. Unstoppable Domains does not add any fees for our own TLDs.
+- The price we expect you to collect from the user will be the value of `price.subTotal.usdCents`.
+
+### Suggestions across Multiple TLDs
+
+By default, if no TLDs are specified in the request, all TLDs available to your account will be included in suggestion results.
+
+```
+# Include all TLDs enabled on your account
+GET /partner/v3/suggestions/domains?query=example-123
+```
+
+However, you may want to allow users to filter by specific TLDs, or always limit the TLDs to a specific set that align with your brand. This can be done using the `ending` query string.
+
+```
+# Include specific TLDs
+GET /partner/v3/suggestions/domains?query=example-123&ending=crypto&ending=nft
+```
+
+### Multiple Suggestion searches at once
+
+You can include mulitple suggestion queries in a single request. This can enable your own logic to apply variations to the user provided search or simply allowing your users search for several domains at once.
+
+```
+GET /partner/v3/domains?query=example-123&query=my-brand-example-123
+```
+
+## Best Practices
+
+Utlimately, you should incorporate search and suggestion results in a way that makes sense for your application. That said, our general recommendation is to provide an experience similiar to the one offered on [unstoppabledomains.com](https://unstoppabledomains.com):
+- Allow the user to enter a search term before displaying any results
+- Present multiple TLD options for their exact search term
+- In a separate section, also provide suggestions based on their search term
+- Display the pricing information alongside each result with the ability to buy or add to a checkout cart
+- If an exact-match result is unavailable for registration, clearly display to the user the domain is unavailable
 
 ## What's next?
 
