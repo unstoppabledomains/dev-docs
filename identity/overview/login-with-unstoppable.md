@@ -76,6 +76,9 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .pog
 - .clay
 - .witg
+- .metropolis
+- .wrkx
+- .secret
 - .eth
 - .zil \*
 
