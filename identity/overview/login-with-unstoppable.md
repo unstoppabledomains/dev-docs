@@ -89,4 +89,9 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 
 - The components provided by the UAuth libraries are only available in React. The UAuth modal is written in React, which has a larger library size.
 
-<embed src="/snippets/_developer-survey-embed.md" />
+<embed src="/snippets/_developer-survey-embed.md" />yarn install
+
+yarn start
+
+yarn clean
+
