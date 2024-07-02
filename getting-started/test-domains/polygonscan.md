@@ -30,6 +30,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x89e68000b532da79f9a0d4b8416eaa4f64294236ab233205343453d5bec22933 = 'austin';
 0x2a91107027b89ab420a4d8ec457493cfca12ab17615ec8c876695f1343f3f0fd = 'binanceus';
 0x042fb01c1e43fb4a32f85b41c821e17d2faeac58cfc5fb23f80bc00c940f85e3 = 'bitcoin';
+0xbf2121df4e351413ea6788cb220e735378a753cec288cb22644340d58d597b23 = 'bitget';
 0x4118ebbd893ecbb9f5d7a817c7d8039c1bd991b56ea243e2ae84d0a1b2c950a7 = 'blockchain';
 0x58872a8ca9414ae0f3ab850f51efaf4c77b647d903f9ec89a03d3018bb42e4fa = 'clay';
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
@@ -41,8 +42,10 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x57ea207b3238a69d8a9a53252de172f2ceae1d856008b13208a203867a707c78 = 'manga';
 0x46a29e7d78413806ab5b6e30bc360bbff329e7bec2fc3ddf6f62d8c6c17c45b6 = 'metropolis';
 0xb75cf4f3d8bc3deb317ed5216d898899d5cc6a783f65f6768eb9bcb89428670d = 'nft';
+0xe76cc52c68a868af0cba676c92337a921cc721b45b6630e47f7ecb78e3e0edcc = 'pog';
 0xed9ce6b49a0e2c56c57c86795b131bd6df792312183994c3cf3de1516cfe92d6 = 'polygon';
 0x17936dd2b9c99a1e1bfa039dd7d40118f3ed535fcd9c8cda23c8070ffb4c2264 = 'pudgy';
+0x2418c6dc1c5996890c54f1b197ce3d5f255b857445bce309215d0751b56fcd65 = 'raiin';
 0x335f1d8a43ebd6d9277127e859f502a14bbe3ccbe2d3f89be38fd0086da4c396 = 'secret';
 0x92bba949890cd44a226a8ce54135cf86538cd6c5ca0ccf41877102fd718cc8aa = 'unstoppable';
 0x1e3f482b3363eb4710dae2cb2183128e272eafbe137f686851c1caea32502230 = 'wallet';
