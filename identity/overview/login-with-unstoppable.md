@@ -75,6 +75,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .pudgy
 - .raiin
 - .secret
+- .stepn
 - .unstoppable
 - .wallet
 - .witg
