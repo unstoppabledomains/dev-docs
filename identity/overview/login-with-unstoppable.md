@@ -67,6 +67,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .hi
 - .klever
 - .kresus
+- .kryptic
 - .manga
 - .metropolis
 - .nft
