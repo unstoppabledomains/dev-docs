@@ -105,7 +105,7 @@ Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolut
 Click `Reveal Key` under `Legacy API key` to acquire your API Key
 
 
-## Step 3: Configure Payment Information
+## Step 4: Configure Payment Information
 
 The Partner API v2 (Legacy) must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
 
