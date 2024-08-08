@@ -56,13 +56,10 @@ nav:
   - label: API Reference
     page: openapi/resolution.page.yaml
 
-  - label: Contribute
-    page: contribute/unstoppable-quests.md
-
   - search: true
 
 footer:
-  copyrightText: Copyright © 2022 Unstoppable Domains Inc. All rights reserved.
+  copyrightText: Copyright © 2024 Unstoppable Domains Inc. All rights reserved.
   columns:
     - group: Legal
       items:

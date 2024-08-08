@@ -32,6 +32,5 @@ These items are listed in order of complexity. For example, if you are starting 
   - [Crypto Payments](/crypto-payments/index.md)
   - [IPFS Websites](/d-websites/index.md)
 - [API Reference](/openapi/resolution.page.yaml)
-- [Contribute](/contribute/unstoppable-quests.md)
 
 <embed src="/snippets/_developer-survey-embed.md" />
