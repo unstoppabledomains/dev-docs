@@ -20,6 +20,10 @@ Unlike standard domain resolution, where a domain is provided to an application 
 
 Reverse Resolution works by having domain owners set a reverse record for their domains on the blockchain. Then when an application uses our APIs or libraries to resolve a reverse record, our smart contracts return the domain name that the owner selected.
 
+## Who Sets the Domain for Reverse Resolution?
+
+Individuals maintain absolute control over their domains and their reverse records. No one can set or remove a reverse record of a domain other than the domain owner. However, reverse records are wiped automatically at the contract level whenever a domain owner changes.
+
 ## Choose a Configuration Path
 
 There are several ways to set a reverse record for your UD domains, detailed in the table below.

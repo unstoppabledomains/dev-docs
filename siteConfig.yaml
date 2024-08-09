@@ -14,7 +14,6 @@ linkChecker:
   options:
     CheckExternal: false
 oasDefinitions:
-  partner-v2: https://api.redocly.com/registry/bundle/unstoppable-domains/Partner%20API/v2/openapi.yaml?branch=master
   partner-v3: https://api.redocly.com/registry/bundle/unstoppable-domains/Partner%20API/v3/openapi.yaml?branch=main
   profile-v1: https://api.redocly.com/registry/bundle/unstoppable-domains/Profile%20API/v1/openapi.yaml?branch=main
   login-unstoppable: https://api.redocly.com/registry/bundle/unstoppable-domains/Login%20API/v1/openapi.yaml
@@ -49,9 +48,6 @@ nav:
 
   - label: Guides
     page: /guides.mdx
-
-  - label: Use Cases
-    page: /use-cases/index.mdx
 
   - label: API Reference
     page: openapi/resolution.page.yaml
