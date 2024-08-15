@@ -63,6 +63,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .clay
 - .crypto
 - .dao
+- .dfz
 - .farms
 - .go
 - .hi
