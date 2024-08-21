@@ -1,60 +1,60 @@
-pages:
-  - separator: Domain Management
-    separatorLine: true
-  - page: index.md
-    label: Manage Domain Ownership
-    separatorLine: true
-  - group: Manage Domain Records
-    expanded: false
-    pages:
-      - page: managing-domain-records.md
-        label: Manage Domain Records Overview
-      - page: polygon-overview.md
-        label: Polygon Network Overview
-      - page: delegating-transactions.md
-        label: Delegate Transactions
-      - page: delegating-domain-management.md
-        label: Delegate Domain Management
-    separatorLine: true
-  - group: Domain Management Guides
-    expanded: false
-    pages:
-      - page: guides/managing-domains-using-contracts.md
-        label: Manage Domains Using Smart Contracts Guide
-      - page: guides/mint-subdomains-using-contracts.md
-        label: Mint Subdomains Using Smart Contracts Guide
-    separatorLine: true
-  - group: Domain Transfer Guides
-    expanded: false
-    pages:
-      - page: guides/uns1-to-uns2.md
-        label: UNS L1 to UNS L2 - Domain Deposit Guide
-      - page: guides/cns1-to-uns1.md
-        label: CNS L1 to UNS L1 - Domain Transfer Guide
-      - page: guides/cns1-to-uns2.md
-        label: CNS L1 to UNS L2 - Domain Deposit Guide
-    separatorLine: true
-  - group: Configure Polygon for MetaMask
-    expanded: false
-    pages:
-      - page: guides/add-polygon-to-metamask.md
-        label: Add Polygon Network to MetaMask Wallet Guide
-      - page: guides/get-polygon-test-tokens.md
-        label: Get Polygon Test Tokens Guide
-    separatorLine: true
-  - group: FAQs
-    expanded: false
-    pages:
-      - page: domain-management-faq.md
-        label: Domain Management FAQs
-      - page: migration-faq.md
-        label: Polygon Migration FAQs
-    separatorLine: true
-  - group: Reference
-    expanded: false
-    pages:
-      - page: polygon-release-notes.md
-        label: Polygon Release Notes
-      - page: domains-configuration.md
-        label: Domain Configuration GUI
-    separatorLine: true
+# pages:
+#   - separator: Domain Management
+#     separatorLine: true
+#   - page: index.md
+#     label: Manage Domain Ownership
+#     separatorLine: true
+#   - group: Manage Domain Records
+#     expanded: false
+#     pages:
+#       - page: managing-domain-records.md
+#         label: Manage Domain Records Overview
+#       - page: polygon-overview.md
+#         label: Polygon Network Overview
+#       - page: delegating-transactions.md
+#         label: Delegate Transactions
+#       - page: delegating-domain-management.md
+#         label: Delegate Domain Management
+#     separatorLine: true
+#   - group: Domain Management Guides
+#     expanded: false
+#     pages:
+#       - page: guides/managing-domains-using-contracts.md
+#         label: Manage Domains Using Smart Contracts Guide
+#       - page: guides/mint-subdomains-using-contracts.md
+#         label: Mint Subdomains Using Smart Contracts Guide
+#     separatorLine: true
+#   - group: Domain Transfer Guides
+#     expanded: false
+#     pages:
+#       - page: guides/uns1-to-uns2.md
+#         label: UNS L1 to UNS L2 - Domain Deposit Guide
+#       - page: guides/cns1-to-uns1.md
+#         label: CNS L1 to UNS L1 - Domain Transfer Guide
+#       - page: guides/cns1-to-uns2.md
+#         label: CNS L1 to UNS L2 - Domain Deposit Guide
+#     separatorLine: true
+#   - group: Configure Polygon for MetaMask
+#     expanded: false
+#     pages:
+#       - page: guides/add-polygon-to-metamask.md
+#         label: Add Polygon Network to MetaMask Wallet Guide
+#       - page: guides/get-polygon-test-tokens.md
+#         label: Get Polygon Test Tokens Guide
+#     separatorLine: true
+#   - group: FAQs
+#     expanded: false
+#     pages:
+#       - page: domain-management-faq.md
+#         label: Domain Management FAQs
+#       - page: migration-faq.md
+#         label: Polygon Migration FAQs
+#     separatorLine: true
+#   - group: Reference
+#     expanded: false
+#     pages:
+#       - page: polygon-release-notes.md
+#         label: Polygon Release Notes
+#       - page: domains-configuration.md
+#         label: Domain Configuration GUI
+#     separatorLine: true

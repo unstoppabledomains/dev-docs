@@ -1,30 +1,30 @@
-pages:
-  - separator: Domain Distribution and Management
-    separatorLine: true
-  - page: overview.md
-    label: Overview
-    separatorLine: true
-  - group: Quickstart
-    expanded: false
-    pages:
-      - label: Retrieve an API key
-        page: quickstart/retrieve-an-api-key.md
-    separatorLine: true
-  - group: Guides
-    expanded: false
-    pages:
-      - label: Implement Webhooks
-        page: guides/implementing-webhooks.md
-      - label: On-chain Buy
-        page: guides/on-chain-buy.md
-    separatorLine: true
-  - group: Tech References
-    expanded: false
-    pages:
-      - label: Partner API
-        page: ../openapi/partner.page.yaml
-      - label: Partner API v2 Error codes
-        page: partner-api-v2/error-codes.md
-      - label: Smart Contracts
-        page: ../smart-contracts/quick-start/manage-domain-records.md
-    separatorLine: true
+# pages:
+#   - separator: Domain Distribution and Management
+#     separatorLine: true
+#   - page: overview.md
+#     label: Overview
+#     separatorLine: true
+#   - group: Quickstart
+#     expanded: false
+#     pages:
+#       - label: Retrieve an API key
+#         page: quickstart/retrieve-an-api-key.md
+#     separatorLine: true
+#   - group: Guides
+#     expanded: false
+#     pages:
+#       - label: Implement Webhooks
+#         page: guides/implementing-webhooks.md
+#       - label: On-chain Buy
+#         page: guides/on-chain-buy.md
+#     separatorLine: true
+#   - group: Tech References
+#     expanded: false
+#     pages:
+#       - label: Partner API
+#         page: ../openapi/partner.page.yaml
+#       - label: Partner API v2 Error codes
+#         page: partner-api-v2/error-codes.md
+#       - label: Smart Contracts
+#         page: ../smart-contracts/quick-start/manage-domain-records.md
+#     separatorLine: true
