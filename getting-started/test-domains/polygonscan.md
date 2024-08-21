@@ -35,6 +35,8 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x58872a8ca9414ae0f3ab850f51efaf4c77b647d903f9ec89a03d3018bb42e4fa = 'clay';
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'dao';
+0x3b270f4d000c6046ee64e8c025ad8cff71e728b275a81bf53a060442fe9f9766 = 'dfz';
+0xd75c01499ad11caab105cfefbf62ed6f0c7208f8de3fa293f01c209b37a1d036 = 'farms';
 0xa264639c3dbff58a1ded5efcf724e50a9c7847ff8197c87c00d009fbba2a3720 = 'go';
 0xfdb51f7f56d9b1149db5ce99afcf60dda4416fd6fb8dc0649fec13cd03e1803e = 'hi';
 0xa18784bb78ee0f577251fb21ad5cac7a140ab47e9414e3c7af5125e3e1d28923 = 'klever';
@@ -49,6 +51,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x2418c6dc1c5996890c54f1b197ce3d5f255b857445bce309215d0751b56fcd65 = 'raiin';
 0x335f1d8a43ebd6d9277127e859f502a14bbe3ccbe2d3f89be38fd0086da4c396 = 'secret';
 0x05cb1b6d0e0a38c2fdeacf5d8383eea8f73d8fdeca1e4cc99a0e202f68d5b7df = 'stepn';
+0x241cdd75e86f1a1da99d0321ae7d8e31cdf7c71a31d68b44d8f6f20dfafa9db6 = 'tball';
 0x0adc8e928b9a2309a49011aae110462d6f3642f8b8b0602ccd9a14763ba2f283 = 'ubu';
 0x92bba949890cd44a226a8ce54135cf86538cd6c5ca0ccf41877102fd718cc8aa = 'unstoppable';
 0x1e3f482b3363eb4710dae2cb2183128e272eafbe137f686851c1caea32502230 = 'wallet';
