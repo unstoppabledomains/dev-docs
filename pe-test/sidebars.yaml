@@ -348,9 +348,9 @@
   expanded: false
   pages:
     - label: Build and Deploy an IPFS Website
-        page: ../d-websites/index.md
+      page: ../d-websites/index.md
     - label: Resolve UD Domains in your Web Browser
-        page: ../d-websites/resolving-dwebsites-in-a-browser.md
+      page: ../d-websites/resolving-dwebsites-in-a-browser.md
 - group: API Specs
   expanded: false
   pages:
