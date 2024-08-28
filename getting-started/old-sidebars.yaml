@@ -1,0 +1,47 @@
+# pages:
+#   - separator: Get Started with UD
+#     separatorLine: true
+#   - page: index.md
+#     label: Developer Portal Overview
+#     separatorLine: true
+#   - group: Learn About UD
+#     expanded: false
+#     pages:
+#       - label: UNS Architecture Overview
+#         page: ../smart-contracts/overview/uns-architecture-overview.md
+#       - label: CNS Architecture Overview
+#         page: ../smart-contracts/overview/cns-architecture-overview.md
+#       - label: CNS vs UNS Comparison
+#         page: ../smart-contracts/overview/cns-uns-comparison.md
+#       - label: Namehashing
+#         page: domain-registry-essentials/namehashing.md
+#     separatorLine: true
+#   - group: Get a Test Domain
+#     expanded: false
+#     pages:
+#       - label: Polygonscan Guide
+#         page: test-domains/polygonscan.md
+#       - label: UD Website Faucet Guide
+#         page: test-domains/faucet.md
+#     separatorLine: true
+#   - group: Developer Guides
+#     expanded: true
+#     pages:
+#       - label: Resolve Domain Names to Crypto Addresses
+#         page: ../resolution/overview.md
+#       - label: Reverse Resolve Addresses to Domain Names
+#         page: ../reverse-resolution/index.md
+#       - label: Resell / Distribute Domains
+#         page: ../domain-distribution-and-management/overview.md
+#       - label: Manage a Domain from your Application
+#         page: ../manage-domains/index.md
+#       - label: Build and Deploy an IPFS Website
+#         page: ../d-websites/index.md
+#       - label: Resolve UD Domains in your Web Browser
+#         page: ../d-websites/resolving-dwebsites-in-a-browser.md
+#       - label: Resolve a Domain with Smart Contract Calls
+#         page: ../smart-contracts/quick-start/resolve-domains.md
+#     separatorLine: true
+#   - page: glossary.md
+#     label: Glossary
+#     separatorLine: true
