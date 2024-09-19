@@ -18,7 +18,7 @@ oasDefinitions:
   partner-v3: https://api.redocly.com/registry/bundle/unstoppable-domains/Partner%20API/v3/openapi.yaml?branch=main
   profile-v1: https://api.redocly.com/registry/bundle/unstoppable-domains/Profile%20API/v1/openapi.yaml?branch=main
   login-unstoppable: https://api.redocly.com/registry/bundle/unstoppable-domains/Login%20API/v1/openapi.yaml
-  resolution: https://api.redocly.com/registry/bundle/unstoppable-domains/Resolution%20API/v1/openapi.yaml?branch=root
+  resolution: https://api.redocly.com/registry/assets/unstoppable-domains/Resolution%20API/v1?branch=main
   messaging-v1: https://api.redocly.com/registry/bundle/unstoppable-domains/Messaging%20API/v1/openapi.yaml?branch=main
   registry: https://api.redocly.com/registry/bundle/unstoppable-domains/Registry%20API/v1/openapi.yaml?branch=main
   # add links to definitions in our API registry by using a fully qualified URL.
