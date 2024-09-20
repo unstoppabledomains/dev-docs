@@ -1,4 +1,6 @@
 pages:
+  - page: metadata.page.yaml
+  - separatorLine: true
   - page: resolution.page.yaml
     separatorLine: true
   - page: partner.page.yaml
