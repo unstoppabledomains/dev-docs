@@ -64,6 +64,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .crypto
 - .dao
 - .dfz
+- .dream
 - .farms
 - .go
 - .hi
