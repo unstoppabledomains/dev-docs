@@ -36,6 +36,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'dao';
 0x3b270f4d000c6046ee64e8c025ad8cff71e728b275a81bf53a060442fe9f9766 = 'dfz';
+0x30b126da528ed6a22ad6ce11ea44a16f3990a215ef04115d84bb9275b709e89c = 'dream';
 0xd75c01499ad11caab105cfefbf62ed6f0c7208f8de3fa293f01c209b37a1d036 = 'farms';
 0xa264639c3dbff58a1ded5efcf724e50a9c7847ff8197c87c00d009fbba2a3720 = 'go';
 0xfdb51f7f56d9b1149db5ce99afcf60dda4416fd6fb8dc0649fec13cd03e1803e = 'hi';
