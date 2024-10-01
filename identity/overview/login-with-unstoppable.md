@@ -56,6 +56,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .altimist
 - .anime
 - .austin
+- .benji
 - .binanceus
 - .bitcoin
 - .bitget
@@ -74,6 +75,7 @@ Unstoppable Login currently supports the following top-level domains (TLDs):
 - .lfg
 - .manga
 - .metropolis
+- .mumu
 - .nft
 - .pog
 - .polygon
