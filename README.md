@@ -12,7 +12,7 @@ Unstoppable Domains Documentation is hosted by [Redocly](https://www.redocly.com
 - Follow the [Google developer documentation style guide](https://developers.google.com/style). (Unstoppable docs style *coming soon*!)
 
 - Files that shouldn't be edited directly:
-    - `developer-toolkit/reference/smart-contracts/cns-smart-contracts.md`
+    - `/reference/smart-contracts/cns-smart-contracts.md`
     - `developer-toolkit/reference/smart-contracts/uns-smart-contracts.md`
     - `developer-toolkit/changelogs/*-changelog.md`
 

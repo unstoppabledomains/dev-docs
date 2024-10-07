@@ -1,23 +1,23 @@
-pages:
-  - separator: Unstoppable D-Websites
-    separatorLine: true
-  - page: index.md
-    label: IPFS and D-Web Overview
-    separatorLine: true
-  - page: build-website.md
-    label: Build Your Static Website Guide
-    separatorLine: true
-  - page: upload-ipfs.md
-    label: Upload Your Website to IPFS Guide
-    separatorLine: true
-  - page: connect-ipfs.md
-    label: Connect IPFS Site to Your Domain Guide
-    separatorLine: true
-  - group: D-Website Resources
-    expanded: false
-    pages:
-      - label: D-Website Examples and Resources
-        page: dwebsite-examples.md
-      - page: resolving-dwebsites-in-a-browser.md
-        label: Resolving D-Websites in a Browser
-    separatorLine: true
+# pages:
+#   - separator: Unstoppable D-Websites
+#     separatorLine: true
+#   - page: index.md
+#     label: IPFS and D-Web Overview
+#     separatorLine: true
+#   - page: build-website.md
+#     label: Build Your Static Website Guide
+#     separatorLine: true
+#   - page: upload-ipfs.md
+#     label: Upload Your Website to IPFS Guide
+#     separatorLine: true
+#   - page: connect-ipfs.md
+#     label: Connect IPFS Site to Your Domain Guide
+#     separatorLine: true
+#   - group: D-Website Resources
+#     expanded: false
+#     pages:
+#       - label: D-Website Examples and Resources
+#         page: dwebsite-examples.md
+#       - page: resolving-dwebsites-in-a-browser.md
+#         label: Resolving D-Websites in a Browser
+#     separatorLine: true
