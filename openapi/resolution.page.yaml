@@ -3,6 +3,7 @@ label: Resolution
 definitionId: resolution
 settings:
   pagination: none
+  corsProxyUrl: https://cors.redoc.ly
   showConsole: true
   generateCodeSamples:
     languages:
