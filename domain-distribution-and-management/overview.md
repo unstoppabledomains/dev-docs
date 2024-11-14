@@ -19,18 +19,6 @@ Our premier solution for domain distribution and management.
 
 For more information, please consult the [Partner API specification](https://docs.unstoppabledomains.com/openapi/partner/latest).
 
-# Partner API v2 (Legacy)
-
-:::warning Partner API v2 Deprecation
-Partner API v2 was deprecated on Feb 12, 2024. Please check the [v3 specification](https://docs.unstoppabledomains.com/openapi/partner/latest/) for integration guides.
-:::
-
-Our legacy Partner API. For more information, please consult the [Partner API v2 (Legacy) specification](https://docs.unstoppabledomains.com/openapi/partner/v2/).
-
-## Rate Limits
-
-Currently, the rate limits for the Partner API v2 (Legacy) endpoints are set at **60 requests per IP per hour**. Please note that these limits are subject to change in the future.
-
 ## Fork Our Postman Collection
 
 Unstoppable Domains offers a Postman collection that you can easily import into your workspace to quickly interact with the Partner and Domain Actions API.

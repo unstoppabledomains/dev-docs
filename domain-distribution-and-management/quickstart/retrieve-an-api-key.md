@@ -104,18 +104,13 @@ Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolut
 
 Click `Reveal Key` under `Legacy API key` to acquire your API Key
 
-
-## Step 4: Configure Payment Information
-
-The Partner API v2 (Legacy) must be configured with one or more payment options before users can begin purchasing domains. Please follow the instructions in the [Partner Integration Guides](#partner-api-integration-paths) to integrate one or more payment methods for your partner account.
-
 :::success Congratulations!
 You just registered to become an official Unstoppable Domains Partner.
 :::
 
-# Set up UD Sandbox for Testing Guide
+## Step 4: Set up UD Sandbox
 
-To test integrations, you can switch to Sandbox mode. This mode allows you play around with test net which does not incur cost during development. To access Sandbox, toggle the `Sandbox` button at the top of the application.
+To build the Partner API integrations, switch to Sandbox mode. This mode allows you play around with test net which does not incur cost during development. To access Sandbox, toggle the `Sandbox` button at the top of the application.
 
 <figure>
 
@@ -142,11 +137,5 @@ https://api.ud-sandbox.com/
 :::success Congratulations!
 You have successfully accessed and set up the Unstoppable Domains Sandbox Environment. Happy hacking!
 :::
-
-## Get Started with Partner API v2 (Legacy)
-
-Follow the [Partner API v2 (Legacy) integration guide](../partner-api-v2/quickstart/partner-api-v2-integration.md) to get started.
-
-
 
 <embed src="/snippets/_partner-survey-embed.md" />

@@ -33,15 +33,11 @@
       pages:
         - label: Retrieve an API Key
           page: ../resolution/quickstart/retrieve-an-api-key.md
-        - label: Resolve Domains
-          page: ../resolution/quickstart/resolution.md
     - group: Guides
       expanded: false
       pages:
-        - label: Records reference
-          page: ../resolution/guides/records-reference.md
-        - label: Ethereum providers
-          page: ../resolution/guides/ethereum-providers.md
+        - label: Resolve Domains
+          page: ../resolution/quickstart/resolution.md
         - group: Browser resolution (HTTP & IPFS)
           expanded: false
           pages:
@@ -51,10 +47,36 @@
               page: ../resolution/guides/browser-resolution/algorithm.md
             - label: Test domains
               page: ../resolution/guides/browser-resolution/test-domains.md
-        - label: FAQs
-          page: ../resolution/guides/faq.md
+        - group: Reverse Resolution
+          expanded: false
+          pages:
+            - label: "Overview"
+              page: ../reverse-resolution/index.md
+            - label: Smart Contract Integration Guide
+              page: ../reverse-resolution/integration-guides/smart-contracts.md
+            - label: Resolution Libraries Integration Guide      
+              page: ../reverse-resolution/integration-guides/resolution-libraries.md
+            - group: Resolution Service API Integration Guides
+              expanded: false
+              pages:
+                - label: Overview
+                  href: /developer-toolkit/resolution-integration-methods/resolution-service/overview/
+                - label: Get Reverse Record for an Address
+                  href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address/
+                - label: Get Reverse Record for Multiple Addresses
+                  href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-multiple-addresses/
+                - label: Error Codes
+                  href: /developer-toolkit/resolution-integration-methods/resolution-service/error-codes/
+                - label: FAQs
+                  page: ../resolution/guides/faq.md
+        - label: Records reference
+          page: ../resolution/guides/records-reference.md
+        - label: Ethereum providers
+          page: ../resolution/guides/ethereum-providers.md
         - label: Best practices
           page: ../resolution/guides/best-practices.md
+        - label: Crypto Payments Troubleshooting Guide
+          page: ../resolution/troubleshooting-guide.md
     - group: Tech References
       expanded: false
       pages:
@@ -83,38 +105,30 @@
             - label: Matic.js SDK
               page: ../resolution/sdks-and-libraries/maticjs.md   
   separatorLine: true
-- group: Reverse Resolution
+- group: Partner API for Selling Domains
   expanded: false
   pages:
     - label: "Overview"
-      page: ../reverse-resolution/index.md
-    - group: Set Reverse Record for Domains Guides
+      page: ../domain-distribution-and-management/overview.md
+    - group: Quickstart
       expanded: false
       pages:
-        - page: ../reverse-resolution/config-guides/ud-dashboard.md
-          label: Set Reverse Record with UD Dashboard Guide
-        - page: ../reverse-resolution/config-guides/smart-contracts.md
-          label: Set Reverse Record with Smart Contracts Guide
-    - group: Integrate Reverse Resolution into Your Application
+      - label: Retrieve an API key
+        page: ../domain-distribution-and-management/quickstart/retrieve-an-api-key.md
+    - group: Guides
       expanded: false
       pages:
-        - page: ../reverse-resolution/integration-guides/smart-contracts.md
-          label: Smart Contract Integration Guide
-        - page: ../reverse-resolution/integration-guides/resolution-libraries.md
-          label: Resolution Libraries Integration Guide
-        - group: Resolution Service API Integration Guides
-          expanded: false
-          pages:
-            - label: Overview
-              href: /developer-toolkit/resolution-integration-methods/resolution-service/overview/
-            - label: Get Reverse Record for an Address
-              href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-address/
-            - label: Get Reverse Record for Multiple Addresses
-              href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-multiple-addresses/
-            - label: Error Codes
-              href: /developer-toolkit/resolution-integration-methods/resolution-service/error-codes/
-    - label: Frequently Asked Questions
-      page: ../reverse-resolution/reverse-resolution-faq.md
+      - label: Implement Webhooks
+        page: ../domain-distribution-and-management/guides/implementing-webhooks.md
+      - label: On-chain Buy
+        page: ../domain-distribution-and-management/guides/on-chain-buy.md
+    - group: Tech References
+      expanded: false
+      pages:
+      - label: Partner API
+        page: ../openapi/partner.page.yaml
+      - label: Smart Contracts
+        page: ../smart-contracts/quick-start/manage-domain-records.md
   separatorLine: true
 - group: Login With Unstoppable
   expanded: false
@@ -210,149 +224,89 @@
           - label: Moralis
             page: ../identity/sdk-and-libraries/moralis.md
   separatorLine: true
-- group: Crypto Payments
+- group: User Guides
   expanded: false
   pages:
-    - label: "Overview"
-      page: ../crypto-payments/index.md
-    - group: Integrate Crypto Payments Using the Resolution Service
+  - group: Reverse Resolution
+    expanded: false
+    pages:
+    - group: Set Reverse Record for Domains Guides
       expanded: false
       pages:
-        - label: Overview
-          href: /developer-toolkit/resolution-integration-methods/resolution-service/overview/
-        - label: Get Records for a Domain
-          href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-a-domain/
-        - label: Get Records for Multiple Domains
-          href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-records-for-multiple-domains/
-        - label: Error Codes
-          href: /developer-toolkit/resolution-integration-methods/resolution-service/error-codes/
-    - group: Integrate Crypto Payments Using Libraries
-      expanded: false
-      pages:
-        - label: Overview
-          href: /resolution/sdks-and-libraries/overview/
-        - label: Resolution
-          href: /resolution/sdks-and-libraries/javascript/
-        - label: Resolution-Java
-          href: /resolution/sdks-and-libraries/java/
-        - label: Resolution-Swift
-          href: /resolution/sdks-and-libraries/swift/
-        - label: Resolution-Go
-          href: /resolution/sdks-and-libraries/go/
-        - label: Matic.js SDK
-          href: /resolution/sdks-and-libraries/maticjs/
-    - group: Other Ways To Integrate Crypto Payments
-      expanded: false
-      pages:
-        - label: Resolution CLI
-          page: ../resolution/sdks-and-libraries/cli.md
-        - label: Resolve With Direct Blockchain Calls
-          page: ../smart-contracts/quick-start/resolve-domains.md
-    - label: Crypto Payments Troubleshooting Guide
-      page: ../crypto-payments/troubleshooting-guide.md
-    - label: Best Practices for Integrating Crypto Payments
-      page: ../resolution/guides/best-practices/
-  separatorLine: true
-- group: Manage Domain Records
-  pages:
-  - page: ../manage-domains/index.md
-    label: Manage Domain Ownership
-    separatorLine: true
+        - page: ../reverse-resolution/config-guides/ud-dashboard.md
+          label: Set Reverse Record with UD Dashboard Guide
+        - page: ../reverse-resolution/config-guides/smart-contracts.md
+          label: Set Reverse Record with Smart Contracts Guide
+    - label: Frequently Asked Questions
+      page: ../reverse-resolution/reverse-resolution-faq.md
   - group: Manage Domain Records
     expanded: false
     pages:
-      - page: ../manage-domains/managing-domain-records.md
-        label: Manage Domain Records Overview
-      - page: ../manage-domains/polygon-overview.md
-        label: Polygon Network Overview
-      - page: ../manage-domains/delegating-transactions.md
-        label: Delegate Transactions
-      - page: ../manage-domains/delegating-domain-management.md
-        label: Delegate Domain Management
-    separatorLine: true
-  - group: Domain Management Guides
-    expanded: false
-    pages:
-      - page: ../manage-domains/guides/managing-domains-using-contracts.md
-        label: Manage Domains Using Smart Contracts Guide
-      - page: ../manage-domains/guides/mint-subdomains-using-contracts.md
-        label: Mint Subdomains Using Smart Contracts Guide
-    separatorLine: true
-  - group: Domain Transfer Guides
-    expanded: false
-    pages:
-      - page: ../manage-domains/guides/uns1-to-uns2.md
-        label: UNS L1 to UNS L2 - Domain Deposit Guide
-      - page: ../manage-domains/guides/cns1-to-uns1.md
-        label: CNS L1 to UNS L1 - Domain Transfer Guide
-      - page: ../manage-domains/guides/cns1-to-uns2.md
-        label: CNS L1 to UNS L2 - Domain Deposit Guide
-    separatorLine: true
-  - group: Configure Polygon for MetaMask
-    expanded: false
-    pages:
-      - page: ../manage-domains/guides/add-polygon-to-metamask.md
-        label: Add Polygon Network to MetaMask Wallet Guide
-      - page: ../manage-domains/guides/get-polygon-test-tokens.md
-        label: Get Polygon Test Tokens Guide
-    separatorLine: true
-  - group: FAQs
-    expanded: false
-    pages:
-      - page: ../manage-domains/domain-management-faq.md
-        label: Domain Management FAQs
-      - page: ../manage-domains/migration-faq.md
-        label: Polygon Migration FAQs
-    separatorLine: true
-  - group: Reference
-    expanded: false
-    pages:
-      - page: ../manage-domains/polygon-release-notes.md
-        label: Polygon Release Notes
-      - page: ../manage-domains/domains-configuration.md
-        label: Domain Configuration GUI
-  separatorLine: true
-
-- group: Partner API for Selling Domains
-  expanded: false
-  pages:
-    - label: "Overview"
-      page: ../domain-distribution-and-management/overview.md
-    - group: Quickstart
+    - page: ../manage-domains/index.md
+      label: Manage Domain Ownership
+    - group: Manage Domain Records
       expanded: false
       pages:
-      - label: Retrieve an API key
-        page: ../domain-distribution-and-management/quickstart/retrieve-an-api-key.md
-    - group: Guides
+        - page: ../manage-domains/managing-domain-records.md
+          label: Manage Domain Records Overview
+        - page: ../manage-domains/polygon-overview.md
+          label: Polygon Network Overview
+        - page: ../manage-domains/delegating-transactions.md
+          label: Delegate Transactions
+        - page: ../manage-domains/delegating-domain-management.md
+          label: Delegate Domain Management
+    - group: Domain Management Guides
       expanded: false
       pages:
-      - label: Implement Webhooks
-        page: ../domain-distribution-and-management/guides/implementing-webhooks.md
-      - label: On-chain Buy
-        page: ../domain-distribution-and-management/guides/on-chain-buy.md
-    - group: Tech References
+        - page: ../manage-domains/guides/managing-domains-using-contracts.md
+          label: Manage Domains Using Smart Contracts Guide
+        - page: ../manage-domains/guides/mint-subdomains-using-contracts.md
+          label: Mint Subdomains Using Smart Contracts Guide
+    - group: Domain Transfer Guides
       expanded: false
       pages:
-      - label: Partner API
-        page: ../openapi/partner.page.yaml
-      - label: Smart Contracts
-        page: ../smart-contracts/quick-start/manage-domain-records.md
-  separatorLine: true
-- group: Decentralized Websites
-  expanded: false
-  pages:
-    - page: ../d-websites/index.md
-      label: IPFS and D-Web Overview
-    - label: Resolve UD Domains in your Web Browser
-      page: ../d-websites/resolving-dwebsites-in-a-browser.md
-    - page: ../d-websites/build-website.md
-      label: Build Your Static Website Guide
-    - page: ../d-websites/upload-ipfs.md
-      label: Upload Your Website to IPFS Guide
-    - page: ../d-websites/connect-ipfs.md
-      label: Connect IPFS Site to Your Domain Guide
-    - label: D-Website Examples and Resources
-      page: ../d-websites/dwebsite-examples.md
+        - page: ../manage-domains/guides/uns1-to-uns2.md
+          label: UNS L1 to UNS L2 - Domain Deposit Guide
+        - page: ../manage-domains/guides/cns1-to-uns1.md
+          label: CNS L1 to UNS L1 - Domain Transfer Guide
+        - page: ../manage-domains/guides/cns1-to-uns2.md
+          label: CNS L1 to UNS L2 - Domain Deposit Guide
+    - group: Configure Polygon for MetaMask
+      expanded: false
+      pages:
+        - page: ../manage-domains/guides/add-polygon-to-metamask.md
+          label: Add Polygon Network to MetaMask Wallet Guide
+        - page: ../manage-domains/guides/get-polygon-test-tokens.md
+          label: Get Polygon Test Tokens Guide
+    - group: FAQs
+      expanded: false
+      pages:
+        - page: ../manage-domains/domain-management-faq.md
+          label: Domain Management FAQs
+        - page: ../manage-domains/migration-faq.md
+          label: Polygon Migration FAQs
+    - group: Reference
+      expanded: false
+      pages:
+        - page: ../manage-domains/polygon-release-notes.md
+          label: Polygon Release Notes
+        - page: ../manage-domains/domains-configuration.md
+          label: Domain Configuration GUI
+  - group: Decentralized Websites
+    expanded: false
+    pages:
+      - page: ../d-websites/index.md
+        label: IPFS and D-Web Overview
+      - label: Resolve UD Domains in your Web Browser
+        page: ../d-websites/resolving-dwebsites-in-a-browser.md
+      - page: ../d-websites/build-website.md
+        label: Build Your Static Website Guide
+      - page: ../d-websites/upload-ipfs.md
+        label: Upload Your Website to IPFS Guide
+      - page: ../d-websites/connect-ipfs.md
+        label: Connect IPFS Site to Your Domain Guide
+      - label: D-Website Examples and Resources
+        page: ../d-websites/dwebsite-examples.md
   separatorLine: true
 - group: API Specs
   expanded: false

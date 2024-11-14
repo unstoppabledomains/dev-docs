@@ -1,6 +1,6 @@
 ---
-title: Crypto Payments Troubleshooting Guide | UD Developer Portal
-description: This page covers frequently encountered problems when integrating the crypto payments feature and potential solutions.
+title: Resolution Troubleshooting Guide | UD Developer Portal
+description: This page covers frequently encountered problems when integrating the resolution feature and potential solutions.
 ---
 
 # Crypto Payments Troubleshooting Guide
