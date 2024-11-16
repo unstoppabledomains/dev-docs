@@ -9,7 +9,7 @@ editPage:
 
 # CNS Smart Contract
 
-Crypto Name Service (CNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how CNS works, see [CNS Architecture overview](/getting-started/domain-registry-essentials/cns-architecture-overview.md).
+Crypto Name Service (CNS) is built on Ethereum and is effectively a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This page lists the smart contracts from that repository and gives a brief description of each along with links to the source code and deployment addresses. For high-level details about how CNS works, see [CNS Architecture overview](../overview/cns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
@@ -30,19 +30,19 @@ This section lists all the smart contracts that users can directly interact with
 
 ### Registry
 
-`Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](/getting-started/domain-registry-essentials/cns-architecture-overview.md#registry).
+`Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](../overview/cns-architecture-overview.md#registry).
 
 **Source code:** [contracts/Registry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol)
 
 ### Resolver
 
-`Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](/getting-started/domain-registry-essentials/cns-architecture-overview.md#resolver).
+`Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](../overview/cns-architecture-overview.md#resolver).
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/cns-architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](../overview/cns-architecture-overview.md#proxyreader).
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/ProxyReader.sol)
 
@@ -54,7 +54,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### DomainZoneController
 
-`DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](/getting-started/domain-registry-essentials/cns-architecture-overview.md#alternative-ownership-models).
+`DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](../overview/cns-architecture-overview.md#alternative-ownership-models).
 
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
@@ -148,7 +148,7 @@ The `IMintingController` interface declares a set of methods for minting, which 
 
 ### ISignatureController
 
-The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable [Meta transactions](/manage-domains/delegating-transactions.md) for the `Registry` smart contract.
+The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable Meta transactions for the `Registry` smart contract.
 
 **Source code:** [contracts/controllers/ISignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/ISignatureController.sol)
 
@@ -198,7 +198,7 @@ The `MultiSend` smart contract is used internally by the Unstoppable Domains tea
 
 ### SignatureUtil
 
-`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require [Meta Transactions](/manage-domains/delegating-transactions.md).
+`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require Meta Transactions.
 
 **Source code:** [contracts/util/SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol)
 
@@ -225,7 +225,7 @@ The `LinkTokenMock` smart contract is used for testing [TwitterValidationOperato
 
 ### RelayTest
 
-`RelayTest` is used for testing relaying functionality for [Meta Transactions](/manage-domains/delegating-transactions.md).
+`RelayTest` is used for testing relaying functionality for Meta Transactions.
 
 **Source code:** [contracts/test-helpers/RelayTest.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/test-helpers/RelayTest.sol)
 

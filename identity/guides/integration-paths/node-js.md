@@ -155,7 +155,7 @@ Developers can also create their own login system using a different session syst
 
 ## Step 5: Build a Front-end UI
 
-The form must call the endpoint where the [`login` handler](node-js-server-guide.md#the-login-method) is called and it must correspond with the parameters to that function.
+The form must call the endpoint where the `login` handler is called and it must correspond with the parameters to that function.
 
 ```javascript
 app.get("/", (_, res) => {

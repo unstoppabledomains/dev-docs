@@ -36,7 +36,7 @@ There is only one `Registry` smart contract deployed in the Ethereum Mainnet, bu
 Updates to our `Resolver` smart contract are incremental and non-breaking. All `Resolver` smart contracts must adhere to our [IResolver interface](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol). This interface defines the basic set of functionality and guarantees compatibility between different implementations.
 :::
 
-Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](namehashing.md).
+Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](/getting-started/domain-registry-essentials/namehashing.md).
 
 For instance, `example.crypto`'s namehash: `0xd584c5509c6788ad9d9491be8ba8b4422d05caf62674a98fbf8a9988eeadfb7e`
 
@@ -79,13 +79,13 @@ Domain owners can:
 * Mint a new subdomain
 * Burn a domain
 
-Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a member's behalf. For more details, see [Managing domain ownership](/manage-domains/index.md).
+Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a member's behalf.
 
 ### Resolver
 
 `Resolver` is a smart contract that is used for resolving domains and storing domain records. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/resolution/guides/records-reference.md).
+Under the surface, `Resolver` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/resolution/records-reference.md).
 
 In practice, `Resolver`'s data structure is slightly more complicated. If you're interested in the implementation details, see [Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol).
 
@@ -132,7 +132,7 @@ Internal addresses can't be accessed directly by a wallet. Meaning domains owned
 
 CNS allows members to delegate transaction execution to accounts that aren't domain owners.
 
-`Registry` and `Resolver` smart contracts implement methods that use [Meta Transactions](/manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` and `Resolver` smart contracts implement methods that use Meta Transactions. One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for members to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
@@ -146,5 +146,3 @@ On behalf of our members, our transaction processor generally handles:
 **Managing domains**, in contrast, can only be performed with a domain owner's permission. Each delegated transaction that modifies the owner address, the `Resolver` address, or the domain records requires a domain owner's signature.
 
 CNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
-
-To learn more about the technical details of delegating transactions in CNS, read our [Delegating Meta Transactions](/manage-domains/delegating-transactions.md) page.

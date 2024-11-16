@@ -12,23 +12,18 @@ It's a great companion to our [Feature Guide Collection](https://youtube.com/pla
 
 You'll need the following to get started:
 
-- Basic understanding of [CNS](/smart-contracts/contract-reference/cns-smart-contracts.md) and [UNS](/smart-contracts/contract-reference/uns-smart-contracts.md) Smart Contracts
-- Knowledge of differences between [L1 and L2 network](/manage-domains/polygon-overview.md)
 - A [free test domain](test-domains/faucet.md)
 - A stable test environment
 
 ## How This Portal Is Organized
 
-This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the basics in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, detailed integration guides, or dive right into the API reference.
+This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the quickstarts in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, detailed integration guides, or dive right into the API reference.
 
 - [Unstoppable Resolution](/resolution/overview.md)
-- [Reverse Resolution](/reverse-resolution/index.md)
-- [Crypto Payments](/crypto-payments/index.md)
+    - [Reverse Resolution](/resolution/guides/reverse-resolution/overview.md)
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
-- [User Guides](/manage-domains/index.md)
-- [Domain Management](/manage-domains/index.md)
-- [IPFS Websites](/d-websites/index.md)
 - [API Reference](/openapi/resolution.page.yaml)
+- [A very clearly borked link](https://uiobjweqgujhyvbsdZNIdkhg.com)
 
 <embed src="/snippets/_developer-survey-embed.md" />

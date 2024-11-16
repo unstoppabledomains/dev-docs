@@ -23,7 +23,7 @@ Yes and no. There’s nothing stopping users from pointing multiple addresses to
 
 ### How can applications add Reverse Resolution support?
 
-Our resolution libraries and APIs support Reverse Resolution. See our [Integration Pathways](index.md#choose-an-integration-path) guides for more detailed instructions.
+Our resolution libraries and APIs support Reverse Resolution. See our [Integration Pathways](overview.md#choose-an-integration-path) guides for more detailed instructions.
 
 ### Will apps have to update to make Reverse Resolution work?
 

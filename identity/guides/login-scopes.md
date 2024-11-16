@@ -100,8 +100,6 @@ The Unstoppable Login `humanity_check` scope must be added to the library for ex
 
 After the user authenticates and proves their identity with CAPTCHA, the application will receive a `humanity_check_id`, which is a unique identifier for each user to serve as that user's "humanity check"
 
-See [Humanity Check for Login](/identity/overview/humanity-check.md) for more information on identity providers, humanity check, and plans for future releases.
-
 ## profile
 
 `optional: true`

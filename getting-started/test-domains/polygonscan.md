@@ -13,11 +13,54 @@ description: This guide covers the process of obtaining a free test domain, thro
 
 ## Step 1. Configure your Metamask wallet for Polygon
 
-- Follow this instructions: [Add polygon to your Metamask wallet Guide](../../manage-domains/guides/add-polygon-to-metamask.md)
+- Follow these instructions: [Getting Started with Metamask on Polygon](https://polygon.technology/blog/getting-started-with-metamask-on-polygon)
 
 ## Step 2. Get free MATIC tokens from Polygon Faucet
 
-- Follow this instructions: [Get Polygon Test Tokens Guide](../../manage-domains/guides/get-polygon-test-tokens.md)
+### Visit the Polygon Faucet
+
+Head over to the [Polygon Faucet](https://faucet.polygon.technology/). It is a website that gives out tiny amounts of MATIC cryptocurrency for you to test transactions.
+
+### Select Amoy Test Network
+
+Select `Amoy` as the Polygon test network:
+
+<figure class="half-inline-block">
+
+![faucet network selection](/images/faucet-network-selection.png)
+
+<figcaption>faucet network selection</figcaption>
+</figure>
+
+
+### Submit Your Wallet Address
+
+Enter your Polygon wallet address from MetaMask or any wallet client you use into the `Wallet Address` field of the faucet page and press the `Submit` button:
+
+<figure>
+
+![faucet address submission](/images/faucet-address-submission.png '#width=50%')
+
+<figcaption>faucet address submission</figcaption>
+</figure>
+
+### Initiate the Transaction
+
+Verify the details of the faucet transaction (token, network, address) and click on the `Confirm` button:
+
+<figure class="half-inline-block">
+
+![faucet transaction confirmation](/images/faucet-transaction-confirmation.png)
+
+<figcaption>faucet transaction confirmation</figcaption>
+</figure>
+
+<figure class="half-inline-block">
+
+![successful faucet request submission](/images/successful-faucet-request-submission.png)
+
+<figcaption>successful faucet request submission</figcaption>
+</figure>
 
 ## Step 3: Locate the domain ending namehash for Polygon
 

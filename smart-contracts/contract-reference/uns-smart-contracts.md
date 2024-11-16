@@ -9,7 +9,7 @@ editPage:
 
 # UNS Smart Contracts
 
-Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity Smart Contracts that lives on the blockchain. The Unstoppable Domains team maintains the source code. This page lists the smart contracts from the [UNS repository](https://github.com/unstoppabledomains/uns), gives a brief description, and links to the source code and deployment addresses. For high-level details about how UNS works, see the [UNS Architecture Overview](/getting-started/domain-registry-essentials/uns-architecture-overview.md).
+Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity Smart Contracts that lives on the blockchain. The Unstoppable Domains team maintains the source code. This page lists the smart contracts from the [UNS repository](https://github.com/unstoppabledomains/uns), gives a brief description, and links to the source code and deployment addresses. For high-level details about how UNS works, see the [UNS Architecture Overview](../overview/uns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
@@ -36,7 +36,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/uns-architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](../overview/uns-architecture-overview.md#proxyreader).
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/ProxyReader.sol)
 

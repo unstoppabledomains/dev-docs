@@ -2,26 +2,16 @@
   expanded: false
   pages:
     - label: "Overview"
-      page: ../getting-started/index.md
+      page: overview.md
     - group: Get a Test Domain
       expanded: false
       pages:
         - label: UD Website Faucet Guide
-          page: ../getting-started/test-domains/faucet.md
-        - label: Polygonscan Guide
-          page: ../getting-started/test-domains/polygonscan.md
-  separatorLine: true
-- group: Learn about UD
-  expanded: false
-  pages:
-    - label: "UNS Architecture Overview"
-      page: ../smart-contracts/overview/uns-architecture-overview.md
-    - label: "CNS Architecture Overview"
-      page: ../smart-contracts/overview/cns-architecture-overview.md
-    - label: "CNS vs UNS Comparison"
-      page: ../smart-contracts/overview/cns-uns-comparison.md
-    - label: "Namehashing"
-      page: ../domain-registry-essentials/namehashing.md
+          page: test-domains/faucet.md
+        - label: Polygon Faucet Guide
+          page: test-domains/polygonscan.md
+    - label: Glossary
+      page: glossary.md
   separatorLine: true
 - group: Resolution
   expanded: false
@@ -33,11 +23,13 @@
       pages:
         - label: Retrieve an API Key
           page: ../resolution/quickstart/retrieve-an-api-key.md
+        - label: Resolve Domains
+          page: ../resolution/quickstart/resolution.md
+        - label: Reverse Resolve Domains
+          page: ../resolution/quickstart/reverse-resolution.md
     - group: Guides
       expanded: false
       pages:
-        - label: Resolve Domains
-          page: ../resolution/quickstart/resolution.md
         - group: Browser resolution (HTTP & IPFS)
           expanded: false
           pages:
@@ -51,11 +43,11 @@
           expanded: false
           pages:
             - label: "Overview"
-              page: ../reverse-resolution/index.md
+              page: ../resolution/guides/reverse-resolution/overview.md
             - label: Smart Contract Integration Guide
-              page: ../reverse-resolution/integration-guides/smart-contracts.md
+              page: ../resolution/guides/reverse-resolution/integration-guides/smart-contracts.md
             - label: Resolution Libraries Integration Guide      
-              page: ../reverse-resolution/integration-guides/resolution-libraries.md
+              page: ../resolution/guides/reverse-resolution/integration-guides/resolution-libraries.md
             - group: Resolution Service API Integration Guides
               expanded: false
               pages:
@@ -67,21 +59,21 @@
                   href: /developer-toolkit/resolution-integration-methods/resolution-service/endpoints/get-reverse-record-for-multiple-addresses/
                 - label: Error Codes
                   href: /developer-toolkit/resolution-integration-methods/resolution-service/error-codes/
-                - label: FAQs
-                  page: ../resolution/guides/faq.md
-        - label: Records reference
-          page: ../resolution/guides/records-reference.md
-        - label: Ethereum providers
-          page: ../resolution/guides/ethereum-providers.md
+            - label: FAQs
+              page: ../resolution/guides/reverse-resolution/faq.md
+        - label: Resolution CLI
+          page: ../resolution/sdks-and-libraries/cli.md
         - label: Best practices
           page: ../resolution/guides/best-practices.md
-        - label: Crypto Payments Troubleshooting Guide
-          page: ../resolution/troubleshooting-guide.md
+        - label: Troubleshooting
+          page: ../resolution/guides/troubleshooting-guide.md
     - group: Tech References
       expanded: false
       pages:
         - label: API Reference
           page: ../openapi/resolution.page.yaml
+        - label: Records reference
+          page: ../resolution/records-reference.md
         - group: Smart Contracts
           expanded: false
           pages:
@@ -105,7 +97,7 @@
             - label: Matic.js SDK
               page: ../resolution/sdks-and-libraries/maticjs.md   
   separatorLine: true
-- group: Partner API for Selling Domains
+- group: Partner API
   expanded: false
   pages:
     - label: "Overview"
@@ -113,37 +105,33 @@
     - group: Quickstart
       expanded: false
       pages:
-      - label: Retrieve an API key
-        page: ../domain-distribution-and-management/quickstart/retrieve-an-api-key.md
+        - label: Retrieve an API key
+          page: ../domain-distribution-and-management/quickstart/retrieve-an-api-key.md
     - group: Guides
       expanded: false
       pages:
-      - label: Implement Webhooks
-        page: ../domain-distribution-and-management/guides/implementing-webhooks.md
-      - label: On-chain Buy
-        page: ../domain-distribution-and-management/guides/on-chain-buy.md
+        - label: Implement Webhooks
+          page: ../domain-distribution-and-management/guides/implementing-webhooks.md
+        - label: On-chain Buy
+          page: ../domain-distribution-and-management/guides/on-chain-buy.md
     - group: Tech References
       expanded: false
       pages:
-      - label: Partner API
-        page: ../openapi/partner.page.yaml
-      - label: Smart Contracts
-        page: ../smart-contracts/quick-start/manage-domain-records.md
+        - label: Partner API
+          page: ../openapi/partner.page.yaml
+        - group: Smart Contracts
+          expanded: false
+          pages:
+            - label: Manage Domain Records
+              page: ../smart-contracts/quick-start/manage-domain-records.md
+            - label: Mint Subdomains
+              page: ../smart-contracts/quick-start/mint-subdomains.md
   separatorLine: true
 - group: Login With Unstoppable
   expanded: false
   pages:
-    - group: Overview
-      expanded: true
-      pages:
-        - label: Unstoppable Login
-          page: ../identity/overview/login-with-unstoppable.md
-        - label: Humanity Check
-          page: ../identity/overview/humanity-check.md
-        - label: Client Analytics
-          page: ../identity/overview/client-analytics.md
-        - label: Featured Updates
-          page: ../identity/overview/featured-updates.md
+    - label: Overview
+      page: ../identity/overview/login-with-unstoppable.md
     - group: Quickstart
       expanded: false
       pages:
@@ -151,41 +139,34 @@
           page: ../identity/quickstart/retrieve-client-credentials.md
         - label: Login with Pop-Up
           page: ../identity/quickstart/login-with-pop-up.md
-        - label: Login without Pop-Up
-          page: ../identity/quickstart/login-without-pop-up.md
-        - label: Display Users Domain
-          page: ../identity/quickstart/display-users-domain.md
-        - group: Other Integration Paths
-          expanded: false
-          pages:
-            - label: Node.js
-              page: ../identity/quickstart/other-integration-paths/node-js.md
-            - label: Web3 Modal
-              page: ../identity/quickstart/other-integration-paths/web3-modal.md
-            - label: Web3 React
-              page: ../identity/quickstart/other-integration-paths/web3-react.md
-            - label: Web3 Onboard
-              page: ../identity/quickstart/other-integration-paths/web3-onboard.md
-            - label: Moralis
-              page: ../identity/quickstart/other-integration-paths/moralis.md
-            - label: Auth0
-              page: ../identity/quickstart/other-integration-paths/auth0.md
-            - label: WAGMI
-              page: ../identity/quickstart/other-integration-paths/wagmi.md
     - group: Guides
       expanded: false
       pages:
+        - group: Integration Paths
+          expanded: false
+          pages:
+            - label: Login without Pop-Up
+              page: ../identity/guides/integration-paths/login-without-pop-up.md
+            - label: Node.js
+              page: ../identity/guides/integration-paths/node-js.md
+            - label: Web3 Modal
+              page: ../identity/guides/integration-paths/web3-modal.md
+            - label: Web3 React
+              page: ../identity/guides/integration-paths/web3-react.md
+            - label: Web3 Onboard
+              page: ../identity/guides/integration-paths/web3-onboard.md
+            - label: Moralis
+              page: ../identity/guides/integration-paths/moralis.md
+            - label: Auth0
+              page: ../identity/guides/integration-paths/auth0.md
+            - label: WAGMI
+              page: ../identity/guides/integration-paths/wagmi.md
         - label: Client Configurations
           page: ../identity/guides/client-configurations.md
         - label: Login Scopes
           page: ../identity/guides/login-scopes.md
-        - group: Login Protocols
-          expanded: false
-          pages:
-            - label: Authorization Server
-              page: ../identity/guides/login-protocols/authorization-server.md
-            - label: Authentication Protocol
-              page: ../identity/guides/login-protocols/authentication-protocol.md
+        - label: Display Users Domain
+          page: ../identity/guides/display-users-domain.md
         - label: Best Practices
           page: ../identity/guides/best-practices.mdx
         - label: Troubleshooting
@@ -195,118 +176,63 @@
     - group: Tech References
       expanded: false
       pages:
-      - group: API Reference
-        expanded: false
-        pages:
-          - label: Unstoppable Login API
-            page: ../openapi/loginref.page.yaml
-          - label: Profile API
-            page: ../openapi/profile-v1.page.yaml
-          - label: Messaging API
-            page: ../openapi/messaging-v1.page.yaml
-          - label: Error codes
-            page: api-reference/error-codes.md
-      - group: SDKs and Libraries
-        expanded: false
-        pages:
-          - label: Overview
-            page: ../identity/sdk-and-libraries/overview.md
-          - label: UAuth JS
-            page: ../identity/sdk-and-libraries/uauth-js.md
-          - label: UAuth Node
-            page: ../identity/sdk-and-libraries/uauth-node.md
-          - label: Web3 React
-            page: ../identity/sdk-and-libraries/web3-react.md
-          - label: Web3 Modal
-            page: ../identity/sdk-and-libraries/web3-modal.md
-          - label: Web3 Onboard
-            page: ../identity/sdk-and-libraries/web3-onboard.md
-          - label: Moralis
-            page: ../identity/sdk-and-libraries/moralis.md
+        - group: API Reference
+          expanded: false
+          pages:
+            - label: Unstoppable Login API
+              page: ../openapi/loginref.page.yaml
+            - label: Profile API
+              page: ../openapi/profile-v1.page.yaml
+            - label: Messaging API
+              page: ../openapi/messaging-v1.page.yaml
+            - label: Error codes
+              page: ../identity/api-reference/error-codes.md
+        - group: Login Protocols
+          expanded: false
+          pages:
+            - label: Authorization Server
+              page: ../identity/guides/login-protocols/authorization-server.md
+            - label: Authentication Protocol
+              page: ../identity/guides/login-protocols/authentication-protocol.md
+        - group: SDKs and Libraries
+          expanded: false
+          pages:
+            - label: Overview
+              page: ../identity/sdk-and-libraries/overview.md
+            - label: UAuth JS
+              page: ../identity/sdk-and-libraries/uauth-js.md
+            - label: UAuth Node
+              page: ../identity/sdk-and-libraries/uauth-node.md
+            - label: Web3 React
+              page: ../identity/sdk-and-libraries/web3-react.md
+            - label: Web3 Modal
+              page: ../identity/sdk-and-libraries/web3-modal.md
+            - label: Web3 Onboard
+              page: ../identity/sdk-and-libraries/web3-onboard.md
+            - label: Moralis
+              page: ../identity/sdk-and-libraries/moralis.md
   separatorLine: true
-- group: User Guides
+- group: Contract Architecture
   expanded: false
   pages:
-  - group: Reverse Resolution
-    expanded: false
-    pages:
-    - group: Set Reverse Record for Domains Guides
+    - group: UNS Architecture
       expanded: false
       pages:
-        - page: ../reverse-resolution/config-guides/ud-dashboard.md
-          label: Set Reverse Record with UD Dashboard Guide
-        - page: ../reverse-resolution/config-guides/smart-contracts.md
-          label: Set Reverse Record with Smart Contracts Guide
-    - label: Frequently Asked Questions
-      page: ../reverse-resolution/reverse-resolution-faq.md
-  - group: Manage Domain Records
-    expanded: false
-    pages:
-    - page: ../manage-domains/index.md
-      label: Manage Domain Ownership
-    - group: Manage Domain Records
+        - label: "Overview"
+          page: ../smart-contracts/overview/uns-architecture-overview.md
+        - label: "Smart Contract"
+          page: ../smart-contracts/contract-reference/uns-smart-contracts.md
+    - group: CNS Architecture
       expanded: false
       pages:
-        - page: ../manage-domains/managing-domain-records.md
-          label: Manage Domain Records Overview
-        - page: ../manage-domains/polygon-overview.md
-          label: Polygon Network Overview
-        - page: ../manage-domains/delegating-transactions.md
-          label: Delegate Transactions
-        - page: ../manage-domains/delegating-domain-management.md
-          label: Delegate Domain Management
-    - group: Domain Management Guides
-      expanded: false
-      pages:
-        - page: ../manage-domains/guides/managing-domains-using-contracts.md
-          label: Manage Domains Using Smart Contracts Guide
-        - page: ../manage-domains/guides/mint-subdomains-using-contracts.md
-          label: Mint Subdomains Using Smart Contracts Guide
-    - group: Domain Transfer Guides
-      expanded: false
-      pages:
-        - page: ../manage-domains/guides/uns1-to-uns2.md
-          label: UNS L1 to UNS L2 - Domain Deposit Guide
-        - page: ../manage-domains/guides/cns1-to-uns1.md
-          label: CNS L1 to UNS L1 - Domain Transfer Guide
-        - page: ../manage-domains/guides/cns1-to-uns2.md
-          label: CNS L1 to UNS L2 - Domain Deposit Guide
-    - group: Configure Polygon for MetaMask
-      expanded: false
-      pages:
-        - page: ../manage-domains/guides/add-polygon-to-metamask.md
-          label: Add Polygon Network to MetaMask Wallet Guide
-        - page: ../manage-domains/guides/get-polygon-test-tokens.md
-          label: Get Polygon Test Tokens Guide
-    - group: FAQs
-      expanded: false
-      pages:
-        - page: ../manage-domains/domain-management-faq.md
-          label: Domain Management FAQs
-        - page: ../manage-domains/migration-faq.md
-          label: Polygon Migration FAQs
-    - group: Reference
-      expanded: false
-      pages:
-        - page: ../manage-domains/polygon-release-notes.md
-          label: Polygon Release Notes
-        - page: ../manage-domains/domains-configuration.md
-          label: Domain Configuration GUI
-  - group: Decentralized Websites
-    expanded: false
-    pages:
-      - page: ../d-websites/index.md
-        label: IPFS and D-Web Overview
-      - label: Resolve UD Domains in your Web Browser
-        page: ../d-websites/resolving-dwebsites-in-a-browser.md
-      - page: ../d-websites/build-website.md
-        label: Build Your Static Website Guide
-      - page: ../d-websites/upload-ipfs.md
-        label: Upload Your Website to IPFS Guide
-      - page: ../d-websites/connect-ipfs.md
-        label: Connect IPFS Site to Your Domain Guide
-      - label: D-Website Examples and Resources
-        page: ../d-websites/dwebsite-examples.md
+        - label: "Overview"
+          page: ../smart-contracts/overview/cns-architecture-overview.md
+        - label: "Smart Contract"
+          page: ../smart-contracts/contract-reference/cns-smart-contracts.md
+    - label: "CNS vs UNS Comparison"
+      page: ../smart-contracts/overview/cns-uns-comparison.md
+    - label: "Namehashing"
+      page: domain-registry-essentials/namehashing.md
   separatorLine: true
 - group: API Specs
   expanded: false

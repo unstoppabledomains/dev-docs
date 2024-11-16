@@ -27,7 +27,7 @@ If you're familiar with blockchain development and would rather avoid an additio
 - [Resolve Using Smart Contracts](/smart-contracts/quick-start/resolve-domains.md)
 - [CNS Smart Contracts reference](/smart-contracts/contract-reference/cns-smart-contracts.md)
 - [UNS Smart Contracts reference](/smart-contracts/contract-reference/uns-smart-contracts.md)
-- [Records reference](/resolution/guides/records-reference.md)
+- [Records reference](/resolution/records-reference.md)
 
 ## End-User Features (For Resolving Domains in a Browser)
 

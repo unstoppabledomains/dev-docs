@@ -31,7 +31,7 @@ A list of keys supported by Unstoppable Domains can be found in [reference json 
 
 ### Single-chain currencies
 
-See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-addr) for how to resolve the address format
+See [example](/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-addr) for how to resolve the address format
 
 **`crypto.ETH.address`**
 
@@ -57,7 +57,7 @@ Cryptocurrency address of the ticker.
 
 Some currencies exist on multiple chains.
 
-See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-multi-chain-address-format) for how to resolve the address format
+See [example](/resolution/sdks-and-libraries/javascript/#resolve-multi-chain-address-format) for how to resolve the address format
 
 **`crypto.USDT.version.ERC20.address`**
 
@@ -91,7 +91,7 @@ Cryptocurrency address of ticker version
 ### Blockchain Family, Network, Token Level Addresses
 
 Wallet address of specific token can be derived from block chain family and network.
-See [example](https://apidocs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-getaddress) for how to resolve the address format
+See [example](/resolution/sdks-and-libraries/javascript/#resolve-wallet-address-using-getaddress) for how to resolve the address format
 
 **`token.EVM.address`**
 

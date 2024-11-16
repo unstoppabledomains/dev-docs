@@ -30,7 +30,7 @@ UNS has one single smart contract, the `Registry`. The same `Registry` contract 
 <figcaption>Registry and RecordStorage interaction</figcaption>
 </figure>
 
-Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](namehashing.md).
+Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](/getting-started/domain-registry-essentials/namehashing.md).
 
 For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
 
@@ -45,7 +45,7 @@ For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides[ ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, `Registry` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records Reference](/resolution/guides/records-reference.md).
+Under the surface, `Registry` is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records Reference](/resolution/records-reference.md).
 
 `Registry` stores:
 
@@ -65,7 +65,7 @@ Domain owners can:
 * Set domain records
 * Burn a domain
 
-Domain owners can set one Approved address per domain and many Operator addresses. These roles can manage a domain on a member's behalf. For more details, see [Managing domain ownership](../../manage-domains/index.md).
+Domain owners can set one Approved address per domain and many Operator addresses. These roles can manage a domain on a member's behalf.
 
 ### ProxyReader
 
@@ -91,7 +91,7 @@ External smart contracts exist for UNS. Domains can be owned by smart contracts,
 
 UNS allows members to delegate transaction execution to accounts that aren't domain owners by supporting [EIP-2771 - Secure Protocol for Native Meta Transactions](https://eips.ethereum.org/EIPS/eip-2771).
 
-`Registry` smart contracts implement methods that use [Meta Transactions](/manage-domains/delegating-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` smart contracts implement methods that use Meta Transactions. One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for members to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
@@ -105,5 +105,3 @@ On behalf of our members, our transaction processor generally handles:
 **Managing domains,** in contrast, can only be performed with a domain owner's permission. Each delegated transaction that modifies the owner address or the domain records requires a domain owner's signature.
 
 UNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
-
-To learn more about the technical details of delegating transactions in UNS, read our [Delegating Meta Transactions](/manage-domains/delegating-transactions.md) page.

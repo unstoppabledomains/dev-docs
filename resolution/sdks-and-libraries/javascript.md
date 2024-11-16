@@ -112,7 +112,7 @@ const resolution = Resolution.fromEthersProvider(ethersProvider);
 ### Resolve wallet address using `addr`
 
 This API is used to retrieve wallet address for single address record. (See
-[Cryptocurrency payment](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#cryptocurrency-payments)
+[Cryptocurrency payment](/resolution/records-reference/#cryptocurrency-payments)
 section for the record format)
 
 With `homecakes.crypto` has `crypto.ETH.address` on-chain:
@@ -134,7 +134,7 @@ getWalletAddr('homecakes.crypto', 'ETH');
 
 This API is used to retrieve wallet address for multi-chain address records.
 (See
-[multi-chain currency](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#multi-chain-currencies))
+[multi-chain currency](/resolution/records-reference/#multi-chain-currencies))
 
 With `aaron.x` has `crypto.AAVE.version.ERC20.address` on-chain:
 
@@ -180,7 +180,7 @@ getWalletAddress('homecakes.crypto', 'ETH', 'ETH');
 ```
 
 **Resolve multi-chain currency address format (See
-[multi-chain currency](https://docs.unstoppabledomains.com/resolution/guides/records-reference/#multi-chain-currencies))**
+[multi-chain currency](/resolution/records-reference/#multi-chain-currencies))**
 
 With `aaron.x` has a `crypto.AAVE.version.ERC20.address` record set to
 `0xCD0DAdAb45bAF9a06ce1279D1342EcC3F44845af`. The `ERC20` indicates it's a token

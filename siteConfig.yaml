@@ -44,7 +44,7 @@ editPage:
 nav:
 
   - label: Get Started
-    page: getting-started/index.md
+    page: getting-started/overview.md
 
   - label: API Reference
     page: openapi/resolution.page.yaml

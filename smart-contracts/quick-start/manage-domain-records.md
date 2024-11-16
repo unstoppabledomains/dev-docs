@@ -77,7 +77,7 @@ Next, add the record(s) you want to manage to the `key` and `value` fields as a 
 </figure>
 
 :::info
-Please see the [Record Reference](/resolution/guides/records-reference.md) guide and [reference JSON](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json) file for all the resolver keys used by the Unstoppable Domains UNS Registry.
+Please see the [Record Reference](/resolution/records-reference.md) guide and [reference JSON](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json) file for all the resolver keys used by the Unstoppable Domains UNS Registry.
 :::
 
 ## Step 5: Generate the Namehash of the Domain

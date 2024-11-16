@@ -11,7 +11,7 @@ showNextButton: false
 This is the basic installation guide for the [web3-react](https://github.com/Uniswap/web3-react/) framework and is best used for React-based single page applications (SPAs). For more information about the UAuth middleware package for web3-react, see the [reference](/identity/sdk-and-libraries/web3-react.md) and source code on [github](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
 :::warning
-This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses the latest v8 beta branch of `web3-react`. For integrating Login with the previous [v6 branch](https://github.com/Uniswap/web3-react/tree/v6), see the [v6 Web3 React guide](/identity/quickstart/other-integration-paths/web3-react-v6.md).
+This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses the latest v8 beta branch of `web3-react`.
 :::
 
 <figure>
