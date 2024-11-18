@@ -24,6 +24,5 @@ This portal is organized to support users at all experience levels, from foundat
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
 - [API Reference](/openapi/resolution.page.yaml)
-- [A very clearly borked link](https://uiobjweqgujhyvbsdZNIdkhg.com)
 
 <embed src="/snippets/_developer-survey-embed.md" />
