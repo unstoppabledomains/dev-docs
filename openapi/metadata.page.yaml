@@ -1,9 +1,8 @@
 type: reference-docs
-label: Resolution
-definitionId: resolution
+label: Metadata
+definitionId: metadata
 settings:
   pagination: none
-  corsProxyUrl: https://cors.redoc.ly
   showConsole: true
   generateCodeSamples:
     languages:
