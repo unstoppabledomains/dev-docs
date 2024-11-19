@@ -126,7 +126,7 @@ console.log({ resolver: data.resolver, owner: data.owner, values: data[2] });
 <figcaption>Resolving domain records via ProxyReader for CNS and UNS Registries</figcaption>
 </figure>
 
-See the [Records Reference](/resolution/guides/records-reference.md) for more information about the standardized records.
+See the [Records Reference](/resolution/records-reference.md) for more information about the standardized records.
 
 :::info
 When resolving domains to records, first check the records on the Polygon network, then check on the Ethereum network.
@@ -143,7 +143,7 @@ This is for two reasons:
 
 Any domain management application should perform record format validation before submitting a transaction. However, there is no guarantee that all management applications will do it correctly. For this reason, records should be validated when the domain is resolved.
 
-See the [Records Reference](/resolution/guides/records-reference.md) for more information for the validator of each record.
+See the [Records Reference](/resolution/records-reference.md) for more information for the validator of each record.
 
 ## Configuring an Ethereum Network Connection
 

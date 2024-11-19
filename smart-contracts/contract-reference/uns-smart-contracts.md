@@ -9,7 +9,7 @@ editPage:
 
 # UNS Smart Contracts
 
-Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity Smart Contracts that lives on the blockchain. The Unstoppable Domains team maintains the source code. This page lists the smart contracts from the [UNS repository](https://github.com/unstoppabledomains/uns), gives a brief description, and links to the source code and deployment addresses. For high-level details about how UNS works, see the [UNS Architecture Overview](/getting-started/domain-registry-essentials/uns-architecture-overview.md).
+Unstoppable Name Service (UNS) is built on Ethereum and is effectively a bundle of Solidity Smart Contracts that lives on the blockchain. The Unstoppable Domains team maintains the source code. This page lists the smart contracts from the [UNS repository](https://github.com/unstoppabledomains/uns), gives a brief description, and links to the source code and deployment addresses. For high-level details about how UNS works, see the [UNS Architecture Overview](../overview/uns-architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
 
@@ -36,7 +36,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](/getting-started/domain-registry-essentials/uns-architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows members to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](../overview/uns-architecture-overview.md#proxyreader).
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/ProxyReader.sol)
 
@@ -46,7 +46,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ### MintingManager
 
-`MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
+`MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via Meta Transactions. All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
 **Source code:** [contracts/MintingManager.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/MintingManager.sol)
 

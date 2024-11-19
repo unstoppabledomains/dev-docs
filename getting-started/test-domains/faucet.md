@@ -8,7 +8,7 @@ description: This page describes the process for requesting a free test domain a
 <embed src="/snippets/_test-domain-explain.md" />
 
 :::warning
-The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Unstoppable Login](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Sepolia or Amoy) are not supported.
+The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon and Base Networks. And, for [Unstoppable Login](/identity/overview/login-with-unstoppable.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Sepolia or Amoy) are not supported.
 :::
 
 ## Get a free domain from Unstoppable Website
@@ -16,14 +16,6 @@ The [Partner API](/domain-distribution-and-management/overview.md) only supports
 - Go to the [Unstoppable Website](https://unstoppabledomains.com/developers/testdomain) and select any uns domain, that starts with suffix `uns-devtest-`.
 - Go to cart and click on **Go to Checkout**.
 - Then you can select a wallet for claiming the domain, or connect a wallet, or just click **Skip** and proceed with the purchase.
-
-:::warning
-If you haven't connected your wallet and proceeded with a self-custody wallet, you have 7 days for claming the domain. After 7 days, claiming is disabled until an Unstoppable Vault subscription is purchased.
-:::
-
-:::warning
-The [Partner API](/domain-distribution-and-management/overview.md) only supports Polygon Layer2 Network. And, for [Unstoppable Login](/identity/quickstart/retrieve-client-credentials.md), it can be integrated with any EVM-compatible DApp. However, domains minted on testnets (e.g. Amoy or Sepolia) are not supported.
-:::
 
 <figure>
 

@@ -1,1 +1,0 @@
-To report a bug in a template or suggest an improvement to the [UD Template Repository](https://github.com/unstoppabledomains/decentralized-websites),  simply go to issues and fill out the proper form.

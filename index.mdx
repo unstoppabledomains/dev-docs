@@ -31,40 +31,21 @@ export default LandingLayout;
   <H1 className="margin-top-bottom-20">Developer Documentation</H1>
   <H2 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
   <Flex p={20} justifyContent="center">
-     <Button variant="contained" size="xlarge" color="primary" to="getting-started/index.md">
+     <Button variant="contained" size="xlarge" color="primary" to="getting-started/overview.md">
       Get Started
     </Button>
   </Flex>
 </Jumbotron>
 <Box my={25}>
-  <SectionHeader className="margin-top-bottom-30 padding-top-bottom-10">
-    <Emphasis>Browse By Product</Emphasis>
-  </SectionHeader>
-  <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <WideTile to="resolution/overview.md" header="Resolution" className="margin-top-bottom-20">
-        Resolve domain names
-    </WideTile>
-    <WideTile to="identity/overview/login-with-unstoppable.md" header="Identity" className="margin-top-bottom-20">
-        Build a universal Web3 login
-    </WideTile>
-    <WideTile to="domain-distribution-and-management/overview.md" header="Distribute & Manage Domains" className="margin-top-bottom-20">
-        Become a partner to generate revenue
-    </WideTile>
-    <WideTile to="smart-contracts/overview/uns-architecture-overview.md" header="Smart Contracts" className="margin-top-bottom-20">
-        UNS and CNS smart contracts
-    </WideTile>
-  </FlexSection>
   <SectionHeader className="margin-top-bottom-30">
     Build your <Emphasis> application </Emphasis> today!
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap" className="padding-top-bottom-20">
-    <ThinTile to="use-cases/index.mdx" icon={usecase} header="Use Cases">
-        Review real life use cases along with potential solutions and
-        direct links to Unstoppable integration guides, when applicable.
+    <ThinTile to="domain-distribution-and-management/overview.md" icon={usecase} header="Sell Domains in your App">
+        Register and manage onchain domains natively within your app.
     </ThinTile>
-    <ThinTile to="resolution/overview.md" icon={toolkit} header="Unstoppable Resolution">
-        Explore Unstoppable Resolution options such as the resolution libraries,
-        resolution CLI, and smart contracts.
+    <ThinTile to="resolution/overview.md" icon={toolkit} header="Resolve Domains in your App">
+        Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
     </ThinTile>
     <ThinTile to="openapi/resolution.page.yaml" icon={apiref} header="API Reference">
         Consult the documentation and live testing features of Unstoppable Domains APIs,

@@ -14,7 +14,6 @@ linkChecker:
   options:
     CheckExternal: false
 oasDefinitions:
-  partner-v2: https://api.redocly.com/registry/bundle/unstoppable-domains/Partner%20API/v2/openapi.yaml?branch=master
   partner-v3: https://api.redocly.com/registry/bundle/unstoppable-domains/Partner%20API/v3/openapi.yaml?branch=main
   profile-v1: https://api.redocly.com/registry/bundle/unstoppable-domains/Profile%20API/v1/openapi.yaml?branch=main
   login-unstoppable: https://api.redocly.com/registry/bundle/unstoppable-domains/Login%20API/v1/openapi.yaml
@@ -46,24 +45,15 @@ editPage:
 nav:
 
   - label: Get Started
-    page: getting-started/index.md
-
-  - label: Guides
-    page: /guides.mdx
-
-  - label: Use Cases
-    page: /use-cases/index.mdx
+    page: getting-started/overview.md
 
   - label: API Reference
     page: openapi/resolution.page.yaml
 
-  - label: Contribute
-    page: contribute/unstoppable-quests.md
-
   - search: true
 
 footer:
-  copyrightText: Copyright © 2022 Unstoppable Domains Inc. All rights reserved.
+  copyrightText: Copyright © 2024 Unstoppable Domains Inc. All rights reserved.
   columns:
     - group: Legal
       items:

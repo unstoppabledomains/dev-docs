@@ -5,9 +5,6 @@ versions:
     definitionId: partner-v3
     title: v3 (Latest)
     isDefault: true
-  - id: v2
-    definitionId: partner-v2
-    title: v2 (Legacy)
 settings:
   pagination: none
   corsProxyUrl: https://cors.redoc.ly

@@ -73,7 +73,7 @@ Next, add your wallet address that owns the root domain to the `to` field and th
 <figcaption>filling issueWithRecords parameters</figcaption>
 </figure>
 
-Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/resolution/guides/records-reference.md) documentation for supported values. You can also provide empty records if you wish to.
+Then, add the record(s) you want pre-filled in the subdomain after minting to the `keys` and `values` fields as an array of values. See the [Records Reference](/resolution/records-reference.md) documentation for supported values. You can also provide empty records if you wish to.
 
 <figure>
 

@@ -77,7 +77,7 @@ The process of validating information, such as domain ownership, and registering
 
 ### MintingManager
 
-The [naming service](#name-service) [smart contract](#smart-contract) that manages the minting of second-level domains. The Unstoppable Domains team primarily uses the MintingManager, but its interface also supports delegating the minting process to other parties via [Meta Transactions](/manage-domains/delegating-transactions.md).
+The [naming service](#name-service) [smart contract](#smart-contract) that manages the minting of second-level domains. The Unstoppable Domains team primarily uses the MintingManager, but its interface also supports delegating the minting process to other parties.
 
 ### Name Service
 
@@ -101,7 +101,7 @@ A service that supplies [smart contracts](#smart-contract) with data from the ou
 
 ### Partner
 
-A user authorized by Unstoppable Domains to [sell domains to users](/use-cases/sell-domains-users.md) in their applications.
+A user authorized by Unstoppable Domains to [sell domains to users](/domain-distribution-and-management/overview.md) in their applications.
 
 ### Partner API
 
