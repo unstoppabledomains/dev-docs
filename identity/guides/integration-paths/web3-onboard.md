@@ -12,7 +12,7 @@ This is the basic integration guide for the Blocknative Web3-Onboard UAuth modul
 
 <figure>
 
-![Web3 Onboard with Unstoppable Domains](../../../static/images/login-selection-web3-onboard.png "#width=70%")
+![Web3 Onboard with Unstoppable Domains](/images/login-selection-web3-onboard.png "#width=70%")
 
 <figcaption>Web3 Onboard with Unstoppable Domains</figcaption>
 </figure>

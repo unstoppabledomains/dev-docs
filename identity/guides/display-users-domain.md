@@ -2,7 +2,7 @@ Once a user has successfully authenticated, the application should display the u
 
 <figure>
 
-![Showing an authenticated user's domain](../../../static/images/third-UI-example-login-domains.png '#width=50%')
+![Showing an authenticated user's domain](/images/third-UI-example-login-domains.png '#width=50%')
 
 <figcaption>Showing an authenticated user's domain</figcaption>
 </figure>
