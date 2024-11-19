@@ -3,7 +3,7 @@ title: Resolution Troubleshooting Guide | UD Developer Portal
 description: This page covers frequently encountered problems when integrating the resolution feature and potential solutions.
 ---
 
-# Crypto Payments Troubleshooting Guide
+# Resolution Troubleshooting Guide
 
 Here are some of the problems you may frequently encounter when integrating crypto payments with Unstoppable Domains and how to fix them.
 
