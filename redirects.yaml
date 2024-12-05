@@ -274,3 +274,6 @@
 '/developer-toolkit/resolution-integration-methods/resolution-service/*':
   to: '/openapi/resolution/'
   type: 301
+'/openapi/partner/latest':
+  to: '/openapi/partner/'
+  type: 301
