@@ -1,4 +1,4 @@
-type: reference-docs
+type: landing-page
 label: "API Reference"
 settings:
   pagination: none
@@ -13,4 +13,4 @@ settings:
       - lang: Java
   hideDownloadButton: true
   sidebar:
-    - "/openapi/sidebars.yaml"  # Use /openapi/sidebars.yaml for sidebar
+    - "/openapi/sidebars.yaml"  
