@@ -277,3 +277,12 @@
 '/openapi/partner/latest':
   to: '/openapi/partner/'
   type: 301
+'/crypto-payments/':
+  to: '/resolution/overview/'
+  type: 301
+'/d-websites/':
+  to: '/resolution/guides/browser-resolution/overview/'
+  type: 301
+'/manage-domains/':
+  to: '/smart-contracts/quick-start/manage-domain-records/'
+  type: 301
