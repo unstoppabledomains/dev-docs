@@ -1,0 +1,16 @@
+type: reference-docs
+label: "API Reference"
+settings:
+  pagination: none
+  corsProxyUrl: https://cors.redoc.ly
+  showConsole: true
+  generateCodeSamples:
+    languages:
+      - lang: curl
+      - lang: JavaScript
+      - lang: Node.js
+      - lang: Python
+      - lang: Java
+  hideDownloadButton: true
+  sidebar:
+    - "/openapi/sidebars.yaml"  # Use /openapi/sidebars.yaml for sidebar
