@@ -1,5 +1,6 @@
-type: landing-page
+type: reference-docs
 label: "API Reference"
+definitionId: dummy-definition  # Dummy definition to satisfy Redocly's validation
 settings:
   pagination: none
   corsProxyUrl: https://cors.redoc.ly
@@ -13,4 +14,4 @@ settings:
       - lang: Java
   hideDownloadButton: true
   sidebar:
-    - "/openapi/sidebars.yaml"  
+    - "/openapi/sidebars.yaml"
