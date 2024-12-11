@@ -59,11 +59,8 @@
     - group: Tech References
       expanded: false
       pages:
-        - group: API Reference
-          expanded: false
-          pages:
-            - label: Resolution
-              page: openapi/resolution.page.yaml
+        - label: Resolution API
+          link: /openapi/resolution.page.yaml
         - label: Records reference
           page: resolution/records-reference.md
         - group: Smart Contracts
@@ -109,11 +106,8 @@
     - group: Tech References
       expanded: false
       pages:
-        - group: API Reference
-          expanded: false
-          pages:
-            - label: Partner API
-              page: openapi/partner.page.yaml
+        - label: Partner API
+          link: /openapi/partner.page.yaml
         - group: Smart Contracts
           expanded: false
           pages:
@@ -171,15 +165,15 @@
     - group: Tech References
       expanded: false
       pages:
-        - group: API Reference
+        - group: APIs
           expanded: false
           pages:
-            - label: Unstoppable Login API
-              page: openapi/loginref.page.yaml
+            - label: Login API
+              link: /openapi/loginref.page.yaml
             - label: Profile API
-              page: openapi/profile-v1.page.yaml
+              link: /openapi/profile-v1.page.yaml
             - label: Messaging API
-              page: openapi/messaging-v1.page.yaml
+              link: /openapi/messaging-v1.page.yaml
             - label: Error codes
               page: identity/api-reference/error-codes.md
         - group: Login Protocols
