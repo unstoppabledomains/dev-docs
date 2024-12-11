@@ -60,7 +60,7 @@
       expanded: false
       pages:
         - label: Resolution API
-          link: /openapi/resolution.page.yaml
+          link: /openapi/resolution/
         - label: Records reference
           page: resolution/records-reference.md
         - group: Smart Contracts
@@ -107,7 +107,7 @@
       expanded: false
       pages:
         - label: Partner API
-          link: /openapi/partner.page.yaml
+          link: /openapi/partner/
         - group: Smart Contracts
           expanded: false
           pages:
@@ -169,11 +169,11 @@
           expanded: false
           pages:
             - label: Login API
-              link: /openapi/loginref.page.yaml
+              link: /openapi/loginref/
             - label: Profile API
-              link: /openapi/profile-v1.page.yaml
+              link: /openapi/profile-v1/
             - label: Messaging API
-              link: /openapi/messaging-v1.page.yaml
+              link: /openapi/messaging-v1/
             - label: Error codes
               page: identity/api-reference/error-codes.md
         - group: Login Protocols
