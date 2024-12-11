@@ -229,5 +229,5 @@
     - label: "Namehashing"
       page: getting-started/domain-registry-essentials/namehashing.md
   separatorLine: true
-- link: openapi/index.page.yaml
+- link: /openapi/overview/
   label: API Reference

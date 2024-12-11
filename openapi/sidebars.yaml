@@ -1,5 +1,6 @@
 pages:
-  - page: index.page.yaml
+  - page: overview.md
+    label: Overview
     separatorLine: true
   - page: metadata.page.yaml
     separatorLine: true
