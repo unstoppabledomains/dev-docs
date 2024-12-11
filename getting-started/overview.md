@@ -23,6 +23,6 @@ This portal is organized to support users at all experience levels, from foundat
     - [Reverse Resolution](/resolution/guides/reverse-resolution/overview.md)
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
-- [API Reference](/openapi/resolution.page.yaml)
+- [API Reference](/openapi/overview.md)
 
 <embed src="/snippets/_developer-survey-embed.md" />

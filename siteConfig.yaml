@@ -48,7 +48,7 @@ nav:
     page: getting-started/overview.md
 
   - label: API Reference
-    page: openapi/resolution.page.yaml
+    page: openapi/overview.md
 
   - search: true
 

@@ -52,49 +52,9 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 
 Unstoppable Login currently supports the following top-level domains (TLDs):
 
-- .888
-- .altimist
-- .anime
-- .austin
-- .benji
-- .binanceus
-- .bitcoin
-- .bitget
-- .blockchain
-- .clay
-- .crypto
-- .dao
-- .dfz
-- .dream
-- .farms
-- .go
-- .hi
-- .klever
-- .kresus
-- .kryptic
-- .lfg
-- .manga
-- .metropolis
-- .mumu
-- .nft
-- .pog
-- .polygon
-- .pudgy
-- .raiin
-- .secret
-- .smobler
-- .stepn
-- .tball
-- .ubu
-- .unstoppable
-- .wallet
-- .witg
-- .wrkx
-- .x
-- .zil \*
-- .eth
+<embed src="/snippets/_supported-domain-endings.md" />
 
-:::warning \* Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
+:::warning Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
 :::
 
 ## Considerations

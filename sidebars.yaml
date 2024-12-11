@@ -1,0 +1,227 @@
+- group: Getting Started
+  expanded: false
+  pages:
+    - label: "Overview"
+      page: getting-started/overview.md
+    - group: Get a Test Domain
+      expanded: false
+      pages:
+        - label: UD Website Faucet Guide
+          page: getting-started/test-domains/faucet.md
+        - label: Polygon Faucet Guide
+          page: getting-started/test-domains/polygonscan.md
+    - label: Glossary
+      page: getting-started/glossary.md
+  separatorLine: true
+- group: Resolution
+  expanded: false
+  pages:
+    - label: "Overview"
+      page: resolution/overview.md
+    - group: Quickstart
+      expanded: false
+      pages:
+        - label: Retrieve an API Key
+          page: resolution/quickstart/retrieve-an-api-key.md
+        - label: Resolve Domains
+          page: resolution/quickstart/resolution.md
+        - label: Reverse Resolve Domains
+          page: resolution/quickstart/reverse-resolution.md
+    - group: Guides
+      expanded: false
+      pages:
+        - group: Browser resolution (HTTP & IPFS)
+          expanded: false
+          pages:
+            - label: Overview
+              page: resolution/guides/browser-resolution/overview.md
+            - label: Algorithm
+              page: resolution/guides/browser-resolution/algorithm.md
+            - label: Test domains
+              page: resolution/guides/browser-resolution/test-domains.md
+        - group: Reverse Resolution
+          expanded: false
+          pages:
+            - label: "Overview"
+              page: resolution/guides/reverse-resolution/overview.md
+            - label: Smart Contract Integration
+              page: resolution/guides/reverse-resolution/integration-guides/smart-contracts.md
+            - label: Resolution Libraries Integration      
+              page: resolution/guides/reverse-resolution/integration-guides/resolution-libraries.md
+            - label: FAQs
+              page: resolution/guides/reverse-resolution/faq.md
+        - label: Resolution CLI
+          page: resolution/sdks-and-libraries/cli.md
+        - label: Best practices
+          page: resolution/guides/best-practices.md
+        - label: Troubleshooting
+          page: resolution/guides/troubleshooting-guide.md
+    - group: Tech References
+      expanded: false
+      pages:
+        - label: Resolution API
+          link: /openapi/resolution/
+        - label: Records reference
+          page: resolution/records-reference.md
+        - group: Smart Contracts
+          expanded: false
+          pages:
+            - label: Resolution Contracts
+              page: smart-contracts/quick-start/resolve-domains.md
+            - label: Reverse Resolution Contracts
+              page: smart-contracts/quick-start/reverse-resolve-domains.md
+        - group: SDKs and Libraries
+          expanded: false
+          pages:
+            - label: Overview
+              page: resolution/sdks-and-libraries/overview.md
+            - label: JavaScript
+              page: resolution/sdks-and-libraries/javascript.md
+            - label: Java
+              page: resolution/sdks-and-libraries/java.md
+            - label: Swift
+              page: resolution/sdks-and-libraries/swift.md
+            - label: Go
+              page: resolution/sdks-and-libraries/go.md
+            - label: Matic.js SDK
+              page: resolution/sdks-and-libraries/maticjs.md   
+  separatorLine: true
+- group: Partner API
+  expanded: false
+  pages:
+    - label: "Overview"
+      page: domain-distribution-and-management/overview.md
+    - group: Quickstart
+      expanded: false
+      pages:
+        - label: Retrieve an API key
+          page: domain-distribution-and-management/quickstart/retrieve-an-api-key.md
+    - group: Guides
+      expanded: false
+      pages:
+        - label: Implement Webhooks
+          page: domain-distribution-and-management/guides/implementing-webhooks.md
+        - label: On-chain Buy
+          page: domain-distribution-and-management/guides/on-chain-buy.md
+    - group: Tech References
+      expanded: false
+      pages:
+        - label: Partner API
+          link: /openapi/partner/
+        - group: Smart Contracts
+          expanded: false
+          pages:
+            - label: Manage Domain Records
+              page: smart-contracts/quick-start/manage-domain-records.md
+            - label: Mint Subdomains
+              page: smart-contracts/quick-start/mint-subdomains.md
+  separatorLine: true
+- group: Login With Unstoppable
+  expanded: false
+  pages:
+    - label: Overview
+      page: identity/overview/login-with-unstoppable.md
+    - group: Quickstart
+      expanded: false
+      pages:
+        - label: Retrieve Client Credentials
+          page: identity/quickstart/retrieve-client-credentials.md
+        - label: Login with Pop-Up
+          page: identity/quickstart/login-with-pop-up.md
+    - group: Guides
+      expanded: false
+      pages:
+        - group: Integration Paths
+          expanded: false
+          pages:
+            - label: Login without Pop-Up
+              page: identity/guides/integration-paths/login-without-pop-up.md
+            - label: Node.js
+              page: identity/guides/integration-paths/node-js.md
+            - label: Web3 Modal
+              page: identity/guides/integration-paths/web3-modal.md
+            - label: Web3 React
+              page: identity/guides/integration-paths/web3-react.md
+            - label: Web3 Onboard
+              page: identity/guides/integration-paths/web3-onboard.md
+            - label: Moralis
+              page: identity/guides/integration-paths/moralis.md
+            - label: Auth0
+              page: identity/guides/integration-paths/auth0.md
+            - label: WAGMI
+              page: identity/guides/integration-paths/wagmi.md
+        - label: Client Configurations
+          page: identity/guides/client-configurations.md
+        - label: Login Scopes
+          page: identity/guides/login-scopes.md
+        - label: Display Users Domain
+          page: identity/guides/display-users-domain.md
+        - label: Best Practices
+          page: identity/guides/best-practices.mdx
+        - label: Troubleshooting
+          page: identity/guides/troubleshooting.md
+        - label: FAQs
+          page: identity/guides/faq.md
+    - group: Tech References
+      expanded: false
+      pages:
+        - group: APIs
+          expanded: false
+          pages:
+            - label: Login API
+              link: /openapi/loginref/
+            - label: Profile API
+              link: /openapi/profile-v1/
+            - label: Messaging API
+              link: /openapi/messaging-v1/
+            - label: Error codes
+              page: identity/api-reference/error-codes.md
+        - group: Login Protocols
+          expanded: false
+          pages:
+            - label: Authorization Server
+              page: identity/guides/login-protocols/authorization-server.md
+            - label: Authentication Protocol
+              page: identity/guides/login-protocols/authentication-protocol.md
+        - group: SDKs and Libraries
+          expanded: false
+          pages:
+            - label: Overview
+              page: identity/sdk-and-libraries/overview.md
+            - label: UAuth JS
+              page: identity/sdk-and-libraries/uauth-js.md
+            - label: UAuth Node
+              page: identity/sdk-and-libraries/uauth-node.md
+            - label: Web3 React
+              page: identity/sdk-and-libraries/web3-react.md
+            - label: Web3 Modal
+              page: identity/sdk-and-libraries/web3-modal.md
+            - label: Web3 Onboard
+              page: identity/sdk-and-libraries/web3-onboard.md
+            - label: Moralis
+              page: identity/sdk-and-libraries/moralis.md
+  separatorLine: true
+- group: Contract Architecture
+  expanded: false
+  pages:
+    - group: UNS Architecture
+      expanded: false
+      pages:
+        - label: "Overview"
+          page: smart-contracts/overview/uns-architecture-overview.md
+        - label: "Smart Contract"
+          page: smart-contracts/contract-reference/uns-smart-contracts.md
+    - group: CNS Architecture
+      expanded: false
+      pages:
+        - label: "Overview"
+          page: smart-contracts/overview/cns-architecture-overview.md
+        - label: "Smart Contract"
+          page: smart-contracts/contract-reference/cns-smart-contracts.md
+    - label: "CNS vs UNS Comparison"
+      page: smart-contracts/overview/cns-uns-comparison.md
+    - label: "Namehashing"
+      page: getting-started/domain-registry-essentials/namehashing.md
+  separatorLine: true
+- link: /openapi/overview/
+  label: API Reference
