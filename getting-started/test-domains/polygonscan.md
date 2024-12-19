@@ -83,7 +83,9 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'dao';
 0x3b270f4d000c6046ee64e8c025ad8cff71e728b275a81bf53a060442fe9f9766 = 'dfz';
+0xd3225890d7777ac38091dfc10feff05127a34cf44cb65fd1a830e37046b6ecee = 'donut';
 0x30b126da528ed6a22ad6ce11ea44a16f3990a215ef04115d84bb9275b709e89c = 'dream';
+0x052e37ec9e3d85ccb12267d47068991786bdbc50974d5f63937c80d1eb5d1da1 = 'emir';
 0xe3ec9fee76a74e3805fcc927d78308ffc19001efd50d94af4c3fc36ed6a34d1d = 'ethermail';
 0xd75c01499ad11caab105cfefbf62ed6f0c7208f8de3fa293f01c209b37a1d036 = 'farms';
 0xa264639c3dbff58a1ded5efcf724e50a9c7847ff8197c87c00d009fbba2a3720 = 'go';
@@ -102,6 +104,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0xed9ce6b49a0e2c56c57c86795b131bd6df792312183994c3cf3de1516cfe92d6 = 'polygon';
 0xa5e27fb2696345ec44a24a5c2f7f413d717329c57710aad5f052ae750889edd8 = 'propykeys';
 0x17936dd2b9c99a1e1bfa039dd7d40118f3ed535fcd9c8cda23c8070ffb4c2264 = 'pudgy';
+0x2a595908979f49007772f276ab0ca35877efbb3c2ff0db6c903c70b9b092f581 = 'quantum';
 0x2418c6dc1c5996890c54f1b197ce3d5f255b857445bce309215d0751b56fcd65 = 'raiin';
 0x335f1d8a43ebd6d9277127e859f502a14bbe3ccbe2d3f89be38fd0086da4c396 = 'secret';
 0x670e86e82c6551930f0b729bfa9173a1bfdebc6fb08f49fb97cc0077cae611a1 = 'smobler';
