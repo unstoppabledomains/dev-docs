@@ -17,7 +17,7 @@ npx json -I -f package.json -e 'this.scripts={
 }'
 
 # Create Next.js app
-npx create-next-app@latest client --ts --tailwind --app --src-dir --no-eslint --use-npm --yes
+npx create-next-app@latest client --ts --tailwind --app --src-dir --no-eslint --use-npm --empty --yes
 mkdir -p client/src/{app/{api,cart,checkout,components,context,order,utils},types}
 npm install --save @uauth/js axios --workspace client
 
