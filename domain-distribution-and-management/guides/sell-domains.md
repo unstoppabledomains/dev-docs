@@ -14,12 +14,12 @@ The Partner API v3 provides you with the ability to lookup, register and manage 
 In this integration guide, we will create a Partner API flow focussing on domain lookup and registration. To complete this integration, you should be a JavaScript developer with experience in RESTful APIs.
 
 :::info
-If you’d like to skip ahead or follow along, you can clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub beforehand.
+If you'd like to skip ahead or follow along, you can clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub beforehand.
 :::
 
 ## Step 1: Project Setup
 
-Before we get started, you’ll need to install Node >= v18 and npm. Then, download the following setup script in a unix-like environment (MacOS, Linux, WSL, etc) to create the project directory, install the suggested packages, and create the suggested configuration files. If you do not have access to a unix-environment, clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub and follow along.
+Before we get started, you'll need to install Node >= v18 and npm. Then, download the following setup script in a unix-like environment (MacOS, Linux, WSL, etc) to create the project directory, install the suggested packages, and create the suggested configuration files. If you do not have access to a unix-environment, clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub and follow along.
 
 [Download Setup Script](../../static/scripts/setup-pav3-guide.sh)
 
@@ -149,7 +149,7 @@ app.post('/api/availability', async (req: Request, res: Response) => {
  * Logs a message to the console once the server is running.
  */
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log('Server is running on http://localhost:%s', port);
 });
 ```
 
@@ -170,7 +170,7 @@ import { Suggestions } from './types/suggestions';
  * Searches for domain suggestions based on the provided domain name.
  *
  * This function makes an API call to the Unstoppable Domains suggestions endpoint
- * to retrieve a list of suggested domains related to the provided `domainName`.
+ * to retrieve a list of suggested domains related to the provided 'domainName'.
  * It returns the suggestions data or an error object if the request fails.
  *
  * @param {string} domainName - The domain name query string to search suggestions for.
@@ -179,15 +179,15 @@ import { Suggestions } from './types/suggestions';
  *
  * @throws {Error} - If an error occurs during the API call, this function catches the error
  * and returns an error object with a descriptive message and details about the failure:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request could not be configured properly
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request could not be configured properly
  */
 const searchDomains = async (domainName: string): Promise<Suggestions> => {
   let data = <Suggestions>{};
   try {
     const response = await axios.get(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/suggestions/domains?query=${domainName}`, 
+      UNSTOPPABLE_SANDBOX_API_URL + '/suggestions/domains?query=' + encodeURIComponent(domainName),
       {
         headers: {
           Authorization: 'Bearer ' + UNSTOPPABLE_SANDBOX_API_KEY
@@ -222,22 +222,22 @@ import { Order } from './types/orders';
  * Registers a domain with the provided domain ID.
  *
  * This function sends a POST request to the Unstoppable Domains API to register a domain to the default API wallet.
- * On successful registration, it returns the registration details as an `Order` object.
+ * On successful registration, it returns the registration details as an 'Order' object.
  * If an error occurs, it returns an error object with relevant details.
  *
  * @param {string} domainId - The ID of the domain to register.
- * @returns {Promise<Order>} - A promise that resolves to the `Order` object containing the registration details or an error object.
+ * @returns {Promise<Order>} - A promise that resolves to the 'Order' object containing the registration details or an error object.
  *
  * @throws {Error} - If an error occurs, it catches the error and returns an error object with:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request configuration failed
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request configuration failed
  */
 const registerDomain = async (domainId: string): Promise<Order> => {
   let data = <Order>{};
   try {
     const response = await axios.post(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/domains?query=${domainId}`,
+      UNSTOPPABLE_SANDBOX_API_URL + '/domains?query=' + encodeURIComponent(domainId),
       JSON.stringify({
         name: domainId,
         records: {}
@@ -281,19 +281,19 @@ import { Domains } from './types/domains';
  * error object if an error occurs.
  *
  * @param {Array<string>} domains - The ID of the operation to check.
- * @returns {Promise<Domains>} - A promise that resolves to an `Operation` object with status details or an error object.
+ * @returns {Promise<Domains>} - A promise that resolves to an 'Operation' object with status details or an error object.
  *
  * @throws {Error} - If an error occurs, it catches the error and returns an error object with:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request configuration failed
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request configuration failed
  */
 const checkAvailability = async (domains: Array<string>): Promise<Domains> => {
   let data = <Domains>{};
   const query = domains.join('&query=');
   try {
     const response = await axios.get(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/domains?query=${query}`,
+      UNSTOPPABLE_SANDBOX_API_URL + '/domains?query=' + encodeURIComponent(query),
       {
         headers: {
           Authorization: 'Bearer ' + UNSTOPPABLE_SANDBOX_API_KEY,
@@ -344,18 +344,18 @@ import { Operation } from './types/orders';
  * error object if an error occurs.
  *
  * @param {string} operationId - The ID of the operation to check.
- * @returns {Promise<Operation>} - A promise that resolves to an `Operation` object with status details or an error object.
+ * @returns {Promise<Operation>} - A promise that resolves to an 'Operation' object with status details or an error object.
  *
  * @throws {Error} - If an error occurs, it catches the error and returns an error object with:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request configuration failed
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request configuration failed
  */
 const checkOperation = async (operationId: string): Promise<Operation> => {
   let data = <Operation>{};
   try {
     const response = await axios.get(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/operations/${operationId}`,
+      UNSTOPPABLE_SANDBOX_API_URL + '/operations/' + encodeURIComponent(operationId),
       {
         headers: {
           Authorization: 'Bearer ' + UNSTOPPABLE_SANDBOX_API_KEY,
@@ -399,11 +399,11 @@ const trackOperation = async (operationId: string) => {
     if (operation.error) {
       console.log('Error:', operation.error);
     } else {
-      if (operation.status === "COMPLETED") {
+      if (operation.status === 'COMPLETED') {
         // Handle completed operation
         clearInterval(interval);
       }
-      if (operation.status === "FAILED") {
+      if (operation.status === 'FAILED') {
         // Handle failed operation
         clearInterval(interval);
       }
@@ -424,18 +424,18 @@ import { Return } from './types/returns';
  * It returns a confirmation or an error object in case of failure. Domains must be returned within 14 days.
  *
  * @param {string} domainId - The ID of the domain to return.
- * @returns {Promise<Return>} - A promise that resolves to a `Return` object with return details or an error object.
+ * @returns {Promise<Return>} - A promise that resolves to a 'Return' object with return details or an error object.
  *
  * @throws {Error} - If an error occurs, it catches the error and returns an error object with:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request configuration failed
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request configuration failed
  */
 const returnDomain = async (domainId: string): Promise<Return> => {
   let data = <Return>{};
   try {
     const response = await axios.delete(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/domains/${domainId}`,
+      UNSTOPPABLE_SANDBOX_API_URL + '/domains/' + encodeURIComponent(domainId),
       {
         headers: {
           Authorization: 'Bearer ' + UNSTOPPABLE_SANDBOX_API_KEY,
@@ -474,18 +474,18 @@ import { Transfer } from './types/transfers';
  *
  * @param {string} domainId - The ID of the domain to transfer.
  * @param {string} walletAddress - The wallet address to transfer the domain ownership to.
- * @returns {Promise<Transfer>} - A promise that resolves to a `Transfer` object with transfer details or an error object.
+ * @returns {Promise<Transfer>} - A promise that resolves to a 'Transfer' object with transfer details or an error object.
  *
  * @throws {Error} - If an error occurs, it catches the error and returns an error object with:
- *  - "Server error" if the server responded with an error
- *  - "No response received" if there was no response from the server
- *  - "Error setting up request" if the request configuration failed
+ *  - 'Server error' if the server responded with an error
+ *  - 'No response received' if there was no response from the server
+ *  - 'Error setting up request' if the request configuration failed
  */
 const transferDomain = async (domainId: string, walletAddress: string): Promise<Transfer> => {
   let data = <Transfer>{};
   try {
     const response = await axios.put(
-      `${UNSTOPPABLE_SANDBOX_API_URL}/domains/${domainId}`,
+      UNSTOPPABLE_SANDBOX_API_URL + '/domains/' + encodeURIComponent(domainId),
       JSON.stringify({
         name: domainId,
         owner: {
@@ -680,11 +680,11 @@ const trackOperation = async (operationId: string, db: Low<any>) => {
     } else {
       if (operation.status != status) {
         await updateOperation(operation, db);
-        if (operation.status === "COMPLETED") {
+        if (operation.status === 'COMPLETED') {
           // Handle completed operation
           clearInterval(interval);
         }
-        if (operation.status === "FAILED") {
+        if (operation.status === 'FAILED') {
           // Handle failed operation
           clearInterval(interval);
         }
@@ -700,7 +700,7 @@ One final consideration with `lowdb` is that the database stops running when the
 ```typescript
 /**
  * Initializes tracking for any pending operations in the order, transfer, and return databases.
- * Loads the database data and identifies entries where the `operation.status` is not 'COMPLETED'.
+ * Loads the database data and identifies entries where the 'operation.status' is not 'COMPLETED'.
  * For each pending operation, it triggers tracking functions to monitor ongoing processes.
  *
  * @async
@@ -764,7 +764,7 @@ app.post('/api/checkout/:domain', async (req: Request, res: Response) => {
       order.payment = payment;
       await orderDB.write();
     }
-    res.json(`Order for domain ${domain} is being processed`);
+    res.json('Order for domain ' + domain + ' is being processed');
   } catch (error: any) {
     res.status(500).json({ error: 'Error processing checkout', details: error.message });
   }
@@ -780,7 +780,7 @@ The below does not account for edge cases and is meant as a starting point.
  * Monitors the checkout process and handles domain transfer or return based on payment status.
  *
  * This function periodically checks the status of an order associated with the provided domain ID.
- * If the order status is "COMPLETED" and payment is successful, it transfers the domain to the user's
+ * If the order status is 'COMPLETED' and payment is successful, it transfers the domain to the user's
  * wallet address. If payment is unsuccessful, it returns the domain to Unstoppable Domains.
  *
  * @param {string} operationId - The ID of the operation to monitor during checkout.
@@ -791,7 +791,7 @@ const trackCheckout = async (operationId: string) => {
     const order = orderDB.data.items.find(order => order.operation.id === operationId);
     if (order) {
       // Successful checkout
-      if (order.operation.status === "COMPLETED" && order.walletAddress && order.payment === true) {
+      if (order.operation.status === 'COMPLETED' && order.walletAddress && order.payment === true) {
         try {
           const domainTransfer = await transferDomain(order.operation.domain, order.walletAddress);
           if (domainTransfer.error) {
@@ -808,7 +808,7 @@ const trackCheckout = async (operationId: string) => {
           console.log('Error transferring domain:', error.message);
         }
       // Usuccessful Checkout
-      } else if (order.operation.status === "COMPLETED" && order.payment != true) {
+      } else if (order.operation.status === 'COMPLETED' && order.payment != true) {
         try {
           const domainReturn = await returnDomain(order.operation.domain);
           if (domainReturn.error) {
@@ -895,12 +895,12 @@ import { Domains } from '@/types/domains';
  * Checks the availability of a list of domains.
  *
  * @param {string[]} domains - An array of domain names to check for availability.
- * @returns {Promise<Domains>} - A promise that resolves to a `Domains` object containing availability data for each domain.
+ * @returns {Promise<Domains>} - A promise that resolves to a 'Domains' object containing availability data for each domain.
  * @throws {Error} - If an error occurs during the request, throws an error with details.
  */
 export const fetchAvailability = async (domains: string[]) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/availability`;
+    const url = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/availability';
     const res = await axios.post(url, 
       {
         domains: domains,
@@ -924,13 +924,13 @@ import { Order } from '@/types/orders';
 /**
  * Attempts to claim a specific domain.
  *
- * @param {DomainSuggestion} selectedDomain - The domain to claim, specified by a `DomainSuggestion` object.
- * @returns {Promise<Order>} - A promise that resolves to an `Order` object if the domain is successfully claimed.
+ * @param {DomainSuggestion} selectedDomain - The domain to claim, specified by a 'DomainSuggestion' object.
+ * @returns {Promise<Order>} - A promise that resolves to an 'Order' object if the domain is successfully claimed.
  * @throws {Error} - If an error occurs during the request, throws an error with details.
  */
 export const claimDomain = async (selectedDomain: DomainSuggestion) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/register`;
+    const url = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/register';
     const res = await axios.post(url, 
       {
         domainId: selectedDomain.name,
@@ -954,12 +954,12 @@ import axios from 'axios';
  * Fetches domain suggestions based on a search query.
  *
  * @param {string} query - The search term used to find domain suggestions.
- * @returns {Promise<Suggestions>} - A promise that resolves to a `Suggestions` object containing domain suggestions.
+ * @returns {Promise<Suggestions>} - A promise that resolves to a 'Suggestions' object containing domain suggestions.
  * @throws {Error} - If an error occurs during the request, throws an error with details.
  */
 export const fetchSuggestions = async (query: string) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/domains?query=${query}`;
+    const url = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/domains?query=' + encodeURIComponent(query);
     const res = await axios.get(url);
 
     return res.data as Suggestions;
@@ -979,14 +979,14 @@ import axios from 'axios';
  *
  * @param {string} domain - The domain name being checked out.
  * @param {string} walletAddress - The wallet address for the domain transfer.
- * @param {boolean} payment - The payment status; `true` if payment is confirmed.
+ * @param {boolean} payment - The payment status; 'true' if payment is confirmed.
  * @param {string} operationId - The unique ID for the checkout operation.
  * @returns {Promise<any>} - A promise that resolves to the server response on checkout initiation.
  * @throws {Error} - If an error occurs during the request, throws an error with details.
  */
 export const initCheckout = async (domain: string, walletAddress: string, payment: boolean, operationId: string) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/checkout/${domain}`;
+    const url = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/checkout/' + encodeURIComponent(domain);
     const res = await axios.post(url, 
       {
         wallet: walletAddress,
@@ -1011,7 +1011,7 @@ In our `./client/src/app/page.tsx` file we'll find our default `Home()` function
 To start, lets add the neccessary imports at the very top of the file for the functions we'll be using as well as to declare the file as a Client Component module with `use client`. If `use client` isn't at the very top of your file, you'll run into compilation errors.
 
 ```typescript
-"use client";
+'use client';
 import React, { useState } from 'react';
 import { fetchSuggestions } from './api/fetchSuggestions';
 import { Suggestions } from '../types/suggestions';
@@ -1058,11 +1058,11 @@ const Pagination: React.FC<PaginationProps> = ({ domainsPerPage, totalDomains, p
   }
 
   return (
-    <nav className="flex justify-center m-[20px]">
-      <ul className="flex list-none gap-[10px]">
+    <nav className='flex justify-center m-[20px]'>
+      <ul className='flex list-none gap-[10px]'>
         {pageNumbers.map(number => (
           <li key={number}>
-            <button onClick={() => paginate(number)} className="text-white bg-[#007bff] hover:bg-[#0056b3] font-medium px-[10px] py-[5px] rounded-[4px]">
+            <button onClick={() => paginate(number)} className='text-white bg-[#007bff] hover:bg-[#0056b3] font-medium px-[10px] py-[5px] rounded-[4px]'>
               {number}
             </button>
           </li>
@@ -1078,7 +1078,7 @@ With the `Pagination()` function now sorted, lets handle the `search` function. 
 ```typescript
 /**
    * Fetches domain suggestions based on the current search query.
-   * Updates the `domains` state with the response or sets an error message if the fetch fails.
+   * Updates the 'domains' state with the response or sets an error message if the fetch fails.
    */
   const searchDomains = async () => {
     try {
@@ -1119,7 +1119,7 @@ Next, we need to handle user input. An easy way to handle this will be to levera
    */
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const inputElement = document.getElementById("search") as HTMLInputElement;
+    const inputElement = document.getElementById('search') as HTMLInputElement;
     const inputValue = inputElement.value;
     const isValid = /^[a-zA-Z0-9]([a-zA-Z0-9-]{0,22}[a-zA-Z0-9])?$/.test(inputValue);
     
@@ -1133,7 +1133,7 @@ Next, we need to handle user input. An easy way to handle this will be to levera
       setDomains(null); // Clear previous results
       await searchDomains(); // Fetch new search results
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     } finally {
       setLoading(false); // Reset loading state
     }
@@ -1143,38 +1143,38 @@ Next, we need to handle user input. An easy way to handle this will be to levera
 The last step of our search will be the UI. Again, this guide will not focus on CSS but will provide some to get you started. Lets first add our HTML form to our function return. Rename the existing `<main> </main>` tags to `<div> </div>` tags and add the below between them.
 
 ```html
-<form className="max-w-md mx-auto min-w-[400px] pt-[40px] pb-[30px]" onSubmit={(e: React.FormEvent<HTMLFormElement>) => {handleSubmit(e)}}>   
-    <div className="relative text-[1.2em] block w-full bg-[#333] rounded-[8px]">
-        <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none ">
-            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+<form className='max-w-md mx-auto min-w-[400px] pt-[40px] pb-[30px]' onSubmit={(e: React.FormEvent<HTMLFormElement>) => {handleSubmit(e)}}>   
+    <div className='relative text-[1.2em] block w-full bg-[#333] rounded-[8px]'>
+        <div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none '>
+            <svg className='w-4 h-4 text-gray-500 dark:text-gray-400' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'>
+                <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'/>
             </svg>
         </div>
-        <input type="search" id="search" className="block w-full p-4 ps-10 bg-[#333] placeholder-gray-400 text-white rounded-[8px]" placeholder="Search for your new domain" onChange={(e) => setQuery(e.target.value)} required />
-        <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]">Search</button>
+        <input type='search' id='search' className='block w-full p-4 ps-10 bg-[#333] placeholder-gray-400 text-white rounded-[8px]' placeholder='Search for your new domain' onChange={(e) => setQuery(e.target.value)} required />
+        <button type='submit' className='text-white absolute end-2.5 bottom-2.5 bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]'>Search</button>
     </div>
     <span className='flex text-gray-500 text-center justify-center mt-2'>Must be 1-24 characters in length, Contain only letters, numbers, or hyphens, and cannot start or end with a hyphen.</span>
 </form>
-{error && <div className="text-red-500 text-center mb-[20px]">{error}</div>}
+{error && <div className='text-red-500 text-center mb-[20px]'>{error}</div>}
 ```
 
 Below the form, let's add the list of suggested domains: 
 
 ```html
-<div className="flex flex-col items-center">
+<div className='flex flex-col items-center'>
   {loading &&
-    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-black' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+      <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+      <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
     </svg>
   }
   {currentDomains?.map((domain) => (
-    <div key={domain.name} className="flex justify-between items-center w-full max-w-[600px] p-[10px] m-[10px] bg-[#333] rounded-[4px]">
+    <div key={domain.name} className='flex justify-between items-center w-full max-w-[600px] p-[10px] m-[10px] bg-[#333] rounded-[4px]'>
       <div>
-        <p className="text-[1.2em] text-white">{domain.name}</p>
-        <p className="text-[#bbb]">${(domain.price.listPrice.usdCents / 100).toFixed(2)} USD</p>
+        <p className='text-[1.2em] text-white'>{domain?.name}</p>
+        <p className='text-[#bbb]'>${(domain?.price?.listPrice?.usdCents / 100).toFixed(2)} USD</p>
       </div>
-      <button className="text-white text-[1.2em] bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]">Add to Cart</button>
+      <button className='text-white text-[1.2em] bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]'>Add to Cart</button>
     </div>
   ))}
 </div>
@@ -1269,7 +1269,7 @@ Next, let's handle the contexts. Contexts are designed to share data across mult
 Create a `CartContext.tsx` file in `./client/src/app/context` and add the following:
 
 ```typescript
-"use client";
+'use client';
 import { DomainSuggestion } from '@/types/suggestions';
 import { createContext, useContext, ReactNode } from 'react';
 import useLocalStorage from '../utils/useLocalStorage';
@@ -1369,7 +1369,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (!context) {
-    throw new Error("useCart must be used within a CartProvider");
+    throw new Error('useCart must be used within a CartProvider');
   }
   return context;
 };
@@ -1382,10 +1382,10 @@ We'll repeat the process above for our auth context. We'll be using Unstoppable 
 Create a `AuthContext.tsx` file in `./client/src/app/context` and add the following:
 
 ```typescript
-"use client";
+'use client';
 import { createContext, useContext, ReactNode, useState } from 'react';
 import useLocalStorage from '../utils/useLocalStorage';
-import UAuth from "@uauth/js";
+import UAuth from '@uauth/js';
 import { Authorization } from '@/types/auth';
 
 /**
@@ -1435,7 +1435,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setAuth(authorization || null);
     } catch (error) {
         setAuth(null);
-        console.log("Error logging in: " + error);
+        console.log('Error logging in: ' + error);
     } finally {
       setAuthorizing(false);
     }
@@ -1464,7 +1464,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
+    throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
 };
@@ -1474,11 +1474,11 @@ Finally, let's add these contexts to our `layout.tsx` file in `./clinet/src/app`
 
 ```typescript
 import { CartProvider } from './context/CartContext';
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from './context/AuthContext';
 ...
 return (
-  <html lang="en">
-    <body className={`antialiased`}>
+  <html lang='en'>
+    <body className={'antialiased'}>
       <AuthProvider>
         <CartProvider>
           {children}
@@ -1515,7 +1515,7 @@ const Nav = () => {
     try {
       login();
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     }
   };
 
@@ -1526,7 +1526,7 @@ const Nav = () => {
     try {
       logout();
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     }
   };
 
@@ -1537,15 +1537,15 @@ const Nav = () => {
   // If rendering server-side, display loading state to avoid flash of unhydrated content.
   if (!isClient) {
     return (
-      <header className="bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center">
+      <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center'>
         <h1>
-          <Link href="/">Unstoppable Domains Partner API Example</Link>
+          <Link href='/'>Unstoppable Domains Partner API Example</Link>
         </h1>
-        <nav className="flex flex-row space-x-4 font-inter text-lg">
+        <nav className='flex flex-row space-x-4 font-inter text-lg'>
         <div className='h-5 w-5 m-auto'>
-          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+            <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+            <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
           </svg>
           </div>
       </nav>
@@ -1554,15 +1554,15 @@ const Nav = () => {
   }
 
   return (
-    <header className="bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center">
+    <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center'>
       <h1>
-        <Link href="/">Unstoppable Domains Partner API Example</Link>
+        <Link href='/'>Unstoppable Domains Partner API Example</Link>
       </h1>
-      <nav className="flex flex-row space-x-4 font-inter text-lg">
-        <Link href="/cart" className='flex flex-row m-auto h-10 w-150'>
+      <nav className='flex flex-row space-x-4 font-inter text-lg'>
+        <Link href='/cart' className='flex flex-row m-auto h-10 w-150'>
           <div className='h-5 w-5 m-auto'>
-            <svg className=" items-center justify-center" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg className=' items-center justify-center' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
             </svg>
           </div>
           <div className='h-auto m-auto pl-1 font-inter'>
@@ -1570,26 +1570,26 @@ const Nav = () => {
           </div>
         </Link>
         {auth ? 
-          <button type="button" onClick={() => disconnectWallet()} className="flex flex-row m-auto h-10 w-150">
+          <button type='button' onClick={() => disconnectWallet()} className='flex flex-row m-auto h-10 w-150'>
             <div className='h-5 w-5 m-auto'>
-              <svg className="items-center justify-center" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg className='items-center justify-center' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
               </svg>     
             </div>
             <div className='h-auto m-auto pl-1 font-inter'>
               <span>{auth.idToken.sub}</span>
             </div>
           </button>
-        : <button type="button" onClick={() => connectWallet()} className="flex flex-row m-auto h-10 w-150">
+        : <button type='button' onClick={() => connectWallet()} className='flex flex-row m-auto h-10 w-150'>
             
             <div className='h-5 w-5 m-auto'>
               {authorizing ?
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+                  <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+                  <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
                 </svg>
-              : <svg className="items-center justify-center" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              : <svg className='items-center justify-center' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
                 </svg>
               }
             </div>
@@ -1621,17 +1621,17 @@ return (
 <div>
   <Nav />
   ...
-  <div className="flex flex-col items-center">
+  <div className='flex flex-col items-center'>
     ...
     {currentDomains?.map((domain) => (
-      <div key={domain.name} className="flex justify-between items-center w-full max-w-[600px] p-[10px] m-[10px] bg-[#333] rounded-[4px]">
+      <div key={domain?.name} className='flex justify-between items-center w-full max-w-[600px] p-[10px] m-[10px] bg-[#333] rounded-[4px]'>
         <div>
-          <p className="text-[1.2em] text-white">{domain.name}</p>
-          <p className="text-[#bbb]">${(domain.price.listPrice.usdCents / 100).toFixed(2)} USD</p>
+          <p className='text-[1.2em] text-white'>{domain?.name}</p>
+          <p className='text-[#bbb]'>${(domain?.price?.listPrice?.usdCents / 100).toFixed(2)} USD</p>
         </div>
-        {cart.some(cartItem => cartItem.suggestion.name === domain.name)
-          ? <button onClick={() => removeFromCart(domain.name)} className="text-[#49a668] text-[1.2em] bg-[#edf7f4] font-medium px-4 py-2 rounded-[4px]">Added</button>
-          : <button onClick={() => addToCart(domain)} className="text-white text-[1.2em] bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]">Add to Cart</button>
+        {cart.some(cartItem => cartItem?.suggestion?.name === domain?.name)
+          ? <button onClick={() => removeFromCart(domain?.name)} className='text-[#49a668] text-[1.2em] bg-[#edf7f4] font-medium px-4 py-2 rounded-[4px]'>Added</button>
+          : <button onClick={() => addToCart(domain)} className='text-white text-[1.2em] bg-[#007bff] hover:bg-[#0056b3] font-medium px-4 py-2 rounded-[4px]'>Add to Cart</button>
         }
       </div>
     ))}
@@ -1646,7 +1646,7 @@ At this stage, we have a completed homepage that includes a search bar for Unsto
 We'll need to add a dedicated `/cart` route on our frontend to act as our ecommerce shopping cart. To start, create a `page.tsx` file in the `./client/src/app/cart` directory. Let's take care of the necessary imports as well as the component outline: we'll calculate the total dollar value of our card in USD, define a function for Unstoppable login, and add a rough return function.
 
 ```typescript
-"use client";
+'use client';
 import Link from 'next/link';
 import Nav from '../components/NavBar';
 import { claimDomain } from '../api/claimDomain';
@@ -1679,7 +1679,7 @@ const Cart = () => {
     try {
       login();
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     }
   }
 
@@ -1755,7 +1755,7 @@ For availability checks, we can periodically check domains in the cart are avail
           for (const item of availability?.items) {
             const cartItem = cart.find((cartItem) => cartItem.suggestion.name === item.name);
             if (cartItem) {
-              if (item.availability.status === "AVAILABLE") {
+              if (item.availability.status === 'AVAILABLE') {
                 updateCartItemAvailability(item.name, true)
                 statuses.push({ name: item.name, available: true })
               } else {
@@ -1809,8 +1809,8 @@ Similarily, we can create our domain registration function that uses the `claimD
             }
             // Handle any errors when ID is missing
           } catch (error) {
-            console.log(`Error registering ${item.suggestion.name}:`, error);
-            setError(`An unexpected error occurred while claiming ${item.suggestion.name}.`);
+            console.log('Error registering ' + item.suggestion.name + ':', error);
+            setError('An unexpected error occurred while claiming ' + item.suggestion.name + '.');
             return false;
           }
         };
@@ -1839,7 +1839,7 @@ Then, much like our search bar on our homepage, we'll leverage HTML forms for us
     try {
       success = await registerDomain();
     } catch (error) {
-      console.log("Error:", error);
+      console.log('Error:', error);
     } finally {
       setLoading(false);
       if (success) {
@@ -1855,42 +1855,42 @@ We now have all of the functions we need added to our page and we can turn our f
 return (
   <section>
     <Nav />
-    <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5">
-      <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
+    <div className='mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5'>
+      <div className='mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8'>
         {cart.length === 0 ? (
-          <p className="text-center text-lg text-gray-500 dark:text-gray-400 mt-10 mx-auto">
+          <p className='text-center text-lg text-gray-500 dark:text-gray-400 mt-10 mx-auto'>
             Your cart is empty.
           </p>
         ) : (
           <div>
             {cart.map((item) => (
-              <div key={item.suggestion.name} className="pb-5">
+              <div key={item?.suggestion?.name} className='pb-5'>
                 <div>
-                  <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
-                    <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
-                      <svg className="h-20 w-20" focusable="false" aria-hidden="true" viewBox="0 0 40 40">
-                        <path d="M38.3333 3.90803V16.5517L1.66666 31.4942L38.3333 3.90803Z" fill="#00C9FF"></path><path d="M31.4583 3.33333V25.1724C31.4583 31.5203 26.3281 36.6667 20 36.6667C13.6719 36.6667 8.54166 31.5203 8.54166 25.1724V15.977L15.4167 12.1839V25.1724C15.4167 26.2394 15.8392 27.2626 16.5913 28.0171C17.3434 28.7716 18.3635 29.1954 19.4271 29.1954C20.4907 29.1954 21.5108 28.7716 22.2629 28.0171C23.015 27.2626 23.4375 26.2394 23.4375 25.1724V7.75862L31.4583 3.33333Z" fill="#0D67FE"></path>
+                  <div className='rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6'>
+                    <div className='space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0'>
+                      <svg className='h-20 w-20' focusable='false' aria-hidden='true' viewBox='0 0 40 40'>
+                        <path d='M38.3333 3.90803V16.5517L1.66666 31.4942L38.3333 3.90803Z' fill='#00C9FF'></path><path d='M31.4583 3.33333V25.1724C31.4583 31.5203 26.3281 36.6667 20 36.6667C13.6719 36.6667 8.54166 31.5203 8.54166 25.1724V15.977L15.4167 12.1839V25.1724C15.4167 26.2394 15.8392 27.2626 16.5913 28.0171C17.3434 28.7716 18.3635 29.1954 19.4271 29.1954C20.4907 29.1954 21.5108 28.7716 22.2629 28.0171C23.015 27.2626 23.4375 26.2394 23.4375 25.1724V7.75862L31.4583 3.33333Z' fill='#0D67FE'></path>
                       </svg>
-                      <div className="flex items-center justify-between md:order-3 md:justify-end">
-                        <div className="text-end md:order-4 md:w-32">
-                          <p className="text-base font-bold text-gray-900 dark:text-white">${(item.suggestion.price.listPrice.usdCents / 100).toFixed(2)} USD</p>
+                      <div className='flex items-center justify-between md:order-3 md:justify-end'>
+                        <div className='text-end md:order-4 md:w-32'>
+                          <p className='text-base font-bold text-gray-900 dark:text-white'>${(item?.suggestion?.price?.listPrice?.usdCents / 100).toFixed(2)} USD</p>
                         </div>
                       </div>
     
-                      <div className="flex flex-col w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                        <span className="text-base font-medium text-gray-900 dark:text-white">{item.suggestion.name}</span>
+                      <div className='flex flex-col w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md'>
+                        <span className='text-base font-medium text-gray-900 dark:text-white'>{item?.suggestion?.name}</span>
                         {availabilityLoading &&
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+                            <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+                            <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
                           </svg>
                         }
-                        {!availabilityLoading && !item.available && <span className="text-xs font-medium text-red-600 dark:text-red-500">Domain is no longer available</span>}
-                        {!availabilityLoading && item.available && <span className="text-xs font-medium text-green-600 dark:text-green-500">Domain is available</span>}
-                        <div className="flex items-center gap-4">
-                          <button type="button" className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500" onClick={() => removeFromCart(item.suggestion.name)}>
-                            <svg className="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                        {!availabilityLoading && !item?.available && <span className='text-xs font-medium text-red-600 dark:text-red-500'>Domain is no longer available</span>}
+                        {!availabilityLoading && item?.available && <span className='text-xs font-medium text-green-600 dark:text-green-500'>Domain is available</span>}
+                        <div className='flex items-center gap-4'>
+                          <button type='button' className='inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500' onClick={() => removeFromCart(item?.suggestion?.name)}>
+                            <svg className='me-1.5 h-5 w-5' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'>
+                              <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18 17.94 6M18 18 6.06 6' />
                             </svg>
                             Remove
                           </button>
@@ -1909,53 +1909,53 @@ return (
           </div>
         )}
         {cart.length > 0 &&
-          <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-[25%]">
-            <div className="space-y-4 rounded-[8px] border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
-              <p className="text-xl font-semibold text-gray-900 dark:text-white">Order summary</p>
+          <div className='mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-[25%]'>
+            <div className='space-y-4 rounded-[8px] border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6'>
+              <p className='text-xl font-semibold text-gray-900 dark:text-white'>Order summary</p>
 
-              <div className="space-y-4">
-                <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
-                  <dt className="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-                  <dd className="text-base font-bold text-gray-900 dark:text-white">${((total) / 100).toFixed(2)} USD</dd>
+              <div className='space-y-4'>
+                <dl className='flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700'>
+                  <dt className='text-base font-bold text-gray-900 dark:text-white'>Total</dt>
+                  <dd className='text-base font-bold text-gray-900 dark:text-white'>${((total || 0) / 100).toFixed(2)} USD</dd>
                 </dl>
               </div>
 
               <form onSubmit={handleCheckout}>
               { (auth && allAvailable) ? 
-                <button type="submit" className="flex mx-auto w-[50%] md:w-[40%] items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                <button type='submit' className='flex mx-auto w-[50%] md:w-[40%] items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'>
                   {loading &&
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+                      <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+                      <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
                     </svg>
                   }
                   Proceed to Checkout
                 </button>
-              : <div className="flex mx-auto w-[50%] md:w-[40%] items-center cursor-not-allowed justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+              : <div className='flex mx-auto w-[50%] md:w-[40%] items-center cursor-not-allowed justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'>
                   Proceed to Checkout
                 </div>
               }
               </form>
-              {error && <div className="text-red-500 text-center mb-[20px]">{error}</div>}
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
-                <Link href='/' className="inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline text-[#007bff]">
+              {error && <div className='text-red-500 text-center mb-[20px]'>{error}</div>}
+              <div className='flex items-center justify-center gap-2'>
+                <span className='text-sm font-normal text-gray-500 dark:text-gray-400'> or </span>
+                <Link href='/' className='inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline text-[#007bff]'>
                   Continue Shopping
                 </Link>
               </div>
               { auth ? 
-                <p className="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">
+                <p className='text-sm font-normal text-gray-500 dark:text-gray-400 text-center'>
                   Connected Wallet Address:&nbsp;
-                  <span className="items-center gap-2 text-sm font-medium text-[#007bff]">
+                  <span className='items-center gap-2 text-sm font-medium text-[#007bff]'>
                     {auth?.idToken?.sub}&nbsp;
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className='text-xs text-gray-500 dark:text-gray-400'>
                       ({auth?.idToken?.wallet_address})
                     </span> 
                   </span>
                 </p>
-              : <p className="text-sm font-normal text-gray-500 dark:text-gray-400 text-center">
+              : <p className='text-sm font-normal text-gray-500 dark:text-gray-400 text-center'>
                   One or more items in your cart require a wallet connection.&nbsp;
-                  <button onClick={() => connectWallet()} title="" className="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500">
+                  <button onClick={() => connectWallet()} title='' className='font-medium text-primary-700 underline hover:no-underline dark:text-primary-500'>
                     Connect your wallet now.
                   </button>
                 </p>
@@ -1982,7 +1982,7 @@ Partners can use any payment gateway and collect payment in any fiat / crypto th
 :::
 
 ```typescript
-"use client";
+'use client';
 import { useCart } from '../context/CartContext';
 import Nav from '../components/NavBar';
 import { useEffect, useState } from 'react';
@@ -2111,7 +2111,7 @@ useEffect(() => {
 const formatTime = (seconds: number): string => {
   const minutes = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  return minutes + ':' + (secs < 10 ? '0' : '') + secs;
 };
 ```
 
@@ -2135,8 +2135,8 @@ Now we can create our checkout function that uses the `initCheckout()` endpoint.
             }
             // Handle any errors when wallet_address and operation ID are missing
           } catch (error) {
-            console.error(`Error processing ${item.suggestion.name}:`, error);
-            setError(`An unexpected error occurred while processing ${item.suggestion.name}.`);
+            console.log('Error registering ' + item.suggestion.name + ':', error);
+            setError('An unexpected error occurred while claiming ' + item.suggestion.name + '.');
             return false; // If an error occurs for a domain, return false to halt checkout
           }
       };
@@ -2165,7 +2165,7 @@ Then, much like our search bar on our homepage, we'll leverage HTML forms for us
     try {
       success = await checkout(); // Attempt to process checkout
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     } finally {
       setLoading(false); // Reset loading state after checkout process
       if (success) {
@@ -2181,71 +2181,71 @@ We now have all of the functions we need added to our page and we can turn our f
 return (
   <section>
     <Nav />
-    <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5">
+    <div className='mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5'>
       <div>
-        <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12">
-        <form onSubmit={handleCheckout} action="/order" className="w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8">
-            <div className="mb-6 grid grid-cols-2 gap-4">
-            <div className="col-span-2 sm:col-span-1">
-                <label htmlFor="full_name" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Full name (as displayed on card)* </label>
-                <input type="text" id="full_name" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Partner Engineering" required />
+        <div className='mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12'>
+        <form onSubmit={handleCheckout} action='/order' className='w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8'>
+            <div className='mb-6 grid grid-cols-2 gap-4'>
+            <div className='col-span-2 sm:col-span-1'>
+                <label htmlFor='full_name' className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'> Full name (as displayed on card)* </label>
+                <input type='text' id='full_name' className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500' placeholder='Partner Engineering' required />
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
-                <label htmlFor="card-number-input" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Card number* </label>
-                <input type="text" id="card-number-input" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500  dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="4242424242424242" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
-            </div>
-
-            <div>
-                <label htmlFor="card-expiration-input" className="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white">Card expiration* </label>
-                <input id="card-expiration-input" type="text" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="1234" required />
+            <div className='col-span-2 sm:col-span-1'>
+                <label htmlFor='card-number-input' className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'> Card number* </label>
+                <input type='text' id='card-number-input' className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500  dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500' placeholder='4242424242424242' pattern='^4[0-9]{12}(?:[0-9]{3})?$' required />
             </div>
 
             <div>
-                <label htmlFor="cvv-input" className="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white">CVV*</label>
-                <input type="number" id="cvv-input" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="567" required />
+                <label htmlFor='card-expiration-input' className='mb-2 flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white'>Card expiration* </label>
+                <input id='card-expiration-input' type='text' className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500' placeholder='1234' required />
+            </div>
+
+            <div>
+                <label htmlFor='cvv-input' className='mb-2 flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white'>CVV*</label>
+                <input type='number' id='cvv-input' className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500' placeholder='567' required />
             </div>
             </div>
 
-            <button type="submit" className="flex w-full items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white focus:outline-none focus:ring-4" disabled={expired}>
+            <button type='submit' className='flex w-full items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white focus:outline-none focus:ring-4' disabled={expired}>
             {loading &&
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+                <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
+                <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
                 </svg>
             }
             {expired ? 'Checkout expired' : 'Pay now'}
             </button>
-            {error && <div className="text-red-500 text-center mb-[20px]">{error}</div>}
+            {error && <div className='text-red-500 text-center mb-[20px]'>{error}</div>}
             {expired ?
-            <div className="flex items-center justify-center gap-2 mt-6">
-                <Link href='/cart' className="inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline text-[#007bff]">
+            <div className='flex items-center justify-center gap-2 mt-6'>
+                <Link href='/cart' className='inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline text-[#007bff]'>
                 Return to Cart
-                <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                <svg className='h-5 w-5' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
+                    <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M19 12H5m14 0-4 4m4-4-4-4' />
                 </svg>
                 </Link>
             </div>
             : 
-            <div className="mt-6 mx-auto text-center text-gray-500 dark:text-gray-400">Checkout time remaining: {formatTime(timeLeft)}</div>
+            <div className='mt-6 mx-auto text-center text-gray-500 dark:text-gray-400'>Checkout time remaining: {formatTime(timeLeft)}</div>
             }
         </form>
 
-        <div className="mt-6 grow sm:mt-8 lg:mt-0">
-            <div className="space-y-4">
-            <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
-                <dt className="text-base font-bold text-gray-400">Total</dt>
-                <dd className="text-base font-bold text-gray-400">${((total) / 100).toFixed(2)} USD</dd>
+        <div className='mt-6 grow sm:mt-8 lg:mt-0'>
+            <div className='space-y-4'>
+            <dl className='flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700'>
+                <dt className='text-base font-bold text-gray-400'>Total</dt>
+                <dd className='text-base font-bold text-gray-400'>${((total ? total : 0) / 100).toFixed(2)} USD</dd>
             </dl>
             </div>
         </div>
         </div>
         { auth && 
-        <p className="mt-3 text-sm font-normal text-gray-500 dark:text-gray-400 text-center mx-auto lg:text-left">
+        <p className='mt-3 text-sm font-normal text-gray-500 dark:text-gray-400 text-center mx-auto lg:text-left'>
             Domain will transfer after checkout to Wallet Address:&nbsp;
-            <span className="gap-2 text-sm font-medium text-[#007bff]">
+            <span className='gap-2 text-sm font-medium text-[#007bff]'>
             {auth?.idToken?.sub}&nbsp;
-            <span className="text-xs text-gray-500 dark:text-gray-400">
+            <span className='text-xs text-gray-500 dark:text-gray-400'>
                 ({auth?.idToken?.wallet_address})
             </span> 
             </span>
@@ -2262,7 +2262,7 @@ return (
 Finally, we can create our order, or confirmation, page. Here we'll simply outline the details of the domain registration and transfer. This will be mainly CSS and HTML but we'll ensure we empty the cart context and redirect the user if they shouldn't be on the page yet. To start, create a `page.tsx` file in the `./client/src/app/order` directory.
 
 ```typescript
-"use client";
+'use client';
 import { useCart } from '../context/CartContext';
 import Link from 'next/link';
 import Nav from '../components/NavBar';
@@ -2329,25 +2329,25 @@ Then we can add the HTML to our return:
 return (
     <section>
       <Nav />
-      <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5">
-        <h2 className="mt-6 text-xl font-semibold text-gray-400 sm:text-2xl mb-2">Thanks for your order!</h2>
-        <p className="text-gray-500 dark:text-gray-400 mb-6 md:mb-8">Your order <a href="#" className="font-medium text-gray-400 hover:underline">#{Math.floor(100000 + Math.random() * 900000)}</a> will be processed within a few minutes. Keep an eye on your wallet for the domain.</p>
-        <div className="w-[75%] space-y-4 sm:space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800 mb-6 md:mb-8">
-          <dl className="sm:flex items-center justify-between gap-4">
-            <dt className="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Date</dt>
-            <dd className="font-medium text-gray-900 dark:text-white sm:text-end">{new Date().toLocaleString()}</dd>
+      <div className='mx-auto max-w-screen-xl px-4 2xl:px-0 pt-5'>
+        <h2 className='mt-6 text-xl font-semibold text-gray-400 sm:text-2xl mb-2'>Thanks for your order!</h2>
+        <p className='text-gray-500 dark:text-gray-400 mb-6 md:mb-8'>Your order <a href='#' className='font-medium text-gray-400 hover:underline'>#{Math.floor(100000 + Math.random() * 900000)}</a> will be processed within a few minutes. Keep an eye on your wallet for the domain.</p>
+        <div className='w-[75%] space-y-4 sm:space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800 mb-6 md:mb-8'>
+          <dl className='sm:flex items-center justify-between gap-4'>
+            <dt className='font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400'>Date</dt>
+            <dd className='font-medium text-gray-900 dark:text-white sm:text-end'>{new Date().toLocaleString()}</dd>
           </dl>
-          <dl className="sm:flex items-center justify-between gap-4">
-            <dt className="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Payment Method</dt>
-            <dd className="font-medium text-gray-900 dark:text-white sm:text-end">Credit Card</dd>
+          <dl className='sm:flex items-center justify-between gap-4'>
+            <dt className='font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400'>Payment Method</dt>
+            <dd className='font-medium text-gray-900 dark:text-white sm:text-end'>Credit Card</dd>
           </dl>
-          <dl className="sm:flex items-center justify-between gap-4">
-            <dt className="font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400">Minting Wallet</dt>
-            <dd className="font-medium text-gray-900 dark:text-white sm:text-end">{auth?.idToken?.sub}</dd>
+          <dl className='sm:flex items-center justify-between gap-4'>
+            <dt className='font-normal mb-1 sm:mb-0 text-gray-500 dark:text-gray-400'>Minting Wallet</dt>
+            <dd className='font-medium text-gray-900 dark:text-white sm:text-end'>{auth?.idToken?.sub}</dd>
           </dl>
         </div>
-        <div className="flex items-center space-x-4">
-          <Link href='/' onClick={() => clearCart()} className="flex flex-row gap-2 items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white focus:outline-none focus:ring-4">
+        <div className='flex items-center space-x-4'>
+          <Link href='/' onClick={() => clearCart()} className='flex flex-row gap-2 items-center justify-center rounded-lg bg-[#007bff] px-5 py-2.5 text-sm font-medium text-white focus:outline-none focus:ring-4'>
             Return to shopping
           </Link>
         </div>
