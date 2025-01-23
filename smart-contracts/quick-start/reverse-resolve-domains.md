@@ -9,7 +9,15 @@ This guide covers how to retrieve the reverse record of UD domains using smart c
 
 ## Step 1: Select a UNS Registry Smart Contract
 
-The [UNS Registry](/smart-contracts/contract-reference/uns-smart-contracts.md#unsregistry) smart contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with (either mainnet or testnet).
+The [UNS Registry](/smart-contracts/contract-reference/uns-smart-contracts.md#unsregistry) smart contract is where domain owners store their data and is a map of domain namehashes to key-value dictionaries of records. Choose one of the Unstoppable Registry smart contracts to interact with below. 
+
+- [Ethereum Mainnet Registry](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D)
+- [Polygon Mainnet Registry](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f)
+- [Base Mainnet Registry](https://basescan.org/address/0xF6c1b83977DE3dEffC476f5048A0a84d3375d498)
+
+:::info
+For help identifying which Registry to use for which TLD, refer to the `meta` object returned from the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds). Use the registry that aligns with the `registrationBlockchain` for your TLD.
+:::
 
 <figure>
 

@@ -39,7 +39,7 @@ npm update @unstoppabledomains/resolution --save
 ```javascript
 const { default: Resolution } = require("@unstoppabledomains/resolution");
 const resolution = new Resolution({
-  // obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key
+  // Obtain a key by following this document https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/
   apiKey: "<api_key>",
   sourceConfig: {
     zns: {
@@ -54,9 +54,39 @@ const resolution = new Resolution({
 
 <embed src="/snippets/_libraries-provider-config.md" />
 
-```javascript
+To support the new Unstoppable Registry on Base and the use of your own RPC URLs, you will need to use the Javascript SDK version `9.3.3` or greater. This update allows for specifying a new UNS location for `base` alongside the existing `eth` and `pol` (previously `Layer1` and `Layer2`) locations.
+
+```javascript SDK version >=9.3.3
 const { default: Resolution } = require("@unstoppabledomains/resolution");
-// obtain a key from https://www.infura.io
+// Obtain a key from https://www.infura.io
+const resolution = new Resolution({
+  sourceConfig: {
+    uns: {
+      locations: {
+        eth: {
+          url: "https://mainnet.infura.io/v3/<infura_api_key>",
+          network: "mainnet",
+        },
+        pol: {
+          url: "https://polygon-mainnet.infura.io/v3/<infura_api_key>",
+          network: "polygon-mainnet",
+        },
+        base: {
+          url: "https://base-mainnet.infura.io/v3/<infura_api_key>",
+          network: "base-mainnet",
+        },
+      },
+    },
+    zns: {
+      url: "https://api.zilliqa.com",
+      network: "mainnet",
+    },
+  },
+});
+```
+```javascript SDK version <9.3.3
+const { default: Resolution } = require("@unstoppabledomains/resolution");
+// Obtain a key from https://www.infura.io
 const resolution = new Resolution({
   sourceConfig: {
     uns: {
@@ -81,7 +111,7 @@ const resolution = new Resolution({
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
 
-### Web3 provider
+#### Web3 provider
 
 Connect a web3 provider. You may already have one available in your application from wallets like Metamask and WalletConnect.
 
@@ -98,7 +128,7 @@ const resolution = Resolution.fromWeb3Version0Provider(web3Provider);
 const resolution = Resolution.fromWeb3Version1Provider(web3Provider);
 ```
 
-### Ethers provider
+#### Ethers provider
 
 Connect a provider from [ethers.js](https://www.npmjs.com/package/ethers)
 

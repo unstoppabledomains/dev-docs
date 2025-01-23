@@ -16,8 +16,10 @@
 - group: Resolution
   expanded: false
   pages:
-    - label: "Overview"
+    - label: Resolution Overview
       page: resolution/overview.md
+    - label: Reverse Resolution Overview
+      page: resolution/rr-overview.md
     - group: Quickstart
       expanded: false
       pages:
@@ -39,23 +41,14 @@
               page: resolution/guides/browser-resolution/algorithm.md
             - label: Test domains
               page: resolution/guides/browser-resolution/test-domains.md
-        - group: Reverse Resolution
-          expanded: false
-          pages:
-            - label: "Overview"
-              page: resolution/guides/reverse-resolution/overview.md
-            - label: Smart Contract Integration
-              page: resolution/guides/reverse-resolution/integration-guides/smart-contracts.md
-            - label: Resolution Libraries Integration      
-              page: resolution/guides/reverse-resolution/integration-guides/resolution-libraries.md
-            - label: FAQs
-              page: resolution/guides/reverse-resolution/faq.md
         - label: Resolution CLI
           page: resolution/sdks-and-libraries/cli.md
         - label: Best practices
           page: resolution/guides/best-practices.md
         - label: Troubleshooting
           page: resolution/guides/troubleshooting-guide.md
+        - label: Reverse Resolution FAQs
+          page: resolution/guides/rr-faq.md
     - group: Tech References
       expanded: false
       pages:

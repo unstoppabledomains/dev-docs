@@ -13,7 +13,7 @@ To resolve the reverse record of a wallet address, you must call the appropriate
 
 ```javascript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
+// Obtain a key by following this document https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/. See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 
 function reverseTokenId(address) {
@@ -40,7 +40,7 @@ reverseUrl("0x88bc9b6c56743a38223335fac05825d9355e9f83");
 ```java Java
 import com.unstoppabledomains.resolution.Resolution;
 
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-java for more initialization options
+// Obtain a key by following this document https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/. See https://github.com/unstoppabledomains/resolution for more initialization options
 DomainResolution resolution = new Resolution("<api_key>");
 
 // tokenId consists the namehash of the domain with reverse resolution to that address
@@ -54,7 +54,7 @@ String domain = resolution.getReverse("0x88bc9b6c56743a38223335fac05825d9355e9f8
 ```swift Swift
 import UnstoppableDomainsResolution
 
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution-swift for more initialization options
+// Obtain a key by following this document https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/. See https://github.com/unstoppabledomains/resolution for more initialization options
 guard let resolution = try? Resolution(apiKey: "<api_key>") else {
   print ("Init of Resolution instance failed...")
   return
