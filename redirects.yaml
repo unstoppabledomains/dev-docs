@@ -286,3 +286,15 @@
 '/manage-domains/':
   to: '/smart-contracts/quick-start/manage-domain-records/'
   type: 301
+'/resolution/guides/reverse-resolution/overview/':
+  to: '/resolution/rr-overview/'
+  type: 301
+'/resolution/guides/reverse-resolution/integration-guides/smart-contracts/':
+  to: '/smart-contracts/quick-start/reverse-resolve-domains/'
+  type: 301
+'/resolution/guides/reverse-resolution/integration-guides/resolution-libraries/':
+  to: '/resolution/quickstart/reverse-resolution/'
+  type: 301
+'/resolution/guides/reverse-resolution/faq/':
+  to: '/resolution/guides/rr-faq/'
+  type: 301
