@@ -21,7 +21,7 @@ If you'd like to skip ahead or follow along, you can clone the [full example](ht
 
 Before you get started, you'll need to install Node >= v18 and npm. Then, download the following setup script in a unix-like environment (MacOS, Linux, WSL, etc) to create the project directory, install the suggested packages, and create the suggested configuration files. If you do not have access to a unix-environment, clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub and follow along.
 
-[Download Setup Script](../../static/scripts/setup-pav3-guide.sh)
+[Download Setup Script](/scripts/setup-pav3-guide.sh)
 
 After downloading the script, move the `setup-pav3-guide.sh` file to your desired directory and run the following commands:
 
