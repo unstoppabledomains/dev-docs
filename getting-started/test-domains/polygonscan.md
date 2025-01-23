@@ -83,6 +83,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x58872a8ca9414ae0f3ab850f51efaf4c77b647d903f9ec89a03d3018bb42e4fa = 'clay';
 0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f = 'crypto';
 0xb5f2bbf81da581299d4ff7af60560c0ac854196f5227328d2d0c2bb0df33e553 = 'dao';
+0xb85e7a2457a224f5511a7790e48fa65ede8415b766ac9807a7fc63d3f07eb86d = 'doga';
 0x3b270f4d000c6046ee64e8c025ad8cff71e728b275a81bf53a060442fe9f9766 = 'dfz';
 0xd3225890d7777ac38091dfc10feff05127a34cf44cb65fd1a830e37046b6ecee = 'donut';
 0x30b126da528ed6a22ad6ce11ea44a16f3990a215ef04115d84bb9275b709e89c = 'dream';
@@ -102,6 +103,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0xb75cf4f3d8bc3deb317ed5216d898899d5cc6a783f65f6768eb9bcb89428670d = 'nft';
 0xc5f19a061ba3162336fde401da0e2554f72c076fc4b8c15cc7cb243bcfeb4954 = 'npc';
 0xe8b04b2f0a94208f4f84a97cf3b9b5a01dc61f873c2edf8ba2d717a22c0a5c3d = 'onchain';
+0xc8e9a3bd747b9690640fecbc68ce6795bc64579f4628b84f28b8c45586b25527 = 'podcast';
 0xe76cc52c68a868af0cba676c92337a921cc721b45b6630e47f7ecb78e3e0edcc = 'pog';
 0xed9ce6b49a0e2c56c57c86795b131bd6df792312183994c3cf3de1516cfe92d6 = 'polygon';
 0xa5e27fb2696345ec44a24a5c2f7f413d717329c57710aad5f052ae750889edd8 = 'propykeys';
