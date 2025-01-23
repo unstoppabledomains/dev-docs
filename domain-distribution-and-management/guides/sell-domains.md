@@ -43,12 +43,12 @@ Express.js will serve as your backend throughout this guide. It will handle all 
 It's very important that the Partner API is not directly accessed from a frontend client as the API key is very sensitive. The API does not handle checkout payments and Unstoppable Domains keeps track of a running balance against the API key for periodic invoicing. It is up to the partner to collect payment from users and subsequently keep their API key secure. 
 
 :::info
-There is no charge for developing with the Partner API on our **sandbox** environment. Once you migrate to **production**, a running balance will be kept against your **production API key**.
+There is no charge for developing with the Partner API on the **sandbox** environment. Once you migrate to **production**, a running balance will be kept against your **production API key**.
 :::
 
 ### Environment Variables
 
-Build out your `./server/.env` file per the below. You can retrieve your Partner API key by following our [Set up Partner API Access Guide](https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/). 
+Build out your `./server/.env` file per the below. You can retrieve your Partner API key by following the [Set up Partner API Access Guide](https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/). 
 
 ```javascript
 API_URL = 'https://api.ud-sandbox.com/partner/v3'
@@ -58,11 +58,11 @@ PORT = 3001
 
 ### Express Endpoints 
 
-With your environment variables configured, you can start outlining the endpoints needed throughout the guide. You will need a way to lookup domain suggestions based on a search query, register domains, and check domain availability.  This means the server will need to be prepared to recieve HTTP `POST` requests that have an `application/json` body as well as general HTTP `GET` requests with url query parameters.
+With your environment variables configured, you can start outlining the endpoints needed throughout the guide. You will need a way to lookup domain suggestions based on a search query, register domains, and check domain availability.  This means the server will need to be prepared to receive HTTP `POST` requests that have an `application/json` body as well as general HTTP `GET` requests with url query parameters.
 
 Other considerations:
 - As the Partner API is dependant on the blockchain, it provides an operation ID for you to use to check current status. You should have some way of tracking these API operations so you know when the operations complete or if there are any problems and handle them appropriately.
-- As there is a running balance against the `production` API, you should implement a way to know whether the frontend checkout was successful or not, and handle each case. While there is no cost for using `sandbox`, the recomendation is to return the registered domain to Unstoppable should checkout fail for any reason. Returns can be made within 14 days of registration and will be deducted from the running balance.
+- As there is a running balance against the `production` API, you should implement a way to know whether the frontend checkout was successful or not, and handle each case. While there is no cost for using `sandbox`, the recommendation is to return the registered domain to Unstoppable should checkout fail for any reason. Returns can be made within 14 days of registration and will be deducted from the running balance.
 - Should checkout succeed, you should transfer the registered domain to the end-user to custody. 
 
 Here is a basic implementation of the three necessary endpoints using Node and `express`. You'll add this to the `./server/src/server.ts` file.
@@ -327,7 +327,7 @@ You can also take this opportunity to take into account the earlier consideratio
 - Returns
 - Transfers
 
-Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/checkOperation). Similarily, you will use the [returns endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/updateDomainPut) to transfer the domain to the end user.
+Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/checkOperation). Similarly, you will use the [returns endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/updateDomainPut) to transfer the domain to the end user.
 
 :::info
 You would ideally register a webhook for each Partner API operation that is initiated, including a return, registration, transfer, etc. For the purposes of this guide, you can use the `checkOperation()` function as a synchronous polling approach within `trackOperation()`.
@@ -735,7 +735,7 @@ initializeTracking().catch((error) => console.error('Error initializing tracking
 
 ### Checkout
 
-At this point, everything is tied together with the exception of these two unused functions: `returnDomain()` and `transferDomain()`. As a reminder, both the `return` and `transfer` functions depend on the status of our frontend checkout. Should checkout succeed, transfer the registered domain to the end user. If checkout fails, return the registered domain to Unstoppable.
+At this point, everything is tied together with the exception of these two unused functions: `returnDomain()` and `transferDomain()`. As a reminder, both the `return` and `transfer` functions depend on the status of the frontend checkout. Should checkout succeed, transfer the registered domain to the end user. If checkout fails, return the registered domain to Unstoppable.
 
 While this will be fully dependent on the frontend solution, keep things simple and leverage the `lowdb` databases with a set interval. First, you need another endpoint for the frontend to provide checkout updates for each order.  
 
@@ -807,7 +807,7 @@ const trackCheckout = async (operationId: string) => {
         } catch (error: any) {
           console.log('Error transferring domain:', error.message);
         }
-      // Usuccessful Checkout
+      // Unsuccessful Checkout
       } else if (order.operation.status === 'COMPLETED' && order.payment != true) {
         try {
           const domainReturn = await returnDomain(order.operation.domain);
@@ -858,11 +858,11 @@ At this point, you have a completed backend built with Node and `express`!
 
 With the backend completed, it is now time to focus on the frontend. Next.js will serve this purpose throughout the remainder of this guide. While there are many viable alternatives, Next.js provides easy page and API management. 
 
-In this section of the guide, you will create functions to call the backend, build out an ecommerce cart, checkout and order pages, as well as a general search page. The following sections will not focus on CSS or visual improvements but the initial setup script did include `Tailwind CSS` and the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) can be referenced for a CSS outline.
+In this section of the guide, you will create functions to call the backend, build out an e-commerce cart, checkout and order pages, as well as a general search page. The following sections will not focus on CSS or visual improvements but the initial setup script did include `Tailwind CSS` and the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) can be referenced for a CSS outline.
 
 ### Environment Variables
 
-Build out your `./client/.env` file per the below. You can retrieve your UAuth Client ID key by following our [Retrieve Client Credentials guide](https://docs.unstoppabledomains.com/identity/quickstart/retrieve-client-credentials/). 
+Build out your `./client/.env` file per the below. You can retrieve your UAuth Client ID key by following the [Retrieve Client Credentials guide](https://docs.unstoppabledomains.com/identity/quickstart/retrieve-client-credentials/). 
 
 ```javascript
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3001
@@ -873,7 +873,7 @@ NEXT_PUBLIC_SCOPES=openid wallet profile
 
 ### Express.js API
 
-With your environment variables configured, you can start outlining the backend function calls. Per `Step 2`, we have four exposed endpoints on the `express` server: 
+With your environment variables configured, you can start outlining the backend function calls. Per `Step 2`, you have four exposed endpoints on the `express` server: 
 - `POST` to `/api/availability`
 - `POST` to `/api/register`
 - `GET` to `/api/domains`
@@ -1008,7 +1008,7 @@ export const initCheckout = async (domain: string, walletAddress: string, paymen
 
 In the `./client/src/app/page.tsx` file you'll find the default `Home()` function for a Next.js app. You'll utilize this file for the domain search results. 
 
-To start, add the neccessary imports at the very top of the file for the required functions and declare the file as a Client Component module with `use client`. If `use client` isn't at the very top of your file, you'll run into compilation errors.
+To start, add the necessary imports at the very top of the file for the required functions and declare the file as a Client Component module with `use client`. If `use client` isn't at the very top of your file, you'll run into compilation errors.
 
 ```typescript
 'use client';
@@ -1033,7 +1033,7 @@ export default function Home() {
 
 Next, you will setup the `pagination` and `search` functions as well as handle the user input. 
 
-As `pagination` will be a standalone function outside of `Home()`, start there. The `types` needed for the pagination function are not pre-included with the setup script and are provided below. After the closing brace for the `Home()` function, add the following interface definitaion and related `Pagination()` function. This function will split the returned list of domain suggestions into equal parts up to a maximum number per page as defined by `domainsPerPage`. There is some `Tailwind CSS` included here to make the button usage easier.
+As `pagination` will be a standalone function outside of `Home()`, start there. The `types` needed for the pagination function are not pre-included with the setup script and are provided below. After the closing brace for the `Home()` function, add the following interface definition and related `Pagination()` function. This function will split the returned list of domain suggestions into equal parts up to a maximum number per page as defined by `domainsPerPage`. There is some `Tailwind CSS` included here to make the button usage easier.
 
 ```typescript
 interface PaginationProps {
@@ -1073,7 +1073,7 @@ const Pagination: React.FC<PaginationProps> = ({ domainsPerPage, totalDomains, p
 };
 ```
 
-With the `Pagination()` function finished, you will implement the `search` function and remaining logic. Add the following within the `Home()` function before the `return`. This will be a simple imeplementation as you'll only need to call the `fetchSuggestions()` function and set the appropriate states like so:
+With the `Pagination()` function finished, you will implement the `search` function and remaining logic. Add the following within the `Home()` function before the `return`. This will be a simple implementation as you'll only need to call the `fetchSuggestions()` function and set the appropriate states like so:
 
 ```typescript
 /**
@@ -1147,7 +1147,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 }
 ```
 
-The last step of the search will be the UI. Again, this guide will not focus on CSS but will provide some to get you started. Add the HTML form to our function return. Remove the existing `<div>Hello world!</div>`, rename the remaining `<main> </main>` tags to `<div> </div>` tags, and add the below HTML snippets between them.
+The last step of the search will be the UI. Again, this guide will not focus on CSS but will provide some to get you started. Add the HTML form to the function return. Remove the existing `<div>Hello world!</div>`, rename the remaining `<main> </main>` tags to `<div> </div>` tags, and add the below HTML snippets between them.
 
 ```html
 <form className='max-w-md mx-auto min-w-[400px] pt-[40px] pb-[30px]' onSubmit={(e: React.FormEvent<HTMLFormElement>) => {handleSubmit(e)}}>   
@@ -1197,13 +1197,13 @@ Finally, add the pagination buttons below the search results:
 />
 ```
 
-You should now have a user-interactible search bar with domain name validation, search results, and search result pagination. Feel free to clean up the default HTML provided by Next.js and to tune the CSS as you see fit!
+You should now have a user-interactable search bar with domain name validation, search results, and search result pagination. Feel free to clean up the default HTML provided by Next.js and to tune the CSS as you see fit!
 
 ### Helper Functions
 
-Before proceeding with the rest of the ecommerce experience, you need to implement a nav bar, a helper function, and add create two contexts: one for authentication, and one for the shopping cart. 
+Before proceeding with the rest of the e-commerce experience, you need to implement a nav bar, a helper function, and add create two contexts: one for authentication, and one for the shopping cart. 
 
-Start with the helper function first as the contexts rely on it, and the nav bar relies on the contexts. While you utilized `lowdb` on the `express` server to act as a mock database, you're going to utilize the browsers' local storage to handle the data needs on the frontend. There are several caveats with using local storage exclusively for an ecommerce experience but for the purposes of this guide, it will suffice. Create a `useLocalStorage.ts` file in `./client/src/app/utils`.
+Start with the helper function first as the contexts rely on it, and the nav bar relies on the contexts. While you utilized `lowdb` on the `express` server to act as a mock database, you're going to utilize the browsers' local storage to handle the data needs on the frontend. There are several caveats with using local storage exclusively for an e-commerce experience but for the purposes of this guide, it will suffice. Create a `useLocalStorage.ts` file in `./client/src/app/utils`.
 
 ```typescript
 import { useCallback, useEffect, useState } from 'react';
@@ -1382,7 +1382,7 @@ export const useCart = (): CartContextType => {
 };
 ```
 
-Repeat the process above for the auth context. Thie guide uses Unstoppable Login for the auth provider and will need two functions:
+Repeat the process above for the auth context. This guide uses Unstoppable Login for the auth provider and will need two functions:
 - Login
 - Logout
 
@@ -1481,7 +1481,7 @@ export const useAuth = (): AuthContextType => {
 };
 ```
 
-Finally, add these contexts to the `layout.tsx` file in `./clinet/src/app` like so:
+Finally, add these contexts to the `layout.tsx` file in `./client/src/app` like so:
 
 ```typescript
 import { CartProvider } from './context/CartContext';
@@ -1545,14 +1545,14 @@ const Nav = () => {
     setIsClient(true); // Set to true once the component has mounted client-side
   }, []);
 
-  // If rendering server-side, display loading state to avoid flash of unhydrated content.
+  // If rendering server-side, display loading state to avoid flash of un-hydrated content.
   if (!isClient) {
     return (
-      <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center'>
+      <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] flex justify-between items-center'>
         <h1>
           <Link href='/'>Unstoppable Domains Partner API Example</Link>
         </h1>
-        <nav className='flex flex-row space-x-4 font-inter text-lg'>
+        <nav className='flex flex-row space-x-4 text-lg'>
         <div className='h-5 w-5 m-auto'>
           <svg className='animate-spin -ml-1 mr-3 h-5 w-5 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
             <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
@@ -1565,18 +1565,18 @@ const Nav = () => {
   }
 
   return (
-    <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] font-helveticaneue flex justify-between items-center'>
+    <header className='bg-[#007bff] p-[20px] text-white text-[2em] text-center rounded-[4px] flex justify-between items-center'>
       <h1>
         <Link href='/'>Unstoppable Domains Partner API Example</Link>
       </h1>
-      <nav className='flex flex-row space-x-4 font-inter text-lg'>
+      <nav className='flex flex-row space-x-4 text-lg'>
         <Link href='/cart' className='flex flex-row m-auto h-10 w-150'>
           <div className='h-5 w-5 m-auto'>
             <svg className=' items-center justify-center' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path d='M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
             </svg>
           </div>
-          <div className='h-auto m-auto pl-1 font-inter'>
+          <div className='h-auto m-auto pl-1 '>
             <span>Cart ({cart.length})</span>
           </div>
         </Link>
@@ -1587,7 +1587,7 @@ const Nav = () => {
                 <path d='M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
               </svg>     
             </div>
-            <div className='h-auto m-auto pl-1 font-inter'>
+            <div className='h-auto m-auto pl-1'>
               <span>{auth.idToken.sub}</span>
             </div>
           </button>
@@ -1604,7 +1604,7 @@ const Nav = () => {
                 </svg>
               }
             </div>
-            <div className='h-auto m-auto pl-1 font-inter'>
+            <div className='h-auto m-auto pl-1'>
               <span>Account</span>
             </div>
           </button>
@@ -1654,7 +1654,7 @@ At this stage, you have a completed homepage that includes a search bar for Unst
 
 ### Cart
 
-You'll need to add a dedicated `/cart` route on the frontend to act as the ecommerce shopping cart. To start, create a `page.tsx` file in the `./client/src/app/cart` directory. Below are the necessary imports as well as the component outline: calculate the total dollar value of the cart in USD, define a function for Unstoppable login, and add a rough return function.
+You'll need to add a dedicated `/cart` route on the frontend to act as the e-commerce shopping cart. To start, create a `page.tsx` file in the `./client/src/app/cart` directory. Below are the necessary imports as well as the component outline: calculate the total dollar value of the cart in USD, define a function for Unstoppable login, and add a rough return function.
 
 ```typescript
 'use client';
@@ -1719,7 +1719,7 @@ The `Cart()` function will be one of the larger components you'll need to build 
 
 You need to check availability because it is possible that user b will purchase the domain(s) in user a's cart. In a similar vein, as soon as user a proceeds from the cart to checkout, you'll register the domains to your API key. This ensures the domains are not available for any other user to claim; avoiding issues of user a purchasing a domain that is no longer available. As you're already handling returns on the backend, you won't need to worry about the user not completing the checkout.
 
-For availability checks, you can periodically check domains in the cart are available with a simple interval, and you'll need to check immedietly before registering the domains. Below is a one minute interval that starts when the user accesses the `/cart` route as well as the necessary availability function that will use the `fetchAvailability()` endpoint.
+For availability checks, you can periodically check domains in the cart are available with a simple interval, and you'll need to check immediately before registering the domains. Below is a one minute interval that starts when the user accesses the `/cart` route as well as the necessary availability function that will use the `fetchAvailability()` endpoint.
 
 ```typescript
 /**
@@ -1727,7 +1727,7 @@ For availability checks, you can periodically check domains in the cart are avai
  */
 useEffect(() => {
   setIsClient(true);
-  // Reset cart oparationId on load
+  // Reset cart operationId on load
   cart.forEach((item) => {
     updateCartItemOperation(item.suggestion.name, '');
   });
@@ -1791,7 +1791,7 @@ const checkCartAvailability = async (): Promise<boolean> => {
 };
 ```
 
-Similarily, create the domain registration function that uses the `claimDomain()` endpoint. As mentioned, you'll check domain availability first before attempting to regiser the domain to the API key.
+Similarly, create the domain registration function that uses the `claimDomain()` endpoint. As mentioned, you'll check domain availability first before attempting to register the domain to the API key.
 
 ```typescript
 /**
@@ -1834,7 +1834,7 @@ const registerDomain = async (): Promise<boolean> => {
 };
 ```
 
-Then, much like the search bar on the homepage, leverage HTML forms for user itneractivity and implement a function to handle `HTMLFormElement` events:
+Then, much like the search bar on the homepage, leverage HTML forms for user interactivity and implement a function to handle `HTMLFormElement` events:
 
 ```typescript
 /**
@@ -1980,7 +1980,7 @@ return (
 );
 ```
 
-You've now completed bulding out the cart! You'll be able to search for domains on the homepage, add those domains to the cart, and view the new cart page.
+You've now completed building out the cart! You'll be able to search for domains on the homepage, add those domains to the cart, and view the new cart page.
 
 ### Checkout
 
@@ -2067,9 +2067,9 @@ const Checkout = () => {
 export default Checkout;
 ```
 
-The `Checkout()` function will be resposible for using the last `initCheckout()` endpoint defined earlier. It's important to note that this guide will not encompass integration of a payment gateway. Instead, we will leverage HTML forms and no data will be stored. 
+The `Checkout()` function will be responsible for using the last `initCheckout()` endpoint defined earlier. It's important to note that this guide will not encompass integration of a payment gateway. Instead, you will leverage HTML forms and no data will be stored. 
 
-On the backend, there was an assumed three (3) minute timer for the checkout flow on whether payment has succeeded or failed. So, you will start by implementing a similar timer on the frontend. Ideally, this will be a shorter time-frame than the backend expects to allow for some buffer. You'll get the current time, calculate the remaining time, and format the time from seconds back into a user-digestible format. Keep in mind that official payment gateways may already have a timout that would make this function redundant.
+On the backend, there was an assumed three (3) minute timer for the checkout flow on whether payment has succeeded or failed. So, you will start by implementing a similar timer on the frontend. Ideally, this will be a shorter time-frame than the backend expects to allow for some buffer. You'll get the current time, calculate the remaining time, and format the time from seconds back into a user-digestible format. Keep in mind that official payment gateways may already have a timeout that would make this function redundant.
 
 ```typescript
 /**
@@ -2159,7 +2159,7 @@ const checkout = async (): Promise<boolean> => {
 };
 ```
 
-Then, much like the search bar on the homepage, leverage HTML forms for user itneractivity and implement a function to handle `HTMLFormElement` events:
+Then, much like the search bar on the homepage, leverage HTML forms for user interactivity and implement a function to handle `HTMLFormElement` events:
 
 ```typescript
 /**
@@ -2366,7 +2366,7 @@ return (
 );
 ```
 
-That's it! You are now running a local ecommerce platform for selling Unstoppable domains. 
+That's it! You are now running a local e-commerce platform for selling Unstoppable domains. 
 
 ## Running the Project
 
@@ -2399,6 +2399,6 @@ Then, you built out a `Next.js` frontend that implements four exposed `express` 
 - Search for available Unstoppable domains
 - Add Unstoppable domains to a shopping cart
 - Add their payment details to a `fake` payment gateway
-- Recieve their Unstoppable domain(s)
+- Receive their Unstoppable domain(s)
 
 Continue to build upon this demo and happy coding!
