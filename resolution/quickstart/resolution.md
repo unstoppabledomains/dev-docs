@@ -30,39 +30,86 @@ yarn upgrade @unstoppabledomains/resolution --latest
 ```bash npm
 npm update @unstoppabledomains/resolution --save
 ```
+## Initialize with Unstoppable Domains' UNS Proxy Provider
+
+Connect to the Unstoppable Domains UNS Proxy Provider. Refer to the [Retrieve an API Key Guide](https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/) to aquire an API key. This configuration will support all Unstoppable Registries and is the recommended option.
+
+```javascript
+const { default: Resolution } = require("@unstoppabledomains/resolution");
+const resolution = new Resolution({
+  // Obtain a key by following this document https://docs.unstoppabledomains.com/resolution/quickstart/retrieve-an-api-key/
+  apiKey: "<api_key>",
+  sourceConfig: {
+    zns: {
+      url: "https://api.zilliqa.com",
+      network: "mainnet",
+    },
+  },
+});
+```
+
+## Initialize with Custom Provider Configuration
 
 <embed src="/snippets/_libraries-provider-config.md" />
 
-<embed src="/snippets/_res-lib-default-provider.md" />
+To support the new Unstoppable Registry on Base and the use of your own RPC URLs, you will need to use the Javascript SDK version `9.3.3` or greater. This update allows for specifying a new UNS location for `base` alongside the existing `eth` and `pol` (previously `Layer1` and `Layer2`) locations.
 
-```javascript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
-
-const ethereumProviderUrl = ALCHEMY_ETHEREUM_API;
-const polygonProviderUrl = ALCHEMY_POLYGON_API;
-
-// custom provider config using the Resolution constructor options
+```javascript SDK version >=9.3.3
+const { default: Resolution } = require("@unstoppabledomains/resolution");
+// Obtain a key from https://www.infura.io
 const resolution = new Resolution({
-    sourceConfig: {
-      uns: {
-        locations: {
-          Layer1: {
-            url: ethereumProviderUrl,
-            network: 'mainnet'
-          },
-          Layer2: {
-            url: polygonProviderUrl,
-            network: 'polygon-mainnet',
-          },
+  sourceConfig: {
+    uns: {
+      locations: {
+        eth: {
+          url: "https://mainnet.infura.io/v3/<infura_api_key>",
+          network: "mainnet",
+        },
+        pol: {
+          url: "https://polygon-mainnet.infura.io/v3/<infura_api_key>",
+          network: "polygon-mainnet",
+        },
+        base: {
+          url: "https://base-mainnet.infura.io/v3/<infura_api_key>",
+          network: "base-mainnet",
         },
       },
     },
-  });
+    zns: {
+      url: "https://api.zilliqa.com",
+      network: "mainnet",
+    },
+  },
+});
+```
+```javascript SDK version <9.3.3
+const { default: Resolution } = require("@unstoppabledomains/resolution");
+// Obtain a key from https://www.infura.io
+const resolution = new Resolution({
+  sourceConfig: {
+    uns: {
+      locations: {
+        Layer1: {
+          url: "https://mainnet.infura.io/v3/<infura_api_key>",
+          network: "mainnet",
+        },
+        Layer2: {
+          url: "https://polygon-mainnet.infura.io/v3/<infura_api_key>",
+          network: "polygon-mainnet",
+        },
+      },
+    },
+    zns: {
+      url: "https://api.zilliqa.com",
+      network: "mainnet",
+    },
+  },
+});
 ```
 
 <embed src="/snippets/_res-lib-connect-src-warning.md" />
 
-### Web3 provider
+#### Web3 provider
 
 Connect a web3 provider. You may already have one available in your application from wallets like Metamask and WalletConnect.
 
@@ -79,7 +126,7 @@ const resolution = Resolution.fromWeb3Version0Provider(web3Provider);
 const resolution = Resolution.fromWeb3Version1Provider(web3Provider);
 ```
 
-### Ethers provider
+#### Ethers provider
 
 Connect a provider from [ethers.js](https://www.npmjs.com/package/ethers)
 
@@ -88,14 +135,98 @@ import Resolution from "@unstoppabledomains/resolution";
 const resolution = Resolution.fromEthersProvider(ethersProvider);
 ```
 
+## Resolve Domain Records
+
+### Retrieve a Custom Domain Record
+
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below shows how to do this in JavaScript.
+
+```javascript
+const { default: Resolution } = require('@unstoppabledomains/resolution');
+// See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
+
+function resolveCustomRecord(domain, record) {
+  resolution
+    .records(domain, [record])
+    .then((value) => console.log(`Domain ${domain} ${record} is: ${value}`))
+    .catch(console.error);
+}
+
+resolveCustomRecord('homecakes.crypto', 'custom.record.value');
+```
+
+### Resolve Addresses Existing on a Single Blockchain
+
+The resolution library provides a method for resolving the addresses of tickers for single blockchains (e.g. `SOL` only exists on the `Solana` blockchain). The code snippet below shows how to do this in JavaScript.
+
+```javascript
+const {default: Resolution} = require('@unstoppabledomains/resolution');
+// See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
+
+function getWalletAddr(domain, ticker) {
+  resolution
+    .addr(domain, ticker)
+    .then((address) =>
+      console.log(`Domain ${domain} has address for ${ticker}: ${address}`),
+    )
+    .catch(console.error);
+}
+getWalletAddr('partner-engineering.crypto', 'SOL');
+```
+
+### Resolve Addresses Existing on Multiple Blockchains
+
+The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below shows how to do this in JavaScript.
+
+```javascript
+const {default: Resolution} = require('@unstoppabledomains/resolution');
+// See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
+
+function getMultiChainWalletAddr(domain, ticker, network) {
+  resolution
+    .multiChainAddr(domain, ticker, network)
+    .then((address) =>
+      console.log(
+        `Domain ${domain} has address for ${ticker} on network ${network}: ${address}`,
+      ),
+    )
+    .catch(console.error);
+}
+getMultiChainWalletAddr('partner-engineering.crypto', 'MATIC', 'ERC20');
+```
+
+### Resolve IPFS Hashes for Decentralized Websites
+
+The resolution library provides a method for resolving the IPFS hashes on a domain. The code snippet below shows how to do this in JavaScript.
+
+```javascript
+const {default: Resolution} = require('@unstoppabledomains/resolution');
+// See https://github.com/unstoppabledomains/resolution for more initialization options
+const resolution = new Resolution({ apiKey: "<api_key>" });
+
+function resolveIpfsHash(domain) {
+  resolution
+    .ipfsHash(domain)
+    .then((hash) =>
+      console.log(
+        `You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/${hash}`,
+      ),
+    )
+    .catch(console.error);
+}
+resolveIpfsHash('partner-engineering.nft');
+```
+
 ## Error Handling
 
 <embed src="/snippets/_res-lib-error-intro.md" />
 
 ```typescript JavaScript
 const {default: Resolution} = require('@unstoppabledomains/resolution');
-
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
+// See https://github.com/unstoppabledomains/resolution for more initialization options
 const resolution = new Resolution({ apiKey: "<api_key>" });
 resolution
     .addr('domain-with-error.crypto', 'ETH')
@@ -135,42 +266,3 @@ resolution
 | UnsupportedDomain | Thrown when you resolve a domain with an ending not supported by the current resolution instance. |
 | UnsupportedService | Thrown when using an unsupported naming service with the current resolution instance. |
 | UnsupportedMethod | Thrown when you use a method of the current resolution instance not supported by the naming service you're resolving from. For example, using the `twitter()`, `reverse()`, `getDomainFromTokenId()`, `locations()`, and `getTokenuri()` methods for the Zilliqa Name Service (ZNS). |
-
-## Use Case: Retrieve a Domain Record
-
-Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below show how to do this in JavaScript.
-
-```javascript
-const { default: Resolution } = require('@unstoppabledomains/resolution');
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
-const resolution = new Resolution({ apiKey: "<api_key>" });
-
-function resolveCustomRecord(domain, record) {
-  resolution
-    .records(domain, [record])
-    .then((value) => console.log(`Domain ${domain} ${record} is: ${value}`))
-    .catch(console.error);
-}
-
-resolveCustomRecord('homecakes.crypto', 'custom.record.value');
-```
-
-## Use Case: Resolve Addresses Existing on Multiple Blockchains
-
-The resolution library provides a method for resolving the addresses of tickers for different blockchains (e.g. `USDT` exists on `EOS`, `ERC20`, `OMNI`, and `TRON` blockchains). The code snippet below show how to do this in JavaScript.
-
-```javascript
-const {default: Resolution} = require('@unstoppabledomains/resolution');
-// obtain a key by following this document https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/#api-key. See https://github.com/unstoppabledomains/resolution for more initialization options
-const resolution = new Resolution({ apiKey: "<api_key>" });
-
-resolution
-    .multiChainAddr('udtestdev-usdt.crypto', 'USDT', 'ERC20')
-    .then((receiverUSDTAddress) => {
-        // receiverUSDTAddress consists address for receiving USDT on Ethereum (ERC20 version)
-        // use this address as recipient of the payment
-    })
-    .catch(console.error);
-```
-
-

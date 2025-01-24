@@ -30,9 +30,9 @@ There are several ways to integrate Unstoppable's Reverse Resolution feature int
 
 | Pathway | Description | Integration Guides |
 | - | - | - |
-| Resolution Service API | integrate Reverse Resolution using the Resolution Service API hosted by Unstoppable Domains | [Resolution Service API Guide](https://docs.unstoppabledomains.com/openapi/resolution/#operation/ReverseController.getReverse)
-| Resolution Libraries | integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](integration-guides/resolution-libraries.md)
-| Smart Contracts | integrate Reverse Resolution using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](integration-guides/smart-contracts.md) |
+| Resolution Service API | Integrate Reverse Resolution using the Resolution Service API hosted by Unstoppable Domains | [Resolution Service API Guide](https://docs.unstoppabledomains.com/openapi/resolution/#operation/ReverseController.getReverse)
+| Resolution Libraries | Integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](./quickstart/reverse-resolution.md)
+| Smart Contracts | Integrate Reverse Resolution using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](../smart-contracts/quick-start/reverse-resolve-domains.md) |
 
 
 
