@@ -293,7 +293,7 @@
   to: '/smart-contracts/quick-start/reverse-resolve-domains/'
   type: 301
 '/resolution/guides/reverse-resolution/integration-guides/resolution-libraries/':
-  to: '/resolution/quickstart/reverse-resolution/'
+  to: '/resolution/guides/sdk/reverse-resolution/'
   type: 301
 '/resolution/guides/reverse-resolution/faq/':
   to: '/resolution/guides/rr-faq/'

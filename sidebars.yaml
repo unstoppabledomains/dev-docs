@@ -25,10 +25,6 @@
       pages:
         - label: Retrieve an API Key
           page: resolution/quickstart/retrieve-an-api-key.md
-        - label: Resolve Domains
-          page: resolution/quickstart/resolution.md
-        - label: Reverse Resolve Domains
-          page: resolution/quickstart/reverse-resolution.md
     - group: Guides
       expanded: false
       pages:
@@ -41,6 +37,13 @@
               page: resolution/guides/browser-resolution/algorithm.md
             - label: Test domains
               page: resolution/guides/browser-resolution/test-domains.md
+        - group: Resolution SDK
+          expanded: false
+          pages:
+            - label: Resolve Domains
+              page: resolution/guides/sdk/resolution.md
+            - label: Reverse Resolve Domains
+              page: resolution/guides/sdk/reverse-resolution.md
         - label: Resolution CLI
           page: resolution/sdks-and-libraries/cli.md
         - label: Best practices
