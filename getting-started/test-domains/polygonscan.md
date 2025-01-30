@@ -72,6 +72,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0xaf4d61a6acdda7379d6f90207923aeb080994d0f1aaba4b8b24a14f965b2bb7c = 'anime';
 0x89e68000b532da79f9a0d4b8416eaa4f64294236ab233205343453d5bec22933 = 'austin';
 0x3fa9586c8b0c91c603728cff1ac819679a70197b33df9263d68750d8601fdf1f = 'bald';
+0x887b4038f526bf90a80be17c9e69c228539dc0bfd74fe12701be572fc4544711 = 'bay';
 0xd18112ce73608918c5c7f42ba03229594ecd9dafbd427b54e0de6c6ab67e03f5 = 'benji';
 0x2a91107027b89ab420a4d8ec457493cfca12ab17615ec8c876695f1343f3f0fd = 'binanceus';
 0x042fb01c1e43fb4a32f85b41c821e17d2faeac58cfc5fb23f80bc00c940f85e3 = 'bitcoin';
@@ -115,6 +116,7 @@ You can locate the domain ending [namehash](../domain-registry-essentials/nameha
 0x05cb1b6d0e0a38c2fdeacf5d8383eea8f73d8fdeca1e4cc99a0e202f68d5b7df = 'stepn';
 0x241cdd75e86f1a1da99d0321ae7d8e31cdf7c71a31d68b44d8f6f20dfafa9db6 = 'tball';
 0x5b22ab96ce6c7e714dde170ba8568b4ec754a8f7e9b1f8ff79d649a613694ee8 = 'tea';
+0x2ce13869f553ebd4d6ee96ba11486cf9b0f9e3a2da2125eaa210ce54f2674413 = 'tribe';
 0x0adc8e928b9a2309a49011aae110462d6f3642f8b8b0602ccd9a14763ba2f283 = 'ubu';
 0x92bba949890cd44a226a8ce54135cf86538cd6c5ca0ccf41877102fd718cc8aa = 'unstoppable';
 0xa665d9a61cfd00bafc3b436ff2724b2925006051d1456d11219a24425f3c0408 = 'u';
