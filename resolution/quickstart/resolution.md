@@ -1,11 +1,11 @@
 ---
-title: Resolution Service API | Unstoppable Domains Developer Portal
-description: This page details basic configuration and usage of the resolution service API.
+title: Resolution Service API Integration Guide | Unstoppable Domains Developer Portal
+description: This guide covers how to retrieve the records of UD domains using the Resolution Service API.
 ---
 
 # Resolve Domains
 
-This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/).
+This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/) to retrieve the record(s) of UD domains.
 
 ## Project Setup
 
@@ -27,21 +27,9 @@ There is a 20 call/second/key limit on the Resolution Service API. If you need a
 
 ### Resolve Wallet Addresses 
 
-Retrieve wallet addresses for tokens on a given network. You will need the network family mapping available [here](https://gist.github.com/V-Shadbolt/7d4d80a36a30c55fff143671607ea60d/archive/01f5fdb27818088f6ca5baa7966c8996e31488d8.zip). Download the zip file containing `networks.ts` and place it in the same folder as the snippet below. The below shows how to resolve wallet addresses in Typescript and `Express.js`. 
+Retrieve wallet addresses for tokens on a given network. You will need the network family mapping available [here](https://gist.github.com/V-Shadbolt/7d4d80a36a30c55fff143671607ea60d/archive/01f5fdb27818088f6ca5baa7966c8996e31488d8.zip). Download the zip file containing `networks.ts` and place it in the same folder as the snippet below. The snippet shows how to resolve wallet addresses in Typescript and `Express.js`. 
 
 ```typescript
-import { NETWORK_FAMILY_MAP } from './networks.ts';
-
-/**
- * Prioritized list of record key templates for wallet address lookup.
- * The order determines the precedence of address resolution strategies.
- */
-const ADDRESS_LOOKUP_PRIORITY = [
-  'token.{family}.{network}.{token}.address',
-  'token.{family}.{network}.address',
-  'token.{family}.address'
-];
-
 /**
  * Express route to resolve wallet addresses via proxy.
  * 
@@ -76,6 +64,18 @@ app.get('/resolve', async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+import { NETWORK_FAMILY_MAP } from './networks.ts';
+
+/**
+ * Prioritized list of record key templates for wallet address lookup.
+ * The order determines the precedence of address resolution strategies.
+ */
+const ADDRESS_LOOKUP_PRIORITY = [
+  'token.{family}.{network}.{token}.address',
+  'token.{family}.{network}.address',
+  'token.{family}.address'
+];
 
 /**
  * Resolves a wallet address for a given domain, network, and token.

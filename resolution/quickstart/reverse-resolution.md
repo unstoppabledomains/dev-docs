@@ -1,11 +1,11 @@
 ---
-title: Resolution Service API Integration Guide | UD Developer Portal
+title: Resolution Service API Integration Guide | Unstoppable Domains Developer Portal
 description: This guide covers how to retrieve the reverse record of UD domains using the Resolution Service API.
 ---
 
 # Reverse Resolve Domains
 
-This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/) to retrieve the reverse record of UD domains.
+This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/) to retrieve the reverse record(s) of UD domains.
 
 ## Project Setup
 
@@ -30,7 +30,7 @@ There is a 20 call/second/key limit on the Resolution Service API. If you need a
 Resolve the reverse record of a wallet address. The code snippet below shows how to do this in Typescript and `Express.js`.
 
 ```typescript
-**
+/**
  * Express route to reverse resolve a wallet address via proxy.
  * 
  * Accepts query parameters:
