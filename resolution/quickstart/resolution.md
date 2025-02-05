@@ -30,6 +30,8 @@ There is a 20 call/second/key limit on the Resolution Service API. If you need a
 Retrieve wallet addresses for tokens on a given network. You will need the network family mapping available [here](https://gist.github.com/V-Shadbolt/7d4d80a36a30c55fff143671607ea60d/archive/01f5fdb27818088f6ca5baa7966c8996e31488d8.zip). Download the zip file containing `networks.ts` and place it in the same folder as the snippet below. The below shows how to resolve wallet addresses in Typescript and `Express.js`. 
 
 ```typescript
+import { NETWORK_FAMILY_MAP } from './networks.ts';
+
 /**
  * Prioritized list of record key templates for wallet address lookup.
  * The order determines the precedence of address resolution strategies.
@@ -125,7 +127,7 @@ async function resolveWalletAddress(
 }
 ```
 
-### Retrieve a Custom Domain Record
+### Resolve Custom Domain Records
 
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippet below shows how to do this in Typescript and `Express.js`.
 

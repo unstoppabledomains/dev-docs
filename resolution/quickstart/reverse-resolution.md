@@ -25,7 +25,7 @@ There is a 20 call/second/key limit on the Resolution Service API. If you need a
 
 ## Examples
 
-### Reverse Resolution for an Address
+### Reverse Resolution for a Wallet Address
 
 Resolve the reverse record of a wallet address. The code snippet below shows how to do this in Typescript and `Express.js`.
 
@@ -95,7 +95,7 @@ async function reverseResolve(
 }
 ```
 
-### Reverse Resolution for Multiple Addresses
+### Reverse Resolution for Multiple Wallet Addresses
 
 Resolve the reverse record of up to 1000 unique wallet address. The code snippet below shows how to do this in Typescript and `Express.js`.
 

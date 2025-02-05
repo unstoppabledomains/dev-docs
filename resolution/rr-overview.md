@@ -24,16 +24,12 @@ Reverse Resolution works by having domain owners set a reverse record for their 
 
 Individuals maintain absolute control over their domains and their reverse records. No one can set or remove a reverse record of a domain other than the domain owner. However, reverse records are wiped automatically at the contract level whenever a domain owner changes.
 
-## Choose an Integration Path
+## Resolution Service API
 
-There are several ways to integrate Unstoppable's Reverse Resolution feature into your application, detailed in the table below. Developers are encouraged to integrate more than one pathway.
+Is our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](/openapi/resolution). The Unstoppable Domains team manages this service.
 
-| Pathway | Description | Integration Guides |
-| - | - | - |
-| Resolution Service API | Integrate Reverse Resolution using the Resolution Service API hosted by Unstoppable Domains | [Resolution Service API Guide](https://docs.unstoppabledomains.com/openapi/resolution/#operation/ReverseController.getReverse)
-| Resolution Libraries | Integrate Reverse Resolution using the resolution libraries managed by Unstoppable Domains | [Resolution Libraries Guide](./quickstart/reverse-resolution.md)
-| Smart Contracts | Integrate Reverse Resolution using Unstoppable Domains UNS smart contracts | [Smart Contracts Guide](../smart-contracts/quick-start/reverse-resolve-domains.md) |
+## Smart Contracts
 
-
+Integrate Reverse Resolution using Unstoppable Domains UNS smart contracts. See the [Smart Contracts Guide](../smart-contracts/quick-start/reverse-resolve-domains.md). The Unstoppable Domains team manages this service.
 
 <embed src="/snippets/_developer-survey-embed.md" />

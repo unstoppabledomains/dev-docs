@@ -20,18 +20,8 @@ Check out the video below for a high-level overview!
 
 For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](/openapi/resolution). The Unstoppable Domains team manages this service.
 
-## Resolution Libraries
+## Smart Contracts
 
-For language-specific, blockchain-agnostic libraries for resolving Unstoppable Web3 domains (including domains on Ethereum, Polygon, and Zilliqa) see our [Resolution Libraries](sdks-and-libraries/javascript.md) guide. These are managed by Unstoppable and updated regularly to reflect changes in our services.
-
-## Resolution CLI
-
-For an Unstoppable-managed, blockchain-agnostic command-line interface for resolving all Unstoppable Web3 domains, see the [Resolution CLI](sdks-and-libraries/cli.md) guide.
-
-## Resolve Using Matic.js SDK
-
-For developers developing on Polygon using the [Matic.js SDK](https://github.com/maticnetwork/matic.js) and who want an easy way to integrate domain resolution functionalities into their applications, see the [Resolve Using Matic.js SDK](sdks-and-libraries/maticjs.md) guide.
-
-
+Integrate Resolution using Unstoppable Domains UNS smart contracts. See the [Smart Contracts Guide](../smart-contracts/quick-start/resolve-domains.md). The Unstoppable Domains team manages this service.
 
 <embed src="/snippets/_developer-survey-embed.md" />
