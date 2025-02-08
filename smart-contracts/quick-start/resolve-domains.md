@@ -9,7 +9,7 @@ redirectFrom:
 
 Resolving a domain is retrieving a domain's records when the domain name and required record names are given. There are no limits to who can read domain records on the Registry side. Anyone accessing a mainnet Ethereum or Polygon Node can resolve a domain.
 
-This section describes resolving domain records by making calls to Ethereum and Polygon smart contracts using the Ethereum JSON RPC. For developers who prefer a more straightforward solution, it might be more convenient to use the [Resolution Libraries](/resolution/sdks-and-libraries/overview.md) maintained by Unstoppable Domains.
+This section describes resolving domain records by making calls to Ethereum and Polygon smart contracts using the Ethereum JSON RPC. For developers who prefer a more straightforward solution, it might be more convenient to use the [Resolution Service API](/resolution/overview/) maintained by Unstoppable Domains.
 
 To resolve a domain, your software must access the Ethereum or Polygon network. For more information, see [Configuring an Ethereum Network Connection](#configuring-an-ethereum-network-connection).
 

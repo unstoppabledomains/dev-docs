@@ -298,3 +298,6 @@
 '/resolution/guides/reverse-resolution/faq/':
   to: '/resolution/guides/rr-faq/'
   type: 301
+'/resolution/sdks-and-libraries/*':
+  to: '/resolution/overview/'
+  type: 301

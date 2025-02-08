@@ -94,9 +94,9 @@ If you wish to have access to `Partner API v3`, please click `Request access to 
 
 
 ### SDK Key
-Refer to [Resolution SDKs](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/overview/)
+Refer to the [Javascript Resolution SDKs](https://github.com/unstoppabledomains/resolution)
 
-The key is only allowed to be used in Resolution SDKs to interact with EVM RPC providers to query on-chain data. See [example](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/javascript/#initialize-with-unstoppable-domains-uns-proxy-provider)
+The key is only allowed to be used in Resolution SDKs to interact with EVM RPC providers to query on-chain data. The SDKs are unmaintained.
 
 ### Legacy API Key
 Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolution/) and [Domain Distribution and Management Overview

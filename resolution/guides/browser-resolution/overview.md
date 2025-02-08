@@ -13,12 +13,11 @@ Domain Resolution allows developers to translate a `.crypto` or `.zil` domain na
 
 To make domain resolution easier, we've written libraries for web, Android, and iOS.
 
-### Domain Resolution Libraries
+### Domain Resolution Service API
 
-- [Resolution-Javascript](/resolution/sdks-and-libraries/javascript.md)
-- [Resolution-Java](/resolution/sdks-and-libraries/java.md)
-- [Resolution-Swift](/resolution/sdks-and-libraries/swift.md)
-- [Resolution-Go](/resolution/sdks-and-libraries/go.md)
+For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution). The Unstoppable Domains team manages this service.
+
+- [Resolution](/resolution/quickstart/resolution.md)
 
 ### Access Domain Metadata Directly
 
