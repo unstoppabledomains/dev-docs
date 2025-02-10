@@ -41,12 +41,8 @@
               page: resolution/guides/browser-resolution/algorithm.md
             - label: Test domains
               page: resolution/guides/browser-resolution/test-domains.md
-        - label: Resolution CLI
-          page: resolution/sdks-and-libraries/cli.md
         - label: Best practices
           page: resolution/guides/best-practices.md
-        - label: Troubleshooting
-          page: resolution/guides/troubleshooting-guide.md
         - label: Reverse Resolution FAQs
           page: resolution/guides/rr-faq.md
     - group: Tech References
@@ -63,21 +59,6 @@
               page: smart-contracts/quick-start/resolve-domains.md
             - label: Reverse Resolution Contracts
               page: smart-contracts/quick-start/reverse-resolve-domains.md
-        - group: SDKs and Libraries
-          expanded: false
-          pages:
-            - label: Overview
-              page: resolution/sdks-and-libraries/overview.md
-            - label: JavaScript
-              page: resolution/sdks-and-libraries/javascript.md
-            - label: Java
-              page: resolution/sdks-and-libraries/java.md
-            - label: Swift
-              page: resolution/sdks-and-libraries/swift.md
-            - label: Go
-              page: resolution/sdks-and-libraries/go.md
-            - label: Matic.js SDK
-              page: resolution/sdks-and-libraries/maticjs.md   
   separatorLine: true
 - group: Partner API
   expanded: false
