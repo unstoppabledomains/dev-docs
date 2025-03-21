@@ -50,11 +50,12 @@ The UAuth protocol extends the standard OpenID Connect (OIDC) authorization prot
 
 ## Supported TLDs
 
-Unstoppable Login currently supports the following top-level domains (TLDs):
+Unstoppable Login automatically supports all Unstoppable Domains TLDs as well as `.eth`.
 
-<embed src="/snippets/_supported-domain-endings.md" />
+For the full list, check the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds).
 
-:::warning Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
+:::warning 
+Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
 :::
 
 ## Considerations
