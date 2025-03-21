@@ -3,13 +3,6 @@
   pages:
     - label: "Overview"
       page: getting-started/overview.md
-    - group: Get a Test Domain
-      expanded: false
-      pages:
-        - label: UD Website Faucet Guide
-          page: getting-started/test-domains/faucet.md
-        - label: Polygon Faucet Guide
-          page: getting-started/test-domains/polygonscan.md
     - label: Glossary
       page: getting-started/glossary.md
   separatorLine: true

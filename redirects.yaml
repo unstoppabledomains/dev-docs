@@ -301,3 +301,6 @@
 '/resolution/sdks-and-libraries/*':
   to: '/resolution/overview/'
   type: 301
+'/getting-started/test-domains/*':
+  to: '/getting-started/overview/'
+  type: 301

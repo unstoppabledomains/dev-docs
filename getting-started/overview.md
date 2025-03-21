@@ -12,8 +12,12 @@ It's a great companion to our [Feature Guide Collection](https://youtube.com/pla
 
 You'll need the following to get started:
 
-- A [free test domain](test-domains/faucet.md)
+- A domain
 - A stable test environment
+
+:::info 
+Email <partnerengineering@unstoppabledomains.com> if you are in need of a developer domain.
+:::
 
 ## How This Portal Is Organized
 
