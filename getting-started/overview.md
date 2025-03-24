@@ -16,7 +16,7 @@ You'll need the following to get started:
 - A stable test environment
 
 :::info 
-Email <partnerengineering@unstoppabledomains.com> if you are in need of a developer domain.
+Domains can be purchased for as little as $2. Simply search for any `.unstoppable` domain that is longer than `7 characters` in length. Alternatively, email <partnerengineering@unstoppabledomains.com> if you are unable to find a suitable domain.
 :::
 
 ## How This Portal Is Organized
