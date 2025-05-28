@@ -211,7 +211,7 @@ figcaption {
 
 /* Jumbotron styles */
 .jumbotron {
-  background: #122753;
+  background: #122753 !important;
 }
 
 .jumbotron h3 {
@@ -295,13 +295,13 @@ figcaption {
 }
 
 .tile-button {
-  border-radius: 1.5rem;
+  border-radius: 1.5rem !important;
   padding: 10px 24px;
   font-size: 0.9rem;
 }
 
 .header-button {
-    border-radius: 1.5rem;
+    border-radius: 1.5rem !important;
 }
 
 /* Responsive styles */

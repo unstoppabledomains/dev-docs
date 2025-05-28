@@ -17,10 +17,10 @@ const styles: Record<string, CSSProperties> = {
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
-    margin: '2rem 0'
+    margin: '2rem 0',
   },
   quoteBox: {
-    maxWidth: '910px',
+    maxWidth: '872px',
     width: '100%',
     backgroundColor: '#eeeeee',
     borderRadius: '1.5rem',
