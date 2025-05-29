@@ -194,3 +194,123 @@ figcaption {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
 }
+
+/* ThinTile image styles */
+.sc-fVLGaz {
+    width: 130px !important;
+}
+
+/* ThinTile description styles */
+.geqZxh {
+    height: 35px !important;
+}
+
+/* =========================================
+   Landing Page Custom Styles
+   ========================================= */
+
+/* Jumbotron styles */
+.jumbotron {
+  background: #122753 !important;
+}
+
+.jumbotron h3 {
+  color: white;
+  margin: auto;
+}
+
+.jumbotron-h2 {
+    color: white !important;
+}
+
+.jumbotron-h1 {
+    color: white !important;
+}
+
+/* Stats section styles */
+.stats-section {
+  background: #eeeeee;
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.stats-flex {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.stat-box.middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.stat-box h3 {
+  margin: 0 0 10px 0;
+  color: black;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+/* Tile styles */
+.tile {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.tile-content {
+  flex: 1;
+  padding: 20px 0;
+  padding-bottom: 80px;
+}
+
+.tile-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.tile-button {
+  border-radius: 1.5rem !important;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+}
+
+.header-button {
+    border-radius: 1.5rem !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stat-box.middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+  }
+}

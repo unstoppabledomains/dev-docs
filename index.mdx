@@ -14,43 +14,144 @@ import {
   Emphasis,
   H1,
   H2,
+  H3,
   SectionHeader,
   NavBar,
 } from '@redocly/developer-portal/ui';
 
-import apiref from './static/images/api-ref.png';
-import toolkit from './static/images/toolkit.png';
-import usecase from './static/images/use-case.png';
+import sellDomains from './static/images/sell-domains.png';
+import resolveDomains from './static/images/resolve domains.png';
+import apiReference from './static/images/api-reference.png';
 import { DeveloperSurvey } from './components/DeveloperSurvey.tsx'
+import { RotatingQuotes } from './components/RotatingQuotes.tsx'
 
 export default LandingLayout;
 
 <NavBar location={props.location} standalone={false} />
 
-<Jumbotron className="padding-top-bottom-20">
-  <H1 className="margin-top-bottom-20">Developer Documentation</H1>
-  <H2 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</H2>
+<Jumbotron className="padding-top-bottom-20 jumbotron">
+  <H2 className="margin-top-bottom-20 jumbotron-h2">
+    Developer Documentation
+  </H2>
+  <H1 className="margin-top-bottom-20 jumbotron-h1">
+    Effortless building starts here.
+  </H1>
+  <H3 className="margin-top-bottom-20">
+    Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.
+  </H3>
   <Flex p={20} justifyContent="center">
-     <Button variant="contained" size="xlarge" color="primary" to="getting-started/overview.md">
-      Get Started
+     <Button 
+            variant="contained" 
+            size="xlarge" 
+            color="primary" 
+            to="getting-started/overview.md"
+            className="header-button"
+          >
+      Build with us
     </Button>
   </Flex>
 </Jumbotron>
-<Box my={25}>
-  <SectionHeader className="margin-top-bottom-30">
-    Build your <Emphasis> application </Emphasis> today!
+
+<Box className="stats-section">
+  <Box className="stats-container">
+    <Flex className="stats-flex">
+      <Box className="stat-box">
+        <H3>Quick and Easy Integration</H3>
+      </Box>
+      <Box className="stat-box middle">
+        <H3>Millions of Domains</H3>
+      </Box>
+      <Box className="stat-box">
+        <H3>Hundreds of Integrated Partners</H3>
+      </Box>
+    </Flex>
+  </Box>
+</Box>
+
+<Box my={25} style={{ width: '100%' }}>
+  <SectionHeader 
+    className="margin-top-bottom-30"
+    style={{ 
+      color: 'black',
+      fontSize: '2.5rem'
+    }}
+  >
+    <Emphasis> Build your application today! </Emphasis> 
   </SectionHeader>
   <FlexSection justifyContent="space-around" flexWrap="wrap" className="padding-top-bottom-20">
-    <ThinTile to="domain-distribution-and-management/overview.md" icon={usecase} header="Sell Domains in your App">
-        Register and manage onchain domains natively within your app.
+    <ThinTile 
+      icon={sellDomains}
+      header="Sell Domains in your App" 
+      className="tile"
+    >
+        <div className="tile-content">
+          Register and manage onchain domains natively within your app.
+        </div>
+        <Flex 
+          justifyContent="center" 
+          className="tile-button-container"
+        >
+          <Button 
+            variant="contained" 
+            size="large" 
+            color="primary" 
+            to="domain-distribution-and-management/overview.md"
+            className="tile-button"
+          >
+            Get Started
+          </Button>
+        </Flex>
     </ThinTile>
-    <ThinTile to="resolution/overview.md" icon={toolkit} header="Resolve Domains in your App">
-        Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
+    <ThinTile 
+      icon={resolveDomains}
+      header="Resolve Domains in your App" 
+      className="tile"
+    >
+        <div className="tile-content">
+          Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
+        </div>
+        <Flex 
+          justifyContent="center" 
+          className="tile-button-container"
+        >
+          <Button 
+            variant="contained" 
+            size="large" 
+            color="primary" 
+            to="resolution/overview.md"
+            className="tile-button"
+          >
+            Get Started
+          </Button>
+        </Flex>
     </ThinTile>
-    <ThinTile to="openapi/overview.md" icon={apiref} header="API Reference">
-        Consult the documentation and live testing features of Unstoppable Domains APIs,
-        including the Resolution Service API and Partner API.
+    <ThinTile 
+      icon={apiReference}
+      header="API Reference" 
+      className="tile"
+    >
+        <div className="tile-content">
+          Consult the documentation and live testing features of Unstoppable Domains APIs,
+          including the Resolution Service API and Partner API.
+        </div>
+        <Flex 
+          justifyContent="center" 
+          className="tile-button-container"
+        >
+          <Button 
+            variant="contained" 
+            size="large" 
+            color="primary" 
+            to="openapi/overview.md"
+            className="tile-button"
+          >
+            Get Started
+          </Button>
+        </Flex>
     </ThinTile>
+  </FlexSection>
+  <FlexSection justifyContent="space-around" flexWrap="wrap">
+    <RotatingQuotes />
   </FlexSection>
   <FlexSection justifyContent="space-around" flexWrap="wrap">
     <DeveloperSurvey/>
