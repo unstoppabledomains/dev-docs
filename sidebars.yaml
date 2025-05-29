@@ -82,8 +82,6 @@
           pages:
             - label: Manage Domain Records
               page: smart-contracts/quick-start/manage-domain-records.md
-            - label: Mint Subdomains
-              page: smart-contracts/quick-start/mint-subdomains.md
   separatorLine: true
 - group: Login With Unstoppable
   expanded: false

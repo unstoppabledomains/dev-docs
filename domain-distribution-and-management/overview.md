@@ -13,7 +13,7 @@ Domain distribution and management can be achieved via the Unstoppable Partner A
 
 Our premier solution for domain distribution and management.
 
-- Claim domains and subdomains
+- Claim domains
 - Create and manage custody wallets
 - Manage domains, both held in custody and self-custody wallets
 

@@ -117,7 +117,7 @@ The data associated with a [Web3 domain](#web3-domain), i.e., cryptocurrency add
 
 ### Registry
 
-The [naming service](#name-service) [smart contract](#smart-contract) that manages domain ownership, minting domains and subdomains, storing domain [metadata](#metadata), and [burning](#burn) domains. The registry also stores and manages domain [records](#record) in the [Unstoppable Name Service (UNS)](#uns).
+The [naming service](#name-service) [smart contract](#smart-contract) that manages domain ownership, minting domains, storing domain [metadata](#metadata), and [burning](#burn) domains. The registry also stores and manages domain [records](#record) in the [Unstoppable Name Service (UNS)](#uns).
 
 ### Resolution Library
 
@@ -142,10 +142,6 @@ A controlled environment maintained by Unstoppable Domains for [Partners](#partn
 ### Smart Contract
 
 A smart contract is a contract whose terms are expressed as a computer program with logic and state persisted on the blockchain. Smart contracts can automatically carry out their terms and conditions with total transparency and no counterparty risk, allowing transactions without an intermediary figure and trust between the parties involved.
-
-### Subdomain
-
-A subdomain is a domain name registered on another domain, e.g., `blog.example.crypto`, where the `blog` domain is registered on `example.crypto`. Subdomains also resolve to domain records and can have Reverse Resolution configured like a regular domain name.
 
 ### Testnet
 
