@@ -82,30 +82,12 @@ Request one of the following keys depending on your current usage. You **might**
 </figure>
 
 ### API Key
-Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/) and [Domain Resolution API](https://docs.unstoppabledomains.com/openapi/resolution/) for supported use cases.
+Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/)  for supported use cases.
+
+For `Partner API v3` access, please click `Request access to Partner API v3`. Our `Partner engineering team` team will be contacting you in shortly via email.
 
 :::warning
-Your API key is only intended for use on your backend servers. Any other usage could result in security risks and or your key being deactivated. Please refer to [Best Practices for Integrating Partner API](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/best-practices/#dont-use-your-secrets-in-the-frontend) for integrating with us.
-:::
-
-By default, you will have access to `Domain Resolution API`.
-
-If you wish to have access to `Partner API v3`, please click `Request access to Partner API v3`. Our `Partner engineering team` team will be contacting you in shortly via email.
-
-
-### SDK Key
-Refer to the [Javascript Resolution SDKs](https://github.com/unstoppabledomains/resolution)
-
-The key is only allowed to be used in Resolution SDKs to interact with EVM RPC providers to query on-chain data. The SDKs are unmaintained.
-
-### Legacy API Key
-Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolution/) and [Domain Distribution and Management Overview
-](https://docs.unstoppabledomains.com/domain-distribution-and-management/overview/#domain-distribution-and-management-overview) for supported use cases.
-
-Click `Reveal Key` under `Legacy API key` to acquire your API Key
-
-:::success Congratulations!
-You just registered to become an official Unstoppable Domains Partner.
+Your API key is only intended for use on your backend servers. Any other usage could result in security risks and or your key being deactivated.
 :::
 
 ## Step 4: Set up UD Sandbox
@@ -120,22 +102,22 @@ To build the Partner API integrations, switch to Sandbox mode. This mode allows 
 </figure>
 
 
-## Sandbox Environment URLs
+### Sandbox Environment URLs
 
-### Sandbox Website
+#### Sandbox Website
 
 ```bash
 https://ud-sandbox.com/
 ```
 
-### Sandbox API Endpoint
+#### Sandbox API Endpoint
 
 ```bash
 https://api.ud-sandbox.com/
 ```
 
 :::success Congratulations!
-You have successfully accessed and set up the Unstoppable Domains Sandbox Environment. Happy hacking!
+You just registered to become an official Unstoppable Domains Partner.
 :::
 
 <embed src="/snippets/_partner-survey-embed.md" />
