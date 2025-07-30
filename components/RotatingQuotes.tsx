@@ -1,5 +1,5 @@
 import React, { useState, useEffect, CSSProperties } from 'react';
-import { Typography, Box } from '@redocly/developer-portal/ui';
+import { Typography } from '@redocly/developer-portal/ui';
 
 const quotes = [
   {
