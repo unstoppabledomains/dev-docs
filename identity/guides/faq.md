@@ -1,10 +1,12 @@
 ---
 title: Unstoppable Login Frequently Asked Questions
-description: Frequently asked questions about the Unstoppable Login Web3 user authentication service.
-redirectFrom:
-  - /login-with-unstoppable/get-started-login/login-faq/
-  - /login-with-unstoppable/login-faq/
-  - /login-with-unstoppable/humanity-check-faq/
+description: >-
+  Frequently asked questions about the Unstoppable Login Web3 user
+  authentication service.
+redirects:
+  /login-with-unstoppable/get-started-login/login-faq/: {}
+  /login-with-unstoppable/login-faq/: {}
+  /login-with-unstoppable/humanity-check-faq/: {}
 ---
 
 # Unstoppable Login Frequently Asked Questions

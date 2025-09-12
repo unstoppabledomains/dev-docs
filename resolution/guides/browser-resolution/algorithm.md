@@ -1,8 +1,10 @@
 ---
 title: Browser Resolution Algorithm | Unstoppable Domains Developer Portal
-description: This section explains how different domain record configurations should be interpreted by browsers.
-redirectFrom:
-  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm/
+description: >-
+  This section explains how different domain record configurations should be
+  interpreted by browsers.
+redirects:
+  /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-algorithm/: {}
 ---
 
 # Browser Resolution Algorithm

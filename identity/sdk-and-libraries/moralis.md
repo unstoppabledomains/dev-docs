@@ -1,8 +1,10 @@
 ---
 title: UAuth Moralis Library | Unstoppable Domains Developer Portal
-description: This page provides documents the public interface of the @uauth/moralis middleware library.
-redirectFrom:
-  - /login-with-unstoppable/libraries/uauth-moralis/
+description: >-
+  This page provides documents the public interface of the @uauth/moralis
+  middleware library.
+redirects:
+  /login-with-unstoppable/libraries/uauth-moralis/: {}
 ---
 
 # UAuth Moralis Library

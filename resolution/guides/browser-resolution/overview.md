@@ -1,8 +1,10 @@
 ---
 title: Browser Resolution Overview | Unstoppable Domains Developer Portal
-description: This page provides a high level overview of how UD Resolution works when resolving domains using a traditional HTTP Web Browser or a DApp Browser.
-redirectFrom:
-  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/
+description: >-
+  This page provides a high level overview of how UD Resolution works when
+  resolving domains using a traditional HTTP Web Browser or a DApp Browser.
+redirects:
+  /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/: {}
 ---
 
 # How Browser Resolution Works

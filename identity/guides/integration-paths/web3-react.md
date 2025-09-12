@@ -1,18 +1,20 @@
 ---
 title: Web3 React Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 react library.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/web3-react-guide/
+description: >-
+  This integration guide is intended for a custom @uauth/js integration, with
+  ethereum provider, using web3 react library.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/web3-react-guide/: {}
 ---
 
 # Web3 React Guide: Unstoppable Login
 
 This is the basic installation guide for the [web3-react](https://github.com/Uniswap/web3-react/) framework and is best used for React-based single page applications (SPAs). For more information about the UAuth middleware package for web3-react, see the [reference](/identity/sdk-and-libraries/web3-react.md) and source code on [github](https://github.com/unstoppabledomains/uauth/tree/main/packages/web3-react).
 
-:::warning
+{% admonition type="warning"%}
 This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses the latest v8 beta branch of `web3-react`.
-:::
+{% /admonition %}
 
 <figure>
 <div class="video-container">
@@ -25,11 +27,11 @@ This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses
 
 Install `web3-react` and the connectors for MetaMask, WalletConnect, and UAuth with `yarn` or `npm`.
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
 
-```shell npm
+```shell {% title="npm" %}
 npm install --save @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
 
@@ -92,9 +94,9 @@ export default connectors;
 <figcaption> <code>connectors.js</code> </figcaption>
 </figure>
 
-:::info
+{% admonition type="info"%}
 Because popups are a more integration friendly approach, the `@uauth/web3-react` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `UAuthConnectorConstructorArgs` and [create a callback page](/identity/sdk-and-libraries/web3-react.md#optionsshouldloginwithredirect).
-:::
+{% /admonition %}
 
 ## Step 3: Unstoppable Login
 
@@ -164,8 +166,8 @@ export default App;
 <figcaption> <code>App.jsx</code> </figcaption>
 </figure>
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with web3-react.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

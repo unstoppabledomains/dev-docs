@@ -1,20 +1,22 @@
 ---
 title: Login Client Configuration | Unstoppable Domains Developer Portal
-description: This page explains the settings currently available for configuring a Unstoppable Login client.
-redirectFrom:
-  - /login-with-unstoppable/register-your-application/
-  - /login-with-unstoppable/get-started-login/register-your-application/
-  - /login-with-unstoppable/login-client-configuration/
-  - /login-with-unstoppable/login-integration-guides/login-client-configuration/
+description: >-
+  This page explains the settings currently available for configuring a
+  Unstoppable Login client.
+redirects:
+  /login-with-unstoppable/register-your-application/: {}
+  /login-with-unstoppable/get-started-login/register-your-application/: {}
+  /login-with-unstoppable/login-client-configuration/: {}
+  /login-with-unstoppable/login-integration-guides/login-client-configuration/: {}
 ---
 
 # Login Client Configuration
 
 This page explains the settings currently available for configuring a Unstoppable Login client on the [Client Management Dashboard](https://dashboard.auth.unstoppabledomains.com). The default configuration for a new client works right out of the box for local development. The minimum viable configuration for the Unstoppable Login client integrated with a live application requires custom [**redirect URIs**](#redirect-uris).
 
-:::warning
+{% admonition type="warning"%}
 You must **Confirm Changes** made to your client configuration before they will take effect. For enhanced security, certain actions may require a wallet signature. This does not require any ETH in your wallet. You will only need to sign transactions to confirm ownership of your wallet address.
-:::
+{% /admonition %}
 
 ## Branding
 
@@ -82,17 +84,17 @@ The Redirect URIs follow three rules:
 2. URIs hosted at `http://127.0.0.1` do **NOT** require the port to be specified. All other URIs (including those hosted at `http://localhost`) require the correct port to be specified.
 3. All https URIs specified must use the same origin (e.g. `https://unstoppabledomains.com/redirectUri1`, `https://unstoppabledomains.com/redirectUri2`)
 
-:::info
+{% admonition type="info"%}
 `localhost` is okay for test development, but `127.0.0.1` should be used for live environments. It is best practice to use a hardcoded IP address in a live environment instead of the local host.
-:::
+{% /admonition %}
 
 ## Advanced Configuration
 
 The **Advanced Configuration** page includes options for CORS, audience URIs, grant types, response types, scopes, and token endpoint auth method.
 
-:::danger
+{% admonition type="danger"%}
 The advanced configuration settings are unnecessary for many configurations and could break existing Login integrations.
-:::
+{% /admonition %}
 
 <figure>
 
@@ -107,15 +109,15 @@ The following section describes the fields for the **Advanced** configuration pa
 
 CORS is a browser protocol for accessing info from another domain. If a URI is entered, CORS is enabled for all requests from that client. Developers can enter the origin URI and specify the port. The Token, UserInfo, and Revocation endpoints all respect this option.
 
-:::warning
+{% admonition type="warning"%}
 The initial authorization endpoint that users are redirected to cannot use CORS; it will not work.
-:::
+{% /admonition %}
 
 ### Audience URIs
 
-:::info
+{% admonition type="info"%}
 This only needs to be configured if using an API that requires an audience URI.
-:::
+{% /admonition %}
 
 These URIs represent the audience that is inside the access token JWTs. You get back an access token and ID token and both are JWTs. The access token is opaque.
 
@@ -137,21 +139,21 @@ There are three response types: authorization code, access token, ID token.
 - **access token:** implicit flow, not recommended because it is less secure; no code but you receive ID or access token
 - **ID token:** hybrid flow; receive all three: access code, access token, and/or ID token
 
-:::danger
+{% admonition type="danger"%}
 All authorization code requests or flows must use the PKCE extension. This only refers to the authorization code response type.
-:::
+{% /admonition %}
 
 ### Token Endpoint Authentication Method
 
-:::info
+{% admonition type="info"%}
 This setting cannot be used for front-end integrations. It can only be enabled for applications, such as servers, that can store secrets.
-:::
+{% /admonition %}
 
 This setting configures how to send the client secret to the authorization server after you receive the authorization code; can be enabled for an extra layer of security but can only be used if your application can store secrets (e.g., node.js integrations). The client secret is stored on the server as a hash, so the authorization server doesn't actually know the client secret. See additional resources for [Client Basic and Client Secret oAuth](https://datatracker.ietf.org/doc/html/rfc6749#section-2.3.1).
 
 - **client secret basic:** uses http basic authentication to send over clientid:clientsecret inside the header, which is base64 encoded.
 - **client secret post:** uses http POST authentication to send over client_secret parameter inside the body.
 
-:::danger warning
+{% admonition type="danger" name="warning" %}
 **Copy** and **Save** the Client Secret as soon as the Token Authentication Method has been changed/saved because the client secret will not re-appear after the page is refreshed. If you lose the client secret after the application goes live, then the only way to change the secret is to rotate it and immediately download the client metadata, so you have a copy of the client configuration (to create a new client with new login credentials).
-:::
+{% /admonition %}

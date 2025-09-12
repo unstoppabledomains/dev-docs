@@ -1,0 +1,55 @@
+logo:
+  image: ./static/images/logo.png
+  altText: UD Developer Docs Logo
+
+navbar:
+  items:
+    - label: Get Started
+      page: getting-started/overview.md
+    - label: API Reference
+      page: openapi/overview.md
+
+search:
+  hide: false
+
+scripts:
+  head:
+    - src: ./static/scripts/etlb.js
+    - src: ./static/scripts/fd-widget.js
+    - src: https://widget.freshworks.com/widgets/48000002701.js
+    - src: https://embed.typeform.com/next/embed.js
+
+analytics:
+  ga:
+    head: false
+    trackingId: UA-120492152-2
+  heap:
+    appId: "467845969"
+
+footer:
+  copyrightText: © Unstoppable Domains Inc. All Rights Reserved.
+  items:
+    - group: Legal
+      items:
+        - label: Terms of Use
+          href: 'https://unstoppabledomains.com/terms'
+        - label: Privacy Notice
+          href: 'https://unstoppabledomains.com/privacy-policy'
+
+    - group: Community
+      items:
+        - label: Twitter
+          href: 'https://twitter.com/unstoppableweb'
+        - label: Facebook
+          href: 'https://www.facebook.com/unstoppableweb/'
+
+    - group: Resources
+      items:
+        - label: Medium
+          href: 'https://medium.com/unstoppabledomains'
+        - label: Podcast
+          href: 'https://the-unstoppable-podcast.simplecast.com/'
+        - label: Youtube
+          href: 'https://www.youtube.com/c/unstoppabledomains'
+        - label: Github
+          href: 'https://github.com/unstoppabledomains'

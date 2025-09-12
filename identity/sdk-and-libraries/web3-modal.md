@@ -1,8 +1,10 @@
 ---
 title: UAuth Web3Modal Library | Unstoppable Domains Developer Portal
-description: This page provides documents the public interface of the @uauth/web3modal middleware library.
-redirectFrom:
-  - /login-with-unstoppable/libraries/uauth-web3modal/
+description: >-
+  This page provides documents the public interface of the @uauth/web3modal
+  middleware library.
+redirects:
+  /login-with-unstoppable/libraries/uauth-web3modal/: {}
 ---
 
 # UAuth Web3Modal Library

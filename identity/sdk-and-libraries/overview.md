@@ -1,8 +1,10 @@
 ---
 title: UAuth Libraries Overview | Unstoppable Domains Developer Portal
-description: This page provides a high level overview of the UAuth core and middleware libraries.
-redirectFrom:
-  - /login-with-unstoppable/libraries/uauth-overview/
+description: >-
+  This page provides a high level overview of the UAuth core and middleware
+  libraries.
+redirects:
+  /login-with-unstoppable/libraries/uauth-overview/: {}
 ---
 
 # UAuth Libraries Overview

@@ -19,9 +19,9 @@ Express.js will serve as the API proxy throughout this quickstart and will handl
 
 The Resolution Service API is not meant to be directly accessed from a frontend client and will throw `CORS` errors if it is. 
 
-:::info
+{% admonition type="info"%}
 There is a 20 call/second/key limit on the Resolution Service API. If you need a higher rate limit, please contact partnerengineering@unstoppabledomains.com
-:::
+{% /admonition %}
 
 ## Examples
 
@@ -271,6 +271,6 @@ async function resolveIpfsHash(
 }
 ```
 
-:::success Congratulations
+{% admonition type="success" name="Congratulations" %}
 You have successfully integrated Resolution using Unstoppable Domains Resolution Service API. Happy Hacking!
-:::
+{% /admonition %}

@@ -17,12 +17,12 @@ You'll need the following to get started:
 
 This portal is organized to support users familair with API implementation. If you're new to crypto and blockchain, consider starting with the [Get Started](../getting-started/overview.md) in the top navbar. Advanced users may wish to explore topics like:
 
-- [Metadata](/openapi/metadata.page.yaml)
-- [Resolution](/openapi/resolution.page.yaml)
-- [Partner](/openapi/partner.page.yaml)
-- [Profile](/openapi/profile-v1.page.yaml)
-- [Messaging](/openapi/messaging-v1.page.yaml)
-- [Login](/openapi/loginref.page.yaml)
-- [Registry](/openapi/registry.page.yaml)
+- [Metadata](metadata/openapi.yaml)
+- [Resolution](resolution/openapi.yaml)
+- [Partner](partner/openapi.yaml)
+- [Profile](profile-v1/openapi.yaml)
+- [Messaging](messaging-v1/openapi.yaml)
+- [Login](loginref/openapi.yaml)
+- [Registry](registry/openapi.yaml)
 
-<embed src="/snippets/_developer-survey-embed.md" />
+{% partial file="/_partials/_developer-survey-embed.md" /%}

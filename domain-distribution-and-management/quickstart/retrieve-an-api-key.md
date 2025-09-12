@@ -1,10 +1,12 @@
 ---
 title: Set up Partner API Access Guide | Unstoppable Domains Developer Portal
-description: This page explains the process for creating an account and applying to become an authorized partner for Unstoppable Domains.
-redirectFrom:
-  - /partner/
-  - /partner/set-up-sandbox-for-testing/
-  - /partner/integration-paths/
+description: >-
+  This page explains the process for creating an account and applying to become
+  an authorized partner for Unstoppable Domains.
+redirects:
+  /partner/: {}
+  /partner/set-up-sandbox-for-testing/: {}
+  /partner/integration-paths/: {}
 ---
 
 # Set up Partner API Access Guide
@@ -84,9 +86,9 @@ Request one of the following keys depending on your current usage. You **might**
 ### API Key
 Refer to [Partner API v3](https://docs.unstoppabledomains.com/openapi/partner/latest/) and [Domain Resolution API](https://docs.unstoppabledomains.com/openapi/resolution/) for supported use cases.
 
-:::warning
+{% admonition type="warning"%}
 Your API key is only intended for use on your backend servers. Any other usage could result in security risks and or your key being deactivated. Please refer to [Best Practices for Integrating Partner API](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/best-practices/#dont-use-your-secrets-in-the-frontend) for integrating with us.
-:::
+{% /admonition %}
 
 By default, you will have access to `Domain Resolution API`.
 
@@ -104,9 +106,9 @@ Refer to [Domain Resolution](https://docs.unstoppabledomains.com/openapi/resolut
 
 Click `Reveal Key` under `Legacy API key` to acquire your API Key
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You just registered to become an official Unstoppable Domains Partner.
-:::
+{% /admonition %}
 
 ## Step 4: Set up UD Sandbox
 
@@ -134,8 +136,8 @@ https://ud-sandbox.com/
 https://api.ud-sandbox.com/
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have successfully accessed and set up the Unstoppable Domains Sandbox Environment. Happy hacking!
-:::
+{% /admonition %}
 
-<embed src="/snippets/_partner-survey-embed.md" />
+{% partial file="/_partials/_partner-survey-embed.md" /%}

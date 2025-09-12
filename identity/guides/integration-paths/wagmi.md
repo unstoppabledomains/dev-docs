@@ -10,11 +10,11 @@ showNextButton: false
 
 Install with `yarn` or `npm`.
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add @uauth/js @uauth/wagmi
 ```
 
-```shell npm
+```shell {% title="npm" %}
 npm install --save @uauth/js @uauth/wagmi
 ```
 
@@ -81,7 +81,7 @@ import { WagmiConfig } from "wagmi";
 
 Once configured, the `wagmi` library can be used normally.
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
 ```jsx
 import { useState } from "react";
@@ -108,8 +108,8 @@ function LogoutButton() {
 }
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with WAGMI.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

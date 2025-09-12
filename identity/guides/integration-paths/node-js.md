@@ -1,24 +1,26 @@
 ---
 title: Node.js Server Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/node integration for server-side applications and does not come with a default front-end UI.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/node-js-server-guide/
+description: >-
+  This integration guide is intended for a custom @uauth/node integration for
+  server-side applications and does not come with a default front-end UI.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/node-js-server-guide/: {}
 ---
 
 # Node.js Server Guide: Unstoppable Login
 
 This integration guide is for the `@uauth/node` library used in server-side applications. It does not come with a default front-end UI and requires custom front-end UI development. For more information about this library, please see the associated [github repo](https://github.com/unstoppabledomains/uauth/tree/main/packages/node).
 
-:::warning
+{% admonition type="warning"%}
 The example code in this guide assumes that ECMAScript modules are [enabled](https://nodejs.org/dist/latest-v16.x/docs/api/esm.html#enabling). Otherwise, `import` statements should be replaced with CommonJS `require()` statements.
-:::
+{% /admonition %}
 
 ## Step 1: Configure the Login Client
 
 Add `http://localhost:5000/callback` to your client's [Redirect URIs](/identity/guides/client-configurations.md#redirect-uris). Make sure that the port matches the port your app is being served to. Example code in this guide assumes port 5000.
 
-Set the [Token Endpoint Authentication Method](/identity/guides/client-configurations.md/#token-endpoint-authentication-method) on your client dashboard to **Client Secret Post**. Once you've clicked the **Confirm Changes** button, `clientSecret` and `clientAuthMethod` will be added to your client metadata on the **Basic** configuration page.
+Set the [Token Endpoint Authentication Method](/identity/guides/client-configurations.md#token-endpoint-authentication-method) on your client dashboard to **Client Secret Post**. Once you've clicked the **Confirm Changes** button, `clientSecret` and `clientAuthMethod` will be added to your client metadata on the **Basic** configuration page.
 
 ```javascript
 {
@@ -34,21 +36,21 @@ Set the [Token Endpoint Authentication Method](/identity/guides/client-configura
 
 Install the `@uauth/node` and resolution packages with `yarn` or `npm`.
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add @uauth/node @unstoppabledomains/resolution
 ```
 
-```shell npm
+```shell {% title="npm" %}
 npm install --save @uauth/node @unstoppabledomains/resolution
 ```
 
 For the example in this guide, you will also need to install the following packages:
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add express-session express express-async-errors morgan
 ```
 
-```shell npm
+```shell {% title="npm" %}
 yarn intall --save express-session express express-async-errors morgan
 ```
 
@@ -174,8 +176,8 @@ app.listen(process.env.PORT, () => {
 });
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You just implemented Unstoppable Login.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

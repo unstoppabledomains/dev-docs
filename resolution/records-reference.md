@@ -1,8 +1,10 @@
 ---
 title: Records Reference | Unstoppable Domains Developer Portal
-description: This page contains an overview of all standardized domain records. It covers crypto payments, social records, and browser resolution for DWeb and DNS.
-redirectFrom:
-  - /developer-toolkit/reference/records-reference/
+description: >-
+  This page contains an overview of all standardized domain records. It covers
+  crypto payments, social records, and browser resolution for DWeb and DNS.
+redirects:
+  /developer-toolkit/reference/records-reference/: {}
 ---
 
 # Records Reference
@@ -23,9 +25,9 @@ This reference page is divided into sections, grouping records by their namespac
 
 Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](/smart-contracts/overview/cns-architecture-overview.md), [UNS Architecture](/smart-contracts/overview/uns-architecture-overview.md), and [Managing Domain Records](/smart-contracts/quick-start/manage-domain-records.md).
 
-:::info
+{% admonition type="info"%}
 A list of keys supported by Unstoppable Domains can be found in [reference json file](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json)
-:::
+{% /admonition %}
 
 ## Cryptocurrency payments
 

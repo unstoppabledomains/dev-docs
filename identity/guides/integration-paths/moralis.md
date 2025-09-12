@@ -1,9 +1,11 @@
 ---
 title: Moralis Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Moralis library.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/moralis-guide/
+description: >-
+  This integration guide is intended for a custom @uauth/js integration, with
+  ethereum provider, using the Moralis library.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/moralis-guide/: {}
 ---
 
 # Moralis Guide: Unstoppable Login
@@ -14,11 +16,11 @@ This is the basic installation guide for the `moralis` library and is best used 
 
 Install with `yarn` or `npm`.
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add @uauth/moralis react-moralis moralis
 ```
 
-```shell npm
+```shell {% title="npm" %}
 npm install --save @uauth/moralis react-moralis moralis
 ```
 
@@ -58,15 +60,15 @@ const connectors: Record<string, any> = {
 export default connectors;
 ```
 
-:::info
+{% admonition type="info"%}
 Because pop-ups are a more integration friendly approach, the `@uauth/moralis` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in the options passed to `setUAthOptions()` and create a callback page.
-:::
+{% /admonition %}
 
 ## Step 3: Unstoppable Login
 
 Once configured, the `react-moralis` library can be used normally.
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
 ```typescript
 import React from "react";
@@ -88,8 +90,8 @@ async function handleLogout() {
 }
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with Moralis.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

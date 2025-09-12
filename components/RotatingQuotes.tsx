@@ -1,5 +1,4 @@
 import React, { useState, useEffect, CSSProperties } from 'react';
-import { Typography } from '@redocly/developer-portal/ui';
 
 const quotes = [
   {
@@ -75,25 +74,11 @@ const QuoteContent: React.FC<{ quote: typeof quotes[0] | undefined }> = ({ quote
   
   return (
     <>
-      <Typography 
-        variant="h5" 
-        component="blockquote" 
-        sx={{ 
-          fontStyle: 'italic', 
-          mb: quote.author ? 2 : 0,
-          textAlign: 'center'
-        }}
-      >
+      <blockquote style={{ fontStyle: 'italic', marginBottom: quote.author ? '0.5rem' : 0, textAlign: 'center' }}>
         "{quote.text}"
-      </Typography>
+      </blockquote>
       {quote.author && (
-        <Typography 
-          variant="subtitle1" 
-          color="text.secondary"
-          sx={{ textAlign: 'center' }}
-        >
-          — {quote.author}
-        </Typography>
+        <p style={{ textAlign: 'center', color: '#666', margin: 0 }}>— {quote.author}</p>
       )}
     </>
   );

@@ -1,9 +1,11 @@
 ---
 title: Web3 Modal Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using web3 modal library.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/web3-modal-guide/
+description: >-
+  This integration guide is intended for a custom @uauth/js integration, with
+  ethereum provider, using web3 modal library.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/web3-modal-guide/: {}
 ---
 
 # Web3 Modal Guide: Unstoppable Login
@@ -21,11 +23,11 @@ This is the basic installation guide for the `web3modal` library and is best use
 
 Install with `yarn` or `npm`.
 
-```shell yarn
+```shell {% title="yarn" %}
 yarn add web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 ```
 
-```shell npm
+```shell {% title="npm" %}
 npm install --save web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 ```
 
@@ -87,15 +89,15 @@ UAuthWeb3Modal.registerWeb3Modal(web3modal);
 export default web3modal;
 ```
 
-:::info
+{% admonition type="info"%}
 Because pop-ups are a more integration friendly approach, the `@uauth/web3modal` library now uses them by default. If you want the "old" redirect functionality, you need to set `shouldLoginWithRedirect: true` in your `IUAuthOptions` and [create a callback page](/identity/sdk-and-libraries/web3-modal.md#shouldloginwithredirect)
-:::
+{% /admonition %}
 
 ## Step 3: Unstoppable Login
 
 Once configured, the `web3modal` library can be used normally.
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
 ```javascript
 import web3modal from './web3modal'
@@ -115,8 +117,8 @@ function handleLogout() {
 // Save provider in state
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with web3modal.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

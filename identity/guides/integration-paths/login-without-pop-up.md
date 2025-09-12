@@ -1,20 +1,22 @@
 ---
 title: Unstoppable Login without Popup
-description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and without popup.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/login-without-popup/
+description: >-
+  This integration guide is intended for a generic @uauth/js, no Ethereum
+  provider, with callback, and without popup.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/login-without-popup/: {}
 ---
 
 # Unstoppable Login without Popup
 
 This integration guide shows you how to add Login to Unstoppable to a single-page application without the popup feature, using a TypeScript and React Router example. You will configure the application to receive the authorization tokens and metadata by following the steps below.
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
-:::info dependencies
+{% admonition type="info" name="dependencies" %}
 The example code in this guide has the following dependencies: `typescript`, `react`, `react-router-dom`, `@uauth/js`
-:::
+{% /admonition %}
 
 ## Step 1: Create Your App
 
@@ -34,11 +36,11 @@ All example code can be added to the `/src/App.tsx` file created by this step.
 
 For this example, we will use the UAuth library for login authentication and React Router to handle single page routing.
 
-```sh yarn
+```sh {% title="yarn" %}
 yarn add react-router-dom @uauth/js
 ```
 
-```sh npm
+```sh {% title="npm" %}
 npm install --save react-router-dom @uauth/js
 ```
 
@@ -70,11 +72,11 @@ const uauth = new UAuth({
 });
 ```
 
-:::danger
-The redirect URIs used to configure this `UAuth` instance must be an **EXACT** match to the Redirect URIs [Redirect URI](login-client-configuration.md#redirect-uris) entered in your [Login Client Configuration](/identity/guides/client-configurations.md). See [Rules for Redirect URIs](login-client-configuration.md#rules-for-redirect-uris) for more details.
+{% admonition type="danger"%}
+The redirect URIs used to configure this `UAuth` instance must be an **EXACT** match to the [Redirect URIs](/identity/guides/client-configurations.md#redirect-uris) entered in your [Login Client Configuration](/identity/guides/client-configurations.md). See [Rules for Redirect URIs](/identity/guides/client-configurations.md#rules-for-redirect-uris) for more details.
 
 For local testing, they must also match the address and port your application is running on. For Create React App, this is `localhost:3000` by default.
-:::
+{% /admonition %}
 
 ## Step 4: Create a Login Button
 
@@ -222,8 +224,8 @@ return (
 );
 ```
 
-:::success Contratulations
+{% admonition type="success" name="Contratulations" %}
 You now have an Unstoppable Login single-page application without the popup feature. Type `yarn start`/`npm start` to preview your example application with a local server.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

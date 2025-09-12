@@ -1,10 +1,12 @@
 ---
 title: Error Codes for Unstoppable Login | UD Developer Portal
-description: This page provides error codes and explanations when troubleshooting the Unstoppable Login feature.
+description: >-
+  This page provides error codes and explanations when troubleshooting the
+  Unstoppable Login feature.
 showNextButton: false
-redirectFrom:
-  - /login-with-unstoppable/login-error-codes/
-  - /login-with-unstoppable/troubleshoot/login-error-codes/
+redirects:
+  /login-with-unstoppable/login-error-codes/: {}
+  /login-with-unstoppable/troubleshoot/login-error-codes/: {}
 ---
 
 # Login Error Codes

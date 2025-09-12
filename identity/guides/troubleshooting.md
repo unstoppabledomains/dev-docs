@@ -1,10 +1,12 @@
 ---
 title: Troubleshooting Guide for Unstoppable Login | UD Developer Portal
-description: This page reviews frequently encountered problems when integrating the Unstoppable Login feature. Potential solutions are included.
+description: >-
+  This page reviews frequently encountered problems when integrating the
+  Unstoppable Login feature. Potential solutions are included.
 showNextButton: false
-redirectFrom:
-  - /login-with-unstoppable/troubleshooting-guide/
-  - /login-with-unstoppable/troubleshoot/troubleshooting-guide/
+redirects:
+  /login-with-unstoppable/troubleshooting-guide/: {}
+  /login-with-unstoppable/troubleshoot/troubleshooting-guide/: {}
 ---
 
 # Troubleshooting Guide

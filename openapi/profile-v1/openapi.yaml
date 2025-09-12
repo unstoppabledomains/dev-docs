@@ -1,0 +1,10 @@
+openapi: 3.1.0
+info:
+  title: Profile
+  version: 1.0.0
+  description: |
+    {% admonition type="danger" name="Example file" %}
+      This file was automatically generated and should be replaced with the actual OpenAPI definition.
+      Please, connect remote content in Reunite.
+    {% /admonition %}
+paths: {}

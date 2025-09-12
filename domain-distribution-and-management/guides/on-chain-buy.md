@@ -59,9 +59,9 @@ An example payload would be:
 }
 ```
 
-:::info
+{% admonition type="info"%}
 Currently `MATIC` is the only supported currency.
-:::
+{% /admonition %}
 
 You will get JSON response that confirms the domain availability and pricing, as well as the encoded transaction details such as: 
 

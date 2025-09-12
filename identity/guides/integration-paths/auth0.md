@@ -1,9 +1,11 @@
 ---
 title: Auth0 Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide will demonstrate how to configure the Unstoppable Domains social connection for Auth0.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/auth0-guide/
+description: >-
+  This integration guide will demonstrate how to configure the Unstoppable
+  Domains social connection for Auth0.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/auth0-guide/: {}
 ---
 
 # Auth0 Guide: Unstoppable Login
@@ -31,9 +33,9 @@ In addition to the basic configuraton outlined in [Login Client Configuration](/
 2. Set the [Token Endpoint Authentication Method](/identity/guides/client-configurations.md#token-endpoint-authentication-method) in the **Advanced** configuration page to **Client Secret Post**.
 3. Click **Confirm Changes**.
 
-:::warning
+{% admonition type="warning"%}
 Make sure that you copy the `client_secret` from the client metadata on the **Login** page of your client configuration. You won't be able to view it again without clicking **Rotate Secret** to generate a new one.
-:::
+{% /admonition %}
 
 ## Step 3: Add the UD Social Connection
 
@@ -44,9 +46,10 @@ Next you will need to add and configure the social connection. This will require
 3. Read the necessary access requirements and click **Continue**.
 4. Configure the integration using the `client_id` and `client_secret` from your login client metadata.
 5. Select the **Permissions** needed for your app
-   :::warning
+   {% admonition type="warning"%}
    The **Optional** and **Required** variations of each permission are mutually exclusive. Enabling both (e.g. `User profile (required)` and `User profile (optional)`), will result in an error. See [Optional Scopes](/identity/guides/login-scopes.md#optional-scopes) for more information.
-   :::
+   
+   {% /admonition %}
 6. Turn on or off syncing user profile attributes at each login
 7. Click **Create**
 8. Select the **Applications** tab and choose the apps that should use the Unstoppable Domains social connection
@@ -147,6 +150,6 @@ Once your app is using the Unstoppable Domains social connection, Auth0 will be 
 <figcaption>Example user metadata</figcaption>
 </figure>
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with Auth0.
-:::
+{% /admonition %}

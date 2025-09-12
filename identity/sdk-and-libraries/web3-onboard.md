@@ -1,8 +1,10 @@
 ---
 title: Blocknative UAuth Module | Unstoppable Domains Developer Portal
-description: This page provides documents the public interface of the @web3-onboard/uauth Blocknative module.
-redirectFrom:
-  - /login-with-unstoppable/libraries/web3-onboard-uauth/
+description: >-
+  This page provides documents the public interface of the @web3-onboard/uauth
+  Blocknative module.
+redirects:
+  /login-with-unstoppable/libraries/web3-onboard-uauth/: {}
 ---
 
 # UAuth Web3-Onboard Library

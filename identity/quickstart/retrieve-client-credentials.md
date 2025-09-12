@@ -1,19 +1,19 @@
 ---
 title: Retrieve Client Credentials | Unstoppable Domains Developer Portal
 description: This page provides a guide to retrieve Login client credentials
-redirectFrom:
-  - /login-with-unstoppable/developer-integration
-  - /login-with-unstoppable/login-integration-guides/
-  - /login-with-unstoppable/login-integration-guides/integration-pathways/
-  - /login-with-unstoppable/get-started-login/integration-pathways/
-  - /login-with-unstoppable/get-started-login/
+redirects:
+  /login-with-unstoppable/developer-integration: {}
+  /login-with-unstoppable/login-integration-guides/: {}
+  /login-with-unstoppable/login-integration-guides/integration-pathways/: {}
+  /login-with-unstoppable/get-started-login/integration-pathways/: {}
+  /login-with-unstoppable/get-started-login/: {}
 ---
 
 # Retrieve Client Credentials
 
 Unstoppable Login is a versatile feature with several integration pathways available for developers. This guide will step you through your first login integration with one of several supported libraries.
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
 ## Step 1: Get Your Client Credentials
 
@@ -43,9 +43,9 @@ Once you've created your client, you will need the **Client Metadata** to config
 <figcaption>Example client metadata</figcaption>
 </figure>
 
-:::info
+{% admonition type="info"%}
 The `scope` property of your client metadata will default to `"openid wallet"`, which is the minimum scope required for login. You can request additional information from users by adding additional scopes to this string. For information on the other scopes Login supports, see [Scopes for Login](/identity/guides/login-scopes.md).
-:::
+{% /admonition %}
 
 ## Step 2: Choose Your Integration Path
 
@@ -67,6 +67,6 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 | [Auth0](/identity/guides/integration-paths/auth0.md)               |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
 | [WAGMI](/identity/guides/integration-paths/wagmi.md)               |      [WAGMI](https://github.com/unstoppabledomains/uauth/tree/main/examples/wagmi)       |   &#10060;    |    `@uauth/wagmi`     |    `wagmi`     |
 
-:::info
+{% admonition type="info"%}
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
-:::
+{% /admonition %}

@@ -99,7 +99,7 @@ The `x-ud-signature` header is a Base64 encoded HMAC-SHA256 of the raw payload b
 
 You simply need to recompute the HMAC in your application to verify the request:
 
-```typescript TypeScript (Node)
+```typescript {% title="TypeScript (Node)" %}
 import { createHmac } from 'crypto';
 
 function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApiKey: string): boolean {
@@ -110,7 +110,7 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
 }
 ```
 
-```python Python
+```python {% title="Python" %}
 import hashlib
 import hmac
 import base64
@@ -121,7 +121,7 @@ def verify_request(signature_header, raw_body_bytes, account_api_key):
     return computed_signature == signature_header
 ```
 
-```go Go
+```go {% title="Go" %}
 import (
     "crypto/hmac"
     "crypto/sha256"
@@ -138,7 +138,7 @@ func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey st
 }
 ```
 
-```java Java
+```java {% title="Java" %}
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
@@ -163,14 +163,14 @@ public static boolean verifyRequest(String signatureHeader, byte[] rawBodyBytes,
 }
 ```
 
-```php PHP
+```php {% title="PHP" %}
 function verifyRequest($signatureHeader, $rawBodyBytes, $accountApiKey) {
     $computedSignature = base64_encode(hash_hmac('sha256', $rawBodyBytes, $accountApiKey, true));
     return $computedSignature === $signatureHeader;
 }
 ```
 
-```csharp C#
+```csharp {% title="C#" %}
 using System;
 using System.Security.Cryptography;
 using System.Text;

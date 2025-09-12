@@ -1,8 +1,11 @@
 ---
 title: Manage Domains Using Smart Contracts Guide | UD Developer Portal
-description: This guide covers how to manage UD domain records using the Etherscan, Polygonscan, and Basescan user interfaces to write and execute proxy contracts.
-redirectFrom:
-  - /manage-domains/managing-domains-using-contracts/
+description: >-
+  This guide covers how to manage UD domain records using the Etherscan,
+  Polygonscan, and Basescan user interfaces to write and execute proxy
+  contracts.
+redirects:
+  /manage-domains/managing-domains-using-contracts/: {}
 ---
 
 # Manage Domains Using Smart Contracts
@@ -17,9 +20,9 @@ The [UNS Registry](/smart-contracts/contract-reference/uns-smart-contracts.md#un
 - [Polygon Mainnet Registry](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f)
 - [Base Mainnet Registry](https://basescan.org/address/0xF6c1b83977DE3dEffC476f5048A0a84d3375d498)
 
-:::info
+{% admonition type="info"%}
 For help identifying which Registry to use for which TLD, refer to the `meta` object returned from the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds). Use the registry that aligns with the `registrationBlockchain` for your TLD.
-:::
+{% /admonition %}
 
 <figure>
 
@@ -84,13 +87,13 @@ Next, add the record(s) you want to manage to the `key` and `value` fields as a 
 <figcaption>adding records with setMany</figcaption>
 </figure>
 
-:::info
+{% admonition type="info"%}
 Please see the [Record Reference](/resolution/records-reference.md) guide and [reference JSON](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json) file for all the resolver keys used by the Unstoppable Domains UNS Registry.
-:::
+{% /admonition %}
 
 ## Step 5: Generate the Namehash of the Domain
 
-<embed src="/snippets/_namehashing-snippets.md" />
+{% partial file="/_partials/_namehashing-snippets.md" /%}
 
 After generating the domain namehash, insert it into the `tokenId` field of the `set` or `setMany` method.
 
@@ -112,6 +115,6 @@ Click the `Write` button to sign the transaction and execute the contract. After
 <figcaption>polygonscan transaction details</figcaption>
 </figure>
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have successfully managed your Unstoppable Domain records using smart contracts. Happy hacking!
-:::
+{% /admonition %}

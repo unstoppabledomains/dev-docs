@@ -1,9 +1,9 @@
 ---
 title: Unstoppable Login | Unstoppable Domains Developer Portal
 description: This page provides a high-level overview of the Unstoppable Login feature.
-redirectFrom:
-  - /login-with-unstoppable/high-level-overview/
-  - /login-with-unstoppable/
+redirects:
+  /login-with-unstoppable/high-level-overview/: {}
+  /login-with-unstoppable/: {}
 ---
 
 # Unstoppable Login Overview
@@ -54,12 +54,12 @@ Unstoppable Login automatically supports all Unstoppable Domains TLDs as well as
 
 For the full list, check the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds).
 
-:::warning 
+{% admonition type="warning"%}
 Unstoppable Login only supports `.zil` domains that have been bridged to the Polygon blockchain.
-:::
+{% /admonition %}
 
 ## Considerations
 
 - The components provided by the UAuth libraries are only available in React. The UAuth modal is written in React, which has a larger library size.
 
-<embed src="/snippets/_developer-survey-embed.md" />
+{% partial file="/_partials/_developer-survey-embed.md" /%}

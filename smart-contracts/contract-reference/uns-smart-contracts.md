@@ -1,10 +1,12 @@
 ---
 title: UNS Smart Contracts | Unstoppable Domains Developer Portal
-description: This page provides brief descriptions with links to source code and deployment addresses for the Unstoppable Name Service smart contracts.
-redirectFrom:
-  - /developer-toolkit/reference/smart-contracts/uns-smart-contracts/
+description: >-
+  This page provides brief descriptions with links to source code and deployment
+  addresses for the Unstoppable Name Service smart contracts.
 editPage:
   disable: true
+redirects:
+  /developer-toolkit/reference/smart-contracts/uns-smart-contracts/: {}
 ---
 
 # UNS Smart Contracts
@@ -18,9 +20,9 @@ This page is divided into sections, grouping contracts by the following categori
 - [Interfaces](uns-smart-contracts.md#interfaces)
 - [Utility contracts](uns-smart-contracts.md#utility-contracts)
 
-:::info
+{% admonition type="info"%}
   All contract addresses are available on the [UNS GitHub repository](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md)
-:::
+{% /admonition %}
 
 ## User-facing contracts
 
@@ -30,7 +32,7 @@ This section lists all the smart contracts that members can directly interact wi
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides [ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
 
-Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/resolution/guides/records-reference.md).
+Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows members to store arbitrary records, even those that aren't specified by the [Records reference](/resolution/records-reference.md).
 
 **Source code:** [contracts/UnsRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/UNSRegistry.sol)
 

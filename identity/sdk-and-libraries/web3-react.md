@@ -1,8 +1,10 @@
 ---
 title: UAuth Web3-React Library | Unstoppable Domains Developer Portal
-description: This page provides documents the public interface of the @uauth/web3-react middleware library.
-redirectFrom:
-  - /login-with-unstoppable/libraries/uauth-web3-react/
+description: >-
+  This page provides documents the public interface of the @uauth/web3-react
+  middleware library.
+redirects:
+  /login-with-unstoppable/libraries/uauth-web3-react/: {}
 ---
 
 # UAuth Web3-React Library

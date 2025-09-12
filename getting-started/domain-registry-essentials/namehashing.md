@@ -19,7 +19,7 @@ To verify an implementation of the namehash algorithm, use the following referen
 
 ## Generating a Domain Namehash
 
-<embed src="/snippets/_namehashing-snippets.md" />
+{% partial file="/_partials/_namehashing-snippets.md" /%}
 
 ## Reverse Lookup
 

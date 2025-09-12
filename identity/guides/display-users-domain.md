@@ -10,7 +10,7 @@ Once a user has successfully authenticated, the application should display the u
 Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
 Any integration using [@uauth/js](/identity/sdk-and-libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/identity/sdk-and-libraries/uauth-js.md#client) object with the same client options and calling the [user()](/identity/sdk-and-libraries/uauth-js.md#user) method.
 
-```javascript @uauth/js
+```javascript {% title="@uauth/js" %}
 import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
@@ -27,7 +27,7 @@ uauth.user()
   })
 ```
 
-```javascript web3-onboard
+```javascript {% title="web3-onboard" %}
 const wallets$ = onboard.state.select('wallets').pipe(share())
 
 wallets$.subscribe(wallet => {
@@ -39,13 +39,13 @@ wallets$.subscribe(wallet => {
 })
 ```
 
-```javascript web3-react
+```javascript {% title="web3-react" %}
 const uauthConnector = new UAuthConnector()
 
 uauthConnector.uauth.user().then().catch()
 ```
 
-```javascript web3modal
+```javascript {% title="web3modal" %}
 import UAuth from '@uauth/js'
 
 const uauthOptions = {
@@ -63,7 +63,7 @@ const web3Modal = new Web3Modal(web3ModalOptions)
 new UAuth(uauthOptions).user().then().catch()
 ```
 
-```javascript moralis
+```javascript {% title="moralis" %}
 const uauthMoralisConnector = new UAuthMoralisConnector()
 
 uauthMoralisConnector.uauth.user().then().catch()
