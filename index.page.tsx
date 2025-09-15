@@ -9,19 +9,13 @@ export const frontmatter = {
 export default function Page() {
   return (
     <>
-      <style>{`
-        @import url('/static/css/main.css');
-        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap');
-      `}</style>
       <main>
         <section className="padding-top-bottom-20 jumbotron" style={{ textAlign: 'center' }}>
           <h2 className="margin-top-bottom-20 jumbotron-h2">Developer Documentation</h2>
           <h1 className="margin-top-bottom-20 jumbotron-h1">Effortless building starts here.</h1>
-          <h3>Everything you need to build, customize, and integrate with Unstoppable Domains.</h3>
-          <div style={{ marginTop: '1.5rem', display: 'inline-flex', gap: '0.75rem' }}>
-            <a href="/getting-started/overview" className="header-button" style={{ padding: '0.5rem 1rem', background: '#0D67FE', color: '#fff', borderRadius: 24, textDecoration: 'none' }}>Get started</a>
-            <a href="/openapi/overview" className="header-button" style={{ padding: '0.5rem 1rem', border: '1px solid #0D67FE', color: '#0D67FE', borderRadius: 24, textDecoration: 'none' }}>API reference</a>
+          <h3>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
+          <div className="header-button-container">
+            <a href="/getting-started/overview" className="header-button" style={{ padding: '0.5rem 1rem', background: 'var(--color-primary)', color: '#fff', borderRadius: 24, textDecoration: 'none' }}>Build with us</a>
           </div>
         </section>
 
@@ -35,35 +29,50 @@ export default function Page() {
           </div>
         </div>
 
-        <section className="padding-top-bottom-20" style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
-            <a href="/domain-distribution-and-management/overview" className="tile" style={{ padding: '1rem', border: '1px solid #eee', textDecoration: 'none', color: 'inherit' }}>
-              <h2 style={{ marginTop: 0, fontSize: '1.1rem' }}>Sell domains in your app</h2>
+        <section style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <h2 className="margin-top-bottom-30" style={{ color: 'black', fontSize: '2.5rem', textAlign: 'center' }}>
+            <strong> Build your application today! </strong>
+          </h2>
+        </section>
+
+        <section className="tiles-section" style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div className="tiles-container">
+            <a href="/domain-distribution-and-management/overview" className="tile">
+              <div className="tile-image-container">
+                <img src="/static/images/sell-domains.png" alt="Sell domains" style={{ width: 130, height: 'auto' }} />
+              </div>
+              <h2 className="tile-title">Sell Domains in your App</h2>
               <div className="tile-content">
                 Register and manage onchain domains natively within your app.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ border: '1px solid #0D67FE', color: '#0D67FE', padding: '10px 24px' }}>Get started</span>
+                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
               </div>
             </a>
 
-            <a href="/resolution/overview" className="tile" style={{ padding: '1rem', border: '1px solid #eee', textDecoration: 'none', color: 'inherit' }}>
-              <h2 style={{ marginTop: 0, fontSize: '1.1rem' }}>Resolve domains in your app</h2>
+            <a href="/resolution/overview" className="tile">
+              <div className="tile-image-container">
+                <img src="/static/images/resolve domains.png" alt="Resolve domains" style={{ width: 130, height: 'auto' }} />
+              </div>
+              <h2 className="tile-title">Resolve Domains in your App</h2>
               <div className="tile-content">
-                Fetch crypto addresses, IPFS hashes, and metadata from domains.
+                Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ border: '1px solid #0D67FE', color: '#0D67FE', padding: '10px 24px' }}>Get started</span>
+                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
               </div>
             </a>
 
-            <a href="/smart-contracts/overview/uns-architecture-overview" className="tile" style={{ padding: '1rem', border: '1px solid #eee', textDecoration: 'none', color: 'inherit' }}>
-              <h2 style={{ marginTop: 0, fontSize: '1.1rem' }}>Smart contracts</h2>
+            <a href="/openapi/overview" className="tile">
+              <div className="tile-image-container">
+                <img src="/static/images/api-reference.png" alt="API Reference" style={{ width: 130, height: 'auto' }} />
+              </div>
+              <h2 className="tile-title">API Reference</h2>
               <div className="tile-content">
-                Explore UNS and CNS architecture and contract references.
+                Consult the documentation and live testing features of Unstoppable Domains APIs, including the Resolution Service API and Partner API.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ border: '1px solid #0D67FE', color: '#0D67FE', padding: '10px 24px' }}>Explore</span>
+                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
               </div>
             </a>
           </div>

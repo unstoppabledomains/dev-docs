@@ -1,0 +1,555 @@
+:root {
+    --ud-blue: #0D67FE;
+    --ud-sky-blue: #00C9FF;
+    --video-max-width: 100%;
+    --video-aspect-ratio: calc(9/16);
+    
+    /* Redocly Realm CSS variables: migrated from theme.ts
+       Reference: https://redocly.com/docs/realm/branding/css-variables */
+    /* Brand and primary colors */
+    --color-primary: var(--ud-blue);
+    --color-primary-light: color-mix(in srgb, var(--color-primary) 70%, white);
+    --color-primary-dark: color-mix(in srgb, var(--color-primary) 70%, black);
+
+    /* Text colors */
+    --text-color-primary: #424242;
+    --text-color-secondary: var(--color-primary);
+
+    /* Navigation */
+    --navbar-bg-color: #ffffff;
+    --navbar-text-color: #000000;
+
+    /* Footer */
+    --footer-bg-color: #E4E7EB;
+    --footer-text-color: #000000;
+
+    /* Sidebar */
+    --sidebar-bg-color: #fafafa;
+    --sidebar-width: 260px;
+
+    /* Right panel */
+    --right-panel-bg-color: #263238;
+    --right-panel-width: 40%;
+
+    /* HTTP method colors */
+    --http-get-color: #6bbd5b;
+    --http-post-color: #248fb2;
+    --http-put-color: #9b708b;
+    --http-options-color: #d3ca12;
+    --http-patch-color: #e09d43;
+    --http-delete-color: #e27a7a;
+    --http-basic-color: #999999;
+    --http-link-color: #31bbb6;
+    --http-head-color: #c167e4;
+
+    /* Typography */
+    --font-size-base: 18px;
+    --line-height-base: 1.5em;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+    --font-weight-light: 300;
+    --font-family-base: "Source Sans Pro", sans-serif;
+    --font-family-headings: "Source Sans Pro", sans-serif;
+
+    /* Headings */
+    --heading1-color: var(--text-color-secondary);
+    --heading2-color: var(--text-color-secondary);
+    --heading3-color: color-mix(in srgb, var(--text-color-secondary) 80%, white);
+
+    /* Links */
+    --link-color: var(--text-color-secondary);
+    --link-visited-color: var(--link-color);
+    --link-hover-color: color-mix(in srgb, var(--link-color) 70%, white);
+
+    /* Code (inline and blocks) */
+    --code-font-size: 13px;
+    --code-font-family: "Source Code Pro", sans-serif;
+    --code-inline-color: #e53935;
+    --code-inline-bg: rgba(38, 50, 56, 0.04);
+    --code-block-bg-color: #232a2f; /* derived from right panel bg */
+
+    /* Schema */
+    --schema-nested-bg-color: #fafafa;
+    --schema-type-name-color: var(--text-color-secondary);
+    --schema-type-title-color: var(--schema-type-name-color);
+
+    /* Alerts */
+    --alert-info-bg-color: #F5F7F9;
+    --alert-info-text-color: var(--text-color-primary);
+    --alert-info-heading-color: var(--text-color-primary);
+    --alert-info-icon-color: #3455DB;
+
+    --alert-attention-bg-color: #F5F7F9;
+    --alert-attention-text-color: var(--text-color-primary);
+    --alert-attention-heading-color: var(--text-color-primary);
+    --alert-attention-icon-color: #3455DB;
+
+    --alert-warning-bg-color: #F5F7F9;
+    --alert-warning-text-color: var(--text-color-primary);
+    --alert-warning-heading-color: var(--text-color-primary);
+    --alert-warning-icon-color: #D4AD03;
+
+    --alert-danger-bg-color: #F5F7F9;
+    --alert-danger-text-color: var(--text-color-primary);
+    --alert-danger-heading-color: var(--text-color-primary);
+    --alert-danger-icon-color: #E53935;
+
+    --alert-success-bg-color: #F5F7F9;
+    --alert-success-text-color: var(--text-color-primary);
+    --alert-success-heading-color: var(--text-color-primary);
+    --alert-success-icon-color: #03AD13;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+figure :is(p, img, figcaption) {
+    text-align: center;
+}
+
+/* Redocly-generated img is wrapped in <p> tag, which adds block start/end margins */
+figure p {
+    margin-block: 0;
+}
+
+figure .video-container, figure > p > img, figure .gatsby-resp-image-wrapper {
+    -webkit-filter: drop-shadow(0 0 1px #000);
+    filter: drop-shadow(0 0 1px #000);
+}
+  
+figure .gatsby-img-attributes {
+    display: inline-block!important;
+}
+
+figure p img {
+    /* Center markdown images inside of their generated wrapping <p> tags */
+    vertical-align: middle;
+}
+
+figure figcaption {
+    margin-top: 0.5em;
+}
+
+figcaption {
+    font-size: 16px;
+    color: #A0A0A0;
+}
+
+.custom-next-to {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custom-next-to p {
+    margin-block: 0;
+}
+
+.custom-next-to a {
+    padding: 8px 20px;
+    font-size: 14px;
+
+    font-weight: 600;
+
+    outline: none;
+    border: none;
+    border-radius: 4px;
+
+    background-color: #ffffff;
+    color: #3E4C59!important;
+    box-shadow: none;
+    -webkit-transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    transition: background-color 0.25s ease,box-shadow 0.25s ease;
+}
+
+.custom-next-to a strong {
+    font-weight: 800;
+}
+
+.custom-next-to a:hover {
+    background-color:#f2f2f2;
+    box-shadow:0px 0px 12px 0px rgba(0,0,0,0.1);
+}
+
+.one-third-inline-block {
+    vertical-align: top;
+    width: 32%;
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+.half-inline-block {
+    vertical-align: top;
+    width: 48%;
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+@media only screen and (max-width: 450px) {
+    figure img {
+        min-width: 85%;
+    }
+
+    .one-third-inline-block {
+        width: 99%;
+    }
+
+    .half-inline-block {
+        width: 99%;
+    }
+}
+
+.video-container {
+    position: relative;
+    max-width: var(--video-max-width);
+    /* calculate height based on aspect ratio (or default to 16:9) and clamp based on max-width */
+    padding-bottom: min(
+        calc(var(--video-aspect-ratio) * 100%),
+        calc(var(--video-aspect-ratio) * var(--video-max-width))
+      );
+    height: 0;
+  }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    Custom styles for Redocly code block tabs
+*/
+
+.code-snippets-tabs .snippets-tabs-headers {
+    background-color: grey;
+    border-radius: 4px 4px 0 0!important;
+}
+
+.code-snippets-tabs .snippets-tabs-headers .tab-header {
+    color: lightgrey!important;
+}
+
+.code-snippets-tabs .snippets-tabs-headers .tab-header:first-of-type {
+    border-top-left-radius: 4px;
+}
+
+.code-snippets-tabs .snippets-tabs-headers .tab-header:last-of-type {
+    border-top-right-radius: 4px;
+}
+
+.code-snippets-tabs .snippets-tabs-headers .tab-header.active {
+    color: white!important;
+    background-color: #323F4B;
+    border-bottom: 2px solid var(--ud-blue);
+}
+
+.code-snippets-tabs .tab-content {
+    margin: 0!important;
+}
+
+.code-snippets-tabs .gatsby-highlight pre {
+    border-radius: 0 0 4px 4px!important;
+}
+
+
+/* Goofy hack to hide the TOC panel in most of "medium" breakpoint */
+@media only screen and (max-width: 1050px) {
+    #gatsby-focus-wrapper > div > div > div > div > section {
+        width: 90%!important;
+    }
+
+    #gatsby-focus-wrapper > div > div > div > div > aside {
+        display: none!important;
+    }
+}
+
+.padding-top-bottom-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.padding-top-bottom-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.margin-top-bottom-20 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.margin-top-bottom-30 {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+/* ThinTile image styles */
+.sc-fVLGaz {
+    width: 130px !important;
+}
+
+/* ThinTile description styles */
+.geqZxh {
+    height: 35px !important;
+}
+
+/* =========================================
+   Landing Page Custom Styles
+   ========================================= */
+
+/* Jumbotron styles */
+.jumbotron {
+  background: #122753 !important;
+  flex-direction: column;
+  padding: 0px 0px 8em;
+  display: flex;
+  max-width: 100%;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.jumbotron h3 {
+  color: white;
+  margin: auto;
+  font-size: 1.27em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+}
+
+.jumbotron-h2 {
+    color: white !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 1.875em;
+    line-height: 1;
+    font-weight: 300;
+    margin: 0px 0px 2em;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+.jumbotron-h1 {
+    color: white !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 3.5em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 1.75em 0px 0.5em;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Stats section styles */
+.stats-section {
+  background: #eeeeee;
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100%;
+}
+
+.stats-container {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.stats-flex {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.stat-box.middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.stat-box h3 {
+  margin: 0 0 10px 0;
+  color: black;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+/* Tile styles */
+.tiles-section {
+  max-width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.tiles-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .tiles-container {
+    width: 910px;
+  }
+}
+
+.tile-title {
+  margin: 0px 0px 0.5em;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.25;
+  color: rgba(13, 103, 254, 0.9);
+}
+
+.tile-image-container {
+  display: flex;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 100%;
+  margin-bottom: 25px;
+  height: auto;
+}
+
+@media screen and (min-width: 900px) {
+  .tile-image-container {
+    height: 110px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .tile-image-container {
+    height: 100px;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(35, 35, 35, 0.1) 0px 10px 30px 0px;
+  box-sizing: border-box;
+  transition: box-shadow 0.25s;
+  padding: 24px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-repeat: no-repeat;
+  height: 450px;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .tile {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .tile {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .tile {
+    width: calc(50% - 20px);
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.tile-content {
+  flex: 1;
+  padding: 20px 0;
+  padding-bottom: 80px;
+}
+
+.tile-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.tile-button {
+  border-radius: 1.5rem !important;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+}
+
+.header-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header-button {
+    border-radius: 1.5rem !important;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
+    line-height: 1;
+    font-family: inherit;
+    box-shadow: none;
+    background-color: rgb(13, 103, 254);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 20px 24px !important;
+    min-width: 200px;
+    height: 56px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stat-box.middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+  }
+}
