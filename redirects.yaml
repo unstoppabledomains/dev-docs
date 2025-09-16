@@ -307,3 +307,6 @@
 '/smart-contracts/quick-start/mint-subdomains/':
   to: '/getting-started/overview/'
   type: 301
+'/openapi/*':
+  to: '/apis/overview'
+  type: 301

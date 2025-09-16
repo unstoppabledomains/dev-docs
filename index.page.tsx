@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { RotatingQuotes } from './components/RotatingQuotes';
-import { DeveloperSurvey } from './components/DeveloperSurvey';
+import { RotatingQuotes } from './@theme/components/RotatingQuotes';
+import { DeveloperSurvey } from './@theme/components/DeveloperSurvey';
 
 export const frontmatter = {
   "title": "Unstoppable Domains Developer Documentation Portal"
@@ -19,7 +19,7 @@ export default function Page() {
           </div>
         </section>
 
-        <div className="stats-section">
+        <section className="stats-section">
           <div className="stats-container">
             <div className="stats-flex">
               <div className="stat-box"><h3>Quick and Easy Integration</h3></div>
@@ -27,7 +27,7 @@ export default function Page() {
               <div className="stat-box"><h3>Hundreds of Integrated Partners</h3></div>
             </div>
           </div>
-        </div>
+        </section>
 
         <section style={{ maxWidth: 1200, margin: '0 auto' }}>
           <h2 className="margin-top-bottom-30" style={{ color: 'black', fontSize: '2.5rem', textAlign: 'center' }}>
@@ -37,44 +37,50 @@ export default function Page() {
 
         <section className="tiles-section" style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="tiles-container">
-            <a href="/domain-distribution-and-management/overview" className="tile">
-              <div className="tile-image-container">
-                <img src="/static/images/sell-domains.png" alt="Sell domains" style={{ width: 130, height: 'auto' }} />
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <img src="/static/images/sell-domains.png" alt="Sell domains" className="tile-image" />
+                </div>
+                <h2 className="tile-title">Sell Domains in your App</h2>
               </div>
-              <h2 className="tile-title">Sell Domains in your App</h2>
               <div className="tile-content">
                 Register and manage onchain domains natively within your app.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
+                <a href="/domain-distribution-and-management/overview"  className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
               </div>
-            </a>
+            </div>
 
-            <a href="/resolution/overview" className="tile">
-              <div className="tile-image-container">
-                <img src="/static/images/resolve domains.png" alt="Resolve domains" style={{ width: 130, height: 'auto' }} />
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <img src="/static/images/resolve domains.png" alt="Resolve domains" className="tile-image" />
+                </div>
+                <h2 className="tile-title">Resolve Domains in your App</h2>
               </div>
-              <h2 className="tile-title">Resolve Domains in your App</h2>
               <div className="tile-content">
                 Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
+                <a href="/resolution/overview" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
               </div>
-            </a>
+            </div>
 
-            <a href="/openapi/overview" className="tile">
-              <div className="tile-image-container">
-                <img src="/static/images/api-reference.png" alt="API Reference" style={{ width: 130, height: 'auto' }} />
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <img src="/static/images/api-reference.png" alt="API Reference" className="tile-image" />
+                </div>
+                <h2 className="tile-title">API Reference</h2>
               </div>
-              <h2 className="tile-title">API Reference</h2>
               <div className="tile-content">
                 Consult the documentation and live testing features of Unstoppable Domains APIs, including the Resolution Service API and Partner API.
               </div>
               <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <span className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</span>
+                <a href="/apis/overview" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
               </div>
-            </a>
+            </div>
           </div>
         </section>
 

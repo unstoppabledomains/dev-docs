@@ -1,6 +1,6 @@
 - group: Getting Started
   expanded: false
-  items:
+  pages:
     - label: "Overview"
       page: getting-started/overview.md
     - label: Glossary
@@ -8,14 +8,14 @@
   separatorLine: true
 - group: Resolution
   expanded: false
-  items:
+  pages:
     - label: Resolution Overview
       page: resolution/overview.md
     - label: Reverse Resolution Overview
       page: resolution/rr-overview.md
     - group: Quickstart
       expanded: false
-      items:
+      pages:
         - label: Retrieve an API Key
           page: resolution/quickstart/retrieve-an-api-key.md
         - label: Resolve Domains
@@ -24,10 +24,10 @@
           page: resolution/quickstart/reverse-resolution.md
     - group: Guides
       expanded: false
-      items:
+      pages:
         - group: Browser resolution (HTTP & IPFS)
           expanded: false
-          items:
+          pages:
             - label: Overview
               page: resolution/guides/browser-resolution/overview.md
             - label: Algorithm
@@ -40,14 +40,14 @@
           page: resolution/guides/rr-faq.md
     - group: Tech References
       expanded: false
-      items:
+      pages:
         - label: Resolution API
-          link: /openapi/resolution/
+          link: /apis/resolution/
         - label: Records reference
           page: resolution/records-reference.md
         - group: Smart Contracts
           expanded: false
-          items:
+          pages:
             - label: Resolution Contracts
               page: smart-contracts/quick-start/resolve-domains.md
             - label: Reverse Resolution Contracts
@@ -55,17 +55,17 @@
   separatorLine: true
 - group: Partner API
   expanded: false
-  items:
+  pages:
     - label: "Overview"
       page: domain-distribution-and-management/overview.md
     - group: Quickstart
       expanded: false
-      items:
+      pages:
         - label: Retrieve an API key
           page: domain-distribution-and-management/quickstart/retrieve-an-api-key.md
     - group: Guides
       expanded: false
-      items:
+      pages:
         - label: Sell Domains
           page: domain-distribution-and-management/guides/sell-domains.md
         - label: Implement Webhooks
@@ -74,33 +74,33 @@
           page: domain-distribution-and-management/guides/on-chain-buy.md
     - group: Tech References
       expanded: false
-      items:
+      pages:
         - label: Partner API
-          link: /openapi/partner/
+          link: /apis/partner/
         - group: Smart Contracts
           expanded: false
-          items:
+          pages:
             - label: Manage Domain Records
               page: smart-contracts/quick-start/manage-domain-records.md
   separatorLine: true
 - group: Login With Unstoppable
   expanded: false
-  items:
+  pages:
     - label: Overview
       page: identity/overview/login-with-unstoppable.md
     - group: Quickstart
       expanded: false
-      items:
+      pages:
         - label: Retrieve Client Credentials
           page: identity/quickstart/retrieve-client-credentials.md
         - label: Login with Pop-Up
           page: identity/quickstart/login-with-pop-up.md
     - group: Guides
       expanded: false
-      items:
+      pages:
         - group: Integration Paths
           expanded: false
-          items:
+          pages:
             - label: Login without Pop-Up
               page: identity/guides/integration-paths/login-without-pop-up.md
             - label: Node.js
@@ -124,35 +124,35 @@
         - label: Display Users Domain
           page: identity/guides/display-users-domain.md
         - label: Best Practices
-          page: identity/guides/best-practices.md
+          page: identity/guides/best-practices.mdx
         - label: Troubleshooting
           page: identity/guides/troubleshooting.md
         - label: FAQs
           page: identity/guides/faq.md
     - group: Tech References
       expanded: false
-      items:
+      pages:
         - group: APIs
           expanded: false
-          items:
+          pages:
             - label: Login API
-              link: /openapi/loginref/
+              link: /apis/loginref/
             - label: Profile API
-              link: /openapi/profile-v1/
+              link: /apis/profile-v1/
             - label: Messaging API
-              link: /openapi/messaging-v1/
+              link: /apis/messaging-v1/
             - label: Error codes
               page: identity/api-reference/error-codes.md
         - group: Login Protocols
           expanded: false
-          items:
+          pages:
             - label: Authorization Server
               page: identity/guides/login-protocols/authorization-server.md
             - label: Authentication Protocol
               page: identity/guides/login-protocols/authentication-protocol.md
         - group: SDKs and Libraries
           expanded: false
-          items:
+          pages:
             - label: Overview
               page: identity/sdk-and-libraries/overview.md
             - label: UAuth JS
@@ -170,17 +170,17 @@
   separatorLine: true
 - group: Contract Architecture
   expanded: false
-  items:
+  pages:
     - group: UNS Architecture
       expanded: false
-      items:
+      pages:
         - label: "Overview"
           page: smart-contracts/overview/uns-architecture-overview.md
         - label: "Smart Contract"
           page: smart-contracts/contract-reference/uns-smart-contracts.md
     - group: CNS Architecture
       expanded: false
-      items:
+      pages:
         - label: "Overview"
           page: smart-contracts/overview/cns-architecture-overview.md
         - label: "Smart Contract"
@@ -190,5 +190,5 @@
     - label: "Namehashing"
       page: getting-started/domain-registry-essentials/namehashing.md
   separatorLine: true
-- link: /openapi/overview/
+- link: /apis/overview/
   label: API Reference

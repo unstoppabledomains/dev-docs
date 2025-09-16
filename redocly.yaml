@@ -1,16 +1,124 @@
+seo:
+  title: Unstoppable Domains Developer Portal
+  description: The developer documentation portal and API reference for Unstoppable Domains.
+  siteUrl: https://docs.unstoppabledomains.com
+  keywords: unstoppable domains developer portal, api reference docs
+  lang: en-US
+
 logo:
-  image: ./static/images/logo.png
+  srcSet: "./static/images/ud-logo-light.svg light, ./static/images/ud-logo-dark.svg dark"
   altText: UD Developer Docs Logo
+  link: "/"
+  favicon: ./favicon.png
 
-navbar:
-  items:
-    - label: Get Started
-      page: getting-started/overview.md
-    - label: API Reference
-      page: openapi/overview.md
+markdown:
+  toc:
+    depth: 3
+  editPage:
+    baseUrl: https://github.com/unstoppabledomains/dev-docs/blob/main/
+    hide: false
 
-search:
-  hide: false
+apis:
+  partner-v3@main: 
+    root: apis/partner/v3/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  profile-v1@main: 
+    root: apis/profile-v1/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  login-unstoppable@v1: 
+    root: apis/login-unstoppable/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+  resolution@main: 
+    root: apis/resolution/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+  messaging-v1@main: 
+    root: apis/messaging-v1/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  registry@main: 
+    root: apis/registry/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+  metadata@main: 
+    root: apis/metadata/openapi.yaml
+    openapi:
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+
+links:
+  - href: https://fonts.gstatic.com
+    rel: preconnect
+  - href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap'
+  - href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap'
+
+analytics:
+  ga:
+    head: false
+    trackingId: UA-120492152-2
 
 scripts:
   head:
@@ -19,12 +127,15 @@ scripts:
     - src: https://widget.freshworks.com/widgets/48000002701.js
     - src: https://embed.typeform.com/next/embed.js
 
-analytics:
-  ga:
-    head: false
-    trackingId: UA-120492152-2
-  heap:
-    appId: "467845969"
+navbar:
+  items:
+    - label: Get Started
+      page: getting-started/overview.md
+    - label: API Reference
+      page: apis/overview.md
+
+search:
+  hide: false
 
 footer:
   copyrightText: © Unstoppable Domains Inc. All Rights Reserved.
@@ -53,3 +164,6 @@ footer:
           href: 'https://www.youtube.com/c/unstoppabledomains'
         - label: Github
           href: 'https://github.com/unstoppabledomains'
+
+redirects:
+  $ref: './redirects.yaml'

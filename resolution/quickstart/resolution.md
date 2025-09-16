@@ -5,7 +5,7 @@ description: This guide covers how to retrieve the records of UD domains using t
 
 # Resolve Domains
 
-This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/) to retrieve the record(s) of UD domains.
+This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/apis/resolution/) to retrieve the record(s) of UD domains.
 
 ## Project Setup
 

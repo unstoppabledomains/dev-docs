@@ -5,13 +5,13 @@ description: How to purchase Unstoppable domains using the Unstoppable Domains R
 
 # On-chain Buy
 
-The Registry API expands the domain registration options by offering a direct-to-blockchain mothod for registering domains. The API is [publically available](https://docs.unstoppabledomains.com/openapi/registry/#tag/domains) and retrieves both domain pricing and pre-approval for purchase which are sent to the `Buy` function on the [smart contract](https://polygonscan.com/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26#writeProxyContract).
+The Registry API expands the domain registration options by offering a direct-to-blockchain mothod for registering domains. The API is [publically available](https://docs.unstoppabledomains.com/apis/registry/#tag/domains) and retrieves both domain pricing and pre-approval for purchase which are sent to the `Buy` function on the [smart contract](https://polygonscan.com/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26#writeProxyContract).
 
 ## Check Domain Availability
 
-The Registry API provides a [domain availability endpoint](https://docs.unstoppabledomains.com/openapi/registry/#operation/GetDomain) for checking registration status of a domain name.
+The Registry API provides a [domain availability endpoint](https://docs.unstoppabledomains.com/apis/registry/#operation/GetDomain) for checking registration status of a domain name.
 
-To use this endpoint, you will need to include the domain name of interest and one of our [supported domain endings](https://docs.unstoppabledomains.com/openapi/resolution/#operation/StatusController.listSupportedTlds) as part of the API query. For example, checking the availability of `qwerty.wallet` would look like this:
+To use this endpoint, you will need to include the domain name of interest and one of our [supported domain endings](https://docs.unstoppabledomains.com/apis/resolution/#operation/StatusController.listSupportedTlds) as part of the API query. For example, checking the availability of `qwerty.wallet` would look like this:
 
 ```typescript
 const data = fetch(`https://api.unstoppabledomains.com/registry/v1/domains/qwerty.wallet`, {
@@ -42,7 +42,7 @@ Which would yield the below JSON response.
 
 Once you have confirmed the domain is available, you can request the transaction details for purchasing the domain and minting it to a specific wallet address. 
 
-Continuing with the `qwerty.wallet` example, make a `POST` request to the [purchase parameters endpoint](https://docs.unstoppabledomains.com/openapi/registry/#operation/PostDomainPurchaseParameters) with a payload indicating the claiming wallet address, any crypto records that should be set on mint, as well as the currency the domain will be purchased in.  
+Continuing with the `qwerty.wallet` example, make a `POST` request to the [purchase parameters endpoint](https://docs.unstoppabledomains.com/apis/registry/#operation/PostDomainPurchaseParameters) with a payload indicating the claiming wallet address, any crypto records that should be set on mint, as well as the currency the domain will be purchased in.  
 
 An example payload would be:
 

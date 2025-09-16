@@ -3,7 +3,7 @@ import * as React from 'react';
 export function DeveloperSurvey() {
   return (
     <div className="margin-top-bottom-30">
-      <div style={{ 
+      <div className="developer-survey" style={{ 
         backgroundColor: '#0D67FE', 
         color: '#FFFCF0', 
         padding: '2rem',

@@ -1,4 +1,4 @@
-You can generate the [namehash](/getting-started/glossary.md#namehash) of a domain using the [Resolution Service](https://docs.unstoppabledomains.com/openapi/resolution/#operation/DomainsController.getDomain). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
+You can generate the [namehash](/getting-started/glossary.md#namehash) of a domain using the [Resolution Service](https://docs.unstoppabledomains.com/apis/resolution/#operation/DomainsController.getDomain). You can also use [online tools](https://swolfeyes.github.io/ethereum-namehash-calculator/) to calculate the namehash of the domain.
 
 ```typescript
 /**

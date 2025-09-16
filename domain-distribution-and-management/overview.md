@@ -19,7 +19,7 @@ Our premier solution for domain distribution and management.
 - Create and manage custody wallets
 - Manage domains, both held in custody and self-custody wallets
 
-For more information, please consult the [Partner API specification](https://docs.unstoppabledomains.com/openapi/partner/latest).
+For more information, please consult the [Partner API specification](https://docs.unstoppabledomains.com/apis/partner/latest).
 
 ## Fork Our Postman Collection
 

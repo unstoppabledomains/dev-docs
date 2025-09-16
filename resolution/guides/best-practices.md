@@ -36,7 +36,7 @@ When you don't find a currency address record for a domain, please do not make a
 
 ## Handle Errors According to Their Type
 
-When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution API](/openapi/resolution/openapi.yaml#operation/StatusController.listSupportedTlds) docs for language-specific error handling guides and library error codes you might encounter during integration.
+When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution API](/apis/resolution/openapi.yaml#operation/StatusController.listSupportedTlds) docs for language-specific error handling guides and library error codes you might encounter during integration.
 
 ## Validate the Addresses Resolved From Domains
 

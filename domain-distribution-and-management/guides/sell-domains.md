@@ -157,9 +157,9 @@ app.listen(port, () => {
 
 Now that the Express.js server has appropriate endpoints for domain suggestions, domain registration, and domain availability, you need to proxy these endpoints to the Partner API. You'll use the `searchDomains`, `registerDomain`, and `checkAvailability` functions previously defined for this task. Import the appropriate typings from the `./types` directory and make an `axios` request to the appropriate endpoint: 
 
-- `searchDomains()` will be proxied to the [suggestions endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/getSuggestions)
-- `registerDomain()` will be proxied to the [registration endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/mintSingleDomain)
-- `checkAvailability()` will be proxied to the [domain details endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/getMultipleDomains)
+- `searchDomains()` will be proxied to the [suggestions endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/getSuggestions)
+- `registerDomain()` will be proxied to the [registration endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/mintSingleDomain)
+- `checkAvailability()` will be proxied to the [domain details endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/getMultipleDomains)
 
 You'll also add error handling here to encompass any issues with `express`, `axios`, or the Partner API. Add these functions to the existing `server/src/server.ts` file.
 
@@ -327,7 +327,7 @@ You can also take this opportunity to take into account the earlier consideratio
 - Returns
 - Transfers
 
-Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/checkOperation). Similarly, you will use the [returns endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/updateDomainPut) to transfer the domain to the end user.
+Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/checkOperation). Similarly, you will use the [returns endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/updateDomainPut) to transfer the domain to the end user.
 
 {% admonition type="info"%}
 You would ideally register a webhook for each Partner API operation that is initiated, including a return, registration, transfer, etc. For the purposes of this guide, you can use the `checkOperation()` function as a synchronous polling approach within `trackOperation()`.

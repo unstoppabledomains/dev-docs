@@ -26,7 +26,7 @@ Individuals maintain absolute control over their domains and their reverse recor
 
 ## Resolution Service API
 
-Is our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution API](/openapi/resolution/openapi.yaml). The Unstoppable Domains team manages this service.
+Is our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution API](/apis/resolution/openapi.yaml). The Unstoppable Domains team manages this service.
 
 ## Smart Contracts
 
