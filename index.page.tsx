@@ -29,13 +29,13 @@ export default function Page() {
           </div>
         </section>
 
-        <section style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <section className="tile-header-section">
           <h2 className="margin-top-bottom-30" style={{ color: 'black', fontSize: '2.5rem', textAlign: 'center' }}>
             <strong> Build your application today! </strong>
           </h2>
         </section>
 
-        <section className="tiles-section" style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <section className="tiles-section">
           <div className="tiles-container">
             <div className="tile">
               <div className="tile-header">
@@ -84,11 +84,11 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="padding-top-bottom-20" style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <section className="quotes-section padding-top-bottom-20">
           <RotatingQuotes />
         </section>
 
-        <section className="padding-top-bottom-20" style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <section className="developer-survey-section padding-top-bottom-20">
           <DeveloperSurvey />
         </section>
       </main>
