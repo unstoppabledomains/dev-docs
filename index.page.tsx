@@ -70,6 +70,21 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
+                  <img src="/static/images/resolve domains.png" alt="Login with domains" className="tile-image" />
+                </div>
+                <h2 className="tile-title">Login with Domains in your App</h2>
+              </div>
+              <div className="tile-content">
+                Allow users to log in with their Unstoppable Domains in your app.
+              </div>
+              <div className="tile-button-container" style={{ textAlign: 'center' }}>
+                <a href="/identity/overview/login-with-unstoppable" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
+              </div>
+            </div>
+
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
                   <img src="/static/images/api-reference.png" alt="API Reference" className="tile-image" />
                 </div>
                 <h2 className="tile-title">API Reference</h2>

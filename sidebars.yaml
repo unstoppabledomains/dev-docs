@@ -42,7 +42,7 @@
       expanded: false
       items:
         - label: Resolution API
-          link: /apis/resolution/
+          href: /apis/resolution/openapi
         - label: Records reference
           page: resolution/records-reference.md
         - group: Smart Contracts
@@ -76,7 +76,7 @@
       expanded: false
       items:
         - label: Partner API
-          link: /apis/partner/
+          href: /apis/partner/openapi
         - group: Smart Contracts
           expanded: false
           items:
@@ -136,11 +136,11 @@
           expanded: false
           items:
             - label: Login API
-              link: /apis/loginref/
+              href: /apis/loginref/openapi
             - label: Profile API
-              link: /apis/profile-v1/
+              href: /apis/profile-v1/openapi
             - label: Messaging API
-              link: /apis/messaging-v1/
+              href: /apis/messaging-v1/openapi
             - label: Error codes
               page: identity/api-reference/error-codes.md
         - group: Login Protocols
@@ -190,5 +190,5 @@
     - label: "Namehashing"
       page: getting-started/domain-registry-essentials/namehashing.md
   separatorLine: true
-- link: /apis/overview/
+- href: /apis/overview
   label: API Reference

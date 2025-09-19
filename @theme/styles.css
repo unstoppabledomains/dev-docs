@@ -470,8 +470,8 @@ figcaption {
 .stats-flex {
   display: flex;
   max-width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 20px;
 }
 
@@ -479,8 +479,8 @@ figcaption {
   text-align: center;
   padding: 0 20px;
   position: relative;
-  flex: 1 1 250px;
-  min-width: 200px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .stat-box.middle {
@@ -508,20 +508,32 @@ figcaption {
 }
 
 .tiles-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
   padding-bottom: 20px !important;
   padding-top: 20px !important;
 }
 
+@media screen and (min-width: 1210px) {
+  .tiles-container {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .tiles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .tiles-container {
-    width: 910px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -599,6 +611,12 @@ figcaption {
   .tile {
     width: 280px;
   }
+}
+
+/* Ensure tiles fill grid columns and spacing is handled by grid gap */
+.tiles-container .tile {
+  width: 100%;
+  margin: 0;
 }
 
 .tile-header {
@@ -683,7 +701,13 @@ figcaption {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+/* Stack stats to a single column when space is too tight */
+@media (max-width: 680px) {
+  .stats-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .stat-box.middle {
     border-left: none;
     border-right: none;
@@ -732,11 +756,18 @@ html.dark .stat-box.middle {
   border-right: 1px solid var(--color-white);
 }
 
-@media (max-width: 768px) {
-    html.dark .stat-box.middle {
-        border-top: 1px solid var(--color-warm-grey-7);
-        border-bottom: 1px solid var(--color-warm-grey-7);
-    }
+@media (max-width: 680px) {
+  html.dark .stats-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  html.dark .stat-box.middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--color-warm-grey-7);
+    border-bottom: 1px solid var(--color-warm-grey-7);
+  }
 }
 
 /* "Build your application today!" heading override (inline color on element) */
@@ -831,11 +862,18 @@ html.light .stat-box.middle {
     border-right: 1px solid var(--color-black);
 }
 
-@media (max-width: 768px) {
-    html.light .stat-box.middle {
-        border-top: 1px solid var(--color-black);
-        border-bottom: 1px solid var(--color-black);
-    }
+@media (max-width: 680px) {
+  html.light .stats-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  html.light .stat-box.middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+  }
 }
 
 html.light .tile {
