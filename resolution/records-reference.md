@@ -47,9 +47,9 @@ Ethereum address to receive cryptocurrency payments.
 
 Bitcoin address to receive cryptocurrency payments.
 
-| Format                      | Example                           |
-| --------------------------- | --------------------------------- | ------------------------------------ |
-| `bc1[ac-hj-np-z02-9]{6,87}$ | ^[13][a-km-za-hj-np-z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
+| Format                                                           | Example
+| ---------------------------------------------------------------- | ------------------------------------ |
+| `bc1[ac-hj-np-z02-9]{6,87}$ \| ^[13][a-km-za-hj-np-z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
 
 **`crypto.<TICKER>.address`**
 
@@ -81,9 +81,9 @@ See [example](/resolution/quickstart/resolution/#resolve-wallet-addresses) for h
 
 **`crypto.USDT.version.OMNI.address`**
 
-| Format | Example                        |
-| ------ | ------------------------------ | ------------------------------------ |
-| `(bc1  | [13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
+| Format                                  | Example
+| --------------------------------------- | ------------------------------------ |
+| `(bc1 \| [13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
 
 **`crypto.<TICKER>.version.<VERSION>.address`**
 
@@ -264,9 +264,9 @@ Public email addresses of the domain owner.
 
 Indicates if a domain if available for sale.
 
-| Format  | Example  |
-| ------- | -------- | ------ |
-| `(true) | (false)` | `true` |
+| Format                | Example |
+| --------------------- | ------- |
+| `(true) \| (false)`   | `true`  |
 
 **`forwarding.url`**
 
