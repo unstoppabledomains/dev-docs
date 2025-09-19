@@ -6,7 +6,7 @@ export default function Video(props) {
     let parsed_height = parse_dimension_value(props?.height);
 
     // Retrieve and/or calculate video-container styles
-    let container_styles : React.CSSProperties = {margin: props.centered ? "auto" : ""};
+    let container_styles : React.CSSProperties = {};
 
     if (parsed_width) container_styles["--video-max-width"] = parsed_width;
     if (props?.type === "iframe") {
@@ -18,13 +18,12 @@ export default function Video(props) {
             container_styles["--video-aspect-ratio"] = `calc(${parseFloat(parsed_height)} / ${parseFloat(parsed_width)})`;
         }        
     } else if (props?.type === "video") {
-        container_styles.height = "auto";
-        container_styles.paddingBottom = "0";
+        // For direct <video> embeds we toggle an additional class that adjusts container behavior
     }
 
     // Create video container and select embed type
     let video_container = (
-        <div className={props.type ? "video-container" : ""} style={container_styles}>
+        <div className={`${props.type ? "video-container" : ""} ${props?.type === "video" ? "is-video" : ""} ${props.centered ? "video-centered" : ""}`} style={container_styles}>
 
         { props.type === "iframe" ?
             <iframe
@@ -35,14 +34,13 @@ export default function Video(props) {
             />
         : props.type === "video" ?
             <video
-                style={{width: "100%"}}
                 src = {props.src}
                 title = {props?.title}
                 autoPlay = {props?.autoplay || false}
                 loop = {props?.loop || false}
             />
         :
-            <div style={{color: "red", textAlign: "center"}}>Invalid type property. Specify either "iframe" or "video."</div>
+            <div className="video-error">Invalid type property. Specify either "iframe" or "video."</div>
         }
         </div>
     );

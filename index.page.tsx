@@ -13,9 +13,9 @@ export default function Page() {
         <section className="padding-top-bottom-20 jumbotron" style={{ textAlign: 'center' }}>
           <h2 className="margin-top-bottom-20 jumbotron-h2">Developer Documentation</h2>
           <h1 className="margin-top-bottom-20 jumbotron-h1">Effortless building starts here.</h1>
-          <h3>Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
+          <h3 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
           <div className="header-button-container">
-            <a href="/getting-started/overview" className="header-button" style={{ padding: '0.5rem 1rem', background: 'var(--color-primary)', color: '#fff', borderRadius: 24, textDecoration: 'none' }}>Build with us</a>
+            <a href="/getting-started/overview" className="header-button">Build with us</a>
           </div>
         </section>
 
@@ -30,13 +30,13 @@ export default function Page() {
         </section>
 
         <section className="tile-header-section">
-          <h2 className="margin-top-bottom-30" style={{ color: 'black', fontSize: '2.5rem', textAlign: 'center' }}>
+          <h2 className="margin-top-bottom-30 tile-header">
             <strong> Build your application today! </strong>
           </h2>
         </section>
 
         <section className="tiles-section">
-          <div className="tiles-container">
+          <div className="tiles-container padding-top-bottom-20">
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
@@ -47,8 +47,8 @@ export default function Page() {
               <div className="tile-content">
                 Register and manage onchain domains natively within your app.
               </div>
-              <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <a href="/domain-distribution-and-management/overview"  className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
+              <div className="tile-button-container">
+                <a href="/domain-distribution-and-management/overview"  className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -62,8 +62,8 @@ export default function Page() {
               <div className="tile-content">
                 Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
               </div>
-              <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <a href="/resolution/overview" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
+              <div className="tile-button-container">
+                <a href="/resolution/overview" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -77,8 +77,8 @@ export default function Page() {
               <div className="tile-content">
                 Allow users to log in with their Unstoppable Domains in your app.
               </div>
-              <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <a href="/identity/overview/login-with-unstoppable" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
+              <div className="tile-button-container">
+                <a href="/identity/overview/login-with-unstoppable" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -92,8 +92,8 @@ export default function Page() {
               <div className="tile-content">
                 Consult the documentation and live testing features of Unstoppable Domains APIs, including the Resolution Service API and Partner API.
               </div>
-              <div className="tile-button-container" style={{ textAlign: 'center' }}>
-                <a href="/apis/overview" className="tile-button" style={{ background: 'var(--color-primary)', color: '#fff', padding: '10px 24px' }}>Get Started</a>
+              <div className="tile-button-container">
+                <a href="/apis/overview" className="tile-button">Get Started</a>
               </div>
             </div>
           </div>

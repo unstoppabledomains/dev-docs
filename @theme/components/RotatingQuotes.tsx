@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const quotes = [
   {
@@ -11,74 +11,16 @@ const quotes = [
   },
 ];
 
-const styles: Record<string, CSSProperties> = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '100%',
-    margin: '2rem 0',
-  },
-  quoteBox: {
-    maxWidth: '872px',
-    width: '100%',
-    backgroundColor: '#eeeeee',
-    borderRadius: '1.5rem',
-    padding: '2rem',
-    position: 'relative' as const,
-    overflow: 'hidden',
-    height: '200px',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  quoteContainer: {
-    position: 'absolute' as const,
-    width: '100%',
-    padding: '0 2rem',
-    left: 0,
-    animation: 'slideIn 1s ease-in-out forwards'
-  }
-};
-
-const keyframes = `
-  @keyframes slideIn {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideOut {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .quote-box {
-      height: 350px !important;
-    }
-  }
-`;
-
 const QuoteContent: React.FC<{ quote: typeof quotes[0] | undefined }> = ({ quote }) => {
   if (!quote) return null;
   
   return (
     <>
-      <blockquote style={{ fontStyle: 'italic', marginBottom: quote.author ? '0.5rem' : 0, textAlign: 'center' }}>
+      <blockquote>
         "{quote.text}"
       </blockquote>
       {quote.author && (
-        <p style={{ textAlign: 'center', color: '#666', margin: 0 }}>— {quote.author}</p>
+        <p>— {quote.author}</p>
       )}
     </>
   );
@@ -107,20 +49,13 @@ export const RotatingQuotes: React.FC = () => {
 
   return (
     <>
-      <style>{keyframes}</style>
-      <div style={styles.container}>
-        <div style={styles.quoteBox} className="quote-box">
-          <div style={{
-            ...styles.quoteContainer,
-            animation: isTransitioning ? 'slideOut 1s ease-in-out forwards' : 'none'
-          }}>
+      <div className="quotes-wrapper">
+        <div className="quote-box">
+          <div className={`quote-container ${isTransitioning ? 'slide-out' : ''}`}>
             <QuoteContent quote={currentQuote} />
           </div>
           {isTransitioning && quotes.length > 1 && (
-            <div style={{
-              ...styles.quoteContainer,
-              animation: 'slideIn 1s ease-in-out forwards'
-            }}>
+            <div className="quote-container slide-in">
               <QuoteContent quote={nextQuote} />
             </div>
           )}

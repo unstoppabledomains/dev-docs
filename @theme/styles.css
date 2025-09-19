@@ -7,6 +7,7 @@
     --color-white: #ffffff;
 
     --ud-grey: #424242;
+    --ud-light-grey: #f2f2f2;
 
     --color-primary: var(--ud-blue);
     --color-primary-light: color-mix(in srgb, var(--color-primary) 70%, white);
@@ -70,11 +71,13 @@
     --navbar-font-size: var(--font-size-md);
     --navbar-container-max-width: 100%;
     --navbar-menu-justify-content: flex-end;
+    --navbar-item-text-color-hover: var(--link-color-primary-hover);
 
     /* Footer */
     --footer-bg-color: #E4E7EB;
     --footer-text-color: var(--color-black);
     --footer-column-divider-color: rgba(0, 0, 0, 0);
+    --footer-link-color-hover: var(--link-color-primary-hover);
 
     /* Sidebar */
     --sidebar-bg-color: #fafafa;
@@ -110,13 +113,25 @@
     --link-color-visited: var(--color-primary-dark);
     --link-color-primary-hover: color-mix(in srgb, var(--color-primary-light) 70%, white);
 
-    /* Code (inline and blocks) */
+    /* Code (common) */
     --code-font-size: 13px;
     --code-font-family: "Source Code Pro", sans-serif;
+
+    /* Code (inline) */
     --inline-code-text-color: var(--color-orange-7);
     --inline-code-bg-color: rgba(38, 50, 56, 0.04);
-    --code-block-bg-color: rgb(50, 63, 75);
+
+    /* Code (blocks) */
+    --code-block-bg-color: #323f4b;
     --code-block-text-color: var(--color-white);
+    --code-block-tokens-string-color: #a0fbaa;
+    --code-block-tokens-constant-color: #62bff9;
+    --code-block-tokens-keyword-color: #d1949e;
+    --code-block-tokens-comment-color: #998066;
+    --code-block-tokens-invalid-color: var(--code-block-tokens-keyword-color);
+    --code-block-controls-text-color: var(--ud-grey);
+    --code-block-controls-bg-color: var(--ud-light-grey);
+    --code-block-controls-border: none;
 
     /* Schema */
     --schema-nested-bg-color: #fafafa;
@@ -193,6 +208,8 @@
     /* Video */
     --video-max-width: 100%;
     --video-aspect-ratio: calc(9/16);
+
+    --md-content-max-width: 910px;
 }
 
 figure {
@@ -231,6 +248,19 @@ figcaption {
     font-size: 16px;
     color: #A0A0A0;
 }
+
+/* Support Markdown image title hints like "#width=60%" */
+figure img[title*="#width="] {
+    height: auto;
+}
+figure img[title*="#width=33%"] { width: 33% !important; }
+figure img[title*="#width=40%"] { width: 40% !important; }
+figure img[title*="#width=50%"] { width: 50% !important; }
+figure img[title*="#width=60%"] { width: 60% !important; }
+figure img[title*="#width=70%"] { width: 70% !important; }
+figure img[title*="#width=75%"] { width: 75% !important; }
+figure img[title*="#width=80%"] { width: 80% !important; }
+figure img[title*="#width=90%"] { width: 90% !important; }
 
 .custom-next-to {
     padding-top: 25px;
@@ -286,7 +316,7 @@ figcaption {
 }
 
 @media only screen and (max-width: 450px) {
-    figure img {
+    figure img:not([title*="#width="]) {
         min-width: 85%;
     }
 
@@ -316,6 +346,28 @@ figcaption {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Ensure native <video> fills container width */
+.video-container video {
+    width: 100%;
+}
+
+/* Adjust container when embedding a direct <video> instead of an iframe */
+.video-container.is-video {
+    height: auto;
+    padding-bottom: 0;
+}
+
+/* Centered option for video containers */
+.video-centered {
+    margin: auto;
+}
+
+/* Error message for invalid video type */
+.video-error {
+    color: red;
+    text-align: center;
 }
 
 /* 
@@ -406,8 +458,6 @@ figcaption {
   padding: 0px 0px 8em;
   display: flex;
   max-width: 100%;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
   -webkit-box-align: center;
   align-items: center;
 }
@@ -418,8 +468,6 @@ figcaption {
   font-size: 1.27em;
   font-weight: 600;
   line-height: 1.5em;
-  margin-bottom: 20px !important;
-  margin-top: 20px !important;
 }
 
 .jumbotron-h2 {
@@ -430,8 +478,6 @@ figcaption {
   line-height: 1;
   font-weight: 300;
   margin: 0px 0px 2em;
-  margin-bottom: 20px !important;
-  margin-top: 20px !important;
 }
 
 .jumbotron-h1 {
@@ -442,8 +488,6 @@ figcaption {
   line-height: 1.2;
   font-weight: 600;
   margin: 1.75em 0px 0.5em;
-  margin-bottom: 20px !important;
-  margin-top: 20px !important;
 }
 
 /* Stats section styles */
@@ -515,8 +559,6 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
 }
 
 @media screen and (min-width: 1210px) {
@@ -623,6 +665,9 @@ figcaption {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  color: var(--color-black);
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .tile-content {
@@ -660,6 +705,7 @@ figcaption {
   left: 0;
   right: 0;
   max-width: 100%;
+  text-align: center;
 }
 
 .tile-button {
@@ -667,6 +713,13 @@ figcaption {
   padding: 10px 24px;
   font-size: 0.9rem;
   text-decoration: none !important;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: all 0.25s;
+}
+
+.tile-button:hover {
+  background-color: var(--color-primary-hover) !important;
 }
 
 .header-button-container {
@@ -688,16 +741,20 @@ figcaption {
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
+  transition: all 0.25s;
   line-height: 1;
   font-family: inherit;
   box-shadow: none;
-  background-color: rgb(13, 103, 254);
-  color: rgb(255, 255, 255);
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
   font-size: 16px;
   padding: 20px 24px !important;
   min-width: 200px;
   height: 56px;
+}
+
+.header-button:hover {
+  background-color: var(--color-primary-hover) !important;
 }
 
 /* Responsive styles */
@@ -722,14 +779,189 @@ figcaption {
   margin: 0 auto;
 }
 
+/* RotatingQuotes base styles */
+.quotes-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.quote-box {
+  max-width: 872px;
+  width: 100%;
+  background-color: #eeeeee;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.quote-container {
+  position: absolute;
+  width: 100%;
+  padding: 0 2rem;
+  left: 0;
+}
+
+.quote-container.slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.quote-container.slide-out {
+  animation: slideOut 1s ease-in-out forwards;
+}
+
+.quote-box blockquote {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.quote-box p {
+  text-align: left;
+  color: var(--color-primary);
+  margin-left: 40px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote-box {
+    height: 350px !important;
+  }
+}
+
 .developer-survey-section {
-  max-width: 1200px;
+  max-width: 872px;
   margin: 0 auto;
+}
+
+/* DeveloperSurvey base styles */
+.developer-survey {
+  background-color: #0D67FE;
+  color: #FFFCF0;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.developer-survey h2 {
+  font-weight: 600;
+  font-size: clamp(24px, 5vw, 31.5px);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.developer-survey p {
+  line-height: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.developer-survey-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.developer-survey button {
+  all: unset;
+  display: inline-block;
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 10.5px 20px;
+  font-weight: 600;
+  height: 35px;
+  cursor: pointer;
+  line-height: 35px;
+  text-decoration: none;
+  border: 2px solid #FFFCF0;
+  transition: all 0.25s;
+}
+
+.developer-survey button:hover {
+  background-color: var(--color-primary-hover) !important;
 }
 
 /* =========================================
    Landing Page: Light/Dark mode overrides
    ========================================= */
+
+:root.dark {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-off-black: #161819;
+  --text-color-inverse: #BEB9B0;
+  --text-color-inverse-header: #E8E6E3;
+
+  --text-color-primary: var(--text-color-inverse);
+  --text-color-secondary: var(--text-color-inverse);
+
+  --bg-color: var(--color-black);
+
+  /* Navigation */
+  --navbar-bg-color: var(--color-black);
+  --navbar-text-color: var(--color-white);
+
+  /* Footer */
+  --footer-bg-color: var(--color-off-black);
+  --footer-text-color: var(--color-white);
+
+  /* Sidebar */
+  --sidebar-bg-color: var(--color-off-black);
+
+  /* Code (inline) */
+  --inline-code-text-color: var(--color-orange-7);
+  --inline-code-bg-color: var(--color-off-black);
+
+  /* Code (blocks) */
+  --code-block-bg-color: #28323c;
+  --code-block-text-color: var(--text-color-inverse);
+  --code-block-tokens-string-color: #8cfa98;
+  --code-block-tokens-constant-color: #60bef9;
+  --code-block-tokens-keyword-color: #cf909b;
+  --code-block-tokens-comment-color: #988f81;
+  --code-block-tokens-invalid-color: var(--code-block-tokens-keyword-color);
+  --code-block-controls-text-color: var(--text-color-inverse);
+  --code-block-controls-bg-color: var(--color-off-black);
+}
 
 html.dark .jumbotron {
     /* Keep brand hero consistent in dark mode */
@@ -739,21 +971,21 @@ html.dark .jumbotron {
 html.dark .jumbotron h3,
 html.dark .jumbotron-h2,
 html.dark .jumbotron-h1 {
-    color: var(--color-white) !important;
+    color: var(--text-color-inverse-header) !important;
 }
 
 html.dark .stats-section {
   /* Keep brand hero consistent in dark mode */
-  background: var(--color-black) !important;
+  background: var(--color-off-black) !important;
 }
 
 html.dark .stat-box h3{
-  color: var(--color-white) !important;
+  color: var(--text-color-inverse-header) !important;
 }
 
 html.dark .stat-box.middle {
-  border-left: 1px solid var(--color-white);
-  border-right: 1px solid var(--color-white);
+  border-left: 1px solid var(--text-color-inverse-header);
+  border-right: 1px solid var(--text-color-inverse-header);
 }
 
 @media (max-width: 680px) {
@@ -765,35 +997,34 @@ html.dark .stat-box.middle {
   html.dark .stat-box.middle {
     border-left: none;
     border-right: none;
-    border-top: 1px solid var(--color-warm-grey-7);
-    border-bottom: 1px solid var(--color-warm-grey-7);
+    border-top: 1px solid var(--text-color-inverse-header);
+    border-bottom: 1px solid var(--text-color-inverse-header);
   }
 }
 
 /* "Build your application today!" heading override (inline color on element) */
 html.dark .tile-header-section h2 {
   /* Neutral light text for dark background, avoid stark white */
-  color: var(--color-white) !important;
+  color: var(--text-color-inverse-header) !important;
 }
 
 html.dark .tile {
-    background-color: var(--color-black);
-    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.4);
+    background-color: var(--color-off-black);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 html.dark .tile-title {
-    color: var(--color-blue-5);
+    color: var(--color-primary);
 }
 
 html.dark .tile-content {
-    color: var(--color-white);
+    color: var(--text-color-inverse);
 }
 
 /* Buttons and interactive elements */
 html.dark .header-button {
     background-color: var(--color-primary);
-    color: var(--text-color-inverse);
+    color: var(--text-color-inverse-header);
 }
 
 html.dark .header-button:hover {
@@ -801,90 +1032,37 @@ html.dark .header-button:hover {
 }
 
 html.dark .tile-button {
-    /* tile buttons have inline background set; ensure text remains legible */
-    color: var(--text-color-inverse);
+    color: var(--color-white);
 }
 
 html.dark .tile-button:hover {
-    filter: brightness(1.1);
+    background-color: var(--color-primary-hover);
 }
 
 /* RotatingQuotes component overrides */
 html.dark .quote-box {
-    background-color: var(--color-warm-grey-10) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--color-off-black) !important;
 }
 
 html.dark .quote-box blockquote {
-    color: var(--color-warm-grey-2);
+    color: var(--text-color-inverse);
 }
 
 html.dark .quote-box p {
-    color: var(--color-warm-grey-4) !important;
+    color: var(--color-primary) !important;
 }
 
 /* DeveloperSurvey component */
 html.dark .developer-survey {
     background-color: #0D67FE !important; /* keep brand card */
-    color: #FFFCF0 !important;
+    color: var(--text-color-inverse-header) !important;
 }
 
 html.dark .developer-survey button {
-    color: #FFFCF0 !important;
-    border-color: #FFFCF0 !important;
+    color: var(--text-color-inverse-header) !important;
+    border-color: var(--text-color-inverse-header) !important;
 }
 
-/* Explicit light overrides to ensure consistent toggle behavior */
-html.light .jumbotron {
-    background: #122753 !important;
-}
-
-html.light .jumbotron h3,
-html.light .jumbotron-h2,
-html.light .jumbotron-h1 {
-    color: var(--color-white) !important;
-}
-
-html.light h2.margin-top-bottom-30 {
-    color: var(--color-black) !important;
-}
-
-html.light .stats-section {
-    background: #eeeeee !important;
-}
-
-html.light .stat-box h3 {
-    color: var(--color-black) !important;
-}
-
-html.light .stat-box.middle {
-    border-left: 1px solid var(--color-black);
-    border-right: 1px solid var(--color-black);
-}
-
-@media (max-width: 680px) {
-  html.light .stats-flex {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  html.light .stat-box.middle {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid var(--color-black);
-    border-bottom: 1px solid var(--color-black);
-  }
-}
-
-html.light .tile {
-    background-color: var(--color-white);
-    box-shadow: rgba(35, 35, 35, 0.1) 0px 10px 30px 0px;
-}
-
-html.light .tile-title {
-    color: rgba(13, 103, 254, 0.9);
-}
-
-html.light .tile-content {
-    color: rgb(66, 66, 66);
+html.dark iframe {
+  color-scheme: auto !important;
 }
