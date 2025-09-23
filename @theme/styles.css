@@ -405,6 +405,18 @@ figure img[title*="#width=90%"] { width: 90% !important; }
     border-radius: 0 0 4px 4px!important;
 }
 
+/* Code block controls: unify icon fill with theme color */
+[data-testid="copy-button"],
+[data-testid="report-button"],
+.CodeBlockControls__ControlButton-sc-gulk3f-3 {
+  color: var(--color-white) !important;
+}
+
+[data-testid="copy-button"] svg path,
+[data-testid="report-button"] svg path,
+.CodeBlockControls__ControlButton-sc-gulk3f-3 svg path {
+  fill: currentColor !important;
+}
 
 /* Goofy hack to hide the TOC panel in most of "medium" breakpoint */
 @media only screen and (max-width: 1050px) {
@@ -961,6 +973,19 @@ figure img[title*="#width=90%"] { width: 90% !important; }
   --code-block-tokens-invalid-color: var(--code-block-tokens-keyword-color);
   --code-block-controls-text-color: var(--text-color-inverse);
   --code-block-controls-bg-color: var(--color-off-black);
+}
+
+/* Code block controls: unify icon fill with theme color */
+[data-testid="copy-button"],
+[data-testid="report-button"],
+html.dark .CodeBlockControls__ControlButton-sc-gulk3f-3 {
+  color: var(--text-color-inverse) !important;
+}
+
+[data-testid="copy-button"] svg path,
+[data-testid="report-button"] svg path,
+html.dark .CodeBlockControls__ControlButton-sc-gulk3f-3 svg path {
+  fill: currentColor !important;
 }
 
 html.dark .jumbotron {
