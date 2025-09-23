@@ -10,13 +10,21 @@ showNextButton: false
 
 Install with `yarn` or `npm`.
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @uauth/js @uauth/wagmi
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save @uauth/js @uauth/wagmi
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure the `WAGMI` Library
 

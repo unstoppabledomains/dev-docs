@@ -30,13 +30,21 @@ This is the basic integration guide for the Blocknative Web3-Onboard UAuth modul
 
 ## Step 1: Install the Blocknative Packages
 
-```sh {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @web3-onboard/core @web3-onboard/uauth
 ```
+{% /tab %}
 
-```sh {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm i @web3-onboard/core @web3-onboard/uauth
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure UAuth
 

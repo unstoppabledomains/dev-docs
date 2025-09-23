@@ -36,23 +36,39 @@ Set the [Token Endpoint Authentication Method](/identity/guides/client-configura
 
 Install the `@uauth/node` and resolution packages with `yarn` or `npm`.
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @uauth/node @unstoppabledomains/resolution
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save @uauth/node @unstoppabledomains/resolution
 ```
+{% /tab %}
+
+{% /tabs %}
 
 For the example in this guide, you will also need to install the following packages:
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add express-session express express-async-errors morgan
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 yarn intall --save express-session express express-async-errors morgan
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 3: Setup @uauth/node Library
 

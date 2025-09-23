@@ -163,7 +163,10 @@ Now that the Express.js server has appropriate endpoints for domain suggestions,
 
 You'll also add error handling here to encompass any issues with `express`, `axios`, or the Partner API. Add these functions to the existing `server/src/server.ts` file.
 
-```typescript {% title="searchDomains" %}
+{% tabs %}
+
+{% tab label="searchDomains" %}
+```typescript
 import { Suggestions } from './types/suggestions';
 
 /**
@@ -214,8 +217,10 @@ const searchDomains = async (domainName: string): Promise<Suggestions> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript {% title="registerDomain" %}
+{% tab label="registerDomain" %}
+```typescript
 import { Order } from './types/orders';
 
 /**
@@ -269,8 +274,10 @@ const registerDomain = async (domainId: string): Promise<Order> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript {% title="checkAvailability" %}
+{% tab label="checkAvailability" %}
+```typescript
 import { Domains } from './types/domains';
 
 /**
@@ -321,6 +328,9 @@ const checkAvailability = async (domains: Array<string>): Promise<Domains> => {
   }
 };
 ```
+{% /tab %}
+
+{% /tabs %}
 
 You can also take this opportunity to take into account the earlier considerations:
 - Partner API Operations 
@@ -333,7 +343,10 @@ Partner API operation tracking will ideally be handled by [webhooks](https://doc
 You would ideally register a webhook for each Partner API operation that is initiated, including a return, registration, transfer, etc. For the purposes of this guide, you can use the `checkOperation()` function as a synchronous polling approach within `trackOperation()`.
 {% /admonition %}
 
-```typescript {% title="checkOperation" %}
+{% tabs %}
+
+{% tab label="checkOperation" %}
+```typescript
 import { Operation } from './types/orders';
 
 /**
@@ -383,8 +396,10 @@ const checkOperation = async (operationId: string): Promise<Operation> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript {% title="trackOperation" %}
+{% tab label="trackOperation" %}
+```typescript
 /**
  * Periodically tracks the status of an operation and updates the database.
  *
@@ -412,8 +427,10 @@ const trackOperation = async (operationId: string) => {
   }, 60000); // 1 minute timer
 };
 ```
+{% /tab %}
 
-```typescript {% title="returnDomain" %}
+{% tab label="returnDomain" %}
+```typescript
 import { Return } from './types/returns';
 
 /**
@@ -462,7 +479,10 @@ const returnDomain = async (domainId: string): Promise<Return> => {
   }
 };
 ```
-```typescript {% title="transferDomain" %}
+{% /tab %}
+
+{% tab label="transferDomain" %}
+```typescript
 import { Transfer } from './types/transfers';
 
 /**
@@ -520,6 +540,9 @@ const transferDomain = async (domainId: string, walletAddress: string): Promise<
   }
 };
 ```
+{% /tab %}
+
+{% /tabs %}
 
 Update the original `/api/register` endpoint with the `trackOperation()` function as registrations are blockchain dependant. You do not need to worry about the `transfer` or `return` functions just yet.
 
@@ -887,7 +910,10 @@ The general outline for each function will be very similar and, with the excepti
 
 These four functions will serve as the core of your frontend. 
 
-```typescript {% title="fetchAvailability.ts" %}
+{% tabs %}
+
+{% tab label="fetchAvailability.ts" %}
+```typescript
 import axios from 'axios';
 import { Domains } from '@/types/domains';
 
@@ -915,8 +941,10 @@ export const fetchAvailability = async (domains: string[]) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript {% title="claimDomain.ts" %}
+{% tab label="claimDomain.ts" %}
+```typescript
 import axios from 'axios';
 import { DomainSuggestion } from '../../types/suggestions';
 import { Order } from '@/types/orders';
@@ -945,8 +973,10 @@ export const claimDomain = async (selectedDomain: DomainSuggestion) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript {% title="fetchSuggestions.ts" %}
+{% tab label="fetchSuggestions.ts" %}
+```typescript
 import { Suggestions } from '@/types/suggestions';
 import axios from 'axios';
 
@@ -970,8 +1000,10 @@ export const fetchSuggestions = async (query: string) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript {% title="initCheckout.ts" %}
+{% tab label="initCheckout.ts" %}
+```typescript
 import axios from 'axios';
 
 /**
@@ -1003,6 +1035,9 @@ export const initCheckout = async (domain: string, walletAddress: string, paymen
   }
 }
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ### Search
 
@@ -2378,12 +2413,21 @@ npm run start
 
 This will concurrently start both the `express` backend and `Next.js` frontend. If you want to run just one or the other, you can use either of the below commands:
 
-```shell {% title="Frontend" %}
+{% tabs %}
+
+{% tab label="Frontend" %}
+```shell
 npm run start:client
 ```
-```shell {% title="Backend" %}
+{% /tab %}
+
+{% tab label="Backend" %}
+```shell
 npm run start:server
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Recap
 

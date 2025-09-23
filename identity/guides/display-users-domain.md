@@ -10,7 +10,10 @@ Once a user has successfully authenticated, the application should display the u
 Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
 Any integration using [@uauth/js](/identity/sdk-and-libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/identity/sdk-and-libraries/uauth-js.md#client) object with the same client options and calling the [user()](/identity/sdk-and-libraries/uauth-js.md#user) method.
 
-```javascript {% title="@uauth/js" %}
+{% tabs %}
+
+{% tab label="@uauth/js" %}
+```javascript
 import UAuth from '@uauth/js'
 
 const uauth = new UAuth({
@@ -26,8 +29,10 @@ uauth.user()
     // user does not exist
   })
 ```
+{% /tab %}
 
-```javascript {% title="web3-onboard" %}
+{% tab label="web3-onboard" %}
+```javascript
 const wallets$ = onboard.state.select('wallets').pipe(share())
 
 wallets$.subscribe(wallet => {
@@ -38,14 +43,18 @@ wallets$.subscribe(wallet => {
   if (unstoppableUser) console.log(unstoppableUser.instance.user)
 })
 ```
+{% /tab %}
 
-```javascript {% title="web3-react" %}
+{% tab label="web3-react" %}
+```javascript
 const uauthConnector = new UAuthConnector()
 
 uauthConnector.uauth.user().then().catch()
 ```
+{% /tab %}
 
-```javascript {% title="web3modal" %}
+{% tab label="web3modal" %}
+```javascript
 import UAuth from '@uauth/js'
 
 const uauthOptions = {
@@ -62,13 +71,18 @@ const web3Modal = new Web3Modal(web3ModalOptions)
 
 new UAuth(uauthOptions).user().then().catch()
 ```
+{% /tab %}
 
-```javascript {% title="moralis" %}
+{% tab label="moralis" %}
+```javascript
 const uauthMoralisConnector = new UAuthMoralisConnector()
 
 uauthMoralisConnector.uauth.user().then().catch()
 
 ```
+{% /tab %}
+
+{% /tabs %}
 
 The `user()` method will return a [UserInfo](/identity/sdk-and-libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
 

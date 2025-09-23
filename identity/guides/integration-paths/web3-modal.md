@@ -23,13 +23,21 @@ This is the basic installation guide for the `web3modal` library and is best use
 
 Install with `yarn` or `npm`.
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save web3modal @uauth/web3modal @uauth/js @walletconnect/web3-provider
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure the `web3modal` Library
 

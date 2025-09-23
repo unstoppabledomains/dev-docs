@@ -16,13 +16,21 @@ This is the basic installation guide for the `moralis` library and is best used 
 
 Install with `yarn` or `npm`.
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @uauth/moralis react-moralis moralis
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save @uauth/moralis react-moralis moralis
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure the `moralis` Library
 

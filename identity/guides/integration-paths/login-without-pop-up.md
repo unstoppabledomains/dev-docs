@@ -36,13 +36,21 @@ All example code can be added to the `/src/App.tsx` file created by this step.
 
 For this example, we will use the UAuth library for login authentication and React Router to handle single page routing.
 
-```sh {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add react-router-dom @uauth/js
 ```
+{% /tab %}
 
-```sh {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save react-router-dom @uauth/js
 ```
+{% /tab %}
+
+{% /tabs %}
 
 Add the following imports to your `App.tsx`.
 

@@ -27,13 +27,21 @@ This guide is for `@uauth/web3-react` version `2.4.1-rc.0` and later, which uses
 
 Install `web3-react` and the connectors for MetaMask, WalletConnect, and UAuth with `yarn` or `npm`.
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell
 npm install --save @web3-react/core@beta @web3-react/metamask@beta @web3-react/walletconnect@beta @walletconnect/ethereum-provider @uauth/web3-react@2.4.1-rc.0
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure the `web3-react` Library
 

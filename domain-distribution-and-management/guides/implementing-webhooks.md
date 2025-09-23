@@ -99,7 +99,9 @@ The `x-ud-signature` header is a Base64 encoded HMAC-SHA256 of the raw payload b
 
 You simply need to recompute the HMAC in your application to verify the request:
 
-```typescript {% title="TypeScript (Node)" %}
+{% tabs %}
+{% tab label="TypeScript (Node)" %}
+```typescript
 import { createHmac } from 'crypto';
 
 function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApiKey: string): boolean {
@@ -109,8 +111,10 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
     return computedSignature === signatureHeader;
 }
 ```
+{% /tab %}
 
-```python {% title="Python" %}
+{% tab label="Python" %}
+```python
 import hashlib
 import hmac
 import base64
@@ -120,8 +124,10 @@ def verify_request(signature_header, raw_body_bytes, account_api_key):
     computed_signature = base64.b64encode(computed_hmac).decode()
     return computed_signature == signature_header
 ```
+{% /tab %}
 
-```go {% title="Go" %}
+{% tab label="Go" %}
+```go
 import (
     "crypto/hmac"
     "crypto/sha256"
@@ -137,8 +143,10 @@ func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey st
     return computedSignature == signatureHeader
 }
 ```
+{% /tab %}
 
-```java {% title="Java" %}
+{% tab label="Java" %}
+```java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
@@ -162,15 +170,19 @@ public static boolean verifyRequest(String signatureHeader, byte[] rawBodyBytes,
     return false;
 }
 ```
+{% /tab %}
 
-```php {% title="PHP" %}
+{% tab label="PHP" %}
+```php
 function verifyRequest($signatureHeader, $rawBodyBytes, $accountApiKey) {
     $computedSignature = base64_encode(hash_hmac('sha256', $rawBodyBytes, $accountApiKey, true));
     return $computedSignature === $signatureHeader;
 }
 ```
+{% /tab %}
 
-```csharp {% title="C#" %}
+{% tab label="C#" %}
+```csharp
 using System;
 using System.Security.Cryptography;
 using System.Text;
@@ -187,6 +199,9 @@ public static bool VerifyRequest(string signatureHeader, byte[] rawBodyBytes, st
     }
 }
 ```
+{% /tab %}
+
+{% /tabs %}
 
 When using Node with `express`, you can use the `express.json({ verify: ... })` callback to get access to the raw buffer:
 

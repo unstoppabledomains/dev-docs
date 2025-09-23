@@ -27,19 +27,27 @@ If you’d like to skip ahead or follow along you can download the [full example
 
 Before we get started, you’ll need to install Node and Yarn or npm and create a directory for your project. Then, install the following packages into your app using one of the following scripts:
 
-```shell {% title="yarn" %}
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 mkdir project && cd project
 yarn init --yes
 yarn add --dev parcel
 yarn add @uauth/js
 ```
+{% /tab %}
 
-```shell {% title="npm" %}
+{% tab label="npm" %}
+```shell {% title="" %}
 mkdir project && cd project
 npm init --yes
 npm install --save-dev parcel
 npm install --save @uauth/js
 ```
+{% /tab %}
+
+{% /tabs %}
 
 {% admonition type="info"%}
 **@uauth/js** is the library used for implementing Unstoppable Login on the frontend.
