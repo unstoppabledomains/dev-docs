@@ -1,10 +1,247 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
-  title: Registry
-  version: 1.0.0
-  description: |
-    {% admonition type="danger" name="Example file" %}
-      This file was automatically generated and should be replaced with the actual OpenAPI definition.
-      Please, connect remote content in Reunite.
-    {% /admonition %}
-paths: {}
+  title: Registry API v1
+  version: 2.0.0
+  description: The Registry API v1 allows to purchase domains on-chain. No authorization required.
+  contact:
+    name: Unstoppable Domains (Partner Engineering)
+    email: partnerengineering@unstoppabledomains.com
+servers:
+  - url: https://api.unstoppabledomains.com/registry/v1
+    description: Production Server
+tags:
+  - name: domains
+    description: Check domain availability and request on-chain purchase data
+paths:
+  /domains/{domainName}:
+    parameters:
+      - $ref: '#/components/parameters/DomainNameParameter'
+    get:
+      operationId: GetDomain
+      tags:
+        - domains
+      summary: Check domain name availability
+      description: Check domain name availability
+      responses:
+        '200':
+          description: Successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainAvailabilityResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+  /domains/{domainName}/parameters/purchase:
+    post:
+      operationId: PostDomainPurchaseParameters
+      summary: Request on-chain purchase parameters
+      description: Request on-chain purchase parameters. There parameters contain all necessary data to make a purchase on-chain. It includes tx parameters with signatue. Parameters are valid for 4 hours.
+      parameters:
+        - $ref: '#/components/parameters/DomainNameParameter'
+      tags:
+        - domains
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DomainPurchaseParametersRequest'
+      responses:
+        '200':
+          description: Valid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainPurchaseParametersResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+components:
+  parameters:
+    DomainNameParameter:
+      name: domainName
+      in: path
+      required: true
+      schema:
+        type: string
+        example: beresnev.crypto
+  responses:
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+  schemas:
+    DomainOwner:
+      properties:
+        address:
+          type: string
+          description: Ethereum address
+          example: '0x1234567890123456789012345678901234567890'
+      required:
+        - address
+    DomainRecords:
+      description: Domain crypto records
+      externalDocs:
+        description: Domain records reference
+        url: https://docs.unstoppabledomains.com/domain-registry-essentials/records-reference
+      type: object
+      additionalProperties:
+        type: string
+      example:
+        crypto.ETH.address: '0x6EC0DEeD30605Bcd19342f3c30201DB263291589'
+        crypto.BTC.address: bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+    DomainPurchaseParametersRequest:
+      properties:
+        owner:
+          $ref: '#/components/schemas/DomainOwner'
+        records:
+          $ref: '#/components/schemas/DomainRecords'
+        currency:
+          type: string
+          description: Purchase cryptocurrency
+          example: MATIC
+          enum:
+            - MATIC
+      required:
+        - owner
+        - records
+        - currency
+    DomainPriceItemResponse:
+      type: object
+      properties:
+        usdCents:
+          type: number
+      required:
+        - usdCents
+    DomainPriceResponse:
+      type: object
+      properties:
+        listPrice:
+          $ref: '#/components/schemas/DomainPriceItemResponse'
+        subTotal:
+          $ref: '#/components/schemas/DomainPriceItemResponse'
+      required:
+        - listPrice
+        - subTotal
+    Availability:
+      properties:
+        status:
+          type: string
+          description: Availability status
+          example: AVAILABLE
+          enum:
+            - AVAILABLE
+            - DISALLOWED
+        price:
+          $ref: '#/components/schemas/DomainPriceResponse'
+          nullable: true
+    DomainAvailabilityResponse:
+      properties:
+        domain:
+          type: string
+          description: Domain name
+        availability:
+          $ref: '#/components/schemas/Availability'
+    DomainPurchaseParametersTxArgs:
+      properties:
+        owner:
+          type: string
+          description: Domain owner address
+        expiration:
+          type: number
+          description: Expiration of purchase parameters
+        labels:
+          type: array
+          description: Domain labels
+          items:
+            type: string
+        keys:
+          type: array
+          description: Domain record keys
+          items:
+            type: string
+        values:
+          type: array
+          description: Domain record values
+          items:
+            type: string
+        price:
+          type: string
+          description: Domain price in defined cryptocurrency (hex format)
+        signature:
+          type: string
+          description: Signature of purchase parameters
+    DomainPurchaseParametersTxParams:
+      properties:
+        to:
+          type: string
+          description: Target address
+        data:
+          type: string
+          description: Transaction data. Decoded data for smart contract function call
+        value:
+          type: string
+          description: Transaction value (hex format)
+      required:
+        - to
+        - data
+        - value
+    DomainPurchaseParametersTx:
+      properties:
+        chainId:
+          type: number
+          description: Chain ID
+        function:
+          type: string
+          description: Signature of function for execute on-chain
+        arguments:
+          $ref: '#/components/schemas/DomainPurchaseParametersTxArgs'
+        params:
+          $ref: '#/components/schemas/DomainPurchaseParametersTxParams'
+      required:
+        - chainId
+        - function
+        - arguments
+        - params
+    DomainPurchaseParametersResponse:
+      properties:
+        domain:
+          type: string
+          description: Domain name
+        availability:
+          $ref: '#/components/schemas/Availability'
+        tx:
+          $ref: '#/components/schemas/DomainPurchaseParametersTx'
+    GeneralError:
+      required:
+        - error
+      properties:
+        error:
+          $ref: '#/components/schemas/BasicError'
+        constraints:
+          nullable: true
+          type: array
+          items:
+            $ref: '#/components/schemas/BasicError'
+    BasicError:
+      properties:
+        code:
+          type: string
+          description: Error code
+          example: ERROR_CODE
+        message:
+          type: string
+          description: User friendly description of above code
+          example: Error code explanation
+        field:
+          type: string
+          description: Estimate error field
+          example: some field
+        value:
+          description: Value of error field
+          example: some value
+        status:
+          type: number
+          description: Status code of the response
+          example: 400
