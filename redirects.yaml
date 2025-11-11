@@ -266,16 +266,16 @@
   to: '/developer-toolkit/reference/resolution-best-practices/'
   type: 301
 '/openapi/partner/v3/':
-  to: '/openapi/partner/latest'
+  to: '/apis/partner/openapi'
   type: 301
 '/openapi/partner-v3/':
-  to: '/openapi/partner/latest'
+  to: '/apis/partner/openapi'
   type: 301
 '/developer-toolkit/resolution-integration-methods/resolution-service/*':
-  to: '/openapi/resolution/'
+  to: '/apis/resolution/openapi'
   type: 301
 '/openapi/partner/latest':
-  to: '/openapi/partner/'
+  to: '/apis/partner/openapi'
   type: 301
 '/crypto-payments/':
   to: '/resolution/overview/'
@@ -307,6 +307,24 @@
 '/smart-contracts/quick-start/mint-subdomains/':
   to: '/getting-started/overview/'
   type: 301
-'/openapi/*':
-  to: '/apis/overview'
+'/openapi/metadata/*':
+  to: '/apis/metadata/openapi'
+  type: 301
+'/openapi/resolution/*':
+  to: '/apis/resolution/openapi'
+  type: 301
+'/openapi/partner/*':
+  to: '/apis/partner/openapi'
+  type: 301
+'/openapi/profile-v1/*':
+  to: '/apis/profile-v1/openapi'
+  type: 301
+'/openapi/messaging-v1/*':
+  to: '/apis/messaging-v1/openapi'
+  type: 301
+'/openapi/loginref/*':
+  to: '/apis/loginref/openapi'
+  type: 301
+'/openapi/registry/*':
+  to: '/apis/registry/openapi'
   type: 301

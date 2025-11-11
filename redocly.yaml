@@ -20,7 +20,7 @@ markdown:
 
 apis:
   partner-v3@main: 
-    root: apis/partner/v3/openapi.yaml
+    root: apis/partner/openapi.yaml
     openapi:
       hideDownloadButtons: true
       corsProxyUrl: https://cors.redoc.ly

@@ -1,10 +1,2598 @@
 openapi: 3.1.0
 info:
-  title: Partner
-  version: 1.0.0
+  title: Partner API v3
+  version: "3.0.0"
+  contact:
+    name: Unstoppable Domains (Partner Engineering)
+    email: partnerengineering@unstoppabledomains.com
   description: |
-    {% admonition type="danger" name="Example file" %}
-      This file was automatically generated and should be replaced with the actual OpenAPI definition.
-      Please, connect remote content in Reunite.
-    {% /admonition %}
-paths: {}
+    # Feature Overview
+    The Partner API v3 provides you with the ability to lookup, register and manage Web3 domains. The API exposes a RESTful interface for interacting with Web3 domains and the Unstoppable Domains registry.
+    - Lookup Domains: Search for specific domains or find suggested alternatives, to determine pricing, availability and on-chain details
+    - Registering Domains: Secure domains into your dedicated Custody wallets to maintain the domains on the blockchain
+    - Manage Domains: Update records on the blockchain or transfer the domain to external owners, all through a simple API interface
+
+    ## Custody Solution
+    The API takes the hassle of Web3 out of the equation. Unstoppable Domains will handle all blockchain interactions and concepts, while Partners simply use a RESTful API for managing domains.
+
+    Since the domains will be in custody of the Partner, through Unstoppable Domains, the Partner is empowered to make any and all changes to the domains on behalf of their users.
+
+    Under the hood, Unstoppable Domains will manage dedicated custodial wallets for Partner-owned domains. These wallets are not shared between Partners and will uniquely identify the Partner on the various supported blockchains.
+
+    Should the need arise to remove domains from custody, this is supported by changing the owner of domains to external owners.
+
+    ## Payments
+    The API will keep track of a running balance of charges and Unstoppable Domains will periodically invoice Partners to settle that balance. This empowers Partners to build payment processing in a way that works best for them.
+
+
+    ## Blockchain Support
+    Domain details can be viewed across all of our supported blockchains:
+    - Ethereum (ETH)
+    - Polygon PoS (MATIC)
+    - Base (BASE)
+
+    Domains can **only be managed on Polygon PoS (MATIC) and Base (BASE)**. Domains on Ethereum (ETH) are readonly, but management support is coming soon.
+
+    # Important Concepts
+    The API has some important concepts, in addition to Web3 Domains, that provide added utility, consistency and information.
+
+    ## Domain Ownership Type
+    Web3 domains exist on the supported Blockchains, and are owned by wallet addresses associated with those Blockchains. 
+    We take ownership a step further, to provide improved security and reliability, by including an owner `type` in our ownership data.
+    The result is that a Domain's owner is defined by two values: `address` and `type`
+
+    The owner `type` can be one of the following:
+    - `NONE`: Either the domain has never been owned or belongs to a "burn" address
+    - `UD`: Owned by Unstoppable Domains
+    - `SELF`: Domain belongs to a wallet addressed associated with your account, indicating you are able to manage it via the API
+    - `EXTERNAL`: Owner doesn't qualify as any of the above. Changing to an `EXTERNAL` owner will result in the domain belonging to an address outside of the management of Unstoppable Domains and we will have no way to recover it.
+
+    By defining an owner in two parts (`address` and `type`) we ensure any irreversible action, such as transferring ownership, is deliberate and intended by requiring both the `address` and `type` in the request.
+
+    ## Operations
+    All interactions with the API that initiate changes will create an Operation for tracking that change.
+    Operations can complete immediately or run in the background over the course of several minutes, depending on the Operation type and current conditions on the Blockchain.
+
+    Operations include dependencies that represent the smaller units of work associated with the overall operation. These dependencies can also be tracked through the API and each have their own status and metadata.
+
+    Your integration should properly handle and anticipate all of the following possible statuses for Operations and their dependencies:
+    - `QUEUED` : The Operation has not started processing yet, but should be started shortly
+    - `PROCESSING` : The Operation has started, often involving sending transactions to the Blockchain
+    - `SIGNATURE_REQUIRED`: The operation is awaiting a signature in order to continue processing. This is only relevant to Self-Custody domain management.
+    - `COMPLETED` : The Operation has finished processing successfully
+    - `FAILED` : The Operation has finished processing and has either fully or partially failed
+    - `CANCELLED` : The Operation has been cancelled, usually due to a failure with a sibling dependency
+
+    See the [Operations](/openapi/partner/v3/#tag/operations) API for additional information.
+
+    ## Wallets
+    Domains ownership on the Blockchain is handled by associating a Domain with an "address". These addresses are typically managed by Wallets (usually in the form of an application on your computer or mobile device) that manage the private key for the public "address".
+
+    The API provides endpoints for creating/managing Wallets within your account to enable you to handle Domain ownership distribution in whatever way works for you. Any Domain that is owned by one of your account's Wallets is fully in your control to manage.
+
+    See the [Wallets](/openapi/partner/v3/#tag/wallets) API for additional information.
+
+    # Get Access
+    See our quickstart guide for getting your Partner API key: [Set up Partner API Access](https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/)
+
+    If you have any questions, contact our [Partner Engineering Team](mailto:partnerengineering@unstoppabledomains.com?subject=Partner%20API%20v3%20Inquiry) to help with API access or learn more.
+tags:
+  - name: suggestions
+    x-displayName: Suggestions
+    description: Suggestions for finding available domains
+  - name: domain_registration
+    x-displayName: Domain Lookup & Registration
+    description: |
+      Domain details/availability lookups and registration.
+  - name: wallets
+    x-displayName: Custody Wallets
+    description: | 
+      Manage custody wallets used for storing and managing domains without any signature collection.
+
+      These wallets provide the most streamlined way to interact with domains since the initial management request is the only step needed to make changes.
+
+  - name: domains
+    x-displayName: Custody Domains
+    description: Manage your custody domains.
+
+  - name: external_wallets
+    x-displayName: Self-Custody Wallets
+    description: |
+      Manage self-custody wallets to allow for management of self-custody domains.
+
+      ## Verifying Self-Custody Wallets
+      Before you can initiate self-custody operations, you must first [verify the self-custody wallet](/openapi/partner/v3/#operation/getExternalWalletVerification) (only needs to be done once per wallet).
+
+      This involves:
+      1. [Fetching a verification message to sign](/openapi/partner/v3/#operation/getExternalWalletVerification)
+      2. Collecting a `personal_sign` signature from the wallet owner
+      3. [Submitting the signature](/openapi/partner/v3/#operation/postExternalWalletVerification) to register the verified wallet
+
+      After verifying a wallet, it will be returned by the Single-Wallet and Wallet List routes, with the type of `EXTERNAL`.
+
+      ## Supported Self-Custody Wallets
+      - Externally Owned Accounts (EOAs)
+      - [ERC1271](https://eips.ethereum.org/EIPS/eip-1271) Smart Contract wallets deployed on Polygon
+
+  - name: external_domains
+    x-displayName: Self-Custody Domains
+    description: |
+      Manage domains that are owned in external, self-custody wallets.
+
+      The key difference between Custody and Self-Custody operations is that all Self-Custody operations require a signature from the domain owner.
+
+      Before you can initiate self-custody operations, you must [verify the self-custody wallet](/openapi/partner/v3/#tag/external_wallets) that owns the domain.
+
+      ## Signing Self-Custody Operations
+      After you successfully initiate a self-custody operation, it will have a status of `SIGNATURE_REQUIRED`. You then need to collect a signature of the `messageToSign` from the `operation.dependencies[].transaction` object. 
+
+      After the owner has signed the message, you use the [dependency update route](/openapi/partner/v3/#operation/patchOperationDependency) to submit the signature and continue processing the operation.
+
+  - name: operations
+    x-displayName: Operations
+    description: |
+      All asynchronous processes handled by the API are represented as Operations. This includes registering a domain, updating a domain's records, changing a domain's owner, returning a domain and more.
+  - name: account
+    x-displayName: Account
+    description: Manage your account details
+  - name: owners
+    x-displayName: Owners
+    description: Search for owned domains
+  - name: search
+    x-displayName: Search
+    description: Search for owned entities
+  - name: webhooks
+    x-displayName: Webhooks
+    description: |
+      Manage webhooks used for asynchronous updates to your server.
+
+      You can follow our getting started guide here: [Webhooks in the Partner API](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/)
+servers:
+  - url: "https://api.unstoppabledomains.com/partner/v3"
+    description: Production
+  - url: "https://api.ud-sandbox.com/partner/v3"
+    description: Sandbox
+paths:
+  /domains:
+    get:
+      operationId: getMultipleDomains
+      summary: "Lookup multiple domain details and availability"
+      description: |
+        Get domain availability and owner details for multiple domains using the query string search options. Optionally, use the `$expand` query string to include additional data in the response (ie. `?$expand=records&$expand=registration`).
+
+        If the domain is available to be registered it will have a `availability.status` of `AVAILABLE` and will include an `availability.price` object.
+      parameters:
+        - name: $expand
+          required: false
+          in: query
+          schema:
+            type: array
+            description: Use `$expand` options to conditionally include portions of the response
+            items:
+              type: string
+              enum:
+                - records
+                - registration
+        - name: tlds
+          required: false
+          deprecated: true
+          description: Use `ending` instead
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              example: "crypto"
+        - name: ending
+          required: false
+          in: query
+          description: TLD or Parent Domain to apply to your `query` base names
+          schema:
+            type: array
+            items:
+              anyOf:
+                - type: string
+                  example: "example-name"
+                - $ref: "#/components/schemas/DomainName"
+        - name: query
+          required: true
+          in: query
+          schema:
+            type: array
+            items:
+              anyOf:
+                - type: string
+                  example: "example-name"
+                - $ref: "#/components/schemas/DomainName"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MultipleDomainSearchResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - domain_registration
+    post:
+      operationId: mintSingleDomain
+      summary: "Register a domain"
+      description: |
+        If a domain is available, use this route to register it to your account. The domain will be minted or transfered to your custodial wallet where only Unstoppable Domains, on your behalf, will be able to make changes to it.
+
+        The price of the domain will be automatically added to your running balance with Unstoppable Domains. The pending balance of your account will be invoiced periodically.
+
+        ### Register to specific owner
+        If you do not provide an `owner` in your request, your account's default wallet address will be used as the owner. Use `GET /account` to confirm your default wallet address.
+
+        When providing an `owner` object in your request, be sure the `type` aligns with the `address`. To register to one of your own wallets, the `type` must be `SELF`. Use `GET /account/wallets` to see your list of available wallets.
+
+      parameters:
+        - name: $preview
+          in: query
+          schema:
+            $ref: "#/components/schemas/OperationPreviewParameter"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DomainMintRequestBody"
+      responses:
+        201:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NotAvailable:
+                  $ref: "#/components/examples/DomainNotAvailable"
+                ExceedsLimit:
+                  $ref: "#/components/examples/DomainExceedsLimit"
+                InsufficientBalance:
+                  $ref: "#/components/examples/InsufficientBalance"
+      tags:
+        - domain_registration
+  "/domains/{name}":
+    get:
+      operationId: getSingleDomain
+      summary: "Get domain details and availability"
+      description: |
+        Get information about the domain's current owner and availability status. Optionally, use the `$expand` query string to include additional data in the response (ie. `?$expand=records&$expand=registration`).
+
+        If the domain is available to be registered it will have a `availability.status` of `AVAILABLE` and will include an `availability.price` object.
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            $ref: "#/components/schemas/DomainName"
+        - name: $expand
+          required: false
+          description: Use `$expand` options to conditionally include portions of the response
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - records
+                - registration
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainSearchResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - domain_registration
+    patch:
+      operationId: updateDomainPatch
+      summary: "Update a domain (partial update)"
+      description: |
+        Perform Domain updates while preserving the existing records.
+
+        ### Change Owner with Records Preserved
+        ```
+        {
+          "owner": {
+            "type": "EXTERNAL",
+            "address": "0x123"
+          }
+        }
+        ```
+        Changes owner to the new owner address without modifying the domain records.
+
+        #### Owner Types
+        When changing owner of a domain, you must provide both a `type` and an `address` to clearly indicate the intent of the change.
+        - `NONE`: Used when changing the owner to a "burn" address, which will result in nobody owning the domain
+          - Valid "burn" addresses are `0x0000000000000000000000000000000000000000` and `0x000000000000000000000000000000000000dEaD`
+        - `UD`: Used when changing the owner to an addressed owned by Unstoppable Domains
+        - `SELF`: Used when changing the owner to another address that belongs to your account
+        - `EXTERNAL`: Used when changing the owner to address that doesn't qualify as any of the above. 
+          - _WARNING_: This will result in the domain belonging to an address outside of the management of Unstoppable Domains and we will have no way to recover it.
+
+        ### Update Records with existing Records Preserved
+        ```
+        {
+          "records": {
+            "key2": "value2"
+          }
+        }
+        ```
+        When applied to a domain with existing records, or with an existing `key2`, will result in only the `key2` value being set to the new value.
+
+        See [our documentation](https://docs.unstoppabledomains.com/resolution/guides/records-reference/) for more information on standardized keys.
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            $ref: "#/components/schemas/DomainName"
+        - name: $preview
+          in: query
+          schema:
+            $ref: "#/components/schemas/OperationPreviewParameter"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DomainUpdateRequestBody"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: "Validation error or bad request due to domain custody, unsupported blockchain, etc."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                ConcurrentOperation:
+                  $ref: "#/components/examples/ConcurrentOperation"
+                CustodyRequired:
+                  $ref: "#/components/examples/CustodyRequired"
+                UnsupportedBlockchain:
+                  $ref: "#/components/examples/UnsupportedBlockchain"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        502:
+          $ref: "#/components/responses/502BadGateway"
+      tags:
+        - domains
+    put:
+      operationId: updateDomainPut
+      summary: "Update a domain (overwriting update)"
+      description: |
+        Perform Domain updates while doing full resets of the records.
+
+        ### Change Owner with Record Reset
+        ```
+        {
+          "owner": {
+            "type": "EXTERNAL",
+            "address": "0x123"
+          },
+          "records": {}
+        }
+        ```
+        Clears all records from the domain, then changes owner to the new owner address.
+
+        NOTE: You must include `"records": {}` to indicate the intent to clear records.
+
+        #### Owner Types
+        When changing owner of a domain, you must provide both a `type` and an `address` to clearly indicate the intent of the change.
+        - `NONE`: Used when changing the owner to a "burn" address, which will result in nobody owning the domain
+          - Valid "burn" addresses are `0x0000000000000000000000000000000000000000` and `0x000000000000000000000000000000000000dEaD`
+        - `UD`: Used when changing the owner to an addressed owned by Unstoppable Domains
+        - `SELF`: Used when changing the owner to another address that belongs to your account
+        - `EXTERNAL`: Used when changing the owner to address that doesn't qualify as any of the above.
+          - _WARNING_: This will result in the domain belonging to an address outside of the management of Unstoppable Domains and we will have no way to recover it.
+
+        ### Update Records with Record Reset
+        ```
+        {
+          "records": {
+            "key2": "value2"
+          }
+        }
+        ```
+        When applied to a domain with existing records, only `key2` will remain after the update is complete.
+
+        See [our documentation](https://docs.unstoppabledomains.com/resolution/guides/records-reference/) for more information on standardized keys.
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            $ref: "#/components/schemas/DomainName"
+        - name: $preview
+          in: query
+          schema:
+            $ref: "#/components/schemas/OperationPreviewParameter"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DomainUpdateRequestBody"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: "Validation error or bad request due to domain custody, unsupported blockchain, etc."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                ConcurrentOperation:
+                  $ref: "#/components/examples/ConcurrentOperation"
+                CustodyRequired:
+                  $ref: "#/components/examples/CustodyRequired"
+                UnsupportedBlockchain:
+                  $ref: "#/components/examples/UnsupportedBlockchain"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        502:
+          $ref: "#/components/responses/502BadGateway"
+      tags:
+        - domains
+    delete:
+      operationId: returnDomain
+      summary: "Return and refund a domain"
+      description: |
+        Return the domain to Unstoppable Domains so it is once again considered available for registering. The amount previously added to your running balance will be removed after successfully returning a domain.
+
+        Returns are only allowed within 14 days of the original registration date, per our return policy.
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: $preview
+          in: query
+          schema:
+            $ref: "#/components/schemas/OperationPreviewParameter"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - domains
+  "/external/domains/{name}":
+    put:
+      operationId: putExternalDomain
+      summary: Update a self-custody domain (overwriting update)
+      description: |
+        Perform Self-Custody Domain updates while doing full resets of the records.
+        Usage is the same as the [custody variant](/openapi/partner/v3/#operation/updateDomainPut).
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            $ref: "#/components/schemas/DomainName"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DomainUpdateRequestBody"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                ConcurrentOperation:
+                  $ref: "#/components/examples/ConcurrentOperation"
+                ExternalWalletNotVerified:
+                  $ref: "#/components/examples/ExternalWalletNotVerified"
+                UnsupportedBlockchain:
+                  $ref: "#/components/examples/UnsupportedBlockchain"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        502:
+          description: "Blockchain access is currently degraded"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                BlockchainCongestion:
+                  $ref: "#/components/examples/BlockchainCongestion"
+      tags:
+        - external_domains
+    patch:
+      operationId: patchExternalDomain
+      summary: Update a self-custody domain (partial update)
+      description: |
+        Perform Self-Custody Domain updates while preserving the existing records.
+        Usage is the same as the [custody variant](/openapi/partner/v3/#operation/updateDomainPatch).
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            $ref: "#/components/schemas/DomainName"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DomainUpdateRequestBody"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainOperationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                ConcurrentOperation:
+                  $ref: "#/components/examples/ConcurrentOperation"
+                ExternalWalletNotVerified:
+                  $ref: "#/components/examples/ExternalWalletNotVerified"
+                UnsupportedBlockchain:
+                  $ref: "#/components/examples/UnsupportedBlockchain"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        502:
+          description: "Blockchain access is currently degraded"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                BlockchainCongestion:
+                  $ref: "#/components/examples/BlockchainCongestion"
+      tags:
+        - external_domains
+  /operations:
+    get:
+      operationId: getOperationList
+      summary: Get list of operations
+      description: |
+        Get paginated list of past operations, with the ability to filter based on various criteria.
+
+        Results ordered with newest operations first.
+      parameters:
+        - name: domain
+          required: false
+          in: query
+          schema:
+            maxItems: 50
+            type: array
+            items:
+              type: string
+        - name: status
+          required: false
+          in: query
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/OperationStatus"
+        - name: type
+          required: false
+          in: query
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/OperationType"
+        - name: $cursor
+          required: false
+          description: The `next.$cursor` value from the previous page response
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperationListResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - operations
+  "/operations/{id}":
+    get:
+      operationId: checkOperation
+      summary: "Check operation status"
+      description: |
+        Use this endpoint to check on the status for any Operation being processed by the API.
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperationCheckResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+        404:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                NotFound:
+                  $ref: "#/components/examples/OperationNotFound"
+      tags:
+        - operations
+  "/operations/{id}/dependencies/{depId}":
+    patch:
+      operationId: patchOperationDependency
+      summary: Update operation dependency
+      description: Sign operation dependency with status `SIGNATURE_REQUIRED` so it can continue processing
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: depId
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OperationDependencyUpdateRequestBody"
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperationCheckResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                InvalidSignature:
+                  $ref: "#/components/examples/InvalidSignature"
+        404:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                NotFound:
+                  $ref: "#/components/examples/OperationNotFound"
+      tags:
+        - operations
+  /suggestions/domains:
+    get:
+      operationId: getSuggestions
+      summary: "Get suggested domains that are available for registering"
+      description: All domains returned by this route are available for registration
+      parameters:
+        - name: tlds
+          required: false
+          deprecated: true
+          description: Use `ending` instead
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              example: "crypto"
+        - name: ending
+          required: false
+          in: query
+          description: TLD or Parent Domain to apply to your `query` base names
+          schema:
+            type: array
+            items:
+              anyOf:
+                - type: string
+                  example: "crypto"
+                - $ref: "#/components/schemas/DomainName"
+        - name: query
+          required: true
+          in: query
+          schema:
+            type: array
+            items:
+              anyOf:
+                - type: string
+                  example: "example-name"
+                - $ref: "#/components/schemas/DomainName"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SuggestionsResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - suggestions
+  /account/wallets:
+    get:
+      operationId: getWallets
+      summary: Get list of account wallets
+      description: |
+        Any domains held in the wallets of type `SELF` can be managed by your account without any signature collection. You can use these `SELF` wallets to distribute domains in whatever way works best for you.
+
+        This route will return both custody (`SELF`) and self-custody (`EXTERNAL`) wallets associated with your account. To only list custody wallets, simply include the `?type=SELF` query string parameter.
+      parameters:
+        - name: $cursor
+          required: false
+          description: The `next.$cursor` value from the previous page response
+          in: query
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - SELF
+                - EXTERNAL
+      responses:
+        "200":
+          description: "Paginated list of wallets associated with your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletListResponse"
+      tags:
+        - wallets
+    post:
+      operationId: createWallet
+      summary: Create a new custody wallet
+      description: |
+        Create an additional custodial wallet in your account.
+      parameters: []
+      responses:
+        "201":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletCreateResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                WalletLimitReached:
+                  $ref: "#/components/examples/WalletLimitReached"
+      tags:
+        - wallets
+  "/account/wallets/{address}":
+    get:
+      operationId: getWallet
+      summary: Get wallet details
+      description:  |
+        Get details for a wallet associated with your account. This route supports both custody (`SELF`) and self-custody (`EXTERNAL`) wallets.
+
+        Include the `?$expand=primaryDomain` to include the wallet's Primary Domain (also known as the Reverse Resolution) in the response.
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: $expand
+          in: query
+          schema:
+            enum:
+              - primaryDomain
+            type: string
+
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MinimalWalletResponse"
+        404:
+          description: "Wallet does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - wallets
+    patch:
+      operationId: updateWallet
+      summary: Update custody wallet
+      description: |
+        Update details for a specific custody wallet in your account.
+
+        This can be used to set (or clear) the Primary Domain (also known as the Reverse Resolution) for a custody wallet.
+
+        To clear the Primary Domain for a wallet, pass a `null` value for the `primaryDomain` property within the request body.
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: $preview
+          in: query
+          schema:
+            $ref: "#/components/schemas/OperationPreviewParameter"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WalletUpdateRequestBody"
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletUpdateResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                CustodyRequired:
+                  $ref: "#/components/examples/CustodyRequired"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        404:
+          description: "Wallet does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - wallets
+
+  "/account/wallets/{address}/verification":
+    get:
+      operationId: getExternalWalletVerification
+      summary: Get wallet verification to sign
+      description: |
+        In order to use an self-custody wallet within the API, you must first use it to sign a verification message. This endpoint will provide the specific substring that needs to be signed.
+
+        The response `message` is meant to be included in `personal_sign` request for the wallet owner to sign. The exact message that is signed simply needs to include the response `message`, so you can include some human-friendly text, as well.
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletGenerateVerificationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                WalletAlreadyVerified:
+                  $ref: "#/components/examples/WalletAlreadyVerified"
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - external_wallets
+    post:
+      operationId: postExternalWalletVerification
+      summary: Submit signed wallet verification
+      description: |
+        After signing the [verification message](/openapi/partner/v3/#operation/getExternalWalletVerification), submit the signature to have the self-custody wallet registered as a verified external wallet for management operations.
+
+        If the message the owner signed was not the exact `message` from the [verification response](/openapi/partner/v3/#operation/getExternalWalletVerification), you must also provide the exact message in the request body. It should be the non-hex string used in the `personal_sign` request.
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WalletVerificationRequestBody"
+      responses:
+        "201":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletVerificationResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                WalletAlreadyVerified:
+                  $ref: "#/components/examples/WalletAlreadyVerified"
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - external_wallets
+  /account/webhooks:
+    get:
+      operationId: getWebhooks
+      summary: Get list of your webhooks
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookListResponse"
+      tags:
+        - webhooks
+    post:
+      operationId: createWebhook
+      summary: Register new webhook
+      description: |
+        Register a new webhook for a given webhook event type. You are limited to 3 webhook registrations per webhook type.
+
+        All webhook `url` values should be complete, valid URLs, using either `http` or `https` procotols. All webhook deliveries will be `POST` requests and sent to the registered URL exactly as provided.
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WebhookCreateRequestBody"
+      responses:
+        "201":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookCreateResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                WebhookLimitReached:
+                  $ref: "#/components/examples/WebhookLimitReached"
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - webhooks
+  "/account/webhooks/{id}":
+    get:
+      operationId: getWebhook
+      summary: Get webhook details
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookResponse"
+        404:
+          description: "Webhook with provided ID does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - webhooks
+    delete:
+      operationId: deleteWebhook
+      summary: Deregister existing webhook
+      parameters:
+        - name: id
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookDeleteResponse"
+        404:
+          description: "Webhook with provided ID does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - webhooks
+  /account:
+    get:
+      operationId: getAccount
+      summary: Get account details
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountSummaryResponse"
+      tags:
+        - account
+    patch:
+      operationId: updateAccount
+      summary: Update account details
+      description: |
+        Change your default wallet address, which is used when no wallet address is specified during domain registration.
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccountUpdateRequestBody"
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountUpdateResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - account
+  /search/owners/domains:
+    get:
+      operationId: getOwnersDomains
+      summary: "Search for owned domains by one or more addresses"
+      parameters:
+        - name: $expand
+          required: false
+          in: query
+          schema:
+            type: array
+            description: Use `$expand` options to conditionally include portions of the response
+            items:
+              type: string
+              enum:
+                - records
+                - registration
+                - owner
+                - availability
+        - name: owner.address
+          required: true
+          in: query
+          description: Addresses to search by
+          schema:
+            type: array
+            items:
+              type: string
+        - name: $cursor
+          required: false
+          description: The `next.$cursor` value from the previous page response
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainSearchListResponse"
+      tags:
+        - search
+  "/owners/{address}/domains":
+    get:
+      operationId: getAddressDomains
+      summary: "Search for domains owned by an address"
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: $expand
+          description: Use `$expand` options to conditionally include portions of the response
+          required: false
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - records
+                - registration
+                - owner
+                - availability
+        - name: $cursor
+          required: false
+          description: The `next.$cursor` value from the previous page response
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainSearchListResponse"
+      tags:
+        - owners
+  /external/wallets:
+    get:
+      operationId: getExternalWallets
+      summary: Get list of self-custody wallets
+      description: |
+        These wallets are verified `EXTERNAL` wallets that you can use for initiating self-custody domain operations. Any operation initiated for one of these wallets requires an external signature.
+      parameters:
+        - name: $cursor
+          required: false
+          in: query
+          schema:
+            type: string
+        - name: type
+          required: true
+          in: query
+          schema:
+            default: []
+            type: array
+            items:
+              type: string
+              enum:
+                - SELF
+                - EXTERNAL
+        - name: $expand
+          required: true
+          in: query
+          schema:
+            default: []
+            enum:
+              - primarydomain
+            type: string
+      responses:
+        "200":
+          description: "Paginated list of `EXTERNAL` wallets"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletListResponse"
+      tags:
+        - external_wallets
+  "/external/wallets/{address}":
+    get:
+      operationId: getExternalWallet
+      summary: Get self-custody wallet
+      description: |
+        Get details for a single self-custody wallet that has verified for your account.
+
+        Include the `?$expand=primaryDomain` to include the wallet's Primary Domain (also known as the Reverse Resolution) in the response.
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: $expand
+          in: query
+          schema:
+            enum:
+              - primaryDomain
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MinimalWalletResponse"
+        404:
+          description: "Wallet does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - external_wallets
+    patch:
+      operationId: updateExternalWallet
+      summary: Update self-custody wallet
+      description:  |
+        Update details for a specific self-custody wallet in your account.
+
+        This can be used to set (or clear) the Primary Domain (also known as the Reverse Resolution) for a domain.
+
+        To clear the Primary Domain for a wallet, pass a `null` value for the `primaryDomain` property within the request body.
+
+        **Note**: This will create an operation that requires a signature from the self-custody wallet owner.
+    
+      parameters:
+        - name: address
+          required: true
+          in: path
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WalletUpdateRequestBody"
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WalletUpdateResponse"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+                NoChange:
+                  $ref: "#/components/examples/NoChange"
+                BadRequest:
+                  $ref: "#/components/examples/BadRequest"
+        404:
+          description: "Wallet does not exist in your account"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - external_wallets
+
+  /domains/{name}/pending-operations:
+    get:
+      operationId: getDomainPendingOperations
+      summary: Pending Operations for a domain
+      description: |
+        Unlike the operation list route, this endpoint will return a minimal representation of pending operations for a domain across **all activity** for a given domain.
+
+        Since we only allow a single concurrent operation for a domain (across all accounts), **this endpoint should be checked before attempting any domain operations**. This is particularly important for **self-custody domains**, as any account (or even the owner themself) can initiate operations.
+      parameters:
+        - name: name
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DomainPendingOperationsListResponse"
+        403:
+          $ref: "#/components/responses/403Forbidden"
+      tags:
+        - operations
+
+webhooks:
+  OPERATION_FINISHED:
+    post:
+      security: []
+      operationId: webhook_OperationFinished
+      summary: Operation Finished
+      description: |
+        Receive a request when an asynchronous operation completes to registered webhooks of type `OPERATION_FINISHED`
+      parameters:
+        - name: x-ud-timestamp
+          in: header
+          required: true
+          description: Timestamp when the webhook payload was created
+          schema:
+            type: string
+            example: 1686587938683
+        - name: x-ud-signature
+          in: header
+          required: true
+          description: |
+            Base64 encoded HMAC-SHA256 of the raw payload body bytes using the account's primary API key as the secret.
+            Used to verify authenticity of the request.
+          schema:
+            type: string
+            example: awqOJeH/5GSSesvPYgS2z62BFTYurPduEfJjUBTRzPg=
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WebhookDeliveryRequestBody"
+      responses:
+        200:
+          description: "Success"
+      tags:
+        - operations
+
+  OPERATION_ACTION_REQUIRED:
+    post:
+      security: []
+      operationId: webhook_OperationActionRequired
+      summary: Operation Action Required
+      description: |
+        Receive a request when an asynchronous operation reaches a status that requires an action to be taken for it to proceed. For example, when an operation changes to the `SIGNATURE_REQUIRED` status, a webhook would be delivered since the operation cannot continue with collecting a signature.
+        
+        Requests are sent to registered webhooks of type `OPERATION_ACTION_REQUIRED`
+      parameters:
+        - name: x-ud-timestamp
+          in: header
+          required: true
+          description: Timestamp when the webhook payload was created
+          schema:
+            type: string
+            example: 1686587938683
+        - name: x-ud-signature
+          in: header
+          required: true
+          description: |
+            Base64 encoded HMAC-SHA256 of the raw payload body bytes using the account's primary API key as the secret.
+            Used to verify authenticity of the request.
+          schema:
+            type: string
+            example: awqOJeH/5GSSesvPYgS2z62BFTYurPduEfJjUBTRzPg=
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WebhookDeliveryRequestBody"
+      responses:
+        200:
+          description: "Success"
+      tags:
+        - operations
+
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    OperationPreviewParameter:
+      type: boolean
+      default: false
+      description: |
+        Allows simulating the operation creation (when set to `true`), without actually starting any processing. This can be used to validate the operation will be permitted and get a preview of the initial outcome.
+
+        When used, the operation in the response will have `PREVIEW` for all `id` and `status` values.
+    UpdateDomainRecords:
+      allOf:
+        - $ref: "#/components/schemas/DomainRecords"
+        - type: object
+          maxProperties: 500
+    DomainRecords:
+      type: object
+      additionalProperties:
+        type: string
+      example:
+        "crypto.ETH.address": "0xb4783AeF93923a2d4eEA29C84f347F26E62e4321"
+        "crypto.MATIC.version.MATIC.address": "0xb4783AeF93923a2d4eEA29C84f347F26E62e5678"
+        "crypto.MATIC.version.ERC20.address": "0xb4783AeF93923a2d4eEA29C84f347F26E62e0921"
+    EvmOwnerAddress:
+      type: string
+      example: "0xb4783AeF93923a2d4eEA29C84f347F26E62e4321"
+      pattern: "^0x[a-fA-F0-9]{40}$"
+    OwnerAddress:
+      oneOf:
+        - $ref: "#/components/schemas/EvmOwnerAddress"
+    DomainName:
+      type: string
+      example: matt.crypto
+    DomainPriceType:
+      type: string
+      enum: 
+        - STANDARD
+        - PREMIUM
+        - DEFERRED
+      description: |
+        - `STANDARD`: Domain is priced using the default, standard pricing algorithm
+        - `PREMIUM`: Domain is considered premium by the registry and pricing may differ from the standard pricing
+        - `DEFERRED`: Domain pricing is not available and an additional request is needed to determine pricing. 
+          - This can be a limitation of the bulk domain searches due to constraints with checking prices for some registries
+          - When requesting a single domain the price will always be included (if available) and this status will not be returned
+    DomainPriceItemResponse:
+      type: object
+      properties:
+        usdCents:
+          type: number
+          example: 1000
+      required:
+        - usdCents
+    DomainPriceResponse:
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/DomainPriceType"
+        listPrice:
+          $ref: "#/components/schemas/DomainPriceItemResponse"
+        subTotal:
+          $ref: "#/components/schemas/DomainPriceItemResponse"
+      required:
+        - type
+        - listPrice
+        - subTotal
+    OwnerType:
+      type: string
+      enum:
+        - NONE
+        - UD
+        - SELF
+        - EXTERNAL
+      description: |
+        - `NONE`: Domain is not currently owned by anyone
+        - `UD`: Domain is owned by a wallet/contract that belongs to Unstoppable Domains
+        - `SELF`: Domain is owned by your account. You can manage this domains through the API
+        - `EXTERNAL`: Owner doesn't qualify as any of the above.
+    DomainOwnerResponse:
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/OwnerType"
+        address:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - type
+    DomainAvailabilityStatus:
+      type: string
+      enum:
+        - AVAILABLE
+        - AVAILABLE_FROM_ISSUER
+        - REGISTERED
+        - PROTECTED
+        - COMING_SOON
+        - DISALLOWED
+        - RESERVED
+        - EXCEEDS_PRICE_LIMIT
+      description: |
+        - `AVAILABLE`: Domain is available for registering
+        - `AVAILABLE_FROM_ISSUER`: Domain is available for registering from an external issuer. 
+          - This status is deprecated as it is only relevant to subdomains that have a verified, self-custodied parent domain
+        - `EXCEEDS_PRICE_LIMIT`: Domain is available for registering, but exceeds the price limit on your account.
+          - In this situation you can contact your AM to facilitate a private sale or use our [Affiliate Program](https://unstoppabledomains.com/affiliate-registration) to refer users to our website for checkout  
+        - `REGISTERED`: Domain belongs to an owner and is not available for registering
+        - `PROTECTED`: Domain is being protected by Unstoppable Domains and is not available for general registering
+        - `RESERVED`: Domain is being reserved by Unstoppable Domains and is not available for general registering
+        - `COMING_SOON`: Domain is temporarily unavailable but will be available in the future
+        - `DISALLOWED`: Domain is currently not allowed to be registered
+    DomainAvailabilityResponse:
+      type: object
+      properties:
+        status:
+          $ref: "#/components/schemas/DomainAvailabilityStatus"
+        price:
+          $ref: "#/components/schemas/DomainPriceResponse"
+        issuer:
+          $ref: "#/components/schemas/DomainOwnerResponse"
+      required:
+        - status
+    MultipleDomainSearchResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.List"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/DomainSearchResponse"
+      required:
+        - items
+        - "@type"
+    DomainRegistrationResponse:
+      type: object
+      properties:
+        tokenId:
+          type: string
+        tokenType:
+          type: string
+          enum:
+            - ERC721
+            - ERC1155
+      required:
+        - tokenId
+    BlockchainType:
+      type: string
+      enum:
+        - MATIC
+        - ETH
+        - BASE
+    DomainSearchResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.Domain"]
+        records:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainRecords"
+        name:
+          $ref: "#/components/schemas/DomainName"
+        owner:
+          $ref: "#/components/schemas/DomainOwnerResponse"
+        availability:
+          $ref: "#/components/schemas/DomainAvailabilityResponse"
+        registration:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainRegistrationResponse"
+        blockchain:
+          $ref: "#/components/schemas/BlockchainType"
+      required:
+        - name
+        - owner
+        - availability
+        - "@type"
+    DomainMintRequestBodyOwner:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - NONE
+            - UD
+            - SELF
+            - EXTERNAL
+        address:
+          type: string
+      required:
+        - type
+        - address
+    DomainMintRequestBody:
+      type: object
+      properties:
+        name:
+          $ref: "#/components/schemas/DomainName"
+        records:
+          $ref: "#/components/schemas/UpdateDomainRecords"
+        owner:
+          $ref: "#/components/schemas/DomainMintRequestBodyOwner"
+      required:
+        - name
+    OperationStatus:
+      type: string
+      enum:
+        - QUEUED
+        - SIGNATURE_REQUIRED
+        - PROCESSING
+        - COMPLETED
+        - FAILED
+        - CANCELLED
+    SubOperationTransactionResponse:
+      type: object
+      properties:
+        hash:
+          type: string
+        blockchain:
+          $ref: "#/components/schemas/BlockchainType"
+      required:
+        - blockchain
+    SubOperationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "bc-2db427bd-5613-40c7-85b1-ab38beed0ed0"
+        status:
+          $ref: "#/components/schemas/OperationStatus"
+      required:
+        - status
+        - id
+    PlatformSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/SubOperationResponse"
+        - type: object
+          properties:
+            "@type":
+              type: string
+              enum: ["unstoppabledomains.com/partner.v3.PlatformOperation"]
+          required:
+            - "@type"
+    WalletCreateResultResponse:
+      type: object
+      properties:
+        address:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - address
+    WalletCreateSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/PlatformSubOperationResponse"
+        - type: object
+          properties:
+            result:
+              $ref: "#/components/schemas/WalletCreateResultResponse"
+            type:
+              type: string
+              enum:
+                - WALLET_CREATE
+          required:
+            - type
+    WalletSetDefaultParametersResponse:
+      type: object
+      properties:
+        address:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - address
+    WalletSetDefaultSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/PlatformSubOperationResponse"
+        - type: object
+          properties:
+            parameters:
+              $ref: "#/components/schemas/WalletSetDefaultParametersResponse"
+            type:
+              type: string
+              enum:
+                - WALLET_SET_DEFAULT
+          required:
+            - parameters
+            - type
+    WebhookCreateResultResponse:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+        - id
+    WebhookCreateParametersResponse:
+      type: object
+      properties:
+        "type":
+          $ref: "#/components/schemas/WebhookType"
+        url:
+          type: string
+          format: uri
+      required:
+        - type
+        - url
+    WebhookCreateSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/PlatformSubOperationResponse"
+        - type: object
+          properties:
+            parameters:
+              $ref: "#/components/schemas/WebhookCreateParametersResponse"
+            result:
+              $ref: "#/components/schemas/WebhookCreateResultResponse"
+            type:
+              type: string
+              enum:
+                - WEBHOOK_CREATE
+          required:
+            - parameters
+            - type
+    WebhookDeleteParametersResponse:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+        - id
+    WebhookDeleteSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/PlatformSubOperationResponse"
+        - type: object
+          properties:
+            parameters:
+              $ref: "#/components/schemas/WebhookDeleteParametersResponse"
+            type:
+              type: string
+              enum:
+                - WEBHOOK_DELETE
+          required:
+            - parameters
+            - type
+    BlockchainSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/SubOperationResponse"
+        - type: object
+          properties:
+            "@type":
+              type: string
+              enum: ["unstoppabledomains.com/partner.v3.BlockchainOperation"]
+            transaction:
+              $ref: "#/components/schemas/SubOperationTransactionResponse"
+          required:
+            - "@type"
+    MintParametersResponse:
+      type: object
+      properties:
+        initialRecords:
+          $ref: "#/components/schemas/DomainRecords"
+        toAddress:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - toAddress
+    MintSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/BlockchainSubOperationResponse"
+        - type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - MINT
+            parameters:
+              $ref: "#/components/schemas/MintParametersResponse"
+          required:
+            - type
+            - parameters
+    UpdateRecordsParametersResponse:
+      type: object
+      properties:
+        recordUpdates:
+          $ref: "#/components/schemas/DomainRecords"
+        resetRecords:
+          type: boolean
+      required:
+        - recordUpdates
+        - resetRecords
+    UpdateRecordsSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/BlockchainSubOperationResponse"
+        - type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - UPDATE_RECORDS
+            parameters:
+              $ref: "#/components/schemas/UpdateRecordsParametersResponse"
+          required:
+            - type
+            - parameters
+    TransferParametersResponse:
+      type: object
+      properties:
+        fromAddress:
+          $ref: "#/components/schemas/OwnerAddress"
+        toAddress:
+          $ref: "#/components/schemas/OwnerAddress"
+        resetRecords:
+          type: boolean
+      required:
+        - fromAddress
+        - toAddress
+        - resetRecords
+    TransferSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/BlockchainSubOperationResponse"
+        - type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - TRANSFER
+            parameters:
+              $ref: "#/components/schemas/TransferParametersResponse"
+          required:
+            - type
+            - parameters
+    ReturnSubOperationResponse:
+      allOf:
+        - $ref: "#/components/schemas/BlockchainSubOperationResponse"
+        - type: object
+          properties:
+            type:
+              type: string
+              enum:
+                - RETURN
+          required:
+            - type
+    OperationType:
+      type: string
+      enum:
+        - DOMAIN_CLAIM
+        - DOMAIN_UPDATE
+        - DOMAIN_RETURN
+        - WALLET_CREATE
+        - WALLET_UPDATE
+        - WALLET_VERIFY
+        - ACCOUNT_UPDATE
+    OperationCheckResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "op-4abb409c-9283-4589-bd36-d27a757a2165"
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.Operation"]
+        status:
+          $ref: "#/components/schemas/OperationStatus"
+        type:
+          $ref: "#/components/schemas/OperationType"
+        domain:
+          $ref: "#/components/schemas/DomainName"
+        lastUpdatedTimestamp:
+          type: number
+          example: 1684356429790
+        dependencies:
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/MintSubOperationResponse"
+              - $ref: "#/components/schemas/UpdateRecordsSubOperationResponse"
+              - $ref: "#/components/schemas/TransferSubOperationResponse"
+              - $ref: "#/components/schemas/ReturnSubOperationResponse"
+              - $ref: "#/components/schemas/WalletCreateSubOperationResponse"
+              - $ref: "#/components/schemas/WalletSetDefaultSubOperationResponse"
+              - $ref: "#/components/schemas/WebhookCreateSubOperationResponse"
+              - $ref: "#/components/schemas/WebhookDeleteSubOperationResponse"
+      required:
+        - id
+        - status
+        - type
+        - dependencies
+        - "@type"
+        - lastUpdatedTimestamp
+    OperationDependencyTransactionUpdateRequestBody:
+      type: object
+      properties:
+        signature:
+          type: string
+          maxLength: 2000
+      required:
+        - signature
+    OperationDependencyUpdateRequestBody:
+      type: object
+      properties:
+        transaction:
+          $ref: "#/components/schemas/OperationDependencyTransactionUpdateRequestBody"
+      required:
+        - transaction
+    DomainOperationResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.DomainOperationResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    DomainUpdateRequestBodyOwner:
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/OwnerType"
+        address:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - type
+        - address
+    DomainUpdateRequestBody:
+      type: object
+      properties:
+        owner:
+          $ref: "#/components/schemas/DomainUpdateRequestBodyOwner"
+        records:
+          $ref: "#/components/schemas/UpdateDomainRecords"
+    SuggestionsResponseItem:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.DomainSuggestion"]
+        name:
+          $ref: "#/components/schemas/DomainName"
+        price:
+          $ref: "#/components/schemas/DomainPriceResponse"
+      required:
+        - name
+        - price
+        - "@type"
+    SuggestionsResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.List"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/SuggestionsResponseItem"
+      required:
+        - items
+        - "@type"
+    MinimalWalletResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WalletMinimal"]
+        address:
+          $ref: "#/components/schemas/OwnerAddress"
+        type:
+          type: string
+          enum:
+            - SELF
+            - EXTERNAL
+        primaryDomain:
+          oneOf:
+            - $ref: "#/components/schemas/DomainName"
+            - type: "null"
+      required:
+        - "@type"
+        - address
+        - type
+    WalletGenerateVerificationResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WalletUnsignedVerification"]
+        message:
+          type: string
+      required:
+        - "@type"
+        - message
+    WalletVerificationRequestBody:
+      type: object
+      properties:
+        message:
+          type: string
+          maxLength: 2000
+        signature:
+          type: string
+          maxLength: 2000
+      required:
+        - signature
+    WalletVerificationResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WalletVerificationResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    CursorListResponseNext:
+      type: object
+      properties:
+        $cursor:
+          oneOf:
+            - type: string
+            - type: "null"
+      required:
+        - $cursor
+    WalletListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.CursorList"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/MinimalWalletResponse"
+        next:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/CursorListResponseNext"
+      required:
+        - "@type"
+        - items
+        - next
+    AccountSummaryResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.AccountSummary"]
+        id:
+          type: string
+        defaultWalletAddress:
+          oneOf:
+            - type: string
+            - type: "null"
+      required:
+        - "@type"
+        - id
+        - defaultWalletAddress
+    AccountUpdateRequestBody:
+      type: object
+      properties:
+        defaultWalletAddress:
+          $ref: "#/components/schemas/OwnerAddress"
+      required:
+        - defaultWalletAddress
+    ErrorResponseContextEntitySingle:
+      type: object
+      properties:
+        type:
+          type: string
+        value:
+          type: string
+      required:
+        - type
+        - value
+    ErrorResponseContextEntityMulti:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["MULTI_VALUE"]
+        values:
+          type: array
+          items:
+            $ref: "#/components/schemas/ErrorResponseContextEntitySingle"
+      required:
+        - type
+        - values
+    ErrorResponseContextEntity:
+      oneOf:
+        - $ref: "#/components/schemas/ErrorResponseContextEntitySingle"
+        - $ref: "#/components/schemas/ErrorResponseContextEntityMulti"
+    ErrorResponseContext:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: "#/components/schemas/ErrorResponseContextEntity"
+      required:
+        - entities
+    ErrorResponseSingle:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        context:
+          $ref: "#/components/schemas/ErrorResponseContext"
+    ErrorResponseMulti:
+      type: object
+      properties:
+        code:
+          type: string
+          enum: ["MULTIPLE_ERRORS"]
+        message:
+          type: string
+        context:
+          $ref: "#/components/schemas/ErrorResponseContext"
+        errors:
+          type: array
+          items:
+            $ref: "#/components/schemas/ErrorResponseSingle"
+      required:
+        - code
+        - errors
+    ErrorResponse:
+      oneOf:
+        - $ref: "#/components/schemas/ErrorResponseSingle"
+        - $ref: "#/components/schemas/ErrorResponseMulti"
+    WalletCreateResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.InternalWalletCreateResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    WalletUpdateRequestBody:
+      type: object
+      properties:
+        primaryDomain:
+          oneOf:
+            - $ref: "#/components/schemas/DomainName"
+            - type: "null"
+      required:
+        - primaryDomain
+    WalletUpdateResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WalletUpdateResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    OperationListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.CursorList"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/OperationMinimalResponse"
+        next:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/CursorListResponseNext"
+      required:
+        - "@type"
+        - items
+        - next
+    OperationMinimalResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "op-4abb409c-9283-4589-bd36-d27a757a2165"
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.OperationMinimal"]
+        status:
+          $ref: "#/components/schemas/OperationStatus"
+        type:
+          $ref: "#/components/schemas/OperationType"
+        domain:
+          $ref: "#/components/schemas/DomainName"
+        lastUpdatedTimestamp:
+          type: number
+          example: 1684356429790
+      required:
+        - "@type"
+        - id
+        - status
+        - type
+        - lastUpdatedTimestamp
+    AccountUpdateResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.AccountUpdateResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    WebhookType:
+      type: string
+      enum:
+        - OPERATION_FINISHED
+        - OPERATION_ACTION_REQUIRED
+    WebhookResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.Webhook"]
+        id:
+          type: string
+          example: "wh-9cc2fea1-52d9-484d-aac2-e28d5f7b1104"
+        url:
+          type: string
+          format: uri
+          example: "https://www.example.org/webhooks/ud"
+        type:
+          $ref: "#/components/schemas/WebhookType"
+      required:
+        - "@type"
+        - id
+        - url
+        - type
+    WebhookListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.CursorList"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/WebhookResponse"
+        next:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/CursorListResponseNext"
+      required:
+        - "@type"
+        - items
+        - next
+    WebhookCreateRequestBody:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        type:
+          $ref: "#/components/schemas/WebhookType"
+      required:
+        - url
+        - type
+    WebhookCreateResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WebhookCreateResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    WebhookDeleteResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WebhookDeleteResult"]
+        operation:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - operation
+    WebhookDeliveryRequestBody:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.WebhookDelivery"]
+        type:
+          $ref: "#/components/schemas/WebhookType"
+        data:
+          $ref: "#/components/schemas/OperationCheckResponse"
+      required:
+        - "@type"
+        - type
+        - data
+    MinimalDomainSearchResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.DomainMinimal"]
+        name:
+          type: string
+        blockchain:
+          type: string
+          enum:
+            - MATIC
+            - ETH
+            - ZIL
+        owner:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainOwnerResponse"
+        availability:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainAvailabilityResponse"
+        registration:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainRegistrationResponse"
+        records:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/DomainRecords"
+      required:
+        - "@type"
+        - name
+    DomainSearchListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.CursorList"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/MinimalDomainSearchResponse"
+        next:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/CursorListResponseNext"
+      required:
+        - "@type"
+        - items
+        - next
+    DomainPendingOperationResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.DomainPendingOperation"]
+        type:
+          oneOf: 
+            -  type: string
+               enum: ["UNKNOWN"]
+            - $ref: "#/components/schemas/OperationType"
+          example: DOMAIN_UPDATE
+          description: |
+            Will be `UNKNOWN` if the operation is a blockchain operation not supported by the API but currently taking place on the blockchain.
+        id:
+          type: string
+          example: "op-4abb409c-9283-4589-bd36-d27a757a2165"
+          description: ID of the operation. Will only be included if the operation is associated with your account.
+      required:
+        - "@type"
+        - type
+    DomainPendingOperationsListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.List"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/DomainPendingOperationResponse"
+      required:
+        - "@type"
+        - items
+
+  examples:
+    BadRequest:
+      description: "Request is malformed or invalid."
+      value:
+        code: "BAD_REQUEST"
+    BlockchainCongestion:
+      description: "The blockchain is currently overloaded. Please wait for congestion to improve before trying again."
+      value:
+        code: "BLOCKCHAIN_CONGESTION"
+    ConcurrentOperation:
+      description: "An operation for the domain is already in progress and must complete before you can start another operation."
+      value:
+        code: "CONCURRENT_OPERATION"
+    CustodyRequired:
+      description: "The domain or wallet is not in your custody."
+      value:
+        code: "CUSTODY_REQUIRED"
+    DomainExceedsLimit:
+      description: "The domain exceeds account price limit."
+      value:
+        code: "EXCEEDS_LIMIT"
+    DomainNotAvailable:
+      description: "The domain is not available to register."
+      value:
+        code: "NOT_AVAILABLE"
+    InsufficientBalance:
+      description: "The domain price would exceed overall balance limit."
+      value:
+        code: "INSUFFICIENT_BALANCE"
+    NoChange:
+      description: "No change would occur by the requested operation."
+      value:
+        code: "NO_CHANGE"
+    OperationNotFound:
+      description: "No operation found with the provided Operation ID."
+      value:
+        code: "NOT_FOUND"
+    UnsupportedBlockchain:
+      description: "The domain blockchain is not currently supported for this operation."
+      value:
+        code: "UNSUPPORTED_BLOCKCHAIN"
+    ValidationError:
+      description: "Validation error due to incorrect parameters."
+      value:
+        code: "VALIDATION"
+    WalletLimitReached:
+      description: Maximum number of wallets for your account has been reached
+      value:
+        code: "WALLET_LIMIT_REACHED"
+    WebhookLimitReached:
+      description: Maximum number of webhooks for the given type for your account has been reached
+      value:
+        code: "WEBHOOK_LIMIT_REACHED"
+    ExternalWalletNotVerified:
+      description: Wallet owned externally must first be verified before you can perform the action
+      value:
+        code: WALLET_VERIFICATION_REQUIRED
+    WalletAlreadyVerified:
+      description: External wallet has already been verified
+      value:
+        code: WALLET_ALREADY_VERIFIED
+    InvalidSignature:
+      description: Wallet signature is not valid
+      value:
+        code: SIGNATURE_INVALID
+
+  responses:
+    401Unauthorized:
+      description: "API credentials were not provided and are required to perform the request."
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - type: object
+                properties:
+                  message:
+                    type: string
+                    example: "No API key found in request"
+              - type: object
+                properties:
+                  code:
+                    type: string
+                    example: "UNAUTHORIZED"
+    403Forbidden:
+      description: "Access to the resource or the ability to perform the requested operation is not allowed for your account."
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+                example: "FORBIDDEN"
+    502BadGateway:
+      description: ""
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+                example: "BAD_GATEWAY"
+          examples:
+            BlockchainCongestion:
+              $ref: "#/components/examples/BlockchainCongestion"
+security:
+  - bearer: []
