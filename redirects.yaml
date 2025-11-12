@@ -266,16 +266,16 @@
   to: '/developer-toolkit/reference/resolution-best-practices/'
   type: 301
 '/openapi/partner/v3/':
-  to: '/apis/partner/openapi'
+  to: '/openapi/partner/latest'
   type: 301
 '/openapi/partner-v3/':
-  to: '/apis/partner/openapi'
+  to: '/openapi/partner/latest'
   type: 301
 '/developer-toolkit/resolution-integration-methods/resolution-service/*':
   to: '/apis/resolution/openapi'
   type: 301
 '/openapi/partner/latest':
-  to: '/apis/partner/openapi'
+  to: '/openapi/partner/'
   type: 301
 '/crypto-payments/':
   to: '/resolution/overview/'
@@ -308,23 +308,28 @@
   to: '/getting-started/overview/'
   type: 301
 '/openapi/metadata/*':
-  to: '/apis/metadata/openapi'
-  type: 301
+  to: '/apis/metadata/openapi/*'
 '/openapi/resolution/*':
-  to: '/apis/resolution/openapi'
-  type: 301
+  to: '/apis/resolution/openapi/*'
 '/openapi/partner/*':
-  to: '/apis/partner/openapi'
-  type: 301
+  to: '/apis/partner/openapi/*'
 '/openapi/profile-v1/*':
-  to: '/apis/profile-v1/openapi'
-  type: 301
+  to: '/apis/profile-v1/openapi/*'
 '/openapi/messaging-v1/*':
-  to: '/apis/messaging-v1/openapi'
-  type: 301
+  to: '/apis/messaging-v1/openapi/*'
 '/openapi/loginref/*':
-  to: '/apis/loginref/openapi'
-  type: 301
+  to: '/apis/loginref/openapi/*'
 '/openapi/registry/*':
-  to: '/apis/registry/openapi'
-  type: 301
+  to: '/apis/registry/openapi/*'
+'/openapi/partner/v3/#tag/operations':
+  to: '/apis/partner/openapi/#tag/operations'
+'/openapi/partner/v3/#tag/wallets':
+  to: '/apis/partner/openapi/#tag/wallets'
+'/openapi/partner/v3/#operation/getExternalWalletVerification':
+  to: '/apis/partner/openapi/external_wallets/getexternalwalletverification'
+'/openapi/partner/v3/#operation/postExternalWalletVerification':
+  to: '/apis/partner/openapi/external_wallets/postexternalwalletverification'
+'/openapi/partner/v3/#operation/updateDomainPut':
+  to: '/apis/partner/openapi/domains/updatedomainput'
+'/openapi/partner/v3/#operation/updateDomainPatch':
+  to: '/apis/partner/openapi/domains/updatedomainpatch'

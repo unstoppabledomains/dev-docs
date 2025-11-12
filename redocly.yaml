@@ -22,12 +22,15 @@ apis:
   partner-v3@main: 
     root: apis/partner/openapi.yaml
     openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       corsProxyUrl: https://cors.redoc.ly
       showConsole: true
       codeSamples:
         languages:
           - lang: curl
+          - lang: JavaScript
           - lang: Node.js
           - lang: Python
           - lang: Java
@@ -36,19 +39,8 @@ apis:
   profile-v1@main: 
     root: apis/profile-v1/openapi.yaml
     openapi:
-      hideDownloadButtons: true
-      showConsole: true
-      codeSamples:
-        languages:
-          - lang: curl
-          - lang: Node.js
-          - lang: Python
-          - lang: Java
-          - lang: C#
-          - lang: PHP
-  login-unstoppable@v1: 
-    root: apis/login-unstoppable/openapi.yaml
-    openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       showConsole: true
       codeSamples:
@@ -58,9 +50,29 @@ apis:
           - lang: Node.js
           - lang: Python
           - lang: Java
+          - lang: C#
+          - lang: PHP
+  login-unstoppable@v1: 
+    root: apis/loginref/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
   resolution@main: 
     root: apis/resolution/openapi.yaml
     openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       corsProxyUrl: https://cors.redoc.ly
       showConsole: true
@@ -71,14 +83,19 @@ apis:
           - lang: Node.js
           - lang: Python
           - lang: Java
+          - lang: C#
+          - lang: PHP
   messaging-v1@main: 
     root: apis/messaging-v1/openapi.yaml
     openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       showConsole: true
       codeSamples:
         languages:
           - lang: curl
+          - lang: JavaScript
           - lang: Node.js
           - lang: Python
           - lang: Java
@@ -87,6 +104,8 @@ apis:
   registry@main: 
     root: apis/registry/openapi.yaml
     openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       showConsole: true
       codeSamples:
@@ -96,9 +115,13 @@ apis:
           - lang: Node.js
           - lang: Python
           - lang: Java
+          - lang: C#
+          - lang: PHP
   metadata@main: 
     root: apis/metadata/openapi.yaml
     openapi:
+      feedback:
+        hide: true
       hideDownloadButtons: true
       showConsole: true
       codeSamples:
@@ -108,6 +131,11 @@ apis:
           - lang: Node.js
           - lang: Python
           - lang: Java
+          - lang: C#
+          - lang: PHP
+
+mockServer:
+  off: true
 
 links:
   - href: https://fonts.gstatic.com
