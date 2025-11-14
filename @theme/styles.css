@@ -932,6 +932,10 @@ figure img[title*="#width=90%"] { width: 90% !important; }
   background-color: var(--color-primary-hover) !important;
 }
 
+.codemirror-container {
+  background-color: var(--code-block-bg-color) !important;
+}
+
 /* =========================================
    Landing Page: Light/Dark mode overrides
    ========================================= */
@@ -1090,16 +1094,4 @@ html.dark .developer-survey button {
 
 html.dark iframe {
   color-scheme: auto !important;
-}
-
-/* Fix string color contrast in Try it console (light mode) */
-/* Target CodeMirror string tokens in the response/request panels */
-:root:not(.dark) .cm-editor .cm-content .ͼm3 {
-  color: #0e8450 !important; /* darker green with better contrast */
-}
-
-/* Also fix for all CodeMirror string syntax in light backgrounds */
-:root:not(.dark) [data-testid="response-container"] .cm-theme .ͼm3,
-:root:not(.dark) [data-testid="request-container"] .cm-theme .ͼm3 {
-  color: #0e8450 !important;
 }
