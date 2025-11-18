@@ -25,9 +25,9 @@ This tutorial will show you how to [do something] with [UD product]. [Brief desc
 
 ## Step 3: [VERB the/a(n)/your NOUN]
 
-:::success congratulations!
+{% admonition type="success" name="Congratulations" %}
 You have successfully [done something] with [UD product]!
-:::
+{% /admonition %}
 
 <!---<div class="custom-next-to">
 
