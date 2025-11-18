@@ -115,8 +115,6 @@
               page: identity/guides/integration-paths/moralis.md
             - label: Auth0
               page: identity/guides/integration-paths/auth0.md
-            - label: WAGMI
-              page: identity/guides/integration-paths/wagmi.md
         - label: Client Configurations
           page: identity/guides/client-configurations.md
         - label: Login Scopes

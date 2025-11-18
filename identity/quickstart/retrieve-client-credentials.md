@@ -65,7 +65,6 @@ For DApps built with web3 libraries like `web3-react`, `web3-modal`, `web3-onboa
 | [Moralis](/identity/guides/integration-paths/moralis.md)           |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
 | [Node.js Server](/identity/guides/integration-paths/node-js.md)    |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
 | [Auth0](/identity/guides/integration-paths/auth0.md)               |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
-| [WAGMI](/identity/guides/integration-paths/wagmi.md)               |      [WAGMI](https://github.com/unstoppabledomains/uauth/tree/main/examples/wagmi)       |   &#10060;    |    `@uauth/wagmi`     |    `wagmi`     |
 
 {% admonition type="info"%}
 See the [UAuth Example App](https://example.auth.unstoppabledomains.com/) for a live demo of the login flow.
