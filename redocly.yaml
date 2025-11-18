@@ -154,6 +154,7 @@ scripts:
     - src: ./static/scripts/fd-widget.js
     - src: https://widget.freshworks.com/widgets/48000002701.js
     - src: https://embed.typeform.com/next/embed.js
+    - src: ./static/scripts/typeform-init.js
 
 navbar:
   items:

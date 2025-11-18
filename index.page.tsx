@@ -45,7 +45,7 @@ export default function Page() {
                 <h2 className="tile-title">Sell Domains in your App</h2>
               </div>
               <div className="tile-content">
-                Register and manage onchain domains natively within your app.
+                Register and manage onchain domains natively within your app or website.
               </div>
               <div className="tile-button-container">
                 <a href="/domain-distribution-and-management/overview"  className="tile-button">Get Started</a>
@@ -60,7 +60,7 @@ export default function Page() {
                 <h2 className="tile-title">Resolve Domains in your App</h2>
               </div>
               <div className="tile-content">
-                Retrieve cryptocurrency addresses, IPFS hashes, and metadata from onchain domains within in your app.
+                Retrieve crypto addresses, IPFS hashes, metadata, and enable reverse resolution to display domain names in place of wallet addresses.
               </div>
               <div className="tile-button-container">
                 <a href="/resolution/overview" className="tile-button">Get Started</a>
@@ -70,12 +70,12 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src="/static/images/resolve domains.png" alt="Login with domains" className="tile-image" />
+                  <img src="/static/images/login.png" alt="Login with domains" className="tile-image" />
                 </div>
                 <h2 className="tile-title">Login with Domains in your App</h2>
               </div>
               <div className="tile-content">
-                Allow users to log in with their Unstoppable Domains in your app.
+                Allow users to log in with their Unstoppable Domains in your app or website.
               </div>
               <div className="tile-button-container">
                 <a href="/identity/overview/login-with-unstoppable" className="tile-button">Get Started</a>
