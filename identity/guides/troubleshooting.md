@@ -97,7 +97,7 @@ To resolve this, upgrade the UAuth library associated with Unstoppable Login.
 
 ## Error: Logging in/Logging Out
 
-**This error is specific to the BNC Onboard model.** Logging in/out is actively managed by Web3 React and Web3 Modal, so logging out is not an issue with those models.
+**This error is specific to the BNC Onboard model.** Logging in/out is actively managed by Web3 React, so logging out is not an issue with this model.
 
 The problem happens the second, or subsequent time, that you attempt to login to the application. You get a default popup login modal (this is the bug) and are unable to proceed through the login flow. This happens because the session expires every hour, which means that you are trying to access user information when there isn't any because the session has already ended (i.e. user data has been removed/wiped).
 

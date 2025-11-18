@@ -105,8 +105,6 @@
               page: identity/guides/integration-paths/login-without-pop-up.md
             - label: Node.js
               page: identity/guides/integration-paths/node-js.md
-            - label: Web3 Modal
-              page: identity/guides/integration-paths/web3-modal.md
             - label: Web3 React
               page: identity/guides/integration-paths/web3-react.md
             - label: Web3 Onboard
@@ -159,8 +157,6 @@
               page: identity/sdk-and-libraries/uauth-node.md
             - label: Web3 React
               page: identity/sdk-and-libraries/web3-react.md
-            - label: Web3 Modal
-              page: identity/sdk-and-libraries/web3-modal.md
             - label: Web3 Onboard
               page: identity/sdk-and-libraries/web3-onboard.md
             - label: Moralis

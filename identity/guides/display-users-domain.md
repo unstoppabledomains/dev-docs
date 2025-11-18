@@ -53,35 +53,6 @@ uauthConnector.uauth.user().then().catch()
 ```
 {% /tab %}
 
-{% tab label="web3modal" %}
-```javascript
-import UAuth from '@uauth/js'
-
-const uauthOptions = {
-  clientID: "",
-  redirectUri: ""
-}
-
-const web3ModalOptions = {
-  'custom-uauth': {
-    ...uauthOptions}
-}
-
-const web3Modal = new Web3Modal(web3ModalOptions)
-
-new UAuth(uauthOptions).user().then().catch()
-```
-{% /tab %}
-
-{% tab label="moralis" %}
-```javascript
-const uauthMoralisConnector = new UAuthMoralisConnector()
-
-uauthMoralisConnector.uauth.user().then().catch()
-
-```
-{% /tab %}
-
 {% /tabs %}
 
 The `user()` method will return a [UserInfo](/identity/sdk-and-libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
