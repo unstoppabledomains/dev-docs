@@ -53,7 +53,7 @@ There are several ways to integrate with Unstoppable Login, which are listed in 
 
 Because pop-ups are a more integration friendly approach, every integration path except for **Login without Pop-up** and **Node.js Server** uses them by default. You can use redirects instead with the `login()` method of `@uauth/js` or the `shouldLoginWithRedirect` configuration option for other `@uauth/*` libraries.
 
-For DApps built with web3 libraries like `web3-react`, `web3-onboard`, and `moralis`, UAuth provides packages that help you wrap a new UAuth instance in an interface that each library supports. After configuring these packages, you can continue using the web3 library normally.
+For DApps built with web3 libraries like `web3-react`and `web3-onboard`, UAuth provides packages that help you wrap a new UAuth instance in an interface that each library supports. After configuring these packages, you can continue using the web3 library normally.
 
 | Integration Guide                                                            |                                     Example Project                                      | Web3 Provider |        Package        |  Front-end UI  |
 | ---------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------: | :-----------: | :-------------------: | :------------: |
@@ -61,7 +61,6 @@ For DApps built with web3 libraries like `web3-react`, `web3-onboard`, and `mora
 | [Login without Pop-up](/identity/guides/integration-paths/login-without-pop-up.md)         |                                            -                                             |   &#10060;    |      `@uauth/js`      |     React      |
 | [Web3 React](/identity/guides/integration-paths/web3-react.md)     | [web3-react](https://github.com/unstoppabledomains/uauth/blob/main/examples/web3-react/) |    &#9989;    |  `@uauth/web3-react`  |  `web3-react`  |
 | [Web3 Onboard](/identity/guides/integration-paths/web3-onboard.md) |                                            -                                             |    &#9989;    | `@web3-onboard/uauth` | `web3-onboard` |
-| [Moralis](/identity/guides/integration-paths/moralis.md)           |    [moralis](https://github.com/unstoppabledomains/uauth/blob/main/examples/moralis)     |    &#9989;    |   `@uauth/moralis`    |   `moralis`    |
 | [Node.js Server](/identity/guides/integration-paths/node-js.md)    |     [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)      |   &#10060;    |     `@uauth/node`     |      None      |
 | [Auth0](/identity/guides/integration-paths/auth0.md)               |     [UAuth + Auth0 ](https://github.com/unstoppabledomains/uauth-auth0-sample-dapp)      |   &#10060;    |        `auth0`        |    `auth0`     |
 

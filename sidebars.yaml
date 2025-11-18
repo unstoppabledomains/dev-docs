@@ -109,8 +109,6 @@
               page: identity/guides/integration-paths/web3-react.md
             - label: Web3 Onboard
               page: identity/guides/integration-paths/web3-onboard.md
-            - label: Moralis
-              page: identity/guides/integration-paths/moralis.md
             - label: Auth0
               page: identity/guides/integration-paths/auth0.md
         - label: Client Configurations
@@ -159,8 +157,6 @@
               page: identity/sdk-and-libraries/web3-react.md
             - label: Web3 Onboard
               page: identity/sdk-and-libraries/web3-onboard.md
-            - label: Moralis
-              page: identity/sdk-and-libraries/moralis.md
   separatorLine: true
 - group: Contract Architecture
   expanded: false

@@ -24,7 +24,6 @@ The UAuth middleware libraries provide an additional custom interface for `@uaut
 | ----------------------------------------------------------------------- | --------------------- | --------------------------------- |
 | [Web3-React](/identity/sdk-and-libraries/web3-react.md)     | `@uauth/web3-react`   | Middleware library for Web3-React |
 | [Web3-Onboard](/identity/sdk-and-libraries/web3-onboard.md) | `@web3-onboard/uauth` | UAuth Module for Web3-Onboard     |
-| [Moralis](/identity/sdk-and-libraries/moralis.md)           | `@uauth/moralis`      | Middleware library for Moralis    |
 
 ## Examples
 
@@ -33,7 +32,6 @@ The UAuth middleware libraries provide an additional custom interface for `@uaut
 | [spa](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa)                    | Basic login integration using the `@uauth/js` library.             |
 | [web3-react](https://github.com/unstoppabledomains/uauth/tree/main/examples/web3-react)      | Login integration using the `@uauth/web3-react` library.           |
 | [web3-onboard](https://github.com/unstoppabledomains/uauth/tree/main/examples/web3-onboard/) | Login integration using the `@uauth/web3-onboard` library.         |
-| [moralis](https://github.com/unstoppabledomains/uauth/tree/main/examples/moralis/)           | Login integration using the `@uauth/moralis` library.              |
 | [server](https://github.com/unstoppabledomains/uauth/tree/main/examples/server)              | Login integration using the `@uauth/node` library.                 |
 | [sveltekit](https://github.com/unstoppabledomains/uauth/tree/main/examples/sveltekit)        | Login integration using the `sveltekit` framework and `@uauth/js`. |
 
