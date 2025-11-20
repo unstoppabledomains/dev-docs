@@ -6,7 +6,35 @@ export const frontmatter = {
   "title": "Unstoppable Domains Developer Documentation Portal"
 };
 
+function useTheme() {
+  const [isDark, setIsDark] = React.useState(false);
+
+  React.useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      const htmlElement = document.documentElement;
+      setIsDark(htmlElement.classList.contains('dark'));
+    };
+
+    checkTheme();
+
+    // Watch for theme changes using MutationObserver
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return isDark;
+}
+
 export default function Page() {
+  const isDark = useTheme();
+  const imageSuffix = isDark ? 'dark' : 'light';
+
   return (
     <>
       <main>
@@ -40,7 +68,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src="/static/images/sell-domains.png" alt="Sell domains" className="tile-image" />
+                  <img src={`/static/images/sell-domains-${imageSuffix}.png`} alt="Sell domains" className="tile-image" />
                 </div>
                 <h2 className="tile-title">Sell Domains in your App</h2>
               </div>
@@ -55,7 +83,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src="/static/images/resolve domains.png" alt="Resolve domains" className="tile-image" />
+                  <img src={`/static/images/resolve-domains-${imageSuffix}.png`} alt="Resolve domains" className="tile-image" />
                 </div>
                 <h2 className="tile-title">Resolve Domains in your App</h2>
               </div>
@@ -70,7 +98,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src="/static/images/login.png" alt="Login with domains" className="tile-image" />
+                  <img src={`/static/images/login-with-domains-${imageSuffix}.png`} alt="Login with domains" className="tile-image" />
                 </div>
                 <h2 className="tile-title">Login with Domains in your App</h2>
               </div>
@@ -85,7 +113,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src="/static/images/api-reference.png" alt="API Reference" className="tile-image" />
+                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="API Reference" className="tile-image" />
                 </div>
                 <h2 className="tile-title">API Reference</h2>
               </div>

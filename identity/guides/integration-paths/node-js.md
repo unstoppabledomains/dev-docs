@@ -64,7 +64,7 @@ yarn add express-session express express-async-errors morgan
 
 {% tab label="npm" %}
 ```shell
-yarn intall --save express-session express express-async-errors morgan
+npm install --save express-session express express-async-errors morgan
 ```
 {% /tab %}
 

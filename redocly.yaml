@@ -178,8 +178,8 @@ footer:
 
     - group: Community
       items:
-        - label: Twitter
-          href: 'https://twitter.com/unstoppableweb'
+        - label: X
+          href: 'https://x.com/unstoppableweb'
         - label: Facebook
           href: 'https://www.facebook.com/unstoppableweb/'
 
@@ -187,8 +187,6 @@ footer:
       items:
         - label: Medium
           href: 'https://medium.com/unstoppabledomains'
-        - label: Podcast
-          href: 'https://the-unstoppable-podcast.simplecast.com/'
         - label: Youtube
           href: 'https://www.youtube.com/c/unstoppabledomains'
         - label: Github
