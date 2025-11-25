@@ -1,8 +1,10 @@
 ---
 title: Browser Resolution Test Domains | Unstoppable Domains Developer Portal
-description: This page provides a list of the browser resolution test domains and reviews the process for retrieving test records.
-redirectFrom:
-  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains/
+description: >-
+  This page provides a list of the browser resolution test domains and reviews
+  the process for retrieving test records.
+redirects:
+  /developer-toolkit/advanced-use-cases/resolve-domains-browser/test-domains/: {}
 ---
 
 # Browser Resolution Test Domains

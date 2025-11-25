@@ -19,7 +19,7 @@ To verify an implementation of the namehash algorithm, use the following referen
 
 ## Generating a Domain Namehash
 
-<embed src="/snippets/_namehashing-snippets.md" />
+{% partial file="/_partials/_namehashing-snippets.md" /%}
 
 ## Reverse Lookup
 
@@ -61,4 +61,4 @@ Note that regardless of the way a namehash is reversed, it should always be forw
 
 ## Public API
 
-Unstoppable Domains maintains a public-facing API which can be used to obtain the information of a domain using its namehash. To learn more, visit the [Get Metadata for a Domain](https://docs.unstoppabledomains.com/openapi/metadata/#operation/domains_getMetaData) documentation.
+Unstoppable Domains maintains a public-facing API which can be used to obtain the information of a domain using its namehash. To learn more, visit the [Get Metadata for a Domain](https://docs.unstoppabledomains.com/apis/metadata/#operation/domains_getMetaData) documentation.

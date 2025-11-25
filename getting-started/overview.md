@@ -15,9 +15,9 @@ You'll need the following to get started:
 - A domain
 - A stable test environment
 
-:::info 
+{% admonition type="info"%}
 Domains can be purchased for as little as $2. Simply search for any `.unstoppable` domain that is longer than `7 characters` in length. Alternatively, email <partnerengineering@unstoppabledomains.com> if you are unable to find a suitable domain.
-:::
+{% /admonition %}
 
 ## How This Portal Is Organized
 
@@ -27,6 +27,6 @@ This portal is organized to support users at all experience levels, from foundat
     - [Reverse Resolution](/resolution/rr-overview.md)
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
-- [API Reference](/openapi/overview.md)
+- [API Reference](/apis/overview.md)
 
-<embed src="/snippets/_developer-survey-embed.md" />
+{% partial file="/_partials/_developer-survey-embed.md" /%}

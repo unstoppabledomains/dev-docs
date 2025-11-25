@@ -1,0 +1,196 @@
+seo:
+  title: Unstoppable Domains Developer Portal
+  description: The developer documentation portal and API reference for Unstoppable Domains.
+  siteUrl: https://docs.unstoppabledomains.com
+  keywords: unstoppable domains developer portal, api reference docs
+  lang: en-US
+
+logo:
+  srcSet: "./static/images/ud-logo-light.svg light, ./static/images/ud-logo-dark.svg dark"
+  altText: UD Developer Docs Logo
+  link: "/"
+  favicon: ./favicon.png
+
+markdown:
+  toc:
+    depth: 3
+  editPage:
+    baseUrl: https://github.com/unstoppabledomains/dev-docs/blob/main/
+    hide: false
+
+apis:
+  partner-v3@main: 
+    root: apis/partner/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  profile-v1@main: 
+    root: apis/profile-v1/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  login-unstoppable@v1: 
+    root: apis/loginref/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  resolution@main: 
+    root: apis/resolution/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  messaging-v1@main: 
+    root: apis/messaging-v1/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  registry@main: 
+    root: apis/registry/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  metadata@main: 
+    root: apis/metadata/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+
+mockServer:
+  off: true
+
+links:
+  - href: https://fonts.gstatic.com
+    rel: preconnect
+  - href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap'
+  - href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap'
+
+analytics:
+  ga:
+    head: false
+    trackingId: UA-120492152-2
+
+scripts:
+  head:
+    - src: ./static/scripts/etlb.js
+    - src: ./static/scripts/fd-widget.js
+    - src: https://widget.freshworks.com/widgets/48000002701.js
+    - src: https://embed.typeform.com/next/embed.js
+    - src: ./static/scripts/typeform-init.js
+
+navbar:
+  items:
+    - label: Get Started
+      page: getting-started/overview.md
+    - label: API Reference
+      page: apis/overview.md
+
+search:
+  hide: false
+
+footer:
+  copyrightText: © Unstoppable Domains Inc. All Rights Reserved.
+  items:
+    - group: Legal
+      items:
+        - label: Terms of Use
+          href: 'https://unstoppabledomains.com/terms'
+        - label: Privacy Notice
+          href: 'https://unstoppabledomains.com/privacy-policy'
+
+    - group: Community
+      items:
+        - label: X
+          href: 'https://x.com/unstoppableweb'
+        - label: Facebook
+          href: 'https://www.facebook.com/unstoppableweb/'
+
+    - group: Resources
+      items:
+        - label: Medium
+          href: 'https://medium.com/unstoppabledomains'
+        - label: Youtube
+          href: 'https://www.youtube.com/c/unstoppabledomains'
+        - label: Github
+          href: 'https://github.com/unstoppabledomains'
+
+redirects:
+  $ref: './redirects.yaml'

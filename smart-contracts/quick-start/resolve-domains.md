@@ -1,8 +1,10 @@
 ---
 title: Resolve Using Smart Contracts Guide | UD Developer Portal
-description: This page explains the process for resolving domain records by making calls to Ethereum and Polygon smart contracts using Ethereum JSON RPC.
-redirectFrom:
-  - /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/*
+description: >-
+  This page explains the process for resolving domain records by making calls to
+  Ethereum and Polygon smart contracts using Ethereum JSON RPC.
+redirects:
+  /developer-toolkit/resolution-integration-methods/direct-blockchain-calls/*: {}
 ---
 
 # Resolve Domains Using Smart Contracts
@@ -115,9 +117,9 @@ console.log({ resolver: data.resolver, owner: data.owner, values: data[2] });
 // }
 ```
 
-:::info
+{% admonition type="info"%}
 `namehash()` - namehashing algorithm implementation. See the [Namehashing](/getting-started/domain-registry-essentials/namehashing.md) guide for more information.
-:::
+{% /admonition %}
 
 <figure>
 
@@ -128,9 +130,9 @@ console.log({ resolver: data.resolver, owner: data.owner, values: data[2] });
 
 See the [Records Reference](/resolution/records-reference.md) for more information about the standardized records.
 
-:::info
+{% admonition type="info"%}
 When resolving domains to records, first check the records on the Polygon network, then check on the Ethereum network.
-:::
+{% /admonition %}
 
 ## Record Value Validation
 

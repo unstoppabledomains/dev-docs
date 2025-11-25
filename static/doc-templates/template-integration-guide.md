@@ -33,6 +33,6 @@ description: This guide shows how to [do something] with [UD Product] using [Int
 
 ## Step 3: [VERB the/a(n)/your NOUN]
 
-:::success congratulations!
+{% admonition type="success" name="Congratulations" %}
 You have successfully integrated [UD Product] using [Integration Pathway]. Happy Hacking!
-:::
+{% /admonition %}

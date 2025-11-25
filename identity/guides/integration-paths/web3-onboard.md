@@ -1,9 +1,11 @@
 ---
 title: Web3-Onboard Guide for Unstoppable Login | UD Developer Portal
-description: This integration guide is intended for a custom @uauth/js integration, with ethereum provider, using the Blocknative UAuth module.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/web3-onboard-guide/
+description: >-
+  This integration guide is intended for a custom @uauth/js integration, with
+  ethereum provider, using the Blocknative UAuth module.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/web3-onboard-guide/: {}
 ---
 
 # Web3-Onboard Guide: Unstoppable Login
@@ -28,13 +30,21 @@ This is the basic integration guide for the Blocknative Web3-Onboard UAuth modul
 
 ## Step 1: Install the Blocknative Packages
 
-```sh yarn
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 yarn add @web3-onboard/core @web3-onboard/uauth
 ```
+{% /tab %}
 
-```sh npm
+{% tab label="npm" %}
+```shell
 npm i @web3-onboard/core @web3-onboard/uauth
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Step 2: Configure UAuth
 
@@ -77,8 +87,8 @@ const connectedWallets = await onboard.connectWallet();
 console.log(connectedWallets);
 ```
 
-:::success Congratulations!
+{% admonition type="success" name="Congratulations!" %}
 You have implemented Unstoppable Login with Blocknative Web3-Onboard.
-:::
+{% /admonition %}
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

@@ -1,8 +1,10 @@
 ---
 title: Records Reference | Unstoppable Domains Developer Portal
-description: This page contains an overview of all standardized domain records. It covers crypto payments, social records, and browser resolution for DWeb and DNS.
-redirectFrom:
-  - /developer-toolkit/reference/records-reference/
+description: >-
+  This page contains an overview of all standardized domain records. It covers
+  crypto payments, social records, and browser resolution for DWeb and DNS.
+redirects:
+  /developer-toolkit/reference/records-reference/: {}
 ---
 
 # Records Reference
@@ -23,9 +25,9 @@ This reference page is divided into sections, grouping records by their namespac
 
 Developers may also set custom records for the domains. Domain records are stored as a key-value dictionary by domains and are not validated on the smart-contract level. For more details, read [CNS Architecture](/smart-contracts/overview/cns-architecture-overview.md), [UNS Architecture](/smart-contracts/overview/uns-architecture-overview.md), and [Managing Domain Records](/smart-contracts/quick-start/manage-domain-records.md).
 
-:::info
+{% admonition type="info"%}
 A list of keys supported by Unstoppable Domains can be found in [reference json file](https://github.com/unstoppabledomains/uns/blob/main/resolver-keys.json)
-:::
+{% /admonition %}
 
 ## Cryptocurrency payments
 
@@ -45,9 +47,9 @@ Ethereum address to receive cryptocurrency payments.
 
 Bitcoin address to receive cryptocurrency payments.
 
-| Format                      | Example                           |
-| --------------------------- | --------------------------------- | ------------------------------------ |
-| `bc1[ac-hj-np-z02-9]{6,87}$ | ^[13][a-km-za-hj-np-z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
+| Format                                                           | Example
+| ---------------------------------------------------------------- | ------------------------------------ |
+| `bc1[ac-hj-np-z02-9]{6,87}$ \| ^[13][a-km-za-hj-np-z1-9]{25,39}` | `1Nb7Mt1EqUqxxrAdmefUovS7aTgMUf2A6m` |
 
 **`crypto.<TICKER>.address`**
 
@@ -79,9 +81,9 @@ See [example](/resolution/quickstart/resolution/#resolve-wallet-addresses) for h
 
 **`crypto.USDT.version.OMNI.address`**
 
-| Format | Example                        |
-| ------ | ------------------------------ | ------------------------------------ |
-| `(bc1  | [13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
+| Format                                  | Example
+| --------------------------------------- | ------------------------------------ |
+| `(bc1 \| [13])[a-zA-HJ-NP-Z0-9]{25,39}` | `16df369whGV8o3DVeGBmfSNwytaqZGWtYJ` |
 
 **`crypto.<TICKER>.version.<VERSION>.address`**
 
@@ -262,9 +264,9 @@ Public email addresses of the domain owner.
 
 Indicates if a domain if available for sale.
 
-| Format  | Example  |
-| ------- | -------- | ------ |
-| `(true) | (false)` | `true` |
+| Format                | Example |
+| --------------------- | ------- |
+| `(true) \| (false)`   | `true`  |
 
 **`forwarding.url`**
 

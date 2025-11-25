@@ -5,7 +5,7 @@ description: This guide covers how to retrieve the reverse record of UD domains 
 
 # Reverse Resolve Domains
 
-This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution/) to retrieve the reverse record(s) of UD domains.
+This page details basic configuration and usage of the [Resolution Service API](https://docs.unstoppabledomains.com/apis/resolution/) to retrieve the reverse record(s) of UD domains.
 
 ## Project Setup
 
@@ -19,9 +19,9 @@ Express.js will serve as the API proxy throughout this quickstart and will handl
 
 The Resolution Service API is not meant to be directly accessed from a frontend client and will throw `CORS` errors if it is. 
 
-:::info
+{% admonition type="info"%}
 There is a 20 call/second/key limit on the Resolution Service API. If you need a higher rate limit, please contact partnerengineering@unstoppabledomains.com
-:::
+{% /admonition %}
 
 ## Examples
 
@@ -203,8 +203,8 @@ async function reverseResolveBatch(
 }
 ```
 
-:::success Congratulations
+{% admonition type="success" name="Congratulations" %}
 You have successfully integrated Reverse Resolution using Unstoppable Domains Resolution Service API. Happy Hacking!
-:::
+{% /admonition %}
 
 

@@ -1,8 +1,10 @@
 ---
 title: Browser Resolution Overview | Unstoppable Domains Developer Portal
-description: This page provides a high level overview of how UD Resolution works when resolving domains using a traditional HTTP Web Browser or a DApp Browser.
-redirectFrom:
-  - /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/
+description: >-
+  This page provides a high level overview of how UD Resolution works when
+  resolving domains using a traditional HTTP Web Browser or a DApp Browser.
+redirects:
+  /developer-toolkit/advanced-use-cases/resolve-domains-browser/browser-resolution-overview/: {}
 ---
 
 # How Browser Resolution Works
@@ -15,7 +17,7 @@ To make domain resolution easier, we've written libraries for web, Android, and 
 
 ### Domain Resolution Service API
 
-For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](https://docs.unstoppabledomains.com/openapi/resolution). The Unstoppable Domains team manages this service.
+For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](https://docs.unstoppabledomains.com/apis/resolution). The Unstoppable Domains team manages this service.
 
 - [Resolution](/resolution/quickstart/resolution.md)
 

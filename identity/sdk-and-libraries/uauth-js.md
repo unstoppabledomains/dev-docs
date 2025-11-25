@@ -1,8 +1,10 @@
 ---
 title: UAuth JS Library | Unstoppable Domains Developer Portal
-description: This page provides documents the public interface of the core @uauth/js library.
-redirectFrom:
-  - /login-with-unstoppable/libraries/uauth-js/
+description: >-
+  This page provides documents the public interface of the core @uauth/js
+  library.
+redirects:
+  /login-with-unstoppable/libraries/uauth-js/: {}
 ---
 
 # UAuth JS Library

@@ -15,11 +15,11 @@ Webhooks enable applications to be written with reactive, asynchronous logic ins
 
 ## Registering Webhooks
 
-The Partner API provides [several endpoints for managing webhooks](https://docs.unstoppabledomains.com/openapi/partner/latest/#tag/webhooks).
+The Partner API provides [several endpoints for managing webhooks](https://docs.unstoppabledomains.com/apis/partner/latest/#tag/webhooks).
 
 You will need an absolute URL to your server where we should send webhook requests. For example: `https://api.my-server.com/webhooks`. This endpoint should be setup to receive `POST` requests with an `application/json` Content Type.
 
-Once you know the URL for your server, you simply need to make a [registration request](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/createWebhook) using that URL and the desired webhook event type. In the following example payload we are using the `OPERATION_FINISHED` webhook event type.
+Once you know the URL for your server, you simply need to make a [registration request](https://docs.unstoppabledomains.com/apis/partner/latest/#operation/createWebhook) using that URL and the desired webhook event type. In the following example payload we are using the `OPERATION_FINISHED` webhook event type.
 
 ```json
 {
@@ -32,7 +32,7 @@ That's it! Now your server will receive `POST` requests anytime an operation com
 
 ## Receiving Webhooks
 
-Your server should be prepared to receive HTTP `POST` requests that have an `application/json` body. The request to your server will include a JSON payload and headers from our server that you can use to process the update. The request body will depend on the webhook event type. In the example from the previous section, we registered an `OPERATION_FINISHED` webhook. For the exact request to expect, [see the API specification](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/webhook_OperationFinished).
+Your server should be prepared to receive HTTP `POST` requests that have an `application/json` body. The request to your server will include a JSON payload and headers from our server that you can use to process the update. The request body will depend on the webhook event type. In the example from the previous section, we registered an `OPERATION_FINISHED` webhook. For the exact request to expect, [see the API specification](https://docs.unstoppabledomains.com/apis/partner/latest/#operation/webhook_OperationFinished).
 
 Other considerations:
 - In addition to processing the JSON payload, you should check the `x-ud-timestamp` header to ensure you are not receiving updates out of order.
@@ -89,7 +89,7 @@ The retry delay interval doubles after each failed attempt, resulting in the fol
 7. 64 minutes
 8. 120 minutes (2 hours)
 
-If your server fails to respond successfully after these retries we will no longer attempt to delivery that payload and you must use the [API to check for the expected updates](https://docs.unstoppabledomains.com/openapi/partner/latest/#operation/checkOperation).
+If your server fails to respond successfully after these retries we will no longer attempt to delivery that payload and you must use the [API to check for the expected updates](https://docs.unstoppabledomains.com/apis/partner/latest/#operation/checkOperation).
 
 ## Verifying Webhooks
 
@@ -99,7 +99,9 @@ The `x-ud-signature` header is a Base64 encoded HMAC-SHA256 of the raw payload b
 
 You simply need to recompute the HMAC in your application to verify the request:
 
-```typescript TypeScript (Node)
+{% tabs %}
+{% tab label="TypeScript (Node)" %}
+```typescript
 import { createHmac } from 'crypto';
 
 function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApiKey: string): boolean {
@@ -109,8 +111,10 @@ function verifyRequest(signatureHeader: string, rawBodyBytes: Buffer, accountApi
     return computedSignature === signatureHeader;
 }
 ```
+{% /tab %}
 
-```python Python
+{% tab label="Python" %}
+```python
 import hashlib
 import hmac
 import base64
@@ -120,8 +124,10 @@ def verify_request(signature_header, raw_body_bytes, account_api_key):
     computed_signature = base64.b64encode(computed_hmac).decode()
     return computed_signature == signature_header
 ```
+{% /tab %}
 
-```go Go
+{% tab label="Go" %}
+```go
 import (
     "crypto/hmac"
     "crypto/sha256"
@@ -137,8 +143,10 @@ func verifyRequest(signatureHeader string, rawBodyBytes []byte, accountAPIKey st
     return computedSignature == signatureHeader
 }
 ```
+{% /tab %}
 
-```java Java
+{% tab label="Java" %}
+```java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
@@ -162,15 +170,19 @@ public static boolean verifyRequest(String signatureHeader, byte[] rawBodyBytes,
     return false;
 }
 ```
+{% /tab %}
 
-```php PHP
+{% tab label="PHP" %}
+```php
 function verifyRequest($signatureHeader, $rawBodyBytes, $accountApiKey) {
     $computedSignature = base64_encode(hash_hmac('sha256', $rawBodyBytes, $accountApiKey, true));
     return $computedSignature === $signatureHeader;
 }
 ```
+{% /tab %}
 
-```csharp C#
+{% tab label="C#" %}
+```csharp
 using System;
 using System.Security.Cryptography;
 using System.Text;
@@ -187,6 +199,9 @@ public static bool VerifyRequest(string signatureHeader, byte[] rawBodyBytes, st
     }
 }
 ```
+{% /tab %}
+
+{% /tabs %}
 
 When using Node with `express`, you can use the `express.json({ verify: ... })` callback to get access to the raw buffer:
 

@@ -1,8 +1,10 @@
 ---
 title: Best Practices for Integrating Domain Resolution | UD Developer Portal
-description: This page covers best practices to follow while integrating Unstoppable Domains resolution.
-redirectFrom:
-  - /developer-toolkit/reference/resolution-best-practices/
+description: >-
+  This page covers best practices to follow while integrating Unstoppable
+  Domains resolution.
+redirects:
+  /developer-toolkit/reference/resolution-best-practices/: {}
 ---
 
 # Best Practices for Integrating Domain Resolution
@@ -11,7 +13,7 @@ Here are best practices to ensure the proper integration of the Unstoppable Doma
 
 ## Don’t Hard-code UD Domain Endings Into Your Application
 
-<embed src="/snippets/_new_tld_warning.md" />
+{% partial file="/_partials/_new_tld_warning.md" /%}
 
 ## Display Resolved Addresses Near Domain Names
 
@@ -34,7 +36,7 @@ When you don't find a currency address record for a domain, please do not make a
 
 ## Handle Errors According to Their Type
 
-When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution Libraries](/openapi/resolution/#operation/StatusController.listSupportedTlds) docs for language-specific error handling guides and library error codes you might encounter during integration.
+When you encounter errors using any resolution method (Resolution Libraries, Resolution Service API, CLI, Blockchain Calls), handle them according to the error type rather than generically handling them or passing them silently. Please see the [Resolution API](/apis/resolution/openapi.yaml#operation/StatusController.listSupportedTlds) docs for language-specific error handling guides and library error codes you might encounter during integration.
 
 ## Validate the Addresses Resolved From Domains
 

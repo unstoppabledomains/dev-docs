@@ -1,9 +1,11 @@
 ---
 title: Unstoppable Login with Popup
-description: This integration guide is intended for a generic @uauth/js, no Ethereum provider, with callback, and with the popup feature.
-redirectFrom:
-  - /login-with-unstoppable/login-integration-guides/login-with-popup/
+description: >-
+  This integration guide is intended for a generic @uauth/js, no Ethereum
+  provider, with callback, and with the popup feature.
 showNextButton: false
+redirects:
+  /login-with-unstoppable/login-integration-guides/login-with-popup/: {}
 ---
 
 # Unstoppable Login with Popup
@@ -17,31 +19,39 @@ In this integration guide, we will show how to add Unstoppable Login with the po
 <figcaption>Tutorial: Integrating Login With Popup</figcation>
 </figure>
 
-:::info
+{% admonition type="info"%}
 If you’d like to skip ahead or follow along you can download the [full example (1 KB zipped)](https://gist.github.com/perfect-cents/b2a0df5b73b441feb86168a272670565/archive/2463d1538d9e8257e70dc1908e65d95464665fe9.zip) beforehand.
-:::
+{% /admonition %}
 
 ## Step 1: Project Setup
 
 Before we get started, you’ll need to install Node and Yarn or npm and create a directory for your project. Then, install the following packages into your app using one of the following scripts:
 
-```shell yarn
+{% tabs %}
+
+{% tab label="yarn" %}
+```shell
 mkdir project && cd project
 yarn init --yes
 yarn add --dev parcel
 yarn add @uauth/js
 ```
+{% /tab %}
 
-```shell npm
+{% tab label="npm" %}
+```shell {% title="" %}
 mkdir project && cd project
 npm init --yes
 npm install --save-dev parcel
 npm install --save @uauth/js
 ```
+{% /tab %}
 
-:::info
+{% /tabs %}
+
+{% admonition type="info"%}
 **@uauth/js** is the library used for implementing Unstoppable Login on the frontend.
-:::
+{% /admonition %}
 
 ## Step 2: Create an HTML File
 
@@ -102,7 +112,7 @@ window.logout = async () => {
 
 ## Step 6: Unstoppable Login
 
-<embed src="/snippets/_login-mainnet-warning.md" />
+{% partial file="/_partials/_login-mainnet-warning.md" /%}
 
 The following command will run the app. Keep in mind that the credentials will only work if you are on the correct port.
 
@@ -110,4 +120,4 @@ The following command will run the app. Keep in mind that the credentials will o
 yarn parcel --open --port 5000 index.html
 ```
 
-<embed src="/snippets/_login-paths-next.md" />
+{% partial file="/_partials/_login-paths-next.md" /%}

@@ -15,9 +15,9 @@ This page covers the following topics:
 
 UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once minted, members have complete control of their domains.
 
-:::info
+{% admonition type="info"%}
 For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](cns-uns-comparison.md).
-:::
+{% /admonition %}
 
 ## Smart Contract Architecture
 
@@ -79,9 +79,9 @@ A domain can be owned by both an external address (one that is accessed with a p
 
 Such an ownership model might not be suitable for every member. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract.
 
-:::info
+{% admonition type="info"%}
 If the owner of a `.wallet` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting subsection of [Delegating Domain Management](#delegating-domain-management).
-:::
+{% /admonition %}
 
 ### Alternative Ownership Models
 

@@ -1,10 +1,12 @@
 ---
 title: Login Authentication Protocol | Unstoppable Domains Developer Portal
-description: This page describes the extension of the OpenID Connect protocol used by Unstoppable Login to obtain a user's wallet signature.
+description: >-
+  This page describes the extension of the OpenID Connect protocol used by
+  Unstoppable Login to obtain a user's wallet signature.
 showNextButton: false
-redirectFrom:
-  - /login-with-unstoppable/high-level-overview/authentication-protocol/
-  - /login-with-unstoppable/login-protocols/authentication-protocol/
+redirects:
+  /login-with-unstoppable/high-level-overview/authentication-protocol/: {}
+  /login-with-unstoppable/login-protocols/authentication-protocol/: {}
 ---
 
 # Authentication Protocol
@@ -13,9 +15,9 @@ Unstoppable Login uses a modified version of the OpenID Connect (OIDC) protocol 
 
 A key distinguisher between traditional and decentralized authorization protocols is that there is no centralized resource access. Decentralized authorization requires that the Authorization Server won’t have pre-existing knowledge of the resources it’s authorizing clients to use. OAuth, OIDC, and SAML only govern the parts of the interaction between clients & authorization Servers. Decentralized authentication is between two parties because resources must provide an interface for Authorization Servers to read from.
 
-:::info
+{% admonition type="info"%}
 With decentralized authorization, basic authentication information is likely stored directly on the Authorization Server, so Standard Claims will need to be separated out from Client-to-Resource authorization.
-:::
+{% /admonition %}
 
 ## Major Actors
 
@@ -49,9 +51,9 @@ The table below describes the primary ways that clients ask for tokens. The firs
 
 Authentication is any method the Authorization Server uses to validate the user’s ownership of the domain, which includes the actual consent screen authorizing everything. Unstoppable Login uses the personal_sign method inside the [Ethereum JSON-RPC](https://geth.ethereum.org/docs/rpc/ns-personal) to authenticate users, which allows authentication using domain ownership, or a record configured on the domain.
 
-:::info
+{% admonition type="info"%}
 Clients and Resource Servers don’t need to know or care what Authentication method the Authorization Server uses.
-:::
+{% /admonition %}
 
 The table below lists the primary ways Authorization Servers authenticate users.
 

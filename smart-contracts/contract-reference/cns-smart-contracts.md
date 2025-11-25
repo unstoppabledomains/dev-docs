@@ -1,10 +1,12 @@
 ---
 title: CNS Smart Contract | Unstoppable Domains Developer Portal
-description: This page provides brief descriptions with links to source code and deployment addresses for the Crypto Name Service smart contracts.
-redirectFrom:
-  - /developer-toolkit/reference/smart-contracts/cns-smart-contracts/
+description: >-
+  This page provides brief descriptions with links to source code and deployment
+  addresses for the Crypto Name Service smart contracts.
 editPage:
   disable: true
+redirects:
+  /developer-toolkit/reference/smart-contracts/cns-smart-contracts/: {}
 ---
 
 # CNS Smart Contract
@@ -19,9 +21,9 @@ This page is divided into sections, grouping contracts by the following categori
 - [Utility contracts](cns-smart-contracts.md#utility-contracts)
 - [Test smart contracts](cns-smart-contracts.md#test-smart-contracts)
 
-:::info
+{% admonition type="info"%}
 All contract addresses are available on the [UNS GitHub repository](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md)
-:::
+{% /admonition %}
 
 
 ## User-facing contracts

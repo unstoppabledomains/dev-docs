@@ -15,9 +15,9 @@ The [UNS Registry](/smart-contracts/contract-reference/uns-smart-contracts.md#un
 - [Polygon Mainnet Registry](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f)
 - [Base Mainnet Registry](https://basescan.org/address/0xF6c1b83977DE3dEffC476f5048A0a84d3375d498)
 
-:::info
+{% admonition type="info"%}
 For help identifying which Registry to use for which TLD, refer to the `meta` object returned from the [supported TLDs endpoint](https://api.unstoppabledomains.com/resolve/supported_tlds). Use the registry that aligns with the `registrationBlockchain` for your TLD.
-:::
+{% /admonition %}
 
 <figure>
 
@@ -57,15 +57,15 @@ Add the wallet address you want to resolve in the `addr` field of the `reverseNa
 <figcaption>polygonscan reverseNameOf response</figcaption>
 </figure>
 
-:::info
+{% admonition type="info"%}
 The `reverseNameOf()` method will return a value of `''` if there is no reverse record configured for the wallet address provided.
-:::
+{% /admonition %}
 
 `reverseNameOf()` method will return human-readable domain name.
 
 To calculate `namehash` from domain name use namehashing functions:
 
-<embed src="/snippets/_namehashing-snippets.md" />
+{% partial file="/_partials/_namehashing-snippets.md" /%}
 
 ## Smart Contract Considerations
 
@@ -96,8 +96,8 @@ const reverseDomainName = await proxyReaderContract.reverseNameOf(address);
 // jim-unstoppable.x
 ```
 
-:::success Congratulations
+{% admonition type="success" name="Congratulations" %}
 You have successfully integrated Reverse Resolution using smart contracts. Happy Hacking!
-:::
+{% /admonition %}
 
 

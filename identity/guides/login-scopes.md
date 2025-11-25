@@ -2,9 +2,9 @@
 title: Scopes for Unstoppable Login | UD Developer Portal
 description: This page details the scopes currently supported by Unstoppable Login.
 showNextButton: false
-redirectFrom:
-  - /login-with-unstoppable/get-started-login/scopes-for-login/
-  - /login-with-unstoppable/scopes-for-login/
+redirects:
+  /login-with-unstoppable/get-started-login/scopes-for-login/: {}
+  /login-with-unstoppable/scopes-for-login/: {}
 ---
 
 # Scopes for Login
@@ -54,9 +54,9 @@ Many login scopes have `scope:optional` variants that allow users to opt in to o
 <figcaption>Consenting to the <code>email:optional</code> scope</figcaption>
 </figure>
 
-:::warning
+{% admonition type="warning"%}
 Optional scopes are mutually exclusive with their equivalent standard scopes. If an application tries to request both `scope` and `scope:optional`, the request will fail and throw an error. Applications should only request one or the other.
-:::
+{% /admonition %}
 
 ## Sub Scopes
 
@@ -68,9 +68,9 @@ For scopes such as [profile](#profile) and [social](#social) which encapsulate m
 
 The `openid` scope is a special scope that is required for all Unstoppable Login requests. The scope indicates to the server that it should return an OIDC compatible ID Token containing the rest of the user’s claims.
 
-:::info
+{% admonition type="info"%}
 This is a required scope for using Unstoppable Login. The [OpenID scope](https://auth0.com/docs/configure/apis/scopes/openid-connect-scopes) must be included in addition to any other scope used to integrate this feature.
-:::
+{% /admonition %}
 
 ## wallet
 

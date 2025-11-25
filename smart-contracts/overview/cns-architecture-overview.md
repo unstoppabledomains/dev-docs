@@ -15,9 +15,9 @@ Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set o
 
 Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets members manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
-:::info
+{% admonition type="info"%}
 For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](cns-uns-comparison.md).
-:::
+{% /admonition %}
 
 ## Smart Contract Architecture
 
@@ -32,9 +32,9 @@ The two central components of CNS are its `Registry` and `Resolver` smart contra
 
 There is only one `Registry` smart contract deployed in the Ethereum Mainnet, but there are many versions of `Resolver` smart contracts. In theory, every domain could use a different `Resolver` contract but in practice the majority of domains are managed by the same `Resolver` smart contract instance (like Resolver 1 in the example above).
 
-:::info
+{% admonition type="info"%}
 Updates to our `Resolver` smart contract are incremental and non-breaking. All `Resolver` smart contracts must adhere to our [IResolver interface](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol). This interface defines the basic set of functionality and guarantees compatibility between different implementations.
-:::
+{% /admonition %}
 
 Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](/getting-started/domain-registry-essentials/namehashing.md).
 
@@ -62,9 +62,9 @@ This flow describes how the CNS `Registry` and `Resolvers` interact.
 * Resolver address
 * Domain name
 
-:::info
+{% admonition type="info"%}
 Since domains are identified by a namehash we also explicitly store the domain's name. This allows members who only know a namehash to look up a record by its name (name to namehash, namehash to record).
-:::
+{% /admonition %}
 
 `Registry`'s smart contract includes a set of methods for minting new domains, creating new subdomains, and managing ownership.
 
@@ -112,9 +112,9 @@ Subdomains are subject to the same set of rules as second-level domains in CNS. 
 
 Such an ownership model might not be suitable for every member. One may want to mint subdomains that are irrevocable and can be transferred only by a direct owner – this and other models are possible if a domain zone is owned by a smart contract. For more details on alternative ownership models, see the section below.
 
-:::info
+{% admonition type="info"%}
 **Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see [Delegating Domain Management](#delegating-domain-management).
-:::
+{% /admonition %}
 
 ### Alternative Ownership Models
 
@@ -124,9 +124,9 @@ Using Solidity smart contracts allows many new ways to manage subdomains. One of
 
 In addition to minting subdomains, `DomainZoneController` provides functionality to set a `Resolver` address and manage the records of a domain zone itself. These actions can only be performed by whitelisted accounts.
 
-:::info
+{% admonition type="info"%}
 Internal addresses can't be accessed directly by a wallet. Meaning domains owned by smart contracts can only be managed with rules defined by the smart contracts themselves. For example, one cannot transfer a subdomain if such functionality isn't defined by a smart contract's set of methods.
-:::
+{% /admonition %}
 
 ## Delegating Domain Management
 

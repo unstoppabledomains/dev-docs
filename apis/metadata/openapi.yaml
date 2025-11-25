@@ -1,0 +1,333 @@
+openapi: 3.0.0
+info:
+  title: Metadata
+  version: 1.0.0
+  contact:
+    name: Unstoppable Domains (Partner Engineering)
+    email: partnerengineering@unstoppabledomains.com
+  description: |
+    The Unstoppable Domains Metadata APIs provide standard NFT metadata routes for our various onchain assets. This includes ERC721, ERC1155 and ERC7572 metadata endpoints for various collections and tokens.
+    
+    **Note:** While this API is public, endpoints are rate limited. While the default rate limit should be sufficient for client applications, if you would like a higher limit rate for a backend system, please send a request to [UD Partner Engineering](mailto:partnerengineering@unstoppabledomains.com) to acquire an API key.
+tags:
+  - name: domains
+    x-displayName: Domains
+    description: |
+      Metadata for our Web3 and tokenized Web2 Domains, available at [unstoppabledomains.com](https://unstoppabledomains.com).
+      
+      Metadata is returned for all UD domains, regardless of the underlying blockchain or smart contract it is associated with. All endpoints accept either the domain name (`example.x`) or the the numeric token ID as the path parameter.
+  - name: badges
+    x-displayName: Onchain Badges
+    description: |
+      Metadata for our NFT Badge and NFT Badge collection service. Both the collections and badges are dynamically created, so the collection address must be included as a path parameter for all requests.
+servers:
+  - url: https://api.unstoppabledomains.com/metadata
+    description: Production
+  - url: https://api.ud-sandbox.com/metadata
+    description: Sandbox
+paths:
+  /{domainOrToken}:
+    get:
+      operationId: domains_getMetaData
+      parameters:
+        - in: path
+          name: domainOrToken
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A domain name or the eip137 namehash of a domain registered by Unstoppable Domains
+      responses:
+        '200':
+          content:
+            text/html; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/OpenSeaMetadata'
+          description: ''
+      summary: Get Domain metadata
+      tags:
+        - domains
+  /image/{domainOrToken}:
+    get:
+      operationId: domains_getImage
+      parameters:
+        - in: path
+          name: domainOrToken
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A domain name or the eip137 namehash of a domain registered by Unstoppable Domains
+        - in: query
+          name: withOverlay
+          schema:
+            type: boolean
+        - in: query
+          name: theme
+          schema:
+            type: string
+            enum:
+              - light
+              - dark
+      responses:
+        '200':
+          content:
+            text/html; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ImageResponse'
+          description: ''
+      summary: Get Domain image
+      description: Get the domain image SVG data
+      tags:
+        - domains
+  /image-src/{domainOrToken}:
+    get:
+      operationId: domains_getImageSrc
+      parameters:
+        - in: path
+          name: domainOrToken
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A domain name or the eip137 namehash of a domain registered by Unstoppable Domains
+        - in: query
+          name: withOverlay
+          schema:
+            type: boolean
+        - in: query
+          name: theme
+          schema:
+            type: string
+            enum:
+              - light
+              - dark
+      responses:
+        '200':
+          content:
+            text/html; charset=utf-8: {}
+          description: Successful response
+      summary: Get Domain image source
+      description: URL to use as the `src` when rendering the domain image on a UI.
+      tags:
+        - domains
+  /badges/c/{contractAddress}:
+    get:
+      operationId: getContractMetadata
+      summary: Get Badge Collection metadata
+      parameters:
+        - name: contractAddress
+          required: true
+          example: '0x8E618876B960E5e2BC76ADb38155251877A2c5d1'
+          in: path
+          schema:
+            maxLength: 100
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadgeContractMetadata"
+      tags:
+        - badges
+  /badges/c/{contractAddress}/b/{tokenId}:
+    get:
+      operationId: getBadgeMetadata
+      summary: Get Badge metadata
+      parameters:
+        - name: contractAddress
+          required: true
+          example: '0x8E618876B960E5e2BC76ADb38155251877A2c5d1'
+          in: path
+          schema:
+            maxLength: 100
+            type: string
+        - name: tokenId
+          required: true
+          example: '78819804847991891929675112938372578562447166123909758354093252150865352382960'
+          in: path
+          schema:
+            maxLength: 250
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadgeTokenMetadata"
+      tags:
+        - badges
+components:
+  schemas:
+    DomainsMetadata:
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - key
+        - value
+    ImageMetadata:
+      properties:
+        progressStatus:
+          enum:
+            - un_processed
+            - completed
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - progressStatus
+    Erc721Metadata:
+      properties:
+        name:
+          type: string
+        tokenId:
+          type: string
+        namehash:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        external_url:
+          type: string
+      type: object
+      required:
+        - name
+        - tokenId
+        - namehash
+        - description
+        - image
+        - external_url
+    OpenSeaMetadata:
+      properties:
+        external_link:
+          type: string
+        image_url:
+          type: string
+        attributes:
+          items: {}
+          type: array
+        background_color:
+          type: string
+        animation_url:
+          type: string
+        youtube_url:
+          type: string
+        name:
+          type: string
+        tokenId:
+          type: string
+        namehash:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        external_url:
+          type: string
+      type: object
+      required:
+        - attributes
+        - name
+        - tokenId
+        - namehash
+        - description
+        - image
+        - external_url
+    TokenMetadata:
+      properties:
+        fetchedMetadata:
+          type: object
+        image:
+          type: string
+      type: object
+      required:
+        - fetchedMetadata
+        - image
+    ImageResponse:
+      properties:
+        image:
+          type: string
+        image_data:
+          type: string
+      type: object
+      required:
+        - image_data
+    ImageQueryParams:
+      properties:
+        withOverlay:
+          type: boolean
+        theme:
+          type: string
+          enum:
+            - light
+            - dark
+      type: object
+    BadgeContractMetadata:
+      type: object
+      properties:
+        address:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        external_link:
+          type: string
+    BadgeTokenMetadata:
+      type: object
+      properties:
+        tokenId:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        external_url:
+          type: string
+        attributes:
+          type: array
+          items:
+            type: object
+        image:
+          type: string
+        background_color:
+          type: string
+      required:
+        - tokenId

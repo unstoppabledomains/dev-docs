@@ -13,9 +13,9 @@ The Partner API v3 provides you with the ability to lookup, register and manage 
 
 In this integration guide, you will create a Partner API flow focussing on domain lookup and registration. To complete this integration, you should be a JavaScript developer with experience in RESTful APIs.
 
-:::info
+{% admonition type="info"%}
 If you'd like to skip ahead or follow along, you can clone the [full example](https://github.com/unstoppabledomains/demos/tree/vincent/full-flow/Unstoppable%20Partner%20API%20Example) from GitHub beforehand.
-:::
+{% /admonition %}
 
 ## Step 1: Project Setup
 
@@ -32,9 +32,9 @@ chmod +x setup-pav3-guide.sh
 
 This will create a `project` folder in your chosen directory that will use throughout this guide.
 
-:::info
+{% admonition type="info"%}
 **@uauth/js** will be the library used for implementing Unstoppable Login on the frontend, **axios** will be used for the API calls on both the client and server, **nodemon** will be used for easier typescript server development, and **lowdb** will act as an interim database on the server to keep the guide self-contained.
-:::
+{% /admonition %}
 
 ## Step 2: Setup Express.js
 
@@ -42,9 +42,9 @@ Express.js will serve as your backend throughout this guide. It will handle all 
 
 It's very important that the Partner API is not directly accessed from a frontend client as the API key is very sensitive. The API does not handle checkout payments and Unstoppable Domains keeps track of a running balance against the API key for periodic invoicing. It is up to the partner to collect payment from users and subsequently keep their API key secure. 
 
-:::info
+{% admonition type="info"%}
 There is no charge for developing with the Partner API on the **sandbox** environment. Once you migrate to **production**, a running balance will be kept against your **production API key**.
-:::
+{% /admonition %}
 
 ### Environment Variables
 
@@ -157,13 +157,16 @@ app.listen(port, () => {
 
 Now that the Express.js server has appropriate endpoints for domain suggestions, domain registration, and domain availability, you need to proxy these endpoints to the Partner API. You'll use the `searchDomains`, `registerDomain`, and `checkAvailability` functions previously defined for this task. Import the appropriate typings from the `./types` directory and make an `axios` request to the appropriate endpoint: 
 
-- `searchDomains()` will be proxied to the [suggestions endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/getSuggestions)
-- `registerDomain()` will be proxied to the [registration endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/mintSingleDomain)
-- `checkAvailability()` will be proxied to the [domain details endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/getMultipleDomains)
+- `searchDomains()` will be proxied to the [suggestions endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/getSuggestions)
+- `registerDomain()` will be proxied to the [registration endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/mintSingleDomain)
+- `checkAvailability()` will be proxied to the [domain details endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/getMultipleDomains)
 
 You'll also add error handling here to encompass any issues with `express`, `axios`, or the Partner API. Add these functions to the existing `server/src/server.ts` file.
 
-```typescript searchDomains
+{% tabs %}
+
+{% tab label="searchDomains" %}
+```typescript
 import { Suggestions } from './types/suggestions';
 
 /**
@@ -214,8 +217,10 @@ const searchDomains = async (domainName: string): Promise<Suggestions> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript registerDomain
+{% tab label="registerDomain" %}
+```typescript
 import { Order } from './types/orders';
 
 /**
@@ -269,8 +274,10 @@ const registerDomain = async (domainId: string): Promise<Order> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript checkAvailability
+{% tab label="checkAvailability" %}
+```typescript
 import { Domains } from './types/domains';
 
 /**
@@ -321,19 +328,25 @@ const checkAvailability = async (domains: Array<string>): Promise<Domains> => {
   }
 };
 ```
+{% /tab %}
+
+{% /tabs %}
 
 You can also take this opportunity to take into account the earlier considerations:
 - Partner API Operations 
 - Returns
 - Transfers
 
-Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/checkOperation). Similarly, you will use the [returns endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/openapi/partner/#operation/updateDomainPut) to transfer the domain to the end user.
+Partner API operation tracking will ideally be handled by [webhooks](https://docs.unstoppabledomains.com/domain-distribution-and-management/guides/implementing-webhooks/) but, as mentioned, this guide will not encompass public hosting. As such, you'll rely on the [operations endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/checkOperation). Similarly, you will use the [returns endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/returnDomain) to handle returning domains and will use the [overwriting update endpoint](https://docs.unstoppabledomains.com/apis/partner/#operation/updateDomainPut) to transfer the domain to the end user.
 
-:::info
+{% admonition type="info"%}
 You would ideally register a webhook for each Partner API operation that is initiated, including a return, registration, transfer, etc. For the purposes of this guide, you can use the `checkOperation()` function as a synchronous polling approach within `trackOperation()`.
-:::
+{% /admonition %}
 
-```typescript checkOperation
+{% tabs %}
+
+{% tab label="checkOperation" %}
+```typescript
 import { Operation } from './types/orders';
 
 /**
@@ -383,8 +396,10 @@ const checkOperation = async (operationId: string): Promise<Operation> => {
   }
 };
 ```
+{% /tab %}
 
-```typescript trackOperation
+{% tab label="trackOperation" %}
+```typescript
 /**
  * Periodically tracks the status of an operation and updates the database.
  *
@@ -412,8 +427,10 @@ const trackOperation = async (operationId: string) => {
   }, 60000); // 1 minute timer
 };
 ```
+{% /tab %}
 
-```typescript returnDomain
+{% tab label="returnDomain" %}
+```typescript
 import { Return } from './types/returns';
 
 /**
@@ -462,7 +479,10 @@ const returnDomain = async (domainId: string): Promise<Return> => {
   }
 };
 ```
-```typescript transferDomain
+{% /tab %}
+
+{% tab label="transferDomain" %}
+```typescript
 import { Transfer } from './types/transfers';
 
 /**
@@ -520,6 +540,9 @@ const transferDomain = async (domainId: string, walletAddress: string): Promise<
   }
 };
 ```
+{% /tab %}
+
+{% /tabs %}
 
 Update the original `/api/register` endpoint with the `trackOperation()` function as registrations are blockchain dependant. You do not need to worry about the `transfer` or `return` functions just yet.
 
@@ -887,7 +910,10 @@ The general outline for each function will be very similar and, with the excepti
 
 These four functions will serve as the core of your frontend. 
 
-```typescript fetchAvailability.ts
+{% tabs %}
+
+{% tab label="fetchAvailability.ts" %}
+```typescript
 import axios from 'axios';
 import { Domains } from '@/types/domains';
 
@@ -915,8 +941,10 @@ export const fetchAvailability = async (domains: string[]) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript claimDomain.ts
+{% tab label="claimDomain.ts" %}
+```typescript
 import axios from 'axios';
 import { DomainSuggestion } from '../../types/suggestions';
 import { Order } from '@/types/orders';
@@ -945,8 +973,10 @@ export const claimDomain = async (selectedDomain: DomainSuggestion) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript fetchSuggestions.ts
+{% tab label="fetchSuggestions.ts" %}
+```typescript
 import { Suggestions } from '@/types/suggestions';
 import axios from 'axios';
 
@@ -970,8 +1000,10 @@ export const fetchSuggestions = async (query: string) => {
   }
 }
 ```
+{% /tab %}
 
-```typescript initCheckout.ts
+{% tab label="initCheckout.ts" %}
+```typescript
 import axios from 'axios';
 
 /**
@@ -1003,6 +1035,9 @@ export const initCheckout = async (domain: string, walletAddress: string, paymen
   }
 }
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ### Search
 
@@ -1386,9 +1421,9 @@ Repeat the process above for the auth context. This guide uses Unstoppable Login
 - Login
 - Logout
 
-:::info
+{% admonition type="info"%}
 You can safely ignore the typescript error on `@uauth/js` in regards to a missing declaration file.
-:::
+{% /admonition %}
 
 Create a `AuthContext.tsx` file in `./client/src/app/context` and add the following:
 
@@ -1988,9 +2023,9 @@ You'll need to add a dedicated `/checkout` route on the frontend to act as your 
 
 To start, create a `page.tsx` file in the `./client/src/app/checkout` directory. Import the required packages and create the component outline: add minimal logic to redirect the user away from the `/checkout` page if they shouldn't be there, calculate total cart value, and add the HTML return.
 
-:::info
+{% admonition type="info"%}
 Partners can use any payment gateway and collect payment in any fiat / crypto they prefer. Partners are also free to set their own pricing however Unstoppable will invoice based on the API returned cost of the domain.
-:::
+{% /admonition %}
 
 ```typescript
 'use client';
@@ -2378,12 +2413,21 @@ npm run start
 
 This will concurrently start both the `express` backend and `Next.js` frontend. If you want to run just one or the other, you can use either of the below commands:
 
-```shell Frontend
+{% tabs %}
+
+{% tab label="Frontend" %}
+```shell
 npm run start:client
 ```
-```shell Backend
+{% /tab %}
+
+{% tab label="Backend" %}
+```shell
 npm run start:server
 ```
+{% /tab %}
+
+{% /tabs %}
 
 ## Recap
 

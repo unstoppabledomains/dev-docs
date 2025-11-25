@@ -1,9 +1,9 @@
 ---
 title: Login Authorization Server | Unstoppable Domains Developer Portal
 description: This page outlines the authorization server for the Unstoppable Login feature.
-redirectFrom:
-  - /login-with-unstoppable/high-level-overview/authorization-server/
-  - /login-with-unstoppable/login-protocols/authorization-server/
+redirects:
+  /login-with-unstoppable/high-level-overview/authorization-server/: {}
+  /login-with-unstoppable/login-protocols/authorization-server/: {}
 ---
 
 # Authorization Server
@@ -88,9 +88,9 @@ For domains owned by multisig wallets, owner-based authentication isn’t suffic
 
 The below fields are used to specify a public key that can be used for authentication.
 
-:::info
+{% admonition type="info"%}
 It’s recommended that DApps support the web3 and oob methods at a minimum.
-:::
+{% /admonition %}
 
 | Field          | Description                                                                                                                                                                                                                                              |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,9 +112,9 @@ For context, _addr_type_hint_ can have the following values:
 | portis        | Signing done via Portis Wallet                                                                                                                                             |
 | oob           | Signing done via Out of Band signing. Authorization server should have a message to sign displayed and have a form for the user to paste the signature for authentication. |
 
-:::info
+{% admonition type="info"%}
 If the Ethereum account is stored using a hardware wallet, the AMR Value SHOULD be _uns-hwk_. For all other address types, the Authentication server should use the AMR Value of _uns-swk_.
-:::
+{% /admonition %}
 
 ## **JWKS by Value**
 

@@ -1,8 +1,10 @@
 ---
 title: Unstoppable Resolution | Unstoppable Domains Developer Portal
-description: An overview of the resolution options available for developers integrating Unstoppable Web3 domains into their Web3 applications.
-redirectFrom:
-  - /developer-toolkit/
+description: >-
+  An overview of the resolution options available for developers integrating
+  Unstoppable Web3 domains into their Web3 applications.
+redirects:
+  /developer-toolkit/: {}
 ---
 
 # Unstoppable Resolution Overview
@@ -18,10 +20,10 @@ Check out the video below for a high-level overview!
 
 ## Resolution Service API
 
-For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution Service API](/openapi/resolution). The Unstoppable Domains team manages this service.
+For our HTTP-based API that allows you to quickly build applications that fetch UD domain data from the blockchain with a single API request, see the [Resolution API](/apis/resolution/openapi.yaml). The Unstoppable Domains team manages this service.
 
 ## Smart Contracts
 
 Integrate Resolution using Unstoppable Domains UNS smart contracts. See the [Smart Contracts Guide](../smart-contracts/quick-start/resolve-domains.md). The Unstoppable Domains team manages this service.
 
-<embed src="/snippets/_developer-survey-embed.md" />
+{% partial file="/_partials/_developer-survey-embed.md" /%}
