@@ -1603,10 +1603,10 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/developer-portal@^1.1.0-beta.143":
-  version "1.1.0-beta.143"
-  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.143.tgz#bd0768ebf906bf750ea11695abc5fe11cedf98bd"
-  integrity sha512-ZSb/wL5oo2mKPvTviFapUkEL/ELCck+FYeGUqwog4EWz7eurR7yxRgyfVpD7V89QZ/ogFsSrEV5V1QHemw+PNg==
+"@redocly/developer-portal@^1.1.0-beta.144":
+  version "1.1.0-beta.144"
+  resolved "https://registry.yarnpkg.com/@redocly/developer-portal/-/developer-portal-1.1.0-beta.144.tgz#48a9920497520ff6b35bf828701bc98a87d53f4a"
+  integrity sha512-7F7hdJUQVU+Ek9X7baP8xWzsrfnwpC/wtb5RNxGdxg504lXz9X5Tc5AS0izE2/lc9GxTUBGsinCkVEjmaz0+qQ==
   dependencies:
     "@mdx-js/mdx" "0.19.0"
     "@mdx-js/tag" "0.20.3"
@@ -12008,14 +12008,7 @@ polished@^3.6.5:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-polished@^4.1.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-4.2.2.tgz#2529bb7c3198945373c52e34618c8fe7b1aa84d1"
-  integrity sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==
-  dependencies:
-    "@babel/runtime" "^7.17.8"
-
-polished@^4.3.1:
+polished@^4.1.2, polished@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/polished/-/polished-4.3.1.tgz#5a00ae32715609f83d89f6f31d0f0261c6170548"
   integrity sha512-OBatVyC/N7SCW/FaDHrSd+vn0o5cS855TOmYi4OkdWUMSJCET/xip//ch8xGUvtr3i44X9LVyWwQlRMTN3pwSA==
