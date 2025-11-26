@@ -18,11 +18,11 @@ Unstoppable Domains Documentation is hosted by [Redocly](https://www.redocly.com
 
 ### Suggesting page edits
 
-Clicking **Edit this page** at the upper right corner of any page on the documentation site will take you directly to the page in this repository.
+Clicking **Edit** at the upper right corner of any page on the documentation site will take you directly to the page in this repository.
 
-1. Click **Edit this page** on the Github page to begin editing directly in your browser.
+1. Click **Edit this file** on the Github page to begin editing directly in your browser.
 
-2. Make your changes. You can preview standard markdown and HTML in the **Preview** tab. `.mdx` pages and other redocly features will require setting up the [Redocly development environment](#redocly-development-environment).
+2. Make your changes. You can preview standard markdown and HTML in the **Preview** tab. `.tsx` pages and other redocly features will require setting up the [Redocly development environment](#redocly-development-environment).
 
 3. When you're finished with your changes, enter your commit details, create a new branch, and start a pull request.
 
@@ -30,25 +30,46 @@ Clicking **Edit this page** at the upper right corner of any page on the documen
 
 ## Redocly development environment
 
-To preview Redocly-specific features while editing, you will need to clone the repository and [install the Redocly developer portal](https://redocly.com/docs/developer-portal/installation/).
+To preview Redocly-specific features while editing, you will need to clone the repository and set up the [Redocly Realm](https://redocly.com/docs/realm) development environment.
 
 ### Prerequisites
 
-- [node.js >= 12.22.6 and <= 16.x](https://nodejs.org/en/)
+- [node.js 20.x](https://nodejs.org/en/) (specified in `.nvmrc`)
+- [nvm](https://github.com/nvm-sh/nvm) (recommended for managing Node versions)
 - [yarn](https://yarnpkg.com/en/)
 
-### Install
+### Setup
 
-    yarn install
+1. Use the correct Node version:
+
+```bash
+nvm use
+```
+
+2. Install dependencies:
+
+```bash
+yarn install
+```
 
 ### Start the development server
 
-    yarn start
+```bash
+yarn start
+```
+
+The development server will run on `http://localhost:4000`.
 
 **Note**: *search isn't functional in the development environment.*
 
+### Build
+
+To build the site for production:
+
+```bash
+yarn build
+```
+
 ### Troubleshooting
 
-Redocly heavily relies on caching for performance issues so if some changes are not reflected in the resulting portal try cleaning cache by running:
-
-    yarn clean
+If changes are not reflected in the portal, try clearing your browser cache or restart the development server.
