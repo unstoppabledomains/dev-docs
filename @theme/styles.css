@@ -210,6 +210,10 @@
     --video-aspect-ratio: calc(9/16);
 
     --md-content-max-width: 910px;
+
+    /* AI Assistant */
+    --ai-assistant-button-bottom: 80px;
+    --ai-assistant-button-right: 29px;
 }
 
 figure {
