@@ -137,6 +137,11 @@ apis:
 mockServer:
   off: true
 
+aiAssistant:
+  hide: false
+  trigger:
+    hide: false
+
 links:
   - href: https://fonts.gstatic.com
     rel: preconnect
