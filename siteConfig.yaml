@@ -1,0 +1,79 @@
+meta:
+  title: Unstoppable Domains Developer Portal
+  description: The developer documentation portal and API reference for Unstoppable Domains.
+  siteUrl: https://docs.unstoppabledomains.com
+  keywords: unstoppable domains developer portal, api reference docs
+  lang: en-US
+
+logo:
+  image: ./static/images/ud-logo-light.svg
+  altText: UD Developer Docs Logo
+
+toc:
+  enable: true
+
+linkChecker:
+  severity: warning
+  options:
+    CheckExternal: false
+
+oasDefinitions:
+  partner-v3: apis/partner/openapi.yaml
+  profile-v1: apis/profile-v1/openapi.yaml
+  login-unstoppable: apis/loginref/openapi.yaml
+  resolution: apis/resolution/openapi.yaml
+  messaging-v1: apis/messaging-v1/openapi.yaml
+  registry: apis/registry/openapi.yaml
+  metadata: apis/metadata/openapi.yaml
+
+stylesheets:
+  - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap
+  - https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap
+
+analytics:
+  ga:
+    head: false
+    trackingId: UA-120492152-2
+
+scripts:
+  - ./static/scripts/etlb.js
+  - ./static/scripts/fd-widget.js
+  - https://widget.freshworks.com/widgets/48000002701.js
+  - https://embed.typeform.com/next/embed.js
+  - ./static/scripts/typeform-init.js
+
+editPage:
+  baseUrl: https://github.com/unstoppabledomains/dev-docs/blob/main/
+  text: Edit this page
+  icon: static/images/github-mark-32px.png
+
+nav:
+  - label: Get Started
+    page: getting-started/overview.md
+  - label: API Reference
+    page: apis/overview.md
+  - search: true
+
+footer:
+  copyrightText: © Unstoppable Domains Inc. All Rights Reserved.
+  columns:
+    - group: Legal
+      items:
+        - label: Terms of Use
+          href: 'https://unstoppabledomains.com/terms'
+        - label: Privacy Notice
+          href: 'https://unstoppabledomains.com/privacy-policy'
+    - group: Community
+      items:
+        - label: X
+          href: 'https://x.com/unstoppableweb'
+        - label: Facebook
+          href: 'https://www.facebook.com/unstoppableweb/'
+    - group: Resources
+      items:
+        - label: Medium
+          href: 'https://medium.com/unstoppabledomains'
+        - label: Youtube
+          href: 'https://www.youtube.com/c/unstoppabledomains'
+        - label: Github
+          href: 'https://github.com/unstoppabledomains'
