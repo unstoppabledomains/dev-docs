@@ -9,10 +9,10 @@
     "build": "realm build --ignore-openapi-errors=true"
   },
   "dependencies": {
-    "@redocly/realm": "^0.127.0",
+    "@redocly/realm": "^0.130.2",
     "polished": "^4.3.1",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "styled-components": "^5",
     "styled-system": "^5"
   },
