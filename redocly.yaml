@@ -135,7 +135,7 @@ apis:
           - lang: PHP
 
 mockServer:
-  off: true
+  position: off
 
 aiAssistant:
   hide: false
@@ -146,7 +146,9 @@ links:
   - href: https://fonts.gstatic.com
     rel: preconnect
   - href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap'
+    rel: stylesheet
   - href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700&display=swap'
+    rel: stylesheet
 
 analytics:
   ga:
