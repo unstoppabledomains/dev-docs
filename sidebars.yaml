@@ -77,7 +77,7 @@
       items:
         - label: Partner API
           href: /apis/partner/openapi
-        - label: Reseller API
+        - label: Reseller API (Preview)
           href: /apis/reseller/openapi
         - group: Smart Contracts
           expanded: false

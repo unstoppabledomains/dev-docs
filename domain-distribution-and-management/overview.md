@@ -9,7 +9,7 @@ redirects:
 
 # Domain Distribution and Management Overview
 
-Domain distribution and management can be achieved via the Unstoppable Partner API, Reseller API, and Smart Contracts.
+Domain distribution and management can be achieved via the Unstoppable Partner API, Reseller API (Preview), and Smart Contracts.
 
 # Partner API
 
@@ -21,7 +21,7 @@ Our premier solution for Web3 domain distribution and management.
 
 For more information, please consult the [Partner API specification](https://docs.unstoppabledomains.com/apis/partner/latest).
 
-# Reseller API
+# Reseller API (Preview)
 
 Our solution for traditional DNS domain registration and management.
 

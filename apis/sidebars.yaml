@@ -8,7 +8,7 @@
   page: resolution/openapi.yaml
 - group: Partner
   page: partner/openapi.yaml
-- group: Reseller
+- group: Reseller (Preview)
   page: reseller/openapi.yaml
 - group: Profile
   page: profile-v1/openapi.yaml
