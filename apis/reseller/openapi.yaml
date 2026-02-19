@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: Reseller API
+  title: Reseller API (Preview)
   version: "1.0.0"
   contact:
     name: Unstoppable Domains (Partner Engineering)
