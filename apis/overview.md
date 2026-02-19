@@ -20,6 +20,7 @@ This portal is organized to support users familair with API implementation. If y
 - [Metadata](metadata/openapi.yaml)
 - [Resolution](resolution/openapi.yaml)
 - [Partner](partner/openapi.yaml)
+- [Reseller](reseller/openapi.yaml)
 - [Profile](profile-v1/openapi.yaml)
 - [Messaging](messaging-v1/openapi.yaml)
 - [Login](loginref/openapi.yaml)
