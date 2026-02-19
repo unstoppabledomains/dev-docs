@@ -42,8 +42,6 @@ info:
     - `FAILED` : The Operation has finished processing and has either fully or partially failed
     - `CANCELLED` : The Operation has been cancelled, usually due to a failure with a sibling dependency
 
-    See the [Operations](#tag/operations) API for additional information.
-
     ## Domain Flags
     Domain flags control various aspects of domain behavior and security. Each flag can be independently enabled or disabled:
     - `DNS_RESOLUTION`: Controls whether the domain resolves via DNS
