@@ -57,9 +57,7 @@ info:
     Many mutating endpoints support a `$preview` query parameter. When set to `true`, the API will validate the request and return the expected Operation result without actually executing the changes. This is useful for validating requests and getting price quotes before committing.
 
     # Get Access
-    See our quickstart guide for getting your Reseller API key: [Set up Reseller API Access](https://docs.unstoppabledomains.com/domain-distribution-and-management/quickstart/retrieve-an-api-key/)
-
-    If you have any questions, contact our [Partner Engineering Team](mailto:partnerengineering@unstoppabledomains.com?subject=Reseller%20API%20Inquiry) to help with API access or learn more.
+    The Reseller Dashboard for registering and managing your API credentials is coming soon. In the meantime, contact our [Partner Engineering Team](mailto:partnerengineering@unstoppabledomains.com?subject=Reseller%20API%20Inquiry) to get API access or learn more.
 tags:
   - name: domain-search
     x-displayName: Search & Lookup
