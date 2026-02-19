@@ -19,8 +19,25 @@ markdown:
     hide: false
 
 apis:
-  partner-v3@main: 
+  partner-v3@main:
     root: apis/partner/openapi.yaml
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
+  reseller-v1@main:
+    root: apis/reseller/openapi.yaml
     openapi:
       feedback:
         hide: true
