@@ -107,6 +107,14 @@ A user authorized by Unstoppable Domains to [sell domains to users](/domain-dist
 
 An API service maintained by Unstoppable Domains for Partners to [mint](#minting) free and paid domains, check the availability of domain names, reserve domains for users, and get domain name suggestions available for purchase.
 
+### Reseller
+
+A user authorized by Unstoppable Domains to register and manage traditional DNS domains on behalf of their customers.
+
+### Reseller API
+
+An API service maintained by Unstoppable Domains for Resellers to search, register, and manage traditional DNS domains, configure DNS records, and handle domain transfers.
+
 ### ProxyReader
 
 The [naming service](#name-service) [smart contract](#smart-contract) that allows members to fetch information about domains from both [UNSRegistry](#registry) and [CNS](#cns) smart contracts in one call.

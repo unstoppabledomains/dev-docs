@@ -21,11 +21,12 @@ Domains can be purchased for as little as $2. Simply search for any `.unstoppabl
 
 ## How This Portal Is Organized
 
-This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the quickstarts in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, detailed integration guides, or dive right into the API reference.
+This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the quickstarts in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, Unstoppable Reseller API, detailed integration guides, or dive right into the API reference.
 
 - [Unstoppable Resolution](/resolution/overview.md)
     - [Reverse Resolution](/resolution/rr-overview.md)
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
+- [Unstoppable Reseller API](/apis/reseller/openapi.yaml)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
 - [API Reference](/apis/overview.md)
 
