@@ -73,3 +73,31 @@ yarn build
 ### Troubleshooting
 
 If changes are not reflected in the portal, try clearing your browser cache or restart the development server.
+
+---
+
+## API Specifications
+
+### Partner API (`apis/partner/openapi.yaml`)
+
+The Partner API v3 spec for Web3 domain distribution and management (minting, custody wallets, blockchain operations). This spec is maintained manually.
+
+### Reseller API (`apis/reseller/openapi.yaml`)
+
+The Reseller API v1 spec for traditional DNS domain registration and management. This spec follows a two-stage workflow:
+
+1. **Generate** the bare spec (paths, schemas, tags, `x-tagGroups`) from the upstream source using the generation script
+2. **Enrich** the generated spec with documentation metadata (info block, servers, tag `x-displayName`s, endpoint `summary`/`description` fields) using the `enrich-reseller-spec` Claude skill (`.claude/skills/enrich-reseller-spec/`)
+
+The generation script handles tag splitting — the original `domains` tag is split into 6 sub-tags (`domain-search`, `domain-registration`, `dns-records`, `domain-transfers`, `domain-flags`, `domain-contacts`) and grouped under `x-tagGroups` for Redocly sidebar navigation.
+
+### Linting
+
+All API specs can be validated with:
+
+```bash
+npx @redocly/cli lint apis/reseller/openapi.yaml
+npx @redocly/cli lint apis/partner/openapi.yaml
+```
+
+API configuration is in `redocly.yaml` under the `apis:` key.
