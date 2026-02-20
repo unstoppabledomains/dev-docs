@@ -19,15 +19,6 @@ paths:
               enum:
                 - registration
                 - flags
-        - name: tlds
-          required: true
-          in: query
-          deprecated: true
-          schema:
-            default: []
-            type: array
-            items:
-              type: string
         - name: ending
           required: true
           in: query
@@ -55,11 +46,13 @@ paths:
         - domain-search
     post:
       operationId: registerDomain
-      summary: Register a domain
+      summary: Register or transfer in a domain
       description: |
-        Register a new domain. The request body specifies the domain name and optional DNS configuration including registration period, contacts, and nameserver settings.
+        Register a new domain or transfer an existing domain into your account. The request body specifies the domain name and optional DNS configuration including registration period, contacts, and nameserver settings.
 
-        Use `$preview=true` to validate the request and get a price quote without actually registering the domain.
+        To **register** a new domain, submit the request without an authorization code. To **transfer in** an existing domain from another registrar, include the `dns.authorizationCode` field — the presence of this field determines that this is a transfer-in rather than a new registration.
+
+        Use `$preview=true` to validate the request and get a price quote without executing the operation.
       parameters:
         - name: $preview
           required: true
@@ -613,15 +606,6 @@ paths:
         - `RELATED`: Semantically related domain name suggestions
         - `RELATED_PARTIAL`: Partial matches from related suggestions
       parameters:
-        - name: tlds
-          required: true
-          in: query
-          deprecated: true
-          schema:
-            default: []
-            type: array
-            items:
-              type: string
         - name: query
           required: true
           in: query
@@ -639,19 +623,6 @@ paths:
             type: array
             items:
               type: string
-        - name: mode
-          required: true
-          in: query
-          schema:
-            default: []
-            type: array
-            items:
-              type: string
-              enum:
-                - EXACT
-                - PREFIX_SUFFIX
-                - RELATED
-                - RELATED_PARTIAL
       responses:
         "200":
           description: ""
@@ -747,27 +718,6 @@ paths:
                 $ref: "#/components/schemas/AccountSummaryResponse"
       tags:
         - account
-    patch:
-      operationId: updateAccount
-      summary: Update account
-      description: |
-        Update your account settings.
-      parameters: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/AccountUpdateRequestBody"
-      responses:
-        "200":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AccountUpdateResponse"
-      tags:
-        - account
   /account/webhooks:
     get:
       operationId: getWebhooks
@@ -852,28 +802,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/WebhookDeleteResponse"
-      tags:
-        - account
-  /account/sessions:
-    post:
-      operationId: createAuthToken
-      summary: Create an auth token
-      description: |
-        Create a scoped authentication token for use in client-side applications. Tokens can be limited to specific TLDs and domains, and have a configurable expiration.
-      parameters: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/AccountAuthTokenCreateRequestBody"
-      responses:
-        "201":
-          description: ""
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AccountAuthTokenCreateResponse"
       tags:
         - account
   /domains/{name}/flags:
@@ -2419,25 +2347,6 @@ components:
         - "@type"
         - id
         - defaultWalletAddress
-    AccountUpdateRequestBody:
-      type: object
-      properties:
-        defaultWalletAddress:
-          type: string
-      required:
-        - defaultWalletAddress
-    AccountUpdateResponse:
-      type: object
-      properties:
-        "@type":
-          type: string
-          enum:
-            - unstoppabledomains.com/partner.v3.AccountUpdateResult
-        operation:
-          $ref: "#/components/schemas/OperationCheckResponse"
-      required:
-        - "@type"
-        - operation
     WebhookResponse:
       type: object
       properties:
@@ -2513,48 +2422,6 @@ components:
       required:
         - "@type"
         - operation
-    AccountAuthTokenCreateRequestBody:
-      type: object
-      properties:
-        tlds:
-          default: []
-          type: array
-          items:
-            type: string
-        domains:
-          default: []
-          maxItems: 100
-          type: array
-          items:
-            type: string
-        expirationHours:
-          type: number
-          default: 1
-          minimum: 1
-          maximum: 6
-        includeRefreshToken:
-          type: boolean
-          default: true
-      required:
-        - tlds
-        - domains
-        - expirationHours
-        - includeRefreshToken
-      description: Create a scoped authentication token. Use `tlds` and/or `domains` to limit the token's access scope.
-    AccountAuthTokenCreateResponse:
-      type: object
-      properties:
-        "@type":
-          type: string
-          enum:
-            - unstoppabledomains.com/partner.v3.AuthTokenCreateResult
-        accessToken:
-          type: string
-        refreshToken:
-          type: string
-      required:
-        - "@type"
-        - accessToken
     DomainFlagsStandaloneResponse:
       type: object
       properties:
@@ -2768,20 +2635,6 @@ components:
       required:
         - "@type"
         - owner
-    VerificationStatusData:
-      type: object
-      properties:
-        status:
-          type: string
-          enum:
-            - VERIFIED
-            - FAILED
-            - PENDING
-            - REQUESTED
-            - UNVERIFIED
-            - SUSPENDED
-      required:
-        - status
     ContactCreateRequestBody:
       type: object
       properties:
@@ -2815,8 +2668,6 @@ components:
           type: string
           maxLength: 100
           format: email
-        verification:
-          $ref: "#/components/schemas/VerificationStatusData"
       required:
         - firstName
         - lastName
@@ -3751,7 +3602,7 @@ components:
             id:
               type: string
               description: ID of the created contact
-              example: con_abc12345-1234-1234-1234-abc123456789
+              example: ct-a1b2c3d4-e5f6-7890-abcd-ef1234567890
           required:
             - id
         error:
