@@ -166,7 +166,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/DomainPendingOperationsListResponse"
       tags:
-        - domain-search
+        - operations
   /domains/{name}/renewals:
     get:
       operationId: getDomainRenewalInfo
@@ -3895,6 +3895,7 @@ x-tagGroups:
   - name: Domains
     tags:
       - domain-search
+      - suggestions
       - domain-registration
       - domain-management
       - dns-records
@@ -3903,7 +3904,6 @@ x-tagGroups:
       - domain-contacts
   - name: Discovery
     tags:
-      - suggestions
       - pricing
       - tlds
   - name: Contacts
