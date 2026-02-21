@@ -9,17 +9,27 @@ redirects:
 
 # Domain Distribution and Management Overview
 
-Domain distribution and management can be achieved via the Unstoppable Partner API and Smart Contracts.
+Domain distribution and management can be achieved via the Unstoppable Partner API, Reseller API (Preview), and Smart Contracts.
 
 # Partner API
 
-Our premier solution for domain distribution and management.
+Our premier solution for Web3 domain distribution and management.
 
 - Claim domains
 - Create and manage custody wallets
 - Manage domains, both held in custody and self-custody wallets
 
 For more information, please consult the [Partner API specification](https://docs.unstoppabledomains.com/apis/partner/latest).
+
+# Reseller API (Preview)
+
+Our solution for traditional DNS domain registration and management.
+
+- Search and register domains
+- Manage DNS records
+- Handle domain transfers and contacts
+
+For more information, please consult the [Reseller API specification](https://docs.unstoppabledomains.com/apis/reseller/openapi).
 
 ## Fork Our Postman Collection
 
