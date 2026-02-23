@@ -21,6 +21,7 @@ This portal is organized to support users familair with API implementation. If y
 - [Resolution](resolution/openapi.yaml)
 - [Partner](partner/openapi.yaml)
 - [Reseller (Preview)](reseller/openapi.yaml)
+- [MCP Server](/apis/mcp/openapi)
 - [Profile](profile-v1/openapi.yaml)
 - [Messaging](messaging-v1/openapi.yaml)
 - [Login](loginref/openapi.yaml)

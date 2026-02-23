@@ -10,6 +10,8 @@
   page: partner/openapi.yaml
 - group: Reseller (Preview)
   page: reseller/openapi.yaml
+- group: MCP
+  page: mcp/openapi.json
 - group: Profile
   page: profile-v1/openapi.yaml
 - group: Messaging

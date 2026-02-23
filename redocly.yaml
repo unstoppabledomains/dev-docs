@@ -19,6 +19,23 @@ markdown:
     hide: false
 
 apis:
+  mcp-v1@main:
+    root: apis/mcp/openapi.json
+    openapi:
+      feedback:
+        hide: true
+      hideDownloadButtons: true
+      corsProxyUrl: https://cors.redoc.ly
+      showConsole: true
+      codeSamples:
+        languages:
+          - lang: curl
+          - lang: JavaScript
+          - lang: Node.js
+          - lang: Python
+          - lang: Java
+          - lang: C#
+          - lang: PHP
   partner-v3@main:
     root: apis/partner/openapi.yaml
     openapi:
