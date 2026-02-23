@@ -85,6 +85,20 @@
             - label: Manage Domain Records
               page: smart-contracts/quick-start/manage-domain-records.md
   separatorLine: true
+- group: MCP Server
+  expanded: false
+  items:
+    - label: Overview
+      page: mcp/overview.md
+    - label: Common Workflows
+      page: mcp/common-workflows.md
+    - label: Available Tools
+      page: mcp/available-tools.md
+    - label: Troubleshooting
+      page: mcp/troubleshooting.md
+    - label: API Reference
+      href: /apis/mcp/openapi
+  separatorLine: true
 - group: Login With Unstoppable
   expanded: false
   items:
