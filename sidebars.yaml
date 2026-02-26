@@ -53,52 +53,52 @@
 #             - label: Reverse Resolution Contracts
 #               page: smart-contracts/quick-start/reverse-resolve-domains.md
 #   separatorLine: true
-- group: Partner API
-  expanded: false
-  items:
-    - label: "Overview"
-      page: domain-distribution-and-management/overview.md
-    - group: Quickstart
-      expanded: false
-      items:
-        - label: Retrieve an API key
-          page: domain-distribution-and-management/quickstart/retrieve-an-api-key.md
-    - group: Guides
-      expanded: false
-      items:
-        - label: Sell Domains
-          page: domain-distribution-and-management/guides/sell-domains.md
-        - label: Implement Webhooks
-          page: domain-distribution-and-management/guides/implementing-webhooks.md
-        - label: On-chain Buy
-          page: domain-distribution-and-management/guides/on-chain-buy.md
-    - group: Tech References
-      expanded: false
-      items:
-        - label: Partner API
-          href: /apis/partner/openapi
-        - label: Reseller API (Preview)
-          href: /apis/reseller/openapi
-        - group: Smart Contracts
-          expanded: false
-          items:
-            - label: Manage Domain Records
-              page: smart-contracts/quick-start/manage-domain-records.md
-  separatorLine: true
-- group: MCP Server
-  expanded: false
-  items:
-    - label: Overview
-      page: mcp/overview.md
-    - label: Common Workflows
-      page: mcp/common-workflows.md
-    - label: Available Tools
-      page: mcp/available-tools.md
-    - label: Troubleshooting
-      page: mcp/troubleshooting.md
-    - label: API Reference
-      href: /apis/mcp/openapi
-  separatorLine: true
+# - group: Partner API
+#   expanded: false
+#   items:
+#     - label: "Overview"
+#       page: domain-distribution-and-management/overview.md
+#     - group: Quickstart
+#       expanded: false
+#       items:
+#         - label: Retrieve an API key
+#           page: domain-distribution-and-management/quickstart/retrieve-an-api-key.md
+#     - group: Guides
+#       expanded: false
+#       items:
+#         - label: Sell Domains
+#           page: domain-distribution-and-management/guides/sell-domains.md
+#         - label: Implement Webhooks
+#           page: domain-distribution-and-management/guides/implementing-webhooks.md
+#         - label: On-chain Buy
+#           page: domain-distribution-and-management/guides/on-chain-buy.md
+#     - group: Tech References
+#       expanded: false
+#       items:
+#         - label: Partner API
+#           href: /apis/partner/openapi
+#         - label: Reseller API (Preview)
+#           href: /apis/reseller/openapi
+#         - group: Smart Contracts
+#           expanded: false
+#           items:
+#             - label: Manage Domain Records
+#               page: smart-contracts/quick-start/manage-domain-records.md
+#   separatorLine: true
+# - group: MCP Server
+#   expanded: false
+#   items:
+#     - label: Overview
+#       page: mcp/overview.md
+#     - label: Common Workflows
+#       page: mcp/common-workflows.md
+#     - label: Available Tools
+#       page: mcp/available-tools.md
+#     - label: Troubleshooting
+#       page: mcp/troubleshooting.md
+#     - label: API Reference
+#       href: /apis/mcp/openapi
+#   separatorLine: true
 # - group: Login With Unstoppable
 #   expanded: false
 #   items:

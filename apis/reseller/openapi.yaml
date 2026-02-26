@@ -1107,7 +1107,7 @@ paths:
       tags:
         - tlds
 info:
-  title: Reseller API (Preview)
+  title: Reseller API
   version: "1.0.0"
   contact:
     name: Unstoppable Domains (Reseller Engineering)

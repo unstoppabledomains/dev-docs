@@ -43,7 +43,7 @@ export default function Page() {
           <h1 className="margin-top-bottom-20 jumbotron-h1">Effortless building starts here.</h1>
           <h3 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
           <div className="header-button-container">
-            <a href="/getting-started/overview" className="header-button">Build with us</a>
+            <a href="/apis/overview" className="header-button">Build with us</a>
           </div>
         </section>
 
@@ -51,7 +51,7 @@ export default function Page() {
           <div className="stats-container">
             <div className="stats-flex">
               <div className="stat-box"><h3>Quick and Easy Integration</h3></div>
-              <div className="stat-box middle"><h3>Millions of Domains</h3></div>
+              <div className="stat-box middle"><h3>900,000+ Domains</h3></div>
               <div className="stat-box"><h3>Hundreds of Integrated Partners</h3></div>
             </div>
           </div>
@@ -73,40 +73,40 @@ export default function Page() {
                 <h2 className="tile-title">Sell Domains in your App</h2>
               </div>
               <div className="tile-content">
-                Register and manage onchain domains natively within your app or website.
+                Build domain search, purchase, and management directly into your platform with our Reseller API.
               </div>
               <div className="tile-button-container">
-                <a href="/domain-distribution-and-management/overview"  className="tile-button">Get Started</a>
+                <a href="/apis/reseller/openapi"  className="tile-button">Get Started</a>
               </div>
             </div>
 
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/resolve-domains-${imageSuffix}.png`} alt="Resolve domains" className="tile-image" />
+                  <img src={`/static/images/resolve-domains-${imageSuffix}.png`} alt="Reseller API" className="tile-image" />
                 </div>
-                <h2 className="tile-title">Resolve Domains in your App</h2>
+                <h2 className="tile-title">User API</h2>
               </div>
               <div className="tile-content">
-                Retrieve crypto addresses, IPFS hashes, metadata, and enable reverse resolution to display domain names in place of wallet addresses.
+                Register, renew, and transfer domains programmatically. Build domain management directly into your platform with our Reseller API.
               </div>
               <div className="tile-button-container">
-                <a href="/resolution/overview" className="tile-button">Get Started</a>
+                <a href="/mcp/overview" className="tile-button">Get Started</a>
               </div>
             </div>
 
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/login-with-domains-${imageSuffix}.png`} alt="Login with domains" className="tile-image" />
+                  <img src={`/static/images/login-with-domains-${imageSuffix}.png`} alt="MCP Server" className="tile-image" />
                 </div>
-                <h2 className="tile-title">Login with Domains in your App</h2>
+                <h2 className="tile-title">MCP Server</h2>
               </div>
               <div className="tile-content">
-                Allow users to log in with their Unstoppable Domains in your app or website.
+                Connect your AI assistant to Unstoppable Domains. Search, purchase, and manage domains through natural conversation in ChatGPT, Claude, and more.
               </div>
               <div className="tile-button-container">
-                <a href="/identity/overview/login-with-unstoppable" className="tile-button">Get Started</a>
+                <a href="/mcp/overview" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function Page() {
                 <h2 className="tile-title">API Reference</h2>
               </div>
               <div className="tile-content">
-                Consult the documentation and live testing features of Unstoppable Domains APIs, including the Resolution Service API and Partner API.
+                Consult the documentation and live testing features of Unstoppable Domains APIs, including the Reseller API and MCP Server.
               </div>
               <div className="tile-button-container">
                 <a href="/apis/overview" className="tile-button">Get Started</a>

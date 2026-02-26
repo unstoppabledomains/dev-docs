@@ -200,7 +200,7 @@ scripts:
 navbar:
   items:
     - label: Get Started
-      page: getting-started/overview.md
+      page: apis/overview.md
     - label: API Reference
       page: apis/overview.md
 
@@ -223,6 +223,12 @@ footer:
           href: 'https://x.com/unstoppableweb'
         - label: Facebook
           href: 'https://www.facebook.com/unstoppableweb/'
+        - label: Instagram
+          href: 'https://www.instagram.com/unstoppabledomains/'
+        - label: TikTok
+          href: 'https://www.tiktok.com/@unstoppableweb'
+        - label: Spotify
+          href: 'https://open.spotify.com/show/2ZlyOpkkprGKS5KODk1PSS'
 
     - group: Resources
       items:

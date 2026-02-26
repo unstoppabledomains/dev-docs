@@ -41,23 +41,25 @@ The custom GPT supports core domain management tasks like searching, purchasing,
 
 #### Option 2: Add the MCP Server to ChatGPT
 
-Connecting the MCP server directly gives you access to all available tools. Requires ChatGPT Plus, Pro, Team, or Enterprise.
+Connecting the MCP server directly gives you access to all available tools. Requires ChatGPT Plus, Pro, Team, or Enterprise. These steps must be completed in the [ChatGPT web app](https://chatgpt.com).
 
-1. Open [chatgpt.com](https://chatgpt.com) or the ChatGPT desktop app
-2. Click the **connector icon** (puzzle piece) at the bottom of the compose area, then click **"Add"**
-3. Search for **Unstoppable Domains** in the connector directory, or add it manually:
-   - Click **"Add custom connector"** (you may need to enable Developer Mode under **Settings > Advanced**)
-   - Enter the MCP server URL:
-     ```
-     https://api.unstoppabledomains.com/mcp/v1
-     ```
-4. Click **"Add"** and then **"Authorize"** when prompted
-5. Sign in with your Unstoppable Domains account in the browser window that opens
-6. Return to ChatGPT — the Unstoppable Domains tools are now available in your chat
+**1. Enable Developer Mode**
 
-{% admonition type="info" %}
-You can enable or disable the connector per conversation by clicking the connector icon in the compose area.
-{% /admonition %}
+Open [ChatGPT's connector settings](https://chatgpt.com/#settings/Connectors/Advanced) and enable **"Developer Mode (beta)"** under Advanced Settings.
+
+**2. Create a Connector**
+
+Navigate back to the main Connectors page and click **"Create"**. Paste the MCP server URL:
+
+```
+https://api.unstoppabledomains.com/mcp/v1
+```
+
+Leave authentication as the default setting and click **Save**.
+
+**3. Verify Installation**
+
+Start a new conversation and ask ChatGPT to search for a domain. When prompted, authorize the connection with your Unstoppable Domains account.
 
 ### Claude (Desktop & Web)
 
@@ -139,7 +141,7 @@ OAuth provides scoped access through browser-based authentication:
 
 - **Easy setup** - Just authenticate when prompted using your Unstoppable Domains account
 - **Granular permissions** - Only grant access to what you need
-- **Revocable** - Disconnect apps anytime from [Account Settings](https://unstoppabledomains.com/manage?page=user-profile&overlay=settings)
+- **Revocable** - Disconnect apps anytime from [Account Settings](https://unstoppabledomains.com/account/settings?tab=advanced)
 
 **Available scopes:**
 
@@ -156,7 +158,7 @@ OAuth provides scoped access through browser-based authentication:
 
 For manual configuration or custom integrations:
 
-1. Go to [Account Settings](https://unstoppabledomains.com/manage?page=user-profile&overlay=settings)
+1. Go to [Account Settings](https://unstoppabledomains.com/account/settings?tab=advanced)
 2. Scroll to bottom and click **Advanced**
 3. Find the **MCP API Key** section
 4. Generate a key (format: `ud_mcp_*`)
