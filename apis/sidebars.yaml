@@ -2,21 +2,33 @@
 - label: "Overview"
   page: overview.md
   separatorLine: true
-- group: Metadata
-  page: metadata/openapi.yaml
-- group: Resolution
-  page: resolution/openapi.yaml
-- group: Partner
-  page: partner/openapi.yaml
-- group: Reseller (Preview)
+- group: MCP Server
+  items:
+    - label: Overview
+      page: ../mcp/overview.md
+    - label: Common Workflows
+      page: ../mcp/common-workflows.md
+    - label: Available Tools
+      page: ../mcp/available-tools.md
+    - label: Troubleshooting
+      page: ../mcp/troubleshooting.md
+    - label: API Reference
+      page: mcp/openapi.json
+  separatorLine: true
+- group: Reseller
   page: reseller/openapi.yaml
-- group: MCP
-  page: mcp/openapi.json
-- group: Profile
-  page: profile-v1/openapi.yaml
-- group: Messaging
-  page: messaging-v1/openapi.yaml
-- group: Login
-  page: loginref/openapi.yaml
-- group: Registry
-  page: registry/openapi.yaml
+# - group: Partner
+#   page: partner/openapi.yaml
+#   separatorLine: true
+# - group: Metadata
+#   page: metadata/openapi.yaml
+# - group: Resolution
+#   page: resolution/openapi.yaml
+# - group: Profile
+#   page: profile-v1/openapi.yaml
+# - group: Messaging
+#   page: messaging-v1/openapi.yaml
+# - group: Login
+#   page: loginref/openapi.yaml
+# - group: Registry
+#   page: registry/openapi.yaml
