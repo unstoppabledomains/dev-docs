@@ -55,7 +55,11 @@ For each path+method in the generated spec:
 - Copy `summary` and `description` from current spec
 - If a NEW endpoint exists (no match in current spec), write a concise `summary` (imperative, <10 words) and `description` (1-2 sentences explaining what it does and key parameters)
 
-#### d. Preserve generated structure
+#### d. Preserve webhooks and their schemas
+- The `webhooks` section is manually maintained (not generated) — carry it over from the current spec
+- Any schemas referenced by webhooks (e.g. `WebhookDeliveryRequestBody`) must also be preserved from the current spec, even though they won't appear in the generated spec's schemas
+
+#### e. Preserve generated structure
 - Keep ALL paths, schemas, security, x-tagGroups, and tag assignments from the generated spec (these are authoritative from the generation script)
 - Only ADD documentation metadata; never remove or reorder endpoints
 
@@ -94,3 +98,4 @@ Summarize what changed:
 - **Overwriting tag assignments**: The generated spec's tags are authoritative; only add `x-displayName` and richer descriptions
 - **Missing new endpoints**: Always diff operationIds between generated and current to catch additions/removals
 - **Forgetting servers block**: The generated spec typically has `servers: []`; always populate from current
+- **Dropping webhook schemas**: The generated spec doesn't include webhooks or their schemas; always carry over `webhooks` and any schemas they `$ref` from the current spec
