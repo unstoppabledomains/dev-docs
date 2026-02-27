@@ -4932,5 +4932,20 @@ components:
           CONTACT_CREATE: '#/components/schemas/PlatformOperationContactCreate'
           WEBHOOK_CREATE: '#/components/schemas/PlatformOperationWebhookCreate'
           WEBHOOK_DELETE: '#/components/schemas/PlatformOperationWebhookDelete'
+    WebhookDeliveryRequestBody:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.WebhookDelivery
+        type:
+          $ref: '#/components/schemas/WebhookType'
+        data:
+          $ref: '#/components/schemas/OperationCheckResponse'
+      required:
+      - '@type'
+      - type
+      - data
 security:
 - bearer: []
