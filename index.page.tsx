@@ -39,7 +39,7 @@ export default function Page() {
     <>
       <main>
         <section className="padding-top-bottom-20 jumbotron" style={{ textAlign: 'center' }}>
-          <h2 className="margin-top-bottom-20 jumbotron-h2">Developer Documentation</h2>
+          <h2 className="margin-top-bottom-20 jumbotron-h2">ICANN Domain Developers</h2>
           <h1 className="margin-top-bottom-20 jumbotron-h1">Effortless building starts here.</h1>
           <h3 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
           <div className="header-button-container">
@@ -91,7 +91,7 @@ export default function Page() {
                 Register, renew, and transfer domains programmatically. Build domain management directly into your platform with our Reseller API.
               </div>
               <div className="tile-button-container">
-                <a href="/mcp/overview" className="tile-button">Get Started</a>
+                <a href="/apis/mcp/openapi" className="tile-button">Get Started</a>
               </div>
             </div>
 
