@@ -233,30 +233,7 @@ Poll at a reasonable interval (every 2-5 seconds) and implement a timeout. For p
 
 ### Using Preview Mode for Price Quotes
 
-Before committing to a registration, run the same request with `$preview=true`:
-
-```bash
-curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=true" \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "example.com",
-    "owner": {
-      "type": "MANAGED",
-      "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
-    },
-    "dns": {
-      "period": 1,
-      "contacts": {
-        "admin": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "tech": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "billing": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
-      }
-    }
-  }'
-```
-
-The response includes the pricing breakdown and validates all fields without actually registering the domain.
+Before committing to a registration, run the same request with `$preview=true` instead of `$preview=false`. The response includes the pricing breakdown and validates all fields without actually registering the domain. See [Preview Mode](#preview-mode) for details.
 
 ## Contact Management
 
@@ -302,7 +279,7 @@ Domains have four contact roles:
 Contacts are assigned during registration. You can update contacts after registration using:
 
 ```bash
-curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts" \
+curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts?\$preview=false" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -425,7 +402,7 @@ curl "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals" \
 Renew the domain by specifying the renewal period in years:
 
 ```bash
-curl -X POST "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals" \
+curl -X POST "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals?\$preview=false" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -486,7 +463,7 @@ curl "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags" \
 Update flags:
 
 ```bash
-curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags" \
+curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags?\$preview=false" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -608,6 +585,7 @@ When a request fails, the API returns a JSON error response with a status code a
 | `403` | Permission error -- the API key does not have access to this resource |
 | `404` | Not found -- the requested domain, contact, or operation does not exist |
 | `409` | Conflict -- the action conflicts with the current state (e.g., the domain is already registered) |
+| `500` | Internal server error -- retry the request after a short delay |
 
 ### Partial Failures
 
