@@ -28,7 +28,7 @@ This portal is organized to support users at all experience levels, from foundat
 - [Unstoppable Partner API](/domain-distribution-and-management/overview.md)
 - [Unstoppable Reseller API (Preview)](/apis/reseller/openapi.yaml)
 - [Unstoppable Login](/identity/overview/login-with-unstoppable.md)
-- [MCP Server](/mcp/overview.md)
+- [User API and MCP Server](/mcp/overview.md)
 - [API Reference](/apis/overview.md)
 
 {% partial file="/_partials/_developer-survey-embed.md" /%}

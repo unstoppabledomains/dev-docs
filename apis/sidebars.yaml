@@ -2,10 +2,12 @@
 - label: "Overview"
   page: overview.md
   separatorLine: true
-- group: MCP Server
+- group: User API
   items:
     - label: Overview
       page: ../mcp/overview.md
+    - label: MCP Server
+      page: ../mcp/mcp-server.md
     - label: Common Workflows
       page: ../mcp/common-workflows.md
     - label: Available Tools
