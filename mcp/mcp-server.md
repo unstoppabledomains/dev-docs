@@ -73,7 +73,7 @@ To use the connector in a conversation, click the **"+"** button in the compose 
 
 Free users can connect via the JSON configuration file:
 
-1. Open Claude Desktop and go to **Claude** (menu bar) → **Settings** → **Developer** → **Edit Config**
+1. Open Claude Desktop and go to **Claude** (menu bar) &rarr; **Settings** &rarr; **Developer** &rarr; **Edit Config**
 
    This opens the config file at:
    - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
