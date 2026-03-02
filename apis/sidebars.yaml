@@ -4,20 +4,22 @@
   separatorLine: true
 - group: User API
   items:
-    - label: Overview
+    - label: Quick Start
       page: ../mcp/overview.md
-    - label: MCP Server
-      page: ../mcp/mcp-server.md
-    - label: Common Workflows
-      page: ../mcp/common-workflows.md
-    - label: Available Tools
-      page: ../mcp/available-tools.md
-    - label: Troubleshooting
-      page: ../mcp/troubleshooting.md
+    - group: MCP Server
+      items:
+        - label: Quick Start
+          page: ../mcp/mcp-server.md
+        - label: Common Workflows
+          page: ../mcp/common-workflows.md
+        - label: Available Tools
+          page: ../mcp/available-tools.md
+        - label: Troubleshooting
+          page: ../mcp/troubleshooting.md
     - label: API Reference
       page: mcp/openapi.json
   separatorLine: true
-- group: Reseller
+- group: Reseller API
   page: reseller/openapi.yaml
 # - group: Partner
 #   page: partner/openapi.yaml

@@ -149,7 +149,7 @@ OAuth provides scoped access through browser-based authentication:
 For manual configuration or custom integrations:
 
 1. Go to [Account Settings](https://unstoppabledomains.com/account/settings?tab=advanced)
-2. Scroll to bottom and click **Advanced**
+2. Go to the "Advanced" tab
 3. Find the **MCP API Key** section
 4. Generate a key (format: `ud_mcp_*`)
 5. Copy your key (available anytime from this page)

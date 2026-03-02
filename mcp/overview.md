@@ -1,9 +1,9 @@
 ---
-title: User API | Unstoppable Domains Developer Portal
+title: User API Quick Start | Unstoppable Domains Developer Portal
 description: The Unstoppable Domains User API lets you search, purchase, and manage domain names, configure DNS, and interact with the marketplace.
 ---
 
-# User API
+# User API Quick Start
 
 The Unstoppable Domains User API provides programmatic access to manage domain names, DNS, and the marketplace. You can integrate it directly via REST or use it through AI assistants via the [MCP Server](mcp-server).
 
@@ -21,12 +21,27 @@ For a full list of operations, see the [API Reference](/apis/mcp/openapi).
 
 ## Authentication
 
-The User API supports two authentication methods:
+Authenticate with an API key in the `Authorization` header:
 
-- **OAuth 2.0 (Recommended)** — Browser-based authentication with granular scopes. Authenticate when prompted using your Unstoppable Domains account.
-- **API Key** — For scripts and custom integrations. Generate a key from [Account Settings](https://unstoppabledomains.com/account/settings?tab=advanced).
+1. Go to [Account Settings](https://unstoppabledomains.com/account/settings?tab=advanced)
+2. Go to the "Advanced" tab
+3. Find the **MCP API Key** section
+4. Generate a key (format: `ud_mcp_*`)
+5. Copy your key (available anytime from this page)
+6. Use the key in the Authorization header:
 
-Both methods use a Bearer token in the `Authorization` header. See the [MCP Server](mcp-server) page for detailed setup and scope reference.
+```
+Authorization: Bearer ud_mcp_your_key_here
+```
+
+{% admonition type="warning" %}
+**Security tip:** Store your API key in an environment variable to avoid exposing it in shell history or process listings:
+
+```bash
+export UD_MCP_API_KEY="ud_mcp_your_key_here"
+# Then reference $UD_MCP_API_KEY in your scripts or configuration
+```
+{% /admonition %}
 
 ## MCP Server
 
