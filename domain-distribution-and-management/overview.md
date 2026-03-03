@@ -29,7 +29,9 @@ Our solution for traditional DNS domain registration and management.
 - Manage DNS records
 - Handle domain transfers and contacts
 
-For more information, please consult the [Reseller API specification](https://docs.unstoppabledomains.com/apis/reseller/openapi).
+For a step-by-step walkthrough, see the [Implementation Guide](/domain-distribution-and-management/reseller/implementation-guide).
+
+For the full API reference, see the [Reseller API specification](https://docs.unstoppabledomains.com/apis/reseller/openapi).
 
 ## Fork Our Postman Collection
 

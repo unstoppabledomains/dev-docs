@@ -25,7 +25,7 @@ info:
     ## Contacts
     ICANN-accredited domain registrations require contact information for various roles (owner, admin, tech, billing). The API provides a dedicated Contacts system for creating and managing these contacts, which can then be associated with domains.
 
-    Contacts must be verified via email before they can be used for domain registration. The API supports the full contact verification lifecycle.
+    Contacts are automatically sent a verification email upon creation. Contacts can be used for domain registration immediately, but domains associated with unverified contacts may become unmanageable after a certain period.
 
     # Important Concepts
 
@@ -105,7 +105,7 @@ tags:
   description: |
     Create and manage ICANN-required contacts for domain registration. Contacts represent individuals or organizations associated with domain roles (owner, admin, tech, billing).
 
-    New contacts must be verified via email before they can be used in domain registrations.
+    New contacts are automatically sent a verification email upon creation. Contacts can be used in domain registrations immediately, but domains associated with unverified contacts may become unmanageable after a certain period.
   x-displayName: Contacts
 - name: operations
   description: |
