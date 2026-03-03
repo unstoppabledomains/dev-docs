@@ -4056,12 +4056,12 @@ components:
         type:
           type: string
           enum:
-          - MANAGED
+          - SELF
         contact:
           $ref: '#/components/schemas/DomainOwnerContactRequestBody'
       required:
       - type
-      description: Domain owner configuration. For reseller registrations, `type` must be `MANAGED`. The `contact` field specifies the registrant — provide either an existing contact ID or inline contact
+      description: Domain owner configuration. For reseller registrations, `type` must be `SELF`. The `contact` field specifies the registrant — provide either an existing contact ID or inline contact
         fields.
     CursorListResponseNext:
       type: object

@@ -197,7 +197,7 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "MANAGED",
+      "type": "SELF",
       "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
     },
     "dns": {
@@ -442,7 +442,7 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "MANAGED",
+      "type": "SELF",
       "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
     },
     "dns": {
