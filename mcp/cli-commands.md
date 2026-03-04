@@ -397,9 +397,19 @@ ud env show
 
 ## Authentication
 
+### ud auth signup
+
+Create a new Unstoppable Domains account. Prompts for email and password, sends a verification code, and signs you in automatically.
+
+```bash
+ud auth signup
+```
+
+Requires an interactive terminal. Password must be at least 8 characters with uppercase, lowercase, number, and special character.
+
 ### ud auth login
 
-Authenticate with your Unstoppable Domains account.
+Sign in to an existing Unstoppable Domains account.
 
 ```bash
 ud auth login            # OAuth (opens browser)

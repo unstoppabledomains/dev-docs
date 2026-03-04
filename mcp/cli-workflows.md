@@ -162,7 +162,9 @@ ud marketplace leads messages
 Test in sandbox before going to production.
 
 ```bash
-# Authenticate in sandbox
+# Create an account or sign in on sandbox
+ud auth signup --env sandbox
+# Or sign in to an existing account
 ud auth login --env sandbox
 
 # Run commands against sandbox

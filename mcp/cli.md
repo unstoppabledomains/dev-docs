@@ -39,13 +39,21 @@ ud --help
 
 ## Authentication
 
-### OAuth (Recommended)
+### Signup (New Account)
+
+```bash
+ud auth signup
+```
+
+Creates a new account directly from the terminal. Prompts for email and password, sends a verification code to your email, and signs you in — no browser needed.
+
+### OAuth (Existing Account)
 
 ```bash
 ud auth login
 ```
 
-This opens your browser for secure authorization using OAuth 2.0 with PKCE. Tokens refresh automatically.
+Opens your browser for authorization using OAuth 2.0 with PKCE. Use this to sign in to an existing account. Tokens refresh automatically.
 
 ### API Key
 
