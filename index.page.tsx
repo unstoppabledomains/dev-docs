@@ -83,7 +83,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/resolve-domains-${imageSuffix}.png`} alt="User API" className="tile-image" />
+                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="User API" className="tile-image" />
                 </div>
                 <h2 className="tile-title">User API</h2>
               </div>
