@@ -113,7 +113,7 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/login-with-domains-${imageSuffix}.png`} alt="MCP Server" className="tile-image" />
+                  <img src={`/static/images/mcp-server-${imageSuffix}.png`} alt="MCP Server" className="tile-image" />
                 </div>
                 <h2 className="tile-title">MCP Server</h2>
               </div>
