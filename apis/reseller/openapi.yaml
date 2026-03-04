@@ -33,6 +33,8 @@ info:
     All interactions with the API that initiate changes will create an Operation for tracking that change.
     Operations can complete immediately or run in the background depending on the operation type and current system conditions.
 
+    Only one operation can be active on a domain at a time. Attempting a mutating action while another operation is in progress will result in a `409 Conflict` response. Use `GET /domains/{name}/pending-operations` to check for active operations before initiating changes.
+
     Operations include dependencies that represent the smaller units of work associated with the overall operation. These dependencies can also be tracked through the API and each have their own status and metadata.
 
     Your integration should properly handle and anticipate all of the following possible statuses for Operations and their dependencies:
