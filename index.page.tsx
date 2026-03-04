@@ -83,27 +83,12 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/resolve-domains-${imageSuffix}.png`} alt="Reseller API" className="tile-image" />
+                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="User API" className="tile-image" />
                 </div>
                 <h2 className="tile-title">User API</h2>
               </div>
               <div className="tile-content">
-                Register, renew, and transfer domains programmatically. Build domain management directly into your platform with our Reseller API.
-              </div>
-              <div className="tile-button-container">
-                <a href="/apis/mcp/openapi" className="tile-button">Get Started</a>
-              </div>
-            </div>
-
-            <div className="tile">
-              <div className="tile-header">
-                <div className="tile-image-container">
-                  <img src={`/static/images/login-with-domains-${imageSuffix}.png`} alt="MCP Server" className="tile-image" />
-                </div>
-                <h2 className="tile-title">MCP Server</h2>
-              </div>
-              <div className="tile-content">
-                Connect your AI assistant to Unstoppable Domains. Search, purchase, and manage domains through natural conversation in ChatGPT, Claude, and more.
+                Search, purchase, and manage domains programmatically. Configure DNS, list on the marketplace, and automate your domain portfolio.
               </div>
               <div className="tile-button-container">
                 <a href="/mcp/overview" className="tile-button">Get Started</a>
@@ -113,15 +98,30 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="API Reference" className="tile-image" />
+                  <img src={`/static/images/cli-${imageSuffix}.png`} alt="User CLI" className="tile-image" />
                 </div>
-                <h2 className="tile-title">API Reference</h2>
+                <h2 className="tile-title">User CLI</h2>
               </div>
               <div className="tile-content">
-                Consult the documentation and live testing features of Unstoppable Domains APIs, including the Reseller API and MCP Server.
+                Search, purchase, and manage domains from your terminal. Script domain workflows with JSON output, CSV export, and shell piping.
               </div>
               <div className="tile-button-container">
-                <a href="/apis/overview" className="tile-button">Get Started</a>
+                <a href="/mcp/cli" className="tile-button">Get Started</a>
+              </div>
+            </div>
+
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <img src={`/static/images/mcp-server-${imageSuffix}.png`} alt="MCP Server" className="tile-image" />
+                </div>
+                <h2 className="tile-title">MCP Server</h2>
+              </div>
+              <div className="tile-content">
+                Connect your AI assistant to Unstoppable Domains. Search, purchase, and manage domains through natural conversation in ChatGPT, Claude, and more.
+              </div>
+              <div className="tile-button-container">
+                <a href="/mcp/mcp-server" className="tile-button">Get Started</a>
               </div>
             </div>
           </div>

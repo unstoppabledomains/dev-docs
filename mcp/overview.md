@@ -48,3 +48,9 @@ export UD_MCP_API_KEY="ud_mcp_your_key_here"
 The [MCP Server](mcp-server) wraps the User API in the Model Context Protocol, letting you access the same functionality through natural conversation inside ChatGPT, Claude, and other AI tools.
 
 See [MCP Server setup and usage](mcp-server) to get started.
+
+## CLI
+
+The [CLI](cli) provides the same User API capabilities from your terminal. Search, register, manage DNS, and interact with the marketplace using standard shell commands.
+
+See [CLI setup and usage](cli) to get started.

@@ -16,6 +16,14 @@
           page: ../mcp/available-tools.md
         - label: Troubleshooting
           page: ../mcp/troubleshooting.md
+    - group: CLI
+      items:
+        - label: Quick Start
+          page: ../mcp/cli.md
+        - label: Common Workflows
+          page: ../mcp/cli-workflows.md
+        - label: Command Reference
+          page: ../mcp/cli-commands.md
     - label: API Reference
       page: mcp/openapi.json
   separatorLine: true
