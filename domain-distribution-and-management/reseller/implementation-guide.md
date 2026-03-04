@@ -49,6 +49,8 @@ Two additional statuses exist:
 - **PREVIEW** -- Returned when using preview mode (`$preview=true`). The operation was not executed.
 - **AWAITING_UPDATES** -- The operation requires additional input or action before it can proceed.
 
+Only one operation can be active on a domain at a time. If you attempt a mutating action while another operation is in progress, the API will return a `409 Conflict`. Use `GET /domains/{name}/pending-operations` to check for active operations before initiating changes.
+
 Each Operation contains **dependencies**, which are smaller units of work that make up the overall operation. Each dependency has its own status, so you can track granular progress.
 
 To check the status of an operation, poll the operation endpoint:
