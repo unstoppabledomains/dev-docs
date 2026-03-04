@@ -3247,8 +3247,9 @@ components:
       type: object
       properties:
         '@type':
-          type: number
-          enum: []
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.DomainDnsRecordOperationResult
         operation:
           $ref: '#/components/schemas/OperationCheckResponse'
       required:
