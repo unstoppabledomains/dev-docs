@@ -3007,12 +3007,35 @@ components:
           enum:
           - unstoppabledomains.com/partner.v3.DomainPendingOperation
         type:
-          type: object
+          type: string
+          enum:
+          - ADMIN_GENERIC
+          - DOMAIN_ADMIN_UPDATE
+          - DOMAIN_RENEW
+          - ACCOUNT_UPDATE
+          - DOMAIN_DNS_RECORD_CREATE
+          - DOMAIN_DNS_RECORD_UPDATE
+          - DOMAIN_DNS_RECORD_DELETE
+          - DOMAIN_DNS_RECORD_BATCH
+          - DOMAIN_DNS_SECURITY_ENABLE
+          - DOMAIN_DNS_SECURITY_DELETE
+          - DOMAIN_DNS_NAME_SERVER_UPDATE
+          - DOMAIN_HOSTING_UPDATE
+          - DOMAIN_HOSTING_DISABLE
+          - DOMAIN_TRANSFER_OUT
+          - DOMAIN_TRANSFER_OUT_TOGGLE
+          - DOMAIN_FLAGS_UPDATE
+          - DOMAIN_CONTACTS_UPDATE
+          - CONTACT_CREATE
+          - DOMAIN_SUGGESTION_CREATE
+          - DOMAIN_SUGGESTION_REFRESH
+          - DOMAIN_ADMIN_DNS_ZONE_MIGRATE
+          - UNKNOWN
+          description: The type of the pending operation
         id:
           type: string
       required:
       - '@type'
-      - type
     DomainPendingOperationsListResponse:
       type: object
       properties:
