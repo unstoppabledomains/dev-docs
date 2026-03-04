@@ -2,20 +2,24 @@
 - label: "Overview"
   page: overview.md
   separatorLine: true
-- group: MCP Server
+- group: User API
   items:
-    - label: Overview
+    - label: Quick Start
       page: ../mcp/overview.md
-    - label: Common Workflows
-      page: ../mcp/common-workflows.md
-    - label: Available Tools
-      page: ../mcp/available-tools.md
-    - label: Troubleshooting
-      page: ../mcp/troubleshooting.md
+    - group: MCP Server
+      items:
+        - label: Quick Start
+          page: ../mcp/mcp-server.md
+        - label: Common Workflows
+          page: ../mcp/common-workflows.md
+        - label: Available Tools
+          page: ../mcp/available-tools.md
+        - label: Troubleshooting
+          page: ../mcp/troubleshooting.md
     - label: API Reference
       page: mcp/openapi.json
   separatorLine: true
-- group: Reseller
+- group: Reseller API
   items:
     - label: Implementation Guide
       page: ../domain-distribution-and-management/reseller/implementation-guide.md

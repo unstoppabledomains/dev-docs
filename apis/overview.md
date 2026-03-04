@@ -9,7 +9,7 @@ This API Reference is designed to help you understand how to build and integrate
 
 Explore the available APIs below:
 
+- [User API and MCP Server](/mcp/overview)
 - [Reseller API](reseller/openapi.yaml)
-- [MCP Server](/apis/mcp/openapi)
 
 {% partial file="/_partials/_developer-survey-embed.md" /%}
