@@ -22,13 +22,17 @@ Use the sandbox environment for development and testing. There is no charge for 
 
 The Reseller API handles domain operations, but several responsibilities fall on you as the integrating platform:
 
+- **UI implementation.** You are responsible for building the user-facing interface for domain search, checkout, DNS records management, contact management, and transfer out workflows. A [demo UI](https://github.com/unstoppabledomains/reseller-go-sdk-demo) is available as a reference implementation.
+
 - **Domain-to-user mapping.** The API does not track which end user owns which domain. You must maintain this mapping in your own system so that you can associate domains with the correct user accounts.
 
-- **Contact management.** You are responsible for creating ICANN contacts and associating them with domains during registration. Unstoppable Domains handles contact verification by sending a verification email to the contact's email address. You decide how to map contacts to your users -- whether each user gets their own contact, or multiple users share a contact, or some other arrangement.
+- **Contact management.** You are responsible for creating ICANN contacts with accurate contact information and associating them with domains during registration. Unstoppable Domains handles contact verification by sending a verification email to the contact's email address. You decide how to map contacts to your users -- whether each user gets their own contact, or multiple users share a contact, or some other arrangement.
 
 - **Payment processing.** Unstoppable Domains keeps a running balance against your reseller account and invoices you periodically. You are responsible for building your own checkout and billing experience for end users and collecting payment from them.
 
-- **Renewal tracking.** The API provides renewal eligibility and pricing information, but you are responsible for monitoring domain expiration dates and initiating renewals on time. Build reminders and automation into your platform to avoid letting domains expire.
+- **Renewal management.** The API provides renewal eligibility and pricing information, but you are responsible for monitoring domain expiration dates, scheduling renewal execution, and collecting payment for renewals from your users. For domains not set to auto-renew, we recommend sending email reminders 30, 7, and 1 day before expiration to avoid letting domains expire.
+
+- **SSL certificates.** You are responsible for provisioning and managing SSL certificates for your users' domains.
 
 - **DNS configuration.** You can set up DNS records on behalf of your users or expose DNS management directly in your UI. Either way, it is your responsibility to ensure domains are configured correctly for your users.
 
@@ -372,7 +376,7 @@ curl -X DELETE "https://api.ud-sandbox.com/partner/v3/domains/example.com/dns/re
 
 ### Nameservers
 
-By default, domains use Unstoppable Domains-managed nameservers.
+By default, domains use Unstoppable Domains-managed nameservers, powered by Google Cloud DNS.
 
 You can set custom nameservers if needed. You must provide between 2 and 12 nameservers:
 
