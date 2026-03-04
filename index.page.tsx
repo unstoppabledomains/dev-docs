@@ -88,7 +88,7 @@ export default function Page() {
                 <h2 className="tile-title">User API</h2>
               </div>
               <div className="tile-content">
-                Search, register, and manage your domains programmatically. Configure DNS, list on the marketplace, and automate your domain portfolio.
+                Search, purchase, and manage domains programmatically. Configure DNS, list on the marketplace, and automate your domain portfolio.
               </div>
               <div className="tile-button-container">
                 <a href="/mcp/overview" className="tile-button">Get Started</a>
@@ -103,7 +103,7 @@ export default function Page() {
                 <h2 className="tile-title">User CLI</h2>
               </div>
               <div className="tile-content">
-                Search, register, and manage domains from your terminal. Script domain workflows with JSON output, CSV export, and shell piping.
+                Search, purchase, and manage domains from your terminal. Script domain workflows with JSON output, CSV export, and shell piping.
               </div>
               <div className="tile-button-container">
                 <a href="/mcp/cli" className="tile-button">Get Started</a>
