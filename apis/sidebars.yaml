@@ -33,18 +33,3 @@
       page: ../domain-distribution-and-management/reseller/implementation-guide.md
     - label: API Reference
       page: reseller/openapi.yaml
-# - group: Partner
-#   page: partner/openapi.yaml
-#   separatorLine: true
-# - group: Metadata
-#   page: metadata/openapi.yaml
-# - group: Resolution
-#   page: resolution/openapi.yaml
-# - group: Profile
-#   page: profile-v1/openapi.yaml
-# - group: Messaging
-#   page: messaging-v1/openapi.yaml
-# - group: Login
-#   page: loginref/openapi.yaml
-# - group: Registry
-#   page: registry/openapi.yaml
