@@ -20,7 +20,7 @@ markdown:
 
 apis:
   mcp-v1@main:
-    root: apis/mcp/openapi.json
+    root: apis/user-api/openapi.json
     openapi:
       feedback:
         hide: true
