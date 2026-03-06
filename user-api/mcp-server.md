@@ -5,7 +5,7 @@ description: The Unstoppable Domains MCP server enables you to search, purchase,
 
 # MCP Server
 
-The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/mcp/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
+The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/user-api/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
 
 ## Quick Start
 
@@ -181,4 +181,4 @@ API keys grant full access to all tools. Use OAuth for scoped access.
 | Authentication | `Authorization: Bearer <token>` |
 | Protocol | MCP (Model Context Protocol) over HTTP |
 
-For the full interactive API reference, see the [MCP API Reference](/apis/mcp/openapi).
+For the full interactive API reference, see the [User API Reference](/apis/user-api/openapi).

@@ -91,7 +91,7 @@ export default function Page() {
                 Search, purchase, and manage domains programmatically. Configure DNS, list on the marketplace, and automate your domain portfolio.
               </div>
               <div className="tile-button-container">
-                <a href="/mcp/overview" className="tile-button">Get Started</a>
+                <a href="/user-api/overview" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -106,7 +106,7 @@ export default function Page() {
                 Search, purchase, and manage domains from your terminal. Script domain workflows with JSON output, CSV export, and shell piping.
               </div>
               <div className="tile-button-container">
-                <a href="/mcp/cli" className="tile-button">Get Started</a>
+                <a href="/user-api/cli" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -121,7 +121,7 @@ export default function Page() {
                 Connect your AI assistant to Unstoppable Domains. Search, purchase, and manage domains through natural conversation in ChatGPT, Claude, and more.
               </div>
               <div className="tile-button-container">
-                <a href="/mcp/mcp-server" className="tile-button">Get Started</a>
+                <a href="/user-api/mcp-server" className="tile-button">Get Started</a>
               </div>
             </div>
           </div>
