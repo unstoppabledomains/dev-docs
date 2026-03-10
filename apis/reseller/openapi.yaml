@@ -69,6 +69,8 @@ tags:
 - name: domain-search
   description: |
     Search for domain availability and retrieve details for one or more domains. Use the `$expand` parameter to include registration details and flags in the response.
+
+    **Response Time Considerations:** Domain availability lookups are performed in real-time against upstream registries. Response times vary by TLD — most TLDs respond in under 700ms, but some Identity Digital TLDs (e.g., `.company`, `.international`, `.finance`, `.global`) often have response times over 1 second. Set client timeouts accordingly when searching across multiple TLDs.
   x-displayName: Search & Lookup
 - name: domain-registration
   description: |

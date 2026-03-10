@@ -155,6 +155,15 @@ curl "https://api.ud-sandbox.com/partner/v3/domains?query=example.com&ending=com
 
 The response includes availability status and registration information for each matching domain.
 
+:::note Response Time Considerations
+Domain availability lookups are performed in real-time against upstream registries. Response times vary by TLD and registry operator:
+
+- **Fast TLDs** (under 700ms): `.com`, `.net`, `.cc`, `.org`, and most Verisign, Nominet, CentralNic, and PIR TLDs
+- **Slower TLDs** (often over 1 second): Many Identity Digital TLDs including `.company`, `.international`, `.golf`, `.finance`, `.furniture`, `.fyi`, `.global`, `.gold`, `.group`, and `.engineering`
+
+When searching across multiple TLDs, set client timeouts accordingly and consider that bulk searches may take longer when they include slower TLDs.
+:::
+
 ### Step 2: Check Pricing
 
 Get detailed pricing for a specific domain:
