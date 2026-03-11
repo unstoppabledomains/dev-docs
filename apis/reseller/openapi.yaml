@@ -115,6 +115,17 @@ tags:
 
     Operations contain dependencies that represent the individual units of work. Each dependency has its own status, parameters, and result data.
   x-displayName: Operations
+- name: hosting
+  description: |
+    Configure how your domains serve content on the web. Hosting configurations control what happens when someone visits your domain — whether it redirects to another URL or proxies content from another server.
+
+    Available hosting types:
+    - `REDIRECT_301` — Permanent redirect to another URL
+    - `REDIRECT_302` — Temporary redirect to another URL
+    - `REVERSE_PROXY` — Proxy requests to a backend server
+
+    All hosting configurations require SSL certificate provisioning. When a configuration is created or updated, the `certificateStatus` field will be `PENDING` until the certificate is issued and active. This process typically completes within a few minutes but may take longer in some cases.
+  x-displayName: Hosting
 - name: account
   description: Manage your account details, authentication tokens, and webhook subscriptions.
   x-displayName: Account
@@ -139,6 +150,9 @@ x-tagGroups:
 - name: Operations
   tags:
   - operations
+- name: Hosting
+  tags:
+  - hosting
 - name: Account
   tags:
   - account
@@ -1294,6 +1308,213 @@ paths:
       summary: Get nameservers
       description: |
         Retrieve the current nameserver configuration for the specified domain. Use `$expand=dnssec` to include DNSSEC details in the response.
+  /domains/{name}/dns/hosting:
+    get:
+      operationId: getDomainDnsHosting
+      summary: List hosting configurations
+      description: |
+        Retrieve all hosting configurations for the specified domain. Each configuration represents how a domain or subdomain serves content (e.g., redirect, reverse proxy).
+
+        Use the `subName` parameter to filter results to specific subdomains. Results are paginated — use the `$cursor` parameter to retrieve subsequent pages.
+      parameters:
+      - name: name
+        required: true
+        in: path
+        schema:
+          type: string
+        description: Domain name
+      - name: $cursor
+        required: false
+        in: query
+        schema:
+          type: string
+        description: Pagination cursor for retrieving the next page of results.
+      - name: subName
+        required: false
+        in: query
+        schema:
+          maxItems: 50
+          type: array
+          items:
+            type: string
+        description: Filter results by subdomain name(s).
+      responses:
+        '200':
+          description: List of hosting configurations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainHostingDetailsResponses'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - hosting
+    put:
+      operationId: putDomainDnsHosting
+      summary: Create or update hosting configuration
+      description: |
+        Set or update the hosting configuration for a domain or subdomain. This controls how the domain serves content — whether via redirect or reverse proxy.
+
+        Use the `subName` field in the request body to target a specific subdomain. If omitted, the configuration applies to the root domain.
+
+        All hosting configurations require an SSL certificate. After creating or updating a configuration, the `certificateStatus` will initially be `PENDING` while the certificate is provisioned. This typically completes within a few minutes.
+
+        Use `$preview=true` to validate the request and see the expected result without applying changes.
+      parameters:
+      - name: name
+        required: true
+        in: path
+        schema:
+          type: string
+        description: Domain name
+      - name: $preview
+        required: true
+        in: query
+        schema:
+          default: false
+          type: boolean
+        description: Preview mode — validate the request without executing changes.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DomainHostingUpdateRequestBody'
+      responses:
+        '200':
+          description: Hosting update operation created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainHostingUpdateOperationResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - hosting
+    delete:
+      operationId: deleteDomainDnsHosting
+      summary: Delete hosting configuration
+      description: |
+        Remove the hosting configuration for a domain or subdomain. This stops the domain from serving content through the configured hosting type and releases the associated SSL certificate.
+
+        Use the `subName` field in the request body to target a specific subdomain's configuration. If omitted, the root domain configuration is removed.
+
+        Use `$preview=true` to validate the request without applying changes.
+      parameters:
+      - name: name
+        required: true
+        in: path
+        schema:
+          type: string
+        description: Domain name
+      - name: $preview
+        required: true
+        in: query
+        schema:
+          default: false
+          type: boolean
+        description: Preview mode — validate the request without executing changes.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DomainHostingDeleteRequestBody'
+      responses:
+        '200':
+          description: Hosting delete operation created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainHostingDeleteOperationResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - hosting
   /suggestions/domains:
     get:
       operationId: getSuggestions
@@ -3435,6 +3656,120 @@ components:
       - '@type'
       - items
       - dnssec
+    DomainHostingType:
+      type: string
+      enum:
+      - REDIRECT_301
+      - REDIRECT_302
+      - REVERSE_PROXY
+    DomainHostingDetailsItemResponse:
+      type: object
+      description: Represents a single hosting configuration for a domain or subdomain.
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.DomainHostingDetails
+        type:
+          nullable: true
+          $ref: '#/components/schemas/DomainHostingType'
+        targetUrl:
+          type: string
+          nullable: true
+          description: The target URL for redirect or reverse proxy configurations.
+        subName:
+          type: string
+          description: The subdomain this configuration applies to. Empty string for root domain.
+        status:
+          type: string
+          enum:
+          - ACTIVE
+          - INACTIVE
+          - PENDING
+          description: Current status of the hosting configuration.
+        certificateStatus:
+          type: string
+          enum:
+          - ACTIVE
+          - INACTIVE
+          - PENDING
+          description: Status of the SSL certificate. Will be `PENDING` while the certificate is being provisioned.
+      required:
+      - '@type'
+      - type
+      - targetUrl
+      - status
+      - certificateStatus
+    DomainHostingDetailsResponses:
+      type: object
+      description: Paginated list of hosting configurations for a domain.
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.CursorList
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/DomainHostingDetailsItemResponse'
+        next:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/CursorListResponseNext'
+      required:
+      - '@type'
+      - items
+      - next
+    DomainHostingUpdateRequestBody:
+      type: object
+      description: Request body for creating or updating a hosting configuration.
+      properties:
+        subName:
+          type: string
+          description: The subdomain to configure. Omit or leave empty for the root domain.
+        targetUrl:
+          type: string
+          description: The target URL for redirect or reverse proxy configurations.
+        type:
+          $ref: '#/components/schemas/DomainHostingType'
+        $forceCompatibility:
+          type: boolean
+          default: false
+          description: Force the update even if it may conflict with existing DNS records.
+      required:
+      - type
+      - $forceCompatibility
+    DomainHostingUpdateOperationResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.DomainHostingOperationResult
+        operation:
+          $ref: '#/components/schemas/OperationCheckResponse'
+      required:
+      - '@type'
+      - operation
+    DomainHostingDeleteRequestBody:
+      type: object
+      description: Request body for deleting a hosting configuration.
+      properties:
+        subName:
+          type: string
+          description: The subdomain whose hosting configuration should be removed. Omit or leave empty for the root domain.
+    DomainHostingDeleteOperationResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.DomainHostingOperationResult
+        operation:
+          $ref: '#/components/schemas/OperationCheckResponse'
+      required:
+      - '@type'
+      - operation
     SuggestionsResponseItem:
       type: object
       properties:
