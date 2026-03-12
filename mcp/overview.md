@@ -14,6 +14,8 @@ The User API supports the full domain lifecycle:
 - **Search & Purchase Domains** — Find available domains, check pricing, and complete purchases
 - **Manage Your Portfolio** — View your domains, filter by status, track expirations
 - **Configure DNS** — Set up A, AAAA, CNAME, MX, TXT, NS, SRV, and CAA records
+- **Host Landing Pages** — Generate AI-powered landing pages, upload custom HTML, or set up redirects and reverse proxies
+- **Backorder Expiring Domains** — Browse expiring domains, create backorders, and auto-register when they drop
 - **Sell on Marketplace** — List domains for sale, manage offers, negotiate with buyers
 - **Communicate** — Contact domain sellers and manage conversations
 

@@ -618,15 +618,15 @@ List hosting/forwarding configurations.
 
 ### ud_dns_hosting_add
 
-Add hosting configuration (for-sale page, 301/302 redirect).
+Add hosting configuration (for-sale page, redirect, or reverse proxy).
 
 **Parameters:**
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `domain` | string | Yes | Domain name |
-| `type` | string | Yes | "LISTING_PAGE", "REDIRECT_301", or "REDIRECT_302" |
-| `targetUrl` | string | Conditional | Required for redirects |
+| `type` | string | Yes | "LISTING_PAGE", "REDIRECT_301", "REDIRECT_302", or "REVERSE_PROXY" |
+| `targetUrl` | string | Conditional | Required for REDIRECT_301, REDIRECT_302, and REVERSE_PROXY |
 | `subName` | string | No | Subdomain to configure |
 | `forceCompatibility` | boolean | No | Auto-configure nameservers if needed |
 
@@ -635,6 +635,7 @@ Add hosting configuration (for-sale page, 301/302 redirect).
 - "Set up a for-sale landing page for mybrand.io"
 - "Redirect mybrand.io to https://mynewsite.com with a 301"
 - "Add a 302 redirect from old.mybrand.io to mybrand.io/new"
+- "Set up a reverse proxy from mybrand.io to my web app"
 
 ### ud_dns_hosting_remove
 
@@ -653,6 +654,204 @@ Remove hosting/forwarding configuration.
 
 - "Remove the redirect from mybrand.io"
 - "Delete all hosting configurations"
+
+## AI Landing Pages
+
+### ud_domain_generate_lander
+
+Trigger AI-generated landing page creation for one or more domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | string[] | Yes | Array of domain names (1-50) |
+| `instructions` | string | No | Custom instructions to guide AI generation (e.g., tone, color scheme, content focus). Applied to all domains in the request. |
+
+**Example prompts:**
+
+- "Generate a landing page for mybrand.com"
+- "Create a landing page for mybrand.com with a blue color scheme and professional tone"
+- "Generate landing pages for mybrand.com and mybrand.io"
+
+### ud_domain_lander_status
+
+Check the status of AI landing page generation for one or more domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | string[] | Yes | Array of domain names (1-50) |
+
+**Example prompts:**
+
+- "Check the lander status for mybrand.com"
+- "Is my landing page ready?"
+
+{% admonition type="info" %}
+Possible statuses: `pending`, `generating`, `processing`, `hosted`, `failed`, or `none`.
+{% /admonition %}
+
+### ud_domain_remove_lander
+
+Remove AI-generated landing pages from one or more domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | string[] | Yes | Array of domain names (1-50) |
+
+**Example prompts:**
+
+- "Remove the landing page from mybrand.com"
+- "Delete AI landing pages from all my domains"
+
+### ud_domain_download_lander
+
+Download existing hosted lander content from one or more domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | string[] | Yes | Array of domain names (1-50) |
+
+**Example prompts:**
+
+- "Download the landing page from mybrand.com"
+- "Get the HTML content of my lander"
+
+{% admonition type="info" %}
+Single-page landers return raw HTML (`htmlContent`). Multi-file sites return a base64-encoded zip (`zipContent`).
+{% /admonition %}
+
+### ud_domain_upload_lander
+
+Upload custom landing page content to one or more domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | array | Yes | Array of domain objects with content (1-50) |
+| `domains[].name` | string | Yes | Domain name |
+| `domains[].htmlContent` | string | Conditional | Raw HTML for single-page landers |
+| `domains[].zipContent` | string | Conditional | Base64-encoded zip for multi-file sites |
+
+Each domain must have exactly one of `htmlContent` or `zipContent`. Existing lander content is replaced.
+
+**Example prompts:**
+
+- "Upload a custom landing page to mybrand.com"
+- "Replace my lander with custom HTML"
+
+## Backorders
+
+### ud_backorders_list
+
+List your domain backorders with optional filtering and pagination.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `status` | string[] | No | Filter by backorder status |
+| `query` | string | No | Search by domain name (partial match) |
+| `offset` | number | No | Pagination offset (default: 0) |
+| `limit` | number | No | Items per page (1-100, default: 20) |
+
+**Example prompts:**
+
+- "Show my backorders"
+- "List pending backorders"
+- "Search my backorders for coffee"
+
+### ud_backorder_create
+
+Create backorders for one or more expiring DNS domains.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `domains` | array | Yes | Array of domain objects to backorder |
+
+**Example prompts:**
+
+- "Backorder expiring-domain.com"
+- "Create a backorder for premium.net"
+
+{% admonition type="info" %}
+The system monitors the domain and automatically registers it when it drops. An Account Balance hold is placed when the backorder is created.
+{% /admonition %}
+
+### ud_backorder_cancel
+
+Cancel one or more pending domain backorders.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `backorderIds` | string[] | Yes | Array of backorder IDs to cancel |
+
+**Example prompts:**
+
+- "Cancel my backorder for expiring-domain.com"
+- "Cancel backorder ID abc123"
+
+{% admonition type="info" %}
+Refunds the Account Balance hold (minus non-refundable service fee) and removes the scheduled registration job.
+{% /admonition %}
+
+### ud_expireds_list
+
+Browse the expireds/pending-delete domain marketplace.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `query` | string | No | Search by domain name (exact match if contains dot) or label substring |
+| `status` | string | No | `"COMING_SOON"` (not yet dropped) or `"AVAILABLE_BACKORDER"` (already dropped) |
+| `tlds` | string[] | No | Filter by TLD extensions (e.g., ["com", "net"]) |
+| `sortBy` | string | No | Sort field (default: "deletionAt") |
+| `sortDirection` | string | No | `"ASC"` or `"DESC"` (default: "ASC") |
+| `lengthRange` | number[] | No | Filter by label length [min, max] (max=0 for no upper bound) |
+| `bidsRange` | number[] | No | Filter by backorder count [min, max] (max=0 for no upper bound) |
+| `watchlistRange` | number[] | No | Filter by watchlist count [min, max] (max=0 for no upper bound) |
+| `offset` | number | No | Pagination offset (default: 0) |
+| `limit` | number | No | Items to return (1-500, default: 50) |
+
+**Example prompts:**
+
+- "Show me expiring domains"
+- "Find expiring .com domains with short names"
+- "Browse domains available for backorder"
+- "Show me expiring domains with at least 5 backorders"
+
+## Session
+
+### ud_authenticated_url_get
+
+Generate a one-time authenticated URL that signs the user in and redirects to a specified page.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `path` | string | Yes | Page path to open in the browser (e.g., "/account/payments/card") |
+
+**Example prompts:**
+
+- "Give me a link to manage my account settings"
+- "Open my payment methods page"
+
+{% admonition type="info" %}
+The URL expires after 60 seconds and is single-use. Use this whenever the user needs to complete an action in the browser.
+{% /admonition %}
 
 ## Domain Operations
 

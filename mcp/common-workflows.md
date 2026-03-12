@@ -44,6 +44,26 @@ Once connected to your Unstoppable Domains account, your AI agent is ready to ta
 
 **Tools used:** `ud_domains_search` &rarr; `ud_cart_add_domain_listed` &rarr; `ud_cart_get` &rarr; `ud_cart_get_url`
 
+## Generate an AI Landing Page
+
+- "Generate a landing page for mybrand.com"
+- "Use a professional tone with blue colors"
+- "Check if it's ready yet"
+- "Download the landing page so I can edit it"
+- "Upload my custom version back"
+
+**Tools used:** `ud_domain_generate_lander` &rarr; `ud_domain_lander_status` &rarr; `ud_domain_download_lander` &rarr; `ud_domain_upload_lander`
+
+## Backorder an Expiring Domain
+
+- "Show me expiring .com domains"
+- "Find short domains that are dropping soon"
+- "Backorder premium.com"
+- "Show me my backorders"
+- "Cancel the backorder for premium.com"
+
+**Tools used:** `ud_expireds_list` &rarr; `ud_backorder_create` &rarr; `ud_backorders_list` &rarr; `ud_backorder_cancel`
+
 ## Negotiate with a Seller
 
 - "Contact the seller of example.io"
