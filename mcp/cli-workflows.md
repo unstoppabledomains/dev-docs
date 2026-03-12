@@ -154,7 +154,8 @@ ud marketplace leads open
 ud marketplace leads list
 
 # Send and read messages
-ud marketplace leads messages
+ud marketplace leads messages list
+ud marketplace leads messages send
 ```
 
 ## Generate an AI Landing Page

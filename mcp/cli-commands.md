@@ -237,6 +237,14 @@ Show lander generation status for one or more domains.
 ud domains hosting landers show <domains...>
 ```
 
+### ud domains hosting landers download
+
+Download landing page content from one or more domains.
+
+```bash
+ud domains hosting landers download <domains...>
+```
+
 ### ud domains hosting landers remove
 
 Remove an AI-generated landing page from one or more domains.
@@ -244,6 +252,64 @@ Remove an AI-generated landing page from one or more domains.
 ```bash
 ud domains hosting landers remove <domains...>
 ```
+
+## Backorders & Expireds
+
+### ud expireds list
+
+Browse the expireds/pending-delete domain marketplace.
+
+```bash
+ud expireds list
+```
+
+**Key flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--tlds <tlds>` | Filter by TLD extensions (comma-separated) |
+| `--status <status>` | `COMING_SOON` or `AVAILABLE_BACKORDER` |
+| `--sort-by <field>` | Sort field (default: `deletionAt`) |
+| `--sort-direction <dir>` | `ASC` or `DESC` |
+
+**Example:**
+
+```bash
+ud expireds list --tlds com,net --status AVAILABLE_BACKORDER
+ud expireds list --sort-by deletionAt --sort-direction ASC
+```
+
+### ud backorders create
+
+Create backorders for one or more expiring domains.
+
+```bash
+ud backorders create <domains...>
+```
+
+{% admonition type="info" %}
+The system monitors the domain and automatically registers it when it drops. An Account Balance hold is placed when the backorder is created.
+{% /admonition %}
+
+### ud backorders list
+
+List your domain backorders.
+
+```bash
+ud backorders list
+```
+
+### ud backorders cancel
+
+Cancel one or more pending backorders.
+
+```bash
+ud backorders cancel
+```
+
+{% admonition type="info" %}
+Refunds the Account Balance hold (minus non-refundable service fee) and removes the scheduled registration job.
+{% /admonition %}
 
 ## Cart & Checkout
 
