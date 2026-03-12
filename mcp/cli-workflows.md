@@ -154,7 +154,47 @@ ud marketplace leads open
 ud marketplace leads list
 
 # Send and read messages
-ud marketplace leads messages
+ud marketplace leads messages list
+ud marketplace leads messages send
+```
+
+## Generate an AI Landing Page
+
+Create, check, and manage AI-generated landing pages for your domains.
+
+```bash
+# Generate a landing page
+ud domains hosting landers generate mybrand.com
+
+# Check the generation status
+ud domains hosting landers show mybrand.com
+
+# Download the generated page
+ud domains hosting landers download mybrand.com
+
+# Remove the landing page
+ud domains hosting landers remove mybrand.com
+```
+
+## Backorder an Expiring Domain
+
+Browse expiring domains and set up automatic registration when they drop.
+
+```bash
+# Browse expiring domains
+ud expireds list
+
+# Filter by TLD and status
+ud expireds list --tlds com,net --status AVAILABLE_BACKORDER
+
+# Create a backorder
+ud backorders create premium.com
+
+# Check your backorders
+ud backorders list
+
+# Cancel a backorder
+ud backorders cancel --backorder-id abc123
 ```
 
 ## Switch Between Environments
