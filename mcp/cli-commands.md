@@ -255,12 +255,12 @@ ud domains hosting landers remove <domains...>
 
 ## Backorders & Expireds
 
-### ud expireds list
+### ud marketplace expiring list
 
 Browse the expireds/pending-delete domain marketplace.
 
 ```bash
-ud expireds list
+ud marketplace expiring list
 ```
 
 **Key flags:**
@@ -271,40 +271,57 @@ ud expireds list
 | `--status <status>` | `COMING_SOON` or `AVAILABLE_BACKORDER` |
 | `--sort-by <field>` | Sort field (default: `deletionAt`) |
 | `--sort-direction <dir>` | `ASC` or `DESC` |
+| `--query <term>` | Search by domain name or label substring |
+| `--length-range <min,max>` | Filter by label length range |
 
 **Example:**
 
 ```bash
-ud expireds list --tlds com,net --status AVAILABLE_BACKORDER
-ud expireds list --sort-by deletionAt --sort-direction ASC
+ud marketplace expiring list --tlds com,net --status AVAILABLE_BACKORDER
+ud marketplace expiring list --sort-by deletionAt --sort-direction ASC
 ```
 
-### ud backorders create
+### ud domains backorders create
 
 Create backorders for one or more expiring domains.
 
 ```bash
-ud backorders create <domains...>
+ud domains backorders create --name <domain> --contact-id <id> --available-after-timestamp <ts>
 ```
+
+**Required flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--name <domain>` | Domain name to backorder |
+| `--contact-id <id>` | ICANN contact ID for domain registration |
+| `--available-after-timestamp <ts>` | Unix timestamp (ms) when the domain becomes available |
 
 {% admonition type="info" %}
 The system monitors the domain and automatically registers it when it drops. An Account Balance hold is placed when the backorder is created.
 {% /admonition %}
 
-### ud backorders list
+### ud domains backorders list
 
 List your domain backorders.
 
 ```bash
-ud backorders list
+ud domains backorders list
 ```
 
-### ud backorders cancel
+**Key flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--status <status>` | Filter by backorder status (e.g., `pending`, `in-progress`, `completed-success`) |
+| `--query <domain>` | Search by domain name (partial match) |
+
+### ud domains backorders cancel
 
 Cancel one or more pending backorders.
 
 ```bash
-ud backorders cancel
+ud domains backorders cancel --backorder-ids <id1,id2,...>
 ```
 
 {% admonition type="info" %}
