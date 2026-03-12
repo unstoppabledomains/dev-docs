@@ -182,19 +182,19 @@ Browse expiring domains and set up automatic registration when they drop.
 
 ```bash
 # Browse expiring domains
-ud expireds list
+ud marketplace expiring list
 
 # Filter by TLD and status
-ud expireds list --tlds com,net --status AVAILABLE_BACKORDER
+ud marketplace expiring list --tlds com,net --status AVAILABLE_BACKORDER
 
-# Create a backorder
-ud backorders create premium.com
+# Create a backorder (use timestamp from expiring list output)
+ud domains backorders create --name premium.com --contact-id <id> --available-after-timestamp <ts>
 
 # Check your backorders
-ud backorders list
+ud domains backorders list
 
 # Cancel a backorder
-ud backorders cancel --backorder-id abc123
+ud domains backorders cancel --backorder-ids 12345
 ```
 
 ## Switch Between Environments
