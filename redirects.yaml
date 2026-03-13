@@ -20,6 +20,9 @@
 '/domain-distribution-and-management/overview':
   to: '/apis/overview'
   type: 301
+'/domain-distribution-and-management/reseller/implementation-guide':
+  to: '/apis/reseller/implementation-guide'
+  type: 301
 '/mcp/*':
   to: '/user-api/*'
   type: 301

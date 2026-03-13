@@ -24,6 +24,7 @@ apis:
     openapi:
       feedback:
         hide: true
+      layout: stacked
       hideDownloadButtons: true
       corsProxyUrl: https://cors.redoc.ly
       showConsole: true
@@ -41,6 +42,7 @@ apis:
     openapi:
       feedback:
         hide: true
+      layout: stacked
       hideDownloadButtons: true
       corsProxyUrl: https://cors.redoc.ly
       showConsole: true

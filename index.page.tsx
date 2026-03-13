@@ -70,7 +70,7 @@ export default function Page() {
                 <div className="tile-image-container">
                   <img src={`/static/images/sell-domains-${imageSuffix}.png`} alt="Sell domains" className="tile-image" />
                 </div>
-                <h2 className="tile-title">Sell Domains in your App</h2>
+                <h2 className="tile-title">Reseller & Affiliate API</h2>
               </div>
               <div className="tile-content">
                 Build domain search, purchase, and management directly into your platform with our Reseller API.

@@ -1,2 +1,36 @@
-- href: /apis/overview
-  label: API Reference
+- label: "Overview"
+  page: apis/overview.md
+  separatorLine: true
+- group: User API
+  items:
+    - label: Quick Start
+      page: user-api/overview.md
+    - group: MCP Server
+      items:
+        - label: Quick Start
+          page: user-api/mcp-server.md
+        - label: Common Workflows
+          page: user-api/common-workflows.md
+        - label: Available Tools
+          page: user-api/available-tools.md
+        - label: Troubleshooting
+          page: user-api/troubleshooting.md
+    - group: CLI
+      items:
+        - label: Quick Start
+          page: user-api/cli.md
+        - label: Common Workflows
+          page: user-api/cli-workflows.md
+        - label: Command Reference
+          page: user-api/cli-commands.md
+    - group: API Reference
+      page: apis/user-api/openapi.json
+  separatorLine: true
+- group: Reseller API
+  items:
+    - label: Quick Start
+      page: apis/reseller/quick-start.md
+    - label: Implementation Guide
+      page: apis/reseller/implementation-guide.md
+    - group: API Reference
+      page: apis/reseller/openapi.yaml

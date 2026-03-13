@@ -13,53 +13,9 @@ info:
     - **DNS Management**: Create, update and delete DNS records for your domains
     - **Domain Lifecycle**: Manage renewals, transfers, contacts, and domain flags through a simple API interface
 
-    ## Managed Solution
-    The API handles domain registration and DNS management through Unstoppable Domains' registrar infrastructure. Resellers interact with a single RESTful API to manage the full domain lifecycle without needing direct registrar or registry integrations.
+    For access, authentication, environments, and your first request, start with the [Quick Start](/apis/reseller/quick-start).
 
-    Resellers are empowered to manage domains on behalf of their users, including registration, DNS configuration, renewals, and transfer operations.
-
-    ## Payments
-    The API keeps track of a running balance of charges and Unstoppable Domains will periodically invoice Resellers to settle that balance. This empowers Resellers to build payment processing in a way that works best for them.
-
-
-    ## Contacts
-    ICANN-accredited domain registrations require contact information for various roles (owner, admin, tech, billing). The API provides a dedicated Contacts system for creating and managing these contacts, which can then be associated with domains.
-
-    Contacts are automatically sent a verification email upon creation. Contacts can be used for domain registration immediately, but domains associated with unverified contacts may become unmanageable after a certain period.
-
-    # Important Concepts
-
-    ## Operations
-    All interactions with the API that initiate changes will create an Operation for tracking that change.
-    Operations can complete immediately or run in the background depending on the operation type and current system conditions.
-
-    Only one operation can be active on a domain at a time. Attempting a mutating action while another operation is in progress will result in a `409 Conflict` response. Use `GET /domains/{name}/pending-operations` to check for active operations before initiating changes.
-
-    Operations include dependencies that represent the smaller units of work associated with the overall operation. These dependencies can also be tracked through the API and each have their own status and metadata.
-
-    Your integration should properly handle and anticipate all of the following possible statuses for Operations and their dependencies:
-    - `QUEUED` : The Operation has not started processing yet, but should be started shortly
-    - `PROCESSING` : The Operation has started and is being processed
-    - `COMPLETED` : The Operation has finished processing successfully
-    - `FAILED` : The Operation has finished processing and has either fully or partially failed
-    - `CANCELLED` : The Operation has been cancelled, usually due to a failure with a sibling dependency
-
-    ## Domain Flags
-    Domain flags control various aspects of domain behavior and security. Each flag can be independently enabled or disabled:
-    - `DNS_RESOLUTION`: Controls whether the domain resolves via DNS
-    - `DNS_TRANSFER_OUT`: Controls whether the domain can be transferred to another registrar
-    - `DNS_DELETE`: Controls whether the domain can be deleted
-    - `DNS_UPDATE`: Controls whether DNS records can be modified
-    - `DNS_RENEW`: Controls whether the domain can be renewed
-    - `DNS_WHOIS_PROXY`: Controls whether WHOIS privacy protection is enabled
-
-    Flags may also have a `readonly` state with reasons indicating why a flag cannot be changed.
-
-    ## Preview Mode
-    Many mutating endpoints support a `$preview` query parameter. When set to `true`, the API will validate the request and return the expected Operation result without actually executing the changes. This is useful for validating requests and getting price quotes before committing.
-
-    # Get Access
-    Visit the [Reseller Dashboard](https://unstoppabledomains.com/reseller-dashboard) to fill out an application form and get API access.
+    For implementation guidance on operations, flags, registration flows, contact management, DNS management, webhooks, and lifecycle operations, see the [Implementation Guide](/apis/reseller/implementation-guide).
 servers:
 - url: https://api.unstoppabledomains.com/partner/v3
   description: Production
