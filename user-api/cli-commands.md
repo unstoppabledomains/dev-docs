@@ -100,13 +100,12 @@ ud domains tags add <domains...> --tag <tag>
 ud domains tags remove <domains...> --tag <tag>
 ```
 
-### ud domains flags
+### ud domains flags update
 
-Manage domain flags.
+Update domain flags.
 
 ```bash
-ud domains flags set <domains...>
-ud domains flags unset <domains...>
+ud domains flags update <domains...>
 ```
 
 ## DNS
@@ -156,6 +155,18 @@ Remove a DNS record.
 ud domains dns records remove <domain>
 ```
 
+### ud domains dns records remove-all
+
+Remove ALL user-created DNS records from one or more domains.
+
+```bash
+ud domains dns records remove-all <domains...>
+```
+
+{% admonition type="warning" %}
+This is destructive and cannot be undone. All user-created DNS records will be permanently deleted.
+{% /admonition %}
+
 ### ud domains dns nameservers show
 
 Display current nameservers.
@@ -186,21 +197,136 @@ Using custom nameservers disables DNS record management through the CLI and API.
 
 ## Hosting
 
-### ud domains hosting redirect
+### ud domains hosting redirects show
 
-Configure a domain redirect.
-
-```bash
-ud domains hosting redirect <domain>
-```
-
-### ud domains hosting landing-page
-
-Generate an AI-powered landing page for a domain.
+Show redirect configurations for a domain.
 
 ```bash
-ud domains hosting landing-page <domain>
+ud domains hosting redirects show <domain>
 ```
+
+### ud domains hosting redirects add
+
+Add a redirect configuration.
+
+```bash
+ud domains hosting redirects add
+```
+
+### ud domains hosting redirects remove
+
+Remove a redirect configuration.
+
+```bash
+ud domains hosting redirects remove
+```
+
+### ud domains hosting landers generate
+
+Generate an AI-powered landing page for one or more domains.
+
+```bash
+ud domains hosting landers generate <domains...>
+```
+
+### ud domains hosting landers show
+
+Show lander generation status for one or more domains.
+
+```bash
+ud domains hosting landers show <domains...>
+```
+
+### ud domains hosting landers download
+
+Download landing page content from one or more domains.
+
+```bash
+ud domains hosting landers download <domains...>
+```
+
+### ud domains hosting landers remove
+
+Remove an AI-generated landing page from one or more domains.
+
+```bash
+ud domains hosting landers remove <domains...>
+```
+
+## Backorders & Expireds
+
+### ud marketplace expiring list
+
+Browse the expireds/pending-delete domain marketplace.
+
+```bash
+ud marketplace expiring list
+```
+
+**Key flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--tlds <tlds>` | Filter by TLD extensions (comma-separated) |
+| `--status <status>` | `COMING_SOON` or `AVAILABLE_BACKORDER` |
+| `--sort-by <field>` | Sort field (default: `deletionAt`) |
+| `--sort-direction <dir>` | `ASC` or `DESC` |
+| `--query <term>` | Search by domain name or label substring |
+| `--length-range <min,max>` | Filter by label length range |
+
+**Example:**
+
+```bash
+ud marketplace expiring list --tlds com,net --status AVAILABLE_BACKORDER
+ud marketplace expiring list --sort-by deletionAt --sort-direction ASC
+```
+
+### ud domains backorders create
+
+Create backorders for one or more expiring domains.
+
+```bash
+ud domains backorders create --name <domain> --contact-id <id> --available-after-timestamp <ts>
+```
+
+**Required flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--name <domain>` | Domain name to backorder |
+| `--contact-id <id>` | ICANN contact ID for domain registration |
+| `--available-after-timestamp <ts>` | Unix timestamp (ms) when the domain becomes available |
+
+{% admonition type="info" %}
+The system monitors the domain and automatically registers it when it drops. An Account Balance hold is placed when the backorder is created.
+{% /admonition %}
+
+### ud domains backorders list
+
+List your domain backorders.
+
+```bash
+ud domains backorders list
+```
+
+**Key flags:**
+
+| Flag | Description |
+|------|-------------|
+| `--status <status>` | Filter by backorder status (e.g., `pending`, `in-progress`, `completed-success`) |
+| `--query <domain>` | Search by domain name (partial match) |
+
+### ud domains backorders cancel
+
+Cancel one or more pending backorders.
+
+```bash
+ud domains backorders cancel --backorder-ids <id1,id2,...>
+```
+
+{% admonition type="info" %}
+Refunds the Account Balance hold (minus non-refundable service fee) and removes the scheduled registration job.
+{% /admonition %}
 
 ## Cart & Checkout
 
@@ -214,9 +340,10 @@ ud cart list
 
 ### ud cart add
 
-Add domains to your cart. The subcommand specifies the source:
+Add domains to your cart. Without a subcommand, `ud cart add` auto-detects the source type:
 
 ```bash
+ud cart add <domains...>                # Smart add — auto-detects source
 ud cart add registration <domains...>   # New domain registration
 ud cart add renewal <domains...>        # Domain renewal
 ud cart add listed <domains...>         # Marketplace listing
@@ -227,8 +354,17 @@ ud cart add sedo <domains...>           # Sedo listing
 **Example:**
 
 ```bash
-ud cart add registration mybusiness.com
+ud cart add mybusiness.com mybusiness.io  # Auto-detect
+ud cart add registration mybusiness.com   # Explicit type
 ud cart add listed premium.io
+```
+
+### ud cart url
+
+Get a checkout URL to complete the purchase in a browser.
+
+```bash
+ud cart url
 ```
 
 ### ud cart remove
@@ -313,12 +449,20 @@ Open a conversation lead.
 ud marketplace leads open
 ```
 
-### ud marketplace leads messages
+### ud marketplace leads messages list
 
-View and send messages in a lead conversation.
+List messages in a lead conversation.
 
 ```bash
-ud marketplace leads messages
+ud marketplace leads messages list
+```
+
+### ud marketplace leads messages send
+
+Send a message in a lead conversation.
+
+```bash
+ud marketplace leads messages send
 ```
 
 ## Contacts
@@ -434,9 +578,17 @@ ud auth logout
 
 ## Utilities
 
+### ud update
+
+Update the CLI to the latest version.
+
+```bash
+ud update
+```
+
 ### ud update check
 
-Check for CLI updates.
+Check for available CLI updates without installing.
 
 ```bash
 ud update check
