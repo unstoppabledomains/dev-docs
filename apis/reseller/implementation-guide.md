@@ -1,42 +1,29 @@
 ---
-title: Reseller API Implementation Guide | Unstoppable Domains Developer Portal
-description: How to integrate the Reseller API for domain search, registration, DNS management, and lifecycle operations
+title: Implementation Guide | Unstoppable Domains Developer Portal
+description: Implementation details for domain search, registration, contact management, DNS management, webhooks, and lifecycle operations in the Reseller API
 ---
 
-# Reseller API Implementation Guide
+# Implementation Guide
+
+Use this guide after you have API access and have successfully made your first authenticated request. For account setup, environments, and initial authentication, start with the [Quick Start](/apis/reseller/quick-start).
 
 The Reseller API provides domain search, registration, DNS management, and lifecycle operations through a single RESTful API. It is designed for resellers who want to offer traditional DNS domain registration and management to their end users.
-
-To get started, visit the [Reseller Dashboard](https://unstoppabledomains.com/reseller-dashboard) to create an account and obtain your API key.
-
-The API is available in two environments:
-
-| Environment | Base URL |
-|-------------|----------|
-| Production  | `https://api.unstoppabledomains.com/partner/v3` |
-| Sandbox     | `https://api.ud-sandbox.com/partner/v3` |
-
-Use the sandbox environment for development and testing. There is no charge for sandbox usage. For complete endpoint details, see the [API Reference](/apis/reseller/openapi).
 
 ## Your Responsibilities as a Reseller
 
 The Reseller API handles domain operations, but several responsibilities fall on you as the integrating platform:
 
-- **UI implementation.** You are responsible for building the user-facing interface for domain search, checkout, DNS records management, contact management, and transfer out workflows. A [demo UI](https://github.com/unstoppabledomains/reseller-go-sdk-demo) is available as a reference implementation.
-
 - **Domain-to-user mapping.** The API does not track which end user owns which domain. You must maintain this mapping in your own system so that you can associate domains with the correct user accounts.
 
-- **Contact management.** You are responsible for creating ICANN contacts with accurate contact information and associating them with domains during registration. Unstoppable Domains handles contact verification by sending a verification email to the contact's email address. You decide how to map contacts to your users -- whether each user gets their own contact, or multiple users share a contact, or some other arrangement.
+- **Contact management.** You are responsible for creating and verifying ICANN contacts, then associating them with domains during registration. You decide how to map contacts to users -- whether each user gets their own contact, or multiple users share a contact, or some other arrangement.
 
-- **Payment processing.** Unstoppable Domains keeps a running balance against your reseller account and invoices you periodically. You are responsible for building your own checkout and billing experience for end users and collecting payment from them.
+- **Payment processing.** Unstoppable Domains keeps a running balance against your API key and invoices you periodically. You are responsible for building your own checkout and billing experience for end users and collecting payment from them.
 
-- **Renewal management.** The API provides renewal eligibility and pricing information, but you are responsible for monitoring domain expiration dates, scheduling renewal execution, and collecting payment for renewals from your users. For domains not set to auto-renew, we recommend sending email reminders 30, 7, and 1 day before expiration to avoid letting domains expire.
-
-- **SSL certificates.** You are responsible for provisioning and managing SSL certificates for your users' domains.
+- **Renewal tracking.** The API provides renewal eligibility and pricing information, but you are responsible for monitoring domain expiration dates and initiating renewals on time. Build reminders and automation into your platform to avoid letting domains expire.
 
 - **DNS configuration.** You can set up DNS records on behalf of your users or expose DNS management directly in your UI. Either way, it is your responsibility to ensure domains are configured correctly for your users.
 
-## Core Concepts
+## Important Concepts
 
 ### Operations
 
@@ -45,15 +32,13 @@ Every mutating API call (registration, DNS changes, renewals, etc.) returns an *
 An Operation progresses through the following statuses:
 
 ```
-QUEUED → PROCESSING → COMPLETED | FAILED | CANCELLED
+QUEUED -> PROCESSING -> COMPLETED | FAILED | CANCELLED
 ```
 
 Two additional statuses exist:
 
 - **PREVIEW** -- Returned when using preview mode (`$preview=true`). The operation was not executed.
 - **AWAITING_UPDATES** -- The operation requires additional input or action before it can proceed.
-
-Only one operation can be active on a domain at a time. If you attempt a mutating action while another operation is in progress, the API will return a `409 Conflict`. Use `GET /domains/{name}/pending-operations` to check for active operations before initiating changes.
 
 Each Operation contains **dependencies**, which are smaller units of work that make up the overall operation. Each dependency has its own status, so you can track granular progress.
 
@@ -105,40 +90,20 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=true" \
 
 Domain flags control what actions are permitted on a domain. There are six flags:
 
-| Flag | EPP Status | Description |
-|------|------------|-------------|
-| `DNS_RESOLUTION` | `clientHold` | Controls whether the domain resolves via DNS |
-| `DNS_TRANSFER_OUT` | `clientTransferProhibited` | Controls whether the domain can be transferred to another registrar |
-| `DNS_DELETE` | `clientDeleteProhibited` | Controls whether the domain can be deleted |
-| `DNS_UPDATE` | `clientUpdateProhibited` | Controls whether DNS records can be modified |
-| `DNS_RENEW` | `clientRenewProhibited` | Controls whether the domain can be renewed |
-| `DNS_WHOIS_PROXY` | -- | Controls whether WHOIS privacy protection is enabled |
+| Flag | Description |
+|------|-------------|
+| `DNS_RESOLUTION` | Controls whether the domain resolves via DNS |
+| `DNS_TRANSFER_OUT` | Controls whether the domain can be transferred to another registrar |
+| `DNS_DELETE` | Controls whether the domain can be deleted |
+| `DNS_UPDATE` | Controls whether DNS records can be modified |
+| `DNS_RENEW` | Controls whether the domain can be renewed |
+| `DNS_WHOIS_PROXY` | Controls whether WHOIS privacy protection is enabled |
 
 Some flags may be read-only, meaning you cannot change them. When a flag is read-only, the API returns a reason code explaining why:
 
 - **ADMIN** -- The flag is locked by an administrator.
 - **HOSTING** -- The flag is controlled by the hosting configuration.
 - **DNS_PROVIDER** -- The flag is controlled by the DNS provider.
-
-## Getting Started
-
-### Prerequisites
-
-1. Create an account and apply on the [Reseller Dashboard](https://unstoppabledomains.com/reseller-dashboard).
-2. Wait for our team to approve your application.
-3. Obtain your API key from the dashboard.
-4. All requests require a Bearer token in the `Authorization` header.
-
-### Your First Request
-
-Search for domain availability using the sandbox environment:
-
-```bash
-curl "https://api.ud-sandbox.com/partner/v3/domains?query=example.com&ending=com&\$expand=registration" \
-  -H "Authorization: Bearer YOUR_API_KEY"
-```
-
-The `$expand=registration` parameter includes registration availability and pricing information in the response. If the request succeeds, you are authenticated and ready to integrate.
 
 ## Search and Registration Flow
 
@@ -155,6 +120,8 @@ curl "https://api.ud-sandbox.com/partner/v3/domains?query=example.com&ending=com
 
 The response includes availability status and registration information for each matching domain.
 
+Response times vary by TLD and registry, so design your UI accordingly. In practice, `.com` is consistently very fast, while Identity Digital TLDs in particular often take over 1 second to respond.
+
 ### Step 2: Check Pricing
 
 Get detailed pricing for a specific domain:
@@ -168,7 +135,7 @@ This returns the registration price, renewal price, and any applicable fees.
 
 ### Step 3: Create a Contact
 
-Before registering a domain, you need an ICANN contact. Create one with the required fields:
+Before registering a domain, you need a verified ICANN contact. Create one with the required fields:
 
 ```bash
 curl -X POST "https://api.ud-sandbox.com/partner/v3/contacts" \
@@ -190,11 +157,11 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/contacts" \
   }'
 ```
 
-A verification email will be sent to the contact's email address. The contact can be used in domain registrations immediately, but domains associated with unverified contacts may become unmanageable after a certain period. See the [Contact Management](#contact-management) section for details on verification statuses.
+The contact must verify their email address before the contact can be used in domain registrations. See the [Contact Management](#contact-management) section for details on verification statuses.
 
 ### Step 4: Register the Domain
 
-With a contact created, register the domain. Use `$preview=true` first to validate and get a price quote, then switch to `$preview=false` to execute:
+With a verified contact, register the domain. Use `$preview=true` first to validate and get a price quote, then switch to `$preview=false` to execute:
 
 ```bash
 curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
@@ -203,7 +170,7 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "SELF",
+      "type": "MANAGED",
       "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
     },
     "dns": {
@@ -240,7 +207,30 @@ Poll at a reasonable interval (every 2-5 seconds) and implement a timeout. For p
 
 ### Using Preview Mode for Price Quotes
 
-Before committing to a registration, run the same request with `$preview=true` instead of `$preview=false`. The response includes the pricing breakdown and validates all fields without actually registering the domain. See [Preview Mode](#preview-mode) for details.
+Before committing to a registration, run the same request with `$preview=true`:
+
+```bash
+curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=true" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "example.com",
+    "owner": {
+      "type": "MANAGED",
+      "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+    },
+    "dns": {
+      "period": 1,
+      "contacts": {
+        "admin": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
+        "tech": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
+        "billing": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      }
+    }
+  }'
+```
+
+The response includes the pricing breakdown and validates all fields without actually registering the domain.
 
 ## Contact Management
 
@@ -266,19 +256,13 @@ The `organization` field is optional and should be included when registering dom
 
 ### Email Verification
 
-Contacts can be used in domain registrations immediately without waiting for verification. However, if a contact remains unverified past a deadline, their status becomes `SUSPENDED`, which can lead to domain suspension.
-
-The verification flow works as follows:
-
-1. **During registration** -- New contacts are created with `UNVERIFIED` status. Existing registrant contacts are marked as `PENDING` for verification. Registration proceeds immediately.
-2. **After registration** -- A background job picks up `PENDING` contacts, sends a verification email with a deadline link, and marks them as `REQUESTED`.
-3. **Enforcement** -- If the contact does not verify by the deadline, they are marked `SUSPENDED`, which can lead to domain suspension.
+New contacts must verify their email address before they can be used in domain registrations. The verification status progresses through these states:
 
 ```
-UNVERIFIED → PENDING → REQUESTED → VERIFIED
+UNVERIFIED -> REQUESTED -> PENDING -> VERIFIED
 ```
 
-A contact can also reach `FAILED` or `SUSPENDED` status if verification fails or the deadline passes.
+A contact can also reach `FAILED` or `SUSPENDED` status if verification fails or is revoked. Only contacts with `VERIFIED` status can be associated with domain registrations.
 
 ### Contact Roles
 
@@ -292,7 +276,7 @@ Domains have four contact roles:
 Contacts are assigned during registration. You can update contacts after registration using:
 
 ```bash
-curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts?\$preview=false" \
+curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -376,9 +360,7 @@ curl -X DELETE "https://api.ud-sandbox.com/partner/v3/domains/example.com/dns/re
 
 ### Nameservers
 
-By default, domains use Unstoppable Domains-managed nameservers, powered by Google Cloud DNS.
-
-You can set custom nameservers if needed. You must provide between 2 and 12 nameservers:
+By default, domains use Unstoppable Domains-managed nameservers. You can set custom nameservers if needed:
 
 ```bash
 curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/example.com/dns/nameservers" \
@@ -392,12 +374,16 @@ curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/example.com/dns/names
   }'
 ```
 
-To revert to UD-managed nameservers:
+You must provide between 2 and 12 nameservers. To revert to UD-managed nameservers:
 
 ```bash
 curl -X DELETE "https://api.ud-sandbox.com/partner/v3/domains/example.com/dns/nameservers" \
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
+
+### Batch Updates
+
+The `PATCH /domains/{name}` endpoint lets you modify nameservers, DNSSEC settings, contacts, flags, and DNS records in a single request. This is efficient when you need to make multiple changes at once and want to avoid multiple round trips.
 
 ## Domain Lifecycle
 
@@ -413,7 +399,7 @@ curl "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals" \
 Renew the domain by specifying the renewal period in years:
 
 ```bash
-curl -X POST "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals?\$preview=false" \
+curl -X POST "https://api.ud-sandbox.com/partner/v3/domains/example.com/renewals" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -448,7 +434,7 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "SELF",
+      "type": "MANAGED",
       "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
     },
     "dns": {
@@ -474,7 +460,7 @@ curl "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags" \
 Update flags:
 
 ```bash
-curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags?\$preview=false" \
+curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/example.com/flags" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -596,7 +582,6 @@ When a request fails, the API returns a JSON error response with a status code a
 | `403` | Permission error -- the API key does not have access to this resource |
 | `404` | Not found -- the requested domain, contact, or operation does not exist |
 | `409` | Conflict -- the action conflicts with the current state (e.g., the domain is already registered) |
-| `500` | Internal server error -- retry the request after a short delay |
 
 ### Partial Failures
 

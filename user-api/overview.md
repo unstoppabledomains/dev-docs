@@ -19,7 +19,7 @@ The User API supports the full domain lifecycle:
 - **Sell on Marketplace** — List domains for sale, manage offers, negotiate with buyers
 - **Communicate** — Contact domain sellers and manage conversations
 
-For a full list of operations, see the [API Reference](/apis/mcp/openapi).
+For a full list of operations, see the [API Reference](/apis/user-api/openapi).
 
 ## Authentication
 

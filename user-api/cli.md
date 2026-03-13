@@ -5,7 +5,7 @@ description: Install and use the Unstoppable Domains CLI to search, register, an
 
 # CLI
 
-The Unstoppable Domains CLI (`ud`) gives you command-line access to the [User API](/mcp/overview). Search for domains, manage DNS, interact with the marketplace, and complete purchases — all from your terminal.
+The Unstoppable Domains CLI (`ud`) gives you command-line access to the [User API](/user-api/overview). Search for domains, manage DNS, interact with the marketplace, and complete purchases — all from your terminal.
 
 ## Installation
 
@@ -223,4 +223,4 @@ ud completion
 
 - [Command Reference](cli-commands) — Full list of all commands, flags, and examples
 - [Common Workflows](cli-workflows) — Step-by-step guides for common tasks
-- [API Reference](/apis/mcp/openapi) — The underlying REST API
+- [API Reference](/apis/user-api/openapi) — The underlying REST API

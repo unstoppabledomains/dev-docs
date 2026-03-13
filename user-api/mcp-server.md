@@ -5,7 +5,7 @@ description: The Unstoppable Domains MCP server enables you to search, purchase,
 
 # MCP Server
 
-The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/mcp/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
+The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/user-api/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
 
 ## Quick Start
 
@@ -69,6 +69,10 @@ Claude supports MCP connectors on both the desktop app and [claude.ai](https://c
 
 To use the connector in a conversation, click the **"+"** button in the compose area, select **"Connectors"**, and toggle on Unstoppable Domains.
 
+{% admonition type="info" %}
+Some apps, including Claude, may prompt you to approve every MCP action depending on the permissions configured for the connector. If you want Claude to operate more autonomously, open Claude's **MCP/Connections** settings, click **Configure** next to **Unstoppable Domains**, and allow more flexible permissions. This is more convenient, but it is also riskier because Claude can take actions with less manual approval.
+{% /admonition %}
+
 #### For Free Plans (Desktop App Only)
 
 Free users can connect via the JSON configuration file:
@@ -114,6 +118,10 @@ Then authenticate inside Claude Code:
 2. Run `/mcp` to check the server status
 3. Follow the browser-based OAuth flow to sign in with your Unstoppable Domains account
 4. Once authenticated, all Unstoppable Domains tools are available in your session
+
+{% admonition type="info" %}
+If Claude Code prompts you to approve each MCP action, you can make it more autonomous with the `/permissions` command. More flexible permissions reduce confirmation prompts, but they are riskier because Claude Code can take actions with less manual approval.
+{% /admonition %}
 
 {% admonition type="info" %}
 By default this adds the server to your local (per-project) configuration. Add `--scope user` to make it available across all projects:
@@ -181,4 +189,4 @@ API keys grant full access to all tools. Use OAuth for scoped access.
 | Authentication | `Authorization: Bearer <token>` |
 | Protocol | MCP (Model Context Protocol) over HTTP |
 
-For the full interactive API reference, see the [MCP API Reference](/apis/mcp/openapi).
+For the full interactive API reference, see the [User API Reference](/apis/user-api/openapi).
