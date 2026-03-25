@@ -125,13 +125,14 @@ paths:
           items:
             $ref: '#/components/schemas/DomainExpandField'
       - name: ending
-        required: true
+        required: false
         in: query
         schema:
           default: []
           type: array
           items:
             type: string
+        description: TLD or domain endings to combine with unqualified query labels (e.g. `com`, `net`). Required when any `query` value is an unqualified label.
       - name: query
         required: true
         in: query
@@ -140,6 +141,7 @@ paths:
           type: array
           items:
             type: string
+        description: Domain names or labels to search. Fully qualified names (e.g. `example.com`) are looked up directly. Unqualified labels (e.g. `example`) are combined with each `ending` value to produce domain names.
       responses:
         '200':
           description: List of domains matching search query
@@ -175,9 +177,14 @@ paths:
       - domain-search
       summary: Lookup multiple domains
       description: |
-        Get domain availability and details for multiple domains using the query string search options. Optionally, use the `$expand` query parameter to include additional data in the response (e.g. `?$expand=registration&$expand=flags`).
+        Get domain availability and details for multiple domains. Optionally, use the `$expand` query parameter to include additional data in the response (e.g. `?$expand=registration&$expand=flags`).
 
         If a domain is available for registration it will have an `availability.status` of `AVAILABLE` and will include an `availability.price` object.
+
+        **Search constraints:**
+        - Each `query` value must be a fully qualified domain name (e.g. `example.com`), OR at least one `ending` parameter must be provided.
+        - The total number of domains resolved (queries × endings) must not exceed **50**.
+        - If a `query` value already contains a valid TLD (e.g. `example.com`), it is looked up directly and is not combined with `ending` values.
     post:
       operationId: registerDomain
       parameters:
