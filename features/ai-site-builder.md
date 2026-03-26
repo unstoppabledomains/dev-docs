@@ -416,7 +416,6 @@ If your promo credits and account balance fully cover the purchase, no card paym
 | Image file size | 1.5 MB each |
 | Supported image formats | PNG, JPEG, JPG, WebP, GIF |
 | Conversation history | ~50 back-and-forth turns retained |
-| Auto-publish window | 30 days after setting up |
 
 ---
 
