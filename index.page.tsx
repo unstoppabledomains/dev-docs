@@ -127,6 +127,38 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="tile-header-section">
+          <h2 className="margin-top-bottom-30 tile-header">
+            <strong> AI Agents </strong>
+          </h2>
+        </section>
+
+        <section className="tiles-section">
+          <div className="tiles-container tiles-container-single padding-top-bottom-20">
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <svg className="tile-image" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="5" width="20" height="16" rx="5" fill="none" stroke="currentColor" strokeWidth="2" />
+                    <line x1="12" y1="5" x2="12" y2="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    <circle cx="12" cy="1" r="1" fill="currentColor" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M6 11c1-1 2-1 2-1s1 0 2 1" />
+                    <path fill="currentColor" d="M16 8l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M8 16c1 1 2 1 4 1s3 0 4-1" />
+                  </svg>
+                </div>
+                <h2 className="tile-title">Site Builder</h2>
+              </div>
+              <div className="tile-content">
+                Build and publish a fully custom website using AI. Describe what you want in plain English, refine through conversation, and publish to any domain you own.
+              </div>
+              <div className="tile-button-container">
+                <a href="/features/ai-site-builder" className="tile-button">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="quotes-section padding-top-bottom-20">
           <RotatingQuotes />
         </section>

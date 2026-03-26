@@ -34,3 +34,8 @@
       page: apis/reseller/implementation-guide.md
     - group: API Reference
       page: apis/reseller/openapi.yaml
+  separatorLine: true
+- group: AI Agents
+  items:
+    - label: Site Builder
+      page: features/ai-site-builder.md
