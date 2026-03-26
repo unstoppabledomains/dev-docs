@@ -138,16 +138,13 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <svg className="tile-image" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="8" y="18" width="74" height="50" rx="6" stroke="currentColor" strokeWidth="3" fill="none" />
-                    <rect x="16" y="26" width="58" height="34" rx="3" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5" />
-                    <circle cx="45" cy="43" r="10" stroke="currentColor" strokeWidth="2.5" fill="none" />
-                    <path d="M45 36v4l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="30" cy="37" r="2" fill="currentColor" opacity="0.6" />
-                    <circle cx="60" cy="37" r="2" fill="currentColor" opacity="0.6" />
-                    <circle cx="30" cy="49" r="2" fill="currentColor" opacity="0.6" />
-                    <circle cx="60" cy="49" r="2" fill="currentColor" opacity="0.6" />
-                    <rect x="30" y="72" width="30" height="4" rx="2" fill="currentColor" opacity="0.4" />
+                  <svg className="tile-image" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="5" width="20" height="16" rx="5" fill="none" stroke="currentColor" strokeWidth="2" />
+                    <line x1="12" y1="5" x2="12" y2="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    <circle cx="12" cy="1" r="1" fill="currentColor" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M6 11c1-1 2-1 2-1s1 0 2 1" />
+                    <path fill="currentColor" d="M16 8l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M8 16c1 1 2 1 4 1s3 0 4-1" />
                   </svg>
                 </div>
                 <h2 className="tile-title">Site Builder</h2>
