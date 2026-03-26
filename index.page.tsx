@@ -127,6 +127,41 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="tile-header-section">
+          <h2 className="margin-top-bottom-30 tile-header">
+            <strong> AI Agents </strong>
+          </h2>
+        </section>
+
+        <section className="tiles-section">
+          <div className="tiles-container tiles-container-single padding-top-bottom-20">
+            <div className="tile">
+              <div className="tile-header">
+                <div className="tile-image-container">
+                  <svg className="tile-image" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="18" width="74" height="50" rx="6" stroke="currentColor" strokeWidth="3" fill="none" />
+                    <rect x="16" y="26" width="58" height="34" rx="3" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5" />
+                    <circle cx="45" cy="43" r="10" stroke="currentColor" strokeWidth="2.5" fill="none" />
+                    <path d="M45 36v4l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="30" cy="37" r="2" fill="currentColor" opacity="0.6" />
+                    <circle cx="60" cy="37" r="2" fill="currentColor" opacity="0.6" />
+                    <circle cx="30" cy="49" r="2" fill="currentColor" opacity="0.6" />
+                    <circle cx="60" cy="49" r="2" fill="currentColor" opacity="0.6" />
+                    <rect x="30" y="72" width="30" height="4" rx="2" fill="currentColor" opacity="0.4" />
+                  </svg>
+                </div>
+                <h2 className="tile-title">AI Site Builder</h2>
+              </div>
+              <div className="tile-content">
+                Build and publish a fully custom website using AI. Describe what you want in plain English, refine through conversation, and publish to any domain you own.
+              </div>
+              <div className="tile-button-container">
+                <a href="/features/ai-site-builder" className="tile-button">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="quotes-section padding-top-bottom-20">
           <RotatingQuotes />
         </section>

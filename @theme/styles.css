@@ -790,6 +790,29 @@ figure img[title*="#width=90%"] { width: 90% !important; }
   }
 }
 
+/* Single-tile variant: keep tile from stretching full width */
+.tiles-container-single {
+  grid-template-columns: 1fr !important;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 600px) {
+  .tiles-container-single {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tiles-container-single {
+    max-width: 300px;
+  }
+}
+
+/* SVG tile icons inherit text color for theme support */
+.tile-image-container svg.tile-image {
+  color: var(--color-primary);
+}
+
 .quotes-section {
   max-width: 1200px;
   margin: 0 auto;

@@ -89,6 +89,8 @@ navbar:
   items:
     - label: Get Started
       page: apis/overview.md
+    - label: AI Agents
+      page: features/ai-site-builder.md
     - label: API Reference
       page: apis/overview.md
 
