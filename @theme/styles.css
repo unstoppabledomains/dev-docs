@@ -808,9 +808,13 @@ figure img[title*="#width=90%"] { width: 90% !important; }
   }
 }
 
-/* SVG tile icons inherit text color for theme support */
+/* SVG tile icons match PNG icon color */
 .tile-image-container svg.tile-image {
-  color: var(--color-primary);
+  color: var(--color-black);
+}
+
+html.dark .tile-image-container svg.tile-image {
+  color: var(--color-white);
 }
 
 .quotes-section {
