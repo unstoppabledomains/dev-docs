@@ -150,7 +150,7 @@ export default function Page() {
                     <rect x="30" y="72" width="30" height="4" rx="2" fill="currentColor" opacity="0.4" />
                   </svg>
                 </div>
-                <h2 className="tile-title">AI Site Builder</h2>
+                <h2 className="tile-title">Site Builder</h2>
               </div>
               <div className="tile-content">
                 Build and publish a fully custom website using AI. Describe what you want in plain English, refine through conversation, and publish to any domain you own.
