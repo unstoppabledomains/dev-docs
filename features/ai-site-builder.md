@@ -327,8 +327,6 @@ If you find and purchase a domain from within the AI Site Builder (via the **Fin
 4. Once the domain is registered, your site is automatically published to it.
 5. You'll receive a confirmation email when the auto-publish is complete.
 
-The auto-publish mapping is stored for up to **30 days** from the time you set it up.
-
 ---
 
 ## AI Credits
@@ -361,8 +359,6 @@ Credit cost per message depends on the AI model:
 | Claude Opus | ~5 – 10 credits |
 
 The exact cost is calculated based on actual token usage (how much the AI reads and writes). Each assistant message in your chat shows its credit cost, so you always know what you spent.
-
-The exchange rate is **1 AI credit = $0.15 of AI model usage**.
 
 #### Publishing
 
