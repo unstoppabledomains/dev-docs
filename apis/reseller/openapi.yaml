@@ -12,6 +12,7 @@ info:
     - **Domain Registration**: Register domains with full control over registration period, contacts, and initial DNS configuration
     - **DNS Management**: Create, update and delete DNS records for your domains
     - **Domain Lifecycle**: Manage renewals, transfers, contacts, and domain flags through a simple API interface
+    - **Marketplace**: Browse secondary marketplace listings to find premium domains available for purchase from existing owners
 
     For access, authentication, environments, and your first request, start with the [Quick Start](/apis/reseller/quick-start).
 
@@ -82,6 +83,10 @@ tags:
 
     All hosting configurations require SSL certificate provisioning. When a configuration is created or updated, the `certificateStatus` field will be `PENDING` until the certificate is issued and active. This process typically completes within a few minutes but may take longer in some cases.
   x-displayName: Hosting
+- name: marketplace
+  description: |
+    Browse and search the Unstoppable Domains secondary marketplace. Retrieve paginated listings of domains available for purchase from existing owners, with filtering by TLD and sorting options.
+  x-displayName: Marketplace
 - name: account
   description: Manage your account details, authentication tokens, and webhook subscriptions.
   x-displayName: Account
@@ -96,6 +101,9 @@ x-tagGroups:
   - domain-transfers
   - domain-flags
   - domain-contacts
+- name: Marketplace
+  tags:
+  - marketplace
 - name: Discovery
   tags:
   - pricing
@@ -2565,6 +2573,98 @@ paths:
       summary: Get TLD details
       description: |
         Retrieve details for a specific top-level domain (TLD) including its naming system and registration availability.
+  /marketplace/domains/listings:
+    get:
+      operationId: getMarketplaceDomainsListings
+      parameters:
+      - name: q
+        required: false
+        in: query
+        description: Search query to filter listings by domain name. Supports partial matching.
+        schema:
+          type: string
+      - name: tlds
+        required: true
+        in: query
+        description: One or more TLD extensions to filter listings (e.g., `com`, `xyz`). At least one TLD must be provided.
+        schema:
+          uniqueItems: true
+          default: []
+          type: array
+          items:
+            type: string
+      - name: orderBy
+        required: false
+        in: query
+        description: Field to sort results by.
+        schema:
+          type: string
+          enum:
+          - price
+          - name
+          - listedAt
+      - name: orderDirection
+        required: false
+        in: query
+        description: Sort direction. Defaults to ascending.
+        schema:
+          type: string
+          enum:
+          - ASC
+          - DESC
+      - name: perPage
+        required: false
+        in: query
+        description: Number of results per page (1–100).
+        schema:
+          minimum: 1
+          maximum: 100
+          type: number
+      - name: $page
+        required: false
+        in: query
+        description: Page number for pagination (1-indexed).
+        schema:
+          minimum: 1
+          type: number
+      responses:
+        '200':
+          description: Paginated list of marketplace domain listings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MarketplaceDomainsListingsResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - marketplace
+      summary: List marketplace domain listings
+      description: |
+        Retrieve a paginated list of domains currently listed for sale on the Unstoppable Domains secondary marketplace. Use this endpoint to browse available domains, filter by TLD, and sort by price, name, or listing date.
+
+        Results are paginated — use the `$page` and `perPage` parameters to navigate through results.
 webhooks:
   OPERATION_FINISHED:
     post:
@@ -5271,5 +5371,67 @@ components:
       - '@type'
       - type
       - data
+    MarketplaceDomainsListingListPriceResponse:
+      type: object
+      properties:
+        usdCents:
+          type: number
+          description: Listing price in USD cents
+      required:
+      - usdCents
+    MarketplaceDomainsListingPayoutResponse:
+      type: object
+      properties:
+        address:
+          type: string
+          description: Wallet address designated to receive the payout
+      required:
+      - address
+    MarketplaceDomainsListingOwnerResponse:
+      type: object
+      properties:
+        address:
+          type: string
+          description: Wallet address of the domain owner
+      required:
+      - address
+    MarketplaceDomainsListingItemResponse:
+      type: object
+      properties:
+        domain:
+          type: string
+          description: The domain name listed for sale
+        status:
+          type: string
+          description: Current listing status
+        listPrice:
+          $ref: '#/components/schemas/MarketplaceDomainsListingListPriceResponse'
+        payout:
+          $ref: '#/components/schemas/MarketplaceDomainsListingPayoutResponse'
+        owner:
+          $ref: '#/components/schemas/MarketplaceDomainsListingOwnerResponse'
+        expiresAt:
+          type: number
+          description: Unix timestamp when the listing expires (if applicable)
+      required:
+      - domain
+      - status
+      - listPrice
+      - payout
+      - owner
+    MarketplaceDomainsListingsResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/MarketplaceDomainsListingItemResponse'
+        next:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/PaginatedListResponseNext'
+      required:
+      - items
+      - next
 security:
 - bearer: []

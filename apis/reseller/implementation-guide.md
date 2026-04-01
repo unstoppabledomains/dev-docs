@@ -1,6 +1,6 @@
 ---
 title: Implementation Guide | Unstoppable Domains Developer Portal
-description: Implementation details for domain search, registration, contact management, DNS management, webhooks, and lifecycle operations in the Reseller API
+description: Implementation details for domain search, registration, marketplace listings, contact management, DNS management, webhooks, and lifecycle operations in the Reseller API
 ---
 
 # Implementation Guide
@@ -231,6 +231,78 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=true" \
 ```
 
 The response includes the pricing breakdown and validates all fields without actually registering the domain.
+
+## Marketplace Listings
+
+The marketplace endpoint lets you browse domains listed for sale on the Unstoppable Domains secondary marketplace. This is useful for offering your users access to premium or previously registered domains that current owners have put up for sale.
+
+### Browsing Listings
+
+Retrieve a paginated list of marketplace listings filtered by TLD:
+
+```bash
+curl "https://api.ud-sandbox.com/partner/v3/marketplace/domains/listings?tlds=com&perPage=10&\$page=1" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+The `tlds` parameter is required and accepts one or more TLD extensions. You can also pass a search query using the `q` parameter to filter by domain name:
+
+```bash
+curl "https://api.ud-sandbox.com/partner/v3/marketplace/domains/listings?tlds=com&q=crypto&orderBy=price&orderDirection=ASC" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+### Response Structure
+
+Each listing in the response includes:
+
+| Field | Description |
+|-------|-------------|
+| `domain` | The domain name listed for sale |
+| `status` | Current listing status |
+| `listPrice.usdCents` | The asking price in USD cents |
+| `payout.address` | Wallet address designated to receive the sale proceeds |
+| `owner.address` | Wallet address of the current domain owner |
+| `expiresAt` | Unix timestamp when the listing expires (if set) |
+
+Example response:
+
+```json
+{
+  "items": [
+    {
+      "domain": "premium.com",
+      "status": "ACTIVE",
+      "listPrice": {
+        "usdCents": 500000
+      },
+      "payout": {
+        "address": "0x1234...abcd"
+      },
+      "owner": {
+        "address": "0x5678...efgh"
+      },
+      "expiresAt": 1735689600
+    }
+  ],
+  "next": {
+    "page": 2,
+    "limit": 10
+  }
+}
+```
+
+### Sorting and Pagination
+
+Use `orderBy` and `orderDirection` to control result ordering:
+
+| `orderBy` | Description |
+|-----------|-------------|
+| `price` | Sort by listing price |
+| `name` | Sort alphabetically by domain name |
+| `listedAt` | Sort by when the domain was listed |
+
+Results are paginated. Use `$page` (1-indexed) and `perPage` (1–100) to navigate. The `next` field provides the parameters for the next page, or `null` if you are on the last page.
 
 ## Contact Management
 
