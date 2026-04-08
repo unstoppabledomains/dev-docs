@@ -50,9 +50,8 @@ Once connected to your Unstoppable Domains account, your AI agent is ready to ta
 - "Use a professional tone with blue colors"
 - "Check if it's ready yet"
 - "Download the landing page so I can edit it"
-- "Upload my custom version back"
 
-**Tools used:** `ud_domain_generate_lander` &rarr; `ud_domain_lander_status` &rarr; `ud_domain_download_lander` &rarr; `ud_domain_upload_lander`
+**Tools used:** `ud_domain_generate_lander` &rarr; `ud_domain_lander_status` &rarr; `ud_domain_download_lander`
 
 ## Backorder an Expiring Domain
 
