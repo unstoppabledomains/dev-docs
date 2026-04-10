@@ -50,8 +50,8 @@ Receives the bulk of current `mcp/overview.md` content:
 Change bullet list to reference "User API" and update links:
 
 ```markdown
-- [User API and MCP Server](/mcp/overview)
-- [Reseller API](reseller/openapi.yaml)
+- [User API and MCP Server](/user-api/overview)
+- [Reseller API](/apis/reseller/openapi)
 ```
 
 ### Unchanged files

@@ -29,7 +29,7 @@ Our solution for traditional DNS domain registration and management.
 - Manage DNS records
 - Handle domain transfers and contacts
 
-For a step-by-step walkthrough, see the [Implementation Guide](/web3/domain-distribution-and-management/reseller/implementation-guide).
+For a step-by-step walkthrough, see the [Implementation Guide](/apis/reseller/implementation-guide).
 
 For the full API reference, see the [Reseller API specification](https://docs.unstoppabledomains.com/apis/reseller/openapi).
 
