@@ -1,0 +1,69 @@
+Once a user has successfully authenticated, the application should display the user’s **domain** (and not their **wallet address**) in the application’s UI to confirm the authorization was successful.
+
+<figure>
+
+![Showing an authenticated user's domain](/images/third-UI-example-login-domains.png '#width=50%')
+
+<figcaption>Showing an authenticated user's domain</figcaption>
+</figure>
+
+Authorizations are stored inside `localStorage`, so any identically configured `UAuth` instance has access to the same users.
+Any integration using [@uauth/js](/web3/identity/sdk-and-libraries/uauth-js.md) or a dependent middleware package can access the authorized user information by instantiating a new [UAuth](/web3/identity/sdk-and-libraries/uauth-js.md#client) object with the same client options and calling the [user()](/web3/identity/sdk-and-libraries/uauth-js.md#user) method.
+
+{% tabs %}
+
+{% tab label="@uauth/js" %}
+```javascript
+import UAuth from '@uauth/js'
+
+const uauth = new UAuth({
+  // ... options
+})
+
+uauth.user()
+  .then((user) => {
+    // user exists
+    console.log("User information:", user)
+  })
+  .catch(() => {
+    // user does not exist
+  })
+```
+{% /tab %}
+
+{% tab label="web3-onboard" %}
+```javascript
+const wallets$ = onboard.state.select('wallets').pipe(share())
+
+wallets$.subscribe(wallet => {
+  const unstoppableUser = wallet.find(
+    provider => provider.label === 'Unstoppable'
+  )
+
+  if (unstoppableUser) console.log(unstoppableUser.instance.user)
+})
+```
+{% /tab %}
+
+{% tab label="web3-react" %}
+```javascript
+const uauthConnector = new UAuthConnector()
+
+uauthConnector.uauth.user().then().catch()
+```
+{% /tab %}
+
+{% /tabs %}
+
+The `user()` method will return a [UserInfo](/web3/identity/sdk-and-libraries/uauth-js.md#userinfo) object containing the information requested by your client scopes. The following key-value pairs would be returned by a login session with the minimum `"openid wallet"` scopes defined:
+
+```json
+{
+  "sub" : "domain.tld", // The domain used to login
+  "wallet_address" : "0x . . . ", // The Ethereum wallet that owns the domain
+  "wallet_type_hint" : "web3",
+  "eip4361_message" : "identity.unstoppable domains wants you sign in with your Ethereum account: . . . ",
+  "eip4361_signature" : "0x . . . ",
+}
+```
+

@@ -1,0 +1,157 @@
+- group: Getting Started
+  items:
+    - label: Overview
+      page: getting-started/overview.md
+    - label: Glossary
+      page: getting-started/glossary.md
+    - label: Namehashing
+      page: getting-started/domain-registry-essentials/namehashing.md
+  separatorLine: true
+- group: Resolution
+  items:
+    - label: Overview
+      page: resolution/overview.md
+    - label: Records Reference
+      page: resolution/records-reference.md
+    - label: Reverse Resolution
+      page: resolution/rr-overview.md
+    - group: Quickstart
+      items:
+        - label: Resolution Service API
+          page: resolution/quickstart/retrieve-an-api-key.md
+        - label: Resolve Domains
+          page: resolution/quickstart/resolution.md
+        - label: Reverse Resolve Domains
+          page: resolution/quickstart/reverse-resolution.md
+    - group: Guides
+      items:
+        - label: Best Practices
+          page: resolution/guides/best-practices.md
+        - label: Reverse Resolution FAQ
+          page: resolution/guides/rr-faq.md
+        - group: Browser Resolution
+          items:
+            - label: Overview
+              page: resolution/guides/browser-resolution/overview.md
+            - label: Algorithm
+              page: resolution/guides/browser-resolution/algorithm.md
+            - label: Test Domains
+              page: resolution/guides/browser-resolution/test-domains.md
+    - group: API Reference
+      items:
+        - label: Resolution API
+          page: apis/resolution/openapi.yaml
+        - label: Profile API
+          page: apis/profile-v1/openapi.yaml
+        - label: Metadata API
+          page: apis/metadata/openapi.yaml
+  separatorLine: true
+- group: Unstoppable Login
+  items:
+    - label: Overview
+      page: identity/overview/login-with-unstoppable.md
+    - group: Quickstart
+      items:
+        - label: Get Client Credentials
+          page: identity/quickstart/retrieve-client-credentials.md
+        - label: Login with Popup
+          page: identity/quickstart/login-with-pop-up.md
+    - group: Guides
+      items:
+        - label: Best Practices
+          page: identity/guides/best-practices.md
+        - label: Client Configuration
+          page: identity/guides/client-configurations.md
+        - label: Display User's Domain
+          page: identity/guides/display-users-domain.md
+        - label: Login Scopes
+          page: identity/guides/login-scopes.md
+        - label: Troubleshooting
+          page: identity/guides/troubleshooting.md
+        - label: FAQ
+          page: identity/guides/faq.md
+        - group: Integration Paths
+          items:
+            - label: Auth0
+              page: identity/guides/integration-paths/auth0.md
+            - label: Login without Popup
+              page: identity/guides/integration-paths/login-without-pop-up.md
+            - label: Node.js Server
+              page: identity/guides/integration-paths/node-js.md
+            - label: Web3-Onboard
+              page: identity/guides/integration-paths/web3-onboard.md
+            - label: Web3 React
+              page: identity/guides/integration-paths/web3-react.md
+        - group: Login Protocols
+          items:
+            - label: Authentication Protocol
+              page: identity/guides/login-protocols/authentication-protocol.md
+            - label: Authorization Server
+              page: identity/guides/login-protocols/authorization-server.md
+    - group: SDK & Libraries
+      items:
+        - label: Overview
+          page: identity/sdk-and-libraries/overview.md
+        - label: UAuth JS
+          page: identity/sdk-and-libraries/uauth-js.md
+        - label: UAuth Node
+          page: identity/sdk-and-libraries/uauth-node.md
+        - label: Web3-Onboard Module
+          page: identity/sdk-and-libraries/web3-onboard.md
+        - label: Web3 React
+          page: identity/sdk-and-libraries/web3-react.md
+    - group: API Reference
+      items:
+        - label: Login API
+          page: apis/loginref/openapi.yaml
+  separatorLine: true
+- group: Smart Contracts
+  items:
+    - group: Overview
+      items:
+        - label: UNS Architecture
+          page: smart-contracts/overview/uns-architecture-overview.md
+        - label: CNS Architecture
+          page: smart-contracts/overview/cns-architecture-overview.md
+        - label: UNS vs CNS
+          page: smart-contracts/overview/cns-uns-comparison.md
+    - group: Quick Start
+      items:
+        - label: Manage Domain Records
+          page: smart-contracts/quick-start/manage-domain-records.md
+        - label: Resolve Domains
+          page: smart-contracts/quick-start/resolve-domains.md
+        - label: Reverse Resolve Domains
+          page: smart-contracts/quick-start/reverse-resolve-domains.md
+    - group: Contract Reference
+      items:
+        - label: UNS Smart Contracts
+          page: smart-contracts/contract-reference/uns-smart-contracts.md
+        - label: CNS Smart Contracts
+          page: smart-contracts/contract-reference/cns-smart-contracts.md
+  separatorLine: true
+- group: Partner API
+  items:
+    - label: Overview
+      page: domain-distribution-and-management/overview.md
+    - group: Quickstart
+      items:
+        - label: Retrieve an API Key
+          page: domain-distribution-and-management/quickstart/retrieve-an-api-key.md
+    - group: Guides
+      items:
+        - label: Sell Domains
+          page: domain-distribution-and-management/guides/sell-domains.md
+        - label: Implementing Webhooks
+          page: domain-distribution-and-management/guides/implementing-webhooks.md
+        - label: On-Chain Buy
+          page: domain-distribution-and-management/guides/on-chain-buy.md
+    - group: API Reference
+      page: apis/partner/openapi.yaml
+  separatorLine: true
+- group: Other APIs
+  items:
+    - label: Messaging API
+      page: apis/messaging-v1/openapi.yaml
+    - label: Registry API
+      page: apis/registry/openapi.yaml

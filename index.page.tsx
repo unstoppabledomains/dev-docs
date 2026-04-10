@@ -39,7 +39,7 @@ export default function Page() {
     <>
       <main>
         <section className="padding-top-bottom-20 jumbotron" style={{ textAlign: 'center' }}>
-          <h2 className="margin-top-bottom-20 jumbotron-h2">ICANN Domain Developers</h2>
+
           <h1 className="margin-top-bottom-20 jumbotron-h1">Effortless building starts here.</h1>
           <h3 className="margin-top-bottom-20">Everything you need to build, customize, <br/>and integrate with Unstoppable Domains.</h3>
           <div className="header-button-container">
@@ -83,30 +83,15 @@ export default function Page() {
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
-                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="User API" className="tile-image" />
+                  <img src={`/static/images/api-reference-${imageSuffix}.png`} alt="User API & CLI" className="tile-image" />
                 </div>
-                <h2 className="tile-title">User API</h2>
+                <h2 className="tile-title">User API & CLI</h2>
               </div>
               <div className="tile-content">
-                Search, purchase, and manage domains programmatically. Configure DNS, list on the marketplace, and automate your domain portfolio.
+                Search, purchase, and manage domains programmatically or from your terminal. Configure DNS, list on the marketplace, and automate your domain portfolio.
               </div>
               <div className="tile-button-container">
                 <a href="/user-api/overview" className="tile-button">Get Started</a>
-              </div>
-            </div>
-
-            <div className="tile">
-              <div className="tile-header">
-                <div className="tile-image-container">
-                  <img src={`/static/images/cli-${imageSuffix}.png`} alt="User CLI" className="tile-image" />
-                </div>
-                <h2 className="tile-title">User CLI</h2>
-              </div>
-              <div className="tile-content">
-                Search, purchase, and manage domains from your terminal. Script domain workflows with JSON output, CSV export, and shell piping.
-              </div>
-              <div className="tile-button-container">
-                <a href="/user-api/cli" className="tile-button">Get Started</a>
               </div>
             </div>
 
@@ -124,17 +109,7 @@ export default function Page() {
                 <a href="/user-api/mcp-server" className="tile-button">Get Started</a>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section className="tile-header-section">
-          <h2 className="margin-top-bottom-30 tile-header">
-            <strong> AI Agents </strong>
-          </h2>
-        </section>
-
-        <section className="tiles-section">
-          <div className="tiles-container tiles-container-single padding-top-bottom-20">
             <div className="tile">
               <div className="tile-header">
                 <div className="tile-image-container">
