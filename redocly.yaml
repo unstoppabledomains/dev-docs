@@ -208,6 +208,8 @@ navbar:
       page: features/ai-site-builder.md
     - label: API Reference
       page: apis/overview.md
+    - label: Web3 Partner API
+      page: web3/getting-started/overview.md
 
 search:
   hide: false
