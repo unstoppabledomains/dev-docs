@@ -3,7 +3,7 @@ title: Overview of the Unstoppable Domains Developer Portal
 description: The UD developer portal is both an educational and a technical resource. We hope it will be equally useful for both technical and non-technical readers.
 ---
 
-# Unstoppable Domains Developer Portal Overview
+# Web3 Developer Portal Overview
 
 This developer portal is designed to help you understand how to build and integrate custom applications using Unstoppable Domains products.
 It's a great companion to our [Feature Guide Collection](https://youtube.com/playlist?list=PLkKiQerk3s0AbMvBafwmJdR8pv7qPYeL-) on Youtube.
@@ -21,14 +21,10 @@ Domains can be purchased for as little as $2. Simply search for any `.unstoppabl
 
 ## How This Portal Is Organized
 
-This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the quickstarts in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, Unstoppable Reseller API (Preview), detailed integration guides, or dive right into the API reference.
+This portal is organized to support users at all experience levels, from foundational concepts to advanced integrations. If you're new to crypto and blockchain, consider starting with the quickstarts in the menu on your left. Advanced users may wish to explore topics like Unstoppable Resolution, Unstoppable Partner API, or detailed integration guides.
 
 - [Unstoppable Resolution](/web3/resolution/overview.md)
     - [Reverse Resolution](/web3/resolution/rr-overview.md)
-- [Unstoppable Partner API](/apis/overview)
-- [Unstoppable Reseller API (Preview)](/apis/reseller/openapi)
-- [Unstoppable Login](/web3/identity/overview/login-with-unstoppable.md)
-- [User API and MCP Server](/user-api/overview)
-- [API Reference](/apis/overview.md)
+- [Unstoppable Partner API](/web3/domain-distribution-and-management/overview.md)
 
 {% partial file="/_partials/_developer-survey-embed.md" /%}
