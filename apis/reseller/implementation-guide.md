@@ -170,15 +170,23 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "MANAGED",
-      "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      "type": "SELF",
+      "contact": {
+        "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      }
     },
     "dns": {
       "period": 1,
       "contacts": {
-        "admin": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "tech": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "billing": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        "admin": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "tech": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "billing": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        }
       }
     }
   }'
@@ -216,15 +224,23 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=true" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "MANAGED",
-      "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      "type": "SELF",
+      "contact": {
+        "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      }
     },
     "dns": {
       "period": 1,
       "contacts": {
-        "admin": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "tech": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "billing": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        "admin": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "tech": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "billing": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        }
       }
     }
   }'
@@ -348,13 +364,19 @@ Domains have four contact roles:
 Contacts are assigned during registration. You can update contacts after registration using:
 
 ```bash
-curl -X PUT "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts" \
+curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts?\$preview=false" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "admin": "ct-new-contact-id",
-    "tech": "ct-new-contact-id",
-    "billing": "ct-new-contact-id"
+    "admin": {
+      "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+    },
+    "tech": {
+      "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+    },
+    "billing": {
+      "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+    }
   }'
 ```
 
@@ -506,15 +528,23 @@ curl -X POST "https://api.ud-sandbox.com/partner/v3/domains?\$preview=false" \
   -d '{
     "name": "example.com",
     "owner": {
-      "type": "MANAGED",
-      "contact": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      "type": "SELF",
+      "contact": {
+        "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+      }
     },
     "dns": {
       "authorizationCode": "EPP_AUTH_CODE_HERE",
       "contacts": {
-        "admin": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "tech": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab",
-        "billing": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        "admin": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "tech": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        },
+        "billing": {
+          "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+        }
       }
     }
   }'
