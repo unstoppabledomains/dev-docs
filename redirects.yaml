@@ -1,24 +1,12 @@
-# Legacy redirects - all point to the current API overview
-'/getting-started/*':
-  to: '/apis/overview'
-  type: 301
-'/resolution/*':
-  to: '/apis/overview'
-  type: 301
-'/smart-contracts/*':
-  to: '/apis/overview'
-  type: 301
-'/identity/*':
-  to: '/apis/overview'
-  type: 301
+# Legacy redirects
 '/domain-distribution-and-management/guides/*':
-  to: '/apis/overview'
+  to: '/web3/domain-distribution-and-management/guides/*'
   type: 301
 '/domain-distribution-and-management/quickstart/*':
-  to: '/apis/overview'
+  to: '/web3/domain-distribution-and-management/quickstart/*'
   type: 301
 '/domain-distribution-and-management/overview':
-  to: '/apis/overview'
+  to: '/web3/domain-distribution-and-management/overview'
   type: 301
 '/domain-distribution-and-management/reseller/implementation-guide':
   to: '/apis/reseller/implementation-guide'
@@ -30,7 +18,7 @@
   to: '/apis/user-api/*'
   type: 301
 '/partner/*':
-  to: '/apis/overview'
+  to: '/web3/apis/partner/openapi'
   type: 301
 '/reseller/*':
   to: '/apis/overview'
@@ -66,50 +54,121 @@
   to: '/apis/overview'
   type: 301
 '/domain-registry-essentials/*':
-  to: '/apis/overview'
+  to: '/web3/getting-started/domain-registry-essentials/*'
+  type: 301
+# Redirect old top-level web3 paths to /web3/
+'/getting-started/*':
+  to: '/web3/getting-started/*'
+  type: 301
+'/identity/*':
+  to: '/web3/identity/*'
+  type: 301
+'/resolution/*':
+  to: '/web3/resolution/*'
+  type: 301
+'/smart-contracts/*':
+  to: '/web3/smart-contracts/*'
   type: 301
 '/get-test-domain':
   to: '/apis/overview'
+  type: 301
+'/apis/reseller/openapi.yaml':
+  to: '/apis/reseller/openapi'
   type: 301
 '/openapi/partner/*':
   to: '/apis/reseller/openapi'
   type: 301
 '/openapi/metadata/*':
-  to: '/apis/overview'
+  to: '/web3/apis/metadata/openapi'
   type: 301
 '/openapi/resolution/*':
-  to: '/apis/overview'
+  to: '/web3/apis/resolution/openapi'
   type: 301
 '/openapi/profile-v1/*':
-  to: '/apis/overview'
+  to: '/web3/apis/profile-v1/openapi'
   type: 301
 '/openapi/messaging-v1/*':
-  to: '/apis/overview'
+  to: '/web3/apis/messaging-v1/openapi'
   type: 301
 '/openapi/loginref/*':
-  to: '/apis/overview'
+  to: '/web3/apis/loginref/openapi'
   type: 301
 '/openapi/registry/*':
-  to: '/apis/overview'
+  to: '/web3/apis/registry/openapi'
   type: 301
 '/apis/partner/*':
-  to: '/apis/reseller/openapi'
+  to: '/web3/apis/partner/openapi'
   type: 301
-'/apis/metadata/*':
-  to: '/apis/overview'
+# Redirect old web3 API paths to /web3/ (exact + wildcard for deep links)
+'/apis/metadata':
+  to: '/web3/apis/metadata/openapi'
   type: 301
-'/apis/resolution/*':
-  to: '/apis/overview'
+'/apis/metadata/openapi.yaml':
+  to: '/web3/apis/metadata/openapi'
   type: 301
-'/apis/profile-v1/*':
-  to: '/apis/overview'
+'/apis/metadata/openapi':
+  to: '/web3/apis/metadata/openapi'
   type: 301
-'/apis/messaging-v1/*':
-  to: '/apis/overview'
+'/apis/metadata/openapi/*':
+  to: '/web3/apis/metadata/openapi/*'
   type: 301
-'/apis/loginref/*':
-  to: '/apis/overview'
+'/apis/resolution':
+  to: '/web3/apis/resolution/openapi'
   type: 301
-'/apis/registry/*':
-  to: '/apis/overview'
+'/apis/resolution/openapi.yaml':
+  to: '/web3/apis/resolution/openapi'
+  type: 301
+'/apis/resolution/openapi':
+  to: '/web3/apis/resolution/openapi'
+  type: 301
+'/apis/resolution/openapi/*':
+  to: '/web3/apis/resolution/openapi/*'
+  type: 301
+'/apis/profile-v1':
+  to: '/web3/apis/profile-v1/openapi'
+  type: 301
+'/apis/profile-v1/openapi.yaml':
+  to: '/web3/apis/profile-v1/openapi'
+  type: 301
+'/apis/profile-v1/openapi':
+  to: '/web3/apis/profile-v1/openapi'
+  type: 301
+'/apis/profile-v1/openapi/*':
+  to: '/web3/apis/profile-v1/openapi/*'
+  type: 301
+'/apis/messaging-v1':
+  to: '/web3/apis/messaging-v1/openapi'
+  type: 301
+'/apis/messaging-v1/openapi.yaml':
+  to: '/web3/apis/messaging-v1/openapi'
+  type: 301
+'/apis/messaging-v1/openapi':
+  to: '/web3/apis/messaging-v1/openapi'
+  type: 301
+'/apis/messaging-v1/openapi/*':
+  to: '/web3/apis/messaging-v1/openapi/*'
+  type: 301
+'/apis/loginref':
+  to: '/web3/apis/loginref/openapi'
+  type: 301
+'/apis/loginref/openapi.yaml':
+  to: '/web3/apis/loginref/openapi'
+  type: 301
+'/apis/loginref/openapi':
+  to: '/web3/apis/loginref/openapi'
+  type: 301
+'/apis/loginref/openapi/*':
+  to: '/web3/apis/loginref/openapi/*'
+  type: 301
+'/apis/registry':
+  to: '/web3/apis/registry/openapi'
+  type: 301
+'/apis/registry/openapi.yaml':
+  to: '/web3/apis/registry/openapi'
+  type: 301
+'/apis/registry/openapi':
+  to: '/web3/apis/registry/openapi'
+  type: 301
+'/apis/registry/openapi/*':
+  to: '/web3/apis/registry/openapi/*'
   type: 301

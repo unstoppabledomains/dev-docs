@@ -29,7 +29,7 @@ description: The Unstoppable Domains MCP server enables you to search, purchase,
 
 # MCP Server
 
-The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/mcp/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
+The Unstoppable Domains MCP (Model Context Protocol) server lets you access the [User API](/user-api/overview) through natural conversation inside ChatGPT, Claude, or using automated AI agents.
 
 ## Quick Start
 
@@ -205,7 +205,7 @@ API keys grant full access to all tools. Use OAuth for scoped access.
 | Authentication | `Authorization: Bearer <token>` |
 | Protocol | MCP (Model Context Protocol) over HTTP |
 
-For the full interactive API reference, see the [MCP API Reference](/apis/mcp/openapi).
+For the full interactive API reference, see the [MCP API Reference](/apis/user-api/openapi).
 ```
 
 **Step 2: Commit**
@@ -248,7 +248,7 @@ The User API supports the full domain lifecycle:
 - **Sell on Marketplace** — List domains for sale, manage offers, negotiate with buyers
 - **Communicate** — Contact domain sellers and manage conversations
 
-For a full list of operations, see the [API Reference](/apis/mcp/openapi).
+For a full list of operations, see the [API Reference](/apis/user-api/openapi).
 
 ## Authentication
 
@@ -310,8 +310,8 @@ Replace lines 5-17 (the MCP Server group) with:
 Replace the bullet list (lines 12-13) with:
 
 ```markdown
-- [User API and MCP Server](/mcp/overview)
-- [Reseller API](reseller/openapi.yaml)
+- [User API and MCP Server](/user-api/overview)
+- [Reseller API](/apis/reseller/openapi)
 ```
 
 **Step 3: Commit**

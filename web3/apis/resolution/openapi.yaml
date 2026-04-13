@@ -1,0 +1,1290 @@
+openapi: 3.0.0
+info:
+  title: Resolution Service
+  version: 1.0.0
+  contact:
+    name: Unstoppable Domains (Partner Engineering)
+    email: partnerengineering@unstoppabledomains.com
+  description: |-
+    The Resolution Service provides APIs for resolving domain metadata and records from multiple blockchain and naming services. The service currently supports the following naming services:
+        <ul>
+          <li>
+            <p>Unstoppable Domain's <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/uns-architecture-overview" target="_blank">UNS</a> and <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/cns-architecture-overview" target="_blank">CNS</a> with TLDs:
+    <strong>.x</strong>, <strong>.polygon</strong>, <strong>.nft</strong>, <strong>.crypto</strong>, <strong>.blockchain</strong>, <strong>.bitcoin</strong>, <strong>.dao</strong>, <strong>.888</strong>, <strong>.wallet</strong>, <strong>.binanceus</strong>, <strong>.hi</strong>, <strong>.klever</strong>, <strong>.kresus</strong>, <strong>.anime</strong>, <strong>.manga</strong>, <strong>.go</strong>, <strong>.zil</strong></p>
+          </li>
+          <li>
+            <p>Ethereum Naming Service - <a href="https://docs.ens.domains/" target="_blank">ENS</a> with TLDs:
+    <strong>.eth</strong></p>
+          </li>
+        </ul>
+        <br></br>
+        The service caches blockchain events in a database for easy retrieval without accessing any blockchain APIs.
+        With the Resolution Service API, you can quickly build applications directly communicating with the blockchain to get UD domain data with a single API request.
+security:
+  - apiKeyAuth: []
+servers:
+  - url: https://api.unstoppabledomains.com/resolve
+    description: Production
+  - url: https://api.ud-sandbox.com/resolve
+    description: Sandbox
+paths:
+  /domains/{domainName}:
+    get:
+      operationId: DomainsController.getDomain
+      parameters:
+        - in: path
+          name: domainName
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A domain name registered by Unstoppable Domains
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainResponse'
+          description: ''
+      summary: Get domain
+      tags:
+        - Domains
+
+      description: '**Get Records for a Domain**<br/>**Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.'
+  /domains:
+    get:
+      operationId: DomainsController.getDomainsList
+      parameters:
+        - in: query
+          name: resolution
+          required: false
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+          description: See this [list](https://github.com/unstoppabledomains/uns/blob/main/uns-config.json) for all the resolution keys supported
+          style: deepObject
+        - in: query
+          name: owners
+          schema:
+            items:
+              minLength: 1
+              type: string
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+          description: Wallet addresses of the owners of domains
+        - in: query
+          name: tlds
+          schema:
+            items:
+              type: string
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  enum:
+                    - x
+                    - polygon
+                    - nft
+                    - crypto
+                    - blockchain
+                    - bitcoin
+                    - dao
+                    - '888'
+                    - wallet
+                    - binanceus
+                    - hi
+                    - klever
+                    - kresus
+                    - anime
+                    - manga
+                    - go
+                    - zil
+                    - eth
+          description: Domain ending supported such as `crypto`, `x`, or `polygon`. See [supported tlds](https://api.unstoppabledomains.com/resolve/supported_tlds) for the full list
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+            enum:
+              - id
+              - name
+              - created_at
+          description: Sort key to specify how the returned domain list is sorted
+        - in: query
+          name: sortDirection
+          schema:
+            type: string
+            enum:
+              - ASC
+              - DESC
+          description: Sort order of the returned domain list
+        - in: query
+          name: startingAfter
+          schema:
+            maximum: 200
+            type: string
+            minimum: 1
+          description: 'Query offset to skip a number of record, example: 100'
+        - in: query
+          name: perPage
+          schema:
+            type: number
+          description: 'Number of domains returned in the list, example: 50'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainResponse'
+                  meta:
+                    type: object
+                    items:
+                      $ref: '#/components/schemas/DomainsListMeta'
+          description: Successful response
+      summary: Get domains list
+      tags:
+        - Domains
+      description: |2-
+
+          **Get Records for Multiple Domains**
+          <br/>
+          
+        The API only supports Unstoppable Domains' naming services for backward compatibility. A new API version is coming soon for other naming services
+        <ul>
+          <li>
+            <p>Unstoppable Domain's <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/uns-architecture-overview" target="_blank">UNS</a> and <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/cns-architecture-overview" target="_blank">CNS</a> with TLDs:
+        <strong>.x</strong>, <strong>.polygon</strong>, <strong>.nft</strong>, <strong>.crypto</strong>, <strong>.blockchain</strong>, <strong>.bitcoin</strong>, <strong>.dao</strong>, <strong>.888</strong>, <strong>.wallet</strong>, <strong>.binanceus</strong>, <strong>.hi</strong>, <strong>.klever</strong>, <strong>.kresus</strong>, <strong>.anime</strong>, <strong>.manga</strong>, <strong>.go</strong>, <strong>.zil</strong></p>
+          </li>
+          <li>
+            <p>Unstoppable Domain's <a href="https://unstoppabledomains.com/blog/categories/announcements/article/zilliqa-naming-service" target="_blank">Zilliqa</a> with TLDs:
+        <strong>zil</strong></p>
+          </li>
+        </ul>
+
+          <br/>
+          **Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.
+  /domains/{domainName}/transfers/latest:
+    get:
+      operationId: DomainsController.getDomainsLastTransfer
+      parameters:
+        - in: path
+          name: domainName
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A domain name registered by Unstoppable Domains
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainLatestTransfer'
+          description: Successful response
+      summary: Get domains last transfer
+      tags:
+        - Domains
+      description: '**Get Domain Transfer Events**<br/>**Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.'
+  /records:
+    get:
+      operationId: DomainsController.getDomainsRecords
+      parameters:
+        - in: query
+          name: domains
+          required: true
+          schema:
+            items:
+              minLength: 1
+              type: string
+            maxItems: 50
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+          description: Domain names registered by Unstoppable Domains. At least 1 domain must be passed in
+        - in: query
+          name: key
+          required: false
+          schema:
+            type: string
+          description: Filtered resolution key. See above to see the supported keys on different naming services
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainRecords'
+          description: Successful response
+      summary: Get domains records
+      tags:
+        - Domains
+      description: |2-
+
+          **Get Records for Multiple Domains**
+          <br/>
+          It's recommended to use this API on different naming services as they support different record keys
+          <ul>
+            <li>
+              <p>Unstoppable Domain's <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/uns-architecture-overview" target="_blank">UNS</a> and <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/cns-architecture-overview" target="_blank">CNS</a> with TLDs:
+        <strong>.x</strong>, <strong>.polygon</strong>, <strong>.nft</strong>, <strong>.crypto</strong>, <strong>.blockchain</strong>, <strong>.bitcoin</strong>, <strong>.dao</strong>, <strong>.888</strong>, <strong>.wallet</strong>, <strong>.binanceus</strong>, <strong>.hi</strong>, <strong>.klever</strong>, <strong>.kresus</strong>, <strong>.anime</strong>, <strong>.manga</strong>, <strong>.go</strong>, <strong>.zil</strong><br/>See this <a href="https://github.com/unstoppabledomains/uns/blob/main/uns-config.json" target="_blank">list</a> for all the resolution keys supported</p>
+            </li>
+            <li>
+              <p>
+              Ethereum Naming Service - <a href="https://docs.ens.domains/" target="_blank">ENS</a> with TLDs:
+        <strong>.eth</strong>
+              <br/>See Ens' <a href="https://docs.ens.domains/ens-improvement-proposals" target="_blank">document</a> for all the resolution keys supported
+              </p>
+            </li>
+          </ul>
+          <br/>**Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.
+  /reverse/{address}:
+    get:
+      operationId: ReverseController.getReverse
+      parameters:
+        - in: path
+          name: address
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+          description: A wallet address to query for reverse record
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DomainResponse'
+          description: ''
+      summary: Get reverse
+      tags:
+        - Reverse
+      description: '**Get Reverse Record for an Address**<br/>**Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.'
+  /reverse/query:
+    post:
+      operationId: ReverseController.getReverses
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkReverseQueryParams'
+        description: BulkReverseQueryParams
+        required: false
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkReverseQueryResponse'
+          description: ''
+      summary: Get reverses
+      tags:
+        - Reverse
+      description: |2-
+
+          **Get Records for Multiple Domains**
+          <br/>
+          
+        The API only supports Unstoppable Domains' naming services for backward compatibility. A new API version is coming soon for other naming services
+        <ul>
+          <li>
+            <p>Unstoppable Domain's <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/uns-architecture-overview" target="_blank">UNS</a> and <a href="https://docs.unstoppabledomains.com/smart-contracts/overview/cns-architecture-overview" target="_blank">CNS</a> with TLDs:
+        <strong>.x</strong>, <strong>.polygon</strong>, <strong>.nft</strong>, <strong>.crypto</strong>, <strong>.blockchain</strong>, <strong>.bitcoin</strong>, <strong>.dao</strong>, <strong>.888</strong>, <strong>.wallet</strong>, <strong>.binanceus</strong>, <strong>.hi</strong>, <strong>.klever</strong>, <strong>.kresus</strong>, <strong>.anime</strong>, <strong>.manga</strong>, <strong>.go</strong>, <strong>.zil</strong></p>
+          </li>
+          <li>
+            <p>Unstoppable Domain's <a href="https://unstoppabledomains.com/blog/categories/announcements/article/zilliqa-naming-service" target="_blank">Zilliqa</a> with TLDs:
+        <strong>zil</strong></p>
+          </li>
+        </ul>
+
+          <br/>
+          **Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.
+      parameters:
+        - name: resolution
+          required: false
+          in: query
+          description: See this [list](https://github.com/unstoppabledomains/uns/blob/main/uns-config.json) for all the resolution keys supported
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+        - name: owners
+          in: query
+          description: Wallet addresses of the owners of domains
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+        - name: tlds
+          in: query
+          description: Domain ending supported such as `crypto`, `x`, or `polygon`. See [supported tlds](https://api.unstoppabledomains.com/resolve/supported_tlds) for the full list
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  enum:
+                    - x
+                    - polygon
+                    - nft
+                    - crypto
+                    - blockchain
+                    - bitcoin
+                    - dao
+                    - '888'
+                    - wallet
+                    - binanceus
+                    - hi
+                    - klever
+                    - kresus
+                    - anime
+                    - manga
+                    - go
+                    - zil
+                    - eth
+        - name: sortBy
+          in: query
+          description: Sort key to specify how the returned domain list is sorted
+          schema:
+            type: string
+        - name: sortDirection
+          in: query
+          description: Sort order of the returned domain list
+          schema:
+            type: string
+        - name: startingAfter
+          in: query
+          description: 'Query offset to skip a number of record, example: 100'
+          schema:
+            type: string
+        - name: perPage
+          in: query
+          description: 'Number of domains returned in the list, example: 50'
+          schema:
+            type: number
+  /chains/eth/rpc:
+    post:
+      operationId: RpcProxyController.proxyEth
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+        description: ''
+        required: false
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RpcResponse'
+          description: ''
+      summary: Proxy eth
+      tags:
+        - Rpc Proxy
+      description: '**Ethereum RPC provider to interact with Unstoppable Domain Smart Contract**<br/>This endpoint is meant to be use by Unstoppable Domains''s [SDKs](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/overview/) to query directly onchain data'
+  /chains/matic/rpc:
+    post:
+      operationId: RpcProxyController.proxyPol
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+        description: ''
+        required: false
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RpcResponse'
+          description: ''
+      summary: Proxy pol
+      tags:
+        - Rpc Proxy
+      description: '**Polygon RPC provider to interact with Unstoppable Domain Smart Contract**<br/>This endpoint is meant to be use by Unstoppable Domains''s [SDKs](https://docs.unstoppabledomains.com/resolution/sdks-and-libraries/overview/) to query directly onchain data'
+
+  /status:
+    get:
+      operationId: StatusController.getStatus
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+          description: ''
+      summary: Get status
+      tags:
+        - Status
+      security:
+        - { } # no auth
+  /supported_tlds:
+    get:
+      operationId: StatusController.listSupportedTlds
+      responses:
+        '200':
+          content:
+            application/json: {}
+          description: Successful response
+      summary: List supported tlds
+      tags:
+        - Status
+      security:
+        - {} # no auth
+  /owners/{address}/domains:
+    get:
+      operationId: OwnerController.getDomain
+      parameters:
+        - in: path
+          name: address
+          required: true
+          schema:
+            pattern: '[^\/#\?]+?'
+            type: string
+        - in: query
+          name: cursor
+          schema: {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/OwnerDomainResponse'
+                    example:
+                      - meta:
+                          domain: brad.x
+                          tokenId: '43203879674324136535296999221055898360621456401904282749851613586946753348449'
+                          namehash: '0x5f84878237331ae6942710e286a1fa3f34ff8ed38ce8b323cc63b99a6598c361'
+                          blockchain: MATIC
+                          networkId: 137
+                          owner: '0x8aad44321a86b170879d7a244c1e8d360c99dda8'
+                          resolver: '0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f'
+                          registry: '0xa9a6a3626993d487d2dbda3173cf58ca1a9d9e9f'
+                        records:
+                          ipfs.html.value: QmQ7tiF4xfCUpZR4RZHoupLL34otKScPenvhNTz4hTFW3J
+                  next:
+                    type: string
+                    nullable: true
+                    example: /owners/0x8aad44321a86b170879d7a244c1e8d360c99dda8/domains?cursor=123
+          description: Successful response
+      summary: Get domain
+      tags:
+        - Owner
+      description: '**Get Domains by Address**<br/>**Note:** The API should be used in a backend system. If you need the data in client apps, please build a proxy backend to hide the API key.'
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Model:
+      properties:
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+    DomainsMetadata:
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - key
+        - value
+    DomainsResolutionRecords:
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - key
+        - value
+    DomainsResolution:
+      properties:
+        ownerAddress:
+          pattern: ^0x[a-fA-F0-9]{40}$
+          type: string
+        resolver:
+          pattern: ^0x[a-fA-F0-9]{40}$
+          type: string
+        registry: {}
+        deprecatedResolution:
+          type: object
+        blockchain:
+          enum:
+            - ETH
+            - ZIL
+            - MATIC
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - blockchain
+    DomainsReverseResolution:
+      properties:
+        reverseAddress:
+          pattern: ^0x[a-fA-F0-9]{40}$
+          type: string
+        blockchain:
+          enum:
+            - ETH
+            - ZIL
+            - MATIC
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - reverseAddress
+        - blockchain
+    Domain:
+      properties:
+        name:
+          type: string
+        node:
+          pattern: ^0x[a-f0-9]{64}$
+          type: string
+        parentId: {}
+        parent: {}
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - name
+        - node
+    ZnsTransaction:
+      properties:
+        atxuid:
+          minimum: 0
+          type: number
+        hash:
+          pattern: ^0x[0-9a-f]{64}$
+          type: string
+        blockNumber:
+          minimum: 165700
+          type: integer
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - blockNumber
+    CnsRegistryEvent:
+      properties:
+        blockchain:
+          type: string
+        networkId:
+          type: number
+        blockNumber:
+          type: number
+        blockHash:
+          pattern: 0x[0-9a-f]+
+          type: string
+        logIndex:
+          minimum: 0
+          type: number
+        transactionHash:
+          pattern: 0x[0-9a-f]+
+          type: string
+        returnValues:
+          type: object
+        node:
+          pattern: 0x[0-9a-f]+
+          type: string
+        workerType:
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - blockchain
+        - networkId
+        - blockNumber
+        - returnValues
+        - workerType
+    WorkerStatus:
+      properties:
+        lastMirroredBlockNumber:
+          type: number
+        lastMirroredBlockHash: {}
+        lastAtxuid:
+          type: number
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - lastMirroredBlockNumber
+    ApiKey:
+      properties:
+        name:
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - name
+    NamehashLookup:
+      properties:
+        hash:
+          type: string
+        value:
+          minLength: 1
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - hash
+        - value
+    ImageMetadata:
+      properties:
+        progressStatus:
+          enum:
+            - un_processed
+            - completed
+          type: string
+        id:
+          type: number
+        createdAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        updatedAt:
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+      type: object
+      required:
+        - progressStatus
+    DomainBaseMetadata:
+      properties:
+        domain:
+          type: string
+        namehash:
+          type: string
+        tokenId:
+          type: string
+        owner:
+          type: string
+        reverse:
+          type: boolean
+      type: object
+      required:
+        - domain
+        - reverse
+    DomainMetadata:
+      properties:
+        resolver:
+          type: string
+        blockchain:
+          items:
+            type: string
+            enum:
+              - ETH
+              - ZIL
+              - MATIC
+          type: string
+        networkId:
+          type: number
+          enum:
+            - 1
+            - 5
+            - 137
+            - 1337
+            - 80001
+        registry:
+          type: string
+        type:
+          enum:
+            - Uns
+            - Zilliqa
+            - Ens
+          type: string
+        customMeta:
+          type: object
+        domain:
+          type: string
+        namehash:
+          type: string
+        tokenId:
+          type: string
+        owner:
+          type: string
+        reverse:
+          type: boolean
+      type: object
+      required:
+        - type
+        - domain
+        - reverse
+    OwnerDomainMetadata:
+      properties:
+        domain:
+          type: string
+        namehash:
+          type: string
+        tokenId:
+          type: string
+        owner:
+          type: string
+        resolver:
+          type: string
+        blockchain:
+          items:
+            type: string
+            enum:
+              - ETH
+              - ZIL
+              - MATIC
+          type: string
+        networkId:
+          type: number
+          enum:
+            - 1
+            - 5
+            - 137
+            - 1337
+            - 80001
+        registry:
+          type: string
+        type:
+          enum:
+            - Uns
+            - Zilliqa
+            - Ens
+          type: string
+        customMeta:
+          type: object
+      type: object
+      required:
+        - domain
+        - type
+    DomainBaseResponse:
+      properties:
+        meta:
+          $ref: '#/components/schemas/DomainBaseMetadata'
+      type: object
+      required:
+        - meta
+    DomainResponse:
+      properties:
+        meta:
+          $ref: '#/components/schemas/DomainMetadata'
+        records:
+          type: object
+      type: object
+      required:
+        - meta
+        - records
+    OwnerDomainResponse:
+      properties:
+        meta:
+          $ref: '#/components/schemas/OwnerDomainMetadata'
+        records:
+          type: object
+      type: object
+      required:
+        - meta
+        - records
+    DomainRecords:
+      properties:
+        domain:
+          type: string
+        records:
+          type: object
+      type: object
+      required:
+        - domain
+        - records
+    OwnerDomainsQuery:
+      properties:
+        cursor: {}
+      type: object
+    DomainsListQuery:
+      properties:
+        resolution:
+          type: object
+        owners:
+          items:
+            minLength: 1
+            type: string
+          type: array
+        tlds:
+          items:
+            type: string
+          type: array
+        sortBy:
+          type: string
+          enum:
+            - id
+            - name
+            - created_at
+        sortDirection:
+          type: string
+          enum:
+            - ASC
+            - DESC
+        perPage:
+          maximum: 200
+          type: integer
+          minimum: 1
+        startingAfter: {}
+      type: object
+    DomainAttributes:
+      properties:
+        id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/DomainResponse'
+      type: object
+      required:
+        - id
+        - attributes
+    DomainsListMeta:
+      properties:
+        nextStartingAfter:
+          type: string
+          minLength: 1
+        sortBy:
+          type: string
+          minLength: 1
+        sortDirection:
+          type: string
+          minLength: 1
+        perPage:
+          maximum: 200
+          type: string
+          minimum: 1
+          minLength: 1
+        hasMore:
+          type: string
+          minLength: 1
+      type: object
+      required:
+        - nextStartingAfter
+        - sortBy
+        - sortDirection
+        - perPage
+        - hasMore
+    UnsDomainQuery:
+      properties:
+        domainName:
+          minLength: 1
+          type: string
+      type: object
+      required:
+        - domainName
+    DomainLatestTransfer:
+      properties:
+        domain:
+          type: string
+        from:
+          minLength: 1
+          type: string
+        to:
+          minLength: 1
+          type: string
+        networkId:
+          minLength: 1
+          type: integer
+        blockNumber:
+          minLength: 1
+          type: integer
+        blockchain:
+          minLength: 1
+          type: string
+      type: object
+      required:
+        - domain
+        - from
+        - to
+        - networkId
+        - blockNumber
+        - blockchain
+    DomainLatestTransferResponse:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/DomainLatestTransfer'
+          type: array
+      type: object
+      required:
+        - data
+    DomainsRecordsQuery:
+      properties:
+        domains:
+          items:
+            minLength: 1
+            type: string
+          maxItems: 50
+          type: array
+        key:
+          type: string
+      type: object
+      required:
+        - domains
+    DomainsRecordsResponse:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/DomainRecords'
+          type: array
+      type: object
+      required:
+        - data
+    Erc721Metadata:
+      properties:
+        name:
+          type: string
+        tokenId:
+          type: string
+        namehash:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        external_url:
+          type: string
+      type: object
+      required:
+        - name
+        - tokenId
+        - namehash
+        - description
+        - image
+        - external_url
+    OpenSeaMetadata:
+      properties:
+        external_link:
+          type: string
+        image_url:
+          type: string
+        attributes:
+          items: {}
+          type: array
+        background_color:
+          type: string
+        animation_url:
+          type: string
+        youtube_url:
+          type: string
+        name:
+          type: string
+        tokenId:
+          type: string
+        namehash:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        external_url:
+          type: string
+      type: object
+      required:
+        - attributes
+        - name
+        - tokenId
+        - namehash
+        - description
+        - image
+        - external_url
+    TokenMetadata:
+      properties:
+        fetchedMetadata:
+          type: object
+        image:
+          type: string
+      type: object
+      required:
+        - fetchedMetadata
+        - image
+    ImageResponse:
+      properties:
+        image:
+          type: string
+        image_data:
+          type: string
+      type: object
+      required:
+        - image_data
+    ImageQueryParams:
+      properties:
+        withOverlay:
+          type: boolean
+        theme:
+          type: string
+          enum:
+            - light
+            - dark
+      type: object
+    BulkReverseQueryParams:
+      properties:
+        addresses:
+          items:
+            pattern: ^0x[a-fA-F0-9]{40}$
+            type: string
+          type: array
+          uniqueItems: true
+          maxItems: 1000
+          minItems: 1
+      type: object
+      required:
+        - addresses
+    BulkReverseQueryResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DomainResponse'
+        meta:
+          type: object
+          items:
+            $ref: '#/components/schemas/DomainsListMeta'
+      required:
+        - data
+    RpcResponse:
+      properties:
+        jsonrpc:
+          type: string
+        id:
+          type: number
+        data:
+          type: string
+        error:
+          type: string
+      type: object
+      required:
+        - jsonrpc
+        - id
+        - error
+    BlockchainStatus:
+      properties:
+        isUpToDate:
+          type: boolean
+        latestNetworkBlock:
+          type: number
+        latestMirroredBlock:
+          type: number
+        networkId:
+          type: number
+        acceptableDelayInBlocks:
+          type: number
+      type: object
+      required:
+        - isUpToDate
+        - latestNetworkBlock
+        - latestMirroredBlock
+        - networkId
+        - acceptableDelayInBlocks
+    Blockchains:
+      properties:
+        ETH:
+          $ref: '#/components/schemas/BlockchainStatus'
+        MATIC:
+          $ref: '#/components/schemas/BlockchainStatus'
+        ZIL:
+          $ref: '#/components/schemas/BlockchainStatus'
+        ETH-ENS:
+          $ref: '#/components/schemas/BlockchainStatus'
+      type: object
+      required:
+        - ETH
+        - MATIC
+        - ZIL
+        - ETH-ENS
+    StatusResponse:
+      properties:
+        blockchain:
+          $ref: '#/components/schemas/Blockchains'
+      type: object
+      required:
+        - blockchain
