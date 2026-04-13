@@ -727,26 +727,6 @@ Download existing hosted lander content from one or more domains.
 Single-page landers return raw HTML (`htmlContent`). Multi-file sites return a base64-encoded zip (`zipContent`).
 {% /admonition %}
 
-### ud_domain_upload_lander
-
-Upload custom landing page content to one or more domains.
-
-**Parameters:**
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `domains` | array | Yes | Array of domain objects with content (1-50) |
-| `domains[].name` | string | Yes | Domain name |
-| `domains[].htmlContent` | string | Conditional | Raw HTML for single-page landers |
-| `domains[].zipContent` | string | Conditional | Base64-encoded zip for multi-file sites |
-
-Each domain must have exactly one of `htmlContent` or `zipContent`. Existing lander content is replaced.
-
-**Example prompts:**
-
-- "Upload a custom landing page to mybrand.com"
-- "Replace my lander with custom HTML"
-
 ## Backorders
 
 ### ud_backorders_list
