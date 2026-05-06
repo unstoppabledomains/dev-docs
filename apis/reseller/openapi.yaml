@@ -1705,6 +1705,108 @@ paths:
       summary: Get account details
       description: |
         Retrieve your account summary including account ID and default wallet address.
+  /account/billing:
+    get:
+      operationId: getBilling
+      parameters: []
+      responses:
+        '200':
+          description: Account billing balance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountBillingResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - account
+      summary: Get account billing balance
+      description: |
+        Retrieve the current billing balance for your account in USD cents. Negative values represent credits available; positive values represent amounts owed.
+  /account/billing/transactions:
+    get:
+      operationId: getTransactions
+      parameters:
+      - name: $cursor
+        required: false
+        in: query
+        schema:
+          type: string
+        description: Opaque cursor for paginating through results. Use the value from `next.cursor` in a previous response.
+      - name: type
+        required: false
+        in: query
+        schema:
+          type: array
+          items:
+            $ref: '#/components/schemas/BalanceChangeType'
+        description: Filter transactions by type. Repeat the parameter or pass a comma-separated list to filter on multiple types.
+      - name: groupBy
+        required: false
+        in: query
+        schema:
+          type: string
+          enum:
+          - operationId
+        description: When set to `operationId`, transactions are grouped by their originating operation and returned as `BillingTransactionGroup` items.
+      responses:
+        '200':
+          description: List of billing transactions
+          content:
+            application/json:
+              schema:
+                oneOf:
+                - $ref: '#/components/schemas/BillingTransactionListResponse'
+                - $ref: '#/components/schemas/BillingTransactionGroupListResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: Insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - account
+      summary: List billing transactions
+      description: |
+        List billing transactions for your account. Each transaction represents a credit or debit applied to your balance (orders, refunds, settlements, grants, revenue share, etc.).
+
+        Filter by `type` to narrow results to specific balance-change categories. Pass `groupBy=operationId` to receive transactions grouped by their originating operation, with each group reporting the total amount and associated domain.
+
+        Results are paginated — use the `$cursor` parameter to retrieve subsequent pages.
   /account/webhooks:
     get:
       operationId: getWebhooks
@@ -3938,6 +4040,173 @@ components:
       - '@type'
       - id
       - defaultWalletAddress
+    AccountBillingResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.AccountBilling
+        balanceUsdCents:
+          type: integer
+          description: Current account balance in USD cents. Negative values are credits available; positive values are amounts owed.
+      required:
+      - '@type'
+      - balanceUsdCents
+      description: Account billing summary including current balance.
+    BalanceChangeType:
+      type: string
+      enum:
+      - ORDER
+      - ORDER_ADJUSTMENT
+      - REFUND
+      - SETTLEMENT
+      - GRANT
+      - DEBIT
+      - REV_SHARE
+      - REV_SHARE_REVOKE
+      description: Type of billing balance change
+    BillingTransactionResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.BillingTransaction
+        id:
+          type: string
+          pattern: ^btx-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+          example: btx-a1b2c3d4-e5f6-7890-abcd-ef1234567890
+          description: Billing transaction ID
+        type:
+          $ref: '#/components/schemas/BalanceChangeType'
+        amountUsdCents:
+          type: integer
+          description: Transaction amount in USD cents. Negative for credits applied to the account; positive for debits charged against the account.
+        operationId:
+          type: string
+          pattern: ^op-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+          example: op-a1b2c3d4-e5f6-7890-abcd-ef1234567890
+          description: ID of the operation that produced this transaction
+        createdAtTimestamp:
+          type: integer
+          format: int64
+          description: Unix epoch timestamp (milliseconds) when the transaction was created
+        notes:
+          type: string
+          nullable: true
+          description: Optional notes describing the transaction
+      required:
+      - '@type'
+      - id
+      - type
+      - amountUsdCents
+      - operationId
+      - createdAtTimestamp
+      - notes
+    BillingTransactionListResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.CursorList
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/BillingTransactionResponse'
+        next:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/CursorListResponseNext'
+      required:
+      - '@type'
+      - items
+      - next
+    BillingTransactionGroupResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.BillingTransactionGroup
+        operationId:
+          type: string
+          pattern: ^op-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+          example: op-a1b2c3d4-e5f6-7890-abcd-ef1234567890
+          description: ID of the operation that produced these transactions
+        operationType:
+          type: string
+          enum:
+          - ADMIN_GENERIC
+          - DOMAIN_ADMIN_UPDATE
+          - DOMAIN_RENEW
+          - DOMAIN_RESTORE
+          - ACCOUNT_UPDATE
+          - DOMAIN_DNS_RECORD_CREATE
+          - DOMAIN_DNS_RECORD_UPDATE
+          - DOMAIN_DNS_RECORD_DELETE
+          - DOMAIN_DNS_RECORD_BATCH
+          - DOMAIN_DNS_SECURITY_ENABLE
+          - DOMAIN_DNS_SECURITY_DELETE
+          - DOMAIN_DNS_NAME_SERVER_UPDATE
+          - DOMAIN_HOSTING_UPDATE
+          - DOMAIN_HOSTING_DISABLE
+          - DOMAIN_TRANSFER_OUT
+          - DOMAIN_TRANSFER_OUT_TOGGLE
+          - DOMAIN_FLAGS_UPDATE
+          - DOMAIN_CONTACTS_UPDATE
+          - CONTACT_CREATE
+          - DOMAIN_SUGGESTION_CREATE
+          - DOMAIN_SUGGESTION_REFRESH
+          - DOMAIN_ADMIN_DNS_ZONE_MIGRATE
+          - LTO_INITIATE
+          - LTO_COMPLETE
+          - LTO_CANCEL
+          - DOMAIN_AUCTION_INTERNAL_PUSH
+          description: Type of the originating operation
+        domain:
+          type: string
+          nullable: true
+          description: Domain associated with the operation, if any
+        createdAtTimestamp:
+          type: integer
+          format: int64
+          description: Unix epoch timestamp (milliseconds) when the operation was created
+        totalAmountUsdCents:
+          type: integer
+          description: Sum of all transaction amounts in USD cents for this group
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/BillingTransactionResponse'
+      required:
+      - '@type'
+      - operationId
+      - operationType
+      - domain
+      - createdAtTimestamp
+      - totalAmountUsdCents
+      - transactions
+    BillingTransactionGroupListResponse:
+      type: object
+      properties:
+        '@type':
+          type: string
+          enum:
+          - unstoppabledomains.com/partner.v3.CursorList
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/BillingTransactionGroupResponse'
+        next:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/CursorListResponseNext'
+      required:
+      - '@type'
+      - items
+      - next
     WebhookResponse:
       type: object
       properties:
