@@ -1050,6 +1050,56 @@ paths:
                   $ref: "#/components/examples/ValidationError"
       tags:
         - external_wallets
+  /account/domains:
+    get:
+      operationId: getAccountDomains
+      summary: Get list of domains in your account
+      description: |
+        Get a paginated list of the domains in your account.
+
+        Results are returned using cursor-based pagination. Omit `$cursor` to fetch the first page, then pass the `next.$cursor` value from the previous page response to fetch each subsequent page. When `next` is `null` there are no more pages.
+
+        Use `$expand=flags` to additionally include the EPP domain flags for each returned domain.
+      parameters:
+        - name: $cursor
+          required: false
+          description: The `next.$cursor` value from the previous page response
+          in: query
+          schema:
+            type: string
+        - name: $expand
+          required: false
+          description: Use `$expand` options to conditionally include portions of the response
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - flags
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountDomainsListResponse"
+              examples:
+                AccountDomains:
+                  $ref: "#/components/examples/AccountDomains"
+                AccountDomainsWithFlags:
+                  $ref: "#/components/examples/AccountDomainsWithFlags"
+        400:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                ValidationError:
+                  $ref: "#/components/examples/ValidationError"
+      tags:
+        - account
   /account/webhooks:
     get:
       operationId: getWebhooks
@@ -2487,6 +2537,147 @@ components:
       required:
         - "@type"
         - items
+    AccountDomainStatus:
+      type: string
+      description: |
+        The current registration status of the domain.
+      enum:
+        - REGISTERED
+        - REGISTERED_EXTERNAL
+        - REGISTRATION_PROCESSING
+        - DEACTIVATED
+        - EXPIRED_GRACE_PERIOD
+        - EXPIRED_PENDING_DELETE
+        - EXPIRED_REDEMPTION_PERIOD
+        - TRANSFER_INBOUND_PROCESSING
+    DomainFlagConfiguration:
+      type: object
+      description: |
+        The state of a single EPP domain flag.
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.DomainFlag"]
+        status:
+          type: string
+          enum:
+            - ENABLED
+            - DISABLED
+        readonly:
+          type: object
+          description: |
+            Present when the flag cannot be modified, describing why it is locked.
+          properties:
+            state:
+              type: boolean
+            reasons:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    enum:
+                      - FLAG
+                      - ADMIN
+                      - POLICY
+                      - REGISTRY
+                  id:
+                    type: string
+                  status:
+                    type: string
+                    enum:
+                      - ENABLED
+                      - DISABLED
+                required:
+                  - type
+                  - id
+                  - status
+          required:
+            - state
+            - reasons
+      required:
+        - "@type"
+        - status
+    DomainFlagsResponse:
+      type: object
+      description: |
+        EPP domain flags, keyed by flag name. Only included when `$expand=flags` is set. A flag is omitted when it is not applicable to the domain.
+      properties:
+        DNS_RESOLUTION:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_TRANSFER_OUT:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_DELETE:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_UPDATE:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_RENEW:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_WHOIS_PROXY:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+        DNS_UNS_TOKENIZATION:
+          $ref: "#/components/schemas/DomainFlagConfiguration"
+    AccountDomainResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.AccountDomain"]
+        name:
+          $ref: "#/components/schemas/DomainName"
+        status:
+          $ref: "#/components/schemas/AccountDomainStatus"
+        namingSystem:
+          type: string
+          enum:
+            - UNS
+            - ICANN
+            - ENS
+        blockchain:
+          type: string
+          description: |
+            The blockchain the domain is registered on. Only included for domains whose registry is associated with a blockchain.
+          enum:
+            - MATIC
+            - ETH
+            - ZIL
+            - BASE
+            - SOL
+            - SONIC
+        expirationTimestamp:
+          oneOf:
+            - type: number
+            - type: "null"
+          description: |
+            The domain expiration time as a Unix epoch timestamp in milliseconds, or `null` when the domain does not have an expiration.
+          example: 1684356429790
+        flags:
+          $ref: "#/components/schemas/DomainFlagsResponse"
+      required:
+        - "@type"
+        - name
+        - status
+        - namingSystem
+        - expirationTimestamp
+    AccountDomainsListResponse:
+      type: object
+      properties:
+        "@type":
+          type: string
+          enum: ["unstoppabledomains.com/partner.v3.CursorList"]
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/AccountDomainResponse"
+        next:
+          oneOf:
+            - type: "null"
+            - $ref: "#/components/schemas/CursorListResponseNext"
+      required:
+        - "@type"
+        - items
+        - next
 
   examples:
     BadRequest:
@@ -2553,6 +2744,51 @@ components:
       description: Wallet signature is not valid
       value:
         code: SIGNATURE_INVALID
+    AccountDomains:
+      description: A page of domains in your account.
+      value:
+        "@type": "unstoppabledomains.com/partner.v3.CursorList"
+        items:
+          - "@type": "unstoppabledomains.com/partner.v3.AccountDomain"
+            name: matt.crypto
+            status: REGISTERED
+            namingSystem: UNS
+            blockchain: MATIC
+            expirationTimestamp: null
+          - "@type": "unstoppabledomains.com/partner.v3.AccountDomain"
+            name: example.com
+            status: REGISTERED
+            namingSystem: ICANN
+            expirationTimestamp: 1684356429790
+        next:
+          $cursor: "eyJkb21haW5JZCI6IjEyMyIsImRvbWFpblJlZ2lzdHJ5SWQiOjF9"
+    AccountDomainsWithFlags:
+      description: A page of domains in your account expanded with EPP domain flags via `$expand=flags`.
+      value:
+        "@type": "unstoppabledomains.com/partner.v3.CursorList"
+        items:
+          - "@type": "unstoppabledomains.com/partner.v3.AccountDomain"
+            name: example.com
+            status: REGISTERED
+            namingSystem: ICANN
+            expirationTimestamp: 1684356429790
+            flags:
+              DNS_RESOLUTION:
+                "@type": "unstoppabledomains.com/partner.v3.DomainFlag"
+                status: ENABLED
+              DNS_RENEW:
+                "@type": "unstoppabledomains.com/partner.v3.DomainFlag"
+                status: ENABLED
+              DNS_TRANSFER_OUT:
+                "@type": "unstoppabledomains.com/partner.v3.DomainFlag"
+                status: DISABLED
+                readonly:
+                  state: true
+                  reasons:
+                    - type: REGISTRY
+                      id: LOCKED_REGISTRY
+                      status: ENABLED
+        next: null
 
   responses:
     401Unauthorized:
