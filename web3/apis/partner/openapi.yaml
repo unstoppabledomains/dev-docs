@@ -2761,7 +2761,7 @@ components:
             namingSystem: ICANN
             expirationTimestamp: 1684356429790
         next:
-          $cursor: "eyJkb21haW5JZCI6IjEyMyIsImRvbWFpblJlZ2lzdHJ5SWQiOjF9"
+          $cursor: "k7Hs9Lm2Pq4Rt6Vw8Xz0Yb1Nc3Df5Gh"
     AccountDomainsWithFlags:
       description: A page of domains in your account expanded with EPP domain flags via `$expand=flags`.
       value:
