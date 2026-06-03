@@ -1748,7 +1748,7 @@ paths:
         in: query
         schema:
           type: string
-        description: Opaque cursor for paginating through results. Use the value from `next.cursor` in a previous response.
+        description: Opaque cursor for paginating through results. Use the value from `next.$cursor` in a previous response.
       - name: type
         required: false
         in: query
@@ -1816,7 +1816,7 @@ paths:
         in: query
         schema:
           type: string
-        description: Opaque cursor for paginating through results. Omit it to fetch the first page, then pass the value from `next.cursor` in the previous response to fetch each subsequent page.
+        description: Opaque cursor for paginating through results. Omit it to fetch the first page, then pass the value from `next.$cursor` in the previous response to fetch each subsequent page.
       - name: $expand
         required: false
         in: query
@@ -1851,7 +1851,7 @@ paths:
                       namingSystem: ICANN
                       expirationTimestamp: null
                     next:
-                      cursor: k7Hs9Lm2Pq4Rt6Vw8Xz0Yb1Nc3Df5Gh
+                      $cursor: k7Hs9Lm2Pq4Rt6Vw8Xz0Yb1Nc3Df5Gh
                 AccountDomainsWithFlags:
                   summary: A page of domains expanded with EPP domain flags via `$expand=flags`
                   value:
@@ -1918,7 +1918,7 @@ paths:
       description: |
         Retrieve a paginated list of the domains in your account.
 
-        Results are returned using cursor-based pagination. Omit `$cursor` to fetch the first page, then pass the `next.cursor` value from the previous page response to fetch each subsequent page. When `next` is `null` there are no more pages.
+        Results are returned using cursor-based pagination. Omit `$cursor` to fetch the first page, then pass the `next.$cursor` value from the previous page response to fetch each subsequent page. When `next` is `null` there are no more pages.
 
         Use `$expand=flags` to additionally include the EPP domain flags for each returned domain.
   /account/webhooks:
@@ -3221,6 +3221,8 @@ components:
           $ref: '#/components/schemas/DomainFlagConfigurationResponse'
         DNS_WHOIS_PROXY:
           $ref: '#/components/schemas/DomainFlagConfigurationResponse'
+        DNS_UNS_TOKENIZATION:
+          $ref: '#/components/schemas/DomainFlagConfigurationResponse'
       required:
       - DNS_RESOLUTION
       - DNS_TRANSFER_OUT
@@ -3228,6 +3230,7 @@ components:
       - DNS_UPDATE
       - DNS_RENEW
       - DNS_WHOIS_PROXY
+      - DNS_UNS_TOKENIZATION
     DomainSearchResponse:
       type: object
       properties:
@@ -4950,7 +4953,7 @@ components:
     CursorListResponseNext:
       type: object
       properties:
-        cursor:
+        $cursor:
           type: string
     PaginatedListResponseNext:
       type: object
