@@ -1807,9 +1807,9 @@ paths:
         Filter by `type` to narrow results to specific balance-change categories. Pass `groupBy=operationId` to receive transactions grouped by their originating operation, with each group reporting the total amount and associated domain.
 
         Results are paginated — use the `$cursor` parameter to retrieve subsequent pages.
-  /account/domains:
+  /account/domain-registrations:
     get:
-      operationId: getAccountDomains
+      operationId: getAccountDomainRegistrations
       parameters:
       - name: $cursor
         required: false
