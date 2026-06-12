@@ -3172,6 +3172,8 @@ components:
           - TOKEN2022
         pricing:
           $ref: '#/components/schemas/DomainPostRegistrationPricingResponse'
+        registryCreatedDate:
+          type: string
         expirationDate:
           type: string
         expirationGracePeriodDate:
@@ -3614,6 +3616,8 @@ components:
           $ref: '#/components/schemas/DomainRegistrationStatus'
         icann:
           $ref: '#/components/schemas/DomainRegistrationIcannResponse'
+        registryCreatedDate:
+          type: string
         expirationDate:
           type: string
         expirationGracePeriodDate:
