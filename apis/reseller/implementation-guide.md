@@ -356,18 +356,28 @@ A contact can also reach `FAILED` or `SUSPENDED` status if verification fails or
 
 Domains have four contact roles:
 
-- **Owner (Registrant)** -- The legal owner of the domain. Set during registration via the `owner` field.
+- **Owner (Registrant)** -- The legal owner of the domain, set via the `owner` field.
 - **Admin** -- The administrative contact for the domain.
 - **Tech** -- The technical contact responsible for DNS configuration.
 - **Billing** -- The billing contact for renewal and payment matters.
 
-Contacts are assigned during registration. You can update contacts after registration using:
+### Updating Contacts on a Registered Domain
+
+Contacts are first assigned during registration, but **all four roles, including the
+registrant, can be changed afterwards** on any domain you sponsor. Use this to correct a
+domain that was registered with the wrong details -- for example a registrant email that
+sends ICANN verification notices to the wrong person.
+
+Omitted roles are left unchanged, so you can update a single role in isolation:
 
 ```bash
 curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts?\$preview=false" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
+    "owner": {
+      "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
+    },
     "admin": {
       "id": "ct-a1b2c3d4-5678-90ab-cdef-1234567890ab"
     },
@@ -379,6 +389,43 @@ curl -X PATCH "https://api.ud-sandbox.com/partner/v3/domains/{name}/dns/contacts
     }
   }'
 ```
+
+Each role accepts either an existing contact by `id`, or the full set of
+[required fields](#required-fields) inline to create and assign a new contact in one call.
+
+Set `$preview=true` to validate the change without applying it. The response returns an
+operation you can poll via `GET /operations/{id}`; the contact change is not complete until
+that operation reaches a terminal state.
+
+There is currently no bulk form of this endpoint -- correcting many domains means one
+request per domain.
+
+### Registrant Changes and Ownership Reverification
+
+Changing the registrant is treated differently from changing admin, tech or billing,
+because under [RFC 5731](https://datatracker.ietf.org/doc/html/rfc5731) it is a change of
+the domain's legal owner rather than a contact reassignment.
+
+For a tokenized domain whose ownership still needs to be verified, the API additionally:
+
+- **Requires `owner`.** The request is rejected with a `VALIDATION` error if you change
+  contacts without supplying a registrant.
+- **Defaults the other roles to the registrant.** Any of `admin`, `tech` or `billing` you
+  omit are set to the new registrant rather than left unchanged.
+- **May clear DNS records**, depending on the domain's configured record-retention mode.
+  The default mode preserves existing records.
+
+You can observe verification state through the registration expansion:
+
+```bash
+curl "https://api.ud-sandbox.com/partner/v3/domains/example.com?\$expand=registration" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+`registration.icann.ownershipVerification` reports either `COMPLETED` or
+`REVERIFICATION_REQUIRED`. While a domain sits in `REVERIFICATION_REQUIRED`, DNS changes
+are rejected with `UNVERIFIED_DNS_REGISTRANT` (`400`), so check this field after a
+registrant change rather than waiting for a DNS call to fail.
 
 ### Inline vs. Referenced Contacts
 
